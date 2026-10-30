@@ -7991,13 +7991,18 @@ class SpacetimeMemoryEngine:
         "structure_writer_schema",    # 结构写入器开关（#671）
         "_schema_version",            # schema 版本（非治理：灾备恢复必需）
         "_last_decay_at",             # 上次衰减墙钟（非治理：纯技术时间戳）
+        "_v17_migrated",              # v1.7 迁移完成标记（#279 非治理）
     })
 
     #: #671：**非治理**键白名单（无治理载荷，无密钥可导入）。
     #: 判据来源：`#479` 的收窄理由原文「不整表拒绝——整表拒绝会打掉 schema 版本恢复」
     #: ＋ 本笔复核（`_schema_version` 只被 `_init_tables` 与 schema 恢复读；
     #: `_last_decay_at` 只被 `decay_cycle` 读，是纯技术时间戳，不改变任何行为分支）。
-    ENGINE_META_NONGOVERNANCE_KEYS = frozenset({"_schema_version", "_last_decay_at"})
+    ENGINE_META_NONGOVERNANCE_KEYS = frozenset({
+        "_schema_version", "_last_decay_at",
+        # #279：v1.7 迁移只跑一次的一次性标记（无治理载荷；写面照旧放行）。
+        "_v17_migrated",
+    })
 
 
     def _save_self_model(self) -> None:
