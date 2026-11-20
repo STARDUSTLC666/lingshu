@@ -1,0 +1,10 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+________________ test_other_unknown_keys_remain_rejected[root] ________________
+tests\test_bridge_top_level_motions.py:102: in test_other_unknown_keys_remain_rejected
+    with pytest.raises(S.SpecError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE SpecError
+=========================== short test summary info ===========================
+FAILED tests/test_bridge_top_level_motions.py::test_other_unknown_keys_remain_rejected[root]
+1 failed in 0.20s

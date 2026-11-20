@@ -3,7 +3,7 @@
   "platform": "Windows",
   "sqlite": "3.49.1",
   "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
-  "guard_sha256": "819cd5943b1dabd24bde269bcde287873e7392340a1b3102d4f44381042eb3ca",
+  "guard_sha256": "5fcdd9cc22fe878cbee91ec6cc2e88bbb0cabbf96f357c84fd585a5a2fa93cd2",
   "records": [
     {
       "case": "fixed",
@@ -15,7 +15,7 @@
       "skipped": 0,
       "expected_failures": [],
       "expected_assertion": "",
-      "pytest_summary": "6 passed in 0.55s",
+      "pytest_summary": "6 passed in 0.56s",
       "source_sha256": {
         "lingshu/world/physics.py": "271d2bb9d24452e3724e3ee0375b2d4fd9e04e85bbc4b62fd5afbd39b925f904"
       }
@@ -44,7 +44,7 @@
         "test_nonfinite_and_out_of_domain_arguments_fail_explicitly"
       ],
       "expected_assertion": "",
-      "pytest_summary": "6 failed in 0.39s",
+      "pytest_summary": "6 failed in 0.45s",
       "source_sha256": {
         "lingshu/world/physics.py": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a"
       }
@@ -63,7 +63,7 @@
         "test_truth_period_retains_near_separatrix_complementary_modulus"
       ],
       "expected_assertion": "truth period must preserve complementary modulus",
-      "pytest_summary": "1 failed in 0.21s",
+      "pytest_summary": "1 failed in 0.23s",
       "source_sha256": {
         "lingshu/world/physics.py": "cd775bb5332e2025cfdd8ebf8490c8083ec02c57e912205962c530e20c0d022d"
       }
@@ -82,7 +82,7 @@
         "test_near_separatrix_matches_frozen_80_digit_reference"
       ],
       "expected_assertion": "stable descent must match high-precision reference",
-      "pytest_summary": "1 failed in 0.19s",
+      "pytest_summary": "1 failed in 0.23s",
       "source_sha256": {
         "lingshu/world/physics.py": "dc2008142cc8688766ee0b21193154e9546100aad04593336b4c0422c8181347"
       }
@@ -101,7 +101,7 @@
         "test_explicit_large_domain_uses_the_correct_release_formula"
       ],
       "expected_assertion": "release formula must include the dn factor",
-      "pytest_summary": "1 failed in 0.19s",
+      "pytest_summary": "1 failed in 0.24s",
       "source_sha256": {
         "lingshu/world/physics.py": "fa64a8049cc7e23685a08f4ff8c02519c68de8af9365856b12428d9afa3d2f4d"
       }
@@ -120,7 +120,7 @@
         "test_release_initial_symmetry_and_near_separatrix_quarter_periods"
       ],
       "expected_assertion": "complementary modulus must retain near-separatrix precision",
-      "pytest_summary": "1 failed in 0.20s",
+      "pytest_summary": "1 failed in 0.23s",
       "source_sha256": {
         "lingshu/world/physics.py": "b26e60e0e50deb1ab322b7f6e108aa73e55311bbc92a2ec48add8ca6f5cdbb2c"
       }
@@ -139,7 +139,7 @@
         "test_nonfinite_and_out_of_domain_arguments_fail_explicitly"
       ],
       "expected_assertion": "DID NOT RAISE",
-      "pytest_summary": "1 failed in 0.19s",
+      "pytest_summary": "1 failed in 0.22s",
       "source_sha256": {
         "lingshu/world/physics.py": "a50322f60250f23df8e03df6a0d2e5135f5f808c9f0a63e4a5bfdceec1284821"
       }

@@ -1,0 +1,1 @@
+{"suite": "motion_groups", "variant": "baseline", "summaries": [{"label": "detect_8_frames_96_entities", "python_peak_new_bytes_samples": [573528, 573832, 573832], "python_peak_new_bytes_median": 573832, "python_current_delta_bytes_samples": [187360, 187664, 187664], "working_set_after_bytes_samples": [41869312, 42008576, 42057728]}]}

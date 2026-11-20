@@ -1,0 +1,12 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___________ test_small_amplitude_exact_motion_uses_release_formula ____________
+tests\test_bridge_pendulum_release_solution.py:72: in test_small_amplitude_exact_motion_uses_release_formula
+    assert abs(actual - _rk4_release(initial, 1.0)) < 1e-11, \
+E   AssertionError: bridge release formula must include the dn factor
+E   assert 3.179393265983349e-05 < 1e-11
+E    +  where 3.179393265983349e-05 = abs((0.04715872141574875 - 0.04719051534840858))
+E    +    where 0.04719051534840858 = _rk4_release(0.08726646259971647, 1.0)
+=========================== short test summary info ===========================
+FAILED tests/test_bridge_pendulum_release_solution.py::test_small_amplitude_exact_motion_uses_release_formula
+1 failed in 0.19s

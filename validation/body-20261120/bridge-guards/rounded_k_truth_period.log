@@ -1,0 +1,10 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+________ test_near_separatrix_motion_validates_and_keeps_quarter_phase ________
+tests\test_bridge_pendulum_release_solution.py:82: in test_near_separatrix_motion_validates_and_keeps_quarter_phase
+    assert ok, "bridge near-separatrix motion must validate: " + reason
+E   AssertionError: bridge near-separatrix motion must validate: elliptic_k：|k| 须 < 1，得到 1.0
+E   assert False
+=========================== short test summary info ===========================
+FAILED tests/test_bridge_pendulum_release_solution.py::test_near_separatrix_motion_validates_and_keeps_quarter_phase
+1 failed in 0.20s

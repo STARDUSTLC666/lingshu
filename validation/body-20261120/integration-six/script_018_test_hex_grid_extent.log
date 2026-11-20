@@ -1,0 +1,30 @@
+== A 组：覆盖契约（无画外采样 / 铺满宽与高） ==
+  PASS A1 48x48/16：匀色图每个 cell 恰为该色（画外采样 cell 数 = 0）
+  PASS A2 48x48/16：贴右缘亮线点亮第 15 列且只亮右侧 1/10
+  PASS A1 48x48/32：匀色图每个 cell 恰为该色（画外采样 cell 数 = 0）
+  PASS A2 48x48/32：贴右缘亮线点亮第 31 列且只亮右侧 1/10
+  PASS A1 120x160/32：匀色图每个 cell 恰为该色（画外采样 cell 数 = 0）
+  PASS A2 120x160/32：贴右缘亮线点亮第 31 列且只亮右侧 1/10
+  PASS A1 328x200/48：匀色图每个 cell 恰为该色（画外采样 cell 数 = 0）
+  PASS A2 328x200/48：贴右缘亮线点亮第 47 列且只亮右侧 1/10
+  PASS A1 262x200/40：匀色图每个 cell 恰为该色（画外采样 cell 数 = 0）
+  PASS A2 262x200/40：贴右缘亮线点亮第 39 列且只亮右侧 1/10
+  PASS A1 64x64/8：匀色图每个 cell 恰为该色（画外采样 cell 数 = 0）
+  PASS A2 64x64/8：贴右缘亮线点亮第 7 列且只亮右侧 1/10
+  PASS A1 32x32/16：匀色图每个 cell 恰为该色（画外采样 cell 数 = 0）
+  PASS A2 32x32/16：贴右缘亮线点亮第 15 列且只亮右侧 1/10
+== B 组：画幅 9 宫格 ↔ 晶格 9 宫格 ==
+  PASS B1 48px/16 列：晶格 9 宫格最亮格 = 画幅 9 宫格所画格（9/9）
+== C 组：L4 质心象限 ==
+  PASS C1 l4_position（能量质心→象限）= 所画格（9/9）
+== D 组：返回 grid 与采样节距自洽 ==
+  PASS D1 48x48/16：grid 同行间距 √3·s = W/(cells_across+0.5)
+  PASS D1 48x48/32：grid 同行间距 √3·s = W/(cells_across+0.5)
+  PASS D1 120x160/32：grid 同行间距 √3·s = W/(cells_across+0.5)
+  PASS D1 328x200/48：grid 同行间距 √3·s = W/(cells_across+0.5)
+  PASS D1 262x200/40：grid 同行间距 √3·s = W/(cells_across+0.5)
+  PASS D1 64x64/8：grid 同行间距 √3·s = W/(cells_across+0.5)
+  PASS D1 32x32/16：grid 同行间距 √3·s = W/(cells_across+0.5)
+
+===== SUMMARY 23/23 通过 =====
+VERDICT=PASS（晶格铺满画幅：无画外采样，9 宫格与 L4 质心位置对齐）

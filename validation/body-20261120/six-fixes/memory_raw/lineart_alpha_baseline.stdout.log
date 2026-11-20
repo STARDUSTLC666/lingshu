@@ -1,0 +1,1 @@
+{"suite": "lineart_alpha", "variant": "baseline", "summaries": [{"label": "darkline_RGBA_1536x1536", "python_peak_new_bytes_samples": [120427373, 120325453, 120325453], "python_peak_new_bytes_median": 120325453, "python_current_delta_bytes_samples": [2462574, 2360884, 2360820], "working_set_after_bytes_samples": [54259712, 54423552, 53747712]}]}

@@ -1,0 +1,1372 @@
+{
+  "source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\top-level-motions\\duplicate-search.json",
+  "source_sha256": "2a4bcfab29e70e179f039b7d2a73e97fc9fab8e49e904b585a8eca8262208d53",
+  "source_bytes": 2765103,
+  "public_sha256": "54bd70b5577ae258dcee15a5bbb1790ba3764dfc11e883e8e1e614001b8eb0a2",
+  "public_bytes": 108001,
+  "policy": "Metadata-only derivative of public GitHub duplicate-search results. Query, identifiers, titles, URLs, state, timestamps/durations/counts and return codes retained where present. All third-party body/bodyText/bodyHTML and stdout fields omitted. This is search context, not measurement evidence. Original raw is unchanged.",
+  "query_count": 9,
+  "item_count": 271,
+  "removed_field_count": 271,
+  "removed_field_characters": 1695782,
+  "numeric_leaf_count": 280,
+  "numeric_leaves_unchanged": true,
+  "remaining_absolute_path_matches": [],
+  "removed_fields": [
+    {
+      "path": "$/5/items/0/body",
+      "kind": "body",
+      "characters": 2593
+    },
+    {
+      "path": "$/5/items/1/body",
+      "kind": "body",
+      "characters": 1200
+    },
+    {
+      "path": "$/5/items/2/body",
+      "kind": "body",
+      "characters": 1205
+    },
+    {
+      "path": "$/5/items/3/body",
+      "kind": "body",
+      "characters": 2738
+    },
+    {
+      "path": "$/5/items/4/body",
+      "kind": "body",
+      "characters": 3752
+    },
+    {
+      "path": "$/5/items/5/body",
+      "kind": "body",
+      "characters": 940
+    },
+    {
+      "path": "$/5/items/6/body",
+      "kind": "body",
+      "characters": 5930
+    },
+    {
+      "path": "$/5/items/7/body",
+      "kind": "body",
+      "characters": 2541
+    },
+    {
+      "path": "$/5/items/8/body",
+      "kind": "body",
+      "characters": 7144
+    },
+    {
+      "path": "$/5/items/9/body",
+      "kind": "body",
+      "characters": 3175
+    },
+    {
+      "path": "$/5/items/10/body",
+      "kind": "body",
+      "characters": 1308
+    },
+    {
+      "path": "$/5/items/11/body",
+      "kind": "body",
+      "characters": 2377
+    },
+    {
+      "path": "$/5/items/12/body",
+      "kind": "body",
+      "characters": 3811
+    },
+    {
+      "path": "$/5/items/13/body",
+      "kind": "body",
+      "characters": 1948
+    },
+    {
+      "path": "$/5/items/14/body",
+      "kind": "body",
+      "characters": 3066
+    },
+    {
+      "path": "$/5/items/15/body",
+      "kind": "body",
+      "characters": 427
+    },
+    {
+      "path": "$/5/items/16/body",
+      "kind": "body",
+      "characters": 2940
+    },
+    {
+      "path": "$/5/items/17/body",
+      "kind": "body",
+      "characters": 1438
+    },
+    {
+      "path": "$/5/items/18/body",
+      "kind": "body",
+      "characters": 1910
+    },
+    {
+      "path": "$/5/items/19/body",
+      "kind": "body",
+      "characters": 2645
+    },
+    {
+      "path": "$/5/items/20/body",
+      "kind": "body",
+      "characters": 2315
+    },
+    {
+      "path": "$/5/items/21/body",
+      "kind": "body",
+      "characters": 2676
+    },
+    {
+      "path": "$/5/items/22/body",
+      "kind": "body",
+      "characters": 2995
+    },
+    {
+      "path": "$/5/items/23/body",
+      "kind": "body",
+      "characters": 2764
+    },
+    {
+      "path": "$/5/items/24/body",
+      "kind": "body",
+      "characters": 2439
+    },
+    {
+      "path": "$/5/items/25/body",
+      "kind": "body",
+      "characters": 2353
+    },
+    {
+      "path": "$/5/items/26/body",
+      "kind": "body",
+      "characters": 3302
+    },
+    {
+      "path": "$/5/items/27/body",
+      "kind": "body",
+      "characters": 1889
+    },
+    {
+      "path": "$/5/items/28/body",
+      "kind": "body",
+      "characters": 14541
+    },
+    {
+      "path": "$/5/items/29/body",
+      "kind": "body",
+      "characters": 2130
+    },
+    {
+      "path": "$/5/items/30/body",
+      "kind": "body",
+      "characters": 2190
+    },
+    {
+      "path": "$/5/items/31/body",
+      "kind": "body",
+      "characters": 3323
+    },
+    {
+      "path": "$/5/items/32/body",
+      "kind": "body",
+      "characters": 2460
+    },
+    {
+      "path": "$/5/items/33/body",
+      "kind": "body",
+      "characters": 2108
+    },
+    {
+      "path": "$/5/items/34/body",
+      "kind": "body",
+      "characters": 2960
+    },
+    {
+      "path": "$/5/items/35/body",
+      "kind": "body",
+      "characters": 4517
+    },
+    {
+      "path": "$/5/items/36/body",
+      "kind": "body",
+      "characters": 10306
+    },
+    {
+      "path": "$/5/items/37/body",
+      "kind": "body",
+      "characters": 3149
+    },
+    {
+      "path": "$/5/items/38/body",
+      "kind": "body",
+      "characters": 7150
+    },
+    {
+      "path": "$/5/items/39/body",
+      "kind": "body",
+      "characters": 17371
+    },
+    {
+      "path": "$/5/items/40/body",
+      "kind": "body",
+      "characters": 3747
+    },
+    {
+      "path": "$/5/items/41/body",
+      "kind": "body",
+      "characters": 4228
+    },
+    {
+      "path": "$/5/items/42/body",
+      "kind": "body",
+      "characters": 21079
+    },
+    {
+      "path": "$/6/items/0/body",
+      "kind": "body",
+      "characters": 2508
+    },
+    {
+      "path": "$/6/items/1/body",
+      "kind": "body",
+      "characters": 1911
+    },
+    {
+      "path": "$/6/items/2/body",
+      "kind": "body",
+      "characters": 1282
+    },
+    {
+      "path": "$/6/items/3/body",
+      "kind": "body",
+      "characters": 1587
+    },
+    {
+      "path": "$/6/items/4/body",
+      "kind": "body",
+      "characters": 2488
+    },
+    {
+      "path": "$/6/items/5/body",
+      "kind": "body",
+      "characters": 4140
+    },
+    {
+      "path": "$/6/items/6/body",
+      "kind": "body",
+      "characters": 1152
+    },
+    {
+      "path": "$/6/items/7/body",
+      "kind": "body",
+      "characters": 1627
+    },
+    {
+      "path": "$/6/items/8/body",
+      "kind": "body",
+      "characters": 2390
+    },
+    {
+      "path": "$/6/items/9/body",
+      "kind": "body",
+      "characters": 875
+    },
+    {
+      "path": "$/6/items/10/body",
+      "kind": "body",
+      "characters": 1896
+    },
+    {
+      "path": "$/6/items/11/body",
+      "kind": "body",
+      "characters": 7083
+    },
+    {
+      "path": "$/6/items/12/body",
+      "kind": "body",
+      "characters": 6708
+    },
+    {
+      "path": "$/6/items/13/body",
+      "kind": "body",
+      "characters": 3282
+    },
+    {
+      "path": "$/6/items/14/body",
+      "kind": "body",
+      "characters": 4387
+    },
+    {
+      "path": "$/6/items/15/body",
+      "kind": "body",
+      "characters": 3182
+    },
+    {
+      "path": "$/6/items/16/body",
+      "kind": "body",
+      "characters": 674
+    },
+    {
+      "path": "$/6/items/17/body",
+      "kind": "body",
+      "characters": 2421
+    },
+    {
+      "path": "$/6/items/18/body",
+      "kind": "body",
+      "characters": 3426
+    },
+    {
+      "path": "$/6/items/19/body",
+      "kind": "body",
+      "characters": 4756
+    },
+    {
+      "path": "$/6/items/20/body",
+      "kind": "body",
+      "characters": 1856
+    },
+    {
+      "path": "$/6/items/21/body",
+      "kind": "body",
+      "characters": 1003
+    },
+    {
+      "path": "$/6/items/22/body",
+      "kind": "body",
+      "characters": 963
+    },
+    {
+      "path": "$/6/items/23/body",
+      "kind": "body",
+      "characters": 18204
+    },
+    {
+      "path": "$/6/items/24/body",
+      "kind": "body",
+      "characters": 4193
+    },
+    {
+      "path": "$/6/items/25/body",
+      "kind": "body",
+      "characters": 4062
+    },
+    {
+      "path": "$/6/items/26/body",
+      "kind": "body",
+      "characters": 2964
+    },
+    {
+      "path": "$/6/items/27/body",
+      "kind": "body",
+      "characters": 2978
+    },
+    {
+      "path": "$/7/items/0/body",
+      "kind": "body",
+      "characters": 2018
+    },
+    {
+      "path": "$/7/items/1/body",
+      "kind": "body",
+      "characters": 686
+    },
+    {
+      "path": "$/7/items/2/body",
+      "kind": "body",
+      "characters": 2150
+    },
+    {
+      "path": "$/7/items/3/body",
+      "kind": "body",
+      "characters": 1048
+    },
+    {
+      "path": "$/7/items/4/body",
+      "kind": "body",
+      "characters": 2112
+    },
+    {
+      "path": "$/7/items/5/body",
+      "kind": "body",
+      "characters": 2423
+    },
+    {
+      "path": "$/7/items/6/body",
+      "kind": "body",
+      "characters": 1932
+    },
+    {
+      "path": "$/7/items/7/body",
+      "kind": "body",
+      "characters": 2282
+    },
+    {
+      "path": "$/7/items/8/body",
+      "kind": "body",
+      "characters": 8422
+    },
+    {
+      "path": "$/7/items/9/body",
+      "kind": "body",
+      "characters": 513
+    },
+    {
+      "path": "$/7/items/10/body",
+      "kind": "body",
+      "characters": 125
+    },
+    {
+      "path": "$/7/items/11/body",
+      "kind": "body",
+      "characters": 5001
+    },
+    {
+      "path": "$/7/items/12/body",
+      "kind": "body",
+      "characters": 7067
+    },
+    {
+      "path": "$/7/items/13/body",
+      "kind": "body",
+      "characters": 5141
+    },
+    {
+      "path": "$/7/items/14/body",
+      "kind": "body",
+      "characters": 19107
+    },
+    {
+      "path": "$/7/items/15/body",
+      "kind": "body",
+      "characters": 4095
+    },
+    {
+      "path": "$/7/items/16/body",
+      "kind": "body",
+      "characters": 5772
+    },
+    {
+      "path": "$/7/items/17/body",
+      "kind": "body",
+      "characters": 3013
+    },
+    {
+      "path": "$/7/items/18/body",
+      "kind": "body",
+      "characters": 21943
+    },
+    {
+      "path": "$/7/items/19/body",
+      "kind": "body",
+      "characters": 150
+    },
+    {
+      "path": "$/7/items/20/body",
+      "kind": "body",
+      "characters": 3962
+    },
+    {
+      "path": "$/7/items/21/body",
+      "kind": "body",
+      "characters": 5926
+    },
+    {
+      "path": "$/7/items/22/body",
+      "kind": "body",
+      "characters": 1436
+    },
+    {
+      "path": "$/7/items/23/body",
+      "kind": "body",
+      "characters": 3569
+    },
+    {
+      "path": "$/7/items/24/body",
+      "kind": "body",
+      "characters": 13179
+    },
+    {
+      "path": "$/7/items/25/body",
+      "kind": "body",
+      "characters": 11808
+    },
+    {
+      "path": "$/7/items/26/body",
+      "kind": "body",
+      "characters": 2021
+    },
+    {
+      "path": "$/7/items/27/body",
+      "kind": "body",
+      "characters": 7862
+    },
+    {
+      "path": "$/7/items/28/body",
+      "kind": "body",
+      "characters": 7666
+    },
+    {
+      "path": "$/7/items/29/body",
+      "kind": "body",
+      "characters": 1727
+    },
+    {
+      "path": "$/7/items/30/body",
+      "kind": "body",
+      "characters": 17993
+    },
+    {
+      "path": "$/7/items/31/body",
+      "kind": "body",
+      "characters": 4293
+    },
+    {
+      "path": "$/7/items/32/body",
+      "kind": "body",
+      "characters": 8403
+    },
+    {
+      "path": "$/7/items/33/body",
+      "kind": "body",
+      "characters": 1604
+    },
+    {
+      "path": "$/7/items/34/body",
+      "kind": "body",
+      "characters": 5827
+    },
+    {
+      "path": "$/7/items/35/body",
+      "kind": "body",
+      "characters": 1777
+    },
+    {
+      "path": "$/7/items/36/body",
+      "kind": "body",
+      "characters": 1942
+    },
+    {
+      "path": "$/7/items/37/body",
+      "kind": "body",
+      "characters": 1923
+    },
+    {
+      "path": "$/7/items/38/body",
+      "kind": "body",
+      "characters": 5768
+    },
+    {
+      "path": "$/7/items/39/body",
+      "kind": "body",
+      "characters": 2380
+    },
+    {
+      "path": "$/7/items/40/body",
+      "kind": "body",
+      "characters": 7172
+    },
+    {
+      "path": "$/7/items/41/body",
+      "kind": "body",
+      "characters": 2415
+    },
+    {
+      "path": "$/7/items/42/body",
+      "kind": "body",
+      "characters": 2306
+    },
+    {
+      "path": "$/7/items/43/body",
+      "kind": "body",
+      "characters": 1226
+    },
+    {
+      "path": "$/7/items/44/body",
+      "kind": "body",
+      "characters": 9830
+    },
+    {
+      "path": "$/7/items/45/body",
+      "kind": "body",
+      "characters": 4604
+    },
+    {
+      "path": "$/7/items/46/body",
+      "kind": "body",
+      "characters": 12659
+    },
+    {
+      "path": "$/7/items/47/body",
+      "kind": "body",
+      "characters": 2678
+    },
+    {
+      "path": "$/7/items/48/body",
+      "kind": "body",
+      "characters": 1651
+    },
+    {
+      "path": "$/7/items/49/body",
+      "kind": "body",
+      "characters": 28644
+    },
+    {
+      "path": "$/7/items/50/body",
+      "kind": "body",
+      "characters": 2265
+    },
+    {
+      "path": "$/7/items/51/body",
+      "kind": "body",
+      "characters": 7807
+    },
+    {
+      "path": "$/7/items/52/body",
+      "kind": "body",
+      "characters": 1621
+    },
+    {
+      "path": "$/7/items/53/body",
+      "kind": "body",
+      "characters": 8666
+    },
+    {
+      "path": "$/7/items/54/body",
+      "kind": "body",
+      "characters": 2595
+    },
+    {
+      "path": "$/7/items/55/body",
+      "kind": "body",
+      "characters": 10923
+    },
+    {
+      "path": "$/7/items/56/body",
+      "kind": "body",
+      "characters": 1968
+    },
+    {
+      "path": "$/7/items/57/body",
+      "kind": "body",
+      "characters": 1223
+    },
+    {
+      "path": "$/7/items/58/body",
+      "kind": "body",
+      "characters": 12589
+    },
+    {
+      "path": "$/7/items/59/body",
+      "kind": "body",
+      "characters": 14565
+    },
+    {
+      "path": "$/7/items/60/body",
+      "kind": "body",
+      "characters": 2369
+    },
+    {
+      "path": "$/7/items/61/body",
+      "kind": "body",
+      "characters": 8983
+    },
+    {
+      "path": "$/7/items/62/body",
+      "kind": "body",
+      "characters": 6699
+    },
+    {
+      "path": "$/7/items/63/body",
+      "kind": "body",
+      "characters": 14830
+    },
+    {
+      "path": "$/7/items/64/body",
+      "kind": "body",
+      "characters": 2946
+    },
+    {
+      "path": "$/7/items/65/body",
+      "kind": "body",
+      "characters": 1806
+    },
+    {
+      "path": "$/7/items/66/body",
+      "kind": "body",
+      "characters": 5014
+    },
+    {
+      "path": "$/7/items/67/body",
+      "kind": "body",
+      "characters": 6647
+    },
+    {
+      "path": "$/7/items/68/body",
+      "kind": "body",
+      "characters": 1688
+    },
+    {
+      "path": "$/7/items/69/body",
+      "kind": "body",
+      "characters": 1999
+    },
+    {
+      "path": "$/7/items/70/body",
+      "kind": "body",
+      "characters": 3080
+    },
+    {
+      "path": "$/7/items/71/body",
+      "kind": "body",
+      "characters": 5302
+    },
+    {
+      "path": "$/7/items/72/body",
+      "kind": "body",
+      "characters": 10006
+    },
+    {
+      "path": "$/7/items/73/body",
+      "kind": "body",
+      "characters": 8814
+    },
+    {
+      "path": "$/7/items/74/body",
+      "kind": "body",
+      "characters": 3431
+    },
+    {
+      "path": "$/7/items/75/body",
+      "kind": "body",
+      "characters": 15137
+    },
+    {
+      "path": "$/7/items/76/body",
+      "kind": "body",
+      "characters": 9402
+    },
+    {
+      "path": "$/7/items/77/body",
+      "kind": "body",
+      "characters": 7228
+    },
+    {
+      "path": "$/7/items/78/body",
+      "kind": "body",
+      "characters": 3637
+    },
+    {
+      "path": "$/7/items/79/body",
+      "kind": "body",
+      "characters": 7868
+    },
+    {
+      "path": "$/7/items/80/body",
+      "kind": "body",
+      "characters": 15902
+    },
+    {
+      "path": "$/7/items/81/body",
+      "kind": "body",
+      "characters": 6462
+    },
+    {
+      "path": "$/7/items/82/body",
+      "kind": "body",
+      "characters": 3809
+    },
+    {
+      "path": "$/7/items/83/body",
+      "kind": "body",
+      "characters": 5547
+    },
+    {
+      "path": "$/7/items/84/body",
+      "kind": "body",
+      "characters": 7933
+    },
+    {
+      "path": "$/7/items/85/body",
+      "kind": "body",
+      "characters": 12052
+    },
+    {
+      "path": "$/7/items/86/body",
+      "kind": "body",
+      "characters": 5018
+    },
+    {
+      "path": "$/7/items/87/body",
+      "kind": "body",
+      "characters": 10326
+    },
+    {
+      "path": "$/7/items/88/body",
+      "kind": "body",
+      "characters": 8024
+    },
+    {
+      "path": "$/7/items/89/body",
+      "kind": "body",
+      "characters": 15771
+    },
+    {
+      "path": "$/7/items/90/body",
+      "kind": "body",
+      "characters": 9432
+    },
+    {
+      "path": "$/7/items/91/body",
+      "kind": "body",
+      "characters": 6070
+    },
+    {
+      "path": "$/7/items/92/body",
+      "kind": "body",
+      "characters": 16361
+    },
+    {
+      "path": "$/7/items/93/body",
+      "kind": "body",
+      "characters": 9653
+    },
+    {
+      "path": "$/7/items/94/body",
+      "kind": "body",
+      "characters": 10392
+    },
+    {
+      "path": "$/7/items/95/body",
+      "kind": "body",
+      "characters": 12656
+    },
+    {
+      "path": "$/7/items/96/body",
+      "kind": "body",
+      "characters": 13806
+    },
+    {
+      "path": "$/7/items/97/body",
+      "kind": "body",
+      "characters": 14074
+    },
+    {
+      "path": "$/7/items/98/body",
+      "kind": "body",
+      "characters": 14929
+    },
+    {
+      "path": "$/7/items/99/body",
+      "kind": "body",
+      "characters": 14989
+    },
+    {
+      "path": "$/8/items/0/body",
+      "kind": "body",
+      "characters": 2545
+    },
+    {
+      "path": "$/8/items/1/body",
+      "kind": "body",
+      "characters": 2079
+    },
+    {
+      "path": "$/8/items/2/body",
+      "kind": "body",
+      "characters": 3910
+    },
+    {
+      "path": "$/8/items/3/body",
+      "kind": "body",
+      "characters": 1605
+    },
+    {
+      "path": "$/8/items/4/body",
+      "kind": "body",
+      "characters": 9876
+    },
+    {
+      "path": "$/8/items/5/body",
+      "kind": "body",
+      "characters": 4864
+    },
+    {
+      "path": "$/8/items/6/body",
+      "kind": "body",
+      "characters": 4169
+    },
+    {
+      "path": "$/8/items/7/body",
+      "kind": "body",
+      "characters": 800
+    },
+    {
+      "path": "$/8/items/8/body",
+      "kind": "body",
+      "characters": 9194
+    },
+    {
+      "path": "$/8/items/9/body",
+      "kind": "body",
+      "characters": 4767
+    },
+    {
+      "path": "$/8/items/10/body",
+      "kind": "body",
+      "characters": 4429
+    },
+    {
+      "path": "$/8/items/11/body",
+      "kind": "body",
+      "characters": 5554
+    },
+    {
+      "path": "$/8/items/12/body",
+      "kind": "body",
+      "characters": 1087
+    },
+    {
+      "path": "$/8/items/13/body",
+      "kind": "body",
+      "characters": 1162
+    },
+    {
+      "path": "$/8/items/14/body",
+      "kind": "body",
+      "characters": 1096
+    },
+    {
+      "path": "$/8/items/15/body",
+      "kind": "body",
+      "characters": 1168
+    },
+    {
+      "path": "$/8/items/16/body",
+      "kind": "body",
+      "characters": 2321
+    },
+    {
+      "path": "$/8/items/17/body",
+      "kind": "body",
+      "characters": 1702
+    },
+    {
+      "path": "$/8/items/18/body",
+      "kind": "body",
+      "characters": 2256
+    },
+    {
+      "path": "$/8/items/19/body",
+      "kind": "body",
+      "characters": 950
+    },
+    {
+      "path": "$/8/items/20/body",
+      "kind": "body",
+      "characters": 2152
+    },
+    {
+      "path": "$/8/items/21/body",
+      "kind": "body",
+      "characters": 8141
+    },
+    {
+      "path": "$/8/items/22/body",
+      "kind": "body",
+      "characters": 2004
+    },
+    {
+      "path": "$/8/items/23/body",
+      "kind": "body",
+      "characters": 4766
+    },
+    {
+      "path": "$/8/items/24/body",
+      "kind": "body",
+      "characters": 3345
+    },
+    {
+      "path": "$/8/items/25/body",
+      "kind": "body",
+      "characters": 7247
+    },
+    {
+      "path": "$/8/items/26/body",
+      "kind": "body",
+      "characters": 10326
+    },
+    {
+      "path": "$/8/items/27/body",
+      "kind": "body",
+      "characters": 4388
+    },
+    {
+      "path": "$/8/items/28/body",
+      "kind": "body",
+      "characters": 3129
+    },
+    {
+      "path": "$/8/items/29/body",
+      "kind": "body",
+      "characters": 1586
+    },
+    {
+      "path": "$/8/items/30/body",
+      "kind": "body",
+      "characters": 1957
+    },
+    {
+      "path": "$/8/items/31/body",
+      "kind": "body",
+      "characters": 5303
+    },
+    {
+      "path": "$/8/items/32/body",
+      "kind": "body",
+      "characters": 1774
+    },
+    {
+      "path": "$/8/items/33/body",
+      "kind": "body",
+      "characters": 5234
+    },
+    {
+      "path": "$/8/items/34/body",
+      "kind": "body",
+      "characters": 7664
+    },
+    {
+      "path": "$/8/items/35/body",
+      "kind": "body",
+      "characters": 1875
+    },
+    {
+      "path": "$/8/items/36/body",
+      "kind": "body",
+      "characters": 22328
+    },
+    {
+      "path": "$/8/items/37/body",
+      "kind": "body",
+      "characters": 10365
+    },
+    {
+      "path": "$/8/items/38/body",
+      "kind": "body",
+      "characters": 2386
+    },
+    {
+      "path": "$/8/items/39/body",
+      "kind": "body",
+      "characters": 4609
+    },
+    {
+      "path": "$/8/items/40/body",
+      "kind": "body",
+      "characters": 7330
+    },
+    {
+      "path": "$/8/items/41/body",
+      "kind": "body",
+      "characters": 2836
+    },
+    {
+      "path": "$/8/items/42/body",
+      "kind": "body",
+      "characters": 2995
+    },
+    {
+      "path": "$/8/items/43/body",
+      "kind": "body",
+      "characters": 16360
+    },
+    {
+      "path": "$/8/items/44/body",
+      "kind": "body",
+      "characters": 11597
+    },
+    {
+      "path": "$/8/items/45/body",
+      "kind": "body",
+      "characters": 8262
+    },
+    {
+      "path": "$/8/items/46/body",
+      "kind": "body",
+      "characters": 2492
+    },
+    {
+      "path": "$/8/items/47/body",
+      "kind": "body",
+      "characters": 3630
+    },
+    {
+      "path": "$/8/items/48/body",
+      "kind": "body",
+      "characters": 3431
+    },
+    {
+      "path": "$/8/items/49/body",
+      "kind": "body",
+      "characters": 20531
+    },
+    {
+      "path": "$/8/items/50/body",
+      "kind": "body",
+      "characters": 10792
+    },
+    {
+      "path": "$/8/items/51/body",
+      "kind": "body",
+      "characters": 2021
+    },
+    {
+      "path": "$/8/items/52/body",
+      "kind": "body",
+      "characters": 26190
+    },
+    {
+      "path": "$/8/items/53/body",
+      "kind": "body",
+      "characters": 8662
+    },
+    {
+      "path": "$/8/items/54/body",
+      "kind": "body",
+      "characters": 2527
+    },
+    {
+      "path": "$/8/items/55/body",
+      "kind": "body",
+      "characters": 21464
+    },
+    {
+      "path": "$/8/items/56/body",
+      "kind": "body",
+      "characters": 6816
+    },
+    {
+      "path": "$/8/items/57/body",
+      "kind": "body",
+      "characters": 6300
+    },
+    {
+      "path": "$/8/items/58/body",
+      "kind": "body",
+      "characters": 4822
+    },
+    {
+      "path": "$/8/items/59/body",
+      "kind": "body",
+      "characters": 26663
+    },
+    {
+      "path": "$/8/items/60/body",
+      "kind": "body",
+      "characters": 6095
+    },
+    {
+      "path": "$/8/items/61/body",
+      "kind": "body",
+      "characters": 2650
+    },
+    {
+      "path": "$/8/items/62/body",
+      "kind": "body",
+      "characters": 4487
+    },
+    {
+      "path": "$/8/items/63/body",
+      "kind": "body",
+      "characters": 4314
+    },
+    {
+      "path": "$/8/items/64/body",
+      "kind": "body",
+      "characters": 1999
+    },
+    {
+      "path": "$/8/items/65/body",
+      "kind": "body",
+      "characters": 2736
+    },
+    {
+      "path": "$/8/items/66/body",
+      "kind": "body",
+      "characters": 6433
+    },
+    {
+      "path": "$/8/items/67/body",
+      "kind": "body",
+      "characters": 8139
+    },
+    {
+      "path": "$/8/items/68/body",
+      "kind": "body",
+      "characters": 4605
+    },
+    {
+      "path": "$/8/items/69/body",
+      "kind": "body",
+      "characters": 4235
+    },
+    {
+      "path": "$/8/items/70/body",
+      "kind": "body",
+      "characters": 16770
+    },
+    {
+      "path": "$/8/items/71/body",
+      "kind": "body",
+      "characters": 7554
+    },
+    {
+      "path": "$/8/items/72/body",
+      "kind": "body",
+      "characters": 16275
+    },
+    {
+      "path": "$/8/items/73/body",
+      "kind": "body",
+      "characters": 2735
+    },
+    {
+      "path": "$/8/items/74/body",
+      "kind": "body",
+      "characters": 18453
+    },
+    {
+      "path": "$/8/items/75/body",
+      "kind": "body",
+      "characters": 6120
+    },
+    {
+      "path": "$/8/items/76/body",
+      "kind": "body",
+      "characters": 4975
+    },
+    {
+      "path": "$/8/items/77/body",
+      "kind": "body",
+      "characters": 7551
+    },
+    {
+      "path": "$/8/items/78/body",
+      "kind": "body",
+      "characters": 21080
+    },
+    {
+      "path": "$/8/items/79/body",
+      "kind": "body",
+      "characters": 5671
+    },
+    {
+      "path": "$/8/items/80/body",
+      "kind": "body",
+      "characters": 16630
+    },
+    {
+      "path": "$/8/items/81/body",
+      "kind": "body",
+      "characters": 29329
+    },
+    {
+      "path": "$/8/items/82/body",
+      "kind": "body",
+      "characters": 7007
+    },
+    {
+      "path": "$/8/items/83/body",
+      "kind": "body",
+      "characters": 3598
+    },
+    {
+      "path": "$/8/items/84/body",
+      "kind": "body",
+      "characters": 4522
+    },
+    {
+      "path": "$/8/items/85/body",
+      "kind": "body",
+      "characters": 5170
+    },
+    {
+      "path": "$/8/items/86/body",
+      "kind": "body",
+      "characters": 9167
+    },
+    {
+      "path": "$/8/items/87/body",
+      "kind": "body",
+      "characters": 3648
+    },
+    {
+      "path": "$/8/items/88/body",
+      "kind": "body",
+      "characters": 5319
+    },
+    {
+      "path": "$/8/items/89/body",
+      "kind": "body",
+      "characters": 14661
+    },
+    {
+      "path": "$/8/items/90/body",
+      "kind": "body",
+      "characters": 23635
+    },
+    {
+      "path": "$/8/items/91/body",
+      "kind": "body",
+      "characters": 6594
+    },
+    {
+      "path": "$/8/items/92/body",
+      "kind": "body",
+      "characters": 13996
+    },
+    {
+      "path": "$/8/items/93/body",
+      "kind": "body",
+      "characters": 12985
+    },
+    {
+      "path": "$/8/items/94/body",
+      "kind": "body",
+      "characters": 6148
+    },
+    {
+      "path": "$/8/items/95/body",
+      "kind": "body",
+      "characters": 21069
+    },
+    {
+      "path": "$/8/items/96/body",
+      "kind": "body",
+      "characters": 12790
+    },
+    {
+      "path": "$/8/items/97/body",
+      "kind": "body",
+      "characters": 7064
+    },
+    {
+      "path": "$/8/items/98/body",
+      "kind": "body",
+      "characters": 8003
+    },
+    {
+      "path": "$/8/items/99/body",
+      "kind": "body",
+      "characters": 7093
+    }
+  ]
+}

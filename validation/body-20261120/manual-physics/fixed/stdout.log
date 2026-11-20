@@ -1,0 +1,15 @@
+[FAIL] P1     抛体解析真值：顶点高 4.067951849（闭式 2.867951849，差 1.20e+00）；落地 t 1.675628140（闭式 1.675628140，差 0.00e+00）；240Hz 采样顶点差 1.73e-05 m
+[PASS] P2     阻尼解析解：滑行距离 3.823529411765（v0/k=3.823529411765，差 4.44e-16）；20τ 后离平衡 3.58e-13 m；v(t)=−k(p−p_∞) 恒等最大偏差 9.93e-16
+[PASS] P3     弹簧：4 支 ζ∈{0,0.25,1,2.5} 全部满足 env(0)=1 且 env'(0)=0（最大偏差 5.55e-10）；ζ=0.25 的过零点间距核验阻尼周期差 6.57e-12 s
+[PASS] P4     单摆：精确**周期**（AGM 椭圆）与闭式复算差 0.00e+00（小角近似在 60° 时低估 -6.82%）；椭圆**波形**在有效域 |θ0|<=180° 内与独立 RK4(1/8192s) 最大偏差 1.20e-13 rad，物理边界 ±π 显式拒绝；调用者仍可用 tol_deg 收紧域（0/0 条域外样本已拒）
+[PASS] P5     圆周：拟合 r=1.500000000（真 1.5，差 2.22e-16）、ω=2.200000000（真 2.2，差 4.44e-16）、rms=6.02e-16；真值 周期=2.855993 s 向心=7.260000 m/s²
+[PASS] P6     边界反射：8Hz 粗采样下越界最大 0.00e+00 m（**不穿透**）；x 轴反射周期闭式 2.666666667 s，镜像过零核验 2.666666667，差 0.00e+00 s；y 轴周期 3.636363636
+[PASS] C1     六类合成观测史判别：static→static / uniform→uniform / accelerated_horiz→accelerated / projectile→projectile / damped→damped / circular→circular
+[PASS] C2     简约性地板：纯直线观测的 six-model 残差 {'static': 0.2863, 'uniform': 2.529e-16, 'accelerated': 5.055e-16, 'projectile': 0.3288, 'damped': 7.976e-07} ⇒ 判 'uniform'（二次/抛体被地板挡下）
+[PASS] C3     判别依据均含原始数字（例：拟合加速度 a=(0.000000, -9.806650, -0.000000) 与重力 g_vec=(0.000000, -9.806650, 0.000000) 相对偏差仅 0.000 (<= 0.10)，且 projectile rm）
+[PASS] C4     阈值敏感性：无噪声在偏离 1% 即翻转（rms 地板主导）；σ=0.02m 噪声下在偏离 8% 翻转（gravity_tol=0.10 主导）
+[PASS] C5     对抗性：8/8 条非法输入全部显式 raise（PhysicsError）
+------------------------------------------------------------------------
+通过 10 / 失败 1
+VERDICT=FAIL:P1
+raw: [workspace]\lingshu\outputs\body-validation-20261120\manual-physics-gate\evidence\fixed\sandbox\bridges\blender\_evidence\factory\raw\gate-physics.json

@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "generated_utc": "2026-11-20T13:29:03.642261+00:00",
+    "generated_utc": "2026-11-20T13:44:25.727746+00:00",
     "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-    "python_executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+    "python_executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
     "platform": "Windows-11-10.0.26300-SP0",
     "reviewer": "independent read-only subagent",
-    "repo": "<workspace>\\lingshu\\work\\lingshu-body-pendulum-20261120",
-    "git_head": "aa18885c933dfd49d8c23a288726158de1bc7c03",
+    "repo": "[workspace]\\lingshu\\work\\lingshu-body-pendulum-20261120",
+    "git_head": "e0771a810b8846676f3545542b2e70d5e0011467",
     "git_status": "",
     "baseline_sha": "d74848fb33dbff1d719959df19d1266a1ac60f44",
     "baseline_physics_sha256_lf": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a",

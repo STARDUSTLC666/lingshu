@@ -1,0 +1,74 @@
+{
+  "variant": "fixed_top_level",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "source_sha256": {
+    "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+    "bridges/blender/wm_bridge/factory/anim/eval.py": "1574bfb6555bf396da3aefb7c5de150e29c76adbcd1580e3c939d7f9117482b9",
+    "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810"
+  },
+  "timing": [
+    {
+      "links_and_motions": 1,
+      "calls_per_trial": 200,
+      "trials_ns_per_call": [
+        28496.5,
+        16666.5,
+        16549.0,
+        19135.5,
+        20601.0,
+        19311.5,
+        18108.0
+      ],
+      "median_ns_per_call": 19135.5,
+      "pose_sha256": "a443b2b83e5e474083d583d84e14a844e8f29d62a78bdcec289f07a813617940"
+    },
+    {
+      "links_and_motions": 16,
+      "calls_per_trial": 200,
+      "trials_ns_per_call": [
+        177634.5,
+        182910.0,
+        182124.0,
+        173887.0,
+        181060.0,
+        171463.5,
+        185403.0
+      ],
+      "median_ns_per_call": 181060.0,
+      "pose_sha256": "c4e2d389bd21bbe5f3504259b1b461dbfeb5ef9ba3ee0b4ef7a928e81e4b69dc"
+    },
+    {
+      "links_and_motions": 64,
+      "calls_per_trial": 200,
+      "trials_ns_per_call": [
+        690927.5,
+        673507.0,
+        725515.0,
+        641631.0,
+        647698.5,
+        653243.0,
+        648214.0
+      ],
+      "median_ns_per_call": 653243.0,
+      "pose_sha256": "438c59632cba2e0fc1e49230afd6163df28e4d8d2cab401489b8ab31792099a6"
+    }
+  ],
+  "memory_64_links": [
+    {
+      "calls": 100,
+      "current_bytes": 88,
+      "retained_delta_bytes": 88,
+      "peak_bytes": 73016
+    },
+    {
+      "calls": 1000,
+      "current_bytes": 364,
+      "retained_delta_bytes": 364,
+      "peak_bytes": 73292
+    }
+  ],
+  "top_level_probe": {
+    "ok": true
+  }
+}

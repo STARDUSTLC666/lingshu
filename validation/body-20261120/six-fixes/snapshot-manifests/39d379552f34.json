@@ -3,6 +3,6 @@
   "package_tree": "ac196cb5a3769040fdae4613f9fd6e3a3e8a1420",
   "archive_sha256": "8f7e78d4ed9f37c9879bd2efea3a35cc1c941aa196bc354f02f12c085577ae61",
   "archive_bytes": 1270384,
-  "path": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\39d379552f34",
-  "source_repository": "<workspace>\\lingshu\\work\\lingshu-body-20261120"
+  "path": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\39d379552f34",
+  "source_repository": "[workspace]\\lingshu\\work\\lingshu-body-20261120"
 }

@@ -1,13 +1,13 @@
 {
   "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-  "executable": "<workspace>\\lingshu\\work\\lingshu-pendulum-hp-20261120-venv\\Scripts\\python.exe",
+  "executable": "[workspace]\\lingshu\\work\\lingshu-pendulum-hp-20261120-venv\\Scripts\\python.exe",
   "platform": "Windows-11-10.0.26300-SP0",
   "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
   "cpu_count": 32,
   "mpmath": "1.4.1",
   "mpmath_dps": 80,
   "pythonhashseed": null,
-  "wall_clock_utc": "2026-11-20T13:16:39Z",
+  "wall_clock_utc": "2026-11-20T13:40:56Z",
   "perf_counter": {
     "implementation": "QueryPerformanceCounter()",
     "monotonic": true,

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.157" timestamp="2026-11-20T21:37:45.635822+08:00" hostname="STARDUST"><testcase classname="tests.test_bridge_top_level_motions" name="test_explicit_empty_motions_disable_top_level_motion" time="0.001"><failure message="AssertionError: explicit empty motions must disable top-level fallback&#10;assert {'bob': {'pos...910327, 0.0)}} == {'bob': {'pos...0, 0.0, 0.0)}}&#10;  &#10;  Differing items:&#10;  {'bob': {'pos': (0.0, 0.0, 0.0), 'quat': (0.9884032672682697, 0.0, 0.15185183980910327, 0.0)}} != {'bob': {'pos': (0.0, 0.0, 0.0), 'quat': (1.0, 0.0, 0.0, 0.0)}}&#10;  Use -v to get more diff">tests\test_bridge_top_level_motions.py:85: in test_explicit_empty_motions_disable_top_level_motion
+    assert actual == E.eval_at(_spec(), 12), "explicit empty motions must disable top-level fallback"
+E   AssertionError: explicit empty motions must disable top-level fallback
+E   assert {'bob': {'pos...910327, 0.0)}} == {'bob': {'pos...0, 0.0, 0.0)}}
+E     
+E     Differing items:
+E     {'bob': {'pos': (0.0, 0.0, 0.0), 'quat': (0.9884032672682697, 0.0, 0.15185183980910327, 0.0)}} != {'bob': {'pos': (0.0, 0.0, 0.0), 'quat': (1.0, 0.0, 0.0, 0.0)}}
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

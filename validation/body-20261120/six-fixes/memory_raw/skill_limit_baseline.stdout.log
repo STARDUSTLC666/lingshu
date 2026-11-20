@@ -1,0 +1,1 @@
+{"suite": "skill_limit", "variant": "baseline", "summaries": [{"label": "search_5000_skills_limit_-1", "python_peak_new_bytes_samples": [77527, 77655, 77655], "python_peak_new_bytes_median": 77655, "python_current_delta_bytes_samples": [68190, 68318, 68318], "working_set_after_bytes_samples": [51736576, 51208192, 51257344]}]}

@@ -1,0 +1,14 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+____________ test_explicit_motions_override_top_level_declarations ____________
+tests\test_bridge_top_level_motions.py:79: in test_explicit_motions_override_top_level_declarations
+    assert actual == expected, "explicit motions must take precedence over top-level declarations"
+E   AssertionError: explicit motions must take precedence over top-level declarations
+E   assert {'bob': {'pos...0, 0.0, 0.0)}} == {'bob': {'pos...0, 0.0, 0.0)}}
+E     
+E     Differing items:
+E     {'bob': {'pos': (1.125, -2.0, 2.2741687500000003), 'quat': (1.0, 0.0, 0.0, 0.0)}} != {'bob': {'pos': (0.0, 0.0, 0.0), 'quat': (1.0, 0.0, 0.0, 0.0)}}
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED tests/test_bridge_top_level_motions.py::test_explicit_motions_override_top_level_declarations
+1 failed in 0.20s

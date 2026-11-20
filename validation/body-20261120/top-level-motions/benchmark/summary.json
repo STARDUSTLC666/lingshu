@@ -1,0 +1,232 @@
+{
+  "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "correctness_fingerprints_equal": true,
+  "timing_scope": "Seven trials after warmup; successful eval_at paths only; no speed threshold.",
+  "memory_scope": "tracemalloc current/peak after gc at 100 and 1000 calls, 64 links/motions.",
+  "records": [
+    {
+      "variant": "baseline_parameter",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "cc1a58e6665099ba43d406c709323227f7c0162b85fb7b1652b4fa9ee304644c",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810"
+      },
+      "timing": [
+        {
+          "links_and_motions": 1,
+          "calls_per_trial": 200,
+          "trials_ns_per_call": [
+            14663.5,
+            14504.0,
+            14900.0,
+            14646.5,
+            14528.0,
+            16387.0,
+            14577.0
+          ],
+          "median_ns_per_call": 14646.5,
+          "pose_sha256": "a443b2b83e5e474083d583d84e14a844e8f29d62a78bdcec289f07a813617940"
+        },
+        {
+          "links_and_motions": 16,
+          "calls_per_trial": 200,
+          "trials_ns_per_call": [
+            140808.0,
+            146437.5,
+            184457.0,
+            174279.5,
+            173066.5,
+            173903.0,
+            189241.5
+          ],
+          "median_ns_per_call": 173903.0,
+          "pose_sha256": "c4e2d389bd21bbe5f3504259b1b461dbfeb5ef9ba3ee0b4ef7a928e81e4b69dc"
+        },
+        {
+          "links_and_motions": 64,
+          "calls_per_trial": 200,
+          "trials_ns_per_call": [
+            572395.0,
+            566895.5,
+            624939.5,
+            644978.0,
+            578156.5,
+            574726.5,
+            576401.0
+          ],
+          "median_ns_per_call": 576401.0,
+          "pose_sha256": "438c59632cba2e0fc1e49230afd6163df28e4d8d2cab401489b8ab31792099a6"
+        }
+      ],
+      "memory_64_links": [
+        {
+          "calls": 100,
+          "current_bytes": 88,
+          "retained_delta_bytes": 88,
+          "peak_bytes": 73136
+        },
+        {
+          "calls": 1000,
+          "current_bytes": 364,
+          "retained_delta_bytes": 364,
+          "peak_bytes": 73412
+        }
+      ],
+      "top_level_probe": {
+        "ok": false,
+        "exception_type": "SpecError",
+        "message": "spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）"
+      }
+    },
+    {
+      "variant": "fixed_parameter",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "1574bfb6555bf396da3aefb7c5de150e29c76adbcd1580e3c939d7f9117482b9",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810"
+      },
+      "timing": [
+        {
+          "links_and_motions": 1,
+          "calls_per_trial": 200,
+          "trials_ns_per_call": [
+            16283.0,
+            15406.0,
+            14964.0,
+            17244.5,
+            16867.5,
+            16830.0,
+            19430.0
+          ],
+          "median_ns_per_call": 16830.0,
+          "pose_sha256": "a443b2b83e5e474083d583d84e14a844e8f29d62a78bdcec289f07a813617940"
+        },
+        {
+          "links_and_motions": 16,
+          "calls_per_trial": 200,
+          "trials_ns_per_call": [
+            153898.0,
+            152035.5,
+            154782.5,
+            151413.5,
+            165843.5,
+            151945.5,
+            155095.5
+          ],
+          "median_ns_per_call": 153898.0,
+          "pose_sha256": "c4e2d389bd21bbe5f3504259b1b461dbfeb5ef9ba3ee0b4ef7a928e81e4b69dc"
+        },
+        {
+          "links_and_motions": 64,
+          "calls_per_trial": 200,
+          "trials_ns_per_call": [
+            611158.0,
+            553995.5,
+            634277.5,
+            566773.5,
+            559618.5,
+            561517.0,
+            564314.0
+          ],
+          "median_ns_per_call": 564314.0,
+          "pose_sha256": "438c59632cba2e0fc1e49230afd6163df28e4d8d2cab401489b8ab31792099a6"
+        }
+      ],
+      "memory_64_links": [
+        {
+          "calls": 100,
+          "current_bytes": 88,
+          "retained_delta_bytes": 88,
+          "peak_bytes": 73136
+        },
+        {
+          "calls": 1000,
+          "current_bytes": 364,
+          "retained_delta_bytes": 364,
+          "peak_bytes": 73412
+        }
+      ],
+      "top_level_probe": {
+        "ok": true
+      }
+    },
+    {
+      "variant": "fixed_top_level",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "1574bfb6555bf396da3aefb7c5de150e29c76adbcd1580e3c939d7f9117482b9",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810"
+      },
+      "timing": [
+        {
+          "links_and_motions": 1,
+          "calls_per_trial": 200,
+          "trials_ns_per_call": [
+            28496.5,
+            16666.5,
+            16549.0,
+            19135.5,
+            20601.0,
+            19311.5,
+            18108.0
+          ],
+          "median_ns_per_call": 19135.5,
+          "pose_sha256": "a443b2b83e5e474083d583d84e14a844e8f29d62a78bdcec289f07a813617940"
+        },
+        {
+          "links_and_motions": 16,
+          "calls_per_trial": 200,
+          "trials_ns_per_call": [
+            177634.5,
+            182910.0,
+            182124.0,
+            173887.0,
+            181060.0,
+            171463.5,
+            185403.0
+          ],
+          "median_ns_per_call": 181060.0,
+          "pose_sha256": "c4e2d389bd21bbe5f3504259b1b461dbfeb5ef9ba3ee0b4ef7a928e81e4b69dc"
+        },
+        {
+          "links_and_motions": 64,
+          "calls_per_trial": 200,
+          "trials_ns_per_call": [
+            690927.5,
+            673507.0,
+            725515.0,
+            641631.0,
+            647698.5,
+            653243.0,
+            648214.0
+          ],
+          "median_ns_per_call": 653243.0,
+          "pose_sha256": "438c59632cba2e0fc1e49230afd6163df28e4d8d2cab401489b8ab31792099a6"
+        }
+      ],
+      "memory_64_links": [
+        {
+          "calls": 100,
+          "current_bytes": 88,
+          "retained_delta_bytes": 88,
+          "peak_bytes": 73016
+        },
+        {
+          "calls": 1000,
+          "current_bytes": 364,
+          "retained_delta_bytes": 364,
+          "peak_bytes": 73292
+        }
+      ],
+      "top_level_probe": {
+        "ok": true
+      }
+    }
+  ]
+}

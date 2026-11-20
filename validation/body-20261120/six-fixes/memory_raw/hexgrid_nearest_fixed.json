@@ -2,10 +2,10 @@
   "suite": "hexgrid_nearest",
   "variant": "fixed",
   "commit": "cff189b3438623feaebdf1a874fafdd03080acb1",
-  "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cff189b34386",
+  "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cff189b34386",
   "environment": {
     "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-    "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+    "executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
     "platform": "Windows-11-10.0.26300-SP0",
     "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
     "cpu_count": 32,
@@ -113,6 +113,6 @@
       ]
     }
   ],
-  "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cff189b34386\\lingshu\\nn\\hex_cnn.py",
+  "actual_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cff189b34386\\lingshu\\nn\\hex_cnn.py",
   "source_lf_sha256": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081"
 }

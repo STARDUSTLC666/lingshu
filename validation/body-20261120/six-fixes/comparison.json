@@ -7,56 +7,56 @@
       "package_tree": "b6ab7fc65715506555f7c8b17ea56296131ff040",
       "archive_sha256": "fd0b611e25319baaff2f43ede7f77b4690bfecc1c9c5f8c0b4567c70aded9fa1",
       "archive_bytes": 1270272,
-      "path": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
-      "source_repository": "<workspace>\\lingshu\\work\\lingshu-body-20261120"
+      "path": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
+      "source_repository": "[workspace]\\lingshu\\work\\lingshu-body-20261120"
     },
     "cc68a82baace16e92ff6ce770330b65102a530a5": {
       "commit": "cc68a82baace16e92ff6ce770330b65102a530a5",
       "package_tree": "023794ed11d0b7e4983b3478ab15a341014b8ec5",
       "archive_sha256": "5b78ab06a4d73872838e5d26c2b8853ed81440b4f5d9f8894a60a3b95a65116d",
       "archive_bytes": 1270497,
-      "path": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cc68a82baace",
-      "source_repository": "<workspace>\\lingshu\\work\\lingshu-body-20261120"
+      "path": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cc68a82baace",
+      "source_repository": "[workspace]\\lingshu\\work\\lingshu-body-20261120"
     },
     "433befa7b356eebecbc457ecd8f8a123ec1540cc": {
       "commit": "433befa7b356eebecbc457ecd8f8a123ec1540cc",
       "package_tree": "46a03068b78672efecc1b4bd5ab6d80674ec8272",
       "archive_sha256": "4272338925b59e705e90757a289c01f0eea0ee69493891fb336aa946e70c899e",
       "archive_bytes": 1270448,
-      "path": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\433befa7b356",
-      "source_repository": "<workspace>\\lingshu\\work\\lingshu-body-20261120"
+      "path": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\433befa7b356",
+      "source_repository": "[workspace]\\lingshu\\work\\lingshu-body-20261120"
     },
     "39d379552f34026ef46ad0515831319b1494a5d3": {
       "commit": "39d379552f34026ef46ad0515831319b1494a5d3",
       "package_tree": "ac196cb5a3769040fdae4613f9fd6e3a3e8a1420",
       "archive_sha256": "8f7e78d4ed9f37c9879bd2efea3a35cc1c941aa196bc354f02f12c085577ae61",
       "archive_bytes": 1270384,
-      "path": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\39d379552f34",
-      "source_repository": "<workspace>\\lingshu\\work\\lingshu-body-20261120"
+      "path": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\39d379552f34",
+      "source_repository": "[workspace]\\lingshu\\work\\lingshu-body-20261120"
     },
     "a663512dd0fbc44a9fb08a55751951009586d172": {
       "commit": "a663512dd0fbc44a9fb08a55751951009586d172",
       "package_tree": "e84dbe14b06b481806c5685af64fe8eaf78d25a2",
       "archive_sha256": "0b4396a3dee800aa201ea379e3964fb9de2520d9c12c9525f2f3169a4f16fbbd",
       "archive_bytes": 1270377,
-      "path": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\a663512dd0fb",
-      "source_repository": "<workspace>\\lingshu\\work\\lingshu-body-20261120"
+      "path": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\a663512dd0fb",
+      "source_repository": "[workspace]\\lingshu\\work\\lingshu-body-20261120"
     },
     "cff189b3438623feaebdf1a874fafdd03080acb1": {
       "commit": "cff189b3438623feaebdf1a874fafdd03080acb1",
       "package_tree": "5050f4abd847494753c10a531a49793561a0e8c0",
       "archive_sha256": "a12b3fe4bc390b50e8d01b3ba7f2e660da95d95f018c8a9673cc23eeab8f496b",
       "archive_bytes": 1270459,
-      "path": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cff189b34386",
-      "source_repository": "<workspace>\\lingshu\\work\\lingshu-body-20261120"
+      "path": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cff189b34386",
+      "source_repository": "[workspace]\\lingshu\\work\\lingshu-body-20261120"
     },
     "fb6c9cabc939a6defcc44ef661b3048d47155d87": {
       "commit": "fb6c9cabc939a6defcc44ef661b3048d47155d87",
       "package_tree": "222d1cce5f11d82b7b05a6f822b835b46913af86",
       "archive_sha256": "8117258ad733bb9f3f58e63b3dc8cb710378ff8fb4fccab0af6728b7adc41f60",
       "archive_bytes": 1270332,
-      "path": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\fb6c9cabc939",
-      "source_repository": "<workspace>\\lingshu\\work\\lingshu-body-20261120"
+      "path": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\fb6c9cabc939",
+      "source_repository": "[workspace]\\lingshu\\work\\lingshu-body-20261120"
     }
   },
   "suite_results": {

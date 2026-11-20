@@ -1,0 +1,1 @@
+{"suite": "obb_sat", "variant": "baseline", "summaries": [{"label": "overlap_512_skew_pairs", "python_peak_new_bytes_samples": [12384, 12320, 12320], "python_peak_new_bytes_median": 12320, "python_current_delta_bytes_samples": [11528, 11464, 11464], "working_set_after_bytes_samples": [43495424, 43499520, 43499520]}]}

@@ -1,0 +1,11 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___________ test_near_separatrix_matches_frozen_80_digit_reference ____________
+tests\test_pendulum_release_solution.py:80: in test_near_separatrix_matches_frozen_80_digit_reference
+    assert abs(actual - sign * expected) < 1e-12, "stable descent must match high-precision reference"
+E   AssertionError: stable descent must match high-precision reference
+E   assert 3.416569249736767e-10 < 1e-12
+E    +  where 3.416569249736767e-10 = abs((-3.1415926202697837 - (-1.0 * 3.1415926199281268)))
+=========================== short test summary info ===========================
+FAILED tests/test_pendulum_release_solution.py::test_near_separatrix_matches_frozen_80_digit_reference
+1 failed in 0.23s

@@ -12,10 +12,10 @@
         "suite": "motion_groups",
         "variant": "baseline",
         "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
-        "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
         "environment": {
           "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-          "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+          "executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
           "platform": "Windows-11-10.0.26300-SP0",
           "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
           "cpu_count": 32,
@@ -123,17 +123,17 @@
             ]
           }
         ],
-        "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\world\\motion_groups.py",
+        "actual_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\world\\motion_groups.py",
         "source_lf_sha256": "fa755466da9a4babb31d5b7fc07c9c447becdd5d5df31066e34a554d0b02a254"
       },
       "fixed": {
         "suite": "motion_groups",
         "variant": "fixed",
         "commit": "cc68a82baace16e92ff6ce770330b65102a530a5",
-        "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cc68a82baace",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cc68a82baace",
         "environment": {
           "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-          "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+          "executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
           "platform": "Windows-11-10.0.26300-SP0",
           "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
           "cpu_count": 32,
@@ -241,7 +241,7 @@
             ]
           }
         ],
-        "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cc68a82baace\\lingshu\\world\\motion_groups.py",
+        "actual_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cc68a82baace\\lingshu\\world\\motion_groups.py",
         "source_lf_sha256": "261f48459c03bdd297d923581ed01efed12d6293aaaffe3319fd321772eacaeb"
       }
     },
@@ -250,10 +250,10 @@
         "suite": "lineart_alpha",
         "variant": "baseline",
         "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
-        "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
         "environment": {
           "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-          "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+          "executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
           "platform": "Windows-11-10.0.26300-SP0",
           "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
           "cpu_count": 32,
@@ -361,17 +361,17 @@
             ]
           }
         ],
-        "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\vision\\lineart.py",
+        "actual_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\vision\\lineart.py",
         "source_lf_sha256": "b33bdfcca84be434ff49efb1003c23dfcbe75a56d15713d178301ecf39536418"
       },
       "fixed": {
         "suite": "lineart_alpha",
         "variant": "fixed",
         "commit": "433befa7b356eebecbc457ecd8f8a123ec1540cc",
-        "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\433befa7b356",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\433befa7b356",
         "environment": {
           "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-          "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+          "executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
           "platform": "Windows-11-10.0.26300-SP0",
           "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
           "cpu_count": 32,
@@ -479,7 +479,7 @@
             ]
           }
         ],
-        "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\433befa7b356\\lingshu\\vision\\lineart.py",
+        "actual_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\433befa7b356\\lingshu\\vision\\lineart.py",
         "source_lf_sha256": "01d203a87a95021c99080f583e79868feafbf22251d3497b4e4765543cddca9c"
       }
     },
@@ -488,10 +488,10 @@
         "suite": "obb_sat",
         "variant": "baseline",
         "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
-        "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
         "environment": {
           "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-          "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+          "executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
           "platform": "Windows-11-10.0.26300-SP0",
           "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
           "cpu_count": 32,
@@ -599,17 +599,17 @@
             ]
           }
         ],
-        "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\world\\physics.py",
+        "actual_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\world\\physics.py",
         "source_lf_sha256": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a"
       },
       "fixed": {
         "suite": "obb_sat",
         "variant": "fixed",
         "commit": "39d379552f34026ef46ad0515831319b1494a5d3",
-        "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\39d379552f34",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\39d379552f34",
         "environment": {
           "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-          "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+          "executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
           "platform": "Windows-11-10.0.26300-SP0",
           "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
           "cpu_count": 32,
@@ -717,7 +717,7 @@
             ]
           }
         ],
-        "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\39d379552f34\\lingshu\\world\\physics.py",
+        "actual_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\39d379552f34\\lingshu\\world\\physics.py",
         "source_lf_sha256": "188cfa80a69c58fc855c98a5fd4b30ad0c367067332cb2813551fbeb2216d03f"
       }
     },
@@ -726,10 +726,10 @@
         "suite": "novelty_cache",
         "variant": "baseline",
         "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
-        "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
         "environment": {
           "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-          "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+          "executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
           "platform": "Windows-11-10.0.26300-SP0",
           "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
           "cpu_count": 32,
@@ -983,17 +983,17 @@
             ]
           }
         ],
-        "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\core\\longterm_gate.py",
+        "actual_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\core\\longterm_gate.py",
         "source_lf_sha256": "68e10ba7f880f9ae89c343b60e5c012bc7509157511e897e2f9dc2a90bd739cc"
       },
       "fixed": {
         "suite": "novelty_cache",
         "variant": "fixed",
         "commit": "a663512dd0fbc44a9fb08a55751951009586d172",
-        "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\a663512dd0fb",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\a663512dd0fb",
         "environment": {
           "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-          "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+          "executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
           "platform": "Windows-11-10.0.26300-SP0",
           "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
           "cpu_count": 32,
@@ -1247,7 +1247,7 @@
             ]
           }
         ],
-        "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\a663512dd0fb\\lingshu\\core\\longterm_gate.py",
+        "actual_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\a663512dd0fb\\lingshu\\core\\longterm_gate.py",
         "source_lf_sha256": "88d7df98aeace5d78e64de39abaecd035baa39f3b4990541928ed646ee6f2a3b"
       }
     },
@@ -1256,10 +1256,10 @@
         "suite": "hexgrid_nearest",
         "variant": "baseline",
         "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
-        "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
         "environment": {
           "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-          "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+          "executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
           "platform": "Windows-11-10.0.26300-SP0",
           "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
           "cpu_count": 32,
@@ -1367,17 +1367,17 @@
             ]
           }
         ],
-        "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\nn\\hex_cnn.py",
+        "actual_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\nn\\hex_cnn.py",
         "source_lf_sha256": "8a4a5e501a92a4b17024eb9dee36f8da004e9d036d9eb766212ac30303b7aac5"
       },
       "fixed": {
         "suite": "hexgrid_nearest",
         "variant": "fixed",
         "commit": "cff189b3438623feaebdf1a874fafdd03080acb1",
-        "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cff189b34386",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cff189b34386",
         "environment": {
           "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-          "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+          "executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
           "platform": "Windows-11-10.0.26300-SP0",
           "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
           "cpu_count": 32,
@@ -1485,7 +1485,7 @@
             ]
           }
         ],
-        "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cff189b34386\\lingshu\\nn\\hex_cnn.py",
+        "actual_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cff189b34386\\lingshu\\nn\\hex_cnn.py",
         "source_lf_sha256": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081"
       }
     },
@@ -1494,10 +1494,10 @@
         "suite": "skill_limit",
         "variant": "baseline",
         "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
-        "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
         "environment": {
           "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-          "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+          "executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
           "platform": "Windows-11-10.0.26300-SP0",
           "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
           "cpu_count": 32,
@@ -1605,17 +1605,17 @@
             ]
           }
         ],
-        "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\core\\core.py",
+        "actual_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\core\\core.py",
         "source_lf_sha256": "4b67f6109ebf62eb74a921fd0a5d4e810e846e05643332ceaa1fb1a8739fe771"
       },
       "fixed": {
         "suite": "skill_limit",
         "variant": "fixed",
         "commit": "fb6c9cabc939a6defcc44ef661b3048d47155d87",
-        "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\fb6c9cabc939",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\fb6c9cabc939",
         "environment": {
           "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-          "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+          "executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
           "platform": "Windows-11-10.0.26300-SP0",
           "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
           "cpu_count": 32,
@@ -1723,7 +1723,7 @@
             ]
           }
         ],
-        "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\fb6c9cabc939\\lingshu\\core\\core.py",
+        "actual_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\fb6c9cabc939\\lingshu\\core\\core.py",
         "source_lf_sha256": "07ed97c044399d6d59c36fa95c0bdb734b43f83af693f57fe998202477c25983"
       }
     }

@@ -1,0 +1,11 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_______ test_truth_period_retains_near_separatrix_complementary_modulus _______
+tests\test_pendulum_release_solution.py:88: in test_truth_period_retains_near_separatrix_complementary_modulus
+    assert abs(truth["period_exact_elliptic"] - 2 * quarter) < 1e-12, "truth period must preserve complementary modulus"
+E   AssertionError: truth period must preserve complementary modulus
+E   assert 0.008693642492588083 < 1e-12
+E    +  where 0.008693642492588083 = abs((35.28988158674083 - (2 * 17.640593972124123)))
+=========================== short test summary info ===========================
+FAILED tests/test_pendulum_release_solution.py::test_truth_period_retains_near_separatrix_complementary_modulus
+1 failed in 0.23s

@@ -1,0 +1,5 @@
+  PASS A01 int goal -> 可读 TypeError 且不注册
+  PASS A02 正对照：空串 goal 正常注册
+  PASS A03 正对照：字符串 goal 指向有效实体
+  PASS E01 钉子：可读文案
+通过 4 / 失败 0

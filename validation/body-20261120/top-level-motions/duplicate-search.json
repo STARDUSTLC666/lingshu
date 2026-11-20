@@ -1,0 +1,1993 @@
+[
+  {
+    "query": [
+      "issues",
+      "FuRongJun-1999/lingshu",
+      "motions"
+    ],
+    "returncode": 0,
+    "items": [],
+    "stderr": ""
+  },
+  {
+    "query": [
+      "prs",
+      "FuRongJun-1999/lingshu",
+      "motions"
+    ],
+    "returncode": 0,
+    "items": [],
+    "stderr": ""
+  },
+  {
+    "query": [
+      "issues",
+      "FuRongJun-1999/dsh-bounty",
+      "motions"
+    ],
+    "returncode": 0,
+    "items": [],
+    "stderr": ""
+  },
+  {
+    "query": [
+      "issues",
+      "FuRongJun-1999/lingshu",
+      "normalize_spec"
+    ],
+    "returncode": 0,
+    "items": [],
+    "stderr": ""
+  },
+  {
+    "query": [
+      "prs",
+      "FuRongJun-1999/lingshu",
+      "normalize_spec"
+    ],
+    "returncode": 0,
+    "items": [],
+    "stderr": ""
+  },
+  {
+    "query": [
+      "issues",
+      "FuRongJun-1999/lingshu",
+      "动画"
+    ],
+    "returncode": 0,
+    "items": [
+      {
+        "number": 434,
+        "state": "open",
+        "title": "[架构/插件化] 身体库与大脑库拆成独立插件包 + 统一调用接口：任务拆解（承接 #178）",
+        "updatedAt": "2026-11-14T11:01:57Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/434"
+      },
+      {
+        "number": 1445,
+        "state": "open",
+        "title": "[nn/hex_unit] 路线图 M5 汉字模态内置 IDS 拆解与六书部件组合卡闭环尚未落地",
+        "updatedAt": "2026-11-18T06:46:14Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/1445"
+      },
+      {
+        "number": 172,
+        "state": "open",
+        "title": "[架构/方向] 「灵×脑×身」闭环在代码里不存在：53 个模块中 26 个无人导入，nn/gen 与 core/world 零依赖边；世界模型的类别由模拟器 oracle 白给，自研 hex 感知从未进入世界",
+        "updatedAt": "2026-11-13T10:49:51Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/172"
+      },
+      {
+        "number": 1468,
+        "state": "open",
+        "title": "[body] 身体库已完成增量的合并顺序、验收与下一步裁定",
+        "updatedAt": "2026-11-20T07:24:13Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/1468"
+      },
+      {
+        "number": 352,
+        "state": "closed",
+        "title": "[nn/stcnn] frames_to_voxel 整段 min-max 归一化把任意小噪声放大到满量程",
+        "updatedAt": "2026-10-23T21:23:55Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/352"
+      },
+      {
+        "number": 138,
+        "state": "closed",
+        "title": "[core/condition_normalize] 非法值或带空格的值被静默折叠成 __UNASSERTED__：与「未声明」同 cond_hash，条件路由串桶且无告警",
+        "updatedAt": "2026-10-25T10:10:25Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/138"
+      },
+      {
+        "number": 295,
+        "state": "closed",
+        "title": "[nn/hex_gen] verify_constructive 是恒等比对：日志里的 shape/color/pattern/size 原样回显输入、zone_landed 由输入 zone 算出，从不读像素——渲染器什么都不画也是 100%，test_hex_gen 的 P1①/P1③ 七项「≥95%」判据不可能失败",
+        "updatedAt": "2026-10-24T17:02:51Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/295"
+      },
+      {
+        "number": 678,
+        "state": "closed",
+        "title": "[gen/hexgen_subject_split][尺度一致性][P2] #523 的落仓修复漏了切分面积上限门：`_vocab_split_one` 仍按 SIZE²=131072px 判「整幅前景」，同一场景等比放大到 1200 后切分遍静默失效（实例 2→1）",
+        "updatedAt": "2026-10-15T22:00:58Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/678"
+      },
+      {
+        "number": 380,
+        "state": "closed",
+        "title": "[world/silhouette3d] apply_pose 的候选表声明兼容 thigh_l/calf_l/knee_l，但五个姿态分支从未给腿设过值：两个模板 × 7 姿态驱动过的腿均为空，腿只能被归零（docstring :855 逐字声明该命名）",
+        "updatedAt": "2026-10-23T17:02:15Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/380"
+      },
+      {
+        "number": 311,
+        "state": "closed",
+        "title": "[world/world3d] _draw_box 按固定顺序画全部 6 个面、不做背面剔除：被遮住的侧面、底面、顶面盖在可见面上（任意视角下前面只剩约 58%~63% 像素着色正确）",
+        "updatedAt": "2026-10-23T16:03:01Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/311"
+      },
+      {
+        "number": 4,
+        "state": "closed",
+        "title": "[建议] 依赖零版本约束 + 两处测试在 numpy 2.3.5 下确定性失败（附环境读数）",
+        "updatedAt": "2026-10-31T13:08:53Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/4"
+      },
+      {
+        "number": 679,
+        "state": "closed",
+        "title": "[nn/hex_nn_preview][形状/外部 PR 遗漏][P2] PR #97 把 `_layer` 推广到任意通道数，但 `argmax3` 的 head 仍写死 `reshape(9, k3 + 3)`：C=1/C=4 输入直接 ValueError，只有 C=3 能跑",
+        "updatedAt": "2026-10-15T22:01:00Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/679"
+      },
+      {
+        "number": 277,
+        "state": "closed",
+        "title": "[core/world3d] world3d(action=\"render\") 的 path 由调用方完全可控且无目录约束：可向任意路径写图像文件（边界：仅 Pillow 认识的扩展名）",
+        "updatedAt": "2026-10-30T14:09:59Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/277"
+      },
+      {
+        "number": 175,
+        "state": "closed",
+        "title": "[world/silhouette3d] render() 画家算法按固定 part.depth 排序、无视传入 camera：从背后看时远处部件盖住近处部件",
+        "updatedAt": "2026-10-31T06:07:48Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/175"
+      },
+      {
+        "number": 228,
+        "state": "closed",
+        "title": "[world/world3d] 画家算法排序与球体透视半径用世界 z 冒充相机深度：任意非默认视角下远物盖住近物，0.2 m 小球铺满整屏",
+        "updatedAt": "2026-10-28T23:04:24Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/228"
+      },
+      {
+        "number": 733,
+        "state": "closed",
+        "title": "[P2] `hexgen_subject_split.EDT_PAD` 声明+文档双重承诺「必须补零留白」，实现零引用（死常量）",
+        "updatedAt": "2026-10-16T05:07:52Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/733"
+      },
+      {
+        "number": 312,
+        "state": "closed",
+        "title": "[world/world3d] 组合形状的部件按 SHAPE_LIBRARY 定义顺序绘制、彼此不做深度排序：身体后方的腿画在身体上，桌面后方的桌腿压住桌面",
+        "updatedAt": "2026-10-24T01:39:08Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/312"
+      },
+      {
+        "number": 881,
+        "state": "closed",
+        "title": "[第三方复核·第七批] #387 已修复未关、#335/#352/#394 仍复现、#391 部分修复（泄漏面已修/id 碰撞面仍在）——5 条逐字重跑（main 718eeb96）",
+        "updatedAt": "2026-10-25T05:03:51Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/881"
+      },
+      {
+        "number": 256,
+        "state": "closed",
+        "title": "[nn/stcnn] extract_spatiotemporal_primitives 第②步用原始帧做帧差：彩色帧 (T,H,W,C) 直接 ValueError；0.08 阈值作用在未归一化的 uint8 帧上，±1 级噪声就把方向读成「静止」",
+        "updatedAt": "2026-10-25T09:21:51Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/256"
+      },
+      {
+        "number": 133,
+        "state": "closed",
+        "title": "[core/condition_normalize] 「声明域可被求值域反驳」在实现中不存在：E1 两端都是 asserted 域，9 个声明域无一可被反驳；非法取值 / 拼错键静默降为 UNASSERTED，与「未声明」同 cond_hash，且从校验边中消失",
+        "updatedAt": "2026-10-31T09:03:10Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/133"
+      },
+      {
+        "number": 483,
+        "state": "closed",
+        "title": "[core/自我层][数据丢失][P0] _save_self_model 用实例内存里的陈旧副本整份覆盖持久化快照：多进程共库或 import_all 恢复后，第一次普通写入即永久抹掉 values/value_evolution/trust_history/goal（#33 修复的绕过）",
+        "updatedAt": "2026-10-16T03:04:40Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/483"
+      },
+      {
+        "number": 313,
+        "state": "closed",
+        "title": "[world/world3d] 金字塔图元高度写死为 30 像素：_draw_pyramid 不看 size 的 h，0.5m 和 8m 高的金字塔（含 mountain、鸟喙、冰淇淋）渲染完全一样",
+        "updatedAt": "2026-10-23T16:03:07Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/313"
+      },
+      {
+        "number": 308,
+        "state": "closed",
+        "title": "[world/scene_model] present=skeleton 的实体（person/girl）从不画骨架：build 构建好并摆好姿态的 Skeleton3D 被丢掉，渲染出来是一根米色盒柱，state=happy/tired 的姿态代码是死代码",
+        "updatedAt": "2026-10-23T12:43:25Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/308"
+      },
+      {
+        "number": 6,
+        "state": "closed",
+        "title": "[nn/hex_cnn] image_to_grid 返回的 HexGrid 与实际采样坐标不是同一套（往返 0/40）；蜂窝性的证据不在特征链路上",
+        "updatedAt": "2026-11-05T02:42:01Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/6"
+      },
+      {
+        "number": 310,
+        "state": "closed",
+        "title": "[world/silhouette3d] fatfish_skeleton 部件重名：hip_l/hip_r 同时是「髋部阴影」和「大腿」，joint('hip_l', …) 只转到没有 pivot 的阴影，腿永远摆不动",
+        "updatedAt": "2026-10-23T16:02:50Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/310"
+      },
+      {
+        "number": 403,
+        "state": "closed",
+        "title": "[world/world3d][渲染] 近平面裁剪是「全有或全无」：物体任一角点落在相机后方（z≤0.1）就整物不画——视野内大半可见的侧方火车、房屋渲染 0 像素",
+        "updatedAt": "2026-10-23T16:03:12Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/403"
+      },
+      {
+        "number": 8,
+        "state": "closed",
+        "title": "[world] 「真 3D」在表示层不成立（零厚度平面部件）；add_vprim 的深度全部来自未登记的先验表",
+        "updatedAt": "2026-10-21T07:48:12Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/8"
+      },
+      {
+        "number": 713,
+        "state": "closed",
+        "title": "[P1] `shade_paint.role_for_material` 关键词**子串**匹配把普通材质名误判为 `emissive`（unlit）/ `metal`",
+        "updatedAt": "2026-10-16T05:07:16Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/713"
+      },
+      {
+        "number": 43,
+        "state": "closed",
+        "title": "外部复核报告：当前架构、Issues/PR 状态核对与结论更正（基线 421deb4）",
+        "updatedAt": "2026-11-05T09:03:14Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/43"
+      },
+      {
+        "number": 484,
+        "state": "closed",
+        "title": "[core/记忆][记忆可信性][P0] _assertion_divergence 的否定判据只比「两句各自是否含否定字」：原句含「非常/未来/无法/不同」等常用词时，「不过敏」「尚未恢复」类更正仍被 M5 去重吞并（绕过 #29②/#142 修复）",
+        "updatedAt": "2026-10-16T04:28:37Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/484"
+      },
+      {
+        "number": 353,
+        "state": "closed",
+        "title": "[gen/hexgen_pack_certify] 合法区域为空时 certify_radius / certify_p1 / witness_at 抛 ValueError，而不是判「该半径无解」",
+        "updatedAt": "2026-10-23T15:10:42Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/353"
+      },
+      {
+        "number": 354,
+        "state": "closed",
+        "title": "[gen/hexgen_self_source][数据损坏] legal_win 无标定分支的「判决格原像」差 1px（int 截断而非 ceil）：r8 同格 3 件被误缩径 51→40",
+        "updatedAt": "2026-10-24T06:03:48Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/354"
+      },
+      {
+        "number": 357,
+        "state": "closed",
+        "title": "[gen/hexgen_c1_real] 读图 np.asarray(Image.open(p))[..., :3] 不转 RGB：调色板/灰度 PNG 被切成 (H, 3) 细条，静默读出 0 个物体",
+        "updatedAt": "2026-10-23T15:10:47Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/357"
+      },
+      {
+        "number": 521,
+        "state": "closed",
+        "title": "[core/activation][记忆可信性][P0边界] #229 新增的抑制通路按冲突边方向单向、满额执行：未复核的 OPPOSITE 边（confidence 0.3、verified=0）让「后写入」的一方把先写入的真命题直接压出工作态；写入先后决定真假",
+        "updatedAt": "2026-10-22T11:34:06Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/521"
+      },
+      {
+        "number": 18,
+        "state": "closed",
+        "title": "[nn/hex_cnn] hex_conv 的 6 邻 stencil 有一个邻居落在 3.0：等距性在卷积层不成立",
+        "updatedAt": "2026-11-05T07:07:17Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/18"
+      },
+      {
+        "number": 860,
+        "state": "closed",
+        "title": "[nn/hex_text][P2 声明静默失效] `multimodal_check(..., n_expected=...)` 收下\"期望物体数\"却一次不读——声明期望 0 个物体的场景也照判 ACCEPT",
+        "updatedAt": "2026-10-22T12:32:31Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/860"
+      },
+      {
+        "number": 218,
+        "state": "closed",
+        "title": "[gen/hexgen_self_source] `_solve_centroid._anchor` 把 `legal_win` 的 `(x0,x1,y0,y1)` 按 `(x0,y0,x1,y1)` 解包：锚点落到自己声明的合法窗外，`n=1` 时二分误缩径（heart 48→51、rectangle 47→51），端到端前景面积少 11.3%；另 `place_objects` 声明「确定性」但只有 `centroid` 档排序，`spread` 档跨进程换图",
+        "updatedAt": "2026-10-29T01:04:36Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/218"
+      },
+      {
+        "number": 404,
+        "state": "closed",
+        "title": "[world/silhouette3d][姿态] 关节没有父子链：apply_pose 后子部件仍绕「未旋转」的原始 pivot 转，happy 姿态下前臂与上臂在肘部断开 0.31 m（蒙皮版）/0.18 m（手调版），尾巴各节逐节错开",
+        "updatedAt": "2026-10-23T12:26:02Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/404"
+      },
+      {
+        "number": 376,
+        "state": "closed",
+        "title": "[world/silhouette3d] set_expression 不幂等：:817 用上一次的 eye ry 重建本次眼型，同一对象连调 10 次后 angry 眼睛高度归零、surprised 膨胀到 9.5 倍（两模板 × 6 表情 = 12/12）；自带守卫 D 组标题即「幂等」却只断言颜色与高光间距",
+        "updatedAt": "2026-10-23T14:02:50Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/376"
+      },
+      {
+        "number": 812,
+        "state": "closed",
+        "title": "[bridges/blender/wm_bridge/factory/film][判据门 P1] K5 在机位夹角不可算时判 REJECT 并写入 -1.0 哨兵读数",
+        "updatedAt": "2026-10-21T05:00:53Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/812"
+      },
+      {
+        "number": 1144,
+        "state": "closed",
+        "title": "[Bug][P2][film/mv] --judge 判据入口恒返回 0：判据出 REJECT/BLINDSPOT 也不拦，且 summarize 的 blocking 只认 REJECT",
+        "updatedAt": "2026-10-29T15:48:00Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/1144"
+      },
+      {
+        "number": 509,
+        "state": "closed",
+        "title": "[3D 绘制] `_draw_object` 的 `horizon_px` 参数零引用",
+        "updatedAt": "2026-10-16T01:47:27Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/509"
+      },
+      {
+        "number": 786,
+        "state": "closed",
+        "title": "[intake 输入][world/physics] 解析真值族独立审计：circular 预测约定错位（P1）＋ Reflector 负初速速度反号（P2）＋ apex_height 口径不符（P2）＋ P3×3 登记",
+        "updatedAt": "2026-10-21T03:57:45Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/issues/786"
+      }
+    ],
+    "stderr": ""
+  },
+  {
+    "query": [
+      "prs",
+      "FuRongJun-1999/lingshu",
+      "动画"
+    ],
+    "returncode": 0,
+    "items": [
+      {
+        "number": 1447,
+        "state": "open",
+        "title": "feat(nn): M5 汉字模态内置 IDS 拆解、无字体矢量渲染与蜂窝部件条件组合卡闭环",
+        "updatedAt": "2026-11-18T06:46:21Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1447"
+      },
+      {
+        "number": 1461,
+        "state": "open",
+        "title": "feat(vision): add bounded grayscale video frame analysis",
+        "updatedAt": "2026-11-20T02:54:03Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1461"
+      },
+      {
+        "number": 1470,
+        "state": "open",
+        "title": "fix(vision): composite alpha before lineart detection",
+        "updatedAt": "2026-11-20T13:03:48Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1470"
+      },
+      {
+        "number": 1466,
+        "state": "open",
+        "title": "feat(world): add bounded depth sample unprojection",
+        "updatedAt": "2026-11-20T06:47:24Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1466"
+      },
+      {
+        "number": 1475,
+        "state": "open",
+        "title": "fix(world): 修正零初速释放单摆椭圆解及近分离点精度",
+        "updatedAt": "2026-11-20T13:22:51Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1475"
+      },
+      {
+        "number": 477,
+        "state": "closed",
+        "title": "feat(world): 轮廓层矢量出口与 SVG 动画——Silhouette3D.render_svg + animate_svg（SMIL）",
+        "updatedAt": "2026-10-14T12:55:05Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/477"
+      },
+      {
+        "number": 900,
+        "state": "merged",
+        "title": "fix(nn): #352 frames_to_voxel 归一化锚定绝对量纲——微小噪声不再被放大到满量程",
+        "updatedAt": "2026-10-23T21:23:54Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/900"
+      },
+      {
+        "number": 914,
+        "state": "merged",
+        "title": "fix(nn): #352 moving 判据由广延量改为强度量，判定不再随画布尺寸漂移",
+        "updatedAt": "2026-10-25T08:28:07Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/914"
+      },
+      {
+        "number": 589,
+        "state": "merged",
+        "title": "feat(world): 事件回声、过程补全与过程重组",
+        "updatedAt": "2026-10-15T00:05:41Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/589"
+      },
+      {
+        "number": 947,
+        "state": "merged",
+        "title": "fix(nn): #305 reconstruct 铺 bbox 按面积降序——物体不再被背景盖掉",
+        "updatedAt": "2026-10-24T12:24:02Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/947"
+      },
+      {
+        "number": 737,
+        "state": "merged",
+        "title": "feat(world): 轮廓层矢量出口与 SVG 动画——Silhouette3D.render_svg + animate_svg（SMIL）[#477 rebase 重提]",
+        "updatedAt": "2026-10-16T06:05:53Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/737"
+      },
+      {
+        "number": 486,
+        "state": "merged",
+        "title": "feat(world): 真动画导出——帧序列/GIF 通用件，并修「walk animation」名不副实",
+        "updatedAt": "2026-10-15T04:20:15Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/486"
+      },
+      {
+        "number": 560,
+        "state": "closed",
+        "title": "feat(world): 世界模型自己长出三项能力——多面数自生成建模/物理运动预测/多面数呈现",
+        "updatedAt": "2026-10-14T11:14:26Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/560"
+      },
+      {
+        "number": 471,
+        "state": "closed",
+        "title": "feat(world): 显式正交基相机 + OBJ/MTL 真实几何上屏——让世界模型的渲染与真实引擎可比",
+        "updatedAt": "2026-10-14T16:14:56Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/471"
+      },
+      {
+        "number": 476,
+        "state": "closed",
+        "title": "feat(world): 呈现层加矢量出口——SVG 后端与 World3D.render_svg，位图逐字节不变",
+        "updatedAt": "2026-10-14T12:55:11Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/476"
+      },
+      {
+        "number": 468,
+        "state": "merged",
+        "title": "feat(world): 兑现 register_shape 承诺——形状库开放注册与可交换描述",
+        "updatedAt": "2026-10-13T23:00:31Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/468"
+      },
+      {
+        "number": 552,
+        "state": "merged",
+        "title": "fix(gen): #523——split_subjects 切分/合并标签面改按输入形状（不再写死 512）",
+        "updatedAt": "2026-10-15T15:58:50Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/552"
+      },
+      {
+        "number": 466,
+        "state": "closed",
+        "title": "feat(world): 兑现 register_shape 承诺——形状库开放注册与可交换描述",
+        "updatedAt": "2026-10-12T11:30:25Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/466"
+      },
+      {
+        "number": 799,
+        "state": "merged",
+        "title": "feat(film): MV 制作插件（P2–P6 执行器）—— 一份 brief 产出整支 MV",
+        "updatedAt": "2026-10-22T12:52:53Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/799"
+      },
+      {
+        "number": 516,
+        "state": "merged",
+        "title": "feat(world)!: 接通真实位姿重建、关系评分、像素反馈与预测行动",
+        "updatedAt": "2026-10-14T23:08:14Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/516"
+      },
+      {
+        "number": 567,
+        "state": "merged",
+        "title": "feat(world): 世界过程第 1 组——时间会意、示教迁移与运动组合体",
+        "updatedAt": "2026-10-15T00:05:21Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/567"
+      },
+      {
+        "number": 666,
+        "state": "merged",
+        "title": "fix(tools): #645——build_viewer 对 R5 同名 phantom 边按 #359/#606 同口径过滤＋损耗计数可见",
+        "updatedAt": "2026-10-15T15:58:57Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/666"
+      },
+      {
+        "number": 784,
+        "state": "merged",
+        "title": "feat(film): 影视级视听语言架构 P0 契约族 + P1 判据闸（K 族 + E1）",
+        "updatedAt": "2026-10-17T01:29:51Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/784"
+      },
+      {
+        "number": 116,
+        "state": "closed",
+        "title": "fix(nn): image_to_grid 晶格横向越出画幅 √3 倍——README 两项「已知红」的根因；修后 6/6、断言零改动",
+        "updatedAt": "2026-10-09T15:02:29Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/116"
+      },
+      {
+        "number": 1195,
+        "state": "merged",
+        "title": "feat(world/calib): 相机标定三步（规格→内参 / 棋盘格→内参&畸变 / 接进 Camera3D）· 纯标准库",
+        "updatedAt": "2026-11-02T20:04:30Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1195"
+      },
+      {
+        "number": 472,
+        "state": "merged",
+        "title": "feat(bridges): 新增 Blender 侧世界模型桥——独立逐 tick 真值源 + OBJ/SHA-256 几何供货",
+        "updatedAt": "2026-10-15T00:17:00Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/472"
+      },
+      {
+        "number": 1145,
+        "state": "closed",
+        "title": "fix(film): --judge 把不可放行透出为退出码 1，并与 gates_passed 同源",
+        "updatedAt": "2026-10-29T15:50:42Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1145"
+      },
+      {
+        "number": 1148,
+        "state": "merged",
+        "title": "fix(film): --judge 回到验收口径，发布放行移入 --strict（修正 #1147 初版）",
+        "updatedAt": "2026-11-03T00:01:09Z",
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1148"
+      }
+    ],
+    "stderr": ""
+  },
+  {
+    "query": [
+      "issues",
+      "FuRongJun-1999/dsh-bounty",
+      "bridge"
+    ],
+    "returncode": 0,
+    "items": [
+      {
+        "number": 2744,
+        "state": "closed",
+        "title": "第三方独立复验：lingshu PR #1422（feat(bridge)：add read-only World-Atta replay provider——外部贡献者 laszapens）——pytest 守卫 7 函数（展开 9 用例）基线ModuleNotFoundError（新面）→修复全绿",
+        "updatedAt": "2026-11-20T06:47:34Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2744"
+      },
+      {
+        "number": 2780,
+        "state": "closed",
+        "title": "lingshu 身体模块：修复显式相机基与 roll 反投影一致性（PR #1465）",
+        "updatedAt": "2026-11-20T06:50:51Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2780"
+      },
+      {
+        "number": 2727,
+        "state": "closed",
+        "title": "lingshu M5.5：感知-知识桥（条件卡灌入、图文四态回写与白箱问答 · PR #1439）",
+        "updatedAt": "2026-11-18T06:48:54Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2727"
+      },
+      {
+        "number": 2363,
+        "state": "closed",
+        "title": "第三方独立复验：lingshu PR #1240（bridges 批三）——守卫20条 基线13红→修复20绿",
+        "updatedAt": "2026-11-05T14:45:37Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2363"
+      },
+      {
+        "number": 2736,
+        "state": "closed",
+        "title": "lingshu P3：film-audio sub-extra 与外部音频离线分析固化闭环（PR #1455）",
+        "updatedAt": "2026-11-20T06:46:28Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2736"
+      },
+      {
+        "number": 2439,
+        "state": "closed",
+        "title": "第三方独立复验：lingshu PR #1294（#2405 camera_bridge eye/principal_point 有限性闸）——守卫9条 基线7红/2过→修复9绿",
+        "updatedAt": "2026-11-13T19:06:15Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2439"
+      },
+      {
+        "number": 2737,
+        "state": "closed",
+        "title": "lingshu P7：负记忆驱动收敛迭代契约 wmfilm.iteration/1 与回归拦截门（PR #1456）",
+        "updatedAt": "2026-11-20T06:46:36Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2737"
+      },
+      {
+        "number": 2720,
+        "state": "closed",
+        "title": "lingshu #196 第九批：camera_calib 非有限与防 bool 闸（PR #1430）",
+        "updatedAt": "2026-11-18T06:47:58Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2720"
+      },
+      {
+        "number": 1298,
+        "state": "closed",
+        "title": "[intake 输入] dsh-wechat-bridge 0.9.1：15 条面板路由零来源校验，跨站 `POST /trust/add` 即可把任意微信号写入信任集，之后该号可驱动 agent",
+        "updatedAt": "2026-10-20T12:04:09Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1298"
+      },
+      {
+        "number": 2781,
+        "state": "closed",
+        "title": "lingshu 身体模块：批量深度样本反投影（PR #1466）",
+        "updatedAt": "2026-11-20T06:50:55Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2781"
+      },
+      {
+        "number": 1656,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-memos-bridge v0.1.0 安装快测 · 安全六威胁审计（MCP 记忆桥接 · 本地隔离 · 方法试验）：runner 的 load_dotenv() 按脚本位置找 .env，MEMOS_HOME 下的 .env 对预检完全无效，配置了非默认 NEO4J_URI 时被误判为「Neo4j 不可达」并 exit 1；setdefault 先于 dotenv 致 4 个端点键永不生效；patch 脚本半应用无回滚无备份；安全面未发现 P0/P1",
+        "updatedAt": "2026-10-23T12:07:12Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1656"
+      },
+      {
+        "number": 1508,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-dream 0.10.0 legacy 桥接模式绕开 M2 双闸——任意路径写 AGENTS.md，跨项目持久化提示词注入",
+        "updatedAt": "2026-10-22T09:00:03Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1508"
+      },
+      {
+        "number": 1405,
+        "state": "closed",
+        "title": "深度审计 · dsh-pack 0.2.0（等级三）",
+        "updatedAt": "2026-10-21T09:55:54Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1405"
+      },
+      {
+        "number": 2395,
+        "state": "closed",
+        "title": "第三方独立复验：lingshu PR #1260（批十 bridges 七处 #2106–#2118）——守卫10条 基线8红/2过→修复10绿 + #2106 独立探针补证",
+        "updatedAt": "2026-11-13T19:06:32Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2395"
+      },
+      {
+        "number": 931,
+        "state": "closed",
+        "title": "[intake 输入][bridge/Windows] /bridge-chat 同源校验缺 Host 白名单，rebinding 形状放行（B）＋ 入站会话键用对端自报 origin 可注入且条目无界（C）＋ tools.allow/deny 失效但 boot 照报 nameFilter（C）＋ nodeId 自报可劫持寻址（C）＋ 转录无单条钳制可膨胀 GB 级（D）＋ 监听无握手限流（D）＋ hop 由对端自报（D）",
+        "updatedAt": "2026-10-22T13:55:38Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/931"
+      },
+      {
+        "number": 1785,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-remote-bridge 2.7.0 安全面首评：远程 REST 走明文 HTTP Bearer，cloudflared 下载默认不校验摘要（P2）",
+        "updatedAt": "2026-10-25T14:44:27Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1785"
+      },
+      {
+        "number": 1095,
+        "state": "closed",
+        "title": "[intake 输入] [测评报告] dsh-domain-bridge 0.6.4：两进程并发认领同一域时冲突检测失效，双方都返回 created（P1）",
+        "updatedAt": "2026-10-19T13:18:50Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1095"
+      },
+      {
+        "number": 966,
+        "state": "closed",
+        "title": "【intake 输入】lingshu：[bridges/blender/wm_bridge/factory/film][判据门 P1] K5 在机位夹角不可算时判 REJECT 并写入 -1.0 哨兵读数",
+        "updatedAt": "2026-10-18T11:51:06Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/966"
+      },
+      {
+        "number": 1187,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-im-bridge@0.1.0（BiBoyang）体验快测＋安全面：把 0.0.1-rc 宿主核心包写进 dependencies，装上后 dsh 0.2.0-rc.2 web 起不来；绕开后微信注入与 turn 推送在 0.2 上失效；批准应答不绑定 approval id、单字母 `y` 即放行",
+        "updatedAt": "2026-10-20T04:45:55Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1187"
+      },
+      {
+        "number": 933,
+        "state": "closed",
+        "title": "[intake] 贡献申报（逐件）：lingshu #454——unpack_out 魔数校验改显式 raise（PR #761 已合并）",
+        "updatedAt": "2026-10-18T05:40:19Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/933"
+      },
+      {
+        "number": 120,
+        "state": "closed",
+        "title": "【贡献申报】ChineseProgramming：`update_failure(error)` 的 `error` 被丢弃（失败原因不可诊断，trust 下降无归因）",
+        "updatedAt": "2026-10-13T11:49:36Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/120"
+      },
+      {
+        "number": 1107,
+        "state": "closed",
+        "title": "`/osi/store` 返回 `{\"status\":\"stored\"}` 但**桥不触发任何落盘**：落盘只在 `ProtocolInstance` 的 8 处操作里；`record` 被禁用时走裸内核 ⇒ **经桥写入永不落盘**",
+        "updatedAt": "2026-10-19T15:28:18Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1107"
+      },
+      {
+        "number": 1512,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-hdc-bridge 0.10.2（1na-ko·鸿蒙开发助手）：设备面板四条接口零鉴权——跨站可触发设备截图/读取设备信息（P1，实测矩阵坐实；比 whalegirl 更裸：连回环检查都没有）；已负责任披露；本地面板裸路由族第三案",
+        "updatedAt": "2026-10-22T09:00:25Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1512"
+      },
+      {
+        "number": 119,
+        "state": "closed",
+        "title": "【贡献申报】ChineseProgramming：`_should_proceed` 的 `method` 零引用（三个 LLM 能力入口共用同一道闸，方法名是死的）",
+        "updatedAt": "2026-10-13T11:49:32Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/119"
+      },
+      {
+        "number": 898,
+        "state": "closed",
+        "title": "[intake 输入][test/Windows] `--goal-rounds` 只验 `≥1` 不验整数/上界可注入超大 `maxGoalRounds`（P3）＋ approved-plan 指纹首次 `execute` 才锚定导致评审期间需求漂移未拦截（P3）＋ 客户端卡片 `RUN_COMMAND` 正则匹配正文可覆盖目标 preset（P4）＋ `--file` 无大小上限可注入超长交接摘要（P4）",
+        "updatedAt": "2026-10-18T00:49:34Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/898"
+      },
+      {
+        "number": 917,
+        "state": "closed",
+        "title": "[intake 输入][跨会话路由] “当前会话/当前项目”是 bot 级全局单例，多 chat 互相劫持 prompt（C）＋ `followActiveSession` 在零 /follow 订阅时仍改全局当前会话，DSH 侧活动静默改投 Telegram prompt（C）＋ 流式 watcher 按 sessionId 独占，后选同一会话的 chat 挤掉先到者且无任何提示（C）＋ `edited_message` 无去重直接二次投递为 prompt（D）",
+        "updatedAt": "2026-10-18T05:39:12Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/917"
+      },
+      {
+        "number": 1048,
+        "state": "closed",
+        "title": "[intake 输入] lingshu：[bridges/blender/wm_bridge/factory/film][契约] wmmv.text 的 CJK limits 判据只认「键存在」、lines 与 text 可各自独立——可读性硬门对实际上屏正文无约束力",
+        "updatedAt": "2026-10-19T13:04:23Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1048"
+      },
+      {
+        "number": 37,
+        "state": "closed",
+        "title": "【贡献申报】lingshu #350 缺陷：run_rust_train 默认参数下子进程继承调用方环境变量",
+        "updatedAt": "2026-10-19T13:55:26Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/37"
+      },
+      {
+        "number": 902,
+        "state": "closed",
+        "title": "[intake 输入][test/Windows] `media.js` `fetchBytes` 只验 scheme 不拦 localhost/私有网段且 `redirect:'follow'` 无逐跳校验：`qq_send_image` 显式接受 http(s) 链接，提示注入即可借 bot 访问内网（P2）",
+        "updatedAt": "2026-10-18T01:17:28Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/902"
+      },
+      {
+        "number": 1770,
+        "state": "closed",
+        "title": "修复交付：ChineseProgramming PR #11——#1/#2/#3/#4 测试面四连修复（60 文件，pytest 从崩溃到存活，残余 4 文件深层形态如实留 follow-up）",
+        "updatedAt": "2026-10-25T05:07:18Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1770"
+      },
+      {
+        "number": 1530,
+        "state": "closed",
+        "title": "[intake 输入] 【安全快测】@zmainer/dsh-wx-bridge 1.1.8（7b8d7eac9ed4）：`/wxbridge/task` 零鉴权且注册在 `if (!keeper)` 启动门**之前**——恶意网页一次 `text/plain` 跨站 POST 即以登录用户身份驱动一个完整 agent 回合，`workspaceId` 与 `agentPreset`（实测 danger-full-access）由**请求体**挑选；全新安装（无 config.json / 无…",
+        "updatedAt": "2026-10-22T14:37:09Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1530"
+      },
+      {
+        "number": 1993,
+        "state": "closed",
+        "title": "[intake 输入] lingshu #1145：--judge 判据入口退出码与放行口径交付",
+        "updatedAt": "2026-10-30T05:56:50Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1993"
+      },
+      {
+        "number": 1592,
+        "state": "closed",
+        "title": "[intake 输入] dsh-reach 0.1.22：`pushToken` 默认空串使 `/reach/api/push` 的 Bearer 鉴权整体短路，跨站 POST 即可让用户收到攻击者控制的 IM 消息",
+        "updatedAt": "2026-10-23T00:51:29Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1592"
+      },
+      {
+        "number": 1978,
+        "state": "closed",
+        "title": "[intake 输入] lingshu #294：[nn/rust_bridge] make_plan 把参数总数写死为 K1=6、K2=6、head 9×9（=375），而 run_rust_train 与 ",
+        "updatedAt": "2026-10-30T05:55:56Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1978"
+      },
+      {
+        "number": 888,
+        "state": "closed",
+        "title": "`/osi/*` 路由**同时接受 GET**，而 `handle_osi_request` **收了 `method` 却从不检查** ⇒ `GET /osi/store` 会写记忆、`GET /osi/decay` 会衰减",
+        "updatedAt": "2026-10-18T00:49:12Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/888"
+      },
+      {
+        "number": 1287,
+        "state": "closed",
+        "title": "`lingshu` 的 `anim/seq.py`：`timeline(..., fps, ...)` 收下**帧率**却不读 ⇒ 时间轴与 fps 无关（帧号↔秒数的唯一时基被丢掉）",
+        "updatedAt": "2026-10-20T12:03:07Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1287"
+      },
+      {
+        "number": 1294,
+        "state": "closed",
+        "title": "`lingshu` 的 `vec/geom2d._spans(..., minx, maxx, ...)` 收下**每行裁剪边界**却不读 ⇒ 多边形越出画布时跨度不受裁剪，越界像素在写入端被静默丢弃",
+        "updatedAt": "2026-10-20T12:03:46Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1294"
+      },
+      {
+        "number": 1290,
+        "state": "closed",
+        "title": "`lingshu` 的 `vec/raster._fill_coverage(..., closed, ...)` 收下**闭合标志**却不读 ⇒ 开放折线与闭合多边形得到同一份覆盖掩膜，覆盖率与拓扑无关",
+        "updatedAt": "2026-10-20T12:03:28Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1290"
+      },
+      {
+        "number": 581,
+        "state": "closed",
+        "title": "dsh-mobile-apk — `file_paths.xml` 的 `path=\".\"` 与桥的任意路径入参：声明面比设计意图宽两个根",
+        "updatedAt": "2026-10-15T15:39:01Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/581"
+      },
+      {
+        "number": 564,
+        "state": "closed",
+        "title": "dsh-memory（src/ TS 桥接层 15 文件 5865 行全扫）：此前零审计面——2 项 🔴（未成年内容硬拦截裸 includes 零归一化可一键绕过；spawn 子进程全量继承宿主 env 把凭据交给模型驱动进程）+ 判定器否定盲串 fail-open；另有 6 项「Python 已修/TS 漏修」系统性口径差",
+        "updatedAt": "2026-10-15T15:37:35Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/564"
+      },
+      {
+        "number": 1355,
+        "state": "closed",
+        "title": "[intake 输入] dsh-message-gateway 0.1.35：`/gateway/webhook/in` 未配签名密钥时整道闸跳过，跨站可把任意文本以 user 身份注入 agent 并同步读回回复",
+        "updatedAt": "2026-10-21T09:13:08Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1355"
+      },
+      {
+        "number": 1297,
+        "state": "closed",
+        "title": "`lingshu` 的 `geom.write_from_dump(..., out_dir=None, ...)` 收下**输出目录**却不读（与 docstring「只写显式路径」冲突）⇒ 只给目录时**静默返回全 None**、不报错",
+        "updatedAt": "2026-10-20T12:04:04Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1297"
+      },
+      {
+        "number": 1286,
+        "state": "closed",
+        "title": "`lingshu` 的 `material.py`：`_detail_nodes(base_color, role)` 与 `_npr_recipe(roughness)` 各收下用不上的输入 ⇒ 材质外观与「基础色/角色/粗糙度」无关",
+        "updatedAt": "2026-10-20T12:02:59Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1286"
+      },
+      {
+        "number": 331,
+        "state": "closed",
+        "title": "【intake 输入】catgirl-protocol-interface：`api_bridge.py`：`handle_osi_request` 的 `method` 形参零引用 —— 接口按路径分派，HTTP 方法被丢弃",
+        "updatedAt": "2026-10-15T06:14:41Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/331"
+      },
+      {
+        "number": 1672,
+        "state": "closed",
+        "title": "[intake 输入] 第三方独立复测：dsh-reach 0.1.23 —— 原报告 #1592 主张仍成立",
+        "updatedAt": "2026-10-24T01:05:26Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1672"
+      },
+      {
+        "number": 2349,
+        "state": "closed",
+        "title": "[intake 输入] lingshu #1230：相机容差内焦距损失显式报告",
+        "updatedAt": "2026-11-05T14:41:47Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2349"
+      },
+      {
+        "number": 1041,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】chuanban-dsh-writingset 0.3.0 Linux 快测＋安全面（写作工具层 · 真实 dsh-fs-sandbox 后端 · 方法试验）：file-butler / doc-bridge 不经宿主沙箱栅栏，read-only / workspace-write 下照样写工作区外（P1）",
+        "updatedAt": "2026-10-20T02:21:14Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1041"
+      },
+      {
+        "number": 1228,
+        "state": "closed",
+        "title": "【intake 输入】lingshu #825：wmmv.text 的 CJK limits 只认键、lines 独立于 text——可读性硬门对正文无约束（可复现、附守卫与定点变异自证 · **PR #832**）",
+        "updatedAt": "2026-10-20T07:29:26Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1228"
+      },
+      {
+        "number": 2014,
+        "state": "closed",
+        "title": "第三方独立复验：lingshu PR #1147（#1144 film judge 退出码+blocking 同源）——守卫5/5全绿（BLINDSPOT→exit1+同源）+源码面确认",
+        "updatedAt": "2026-10-30T05:58:01Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2014"
+      },
+      {
+        "number": 990,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】chuanban-dsh-writingset 0.3.0 体验快测（写作套装 / 工作流 · 方法试验）",
+        "updatedAt": "2026-10-18T23:49:56Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/990"
+      },
+      {
+        "number": 2655,
+        "state": "closed",
+        "title": "第三方独立复验：dsh-memory PR #920（perf(ui)：界面渐进加载——缓存/摘要/分页/可中止）——TS守卫5项 基线4红/1过→修复5绿",
+        "updatedAt": "2026-11-18T06:40:18Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2655"
+      },
+      {
+        "number": 918,
+        "state": "closed",
+        "title": "[intake 输入][test/Windows] AI 草稿未转义 git 路径中的换行/反引号导致提示词注入（C）＋ 远程 URL 凭据与同步报错未脱敏（D）",
+        "updatedAt": "2026-10-18T05:39:16Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/918"
+      },
+      {
+        "number": 1819,
+        "state": "closed",
+        "title": "修复交付：ChineseProgramming PR #30——#9 _should_proceed 的 method 零引用（方法白名单接入闸，守卫 10 判据+定点变异 3/3）",
+        "updatedAt": "2026-10-27T05:50:04Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1819"
+      },
+      {
+        "number": 1008,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-dream 0.10.0 安全快测（反思记忆 · 确定性层审计 · 方法试验）：模型可自行打开审阅闸并把会话注入文本变成跨项目长期记忆（P1）",
+        "updatedAt": "2026-10-20T02:21:40Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1008"
+      },
+      {
+        "number": 2676,
+        "state": "closed",
+        "title": "第三方独立复验：lingshu PR #1417（fix(core)：#1414/#1415 净增量收口——get_nodes_by_tag limit 闸＋两守卫对齐落库）——脚本守卫2件9断言 基线1件红3断言/1件已钉→修复全绿",
+        "updatedAt": "2026-11-18T06:42:39Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2676"
+      },
+      {
+        "number": 1595,
+        "state": "closed",
+        "title": "[intake 输入] dsh-login 0.3.6：`/api/auth/setup` 用 `exact` 注册，先于宿主 `/api` prefix 命中，跨站即可在首次窗口创建强制 admin 账号",
+        "updatedAt": "2026-10-23T00:51:41Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1595"
+      },
+      {
+        "number": 1818,
+        "state": "closed",
+        "title": "修复交付：ChineseProgramming PR #29——#10 update_failure 的 error 被丢弃（落 last_error/error_counts，守卫 7 判据+定点变异 3/3）",
+        "updatedAt": "2026-10-27T05:49:59Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1818"
+      },
+      {
+        "number": 96,
+        "state": "closed",
+        "title": "【贡献申报】lingshu #487 #488：三条代码执行路径（P0×2 issue）—— 组件守卫两处新绕过；rust_bridge 执行 cwd 下的同名 hex_nn.exe，均可读到 AEIS_DESIGNER_KEY",
+        "updatedAt": "2026-10-13T11:58:24Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/96"
+      },
+      {
+        "number": 1039,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-plugin-wallpaper-engine 1.3.3 安全面快测（壁纸背景 · 本地 mock 壁纸库 · 方法试验）：壁纸 project.json 的 file/preview 不设目录围栏，可把本机任意文件经 /preview、/media、/scene-files 交给浏览器（P0）",
+        "updatedAt": "2026-10-20T02:21:18Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1039"
+      },
+      {
+        "number": 849,
+        "state": "closed",
+        "title": "[intake 输入][test/Windows] WS resize 负数/超大尺寸直通 `pty.resize` 无钳制（P2）＋ settings mutate 跳过 ops 形状校验畸形操作透传（P3）＋ 终端 cwd 客户端可控无白名单（P3）＋ sessions.json 含 `../` 的 id 致 `logPath` 路径穿越读写 logs/ 外文件（P3）＋ 元数据非原子写＋解析失败静默丢全部历史（P4）",
+        "updatedAt": "2026-10-17T14:02:29Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/849"
+      },
+      {
+        "number": 1536,
+        "state": "closed",
+        "title": "[intake 输入] 第三方独立复现确认：ChineseProgramming #8/#9/#10——#9/#10 实锤（AST+运行时双确认）、#8 原崩溃已消失但继发「静默丢语句」（该批 10 issue 零回执后的首批确认）",
+        "updatedAt": "2026-10-22T14:37:55Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1536"
+      },
+      {
+        "number": 1596,
+        "state": "closed",
+        "title": "[intake 输入] dsh-screenshot-plugin 1.0.0：`/api/screenshot/capture` 用 `exact` 注册且零来源校验，跨站 POST 即可拉起本机 PowerShell 全屏框选截屏",
+        "updatedAt": "2026-10-23T00:51:44Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1596"
+      },
+      {
+        "number": 723,
+        "state": "closed",
+        "title": "[intake][贡献交付][算法/架构] fix(chain): 因果检索全路径限制在本次候选子图内（PR #391）",
+        "updatedAt": "2026-10-16T04:50:05Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/723"
+      },
+      {
+        "number": 1147,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-vibe-island 1.4.0 安全快测（智能体刘海灵动岛 · 本地 mock · 方法试验）：Windows 下把 appInstallDir 指向已有目录，自动安装会把整个目录挪走并递归删除（P1）",
+        "updatedAt": "2026-10-20T04:43:26Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1147"
+      },
+      {
+        "number": 878,
+        "state": "closed",
+        "title": "dsh-gitbash-shell 安全 / 数据完整性 intake 快测",
+        "updatedAt": "2026-10-17T15:10:08Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/878"
+      },
+      {
+        "number": 1421,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-we-whalegirl 0.1.0（gzyy111·微信/QQ 机器人控制面）：控制接口只认回环不认来源网页——跨站可启停进程、经全量代理借受害者账号发微信消息（P1，9 用例实测坐实）；已负责任披露；同洞线索 dsh-free-search",
+        "updatedAt": "2026-10-21T13:06:01Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1421"
+      },
+      {
+        "number": 1327,
+        "state": "closed",
+        "title": "[intake 输入] lingshu #840：训练桥接并发文件串扰修复交付",
+        "updatedAt": "2026-10-21T03:47:33Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1327"
+      },
+      {
+        "number": 1396,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告·增量】chuanban-dsh-writingset 0.3.0：在 #990/#1041 基础上补 Test 4 路径修复与复跑（patch-only）",
+        "updatedAt": "2026-10-21T09:16:35Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1396"
+      },
+      {
+        "number": 483,
+        "state": "closed",
+        "title": "【intake 输入】dsh-memory（`memory`）：N278（报告判 real、状态未执行）：审计 `#save` 每次 `mkdir` ＋ 新建**带时间戳的 tmp**",
+        "updatedAt": "2026-10-15T09:10:12Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/483"
+      },
+      {
+        "number": 76,
+        "state": "closed",
+        "title": "【贡献申报】ChineseProgramming 可移植性：17 个测试件硬编码本机路径 ⇒ README 的 10 条命令有 4 条必然失败（附 17 处清单与同仓正解对照）",
+        "updatedAt": "2026-10-13T11:57:43Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/76"
+      },
+      {
+        "number": 1303,
+        "state": "closed",
+        "title": "【intake 输入】lingshu #294：`make_plan` 参数总数写死 375、`k1≠k2` 时越界（5 调用点接线 + 3 臂精确变异 · PR #838）",
+        "updatedAt": "2026-10-20T15:25:30Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1303"
+      },
+      {
+        "number": 414,
+        "state": "closed",
+        "title": "[贡献交付][算法/架构] 失效传播全局封顶，并按入边生成溯源（PR #344）",
+        "updatedAt": "2026-10-15T15:36:29Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/414"
+      },
+      {
+        "number": 785,
+        "state": "closed",
+        "title": "【intake 输入】lingshu：projectile_state 在弹跳次数用尽与贴地初值两条通路上返回 ground_z 以下坐标并随 t 无界下降（上游 #777）",
+        "updatedAt": "2026-10-16T12:54:09Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/785"
+      },
+      {
+        "number": 1351,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-notify-me 1.10.2 测评",
+        "updatedAt": "2026-10-21T09:12:50Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1351"
+      },
+      {
+        "number": 955,
+        "state": "closed",
+        "title": "[DSH Plugin][control-your-schedule] 纸屿面板宿主路由 schema 校验宽松，但无可用 XSS / 路径遍历",
+        "updatedAt": "2026-10-18T11:50:25Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/955"
+      },
+      {
+        "number": 928,
+        "state": "closed",
+        "title": "[intake 输入][test/Windows] 本地双通道（addon TCP 9876 / 后端 HTTP 9877）全程零鉴权且 `execute_code` 永远可用（P3）＋ addon TCP 接收循环无帧长上限：无界缓冲＋O(n²) 重解析＋粘包永久卡死（P4）＋ 写路由（/act /cmd /launch）无 Origin/Host/CSRF 校验、接受 text/plain 简单请求（P4）＋ `/launch` 接受调用方指定任意 exe 路径（P4）",
+        "updatedAt": "2026-10-18T05:39:57Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/928"
+      },
+      {
+        "number": 1341,
+        "state": "closed",
+        "title": "[intake 输入] dsh-pilot v0.5.14 安全测评：`%TEMP%` 里公开源码哈希命名的缓存 DLL 被无条件 `Add-Type -Path` 加载并调用——同用户写入即在该插件的常驻 PowerShell 工人（真键鼠效水器）里执行代码",
+        "updatedAt": "2026-10-21T09:12:00Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1341"
+      },
+      {
+        "number": 1743,
+        "state": "closed",
+        "title": "[intake 输入] dsh-filesnap 0.4.2：自挂的 `/filesnap` HTTP 路由在鉴权检查抛错时不回任何响应、只留下一个未处理的 Promise 拒绝；未装 `filesnap` 二进制时整条插件不报错，直接把每轮快照跳过去",
+        "updatedAt": "2026-10-24T12:55:19Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1743"
+      },
+      {
+        "number": 528,
+        "state": "closed",
+        "title": "【intake 输入】dsh-mobile-apk（`dsh_mobile_apk`）：`pickToken` 被四处文档称为「one-shot / 一次性」，实现却是**进程级、永不轮换**的长期凭据",
+        "updatedAt": "2026-10-15T12:40:20Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/528"
+      },
+      {
+        "number": 1317,
+        "state": "closed",
+        "title": "[intake 输入] pi2dsh v0.27.0 安全测评：`/pi2dsh` 前缀路由零来源校验——跨站 text/plain 可执行已挂载 Pi 包命令、改写 MCP 配置、应答进行中的 OAuth 登录",
+        "updatedAt": "2026-10-21T03:46:54Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1317"
+      },
+      {
+        "number": 923,
+        "state": "closed",
+        "title": "[intake 输入][plugin/security] 主人 userOpenid 存而不用：入站 senderId 零校验、单一信任腾讯平台规则（B）＋ 设置/凭据/停启路由全部无鉴权、text/plain CSRF 可达（B）＋ 附件下载无 URL 校验且默认跟随 302（C）",
+        "updatedAt": "2026-10-18T05:39:38Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/923"
+      },
+      {
+        "number": 1299,
+        "state": "closed",
+        "title": "[intake 输入] dsh-lark-claw 0.1.5：`apiToken` 未配置时 `bearerAuthorized` 直接返回 true，`/api/cronjobs` 变成匿名可写的「让 agent 定时执行任意指令」入口",
+        "updatedAt": "2026-10-20T12:04:19Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1299"
+      },
+      {
+        "number": 1234,
+        "state": "closed",
+        "title": "[intake 输入]【测评报告】dsh-engramory-recall 0.21.0 补测：装好后跑测试会说「全过」，其实零个测试",
+        "updatedAt": "2026-10-20T07:29:57Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1234"
+      },
+      {
+        "number": 1105,
+        "state": "closed",
+        "title": "`memory.py` 去重判据：**子串包含即判 0.95** ⇒ 独立短记忆被长记忆静默吞掉（实测：`store(\"内容\")` 与长条同 id，条数 0→1 而非 0→2）",
+        "updatedAt": "2026-10-19T15:27:59Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1105"
+      },
+      {
+        "number": 260,
+        "state": "closed",
+        "title": "【贡献申请】dsh-memory #224 #225：插件自动签发令牌不带 tenant/config.env 且密钥环不复核，致 md_cg 以 rc=3 永久拒启（有条件 P0）、冲突台账一次追加被截在中文字符中间后 remember 与 info 永久报错、自动记忆静默丢失（有条件 P0）；附复现与参考补丁",
+        "updatedAt": "2026-10-14T16:07:55Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/260"
+      },
+      {
+        "number": 913,
+        "state": "closed",
+        "title": "[intake 输入][Python/Windows] DSH_USAGE_PORT/REFRESH/META_TTL 模块级 int() 无防护，非法值启动即崩（P3）＋parse_file 未排负数时间戳，agg() 的 datetime.fromtimestamp 在 Windows 抛 OSError，看板永久停旧数据（P3）＋/api/data 用子串匹配 force=1，?xforce=1/?force=10 误触发（P4）＋文档与实现不一致三处（P5）",
+        "updatedAt": "2026-10-18T05:38:52Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/913"
+      },
+      {
+        "number": 1106,
+        "state": "closed",
+        "title": "[intake 输入] [安全快测] dsh-memory 0.9.6：注入面把凭据换成占位，`cg` 读回却是明文——读侧 fail-closed 只在一条路上成立（P1）",
+        "updatedAt": "2026-10-19T15:28:11Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1106"
+      },
+      {
+        "number": 1258,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-pack 0.2.0（@c219812 · 24 子插件整合包）安装面与供应链审计（首评）：宿主叠层实测只新增 24 行，不改写或停用宿主行，用户覆盖照常生效；包内 dsh-pocket 首次开隧道时，官方源下载失败会改从第三方加速镜像下载 cloudflared，未做完整性校验就执行（P1，读数待回填）；子插件以源码拷贝随包，版本与上游漂移，依赖用浮动区间（P2）；全程真实出网 0 次",
+        "updatedAt": "2026-10-20T11:31:56Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1258"
+      },
+      {
+        "number": 1598,
+        "state": "closed",
+        "title": "[intake 输入] dsh-vision 0.1.0：`/api/vision` 用 `exact` 注册且零来源校验，跨站 POST 即可用存储凭据调用视觉模型（消耗配额）",
+        "updatedAt": "2026-10-23T00:51:52Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1598"
+      },
+      {
+        "number": 915,
+        "state": "closed",
+        "title": "[intake 输入][plugin/security] ASR 模型下载信任镜像返回的 `rfilename` 并被 `path.join` 原样拼接 → 任意位置写文件（B）＋ 入站媒体 `full_url` 无 scheme/host 校验且全局 fetch 跟随 302 → SSRF 可触达内网（C）＋ 凭据文件 “0600” 宣称在 Windows 上无效，实测仅继承 ACL（D）",
+        "updatedAt": "2026-10-18T05:39:00Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/915"
+      },
+      {
+        "number": 1600,
+        "state": "closed",
+        "title": "[intake 输入] dsh-plugin-tavily 0.7.1：`/api/tavily-probe` 用 `exact` 注册且零来源校验，跨站 POST 即可用存储密钥发出一次真实 Tavily 搜索（消耗用户配额）",
+        "updatedAt": "2026-10-23T00:52:00Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1600"
+      },
+      {
+        "number": 62,
+        "state": "closed",
+        "title": "【贡献申报】批量：跨仓 5 条缺陷（lingshu ×3 ＋ dsh-memory ×2）—— 含 16/16、3/3、6/6、7/7 真实读数与复现脚本",
+        "updatedAt": "2026-10-13T11:57:26Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/62"
+      },
+      {
+        "number": 1342,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-weixin-plus 1.0.7 安全快测（微信通道 · 真实 SDK 轮询 + 真实宿主 WebServer · 本地隔离）：HTTP 备用口不在宿主鉴权内，跨站匿名即可删微信凭据、读出登录二维码并把通道改绑到攻击者微信；入站无发送者白名单，`[[send-file:]]` 可外发本机任意文件（P1）",
+        "updatedAt": "2026-10-21T09:12:02Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1342"
+      },
+      {
+        "number": 1377,
+        "state": "closed",
+        "title": "【intake 输入】@adenxie/dsh-vercel@0.4.0 插件测评：五维读数（5/5 维）＋可复跑证据",
+        "updatedAt": "2026-10-21T09:15:02Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1377"
+      },
+      {
+        "number": 183,
+        "state": "closed",
+        "title": "【贡献申报】lingshu 7 条已判定「成立」的缺陷报告（nn/core/world/intake）—— 附 cb3a6ea 复跑状态",
+        "updatedAt": "2026-10-15T00:34:06Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/183"
+      },
+      {
+        "number": 1348,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-notify-me 1.9.5 安全快测（系统通知 + 外部推送 · 直驱真实 bundle · 本地隔离 · 首评）：未发现 P0–P2；外部推送不脱敏——会话标题/模型写的审批理由/回复摘要里的路径与密钥原样发往 Discord/Bark/Gotify，Bark 回退把正文写进 URL 路径，Discord 不禁 @everyone（P3）",
+        "updatedAt": "2026-10-21T09:12:36Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1348"
+      },
+      {
+        "number": 1135,
+        "state": "closed",
+        "title": "【测评报告】dsh-plan-mode-plus 0.2.0（shuxidemosheng）深度测评 · 12 件缺陷：3 条可达的**只读保证绕过**（工具描述谎报拦截范围 / 提示词要求用能写的 subagent / subagent+MCP 全放行）",
+        "updatedAt": "2026-10-19T17:28:27Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1135"
+      },
+      {
+        "number": 570,
+        "state": "closed",
+        "title": "【测评报告】dsh-memory-context-lab 0.9.0-rc.2 体验快测（工作流/上下文管理 · 方法试验）：dsh 0.2.0-rc.2 干净 profile 装载成功；自带 26 套 349 项补齐环境后 0 红，干净克隆 npm test 因未声明依赖在第 3 套截断（逐条归因）",
+        "updatedAt": "2026-10-15T15:38:21Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/570"
+      },
+      {
+        "number": 1265,
+        "state": "closed",
+        "title": "[intake 输入] 【安全快测】dsh-plugin-notify 0.1.3（huguangyu666）：`/notify/api*` 三条路由零鉴权——跨站 POST 即可让插件用桌面通知+中文语音播报攻击者文本，并接管宿主 `notify` 设置命名空间，把攻击者文案固化成「每个回合结束自动念」的模板",
+        "updatedAt": "2026-10-20T11:32:29Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1265"
+      },
+      {
+        "number": 921,
+        "state": "closed",
+        "title": "[intake 输入][安全/跨平台] 默认零配对下 0.0.0.0 对端服务未授权接受任务派发并可读回任务正文（P1）＋ 组播名片伪造可注入假对端、劫持真实记录并随任务窃取配对码（P2）＋ windows-arm64 sidecar 资产未钉桩校验和、静默跳过完整性校验（P3）＋ /mesh/api/state 明文回传配对码且 /mesh/api/* 插件侧零鉴权（P3）＋ 回环 XFF 可伪造 tsnet 来源影响权限档位与归因（P4）",
+        "updatedAt": "2026-10-18T05:39:31Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/921"
+      }
+    ],
+    "stderr": ""
+  },
+  {
+    "query": [
+      "issues",
+      "FuRongJun-1999/dsh-bounty",
+      "顶层"
+    ],
+    "returncode": 0,
+    "items": [
+      {
+        "number": 2698,
+        "state": "closed",
+        "title": "第三方独立复验：dsh-memory PR #981（feat(retrieval)：理论问法专用路＋常驻守卫）——脚本守卫两件8判据 基线2红/6过（含常驻面双腿同绿）→修复全绿",
+        "updatedAt": "2026-11-18T06:45:20Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2698"
+      },
+      {
+        "number": 345,
+        "state": "closed",
+        "title": "【intake 输入】ChineseProgramming（`core/parser.py`）：`then_body` / `else_body` / **函数体**用单语句解析 ⇒ `若 X 则 A；B。` 的 **B 泄漏到顶层无条件执行**",
+        "updatedAt": "2026-10-14T16:16:09Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/345"
+      },
+      {
+        "number": 2705,
+        "state": "closed",
+        "title": "第三方独立复验：dsh-memory PR #989（feat(#980)：A 包——写入语义（默认情景层 / content_kind 缺省 / 用途身份标签））——脚本守卫三件45有效判据 基线9红/36过（含携带语义红）→修复全绿；mode_parity 自检 fail-closed 排除",
+        "updatedAt": "2026-11-18T06:46:12Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2705"
+      },
+      {
+        "number": 1545,
+        "state": "closed",
+        "title": "[intake 输入] AM-2 包体 28.29 MB，其中 19.86 MB 是皮肤 PNG",
+        "updatedAt": "2026-10-22T15:09:59Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1545"
+      },
+      {
+        "number": 1493,
+        "state": "closed",
+        "title": "[intake 输入] dsh-session-pin 0.7.19: 导航条点击会关掉「已置顶」面板，看板/标签/已存视图在鼠标路径下不可用（另附 7 条实测不一致）",
+        "updatedAt": "2026-10-22T08:58:34Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1493"
+      },
+      {
+        "number": 885,
+        "state": "closed",
+        "title": "`bounty_list.validate` 不校验 `render` 直接索引的**四个顶层键** ⇒ 缺键时「校验无错」但裸崩 `KeyError`，退出码与「产物漂移」撞码",
+        "updatedAt": "2026-10-18T00:49:05Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/885"
+      },
+      {
+        "number": 2396,
+        "state": "closed",
+        "title": "第三方独立复验：lingshu PR #1265（#661 M5 窄列投影）+ PR #1266（修 #156 裸名回归）——三腿判别 3红/5过→8绿 与 1红→1绿",
+        "updatedAt": "2026-11-13T19:06:30Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2396"
+      },
+      {
+        "number": 562,
+        "state": "closed",
+        "title": "【贡献申报】lingshu #586 + #587：共享层写路径缺实例角色闸 / longterm_gate 裸 SQL 绕过重要度钳制",
+        "updatedAt": "2026-10-15T15:37:22Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/562"
+      },
+      {
+        "number": 143,
+        "state": "closed",
+        "title": "【intake 输入】dsh-memory：`_SafeModule` 只堵**顶层** `.__builtins__`（取 `json.decoder` 即得裸 module ⇒ 经其 `__builtins__` 拿回真 open/__import__）",
+        "updatedAt": "2026-10-13T11:51:01Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/143"
+      },
+      {
+        "number": 399,
+        "state": "closed",
+        "title": "【intake 输入】dsh-memory 五件缺陷申报：状态面崩溃 / 聚合计数虚记 / 裸写面漏闸 / 时区依赖 / limit 边界（含 2 条本机复现读数）",
+        "updatedAt": "2026-10-15T06:14:52Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/399"
+      },
+      {
+        "number": 265,
+        "state": "closed",
+        "title": "交付：lingshu 贡献结算核对 —— 7 件 PR 按「内容在库」判定实际落地 2 件（#26 / #286），另 5 件未采纳并逐条给出反证",
+        "updatedAt": "2026-10-14T16:08:38Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/265"
+      },
+      {
+        "number": 1097,
+        "state": "closed",
+        "title": "`check_ledger_invariants.py` 声明 fail-closed，但**畸形账本让它崩在 `e.get` 之前** —— 自审器连一句「点名」都吐不出（实测 6 输入 5 崩）",
+        "updatedAt": "2026-10-23T06:20:30Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1097"
+      },
+      {
+        "number": 235,
+        "state": "closed",
+        "title": "【intake 输入】dsh-bounty（`bounty_site`）：fix(bounty_board): `promotion_report`（**晋升复核面**）对非对象事件不得崩",
+        "updatedAt": "2026-10-14T02:28:47Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/235"
+      },
+      {
+        "number": 233,
+        "state": "closed",
+        "title": "【intake 输入】dsh-bounty（`bounty_site`）：fix(bounty_board): `roles_from_events`（**授权面**）对非对象事件不得崩",
+        "updatedAt": "2026-10-14T02:28:45Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/233"
+      },
+      {
+        "number": 231,
+        "state": "closed",
+        "title": "【intake 输入】dsh-bounty（`bounty_site`）：fix(bounty_board): `value_vector` 对**非对象账本事件**不得崩",
+        "updatedAt": "2026-10-14T02:28:43Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/231"
+      },
+      {
+        "number": 228,
+        "state": "closed",
+        "title": "【intake 输入】dsh-bounty（`bounty_site`）：fix(bounty_board): `score_board` 对**非对象账本事件**不得崩（榜面分数的唯一来源）",
+        "updatedAt": "2026-10-14T02:28:40Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/228"
+      },
+      {
+        "number": 308,
+        "state": "closed",
+        "title": "【intake 输入】dsh-bounty（`bounty_site`）：`check_plan`：镜像 `issues` **非对象** ⇒ fail-closed 退 1（不再裸 `AttributeError`）（**PR #304**）",
+        "updatedAt": "2026-10-14T16:12:28Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/308"
+      },
+      {
+        "number": 77,
+        "state": "closed",
+        "title": "【贡献申报】ChineseProgramming 第五处：cargo 守卫位置晚于崩溃点 ⇒ 无 Rust 时 14 件裸崩 （附 26 件实测分类与三条修复路）",
+        "updatedAt": "2026-10-13T11:57:46Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/77"
+      },
+      {
+        "number": 436,
+        "state": "closed",
+        "title": "hive-memory-bench 判分管线信任边界不对称：SUT 自报的**标量值**（qid/condition）他们已按「不可信」处理（issue #8/#15），但自报**结构形状**零校验——`evidence`/`claims` 列表里任一非 dict 条目让判分器 AttributeError 崩溃，批跑无 per-item 隔离则一份畸形答卷炸掉整条计分链",
+        "updatedAt": "2026-10-15T06:17:26Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/436"
+      },
+      {
+        "number": 521,
+        "state": "closed",
+        "title": "[intake] 贡献申报（逐件）：lingshu #645——build_viewer 对 R5 同名 phantom 边按 #359/#606 同口径过滤＋损耗计数可见",
+        "updatedAt": "2026-10-15T12:39:40Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/521"
+      },
+      {
+        "number": 465,
+        "state": "closed",
+        "title": "dsh-memory 审核队列洗白通道：`propose(**kw)` 任意键全量入队、`review_decide` accept 时 `**extra` 无白名单重放进 `add()`——**审核者的批准静默安装不可见的权威字段**",
+        "updatedAt": "2026-10-15T06:19:20Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/465"
+      },
+      {
+        "number": 274,
+        "state": "closed",
+        "title": "交付：lingshu 身体库贡献结算核对 —— 8 件 PR 按「内容在库」判定落地 3 处（#26 / #286 / #3 部位②），另 5 件未采纳并逐条反证",
+        "updatedAt": "2026-10-14T16:09:01Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/274"
+      },
+      {
+        "number": 2134,
+        "state": "closed",
+        "title": "lingshu 自主发现：condition_normalize 非映射输入无类型契约（PR #1177）",
+        "updatedAt": "2026-11-04T10:55:23Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2134"
+      },
+      {
+        "number": 75,
+        "state": "closed",
+        "title": "【贡献申报】ChineseProgramming 测试面第三处：20 个测试文件模块级 sys.exit() ⇒ pytest INTERNALERROR 中止整个 session（3/3 读数）",
+        "updatedAt": "2026-10-13T11:57:40Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/75"
+      },
+      {
+        "number": 1139,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-cover-pipeline 1.1.2（InariNGT-Ofiicial·本地 AI 翻唱管线）：宿主集成/裸机降级/安全六威胁深度审计——mix_master 硬编码旧歌工程+直跑覆盖（P2）与 stem 逃逸/加载即写盘/Linux 发现缺口等 8×P3（与 succcp 依赖审计面互斥）",
+        "updatedAt": "2026-10-19T17:27:51Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1139"
+      },
+      {
+        "number": 472,
+        "state": "closed",
+        "title": "【intake 输入】dsh-bounty（`bounty_site` · #65 `eval-site` 交付面 · 生成器与漂移闸）：产物目录里的**目录型残留**被 `--check` 全盲——给 0「产物与真源一致」（注释自称全覆盖）；`--out` 指向已存在文件时裸栈并退 **1**（契约说 2）；四处字段漏类型判 ⇒ 错类型静默出站、页面印 Python repr",
+        "updatedAt": "2026-10-15T06:19:46Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/472"
+      },
+      {
+        "number": 1258,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-pack 0.2.0（@c219812 · 24 子插件整合包）安装面与供应链审计（首评）：宿主叠层实测只新增 24 行，不改写或停用宿主行，用户覆盖照常生效；包内 dsh-pocket 首次开隧道时，官方源下载失败会改从第三方加速镜像下载 cloudflared，未做完整性校验就执行（P1，读数待回填）；子插件以源码拷贝随包，版本与上游漂移，依赖用浮动区间（P2）；全程真实出网 0 次",
+        "updatedAt": "2026-10-20T11:31:56Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1258"
+      },
+      {
+        "number": 1455,
+        "state": "closed",
+        "title": "[intake 输入] dsh-agent-instructions 0.4.18：同目录已有 AGENTS.md.disabled 时点「暂停」不改文件却报成功，规则仍在生效",
+        "updatedAt": "2026-10-21T14:58:10Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1455"
+      },
+      {
+        "number": 123,
+        "state": "closed",
+        "title": "【贡献申报】hive-memory-bench：`score_sut.py report` 空输入即除零崩栈（同仓三处已有零值守卫，仅此一处遗漏）",
+        "updatedAt": "2026-10-13T11:49:46Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/123"
+      },
+      {
+        "number": 1807,
+        "state": "closed",
+        "title": "修复交付：ChineseProgramming PR #12——#8/#5 知足 非数值操作数裸崩改干净编译错误（守卫+定点变异；附带修正 #11 的缩进回归）",
+        "updatedAt": "2026-10-27T05:48:46Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1807"
+      },
+      {
+        "number": 1192,
+        "state": "closed",
+        "title": "[intake 输入]【作者自评·利益声明】【测评报告】dsh-wyymusic 0.2.3（myYangyunfan·DSH 侧栏网易云音乐 GUI）：作者自查发现并修复 5 项安全问题（P2 路由零鉴权→同源守卫），附 8/8 守卫探针与发布件对账",
+        "updatedAt": "2026-10-20T04:46:14Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1192"
+      },
+      {
+        "number": 606,
+        "state": "closed",
+        "title": "[intake 输入] dsh-memory 脑端只读缺陷审计（第二轮）：**4 条新立案**（证据面外键静默覆写致数据丢失 / heal 假成功写假审计行 / sleep 目录级白名单污染不可逆历史+审计判据失明+跨根错提交 / 纪律门禁对正文注入零判别力）——与第一轮 [#605](https://github.com/FuRongJun-1999/dsh-bounty/issues/605) 不重叠",
+        "updatedAt": "2026-10-16T01:36:05Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/606"
+      },
+      {
+        "number": 342,
+        "state": "closed",
+        "title": "【intake 输入】ChineseProgramming（`core/parser.py`）：术曰步骤内容里的**赋值/调用被静默丢弃** ⇒ `甲 = 0.9` 只剩 `甲`（静默错值）",
+        "updatedAt": "2026-10-14T16:15:50Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/342"
+      },
+      {
+        "number": 425,
+        "state": "closed",
+        "title": "【intake 输入】lingshu #607：time_core_lint R3 三处形态缺口——_KEEP_WORD 词表不含 gamma/alpha/rho/tau/discount/lr（同文件 RULE_R2C 却认 gamma/lambda）、add() 以 (line, rule) 去重致同行第 2/3 条违规被丢、_is_depth0 使一层括号包裹的自指乘法逃逸（已实跑复现，未实现补丁）",
+        "updatedAt": "2026-10-15T06:16:28Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/425"
+      },
+      {
+        "number": 55,
+        "state": "closed",
+        "title": "【贡献申报】dsh-bench 守卫盲区：58 条用例 + 63 条变异对 pytest 零收集（2 个幻影用例报错）＋ README 交付件表少算 20 条；附复现脚本与 6/6 读数",
+        "updatedAt": "2026-10-13T11:57:12Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/55"
+      },
+      {
+        "number": 344,
+        "state": "closed",
+        "title": "【intake 输入】ChineseProgramming（`core/parser.py`）：解析循环对「返回 None 的分支」**再无条件推进一次** ⇒ 句号后的下一个 token 被静默吞掉",
+        "updatedAt": "2026-10-15T14:52:58Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/344"
+      },
+      {
+        "number": 442,
+        "state": "closed",
+        "title": "【贡献申报】dsh-bench #13–#17：「帮倒忙」仍判可推荐并发徽章、插件名/报告字段未转义进 <title>/<h1>（存储型 XSS）、测完日期写成未来即永不过期（P0×3），安全事件在提前返回路径中丢失等 4 条、负成本/坏日期崩溃/public_check 漏检 JSON 凭据 3 条（P1×7）；附复现",
+        "updatedAt": "2026-10-15T06:17:49Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/442"
+      },
+      {
+        "number": 1526,
+        "state": "closed",
+        "title": "【深度审计】dsh-narrator 0.12.5：安全六威胁全项 + 变异判别力复测（插件路由绕过宿主 token 层 · 提示词无校验）",
+        "updatedAt": "2026-10-22T14:36:43Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1526"
+      },
+      {
+        "number": 1307,
+        "state": "closed",
+        "title": "【intake 输入】dsh-bounty（bounty_site）：bounty_list 的 score 缺类型闸，字符串/null/列表或渲染或抛异常（27 断言 + 4 臂变异 · PR #1305）",
+        "updatedAt": "2026-10-20T15:25:54Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1307"
+      },
+      {
+        "number": 1115,
+        "state": "closed",
+        "title": "`导入回收作答.as_answers_md`：四条退出路径里**三条静默**（无 JSON／解析失败／非对象）⇒ 该题从结果里消失且无痕，而同函数对较轻的「qid 不一致」却要求「看得见」",
+        "updatedAt": "2026-10-19T15:29:14Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1115"
+      },
+      {
+        "number": 781,
+        "state": "closed",
+        "title": "【intake 输入】dsh-memory：scoreboard._obj 把非映射 spec/result 静默归一为 {} —— 文案许诺的 bad_files 计数在实现里不存在，result 一路在 build() 全 9 键上与「文件缺失」不可分（上游 #511）",
+        "updatedAt": "2026-10-16T12:53:51Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/781"
+      },
+      {
+        "number": 678,
+        "state": "closed",
+        "title": "【intake 输入】dsh-memory #402 / #403 / #405 独立验证复跑：三件全部复现（基线 801da85）",
+        "updatedAt": "2026-10-16T08:49:14Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/678"
+      },
+      {
+        "number": 1225,
+        "state": "closed",
+        "title": "【intake 输入】lingshu #481：write_snapshot 的「已存在」判据不查实质分歧——更正被并进错误节点并 protect 置顶（可复现、附守卫与定点变异自证 · **PR #828**）",
+        "updatedAt": "2026-10-20T07:29:13Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1225"
+      },
+      {
+        "number": 929,
+        "state": "closed",
+        "title": "[intake 输入][test/Windows] henlii/dsh-plugins（dsh-web-auth 0.4.0 鉴权插件）快测：回环豁免对 Host/Origin 零校验，DNS rebinding 可绕过密码门直达 /api（A）＋ 全局登录锁可被无凭据持续锁死全员含本机（B）＋ 既有 WS 升级路由无清扫（C）＋ GET logout 无方法校验（C）＋ 静态与插件 bundle 无门槛（C）",
+        "updatedAt": "2026-10-18T05:40:01Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/929"
+      },
+      {
+        "number": 289,
+        "state": "closed",
+        "title": "【贡献申请】dsh-memory #294 #295 #296 #297 #298：冲突闸 REJECT 后飞轮把 private 正文以 internal 明文建成工单、访客可读（P0）；睡眠周期 lib.git 不分记忆根致跨根/跨租户串库（有条件 P0）；频率闸 DEFER 后自动记忆正文无去向、插件计为成功（有条件 P0）；同 id 改写 private 节点降为 internal 明文（有争议 P0）；冲突台账明文记录 private 条件、写令牌可读（P1）；附复现与参考补丁",
+        "updatedAt": "2026-10-14T16:10:22Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/289"
+      },
+      {
+        "number": 994,
+        "state": "closed",
+        "title": "【intake 输入】@stardustlc/dsh-docker 0.4.2 测评：审批门空白绕过 + 输出面正确性（F1 P1 / F2 P3 / F3a-b P2）",
+        "updatedAt": "2026-10-18T23:50:18Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/994"
+      },
+      {
+        "number": 348,
+        "state": "closed",
+        "title": "【intake 输入】ChineseProgramming（`core/codegen.py`）：`codegen.py` 两处产物级缺陷：**无术曰程序必 `NameError`**（N15）＋ **循环/函数/块只 warning 不生成**（N12）",
+        "updatedAt": "2026-10-14T16:16:35Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/348"
+      },
+      {
+        "number": 150,
+        "state": "closed",
+        "title": "【intake 输入】dsh-memory：`_SafeModule` 只堵**一层** `.__builtins__` —— 取子模块属性即得裸 module（**已附 PR #194**：修法 + 19 断言守卫，未修 10/19 红）",
+        "updatedAt": "2026-10-13T11:51:26Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/150"
+      },
+      {
+        "number": 955,
+        "state": "closed",
+        "title": "[DSH Plugin][control-your-schedule] 纸屿面板宿主路由 schema 校验宽松，但无可用 XSS / 路径遍历",
+        "updatedAt": "2026-10-18T11:50:25Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/955"
+      },
+      {
+        "number": 294,
+        "state": "closed",
+        "title": "【intake 输入】lingshu：7 条缺陷报告在 214717b 上的复跑（#485/#491/#492/#493/#494/#495 仍复现 · #496 已由第三方修复）",
+        "updatedAt": "2026-10-14T16:10:57Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/294"
+      },
+      {
+        "number": 448,
+        "state": "closed",
+        "title": "[intake 输入] [tools/coggraph] build_viewer 折叠后自环被 :317 continue 静默丢弃：真源自带 a->a（export 两条路径均无 s==t 防护）⇒ 默认零开关下 graph.json/edge_report/meta 都写 3 条边、viewer 只剩 1 条、三处零提示；守卫 C 组夹具写死 edges: [] ⇒ 加边后断言读数不变、零判别力｜目标 lingshu#618",
+        "updatedAt": "2026-10-15T06:18:19Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/448"
+      },
+      {
+        "number": 1048,
+        "state": "closed",
+        "title": "[intake 输入] lingshu：[bridges/blender/wm_bridge/factory/film][契约] wmmv.text 的 CJK limits 判据只认「键存在」、lines 与 text 可各自独立——可读性硬门对实际上屏正文无约束力",
+        "updatedAt": "2026-10-19T13:04:23Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1048"
+      },
+      {
+        "number": 661,
+        "state": "closed",
+        "title": "【测评报告】dsh-proof（EvilIrving）体验快测（工作流 · 方法试验）：dsh 0.2.0-rc.2 拒装（peer `^0.1.0-rc.6`），强装后默认配置下验证者一次也起不来（`maxDepth: 0`，只记 warn、静默 fail-open）；补齐后又撞默认 deny 名单与废弃 source kind；验证者看不到任务、仍可经 workflow 写文件",
+        "updatedAt": "2026-10-16T01:32:46Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/661"
+      },
+      {
+        "number": 167,
+        "state": "closed",
+        "title": "【贡献申报】dsh-memory 贡献者 level0000x：39 条已关闭 issue（2026-09-23 → 2026-10-13，附逐条清单与批次分布），请纳入结算表",
+        "updatedAt": "2026-10-13T13:46:19Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/167"
+      },
+      {
+        "number": 1136,
+        "state": "closed",
+        "title": "【intake 输入】dsh-memory 0.9.7 · npm 12 的 npm pack 清单 value 是对象而非对象数组 ⇒ 发版门禁恒以「环境错误」exit=2（补 #70 未覆盖形态）",
+        "updatedAt": "2026-10-19T15:31:46Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1136"
+      },
+      {
+        "number": 985,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-lore 0.9.2 体验快测（工作记忆 / Agent Skill · 方法试验）",
+        "updatedAt": "2026-10-18T23:49:29Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/985"
+      },
+      {
+        "number": 162,
+        "state": "closed",
+        "title": "【贡献申请】dsh-memory #211 #214：非管理员经 link/export 覆写 _keys.json 致 private 记忆永久无法解密（P0）、private 写入被 REJECT 后正文以 internal 明文落盘访客可读（P0）；附复现与参考补丁",
+        "updatedAt": "2026-10-13T11:56:37Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/162"
+      },
+      {
+        "number": 1677,
+        "state": "closed",
+        "title": "[intake 输入] 第三方独立复测：dsh-deja 0.23.0 —— 原报告 #1518 主张仍成立",
+        "updatedAt": "2026-10-24T01:05:44Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1677"
+      },
+      {
+        "number": 1198,
+        "state": "closed",
+        "title": "[intake 输入] dsh-plugin-yolo v0.5.0 测评：/yolo/session/{send,messages} 零鉴权——未授权注入 user 消息进常驻 agent + 全量会话正文读取",
+        "updatedAt": "2026-10-20T04:46:37Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1198"
+      },
+      {
+        "number": 652,
+        "state": "closed",
+        "title": "【测评报告】dsh-deep-research（omdsh-dev）体验快测（工作流 · 方法试验）：dsh 0.2.0-rc.2 拒装（peer `^0.0.1` 无版本满足），强装后因服务名 `workflows`≠`workflowEngine` 一直 pending；补别名后能跑通，但传 `questions` 必失败，轮次封顶时未研究子问题与缺口静默丢弃",
+        "updatedAt": "2026-10-16T01:32:11Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/652"
+      },
+      {
+        "number": 1360,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-memory-layer 0.10.0 写面全裸：未认证即可改写/删除/恢复任意记忆正文，并可下发配置关掉衰减",
+        "updatedAt": "2026-10-21T09:13:31Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1360"
+      },
+      {
+        "number": 413,
+        "state": "closed",
+        "title": "【intake 输入】lingshu：conv3d 对「时间维小于核」的合法输入抛 negative dimensions，同文件 max_pool3d 同输入返回空张量——同类函数边界口径不一致",
+        "updatedAt": "2026-10-15T06:15:45Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/413"
+      },
+      {
+        "number": 2375,
+        "state": "closed",
+        "title": "[插件测评] dsh-plugin-health@2.2.1 — 没啥差别",
+        "updatedAt": "2026-11-05T14:50:59Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2375"
+      },
+      {
+        "number": 1607,
+        "state": "closed",
+        "title": "【intake 输入】dsh-muv-engine 0.4.7 安全快测：角色卡正则灾难性回溯（24 字符冻住事件循环）＋11 条 /api 路由零鉴权零同源＋任意路径读",
+        "updatedAt": "2026-10-23T12:03:52Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1607"
+      },
+      {
+        "number": 76,
+        "state": "closed",
+        "title": "【贡献申报】ChineseProgramming 可移植性：17 个测试件硬编码本机路径 ⇒ README 的 10 条命令有 4 条必然失败（附 17 处清单与同仓正解对照）",
+        "updatedAt": "2026-10-13T11:57:43Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/76"
+      },
+      {
+        "number": 677,
+        "state": "closed",
+        "title": "[intake:memory][dsh-memory#427] serve_start.status() 非映射 status.json 抛 AttributeError 崩 --status（#399 同族漏修第三处）",
+        "updatedAt": "2026-10-16T04:47:17Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/677"
+      },
+      {
+        "number": 1751,
+        "state": "closed",
+        "title": "[intake 输入] dsh-sticky-disclosure 1.0.1：判断\"这行展开着吗\"和\"怎么收起这行\"用了两套判据，碰上不可折叠的行会造出一个点不动的 chip",
+        "updatedAt": "2026-10-24T12:55:54Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1751"
+      },
+      {
+        "number": 1148,
+        "state": "closed",
+        "title": "【贡献申报】dsh-bench #<N>（基线 f6c32ce，接 #1138）：P1 版本键不补齐段数，`@1.0` 被判比 `@1.0.5` 新，新版退榜、旧版进「值得试」；P1「调查中」满 14 天即硬 FAIL，数据不动、第 15 天整站构建中止，与手册处置条款冲突；P2 四处；另回报本人 #29 D 修复未闭环（申请并入）",
+        "updatedAt": "2026-10-20T04:43:30Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1148"
+      },
+      {
+        "number": 2002,
+        "state": "closed",
+        "title": "[插件测评] dsh-ha-orchestrator@0.12.4 — 还说不准",
+        "updatedAt": "2026-10-30T05:57:21Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2002"
+      },
+      {
+        "number": 293,
+        "state": "closed",
+        "title": "【贡献申报】lingshu_ng 工程版（LingShu-prime Liyang/，rel-v1.26 5f32856c）：零外部依赖核心＋4 独立插件 · 确定性测试矩阵 · 上游 API 兼容 260/260 签名、215/260 实测实现 · 附复跑命令与未胜项",
+        "updatedAt": "2026-10-15T13:08:16Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/293"
+      },
+      {
+        "number": 1465,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-plugin-iot-thinking 0.1.0 安全快测（thinking 块压缩 · 本地路由 · 直驱真实模块 · 本地隔离）：维护者已补的配置桥门禁挡不住 DNS rebinding（同源判据缺 Host 白名单），恶意网页可改写压缩路由，把每个 reasoning 块原文改道发往攻击者端点并关掉归档（P1）",
+        "updatedAt": "2026-10-21T14:59:46Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1465"
+      },
+      {
+        "number": 467,
+        "state": "closed",
+        "title": "[intake 输入] [tools/coggraph] derive_edges 的 R3 对 owners > 400 整条 continue：边界精确（400 出 1197 边、401 阶跃归零，cap=500 下 400 恢复 79800 满配对）、stderr 含 R3 行数 = 0、守卫 tag_index/400/--generic-spread 各命中 0 次",
+        "updatedAt": "2026-10-15T06:19:28Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/467"
+      },
+      {
+        "number": 1009,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-codex-port 0.3.0 体验快测＋安全面（Codex→DSH 技能迁移 · 方法试验）：「仅显式调用」策略被抹掉、同名用户技能被静默顶替（P1×2）",
+        "updatedAt": "2026-10-20T02:21:38Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1009"
+      },
+      {
+        "number": 778,
+        "state": "closed",
+        "title": "[intake][贡献交付][安全] fix(#426-E): restore(force) 不覆写同 id 在位节点——需显式 overwrite_live（PR #507）",
+        "updatedAt": "2026-10-16T12:53:35Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/778"
+      },
+      {
+        "number": 1143,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-arbiter-wf 0.8.4-stable 安全快测（仲裁工作流 · 直驱真实模块 · 本地隔离）：插件自带的 `bash` 工具完全绕开宿主沙箱与审批（写/删工作区外文件、带着 `DEEPSEEK_API_KEY` 进子进程），Windows 上默认开（P0）",
+        "updatedAt": "2026-10-20T04:43:10Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1143"
+      },
+      {
+        "number": 1502,
+        "state": "closed",
+        "title": "dsh-token-pet 0.4.2（npm，仓库 Jimmy0123-ux/dsh-token-pet）体验快测：玩偶浮层吃掉发送按钮的点击；浮窗\"模型未知\"在本宿主恒不消失",
+        "updatedAt": "2026-10-22T08:59:30Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1502"
+      },
+      {
+        "number": 182,
+        "state": "closed",
+        "title": "[intake] 贡献申报：DreamRift —— lingshu 生态 6 件 issue（lingshu ×2 ＋ dsh-memory ×4），附维护者逐条判定与落地提交",
+        "updatedAt": "2026-10-15T06:14:12Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/182"
+      },
+      {
+        "number": 1339,
+        "state": "closed",
+        "title": "[intake 输入] dsh-ssh-ops v0.4.1 安全测评：PostgreSQL `DO $$ … $$` 绕过破坏性 SQL 闸——`db_execute`/`db_tx_execute` 把内嵌 `DROP TABLE` 原样送进驱动，无备份、无隔离改名；`db_run` 对 Redis 零白名单",
+        "updatedAt": "2026-10-21T09:11:50Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1339"
+      },
+      {
+        "number": 984,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-code-security 0.5.0 体验快测（本地 SAST / 代码安全 · 方法试验）",
+        "updatedAt": "2026-10-18T23:49:20Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/984"
+      },
+      {
+        "number": 897,
+        "state": "closed",
+        "title": "`verify_keys.py` 核验器对答案键**无形状判据**：`answer` 是列表 / `chain` 元素是字符串 / 缺 `answer` 键 ⇒ 直接崩 `AttributeError`/`KeyError`，与「有硬不符」退出码 1 撞码",
+        "updatedAt": "2026-10-18T00:49:31Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/897"
+      },
+      {
+        "number": 946,
+        "state": "closed",
+        "title": "[intake 输入][test/Windows] /delete、/archive 卡片按钮按序号寻址，旧卡片点击删错会话（P2）＋ `[task-sentinel]` 子串触发且无 duty 守卫，local 模式回复外泄飞书（P3）＋ 审批/ask id 跨重启复用，过期按钮可批新请求（P3）＋ chat_id 模式不校验按钮操作者（P4）＋ 单 pending 时裸肯定词被审批解析优先吞掉（P4）＋ feishu_send_file 前缀围栏不抗符号链接（P4）",
+        "updatedAt": "2026-10-18T11:49:51Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/946"
+      },
+      {
+        "number": 650,
+        "state": "closed",
+        "title": "【测评报告】dsh-approval-llm（Letter2025）体验快测（工作流 · 方法试验）：dsh 0.2.0-rc.2 上自带 42/42 绿，审核端点各类故障一律转人工、未见 fail-open；但 maxArgsChars 截断只留前缀不转人工——危险命令藏在 4000 字符后即可绕过审核；另有 allowlist 压过 humanOnlyList 等小项",
+        "updatedAt": "2026-10-16T01:32:03Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/650"
+      },
+      {
+        "number": 475,
+        "state": "closed",
+        "title": "[intake 输入] [tools/coggraph] viewer_graph 的 derived 是折叠前原始数，与 #618 新增的 dropped_selfloop / merged_edges 口径冲突：五场景实测偏差恒等于损耗（零损耗时为 0 故难察觉），改成正确口径后四个守卫全绿证零判别力，P2",
+        "updatedAt": "2026-10-15T06:19:59Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/475"
+      },
+      {
+        "number": 631,
+        "state": "closed",
+        "title": "dsh-bench：证据链只认 `evidence_id`——报告挂**另一实验**的合格证据（实验/分析 id、三哈希全不符）照样过 `--release` 与正式构建；仓内 ev-002..005 本身就是错位实例",
+        "updatedAt": "2026-10-19T17:21:42Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/631"
+      },
+      {
+        "number": 1924,
+        "state": "closed",
+        "title": "[插件测评] dsh-flow@0.0.1 — 没法测",
+        "updatedAt": "2026-10-29T00:39:59Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1924"
+      },
+      {
+        "number": 1400,
+        "state": "closed",
+        "title": "深度审计 · dsh-super-injector 0.3.6（等级三）",
+        "updatedAt": "2026-10-21T09:16:55Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1400"
+      },
+      {
+        "number": 1268,
+        "state": "closed",
+        "title": "[intake 输入] 【安全快测】dsh-memory-vault 0.3.0：模型可静默写入全局预设，下一会话以用户身份注入；scope=all/无 cwd 跨项目放开（P1/P2）",
+        "updatedAt": "2026-10-20T11:32:43Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1268"
+      },
+      {
+        "number": 255,
+        "state": "closed",
+        "title": "[贡献交付][缺陷修复] 索引快照统一准入，启动与压实恢复真实节点（PR #238）",
+        "updatedAt": "2026-10-14T00:19:12Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/255"
+      },
+      {
+        "number": 1497,
+        "state": "closed",
+        "title": "[intake 输入] 【修复交付】dsh-memj 0.1.5 六条安全缺陷加固 · PR jojoman2024/dsh-memj#1（6 守卫 + 6 变异全抓 · 跨源写入 200 → 403）",
+        "updatedAt": "2026-10-22T08:58:58Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1497"
+      },
+      {
+        "number": 1040,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-plugin-marketplace 1.7.1 安全快测（插件市场 · 本地 mock 索引/仓库/npm · 方法试验）：安装不校验包名归属，任意仓库可覆盖他人插件/市场本体/宿主包（P1），同名冒名仓库可经「更新」装入（P1）",
+        "updatedAt": "2026-10-20T02:21:16Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1040"
+      },
+      {
+        "number": 654,
+        "state": "closed",
+        "title": "【测评报告】dsh-inspect（omdsh-dev）体验快测（工作流 · 方法试验）：dsh 0.2.0-rc.2 拒装（peer `^0.0.1` 无版本满足），强装后每次调用报「no \"workflows\" service」（宿主服务名为 `workflowEngine`）；补别名后 checkup→fix→review 跑通；红队「推翻」按原文逐字匹配，改写即失效",
+        "updatedAt": "2026-10-16T01:32:20Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/654"
+      },
+      {
+        "number": 1199,
+        "state": "closed",
+        "title": "[intake 输入] recruiting-copilot v0.6.6 测评：/plugins/recruiting-view/* 整面零鉴权——远程导航已登录 Chrome + CDP 键鼠注入 + 屏幕直播外泄",
+        "updatedAt": "2026-10-20T04:46:40Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1199"
+      },
+      {
+        "number": 827,
+        "state": "closed",
+        "title": "[intake 输入] dsh-openpencil 0.1.0-rc.13 快测：14 个工具可注册，复核 Windows 渲染器查找缺陷",
+        "updatedAt": "2026-10-17T11:56:26Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/827"
+      },
+      {
+        "number": 1399,
+        "state": "closed",
+        "title": "[intake 输入] dsh-workflow-lite 0.6.0 交互复核：8项缺陷，官方包复现与冷重启记录",
+        "updatedAt": "2026-10-21T09:16:50Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1399"
+      },
+      {
+        "number": 1518,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】dsh-deja 0.23.0 版本增量复核：deja_recall 仍 661,528 字符，0.23.0 分页未覆盖 --json（同 #1131 根因）",
+        "updatedAt": "2026-10-22T09:00:56Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1518"
+      },
+      {
+        "number": 655,
+        "state": "closed",
+        "title": "【测评报告】dsh-liketavern（Amakurai）体验快测（角色扮演 · 方法试验）：dsh 0.2.0-rc.2 web 上装载激活无告警，角色卡→世界书→记忆→作者注释→深度提示全链真进了模型请求体，多会话隔离、重启恢复、导出往返一致；README 写的 `dsh plugin exec dsh-tavern-doctor` / 备份命令在装好的 profile 里加载即崩（peer 包解析不到）",
+        "updatedAt": "2026-10-16T01:32:23Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/655"
+      },
+      {
+        "number": 457,
+        "state": "closed",
+        "title": "【贡献申请】dsh-memory #350 #351 #352：node_id 只差大小写在 Windows/macOS 上写进同一文件、静默顶掉受保护和他人的节点（P0 候选，平台条件）；record 令牌 ingest 不传 path 即扫库根，restricted 正文和已删节点变访客可读（有条件 P0）；变更单回滚抹掉后续写入 / 同 id 改写继承验证态 / imgskill 台账跟随符号链接 / paths.json 无声回落 / 索引 id 跨仓覆写（五条 P1 合报）；附复现与修复建议",
+        "updatedAt": "2026-10-15T06:18:44Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/457"
+      },
+      {
+        "number": 1420,
+        "state": "closed",
+        "title": "深度审计 · feiyu-memory 0.2.0（等级三）",
+        "updatedAt": "2026-10-21T13:05:56Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1420"
+      },
+      {
+        "number": 1323,
+        "state": "closed",
+        "title": "[intake 输入] 【测评报告】qmd-autosearch 0.1.2 自动补搜钩子测评（首评）：grep/glob 省略 path 或用相对路径时不触发、相对路径按宿主进程 cwd 解析会误触发（P2）；检索结果标题原样拼进 <system-reminder>，一行标题即可闭合并伪造新的 system-reminder（P2）；limit 不在客户端截断（400 条 / 87KB 全量注入）、QMD 挂起时 fetch 无超时请求与连接累积且无日志（P3）",
+        "updatedAt": "2026-10-21T03:47:18Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1323"
+      },
+      {
+        "number": 310,
+        "state": "closed",
+        "title": "[intake] 贡献申报：123WP-a —— dsh-memory（记忆系统）安全审计 7 件 issue ＋ 6 个修复 PR，附逐条复现读数、定点变异与去重边界",
+        "updatedAt": "2026-10-15T14:52:39Z",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/310"
+      }
+    ],
+    "stderr": ""
+  }
+]

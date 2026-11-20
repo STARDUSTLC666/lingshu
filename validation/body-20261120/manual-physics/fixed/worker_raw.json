@@ -1,0 +1,523 @@
+{
+  "variant": "fixed",
+  "sandbox": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\manual-physics-gate\\evidence\\fixed\\sandbox",
+  "expected_gate_file": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\manual-physics-gate\\evidence\\fixed\\sandbox\\bridges\\blender\\wm_bridge\\factory\\anim\\_det\\gate_physics.py",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "[workspace]\\lingshu\\work\\lingshu-pendulum-hp-20261120-venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "cpu_count": 32,
+    "pythonhashseed": "20261120",
+    "WM_LINGSHU_ROOT": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\manual-physics-gate\\evidence\\fixed\\sandbox",
+    "wall_clock_utc": "2026-11-20T13:28:44Z"
+  },
+  "actual_gate_file": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\manual-physics-gate\\evidence\\fixed\\sandbox\\bridges\\blender\\wm_bridge\\factory\\anim\\_det\\gate_physics.py",
+  "gate_exit_code": 2,
+  "rows": [
+    {
+      "gate": "P1",
+      "ok": false,
+      "detail": "抛体解析真值：顶点高 4.067951849（闭式 2.867951849，差 1.20e+00）；落地 t 1.675628140（闭式 1.675628140，差 0.00e+00）；240Hz 采样顶点差 1.73e-05 m"
+    },
+    {
+      "gate": "P2",
+      "ok": true,
+      "detail": "阻尼解析解：滑行距离 3.823529411765（v0/k=3.823529411765，差 4.44e-16）；20τ 后离平衡 3.58e-13 m；v(t)=−k(p−p_∞) 恒等最大偏差 9.93e-16"
+    },
+    {
+      "gate": "P3",
+      "ok": true,
+      "detail": "弹簧：4 支 ζ∈{0,0.25,1,2.5} 全部满足 env(0)=1 且 env'(0)=0（最大偏差 5.55e-10）；ζ=0.25 的过零点间距核验阻尼周期差 6.57e-12 s"
+    },
+    {
+      "gate": "P4",
+      "ok": true,
+      "detail": "单摆：精确**周期**（AGM 椭圆）与闭式复算差 0.00e+00（小角近似在 60° 时低估 -6.82%）；椭圆**波形**在有效域 |θ0|<=180° 内与独立 RK4(1/8192s) 最大偏差 1.20e-13 rad，物理边界 ±π 显式拒绝；调用者仍可用 tol_deg 收紧域（0/0 条域外样本已拒）"
+    },
+    {
+      "gate": "P5",
+      "ok": true,
+      "detail": "圆周：拟合 r=1.500000000（真 1.5，差 2.22e-16）、ω=2.200000000（真 2.2，差 4.44e-16）、rms=6.02e-16；真值 周期=2.855993 s 向心=7.260000 m/s²"
+    },
+    {
+      "gate": "P6",
+      "ok": true,
+      "detail": "边界反射：8Hz 粗采样下越界最大 0.00e+00 m（**不穿透**）；x 轴反射周期闭式 2.666666667 s，镜像过零核验 2.666666667，差 0.00e+00 s；y 轴周期 3.636363636"
+    },
+    {
+      "gate": "C1",
+      "ok": true,
+      "detail": "六类合成观测史判别：static→static / uniform→uniform / accelerated_horiz→accelerated / projectile→projectile / damped→damped / circular→circular"
+    },
+    {
+      "gate": "C2",
+      "ok": true,
+      "detail": "简约性地板：纯直线观测的 six-model 残差 {'static': 0.2863, 'uniform': 2.529e-16, 'accelerated': 5.055e-16, 'projectile': 0.3288, 'damped': 7.976e-07} ⇒ 判 'uniform'（二次/抛体被地板挡下）"
+    },
+    {
+      "gate": "C3",
+      "ok": true,
+      "detail": "判别依据均含原始数字（例：拟合加速度 a=(0.000000, -9.806650, -0.000000) 与重力 g_vec=(0.000000, -9.806650, 0.000000) 相对偏差仅 0.000 (<= 0.10)，且 projectile rm）"
+    },
+    {
+      "gate": "C4",
+      "ok": true,
+      "detail": "阈值敏感性：无噪声在偏离 1% 即翻转（rms 地板主导）；σ=0.02m 噪声下在偏离 8% 翻转（gravity_tol=0.10 主导）"
+    },
+    {
+      "gate": "C5",
+      "ok": true,
+      "detail": "对抗性：8/8 条非法输入全部显式 raise（PhysicsError）"
+    }
+  ],
+  "failed": [
+    "P1"
+  ],
+  "raw": {
+    "P1": {
+      "t_apex": 0.7647871597334462,
+      "apex_height": 4.067951849000424,
+      "apex_expect": 4.067951849000424,
+      "t_land": 1.6756281397117598,
+      "t_land_expect": 1.6756281397117598,
+      "range": 5.298801432959999,
+      "d_apex": 1.2000000000000002,
+      "d_t_land": 0.0,
+      "d_sampled_apex": 1.7321222645527712e-05
+    },
+    "P2": {
+      "stop_distance": 3.8235294117647056,
+      "v0_over_k": 3.823529411764706,
+      "d_stop_at_30tau": 3.5793590313915047e-13,
+      "d_distance": 4.440892098500626e-16,
+      "worst_v_identity": 9.930136612989092e-16,
+      "tau": 0.5882352941176471
+    },
+    "P3": {
+      "branches": [
+        {
+          "zeta": 0.0,
+          "env0": 1.0,
+          "env_dot0": 0.0,
+          "period_damped": 1.0471975511965976,
+          "amp_ratio_per_period": 1.0
+        },
+        {
+          "zeta": 0.25,
+          "env0": 1.0,
+          "env_dot0": -5.551115123125783e-10,
+          "period_damped": 1.0815409802596296,
+          "amp_ratio_per_period": 0.19744179036948958
+        },
+        {
+          "zeta": 1.0,
+          "env0": 1.0,
+          "env_dot0": -5.551115123125783e-10,
+          "period_damped": null,
+          "amp_ratio_per_period": null
+        },
+        {
+          "zeta": 2.5,
+          "env0": 1.0,
+          "env_dot0": -5.551115123125783e-10,
+          "period_damped": null,
+          "amp_ratio_per_period": null
+        }
+      ],
+      "worst_init_condition": 5.551115123125783e-10,
+      "period_from_zeros": 1.081540980266199,
+      "d_period": 6.569411681311976e-12
+    },
+    "P4": {
+      "rows": [
+        {
+          "theta0_deg": 1.0,
+          "period_small": 3.141592653589793,
+          "period_exact": 3.1416524661241563,
+          "small_angle_error_pct": -0.0019038558531888708,
+          "theta_at_0": 0.017453292519943295,
+          "max_abs_err_vs_rk4_rad": 2.5673907444456745e-16,
+          "exact_raised": null
+        },
+        {
+          "theta0_deg": 2.5,
+          "period_small": 3.141592653589793,
+          "period_exact": 3.1419665161852746,
+          "small_angle_error_pct": -0.011898999991106166,
+          "theta_at_0": 0.04363323129985824,
+          "max_abs_err_vs_rk4_rad": 5.898059818321144e-16,
+          "exact_raised": null
+        },
+        {
+          "theta0_deg": 5.0,
+          "period_small": 3.141592653589793,
+          "period_exact": 3.143088593573611,
+          "small_angle_error_pct": -0.047594585366645695,
+          "theta_at_0": 0.08726646259971647,
+          "max_abs_err_vs_rk4_rad": 1.4432899320127035e-15,
+          "exact_raised": null
+        },
+        {
+          "theta0_deg": 30.0,
+          "period_small": 3.141592653589793,
+          "period_exact": 3.19628400422508,
+          "small_angle_error_pct": -1.7110917103421373,
+          "theta_at_0": 0.5235987755982988,
+          "max_abs_err_vs_rk4_rad": 6.994405055138486e-15,
+          "exact_raised": null
+        },
+        {
+          "theta0_deg": 60.0,
+          "period_small": 3.141592653589793,
+          "period_exact": 3.371500709625192,
+          "small_angle_error_pct": -6.8191608377551765,
+          "theta_at_0": 1.0471975511965976,
+          "max_abs_err_vs_rk4_rad": 1.4432899320127035e-14,
+          "exact_raised": null
+        },
+        {
+          "theta0_deg": 120.0,
+          "period_small": 3.141592653589793,
+          "period_exact": 4.313031294999287,
+          "small_angle_error_pct": -27.160448447654666,
+          "theta_at_0": 2.0943951023931953,
+          "max_abs_err_vs_rk4_rad": 1.1957101975212936e-13,
+          "exact_raised": null
+        }
+      ],
+      "worst_rk4_rad": 1.1957101975212936e-13,
+      "worst_period": 0.0,
+      "exact_max_deg": 180.0,
+      "exact_max_err_rad": 1e-11,
+      "gate_enforced": true,
+      "release_formula": "2*asin(k*cn(u,k)/dn(u,k)); u=omega0*t",
+      "reference": "RK4 ends at each exact requested t; threshold covers these samples only"
+    },
+    "P5": {
+      "fit_radius": 1.4999999999999998,
+      "true_radius": 1.5,
+      "d_radius": 2.220446049250313e-16,
+      "fit_omega": 2.1999999999999997,
+      "true_omega": 2.2,
+      "d_omega": 4.440892098500626e-16,
+      "rms": 6.01862553736377e-16,
+      "truth": {
+        "radius": 1.5,
+        "omega": 2.2,
+        "period": 2.855993321445266,
+        "speed": 3.3000000000000003,
+        "centripetal_accel": 7.260000000000002,
+        "rev_per_second": 0.35014087480216977
+      }
+    },
+    "P6": {
+      "worst_outside_box": 0.0,
+      "period_truth_x": 2.6666666666666665,
+      "half_period_from_crossings": 1.3333333333333333,
+      "d_period": 0.0,
+      "first_hit_truth": 0.6666666666666666,
+      "y_period": 3.6363636363636362
+    },
+    "C1": {
+      "static": {
+        "kind": "static",
+        "reason": "观测相对均值的 rms=0.000e+00 <= abs_tol=1.0e-09 => 静止",
+        "residuals": {
+          "static": 0.0,
+          "uniform": 0.0,
+          "accelerated": 1.186e-15,
+          "projectile": 0.3288,
+          "damped": 0.0
+        },
+        "evidence": {
+          "rel_gain": 1.6,
+          "abs_tol": 1e-09,
+          "gravity_tol": 0.1
+        }
+      },
+      "uniform": {
+        "kind": "uniform",
+        "reason": "在 static -> uniform 中按残差+简约性偏好选中 'uniform'（rms=2.529e-16）",
+        "residuals": {
+          "static": 0.2863,
+          "uniform": 2.529e-16,
+          "accelerated": 5.055e-16,
+          "projectile": 0.3288,
+          "damped": 7.976e-07
+        },
+        "evidence": {
+          "rel_gain": 1.6,
+          "abs_tol": 1e-09,
+          "gravity_tol": 0.1,
+          "accel_vs_gravity_rel_dev": 0.9999999999999992
+        }
+      },
+      "accelerated_horiz": {
+        "kind": "accelerated",
+        "reason": "在 static -> uniform -> accelerated 中按残差+简约性偏好选中 'accelerated'（rms=7.021e-16）",
+        "residuals": {
+          "static": 0.2904,
+          "uniform": 0.02418,
+          "accelerated": 7.021e-16,
+          "projectile": 0.3297,
+          "damped": 0.02418,
+          "circular": 0.04849
+        },
+        "evidence": {
+          "rel_gain": 1.6,
+          "abs_tol": 1e-09,
+          "gravity_tol": 0.1,
+          "accel_vs_gravity_rel_dev": 1.0026998902992124
+        }
+      },
+      "projectile": {
+        "kind": "projectile",
+        "reason": "拟合加速度 a=(0.000000, -9.806650, -0.000000) 与重力 g_vec=(0.000000, -9.806650, 0.000000) 相对偏差仅 0.000 (<= 0.10)，且 projectile rms=2.293e-16 不比自由加速度的 8.686e-16 差 1.5 倍以上 => 判为**重力抛体**（加速度被物理钉死，是比自由三参数更强的断言）",
+        "residuals": {
+          "static": 0.9942,
+          "uniform": 0.3288,
+          "accelerated": 8.686e-16,
+          "projectile": 2.293e-16,
+          "damped": 0.2884
+        },
+        "evidence": {
+          "rel_gain": 1.6,
+          "abs_tol": 1e-09,
+          "gravity_tol": 0.1,
+          "accel_vs_gravity_rel_dev": 1.410888969284246e-15
+        }
+      },
+      "damped": {
+        "kind": "damped",
+        "reason": "在 static -> uniform -> accelerated -> damped 中按残差+简约性偏好选中 'damped'（rms=4.649e-15）",
+        "residuals": {
+          "static": 0.348,
+          "uniform": 0.1221,
+          "accelerated": 0.02938,
+          "projectile": 0.3507,
+          "damped": 4.649e-15
+        },
+        "evidence": {
+          "rel_gain": 1.6,
+          "abs_tol": 1e-09,
+          "gravity_tol": 0.1,
+          "accel_vs_gravity_rel_dev": 1.0630018044684855
+        }
+      },
+      "circular": {
+        "kind": "circular",
+        "reason": "在 static -> uniform -> accelerated -> circular 中按残差+简约性偏好选中 'circular'（rms=1.146e-15）",
+        "residuals": {
+          "static": 0.6067,
+          "uniform": 0.2185,
+          "accelerated": 0.05145,
+          "projectile": 0.3948,
+          "damped": 0.2185,
+          "circular": 1.146e-15
+        },
+        "evidence": {
+          "rel_gain": 1.6,
+          "abs_tol": 1e-09,
+          "gravity_tol": 0.1,
+          "accel_vs_gravity_rel_dev": 1.1904387864425916
+        }
+      }
+    },
+    "C2": {
+      "uniform_kind": "uniform",
+      "residuals": {
+        "static": 0.2863,
+        "uniform": 2.529e-16,
+        "accelerated": 5.055e-16,
+        "projectile": 0.3288,
+        "damped": 7.976e-07
+      },
+      "rejected_note": null
+    },
+    "C3": {
+      "sample_reason": "拟合加速度 a=(0.000000, -9.806650, -0.000000) 与重力 g_vec=(0.000000, -9.806650, 0.000000) 相对偏差仅 0.000 (<= 0.10)，且 projectile rms=2.293e-16 不比自由加速度的 8.686e-16 差 1.5 倍以上 => 判为**重力抛体**（加速度被物理钉死，是比自由三参数更强的断言）",
+      "accel_dev": 1.410888969284246e-15
+    },
+    "C4": {
+      "noiseless": [
+        {
+          "dev_pct": 0,
+          "kind": "projectile"
+        },
+        {
+          "dev_pct": 1,
+          "kind": "accelerated"
+        },
+        {
+          "dev_pct": 2,
+          "kind": "accelerated"
+        },
+        {
+          "dev_pct": 5,
+          "kind": "accelerated"
+        },
+        {
+          "dev_pct": 8,
+          "kind": "accelerated"
+        },
+        {
+          "dev_pct": 10,
+          "kind": "accelerated"
+        },
+        {
+          "dev_pct": 12,
+          "kind": "accelerated"
+        },
+        {
+          "dev_pct": 15,
+          "kind": "accelerated"
+        },
+        {
+          "dev_pct": 25,
+          "kind": "accelerated"
+        },
+        {
+          "dev_pct": 50,
+          "kind": "accelerated"
+        }
+      ],
+      "noisy_sigma_0.02": [
+        {
+          "dev_pct": 0,
+          "kind": "projectile",
+          "dev": 0.0108,
+          "resid_proj": 0.017873,
+          "resid_acc": 0.017513
+        },
+        {
+          "dev_pct": 1,
+          "kind": "projectile",
+          "dev": 0.0108,
+          "resid_proj": 0.017869,
+          "resid_acc": 0.017513
+        },
+        {
+          "dev_pct": 2,
+          "kind": "projectile",
+          "dev": 0.0178,
+          "resid_proj": 0.018461,
+          "resid_acc": 0.017513
+        },
+        {
+          "dev_pct": 5,
+          "kind": "projectile",
+          "dev": 0.046,
+          "resid_proj": 0.02313,
+          "resid_acc": 0.017513
+        },
+        {
+          "dev_pct": 8,
+          "kind": "accelerated",
+          "dev": 0.0756,
+          "resid_proj": 0.030394,
+          "resid_acc": 0.017513
+        },
+        {
+          "dev_pct": 10,
+          "kind": "accelerated",
+          "dev": 0.0954,
+          "resid_proj": 0.035932,
+          "resid_acc": 0.017513
+        },
+        {
+          "dev_pct": 12,
+          "kind": "accelerated",
+          "dev": 0.1153,
+          "resid_proj": 0.041771,
+          "resid_acc": 0.017513
+        },
+        {
+          "dev_pct": 15,
+          "kind": "accelerated",
+          "dev": 0.1453,
+          "resid_proj": 0.050869,
+          "resid_acc": 0.017513
+        },
+        {
+          "dev_pct": 25,
+          "kind": "accelerated",
+          "dev": 0.2451,
+          "resid_proj": 0.082475,
+          "resid_acc": 0.017513
+        },
+        {
+          "dev_pct": 50,
+          "kind": "accelerated",
+          "dev": 0.495,
+          "resid_proj": 0.1637,
+          "resid_acc": 0.017513
+        }
+      ],
+      "first_flip_noiseless_dev_pct": 1,
+      "first_flip_noisy_dev_pct": 8,
+      "note": "无噪声时加速度只要偏离 g 超过数值地板就翻（判据是 projectile rms <= 1.5 倍 accelerated rms）；加 sigma=0.02m 噪声后翻转点由 gravity_tol=0.10 主导"
+    },
+    "C5": [
+      {
+        "case": "样本不足",
+        "raised": "PhysicsError",
+        "msg": "样本不足：需要 >= 2 个 (t, pos)，得到 1"
+      },
+      {
+        "case": "时间不递增",
+        "raised": "PhysicsError",
+        "msg": "样本时间必须严格递增（第 1 项 0.0 <= 0.0）"
+      },
+      {
+        "case": "未知 kind",
+        "raised": "PhysicsError",
+        "msg": "未知模型 kind 'teleport'（闭集 static, uniform, accelerated, projectile, damped, circular, drag2,"
+      },
+      {
+        "case": "重力 <=0",
+        "raised": "PhysicsError",
+        "msg": "gravity 须为正有限值，得到 0.0"
+      },
+      {
+        "case": "Reflector hi<=lo",
+        "raised": "PhysicsError",
+        "msg": "Reflector：第 1 轴 hi(0.0) 须 > lo(0.0)"
+      },
+      {
+        "case": "阻尼 k<=0 真值",
+        "raised": "PhysicsError",
+        "msg": "k 须 > 0，得到 0.0"
+      },
+      {
+        "case": "圆周 r<=0 真值",
+        "raised": "PhysicsError",
+        "msg": "radius 须 > 0，得到 0.0"
+      },
+      {
+        "case": "奇异矩阵",
+        "raised": "PhysicsError",
+        "msg": "solve_linear：矩阵奇异（第 1 列主元 ~0）"
+      }
+    ]
+  },
+  "raw_file": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\manual-physics-gate\\evidence\\fixed\\sandbox\\bridges\\blender\\_evidence\\factory\\raw\\gate-physics.json",
+  "raw_file_sha256": "42cc5546c237bb24157b7dd5ed2eb941d6fa92ff471b3e370981305a16ea7463",
+  "actual_physics_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\manual-physics-gate\\evidence\\fixed\\sandbox\\lingshu\\world\\physics.py",
+  "physics_lf_sha256": "271d2bb9d24452e3724e3ee0375b2d4fd9e04e85bbc4b62fd5afbd39b925f904",
+  "gate_lf_sha256": "6b0e1d50e3e1ea74c0bc7a1a4c84783cc1c459b263f7f8f612e8e9ab8a06fcb2",
+  "status": "completed",
+  "P1_independent_interpretation": {
+    "initial_height_m": 1.2,
+    "initial_vertical_speed_m_s": 7.5,
+    "gravity_m_s2": 9.80665,
+    "relative_rise_m": 2.8679518490004234,
+    "absolute_apex_y_m": 4.067951849000424,
+    "observed_apex_height": 4.067951849000424,
+    "gate_comparison_target": 2.8679518490004234,
+    "gate_d_apex": 1.2000000000000002,
+    "observed_matches_absolute": true,
+    "gate_target_matches_relative": true,
+    "mismatch_equals_initial_height": true
+  },
+  "elapsed_seconds": 46.31074809998972
+}

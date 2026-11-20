@@ -2,10 +2,10 @@
   "suite": "novelty_cache",
   "variant": "fixed",
   "commit": "a663512dd0fbc44a9fb08a55751951009586d172",
-  "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\a663512dd0fb",
+  "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\a663512dd0fb",
   "environment": {
     "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-    "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+    "executable": "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
     "platform": "Windows-11-10.0.26300-SP0",
     "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
     "cpu_count": 32,
@@ -371,7 +371,7 @@
     }
   ],
   "details": {
-    "source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\a663512dd0fb\\lingshu\\core\\longterm_gate.py",
+    "source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\a663512dd0fb\\lingshu\\core\\longterm_gate.py",
     "seed": 20261120,
     "store": "SQLite :memory:",
     "mutations": "public append plus explicit same-rowid SQL update; fresh Gate oracle"

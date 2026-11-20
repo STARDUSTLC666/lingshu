@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.132" timestamp="2026-11-20T21:19:13.619136+08:00" hostname="STARDUST"><testcase classname="tests.test_bridge_pendulum_release_solution" name="test_exact_motion_still_rejects_damping" time="0.001"><failure message="Failed: DID NOT RAISE AnimError">tests\test_bridge_pendulum_release_solution.py:108: in test_exact_motion_still_rejects_damping
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.157" timestamp="2026-11-20T21:43:23.921583+08:00" hostname="STARDUST"><testcase classname="tests.test_bridge_pendulum_release_solution" name="test_exact_motion_still_rejects_damping" time="0.001"><failure message="Failed: DID NOT RAISE AnimError">tests\test_bridge_pendulum_release_solution.py:108: in test_exact_motion_still_rejects_damping
     with pytest.raises(E.AnimError):
          ^^^^^^^^^^^^^^^^^^^^^^^^^^
 E   Failed: DID NOT RAISE AnimError</failure></testcase></testsuite></testsuites>

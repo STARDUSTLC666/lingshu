@@ -1,0 +1,32 @@
+{
+  "repo": "[workspace]\\lingshu\\work\\lingshu-body-pendulum-20261120",
+  "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "head": "aa18885c933dfd49d8c23a288726158de1bc7c03",
+  "runner_lf_sha256": "e38e41bcec4d4a32d16758c4fe042292d962d987113cd78603871f8a4931f3d6",
+  "variants": {
+    "baseline": {
+      "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "sandbox": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\manual-physics-gate\\evidence\\baseline\\sandbox",
+      "archive_sha256": "d8d3fddd95bd91448b13f3d0940b6da8b6bdc328e4cb7ac35a0f3b96d49b545f",
+      "archive_bytes": 1847596,
+      "working_physics_and_gate_overlay": false,
+      "physics_lf_sha256": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a",
+      "gate_lf_sha256": "2e1b6b062e9b59992cea933ab4c817732fe381672935ef194834213115c50e3f",
+      "deps_lf_sha256": "a3e3f73b29ec8c32da970df9dca963f0f409dcde6a29445e47fd8814b68b5fe8",
+      "P1_block_sha256": "ac7da1363e6f04418b0ff3a09c92b08d551cec017ff08ffa3edcde64053f5aee",
+      "projectile_truth_source_sha256": "12c7ce7dc3dc988a3a66ffa18eec666c285f0f7b2def71514c837e341b1c9fe2"
+    },
+    "fixed": {
+      "commit": "aa18885c933dfd49d8c23a288726158de1bc7c03",
+      "sandbox": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\manual-physics-gate\\evidence\\fixed\\sandbox",
+      "archive_sha256": "4a25ae70d7aa0561c4cdedf2e576b2ae28ef9be4d0eca39543345b9b46b5b101",
+      "archive_bytes": 1848023,
+      "working_physics_and_gate_overlay": true,
+      "physics_lf_sha256": "271d2bb9d24452e3724e3ee0375b2d4fd9e04e85bbc4b62fd5afbd39b925f904",
+      "gate_lf_sha256": "6b0e1d50e3e1ea74c0bc7a1a4c84783cc1c459b263f7f8f612e8e9ab8a06fcb2",
+      "deps_lf_sha256": "a3e3f73b29ec8c32da970df9dca963f0f409dcde6a29445e47fd8814b68b5fe8",
+      "P1_block_sha256": "ac7da1363e6f04418b0ff3a09c92b08d551cec017ff08ffa3edcde64053f5aee",
+      "projectile_truth_source_sha256": "12c7ce7dc3dc988a3a66ffa18eec666c285f0f7b2def71514c837e341b1c9fe2"
+    }
+  }
+}

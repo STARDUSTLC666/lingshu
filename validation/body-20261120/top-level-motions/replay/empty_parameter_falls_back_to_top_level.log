@@ -1,0 +1,14 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+____________ test_explicit_empty_motions_disable_top_level_motion _____________
+tests\test_bridge_top_level_motions.py:85: in test_explicit_empty_motions_disable_top_level_motion
+    assert actual == E.eval_at(_spec(), 12), "explicit empty motions must disable top-level fallback"
+E   AssertionError: explicit empty motions must disable top-level fallback
+E   assert {'bob': {'pos...910327, 0.0)}} == {'bob': {'pos...0, 0.0, 0.0)}}
+E     
+E     Differing items:
+E     {'bob': {'pos': (0.0, 0.0, 0.0), 'quat': (0.9884032672682697, 0.0, 0.15185183980910327, 0.0)}} != {'bob': {'pos': (0.0, 0.0, 0.0), 'quat': (1.0, 0.0, 0.0, 0.0)}}
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED tests/test_bridge_top_level_motions.py::test_explicit_empty_motions_disable_top_level_motion
+1 failed in 0.20s

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="23" skipped="0" tests="30" time="1.046" timestamp="2026-11-20T21:37:40.927244+08:00" hostname="STARDUST"><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[eval_at-spring]" time="0.001"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:37: in _invoke
+    return E.eval_at(spec, 12, motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[eval_at-pendulum]" time="0.001"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:37: in _invoke
+    return E.eval_at(spec, 12, motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[eval_at-projectile]" time="0.001"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:37: in _invoke
+    return E.eval_at(spec, 12, motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[eval_link-spring]" time="0.001"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:30: in _invoke
+    return E.eval_link(spec, 12, "bob", motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:807: in eval_link
+    return eval_at(spec, frame, motions)[link_name]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[eval_link-pendulum]" time="0.001"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:30: in _invoke
+    return E.eval_link(spec, 12, "bob", motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:807: in eval_link
+    return eval_at(spec, frame, motions)[link_name]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[eval_link-projectile]" time="0.001"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:30: in _invoke
+    return E.eval_link(spec, 12, "bob", motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:807: in eval_link
+    return eval_at(spec, frame, motions)[link_name]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[eval_frames-spring]" time="0.001"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:32: in _invoke
+    return E.eval_frames(spec, [0, 6, 12], motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:813: in eval_frames
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[eval_frames-pendulum]" time="0.001"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:32: in _invoke
+    return E.eval_frames(spec, [0, 6, 12], motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:813: in eval_frames
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[eval_frames-projectile]" time="0.001"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:32: in _invoke
+    return E.eval_frames(spec, [0, 6, 12], motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:813: in eval_frames
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[to_oracle_records-spring]" time="0.015"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:34: in _invoke
+    return E.to_oracle_records(spec, 12, motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:887: in to_oracle_records
+    for name, pose in eval_at(spec, frame, motions).items():
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[to_oracle_records-pendulum]" time="0.001"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:34: in _invoke
+    return E.to_oracle_records(spec, 12, motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:887: in to_oracle_records
+    for name, pose in eval_at(spec, frame, motions).items():
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[to_oracle_records-projectile]" time="0.001"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:34: in _invoke
+    return E.to_oracle_records(spec, 12, motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:887: in to_oracle_records
+    for name, pose in eval_at(spec, frame, motions).items():
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[tracks_to_oracle_doc-spring]" time="0.001"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:36: in _invoke
+    return E.tracks_to_oracle_doc(spec, [0, 6, 12], motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:900: in tracks_to_oracle_doc
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[tracks_to_oracle_doc-pendulum]" time="0.001"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:36: in _invoke
+    return E.tracks_to_oracle_doc(spec, [0, 6, 12], motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:900: in tracks_to_oracle_doc
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_top_level_motions_match_explicit_public_path[tracks_to_oracle_doc-projectile]" time="0.001"><failure message="Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:49: in test_top_level_motions_match_explicit_public_path
+    actual = _invoke(entry, bundled)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_top_level_motions.py:36: in _invoke
+    return E.tracks_to_oracle_doc(spec, [0, 6, 12], motions=motions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:900: in tracks_to_oracle_doc
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）
+
+During handling of the above exception, another exception occurred:
+tests\test_bridge_top_level_motions.py:51: in test_top_level_motions_match_explicit_public_path
+    pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
+E   Failed: top-level motions must reach animation evaluation: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_normalize_removes_only_animation_extension" time="0.001"><failure message="wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:60: in test_normalize_removes_only_animation_extension
+    actual = E.normalize(spec)
+             ^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_normalize_does_not_modify_caller_input" time="0.001"><failure message="wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:70: in test_normalize_does_not_modify_caller_input
+    E.normalize(spec)
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_explicit_motions_override_top_level_declarations" time="0.001"><failure message="wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:78: in test_explicit_motions_override_top_level_declarations
+    actual = E.eval_at(spec, 12, motions=explicit)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_explicit_empty_motions_disable_top_level_motion" time="0.001"><failure message="wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:84: in test_explicit_empty_motions_disable_top_level_motion
+    actual = E.eval_at(spec, 12, motions=[])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_optional_empty_top_level_motion_keeps_static_behavior[none]" time="0.001"><failure message="wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:90: in test_optional_empty_top_level_motion_keeps_static_behavior
+    assert E.eval_at(dict(_spec(), motions=value), 12) == E.eval_at(_spec(), 12)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_optional_empty_top_level_motion_keeps_static_behavior[empty]" time="0.001"><failure message="wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:90: in test_optional_empty_top_level_motion_keeps_static_behavior
+    assert E.eval_at(dict(_spec(), motions=value), 12) == E.eval_at(_spec(), 12)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_other_unknown_keys_remain_rejected[root]" time="0.001" /><testcase classname="tests.test_bridge_top_level_motions" name="test_other_unknown_keys_remain_rejected[scene]" time="0.000" /><testcase classname="tests.test_bridge_top_level_motions" name="test_other_unknown_keys_remain_rejected[link]" time="0.000" /><testcase classname="tests.test_bridge_top_level_motions" name="test_malformed_top_level_motion_still_raises_anim_error[non_object]" time="0.000" /><testcase classname="tests.test_bridge_top_level_motions" name="test_malformed_top_level_motion_still_raises_anim_error[unknown_kind]" time="0.000" /><testcase classname="tests.test_bridge_top_level_motions" name="test_malformed_top_level_motion_still_raises_anim_error[duplicate_link]" time="0.000" /><testcase classname="tests.test_bridge_top_level_motions" name="test_explicit_parameter_can_override_invalid_top_level_motion" time="0.000"><failure message="wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:117: in test_explicit_parameter_can_override_invalid_top_level_motion
+    assert E.eval_at(spec, 12, motions=explicit) == E.eval_at(_spec(), 12, motions=explicit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_normalized_tuple_ease_keys_remain_accepted" time="0.001"><failure message="wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）">tests\test_bridge_top_level_motions.py:129: in test_normalized_tuple_ease_keys_remain_accepted
+    assert E.eval_at(bundled, 12) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:757: in eval_at
+    nspec = normalize(spec)
+            ^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:166: in normalize
+    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\geo\spec.py:222: in normalize_spec
+    _reject_unknown(spec, _KEYS_SPEC, "spec 顶层")
+bridges\blender\wm_bridge\factory\geo\spec.py:95: in _reject_unknown
+    raise SpecError(
+E   wm_bridge.factory.geo.spec.SpecError: spec 顶层 出现未声明的键：motions —— 允许的键是 joints, links, name, notes, scene, schema。（拼错的键名会被 dict.get 静默忽略、几何/旋转无声改变，故 fail-closed）</failure></testcase><testcase classname="tests.test_bridge_top_level_motions" name="test_geometry_only_control_keeps_normalized_result" time="0.001" /></testsuite></testsuites>

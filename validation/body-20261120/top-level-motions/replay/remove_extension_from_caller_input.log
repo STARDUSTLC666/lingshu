@@ -1,0 +1,19 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_________________ test_normalize_does_not_modify_caller_input _________________
+tests\test_bridge_top_level_motions.py:71: in test_normalize_does_not_modify_caller_input
+    assert spec == before, "normalization must not remove motions from caller input"
+E   AssertionError: normalization must not remove motions from caller input
+E   assert {'schema': 'w...s': []}], ...} == {'schema': 'w...s': []}], ...}
+E     
+E     Omitting 5 identical items, use -vv to show
+E     Right contains 1 more item:
+E     {'motions': [{'amp': 30.0,
+E                   'axis': 'y',
+E                   'kind': 'spring',
+E                   'link': 'bob',...
+E     
+E     ...Full output truncated, use '-vv' to show
+=========================== short test summary info ===========================
+FAILED tests/test_bridge_top_level_motions.py::test_normalize_does_not_modify_caller_input
+1 failed in 0.20s

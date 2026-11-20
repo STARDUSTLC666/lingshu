@@ -1,0 +1,48 @@
+FFFFFF                                                                   [100%]
+================================== FAILURES ===================================
+________________ test_release_solution_matches_independent_rk4 ________________
+tests\test_pendulum_release_solution.py:43: in test_release_solution_matches_independent_rk4
+    actual = P.pendulum_exact_angle(theta0, omega, elapsed / omega)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lingshu\world\physics.py:2639: in pendulum_exact_angle
+    raise PhysicsError(
+E   lingshu.world.physics.PhysicsError: pendulum_exact_angle：|θ0|=179.90° 超出已实测有效域 5.0°。实测偏差 vs RK4：5°→3.7e-05 rad、30°→7.0e-03、60°→5.8e-02、120°→5.3e-01 —— 大振幅下 jacobi_cn 的 Landen 递推不达标，按 fail-closed 拒绝（不把近似当精确）。该振幅请用 decay_envelope 的小角/阻尼解析解，或先用 RK4 参考。
+_________ test_explicit_large_domain_uses_the_correct_release_formula _________
+tests\test_pendulum_release_solution.py:51: in test_explicit_large_domain_uses_the_correct_release_formula
+    assert abs(actual - expected) < 1e-11, "release formula must include the dn factor"
+E   AssertionError: release formula must include the dn factor
+E   assert 0.5072889683888773 < 1e-11
+E    +  where 0.5072889683888773 = abs((1.1387045287626738 - 1.645993497151551))
+______ test_release_initial_symmetry_and_near_separatrix_quarter_periods ______
+tests\test_pendulum_release_solution.py:59: in test_release_initial_symmetry_and_near_separatrix_quarter_periods
+    assert P.pendulum_exact_angle(initial, 1.0, 0.0) == initial
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lingshu\world\physics.py:2639: in pendulum_exact_angle
+    raise PhysicsError(
+E   lingshu.world.physics.PhysicsError: pendulum_exact_angle：|θ0|=179.90° 超出已实测有效域 5.0°。实测偏差 vs RK4：5°→3.7e-05 rad、30°→7.0e-03、60°→5.8e-02、120°→5.3e-01 —— 大振幅下 jacobi_cn 的 Landen 递推不达标，按 fail-closed 拒绝（不把近似当精确）。该振幅请用 decay_envelope 的小角/阻尼解析解，或先用 RK4 参考。
+___________ test_near_separatrix_matches_frozen_80_digit_reference ____________
+tests\test_pendulum_release_solution.py:79: in test_near_separatrix_matches_frozen_80_digit_reference
+    actual = P.pendulum_exact_angle(sign * initial, 1.0, elapsed)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lingshu\world\physics.py:2637: in pendulum_exact_angle
+    raise PhysicsError("pendulum_exact_angle：|sin(θ0/2)| 须 < 1（θ0 不能恰好 ±180°）")
+E   lingshu.world.physics.PhysicsError: pendulum_exact_angle：|sin(θ0/2)| 须 < 1（θ0 不能恰好 ±180°）
+_______ test_truth_period_retains_near_separatrix_complementary_modulus _______
+tests\test_pendulum_release_solution.py:88: in test_truth_period_retains_near_separatrix_complementary_modulus
+    assert abs(truth["period_exact_elliptic"] - 2 * quarter) < 1e-12, "truth period must preserve complementary modulus"
+E   AssertionError: truth period must preserve complementary modulus
+E   assert 0.008693642492588083 < 1e-12
+E    +  where 0.008693642492588083 = abs((35.28988158674083 - (2 * 17.640593972124123)))
+_________ test_nonfinite_and_out_of_domain_arguments_fail_explicitly __________
+tests\test_pendulum_release_solution.py:96: in test_nonfinite_and_out_of_domain_arguments_fail_explicitly
+    with pytest.raises(P.PhysicsError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE PhysicsError
+=========================== short test summary info ===========================
+FAILED tests/test_pendulum_release_solution.py::test_release_solution_matches_independent_rk4
+FAILED tests/test_pendulum_release_solution.py::test_explicit_large_domain_uses_the_correct_release_formula
+FAILED tests/test_pendulum_release_solution.py::test_release_initial_symmetry_and_near_separatrix_quarter_periods
+FAILED tests/test_pendulum_release_solution.py::test_near_separatrix_matches_frozen_80_digit_reference
+FAILED tests/test_pendulum_release_solution.py::test_truth_period_retains_near_separatrix_complementary_modulus
+FAILED tests/test_pendulum_release_solution.py::test_nonfinite_and_out_of_domain_arguments_fail_explicitly
+6 failed in 0.45s

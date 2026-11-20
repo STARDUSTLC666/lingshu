@@ -1,0 +1,1 @@
+{"suite": "hexgrid_nearest", "variant": "baseline", "summaries": [{"label": "nearest_odd_r_50000_points", "python_peak_new_bytes_samples": [4734460, 4732702, 4732702], "python_peak_new_bytes_median": 4732702, "python_current_delta_bytes_samples": [4733972, 4732214, 4732214], "working_set_after_bytes_samples": [63131648, 63328256, 63168512]}]}

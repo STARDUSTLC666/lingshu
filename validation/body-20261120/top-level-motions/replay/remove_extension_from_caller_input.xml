@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.155" timestamp="2026-11-20T21:37:43.360902+08:00" hostname="STARDUST"><testcase classname="tests.test_bridge_top_level_motions" name="test_normalize_does_not_modify_caller_input" time="0.001"><failure message="AssertionError: normalization must not remove motions from caller input&#10;assert {'schema': 'w...s': []}], ...} == {'schema': 'w...s': []}], ...}&#10;  &#10;  Omitting 5 identical items, use -vv to show&#10;  Right contains 1 more item:&#10;  {'motions': [{'amp': 30.0,&#10;                'axis': 'y',&#10;                'kind': 'spring',&#10;                'link': 'bob',...&#10;  &#10;  ...Full output truncated, use '-vv' to show">tests\test_bridge_top_level_motions.py:71: in test_normalize_does_not_modify_caller_input
+    assert spec == before, "normalization must not remove motions from caller input"
+E   AssertionError: normalization must not remove motions from caller input
+E   assert {'schema': 'w...s': []}], ...} == {'schema': 'w...s': []}], ...}
+E     
+E     Omitting 5 identical items, use -vv to show
+E     Right contains 1 more item:
+E     {'motions': [{'amp': 30.0,
+E                   'axis': 'y',
+E                   'kind': 'spring',
+E                   'link': 'bob',...
+E     
+E     ...Full output truncated, use '-vv' to show</failure></testcase></testsuite></testsuites>

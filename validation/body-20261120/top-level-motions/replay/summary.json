@@ -1,0 +1,241 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows",
+  "sqlite": "3.49.1",
+  "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "guard_sha256": "68aaada8b713525075914fad8630aa924a475d5423d2bf247b7ecb7ee18e9e58",
+  "records": [
+    {
+      "case": "fixed",
+      "ok": true,
+      "returncode": 0,
+      "passed": 30,
+      "failed_tests": [],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [],
+      "expected_assertion": "",
+      "pytest_summary": "30 passed in 0.15s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "1574bfb6555bf396da3aefb7c5de150e29c76adbcd1580e3c939d7f9117482b9",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810",
+        "bridges/blender/wm_bridge/geom.py": "e0619ff0498b715d43a50430b7043ae6d1b098785fc8628b2c5de50f3a20cf93",
+        "bridges/blender/wm_bridge/oracle.py": "143307fec973859299ef166ca77972a25321b3b845ae4aca1f844f72db7f94a5",
+        "bridges/blender/wm_bridge/contract.py": "b9b7270b7b0eb23113e75c9182b024bd57d8046e6703a2e3a7a3d5c14189c71e"
+      }
+    },
+    {
+      "case": "baseline",
+      "ok": true,
+      "returncode": 1,
+      "passed": 7,
+      "failed_tests": [
+        "test_explicit_empty_motions_disable_top_level_motion",
+        "test_explicit_motions_override_top_level_declarations",
+        "test_explicit_parameter_can_override_invalid_top_level_motion",
+        "test_normalize_does_not_modify_caller_input",
+        "test_normalize_removes_only_animation_extension",
+        "test_normalized_tuple_ease_keys_remain_accepted",
+        "test_optional_empty_top_level_motion_keeps_static_behavior[empty]",
+        "test_optional_empty_top_level_motion_keeps_static_behavior[none]",
+        "test_top_level_motions_match_explicit_public_path[eval_at-pendulum]",
+        "test_top_level_motions_match_explicit_public_path[eval_at-projectile]",
+        "test_top_level_motions_match_explicit_public_path[eval_at-spring]",
+        "test_top_level_motions_match_explicit_public_path[eval_frames-pendulum]",
+        "test_top_level_motions_match_explicit_public_path[eval_frames-projectile]",
+        "test_top_level_motions_match_explicit_public_path[eval_frames-spring]",
+        "test_top_level_motions_match_explicit_public_path[eval_link-pendulum]",
+        "test_top_level_motions_match_explicit_public_path[eval_link-projectile]",
+        "test_top_level_motions_match_explicit_public_path[eval_link-spring]",
+        "test_top_level_motions_match_explicit_public_path[to_oracle_records-pendulum]",
+        "test_top_level_motions_match_explicit_public_path[to_oracle_records-projectile]",
+        "test_top_level_motions_match_explicit_public_path[to_oracle_records-spring]",
+        "test_top_level_motions_match_explicit_public_path[tracks_to_oracle_doc-pendulum]",
+        "test_top_level_motions_match_explicit_public_path[tracks_to_oracle_doc-projectile]",
+        "test_top_level_motions_match_explicit_public_path[tracks_to_oracle_doc-spring]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_top_level_motions_match_explicit_public_path[eval_at-spring]",
+        "test_top_level_motions_match_explicit_public_path[eval_at-pendulum]",
+        "test_top_level_motions_match_explicit_public_path[eval_at-projectile]",
+        "test_top_level_motions_match_explicit_public_path[eval_link-spring]",
+        "test_top_level_motions_match_explicit_public_path[eval_link-pendulum]",
+        "test_top_level_motions_match_explicit_public_path[eval_link-projectile]",
+        "test_top_level_motions_match_explicit_public_path[eval_frames-spring]",
+        "test_top_level_motions_match_explicit_public_path[eval_frames-pendulum]",
+        "test_top_level_motions_match_explicit_public_path[eval_frames-projectile]",
+        "test_top_level_motions_match_explicit_public_path[to_oracle_records-spring]",
+        "test_top_level_motions_match_explicit_public_path[to_oracle_records-pendulum]",
+        "test_top_level_motions_match_explicit_public_path[to_oracle_records-projectile]",
+        "test_top_level_motions_match_explicit_public_path[tracks_to_oracle_doc-spring]",
+        "test_top_level_motions_match_explicit_public_path[tracks_to_oracle_doc-pendulum]",
+        "test_top_level_motions_match_explicit_public_path[tracks_to_oracle_doc-projectile]",
+        "test_normalize_removes_only_animation_extension",
+        "test_normalize_does_not_modify_caller_input",
+        "test_explicit_motions_override_top_level_declarations",
+        "test_explicit_empty_motions_disable_top_level_motion",
+        "test_optional_empty_top_level_motion_keeps_static_behavior[none]",
+        "test_optional_empty_top_level_motion_keeps_static_behavior[empty]",
+        "test_explicit_parameter_can_override_invalid_top_level_motion",
+        "test_normalized_tuple_ease_keys_remain_accepted"
+      ],
+      "expected_assertion": "",
+      "pytest_summary": "23 failed, 7 passed in 1.09s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "cc1a58e6665099ba43d406c709323227f7c0162b85fb7b1652b4fa9ee304644c",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810",
+        "bridges/blender/wm_bridge/geom.py": "e0619ff0498b715d43a50430b7043ae6d1b098785fc8628b2c5de50f3a20cf93",
+        "bridges/blender/wm_bridge/oracle.py": "143307fec973859299ef166ca77972a25321b3b845ae4aca1f844f72db7f94a5",
+        "bridges/blender/wm_bridge/contract.py": "b9b7270b7b0eb23113e75c9182b024bd57d8046e6703a2e3a7a3d5c14189c71e"
+      }
+    },
+    {
+      "case": "keep_extension_in_geometry_spec",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_top_level_motions_match_explicit_public_path[eval_at-spring]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_top_level_motions_match_explicit_public_path[eval_at-spring]"
+      ],
+      "expected_assertion": "top-level motions must reach animation evaluation",
+      "pytest_summary": "1 failed in 0.24s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "dca457cca7b9f7b60e40e13e650eb12be5f0321be2e10799c4717bf14f4b1359",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810",
+        "bridges/blender/wm_bridge/geom.py": "e0619ff0498b715d43a50430b7043ae6d1b098785fc8628b2c5de50f3a20cf93",
+        "bridges/blender/wm_bridge/oracle.py": "143307fec973859299ef166ca77972a25321b3b845ae4aca1f844f72db7f94a5",
+        "bridges/blender/wm_bridge/contract.py": "b9b7270b7b0eb23113e75c9182b024bd57d8046e6703a2e3a7a3d5c14189c71e"
+      }
+    },
+    {
+      "case": "remove_extension_from_caller_input",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_normalize_does_not_modify_caller_input"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_normalize_does_not_modify_caller_input"
+      ],
+      "expected_assertion": "normalization must not remove motions from caller input",
+      "pytest_summary": "1 failed in 0.20s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "8472938cbedf298276f925b1bec3e2fc9d9f8730d6ea39ffe7da5b1a38829635",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810",
+        "bridges/blender/wm_bridge/geom.py": "e0619ff0498b715d43a50430b7043ae6d1b098785fc8628b2c5de50f3a20cf93",
+        "bridges/blender/wm_bridge/oracle.py": "143307fec973859299ef166ca77972a25321b3b845ae4aca1f844f72db7f94a5",
+        "bridges/blender/wm_bridge/contract.py": "b9b7270b7b0eb23113e75c9182b024bd57d8046e6703a2e3a7a3d5c14189c71e"
+      }
+    },
+    {
+      "case": "silently_drop_all_unknown_root_keys",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_other_unknown_keys_remain_rejected[root]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_other_unknown_keys_remain_rejected[root]"
+      ],
+      "expected_assertion": "DID NOT RAISE",
+      "pytest_summary": "1 failed in 0.20s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "94dd3a5a12733e33be80df3e4d590d926ac90b340bda504e963bffd82dae72ae",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810",
+        "bridges/blender/wm_bridge/geom.py": "e0619ff0498b715d43a50430b7043ae6d1b098785fc8628b2c5de50f3a20cf93",
+        "bridges/blender/wm_bridge/oracle.py": "143307fec973859299ef166ca77972a25321b3b845ae4aca1f844f72db7f94a5",
+        "bridges/blender/wm_bridge/contract.py": "b9b7270b7b0eb23113e75c9182b024bd57d8046e6703a2e3a7a3d5c14189c71e"
+      }
+    },
+    {
+      "case": "top_level_overrides_explicit_parameter",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_explicit_motions_override_top_level_declarations"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_explicit_motions_override_top_level_declarations"
+      ],
+      "expected_assertion": "explicit motions must take precedence over top-level declarations",
+      "pytest_summary": "1 failed in 0.20s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "66094c3f5a3137c4e67da5e8f96e5d5d63a3489cc22af65fe65ddaa82f539bc4",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810",
+        "bridges/blender/wm_bridge/geom.py": "e0619ff0498b715d43a50430b7043ae6d1b098785fc8628b2c5de50f3a20cf93",
+        "bridges/blender/wm_bridge/oracle.py": "143307fec973859299ef166ca77972a25321b3b845ae4aca1f844f72db7f94a5",
+        "bridges/blender/wm_bridge/contract.py": "b9b7270b7b0eb23113e75c9182b024bd57d8046e6703a2e3a7a3d5c14189c71e"
+      }
+    },
+    {
+      "case": "empty_parameter_falls_back_to_top_level",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_explicit_empty_motions_disable_top_level_motion"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_explicit_empty_motions_disable_top_level_motion"
+      ],
+      "expected_assertion": "explicit empty motions must disable top-level fallback",
+      "pytest_summary": "1 failed in 0.20s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "72141024294272a33c1ce25a29d7a9f2cd479e81802237b42f50de2b44d882d5",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810",
+        "bridges/blender/wm_bridge/geom.py": "e0619ff0498b715d43a50430b7043ae6d1b098785fc8628b2c5de50f3a20cf93",
+        "bridges/blender/wm_bridge/oracle.py": "143307fec973859299ef166ca77972a25321b3b845ae4aca1f844f72db7f94a5",
+        "bridges/blender/wm_bridge/contract.py": "b9b7270b7b0eb23113e75c9182b024bd57d8046e6703a2e3a7a3d5c14189c71e"
+      }
+    },
+    {
+      "case": "strip_nested_motions_keys",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_other_unknown_keys_remain_rejected[scene]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_other_unknown_keys_remain_rejected[scene]"
+      ],
+      "expected_assertion": "DID NOT RAISE",
+      "pytest_summary": "1 failed in 0.21s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "978d6d8b7381c1ce36329b0a441ce124f3524a3e96b1cdca6e1c6bb655a688b5",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810",
+        "bridges/blender/wm_bridge/geom.py": "e0619ff0498b715d43a50430b7043ae6d1b098785fc8628b2c5de50f3a20cf93",
+        "bridges/blender/wm_bridge/oracle.py": "143307fec973859299ef166ca77972a25321b3b845ae4aca1f844f72db7f94a5",
+        "bridges/blender/wm_bridge/contract.py": "b9b7270b7b0eb23113e75c9182b024bd57d8046e6703a2e3a7a3d5c14189c71e"
+      }
+    }
+  ]
+}

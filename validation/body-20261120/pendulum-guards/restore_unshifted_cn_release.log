@@ -1,0 +1,11 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_________ test_explicit_large_domain_uses_the_correct_release_formula _________
+tests\test_pendulum_release_solution.py:51: in test_explicit_large_domain_uses_the_correct_release_formula
+    assert abs(actual - expected) < 1e-11, "release formula must include the dn factor"
+E   AssertionError: release formula must include the dn factor
+E   assert 0.5072889683888773 < 1e-11
+E    +  where 0.5072889683888773 = abs((1.1387045287626738 - 1.645993497151551))
+=========================== short test summary info ===========================
+FAILED tests/test_pendulum_release_solution.py::test_explicit_large_domain_uses_the_correct_release_formula
+1 failed in 0.24s

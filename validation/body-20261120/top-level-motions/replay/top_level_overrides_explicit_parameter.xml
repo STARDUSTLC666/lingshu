@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.157" timestamp="2026-11-20T21:37:44.881774+08:00" hostname="STARDUST"><testcase classname="tests.test_bridge_top_level_motions" name="test_explicit_motions_override_top_level_declarations" time="0.001"><failure message="AssertionError: explicit motions must take precedence over top-level declarations&#10;assert {'bob': {'pos...0, 0.0, 0.0)}} == {'bob': {'pos...0, 0.0, 0.0)}}&#10;  &#10;  Differing items:&#10;  {'bob': {'pos': (1.125, -2.0, 2.2741687500000003), 'quat': (1.0, 0.0, 0.0, 0.0)}} != {'bob': {'pos': (0.0, 0.0, 0.0), 'quat': (1.0, 0.0, 0.0, 0.0)}}&#10;  Use -v to get more diff">tests\test_bridge_top_level_motions.py:79: in test_explicit_motions_override_top_level_declarations
+    assert actual == expected, "explicit motions must take precedence over top-level declarations"
+E   AssertionError: explicit motions must take precedence over top-level declarations
+E   assert {'bob': {'pos...0, 0.0, 0.0)}} == {'bob': {'pos...0, 0.0, 0.0)}}
+E     
+E     Differing items:
+E     {'bob': {'pos': (1.125, -2.0, 2.2741687500000003), 'quat': (1.0, 0.0, 0.0, 0.0)}} != {'bob': {'pos': (0.0, 0.0, 0.0), 'quat': (1.0, 0.0, 0.0, 0.0)}}
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

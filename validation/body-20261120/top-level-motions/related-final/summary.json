@@ -1,0 +1,251 @@
+{
+  "all_ok": true,
+  "records": [
+    {
+      "file": "tests/test_bridge_top_level_motions.py",
+      "style": "pytest",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "[workspace]\\lingshu\\work\\lingshu-body-top-level-motions-20261120\\tests\\test_bridge_top_level_motions.py",
+        "-q",
+        "--tb=short",
+        "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\top-level-motions\\related-final\\test_bridge_top_level_motions.xml"
+      ],
+      "returncode": 0,
+      "tests": 30,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "file": "tests/test_film_contract_guard.py",
+      "style": "pytest",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "[workspace]\\lingshu\\work\\lingshu-body-top-level-motions-20261120\\tests\\test_film_contract_guard.py",
+        "-q",
+        "--tb=short",
+        "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\top-level-motions\\related-final\\test_film_contract_guard.xml"
+      ],
+      "returncode": 0,
+      "tests": 28,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "file": "tests/test_film_criteria_guard.py",
+      "style": "pytest",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "[workspace]\\lingshu\\work\\lingshu-body-top-level-motions-20261120\\tests\\test_film_criteria_guard.py",
+        "-q",
+        "--tb=short",
+        "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\top-level-motions\\related-final\\test_film_criteria_guard.xml"
+      ],
+      "returncode": 0,
+      "tests": 35,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "file": "tests/test_film_mv_judge_exit.py",
+      "style": "pytest",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "[workspace]\\lingshu\\work\\lingshu-body-top-level-motions-20261120\\tests\\test_film_mv_judge_exit.py",
+        "-q",
+        "--tb=short",
+        "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\top-level-motions\\related-final\\test_film_mv_judge_exit.xml"
+      ],
+      "returncode": 0,
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "file": "tests/test_film_mv_plugin.py",
+      "style": "pytest",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "[workspace]\\lingshu\\work\\lingshu-body-top-level-motions-20261120\\tests\\test_film_mv_plugin.py",
+        "-q",
+        "--tb=short",
+        "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\top-level-motions\\related-final\\test_film_mv_plugin.xml"
+      ],
+      "returncode": 0,
+      "tests": 23,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "file": "tests/test_gate_dependency_closure.py",
+      "style": "pytest",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "[workspace]\\lingshu\\work\\lingshu-body-top-level-motions-20261120\\tests\\test_gate_dependency_closure.py",
+        "-q",
+        "--tb=short",
+        "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\top-level-motions\\related-final\\test_gate_dependency_closure.xml"
+      ],
+      "returncode": 0,
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "file": "tests/test_issue2097_2120_bridge_family_guard.py",
+      "style": "pytest",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "[workspace]\\lingshu\\work\\lingshu-body-top-level-motions-20261120\\tests\\test_issue2097_2120_bridge_family_guard.py",
+        "-q",
+        "--tb=short",
+        "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\top-level-motions\\related-final\\test_issue2097_2120_bridge_family_guard.xml"
+      ],
+      "returncode": 0,
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "file": "tests/test_issue2106_2118_family_guard.py",
+      "style": "pytest",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "[workspace]\\lingshu\\work\\lingshu-body-top-level-motions-20261120\\tests\\test_issue2106_2118_family_guard.py",
+        "-q",
+        "--tb=short",
+        "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\top-level-motions\\related-final\\test_issue2106_2118_family_guard.xml"
+      ],
+      "returncode": 0,
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "file": "tests/test_issue427_shade_paint_guard.py",
+      "style": "pytest",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "[workspace]\\lingshu\\work\\lingshu-body-top-level-motions-20261120\\tests\\test_issue427_shade_paint_guard.py",
+        "-q",
+        "--tb=short",
+        "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\top-level-motions\\related-final\\test_issue427_shade_paint_guard.xml"
+      ],
+      "returncode": 0,
+      "tests": 21,
+      "failures": 0,
+      "errors": 0,
+      "skips": 4
+    },
+    {
+      "file": "tests/test_issue777_projectile_no_penetration.py",
+      "style": "pytest",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "[workspace]\\lingshu\\work\\lingshu-body-top-level-motions-20261120\\tests\\test_issue777_projectile_no_penetration.py",
+        "-q",
+        "--tb=short",
+        "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\top-level-motions\\related-final\\test_issue777_projectile_no_penetration.xml"
+      ],
+      "returncode": 0,
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "file": "tests/test_issue825_text_gates.py",
+      "style": "script",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "[workspace]\\lingshu\\work\\lingshu-body-top-level-motions-20261120\\tests\\test_issue825_text_gates.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "file": "tests/test_wm_bridge_world_atta.py",
+      "style": "pytest",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "[workspace]\\lingshu\\work\\lingshu-body-top-level-motions-20261120\\tests\\test_wm_bridge_world_atta.py",
+        "-q",
+        "--tb=short",
+        "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\top-level-motions\\related-final\\test_wm_bridge_world_atta.xml"
+      ],
+      "returncode": 0,
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    }
+  ],
+  "pytest_passed": 194,
+  "pytest_skipped": 4,
+  "scripts_passed": 1
+}

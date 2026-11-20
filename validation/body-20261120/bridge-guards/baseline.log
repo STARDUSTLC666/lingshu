@@ -1,0 +1,103 @@
+FFFF.FFF                                                                 [100%]
+================================== FAILURES ===================================
+_______________ test_exact_motion_eval_matches_independent_rk4 ________________
+tests\test_bridge_pendulum_release_solution.py:65: in test_exact_motion_eval_matches_independent_rk4
+    actual = _eval_angle(motion, elapsed / omega)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_pendulum_release_solution.py:31: in _eval_angle
+    pose = E.eval_at(spec, frame, motions=[motion])["bob"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:758: in eval_at
+    return _eval_normalized(nspec, frame, mm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:793: in _eval_normalized
+    bq, bt = (_basis_of(decl, frame, fps, "motions[link=%s]" % name) if m is not None
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:669: in _basis_of
+    v, is_rot = _scalar_of(decl, frame, fps, where)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:660: in _scalar_of
+    return off + pendulum_exact_angle(theta0, w, t), True
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:444: in pendulum_exact_angle
+    raise AnimError(
+E   wm_bridge.factory.anim.eval.AnimError: pendulum_exact_angle：|θ0|=179.90° 超出已实测有效域 5.0°（域内 vs RK4 最大偏差 4.0e-05 rad；30°/60°/120° 实测 7.0e-03/5.8e-02/5.3e-01）—— 按 fail-closed 拒绝，不把近似当精确
+___________ test_small_amplitude_exact_motion_uses_release_formula ____________
+tests\test_bridge_pendulum_release_solution.py:72: in test_small_amplitude_exact_motion_uses_release_formula
+    assert abs(actual - _rk4_release(initial, 1.0)) < 1e-11, \
+E   AssertionError: bridge release formula must include the dn factor
+E   assert 3.179393265983349e-05 < 1e-11
+E    +  where 3.179393265983349e-05 = abs((0.04715872141574875 - 0.04719051534840858))
+E    +    where 0.04719051534840858 = _rk4_release(0.08726646259971647, 1.0)
+________ test_near_separatrix_motion_validates_and_keeps_quarter_phase ________
+tests\test_bridge_pendulum_release_solution.py:82: in test_near_separatrix_motion_validates_and_keeps_quarter_phase
+    assert ok, "bridge near-separatrix motion must validate: " + reason
+E   AssertionError: bridge near-separatrix motion must validate: pendulum_exact_angle：|θ0|=179.90° 超出已实测有效域 5.0°（域内 vs RK4 最大偏差 4.0e-05 rad；30°/60°/120° 实测 7.0e-03/5.8e-02/5.3e-01）—— 按 fail-closed 拒绝，不把近似当精确
+E   assert False
+________ test_near_separatrix_motion_matches_frozen_80_digit_reference ________
+tests\test_bridge_pendulum_release_solution.py:99: in test_near_separatrix_motion_matches_frozen_80_digit_reference
+    actual = _eval_angle(_motion(sign * initial), elapsed)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_pendulum_release_solution.py:31: in _eval_angle
+    pose = E.eval_at(spec, frame, motions=[motion])["bob"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:758: in eval_at
+    return _eval_normalized(nspec, frame, mm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:793: in _eval_normalized
+    bq, bt = (_basis_of(decl, frame, fps, "motions[link=%s]" % name) if m is not None
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:669: in _basis_of
+    v, is_rot = _scalar_of(decl, frame, fps, where)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:660: in _scalar_of
+    return off + pendulum_exact_angle(theta0, w, t), True
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:442: in pendulum_exact_angle
+    raise AnimError("pendulum_exact_angle：|sin(θ0/2)| 须 < 1（θ0 不能恰好 ±180°）")
+E   wm_bridge.factory.anim.eval.AnimError: pendulum_exact_angle：|sin(θ0/2)| 须 < 1（θ0 不能恰好 ±180°）
+______________ test_exact_motion_input_errors_remain_anim_errors ______________
+tests\test_bridge_pendulum_release_solution.py:117: in test_exact_motion_input_errors_remain_anim_errors
+    with pytest.raises(E.AnimError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE AnimError
+__________ test_exact_motion_preserves_input_offset_and_length_path ___________
+tests\test_bridge_pendulum_release_solution.py:137: in test_exact_motion_preserves_input_offset_and_length_path
+    assert abs(_eval_angle(motion, 1.0) - expected) < 1e-11
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_bridge_pendulum_release_solution.py:31: in _eval_angle
+    pose = E.eval_at(spec, frame, motions=[motion])["bob"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:758: in eval_at
+    return _eval_normalized(nspec, frame, mm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:793: in _eval_normalized
+    bq, bt = (_basis_of(decl, frame, fps, "motions[link=%s]" % name) if m is not None
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:669: in _basis_of
+    v, is_rot = _scalar_of(decl, frame, fps, where)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:660: in _scalar_of
+    return off + pendulum_exact_angle(theta0, w, t), True
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bridges\blender\wm_bridge\factory\anim\eval.py:444: in pendulum_exact_angle
+    raise AnimError(
+E   wm_bridge.factory.anim.eval.AnimError: pendulum_exact_angle：|θ0|=60.00° 超出已实测有效域 5.0°（域内 vs RK4 最大偏差 4.0e-05 rad；30°/60°/120° 实测 7.0e-03/5.8e-02/5.3e-01）—— 按 fail-closed 拒绝，不把近似当精确
+_______ test_bridge_exact_motion_imports_without_optional_dependencies ________
+tests\test_bridge_pendulum_release_solution.py:169: in test_bridge_exact_motion_imports_without_optional_dependencies
+    assert result.returncode == 0, "bridge exact motion must remain stdlib-only: " + result.stderr
+E   AssertionError: bridge exact motion must remain stdlib-only: Traceback (most recent call last):
+E       File "<string>", line 16, in <module>
+E     AssertionError
+E     
+E   assert 1 == 0
+E    +  where 1 = CompletedProcess(args=['[workspace]\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe', '-B', '-S', '-X', 'utf8',...e=1, stdout='', stderr='Traceback (most recent call last):\n  File "<string>", line 16, in <module>\nAssertionError\n').returncode
+=========================== short test summary info ===========================
+FAILED tests/test_bridge_pendulum_release_solution.py::test_exact_motion_eval_matches_independent_rk4
+FAILED tests/test_bridge_pendulum_release_solution.py::test_small_amplitude_exact_motion_uses_release_formula
+FAILED tests/test_bridge_pendulum_release_solution.py::test_near_separatrix_motion_validates_and_keeps_quarter_phase
+FAILED tests/test_bridge_pendulum_release_solution.py::test_near_separatrix_motion_matches_frozen_80_digit_reference
+FAILED tests/test_bridge_pendulum_release_solution.py::test_exact_motion_input_errors_remain_anim_errors
+FAILED tests/test_bridge_pendulum_release_solution.py::test_exact_motion_preserves_input_offset_and_length_path
+FAILED tests/test_bridge_pendulum_release_solution.py::test_bridge_exact_motion_imports_without_optional_dependencies
+7 failed, 1 passed in 0.45s

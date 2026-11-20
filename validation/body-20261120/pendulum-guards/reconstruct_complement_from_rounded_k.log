@@ -1,0 +1,11 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+______ test_release_initial_symmetry_and_near_separatrix_quarter_periods ______
+tests\test_pendulum_release_solution.py:62: in test_release_initial_symmetry_and_near_separatrix_quarter_periods
+    assert abs(actual - expected) < 1e-11, "complementary modulus must retain near-separatrix precision"
+E   AssertionError: complementary modulus must retain near-separatrix precision
+E   assert 1.1930007990800323e-11 < 1e-11
+E    +  where 1.1930007990800323e-11 = abs((-1.1930007990800323e-11 - 0.0))
+=========================== short test summary info ===========================
+FAILED tests/test_pendulum_release_solution.py::test_release_initial_symmetry_and_near_separatrix_quarter_periods
+1 failed in 0.23s

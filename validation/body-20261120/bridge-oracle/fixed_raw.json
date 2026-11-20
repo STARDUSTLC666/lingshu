@@ -1,11 +1,11 @@
 {
   "variant": "fixed",
-  "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\pendulum-bridge-oracle\\evidence\\snapshots\\fixed",
-  "actual_eval_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\pendulum-bridge-oracle\\evidence\\snapshots\\fixed\\bridges\\blender\\wm_bridge\\factory\\anim\\eval.py",
+  "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\pendulum-bridge-oracle\\evidence\\snapshots\\fixed",
+  "actual_eval_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\pendulum-bridge-oracle\\evidence\\snapshots\\fixed\\bridges\\blender\\wm_bridge\\factory\\anim\\eval.py",
   "eval_lf_sha256": "f2b24ec11fbdef01d56c7d354ef247fc1bfdda9dfc14588f8830a3cf62b01aad",
   "environment": {
     "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
-    "executable": "<workspace>\\lingshu\\work\\lingshu-pendulum-hp-20261120-venv\\Scripts\\python.exe",
+    "executable": "[workspace]\\lingshu\\work\\lingshu-pendulum-hp-20261120-venv\\Scripts\\python.exe",
     "platform": "Windows-11-10.0.26300-SP0",
     "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
     "cpu_count": 32,
@@ -18,17 +18,17 @@
   "dependencies": [
     {
       "module": "wm_bridge",
-      "path": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\pendulum-bridge-oracle\\evidence\\snapshots\\fixed\\bridges\\blender\\wm_bridge\\__init__.py",
+      "path": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\pendulum-bridge-oracle\\evidence\\snapshots\\fixed\\bridges\\blender\\wm_bridge\\__init__.py",
       "lf_sha256": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c"
     },
     {
       "module": "wm_bridge.factory.anim.eval",
-      "path": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\pendulum-bridge-oracle\\evidence\\snapshots\\fixed\\bridges\\blender\\wm_bridge\\factory\\anim\\eval.py",
+      "path": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\pendulum-bridge-oracle\\evidence\\snapshots\\fixed\\bridges\\blender\\wm_bridge\\factory\\anim\\eval.py",
       "lf_sha256": "f2b24ec11fbdef01d56c7d354ef247fc1bfdda9dfc14588f8830a3cf62b01aad"
     },
     {
       "module": "wm_bridge.factory.geo.spec",
-      "path": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\pendulum-bridge-oracle\\evidence\\snapshots\\fixed\\bridges\\blender\\wm_bridge\\factory\\geo\\spec.py",
+      "path": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\pendulum-bridge-oracle\\evidence\\snapshots\\fixed\\bridges\\blender\\wm_bridge\\factory\\geo\\spec.py",
       "lf_sha256": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810"
     }
   ],

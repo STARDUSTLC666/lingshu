@@ -1,19 +1,19 @@
 {
   "baseline": {
     "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
-    "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\pendulum-bench\\final271d\\sources\\physics_baseline_d74848fb33db.py",
+    "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\pendulum-bench\\final-e077\\sources\\physics_baseline_d74848fb33db.py",
     "sha256": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a",
     "lf_sha256": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a"
   },
   "fixed": {
-    "working_source": "<workspace>\\lingshu\\work\\lingshu-body-pendulum-20261120\\lingshu\\world\\physics.py",
-    "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\pendulum-bench\\final271d\\sources\\physics_fixed_271d2bb9d244.py",
+    "working_source": "[workspace]\\lingshu\\work\\lingshu-body-pendulum-20261120\\lingshu\\world\\physics.py",
+    "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\pendulum-bench\\final-e077\\sources\\physics_fixed_271d2bb9d244.py",
     "sha256": "1cb2134697b5a262f3e3a8f82a5c2597be2bc3fa65146246b5ab547b9830928c",
     "lf_sha256": "271d2bb9d24452e3724e3ee0375b2d4fd9e04e85bbc4b62fd5afbd39b925f904",
     "expected_lf_sha256": "271d2bb9d24452e3724e3ee0375b2d4fd9e04e85bbc4b62fd5afbd39b925f904"
   },
-  "runner_lf_sha256": "a6266790b14b948af6536feb85454afbb9c962cf00d86ae2b917e5e91625b264",
-  "repository": "<workspace>\\lingshu\\work\\lingshu-body-pendulum-20261120",
-  "git_head": "d74848fb33dbff1d719959df19d1266a1ac60f44",
-  "fixed_source_git_status": "M lingshu/world/physics.py"
+  "runner_lf_sha256": "f0c163e8540a052ded44efcd843d97acde20d3cdac9149520115a701b41d21bf",
+  "repository": "[workspace]\\lingshu\\work\\lingshu-body-pendulum-20261120",
+  "git_head": "e0771a810b8846676f3545542b2e70d5e0011467",
+  "fixed_source_git_status": ""
 }
