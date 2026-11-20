@@ -1,0 +1,97 @@
+{
+  "ok": true,
+  "scope": "Independent current-head append and full staged inventory audit; no source/evidence writes and no helper rerun.",
+  "inventory": {
+    "manifested": 1636,
+    "detached": 3,
+    "staged": 1639,
+    "parse_counts": {
+      "json": 305,
+      "xml": 315
+    },
+    "private_prefix_findings": [],
+    "canonical_hashes_and_coverage_verified": true,
+    "junit_inventory_complete": true
+  },
+  "append_raw_to_public": {
+    "files_verified": 54,
+    "json_keys_values_numbers_preserved": true,
+    "xml_full_semantics_preserved": true
+  },
+  "source_alignment": {
+    "measured": "bae2eaea9fb77e9e451f1b220d17f9096d06ee78",
+    "historical": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+    "current": "41dc5e01fd710ffeab79aa4d566d8ed5ed5baf50",
+    "combined_core_identical": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+    "historical_core_sha256": "da1d0ddf76f5037f0cb1542241d9d3aceb64d5cf8391f807dbdd369154f4ce01",
+    "current_core_sha256": "4ce414e49f0165f9d03b5a834b1d5dbaac354251cc9aa33b44eaf11cbf0a21c2",
+    "changed_ast_functions": [
+      "search_skills"
+    ],
+    "historical_measurements_not_relabelled": true
+  },
+  "ci": {
+    "runs": [
+      {
+        "id": 44781318899,
+        "head": "41dc5e01fd710ffeab79aa4d566d8ed5ed5baf50",
+        "jobs": 3,
+        "conclusion": "success"
+      },
+      {
+        "id": 44781318941,
+        "head": "41dc5e01fd710ffeab79aa4d566d8ed5ed5baf50",
+        "jobs": 1,
+        "conclusion": "success"
+      }
+    ],
+    "gate_jobs": [
+      {
+        "job_id": 136444433225,
+        "name": "gate (py3.12)",
+        "raw_sha256": "5fab1bad5b8af3c797282482165c6ee45e72c506c2ff17d197810fa57f39a467",
+        "scripts": 102,
+        "brain": "23/23 actual",
+        "pytest_summary": "= 5638 passed, 40 skipped, 10472 warnings, 98 subtests passed in 895.52s (0:14:55) =",
+        "skip_lines": 40
+      },
+      {
+        "job_id": 136444433641,
+        "name": "gate (py3.13)",
+        "raw_sha256": "0544133075d63813c2fd97b8d1ee1b3f0acf7dd4bcbbc79f38b97f50502467bb",
+        "scripts": 102,
+        "brain": "23/23 actual",
+        "pytest_summary": "= 5638 passed, 40 skipped, 10461 warnings, 98 subtests passed in 840.54s (0:14:00) =",
+        "skip_lines": 40
+      },
+      {
+        "job_id": 136444433866,
+        "name": "gate (py3.12 · 依赖下界)",
+        "raw_sha256": "ae90247f90e7ea9cd5aa97cb95ddd6405e33f779ffb76c9187009cb81500a7fa",
+        "scripts": 102,
+        "brain": "23/23 actual",
+        "pytest_summary": "= 5638 passed, 40 skipped, 10448 warnings, 98 subtests passed in 947.04s (0:15:47) =",
+        "skip_lines": 40
+      }
+    ],
+    "title_verified": true,
+    "raw_archive_indexes_verified": true,
+    "actual_checkout_merge": "6cfd83024a94b93bad714ca670c6921d8bc73866",
+    "actual_checkout_tree": "4e5afa27db5e209e3a660f866b699f3172ec492e",
+    "same_tree_as_current_head": true,
+    "workflow_scripts_source_verified": true
+  },
+  "scoped": {
+    "tests": 60,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "helper_logic": {
+    "historical_identity_stable_on_repeat": true,
+    "not_executed_or_reexecuted_by_auditor": true,
+    "self_manifested": true,
+    "xml_semantics_and_junit_rebuild_present": true,
+    "note": "Generated artifact original_sha256 fields may update on repeat; source measurements and historical head/hash booleans stay stable. This is a code review, not an execution test."
+  }
+}

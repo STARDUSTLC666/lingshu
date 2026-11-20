@@ -2,8 +2,8 @@
   "ok": true,
   "source_sha": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
   "linux_benchmark_run": 44778606930,
-  "canonical_blobs_verified": 1636,
-  "artifact_count": 1636,
+  "canonical_blobs_verified": 1659,
+  "artifact_count": 1659,
   "new_benchmark_files_copied": 867,
   "new_numeric_leaves_preserved": 83036,
   "xml_files": 315,
@@ -16,10 +16,12 @@
     "sanitization-manifest.json"
   ],
   "status": "verified completed four-contribution evidence seal",
-  "staged_evidence_files": 1639,
+  "staged_evidence_files": 1662,
   "manifest_and_detached_audits_excluded_from_own_digest_list": true,
   "numeric_json_object_keys_and_values_redacted_without_key_collisions": true,
   "current_core_pr_head": "41dc5e01fd710ffeab79aa4d566d8ed5ed5baf50",
   "current_core_ci_gate_run": 44781318899,
-  "current_core_ci_verified_success": true
+  "current_core_ci_verified_success": true,
+  "final_eight_publication_readbacks_verified": true,
+  "immutable_final_evidence_link": "83496a7f49ede450729cb944fec36a0fbbafec6f"
 }

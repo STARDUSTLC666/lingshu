@@ -1,0 +1,46 @@
+{
+  "headRefOid": "41dc5e01fd710ffeab79aa4d566d8ed5ed5baf50",
+  "state": "OPEN",
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T17:30:00Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44781318899/job/136444433225",
+      "name": "gate (py3.12)",
+      "startedAt": "2026-11-20T17:14:13Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T17:14:20Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44781318941/job/136444436078",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T17:14:13Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T17:30:56Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44781318899/job/136444433866",
+      "name": "gate (py3.12 · 依赖下界)",
+      "startedAt": "2026-11-20T17:14:13Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T17:28:59Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44781318899/job/136444433641",
+      "name": "gate (py3.13)",
+      "startedAt": "2026-11-20T17:14:12Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    }
+  ]
+}

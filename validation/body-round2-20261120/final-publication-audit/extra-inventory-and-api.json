@@ -1,0 +1,48 @@
+{
+  "verdict": "PASS",
+  "index_sha256": "0f98e75b85108d098eb9cad18e2ec7e56d15d33ba0aa3429f9a5ac8f2a6a6301",
+  "inner_inventory": [
+    {
+      "root": "linux-benchmarks/final-44778606930/artifacts/body-round2-py312-floor-44778606930-1/",
+      "indexed": 137,
+      "declared_live_exclusion": "driver.log",
+      "missing": []
+    },
+    {
+      "root": "linux-benchmarks/final-44778606930/artifacts/body-round2-py312-latest-44778606930-1/",
+      "indexed": 136,
+      "declared_live_exclusion": "driver.log",
+      "missing": []
+    },
+    {
+      "root": "linux-benchmarks/final-44778606930/artifacts/body-round2-py313-latest-44778606930-1/",
+      "indexed": 136,
+      "declared_live_exclusion": "driver.log",
+      "missing": []
+    }
+  ],
+  "latest_benchmark_api": {
+    "id": 44778606930,
+    "head_sha": "ff22bf03a53e422fedc029fbd0d24445aef3dbe7",
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "all_numeric_json_files": 231,
+  "all_numeric_bool_leaves": 143695,
+  "final_benchmark_numeric_json_files": 56,
+  "final_benchmark_numeric_bool_leaves": 41819,
+  "mutable_original_paths_now_different_from_copy_time": [
+    "remote-ci/summary.json"
+  ],
+  "parsed": {
+    "json": 259,
+    "xml": 314,
+    "control_python": 7
+  },
+  "canonical": 1580,
+  "detached": [
+    "final-seal-audit.json",
+    "preparation-audit.json",
+    "sanitization-manifest.json"
+  ]
+}

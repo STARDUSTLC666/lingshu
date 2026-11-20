@@ -164,7 +164,10 @@
     ],
     "initial_evidence_commit": "f769b3ac33eb5221ad66f6a4384aa6429b26e597",
     "readback_verified": true,
-    "note": "Original create/readback receipts retained; immutable final evidence links will be appended after the clean Linux benchmark run."
+    "note": "All four PR and four original intake bodies now contain the immutable completed evidence link. Original intake markers and historical measurements are preserved. No new intake or labels were added.",
+    "final_evidence_commit": "83496a7f49ede450729cb944fec36a0fbbafec6f",
+    "final_body_readbacks": "publication-readbacks/receipts.json",
+    "all_eight_final_bodies_verified": true
   },
   "remote_ci": {
     "status": "all four exact PR heads and exact combined workflow dispatch verified success",
@@ -272,5 +275,41 @@
       1474
     ],
     "note": "These contributions were merged by the maintainer, not by this task; all are already present in the frozen combined patch union."
+  },
+  "publication_observation": {
+    "pr_states": {
+      "1477": {
+        "state": "open",
+        "merged": false,
+        "head": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+        "at": "2026-11-20T17:39:39.517369+00:00"
+      },
+      "1478": {
+        "state": "open",
+        "merged": false,
+        "head": "41dc5e01fd710ffeab79aa4d566d8ed5ed5baf50",
+        "at": "2026-11-20T17:39:45.281188+00:00"
+      },
+      "1479": {
+        "state": "open",
+        "merged": false,
+        "head": "13952c82874fb9ee19a4f1b660e3144134367a53",
+        "at": "2026-11-20T17:39:51.153606+00:00"
+      },
+      "1480": {
+        "state": "closed",
+        "merged": true,
+        "head": "a357dbbe96905848fd81b7249814576fb2743674",
+        "at": "2026-11-20T17:39:56.653902+00:00"
+      }
+    },
+    "maintainer_merged_previous_prs": [
+      1469,
+      1473,
+      1474
+    ],
+    "maintainer_also_merged_pr1480": true,
+    "main_after_1480": "6b73082406d40a630a44cd68559c1f66b3652390",
+    "note": "Observed maintainer actions only; this task did not merge, grade, claim or settle contributions."
   }
 }

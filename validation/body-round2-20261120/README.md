@@ -33,3 +33,9 @@ The public manifest excludes only itself and detached sealing audits to avoid se
 ## Current PR1478 synchronization after upstream merges
 
 Upstream main `04e0ecb6a3669c90efbb4a1583816a8f7ca26bc7` merged our prior PRs1469/1473/1474. The PR1478 merge `41dc5e01fd710ffeab79aa4d566d8ed5ed5baf50` imports those previously delivered fixes; conflict resolution changes only the core manifest fingerprint. Fresh-decay functions remain unchanged, and its entire core module is byte-identical to frozen combined source `5226860c1d70bc7fc6619cf79aff10c4f9a2a234`. The original89-head measurements remain historical and are not relabeled. New exact-head gate44781318899 and title pass, each gate5638 passed/40 skipped/98subtests,102 scripts and actual brain23/23. No new bounty is claimed; intake2792 remains the single contribution. See `core-main-sync/`.
+
+## Final publication readbacks
+
+All four PR bodies1477–1480 and original intake bodies2791–2794 were updated to immutable final evidence `83496a7f49ede450729cb944fec36a0fbbafec6f` and read back exactly. Original intake markers remain. Body hashes, observed states and exact heads are in `publication-readbacks/receipts.json`; public body snapshots and current check projections are adjacent. Maintainer merged1480; no new bounty, self-grading or merge action was performed by this task.
+
+The independent review snapshots in `final-publication-audit/` (1580 manifested artifacts) and `main-sync-publication-audit/` (1636 manifested artifacts) describe their explicitly frozen preappend inventories. They are historical audit results, not new test runs or a claim that their old inventory counts include this later receipt append. New CI's actual synthetic merge checkout has the same Git tree as current PR1478 head.
