@@ -55,7 +55,7 @@
 
 [同一八项组合的完整 Linux 矩阵](integration-final-linux/report.md)在现有 gate 工作流上仅手工触发一次，未修改工作流配置。运行 `44751075692` 的实际 head 与三份 checkout 日志均为 `231aa533...`；Python 3.12.16 / NumPy 2.5.5、3.12.16 / NumPy 2.3.5 下界、3.13.18 / NumPy 2.5.5，三腿各自 **SUCCESS**，每腿 **102/102 脚本、脑核真实 23/23、pytest 5,662 passed / 40 skipped / 98 subtests passed / 0 failed / 0 errors**。Pillow 均为 12.3.0。pytest 耗时分别 550.36、719.79、633.06 秒；下界和 3.13 的结果直接从各腿实读，不由 advisory 工作流总体状态推断。[环境与 checkout/脑核证明](integration-final-linux/job-details.json)、原始 job logs 与 API 快照均保留。
 
-[Skip 与补测明细](integration-final-windows/skip_coverage_notes.json)保持上述主计数：28 个 skip 中，真实历史提交 `124ea433fe9a2ad2fd66a7360df85f6d61bab793` 的导出与逐文件核验使 4 个冻结基线用例得到实测（原物理预测文件 43 passed / 0 skip）；能力探测后调用原未改动的符号链接测试体，3/3 passed；串行计时覆盖并行时跳过的 1 条。补测不重复加入主 passed 数。仍未执行的 20 条为 17 条缺真实模型/冻结像素资产、3 条 Windows 无法表达的 POSIX 权限语义。脑核固定 SHA 与全部 1,618 个 Git 可见源码文件前后完全未变。
+[Skip 与补测明细](integration-final-windows/skip_coverage_notes.json)保持上述主计数：28 个 skip 中，真实历史提交 `124ea433fe9a2ad2fd66a7360df85f6d61bab793` 的导出与逐文件核验使 4 个冻结基线用例得到实测（原物理预测文件 43 passed / 0 skip）；能力探测后调用原未改动的符号链接测试体，3/3 passed；串行计时覆盖并行时跳过的 1 条。补测不重复加入主 passed 数。Windows 本平台仍未执行的 20 条为 17 条缺真实模型/冻结像素资产、3 条 Windows 无法表达的 POSIX 权限语义。后三条在每个 Linux job 的原日志均明确 PASSED，共 9 条成功记录；前 17 条在每个 Linux job 也明确 SKIPPED。因此本轮跨平台共同未执行范围为这 17 个原始资产依赖用例，[逐测试 ID、原日志行号与日志 SHA 交叉核验](audit/commit-ce40e46-cross-platform-scope.json)保留。脑核固定 SHA 与全部 1,618 个 Git 可见源码文件前后完全未变。
 
 [可移植组合门禁驱动](portable_final_gate.py)接受 `--repo <组合工作树> --output <仓外空目录> --brain-root <固定脑核> --workers 4`，从 YAML 读取全部脚本与固定脑核 SHA，校验后运行脚本、完整 pytest、串行计时量具、manifest 与 time lint。使用同一基线取入各 PR 的完整提交范围，包含 alpha、OBB 和单摆的前置/后续提交；不能只 cherry-pick 表中的最终 head。OBB 与单摆共同改变 physics 行数，lint baseline 行号应在两个改动的和上同步。保留所有错误，不使用 deselect 隐藏失败。
 
@@ -72,5 +72,9 @@
 [发布回读审计](publication-updates/publication-results.json)记录原七项 PR/intake 共 14 份正文的备份、提交与逐次回读；既有 intake 头保留，旧性能范围和 alpha 双基线命令已更新，未重复新建 issues。
 
 [最终生产差异只读终审](code-review/README.md)核对 core/缓存/ID、nn、vision、SAT/math、bridge 规范及 replay 路径边界，未发现本批新增实质回归或阻断项；支持域、数值退化阈值与有意收紧单列，不以测试样本代替全域证明。
+
+完整实测证据提交 `ce40e464...` 的[最终独立数据审计](audit/commit-ce40e46-final.txt)为 PASS：656 项 artifact 的 Git blob 哈希/字节数全部一致，69 份 XML 结构有效，JSON 中 30,940 个整数和 220,036 个浮点值与本机原始源数据逐项一致；路径脱敏和 LF 规范化之外不改测量结果。此封存提交仅补入该审计、跨平台 skip 范围澄清及最终公开正文回读，不改变生产代码或实测样本。
+
+[最终 16 份公开正文发布审计](publication-final-integration/audit-summary.json)确认全部 8 个 PR 与 8 个 intake 的新 integration 段逐份写入/回读一致；旧 expanded 段和 8 个 intake 头保留，PR 对应关系正确。[最后检查快照](publication-final-integration/final-checks-summary.json)记录八个源码 head 未变、全部 OPEN/CLEAN、三档 gate 与正文更新后的最新标题检查成功。没有自领、定级结算、合并或工作流配置变更。
 
 对上一完整证据提交 `7bf90b7d...` 的 [独立审计](audit/commit-7bf90b7-r03.txt)逐 Git blob 核验了 313 项 artifact 的哈希/字节数、39 份 XML 结构语义，以及全部 JSON 的 21,689 个整数和 156,376 个浮点值（逐 hex）与本机原始数据一致；本提交在该快照基础上追加已完成的 alpha 回放、组合 oracle 和组合源。

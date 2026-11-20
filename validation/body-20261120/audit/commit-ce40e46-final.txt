@@ -1,0 +1,11 @@
+Git INDEX public evidence audit
+PASS=True
+Index stable=True
+Manifest artifacts=656
+Missing from index=0
+Errors=0
+JSON leaves={"strings": 90848, "integers": 30940, "floats": 220036, "other_literals": 22102, "changed_strings": 1474}
+Counts={"six_fixed_assertions": 15455, "six_fixed_failures": 0, "six_baseline_failures": 889, "pendulum_checks": 6550, "pendulum_failures": 0, "period_cases": 69, "period_failures": 0, "bridge_cases": 2840, "bridge_assertions": 31240, "bridge_failures": 0, "pendulum-guards": {"fixed_passed": 6, "baseline_passed": 0, "baseline_failed": 6, "mutants": 5, "all_records_expected": true, "errors": 0, "skipped": 0}, "bridge-guards": {"fixed_passed": 8, "baseline_passed": 1, "baseline_failed": 7, "mutants": 6, "all_records_expected": true, "errors": 0, "skipped": 0}, "specified_mutants": 11, "integration_scripts": 102, "integration_script_failures": 0, "integration_pytest_ignored_equals_separately_run_scripts": true, "integration_pytest_summary": "1 failed, 5590 passed, 46 skipped, 10448 warnings, 98 subtests passed in 1258.93s (0:20:58)", "manual": {"baseline": {"passed": 10, "failed": ["P1"], "gate_exit_code": 2, "P4_max_rk4_rad": 3.9983058512535474e-05}, "fixed": {"passed": 10, "failed": ["P1"], "gate_exit_code": 2, "P4_max_rk4_rad": 1.1957101975212936e-13}}, "top_level_motions": {"fixed_passed": 30, "baseline_failed": 23, "baseline_passed": 7, "mutants": 6, "all_records_expected": true, "errors": 0, "skipped": 0, "related_passed": 194, "related_skipped": 4, "related_scripts_passed": 1, "correctness_fingerprints_equal": true, "timing_variants": ["baseline_parameter", "fixed_parameter", "fixed_top_level"]}}
+Issues:
+Warnings:
+{"artifact": "top-level-motions/bench_bridge_motions.py", "reason": "subprocess_text_codec_not_fully_explicit", "assessment": "Nonblocking when encoding is explicit: Python default strict errors is a valid deliberate decoder policy.", "line": 108, "method": "run", "encoding_explicit": true, "errors_explicit": false}

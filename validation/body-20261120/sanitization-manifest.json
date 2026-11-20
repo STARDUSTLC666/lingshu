@@ -4592,6 +4592,55 @@
       "published_sha256": "4918b1c026976838c5db5463e922a3118a8893a00fa2b19ff5dcc6b00339d9b7",
       "original_bytes": 1683,
       "published_bytes": 1647
+    },
+    {
+      "artifact": "audit/commit-ce40e46-final.json",
+      "original_sha256": "bfd8a6803e188d9a0155861858c12907f7b694e1f2d551b5896a930ca4153753",
+      "published_sha256": "61869d956238e785e82980ed4b663ddeb1b613ee0836e1034689cb7ea2dedd9a",
+      "original_bytes": 470534,
+      "published_bytes": 476447
+    },
+    {
+      "artifact": "audit/commit-ce40e46-final.txt",
+      "original_sha256": "6a1f1d547358f0f745f9f1b2fa843ffaf56edbc2941080556734e8e70b6ccc3c",
+      "published_sha256": "6a1f1d547358f0f745f9f1b2fa843ffaf56edbc2941080556734e8e70b6ccc3c",
+      "original_bytes": 1991,
+      "published_bytes": 1991
+    },
+    {
+      "artifact": "audit/commit-ce40e46-cross-platform-scope.json",
+      "original_sha256": "eff3af306bb0a26ece635833a7c83ff66046d47a9ca84082d1b0418c9ccf27ae",
+      "published_sha256": "d8b2c3747365e87aab2b9f34332459dcd62fb99522232148ee385744440e0de5",
+      "original_bytes": 44356,
+      "published_bytes": 43507
+    },
+    {
+      "artifact": "publication-final-integration/README.md",
+      "original_sha256": "5264b708e358a57d7d0e4e7b3581bf5f34e1f3e7350207c66ed3426b4cb84681",
+      "published_sha256": "5264b708e358a57d7d0e4e7b3581bf5f34e1f3e7350207c66ed3426b4cb84681",
+      "original_bytes": 4757,
+      "published_bytes": 4757
+    },
+    {
+      "artifact": "publication-final-integration/audit-summary.json",
+      "original_sha256": "712d07cc619a712929b80b49c36c38fb1bd59e30e46a42f47cf16454746e3bce",
+      "published_sha256": "95b73889815850eef8720129f8600c29da1581b1dee623537c7f2f11c2ffcb8d",
+      "original_bytes": 1743,
+      "published_bytes": 1683
+    },
+    {
+      "artifact": "publication-final-integration/publication-results.json",
+      "original_sha256": "b25475cbe5689b5f21a46b5ad2b0d40a8152c246bc2389ebec5a15e9008f126c",
+      "published_sha256": "b25475cbe5689b5f21a46b5ad2b0d40a8152c246bc2389ebec5a15e9008f126c",
+      "original_bytes": 7715,
+      "published_bytes": 7715
+    },
+    {
+      "artifact": "publication-final-integration/final-checks-summary.json",
+      "original_sha256": "bdea06cb008276bd23abb6a0b4cdbaddeca8019106b3e7f1c7266251fda3ce7b",
+      "published_sha256": "7a0543d4758c9204e2a556b33c57e27cc43688a0045c8bd97d31fb7659d15e36",
+      "original_bytes": 18054,
+      "published_bytes": 17596
     }
   ]
 }

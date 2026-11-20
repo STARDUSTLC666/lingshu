@@ -1,0 +1,458 @@
+[
+  {
+    "number": 1469,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1469",
+    "title": "fix(world): encode motion group IDs without delimiter collisions",
+    "state": "OPEN",
+    "mergeStateStatus": "CLEAN",
+    "head": "cc68a82baace16e92ff6ce770330b65102a530a5",
+    "expected_head": "cc68a82baace16e92ff6ce770330b65102a530a5",
+    "head_unchanged": true,
+    "gates": {
+      "gate (py3.12)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T08:12:02Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44699399907/job/136163829771",
+        "name": "gate (py3.12)",
+        "startedAt": "2026-11-20T08:02:30Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.12 · 依赖下界)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T08:14:11Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44699399907/job/136163829485",
+        "name": "gate (py3.12 · 依赖下界)",
+        "startedAt": "2026-11-20T08:02:30Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.13)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T08:17:30Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44699399907/job/136163829897",
+        "name": "gate (py3.13)",
+        "startedAt": "2026-11-20T08:02:30Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      }
+    },
+    "all_three_gates_success": true,
+    "latest_title": {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T14:41:01Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44755784553/job/136355018082",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T14:40:55Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    "title_after_body_edit": true,
+    "latest_title_success": true,
+    "checks_ok": true,
+    "observed_utc": "2026-11-20T14:43:13+00:00"
+  },
+  {
+    "number": 1470,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1470",
+    "title": "fix(vision): composite alpha before lineart detection",
+    "state": "OPEN",
+    "mergeStateStatus": "CLEAN",
+    "head": "433befa7b356eebecbc457ecd8f8a123ec1540cc",
+    "expected_head": "433befa7b356eebecbc457ecd8f8a123ec1540cc",
+    "head_unchanged": true,
+    "gates": {
+      "gate (py3.12)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T13:19:39Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44741019064/job/136304395304",
+        "name": "gate (py3.12)",
+        "startedAt": "2026-11-20T13:03:54Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.12 · 依赖下界)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T13:19:59Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44741019064/job/136304395353",
+        "name": "gate (py3.12 · 依赖下界)",
+        "startedAt": "2026-11-20T13:03:55Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.13)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T13:19:09Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44741019064/job/136304395602",
+        "name": "gate (py3.13)",
+        "startedAt": "2026-11-20T13:03:55Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      }
+    },
+    "all_three_gates_success": true,
+    "latest_title": {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T14:41:09Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44755804526/job/136355089458",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T14:41:04Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    "title_after_body_edit": true,
+    "latest_title_success": true,
+    "checks_ok": true,
+    "observed_utc": "2026-11-20T14:43:13+00:00"
+  },
+  {
+    "number": 1471,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1471",
+    "title": "fix(world): test face normals for skew SAT boxes",
+    "state": "OPEN",
+    "mergeStateStatus": "CLEAN",
+    "head": "39d379552f34026ef46ad0515831319b1494a5d3",
+    "expected_head": "39d379552f34026ef46ad0515831319b1494a5d3",
+    "head_unchanged": true,
+    "gates": {
+      "gate (py3.12)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T10:54:14Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44720999044/job/136236386252",
+        "name": "gate (py3.12)",
+        "startedAt": "2026-11-20T10:38:53Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.12 · 依赖下界)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T10:54:19Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44720999044/job/136236385898",
+        "name": "gate (py3.12 · 依赖下界)",
+        "startedAt": "2026-11-20T10:38:53Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.13)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T10:50:13Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44720999044/job/136236386000",
+        "name": "gate (py3.13)",
+        "startedAt": "2026-11-20T10:38:54Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      }
+    },
+    "all_three_gates_success": true,
+    "latest_title": {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T14:41:13Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44755817729/job/136355129529",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T14:41:07Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    "title_after_body_edit": true,
+    "latest_title_success": true,
+    "checks_ok": true,
+    "observed_utc": "2026-11-20T14:43:13+00:00"
+  },
+  {
+    "number": 1472,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1472",
+    "title": "fix(core): rebuild novelty cache after mixed row rewrite",
+    "state": "OPEN",
+    "mergeStateStatus": "CLEAN",
+    "head": "a663512dd0fbc44a9fb08a55751951009586d172",
+    "expected_head": "a663512dd0fbc44a9fb08a55751951009586d172",
+    "head_unchanged": true,
+    "gates": {
+      "gate (py3.12)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T11:04:11Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44723143499/job/136243727955",
+        "name": "gate (py3.12)",
+        "startedAt": "2026-11-20T10:54:28Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.12 · 依赖下界)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T11:04:29Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44723143499/job/136243727916",
+        "name": "gate (py3.12 · 依赖下界)",
+        "startedAt": "2026-11-20T10:54:28Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.13)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T11:03:39Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44723143499/job/136243727610",
+        "name": "gate (py3.13)",
+        "startedAt": "2026-11-20T10:54:28Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      }
+    },
+    "all_three_gates_success": true,
+    "latest_title": {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T14:41:26Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44755833167/job/136355187203",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T14:41:14Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    "title_after_body_edit": true,
+    "latest_title_success": true,
+    "checks_ok": true,
+    "observed_utc": "2026-11-20T14:43:13+00:00"
+  },
+  {
+    "number": 1473,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1473",
+    "title": "fix(nn): choose nearest odd-r cell by center distance",
+    "state": "OPEN",
+    "mergeStateStatus": "CLEAN",
+    "head": "cff189b3438623feaebdf1a874fafdd03080acb1",
+    "expected_head": "cff189b3438623feaebdf1a874fafdd03080acb1",
+    "head_unchanged": true,
+    "gates": {
+      "gate (py3.12)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T11:54:43Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44729222090/job/136264362797",
+        "name": "gate (py3.12)",
+        "startedAt": "2026-11-20T11:38:18Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.12 · 依赖下界)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T11:51:28Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44729222090/job/136264363130",
+        "name": "gate (py3.12 · 依赖下界)",
+        "startedAt": "2026-11-20T11:38:18Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.13)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T11:49:34Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44729222090/job/136264363054",
+        "name": "gate (py3.13)",
+        "startedAt": "2026-11-20T11:38:18Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      }
+    },
+    "all_three_gates_success": true,
+    "latest_title": {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T14:41:30Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44755845142/job/136355228003",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T14:41:18Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    "title_after_body_edit": true,
+    "latest_title_success": true,
+    "checks_ok": true,
+    "observed_utc": "2026-11-20T14:43:14+00:00"
+  },
+  {
+    "number": 1474,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1474",
+    "title": "fix(core): normalize skill search limits",
+    "state": "OPEN",
+    "mergeStateStatus": "CLEAN",
+    "head": "fb6c9cabc939a6defcc44ef661b3048d47155d87",
+    "expected_head": "fb6c9cabc939a6defcc44ef661b3048d47155d87",
+    "head_unchanged": true,
+    "gates": {
+      "gate (py3.12)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T12:08:57Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44731796506/job/136273165214",
+        "name": "gate (py3.12)",
+        "startedAt": "2026-11-20T11:57:36Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.12 · 依赖下界)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T12:13:24Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44731796506/job/136273165271",
+        "name": "gate (py3.12 · 依赖下界)",
+        "startedAt": "2026-11-20T11:57:37Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.13)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T12:12:53Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44731796506/job/136273164590",
+        "name": "gate (py3.13)",
+        "startedAt": "2026-11-20T11:57:36Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      }
+    },
+    "all_three_gates_success": true,
+    "latest_title": {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T14:41:29Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44755859104/job/136355273644",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T14:41:23Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    "title_after_body_edit": true,
+    "latest_title_success": true,
+    "checks_ok": true,
+    "observed_utc": "2026-11-20T14:43:14+00:00"
+  },
+  {
+    "number": 1475,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1475",
+    "title": "fix(world): 修正零初速释放单摆椭圆解及近分离点精度",
+    "state": "OPEN",
+    "mergeStateStatus": "CLEAN",
+    "head": "e0771a810b8846676f3545542b2e70d5e0011467",
+    "expected_head": "e0771a810b8846676f3545542b2e70d5e0011467",
+    "head_unchanged": true,
+    "gates": {
+      "gate (py3.12)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T13:50:26Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44746134913/job/136321855784",
+        "name": "gate (py3.12)",
+        "startedAt": "2026-11-20T13:38:58Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.12 · 依赖下界)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T13:50:55Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44746134913/job/136321855706",
+        "name": "gate (py3.12 · 依赖下界)",
+        "startedAt": "2026-11-20T13:38:58Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.13)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T13:50:02Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44746134913/job/136321855459",
+        "name": "gate (py3.13)",
+        "startedAt": "2026-11-20T13:38:58Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      }
+    },
+    "all_three_gates_success": true,
+    "latest_title": {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T14:41:35Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44755872346/job/136355321271",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T14:41:29Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    "title_after_body_edit": true,
+    "latest_title_success": true,
+    "checks_ok": true,
+    "observed_utc": "2026-11-20T14:43:14+00:00"
+  },
+  {
+    "number": 1476,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1476",
+    "title": "fix(anim): accept top-level motions with strict spec normalization",
+    "state": "OPEN",
+    "mergeStateStatus": "CLEAN",
+    "head": "1ab5cc7f295ed5748b50c7ffde26cf2a34663204",
+    "expected_head": "1ab5cc7f295ed5748b50c7ffde26cf2a34663204",
+    "head_unchanged": true,
+    "gates": {
+      "gate (py3.12)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T13:51:58Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44746165835/job/136321925752",
+        "name": "gate (py3.12)",
+        "startedAt": "2026-11-20T13:39:07Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.12 · 依赖下界)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T13:49:22Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44746165835/job/136321925769",
+        "name": "gate (py3.12 · 依赖下界)",
+        "startedAt": "2026-11-20T13:39:06Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      },
+      "gate (py3.13)": {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-20T13:53:57Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44746165835/job/136321925379",
+        "name": "gate (py3.13)",
+        "startedAt": "2026-11-20T13:39:06Z",
+        "status": "COMPLETED",
+        "workflowName": "gate"
+      }
+    },
+    "all_three_gates_success": true,
+    "latest_title": {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T14:41:42Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44755887795/job/136355373857",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T14:41:34Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    "title_after_body_edit": true,
+    "latest_title_success": true,
+    "checks_ok": true,
+    "observed_utc": "2026-11-20T14:43:14+00:00"
+  }
+]

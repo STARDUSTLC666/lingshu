@@ -1,0 +1,60 @@
+{
+  "updated_and_verified": 16,
+  "prs": 8,
+  "intakes": 8,
+  "strict_body_sha_matches": 16,
+  "intake_headers_preserved": 8,
+  "intake_pr_mappings_verified": 8,
+  "unique_integration_markers": 16,
+  "previous_expanded_blocks_preserved": true,
+  "evidence_commit": "ce40e464d256f1a53b4fb6bd4b7012cf6c4a942d",
+  "source_heads_unchanged": 8,
+  "all_three_gate_legs_success_pr_count": 8,
+  "latest_title_checks_after_body_edit_success": 8,
+  "pr_states": {
+    "1469": {
+      "state": "OPEN",
+      "mergeStateStatus": "CLEAN",
+      "head": "cc68a82baace16e92ff6ce770330b65102a530a5"
+    },
+    "1470": {
+      "state": "OPEN",
+      "mergeStateStatus": "CLEAN",
+      "head": "433befa7b356eebecbc457ecd8f8a123ec1540cc"
+    },
+    "1471": {
+      "state": "OPEN",
+      "mergeStateStatus": "CLEAN",
+      "head": "39d379552f34026ef46ad0515831319b1494a5d3"
+    },
+    "1472": {
+      "state": "OPEN",
+      "mergeStateStatus": "CLEAN",
+      "head": "a663512dd0fbc44a9fb08a55751951009586d172"
+    },
+    "1473": {
+      "state": "OPEN",
+      "mergeStateStatus": "CLEAN",
+      "head": "cff189b3438623feaebdf1a874fafdd03080acb1"
+    },
+    "1474": {
+      "state": "OPEN",
+      "mergeStateStatus": "CLEAN",
+      "head": "fb6c9cabc939a6defcc44ef661b3048d47155d87"
+    },
+    "1475": {
+      "state": "OPEN",
+      "mergeStateStatus": "CLEAN",
+      "head": "e0771a810b8846676f3545542b2e70d5e0011467"
+    },
+    "1476": {
+      "state": "OPEN",
+      "mergeStateStatus": "CLEAN",
+      "head": "1ab5cc7f295ed5748b50c7ffde26cf2a34663204"
+    }
+  },
+  "source_worktree_clean": true,
+  "new_issues_created": 0,
+  "claims_or_labels_changed": false,
+  "source_or_workflow_changes": false
+}
