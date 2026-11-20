@@ -1,0 +1,15 @@
+{
+  "source_commit": "124ea433fe9a2ad2fd66a7360df85f6d61bab793",
+  "source_tree": "fb2cefe048c0c4798c9016afd7256d86f0e664b8",
+  "archive_sha256": "2a268fe6406e9708d03fdbdb7958785b1a47392b980ce5e729595622d7831659",
+  "archive_bytes": 8826880,
+  "physics_py_lf_sha256": "4b34d161010da4d9ca8da4563d8caa1ec952fcdf712c634baf835b1dc152c876",
+  "python_files_verified_lf_against_git_blobs": 83,
+  "method": [
+    "git",
+    "archive",
+    "--format=tar",
+    "124ea433fe9a2ad2fd66a7360df85f6d61bab793"
+  ],
+  "note": "Authentic historical source exported from the local Git object database, not a synthesized baseline. Git archive honored local CRLF attributes; all exported lingshu Python source was verified byte-identical to canonical Git blobs after LF normalization."
+}

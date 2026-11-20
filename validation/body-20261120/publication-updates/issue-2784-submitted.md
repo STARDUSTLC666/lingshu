@@ -1,0 +1,21 @@
+<!-- intake:v1 {"project":"lingshu","difficulty":"easy","impact":"B","target":"FuRongJun-1999/lingshu","form":"intake","pr":"https://github.com/FuRongJun-1999/lingshu/pull/1470"} -->
+
+PR: https://github.com/FuRongJun-1999/lingshu/pull/1470
+
+修复 darkline() / linework() 丢弃 alpha 的问题。RGBA/RGBa/LA/La/PA 与带 palette transparency 的透明黑底线稿，隐藏 RGB 值原先参与检测；透明黑底上 16 像素的可见黑线产生 0 个黑色线稿像素。修复后先将 alpha 图像合成到白底再检测，opaque RGB/RGBA 保持原结果。
+
+验证：当前精确 PR head 的三档完整 gate 与标题检查全部通过。alpha 新守卫 25 passed，vision 套件 73 passed；对上一 head `fb8eaada60fdabcd3069e531fa498d8d784609a1` 回放为 6 failed / 19 passed，对原始 `d74848fb33dbff1d719959df19d1266a1ac60f44` 为 15 failed / 10 passed；十项具名 mutation 全部命中指定断言，所有回放零 errors/skips；strict manifest 64/64 MATCH。默认提交 fixture 使用前一 head 的失败清单；原始基线必须配合固定证据中的 `lineart-expanded/vision_lineart_alpha_original_baseline.json` 变体，详见 PR 新版命令及下方证据链接。
+
+<!-- body-validation-20261120:expanded:start -->
+## 2026-11-20 扩展验证（固定证据）
+
+精确当前 head：`433befa7b356eebecbc457ecd8f8a123ec1540cc`。该 head 的 Python 3.12、3.12 依赖下界、3.13 三档完整 gate 及标题检查均已 SUCCESS；见[固定 CI 快照](https://github.com/STARDUSTLC666/lingshu/blob/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/ci-all-eight.json)和[PR 检查页](https://github.com/FuRongJun-1999/lingshu/pull/1470/checks)。PR/申报仍待维护者审核、合并与验收。
+
+- 独立套件 `lineart_alpha`：以 `d74848fb33dbff1d719959df19d1266a1ac60f44` 为基线，失败项 / 实际执行断言为 **22 / 69 → 0 / 85**。输入被拒绝或执行分支不同会使两个版本的断言数不同，按原始计数保留，不强行对齐分母。
+- 时延与内存：RGBA 128×128 的中位时延 0.430600 → 1.137800 ms（2.642×），1536×1536 为 104.328500 → 123.025900 ms（1.179×）；1536×1536 独立 tracemalloc 峰值中位数 120,325,453 → 120,326,691 B。RGB 对照及其他尺寸保留在完整报告。
+- [完整正确性与 latency 报告](https://github.com/STARDUSTLC666/lingshu/blob/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/six-fixes/report.md)、[独立 memory 报告](https://github.com/STARDUSTLC666/lingshu/blob/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/six-fixes/memory_report.md)、[可移植复跑用法](https://github.com/STARDUSTLC666/lingshu/blob/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/six-fixes/README.md)。将两个脚本放在同一目录，分别用 `--only lineart_alpha` 选择本套件；每次必须显式给 `--output`，不替换缺失的精确源提交。
+- 扩展 alpha 回归：25 项 guard、73 项 vision，RGBA/RGBa/LA/La/PA/P transparency 均覆盖。默认 fixture 对应 `fb8eaada`：6 failed / 19 passed；[原始基线变体](https://github.com/STARDUSTLC666/lingshu/blob/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/lineart-expanded/vision_lineart_alpha_original_baseline.json)对应 `d74848fb`：15 failed / 10 passed；两路均保留 10 项具名 mutation 及零 errors/skips 的完整回放，详见[alpha 专项证据](https://github.com/STARDUSTLC666/lingshu/tree/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/lineart-expanded)。
+
+测量范围：合成 CPU/内存 SQLite 负载，共享主机、未固定 CPU 亲和性或功耗方案；时延为描述性样本，不作统计显著性或普遍加速承诺。内存探针与时延分开，tracemalloc 可漏掉 Pillow/SQLite 原生缓冲，进程 working set 也不是单次调用的专属峰值。真实资产、生产数据库、Blender/bpy 与 GPU 范围仍未验证。
+本地整体门禁不宣称全绿：既有 [Windows symlink P1](https://github.com/STARDUSTLC666/lingshu/tree/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/integration-six)及[手工物理门 P1](https://github.com/STARDUSTLC666/lingshu/tree/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/manual-physics)的失败和原始基线证据保留，没有为本修复跳过或改写无关判据。本段不提供最终八项 r2 的完成计数。[固定公开证据总目录](https://github.com/STARDUSTLC666/lingshu/tree/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120)。
+<!-- body-validation-20261120:expanded:end -->

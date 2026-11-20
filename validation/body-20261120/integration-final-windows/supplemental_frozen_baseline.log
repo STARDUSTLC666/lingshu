@@ -1,0 +1,13 @@
+...........................................                              [100%]
+============================ slowest 10 durations =============================
+0.67s call     tests/test_physics_predict.py::test_A6_pendulum_exact_matches_rk4_across_amplitudes
+0.41s call     tests/test_physics_predict.py::test_G2_no_env_is_field_identical_to_legacy
+0.39s call     tests/test_physics_predict.py::test_G2c_classify_field_set_frozen_against_baseline
+0.36s call     tests/test_physics_predict.py::test_C2_threshold_sensitivity
+0.27s call     tests/test_physics_predict.py::test_G6_mutation_new_kinds_in_first_pass_turns_red
+0.23s call     tests/test_physics_predict.py::test_G3_env_aware_prediction_matches_environment_truth
+0.22s call     tests/test_physics_predict.py::test_G6_mutation_dropping_env_passthrough_turns_G1_red
+0.19s call     tests/test_physics_predict.py::test_G7_mutation_env_used_key_turns_red
+0.15s call     tests/test_physics_predict.py::test_G5_mutation_dropping_env_wiring_turns_G3_red
+0.15s call     tests/test_physics_predict.py::test_G4_env_evidence_is_readable
+43 passed in 5.17s

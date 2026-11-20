@@ -1,0 +1,61 @@
+{
+  "body": "## 改动说明\r\n\r\n修复非正交箱体的 SAT 分离轴构造错误。当前 obb_of() 明确支持归一化后的非正交边方向，但 _sat_axes() 将边方向本身当作箱体面法线；对斜平行六面体这会漏掉真实分离轴，导致相离箱体被报为重叠，并生成不应有的 MTV。修复后使用每个箱体三组边向量的叉积作为面法线，同时保留两箱九组边叉积候选轴。线性相关的 rot 行不能张成三维箱体，现在显式拒绝；非正交且满秩的基仍受支持。\r\n\r\n固定复现中，A 的一个面法线上的间隙为 0.0321481，改前 obb_overlap=True 且 obb_mtv 深度 0.2119759，改后判定不相交且 obb_mtv=None。\r\n\r\n## 复跑命令与读数\r\n\r\n```sh\r\npython -X utf8 -m pytest tests/test_obb_nonorthogonal_sat.py tests/test_physics_collision_proxy_guard.py tests/test_issue1133_1134_scene_sim_guard.py -q --no-header -p no:cacheprovider\r\n# 28 passed\r\n\r\npython -X utf8 tools/testing/replay_save_guards.py --spec tests/fixtures/obb_nonorthogonal_sat_mutations.json --baseline d74848fb33dbff1d719959df19d1266a1ac60f44 --mutate --output [workspace]/lingshu/outputs/obb-nonorthogonal-sat-20261120\r\n# fixed 2 passed; baseline 2 failed; 2/2 named mutations hit their expected assertions\r\n\r\npython -X utf8 tools/verify_manifest.py --strict --quiet\r\n# 64/64 MATCH; exit 0\r\n```\r\n\r\n## 未验证项 / 边界\r\n\r\n使用合成斜箱输入与仓内碰撞代理/场景守卫验证；未做物理引擎或真实资产集成测试。rot 必须是满秩三维基，不要求正交。\r\n\r\n\n\npython -X utf8 -m pytest tests/test_time_core_lint.py tests/test_issue607_time_core_shapes_guard.py -q --no-header -p no:cacheprovider\n# 74 passed; the lint baseline only shifts six pre-existing physics entries by +7 lines (23 entries remain)\n\n<!-- body-validation-20261120:expanded:start -->\n## 2026-11-20 扩展验证（固定证据）\n\n精确当前 head：`39d379552f34026ef46ad0515831319b1494a5d3`。该 head 的 Python 3.12、3.12 依赖下界、3.13 三档完整 gate 及标题检查均已 SUCCESS；见[固定 CI 快照](https://github.com/STARDUSTLC666/lingshu/blob/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/ci-all-eight.json)和[PR 检查页](https://github.com/FuRongJun-1999/lingshu/pull/1471/checks)。PR/申报仍待维护者审核、合并与验收。\n\n- 独立套件 `obb_sat`：以 `d74848fb33dbff1d719959df19d1266a1ac60f44` 为基线，失败项 / 实际执行断言为 **8 / 2113 → 0 / 2092**。输入被拒绝或执行分支不同会使两个版本的断言数不同，按原始计数保留，不强行对齐分母。\n- 时延与内存：512 对 overlap 批次的中位时延 18.748800 → 18.500000 ms（0.987×）；512 对斜箱的独立 tracemalloc 峰值中位数 12,320 → 8,824 B。这些样本不构成普遍提速或内存降低承诺。\n- [完整正确性与 latency 报告](https://github.com/STARDUSTLC666/lingshu/blob/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/six-fixes/report.md)、[独立 memory 报告](https://github.com/STARDUSTLC666/lingshu/blob/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/six-fixes/memory_report.md)、[可移植复跑用法](https://github.com/STARDUSTLC666/lingshu/blob/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/six-fixes/README.md)。将两个脚本放在同一目录，分别用 `--only obb_sat` 选择本套件；每次必须显式给 `--output`，不替换缺失的精确源提交。\n\n测量范围：合成 CPU/内存 SQLite 负载，共享主机、未固定 CPU 亲和性或功耗方案；时延为描述性样本，不作统计显著性或普遍加速承诺。内存探针与时延分开，tracemalloc 可漏掉 Pillow/SQLite 原生缓冲，进程 working set 也不是单次调用的专属峰值。真实资产、生产数据库、Blender/bpy 与 GPU 范围仍未验证。\n本地整体门禁不宣称全绿：既有 [Windows symlink P1](https://github.com/STARDUSTLC666/lingshu/tree/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/integration-six)及[手工物理门 P1](https://github.com/STARDUSTLC666/lingshu/tree/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/manual-physics)的失败和原始基线证据保留，没有为本修复跳过或改写无关判据。本段不提供最终八项 r2 的完成计数。[固定公开证据总目录](https://github.com/STARDUSTLC666/lingshu/tree/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120)。\n<!-- body-validation-20261120:expanded:end -->\n",
+  "headRefOid": "39d379552f34026ef46ad0515831319b1494a5d3",
+  "mergeStateStatus": "CLEAN",
+  "number": 1471,
+  "state": "OPEN",
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T10:38:53Z",
+      "conclusion": "CANCELLED",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44720999411/job/136236387129",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T10:38:52Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T10:54:14Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44720999044/job/136236386252",
+      "name": "gate (py3.12)",
+      "startedAt": "2026-11-20T10:38:53Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T10:39:03Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44721001968/job/136236401022",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T10:38:56Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T10:54:19Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44720999044/job/136236385898",
+      "name": "gate (py3.12 · 依赖下界)",
+      "startedAt": "2026-11-20T10:38:53Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T10:50:13Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44720999044/job/136236386000",
+      "name": "gate (py3.13)",
+      "startedAt": "2026-11-20T10:38:54Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    }
+  ],
+  "title": "fix(world): test face normals for skew SAT boxes",
+  "url": "https://github.com/FuRongJun-1999/lingshu/pull/1471"
+}

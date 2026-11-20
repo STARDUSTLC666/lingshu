@@ -29,6 +29,8 @@
 
 性能退化同样保留：混合改写+追加的 novelty 缓存现在正确全量重建，时间与峰值分配增加；纯追加仍使用增量路径。tracemalloc 不能覆盖所有 Pillow/SQLite 原生缓冲；进程 working-set 快照不能视作单次操作的专属峰值。
 
+支持域按数值条件表述：SAT 先逐行单位化 rot，归一化后的 `abs(det)<=1e-9` 帧会显式拒绝，不能把数学满秩等同于数值支持；随机八顶点 oracle 的抽样域为 `abs(det)>0.15`，不外推到近奇异帧。单摆的有限数和主物理域检查为有意收紧，不承诺旧非法输入仍被接受。
+
 ## 单摆与公开动画入口
 
 - [80 位角度、周期、RK4 与性能报告](pendulum/report.md)
@@ -49,6 +51,12 @@
 
 [首轮六项组合的原始记录](integration-six/summary.json)覆盖 YAML 的 102 个脚本（含固定脑核真实 23/23）及全部 pytest：5,590 通过、46 跳过、98 个 subtest 通过、1 失败。唯一失败是 `test_issue498_atomic_write_perm_symlink_guard.py` 在可创建 symlink 的 Windows 上仍断言 POSIX；[未改动上游的同一失败](integration-six/baseline_symlink.log)原样保留。不以该结果声称整个 Windows suite 全绿。
 
+[最终八项 Windows 组合的完整记录](integration-final-windows/summary.json)使用独立 Python 3.12 / NumPy 2.5.5 / Pillow 12.3.0 / SciPy 1.18.1 环境及子进程作用域 OpenSSL。102/102 脚本成功；完整 pytest 为 **5,673 passed、1 failed、28 skipped、98 subtests passed**，耗时 1,383.07 秒。唯一失败仍是同环境、未修改主线也复现的 symlink P1；新增的编码缺口已经修复，组合没有其他失败。串行计时守卫 4 passed，strict manifest 64/64，time lint 23 既有/0 新增/0 过期。主驱动忠实返回 exit 1。
+
+[同一八项组合的完整 Linux 矩阵](integration-final-linux/report.md)在现有 gate 工作流上仅手工触发一次，未修改工作流配置。运行 `44751075692` 的实际 head 与三份 checkout 日志均为 `231aa533...`；Python 3.12.16 / NumPy 2.5.5、3.12.16 / NumPy 2.3.5 下界、3.13.18 / NumPy 2.5.5，三腿各自 **SUCCESS**，每腿 **102/102 脚本、脑核真实 23/23、pytest 5,662 passed / 40 skipped / 98 subtests passed / 0 failed / 0 errors**。Pillow 均为 12.3.0。pytest 耗时分别 550.36、719.79、633.06 秒；下界和 3.13 的结果直接从各腿实读，不由 advisory 工作流总体状态推断。[环境与 checkout/脑核证明](integration-final-linux/job-details.json)、原始 job logs 与 API 快照均保留。
+
+[Skip 与补测明细](integration-final-windows/skip_coverage_notes.json)保持上述主计数：28 个 skip 中，真实历史提交 `124ea433fe9a2ad2fd66a7360df85f6d61bab793` 的导出与逐文件核验使 4 个冻结基线用例得到实测（原物理预测文件 43 passed / 0 skip）；能力探测后调用原未改动的符号链接测试体，3/3 passed；串行计时覆盖并行时跳过的 1 条。补测不重复加入主 passed 数。仍未执行的 20 条为 17 条缺真实模型/冻结像素资产、3 条 Windows 无法表达的 POSIX 权限语义。脑核固定 SHA 与全部 1,618 个 Git 可见源码文件前后完全未变。
+
 [可移植组合门禁驱动](portable_final_gate.py)接受 `--repo <组合工作树> --output <仓外空目录> --brain-root <固定脑核> --workers 4`，从 YAML 读取全部脚本与固定脑核 SHA，校验后运行脚本、完整 pytest、串行计时量具、manifest 与 time lint。使用同一基线取入各 PR 的完整提交范围，包含 alpha、OBB 和单摆的前置/后续提交；不能只 cherry-pick 表中的最终 head。OBB 与单摆共同改变 physics 行数，lint baseline 行号应在两个改动的和上同步。保留所有错误，不使用 deselect 隐藏失败。
 
 八项组合源已固定为 `231aa5334c0c0f2f01eccf6c547ebd97a478a8d0`，tree 为 `94c97c2e4e65d6e454416b126388eb11f02ee4f9`，公开在同一 fork 的 `validation/body-eight-integration-20261120` 分支。也可在干净基线先 `git apply --check`，再应用 [完整组合 patch](integration-eight-source/combined-fixes.patch)，其 [校验值与来源](integration-eight-source/patch_metadata.json)、[全部 33 个改动文件的 LF 源码哈希](integration-eight-source/sources_sha256.json)用于验证所得源码。patch 保留原字节，已核查无本机工作区/家目录路径；驱动支持 apply 后未提交的工作树，并在测试前后核验全部 Git 可见源码未变化。
@@ -60,5 +68,9 @@
 公开副本将本地工作区/家目录路径前缀替换为占位符，文本换行统一为 LF；测量值、输入值、源码哈希、种子与结论保留。每个公开文件及本机原始文件的校验值见 [sanitization-manifest.json](sanitization-manifest.json)。重跑时产生的路径和测量时延会随环境变化。源码归档未重复提交，可由精确 Git 提交重新生成。
 
 查重结果属于公开来源的元数据，使用最小摘录：保留查询、issue/PR 编号、标题、链接、状态和计数，去除无关第三方完整正文及其机器路径。[摘录来源与校验说明](top-level-motions/duplicate-search-provenance.json)单独记录此项处理；这不涉及测量样本的删改。
+
+[发布回读审计](publication-updates/publication-results.json)记录原七项 PR/intake 共 14 份正文的备份、提交与逐次回读；既有 intake 头保留，旧性能范围和 alpha 双基线命令已更新，未重复新建 issues。
+
+[最终生产差异只读终审](code-review/README.md)核对 core/缓存/ID、nn、vision、SAT/math、bridge 规范及 replay 路径边界，未发现本批新增实质回归或阻断项；支持域、数值退化阈值与有意收紧单列，不以测试样本代替全域证明。
 
 对上一完整证据提交 `7bf90b7d...` 的 [独立审计](audit/commit-7bf90b7-r03.txt)逐 Git blob 核验了 313 项 artifact 的哈希/字节数、39 份 XML 结构语义，以及全部 JSON 的 21,689 个整数和 156,376 个浮点值（逐 hex）与本机原始数据一致；本提交在该快照基础上追加已完成的 alpha 回放、组合 oracle 和组合源。

@@ -1,0 +1,28 @@
+{
+  "scope": "Supplemental direct execution of the original A6/B6/C6 test bodies after an actual symlink capability probe. Original pytest skip markers, original source, and main-suite counts are unchanged.",
+  "head": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+  "test_source_lf_sha256": "a6d11458ce8a27d8dab0f9ed489adf8ddca21b943241d12b713e64fcf9d1631a",
+  "cases": [
+    {
+      "test": "test_a6_posix_符号链接目标保持且真实件更新",
+      "passed": true,
+      "seconds": 0.07614719998673536
+    },
+    {
+      "test": "test_b6_posix_符号链接目标保持且真实件更新",
+      "passed": true,
+      "seconds": 0.0043231000017840415
+    },
+    {
+      "test": "test_c6_posix_符号链接目标保持且真实件更新",
+      "passed": true,
+      "seconds": 0.03429650000180118
+    }
+  ],
+  "capability_probe": {
+    "symlink_created": true,
+    "is_symlink": true,
+    "target_read_verified": true
+  },
+  "passed": true
+}

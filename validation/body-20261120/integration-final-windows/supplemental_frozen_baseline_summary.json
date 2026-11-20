@@ -1,0 +1,25 @@
+{
+  "scope": "Supplemental serial run of original physics_predict guards with genuine historical baseline; main full-gate environment and main skip counts remain unchanged.",
+  "source_head": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+  "baseline_commit": "124ea433fe9a2ad2fd66a7360df85f6d61bab793",
+  "baseline_import_path": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\authentic-baseline-124ea43\\lingshu\\world\\physics.py",
+  "command": [
+    "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/test_physics_predict.py",
+    "-q",
+    "--tb=short",
+    "--durations=10",
+    "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\supplemental_frozen_baseline.xml",
+    "--basetemp=[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\tmp\\frozen_baseline\\pytest"
+  ],
+  "environment_override": {
+    "LINGSHU_BASE_TREE": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\authentic-baseline-124ea43"
+  },
+  "returncode": 0,
+  "seconds": 5.721430400008103
+}

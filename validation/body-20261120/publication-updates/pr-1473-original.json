@@ -1,0 +1,51 @@
+{
+  "body": "## 改动说明\n\n修复 HexGrid 的 odd_r_offset pixel_to_cell 最近格判定。旧实现先按 y 只选一行，再按该行错位换算 q；在错行边界附近，这会返回距离更远的格。例如 HexGrid(5,5,1.0, mode=\"odd_r_offset\") 查询 (√3/2, 0.74)，改前返回 (0,0)，中心距离约 1.1391；最近格为 (0,1)，距离 0.76。现在比较 y 对应的上下相邻行，并按实际格心的欧氏距离选最近者；默认 axial 模式不变。\n\n## 复跑命令与读数\n\n```sh\npython -X utf8 -m pytest tests/test_hexgrid_odd_r_nearest_cell.py tests/test_issue6_grid_roundtrip_guard.py tests/test_hex_grid_extent.py tests/test_hex_cnn.py -q --no-header -p no:cacheprovider\n# 10 passed\n\npython -X utf8 tools/testing/replay_save_guards.py --spec tests/fixtures/hexgrid_odd_r_nearest_cell_mutations.json --baseline d74848fb33dbff1d719959df19d1266a1ac60f44 --mutate --output [workspace]/lingshu/outputs/hexgrid-odd-r-nearest-20261120\n# fixed 4 passed; baseline 4 failed; named y-only mutation hit its expected assertion\n\npython -X utf8 tools/verify_manifest.py --strict --quiet\n# 64/64 MATCH; exit 0\n```\n\n## 未验证项 / 边界\n\n最近格由有限个上下候选行与各行最近列的中心距离判定；回归覆盖多 cell_size、origin 和坐标区间。未做整幅图像的最近邻性能基准。\r\n",
+  "headRefOid": "cff189b3438623feaebdf1a874fafdd03080acb1",
+  "mergeStateStatus": "CLEAN",
+  "number": 1473,
+  "state": "OPEN",
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T11:54:43Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44729222090/job/136264362797",
+      "name": "gate (py3.12)",
+      "startedAt": "2026-11-20T11:38:18Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T11:38:25Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44729221955/job/136264362226",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T11:38:18Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T11:51:28Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44729222090/job/136264363130",
+      "name": "gate (py3.12 · 依赖下界)",
+      "startedAt": "2026-11-20T11:38:18Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T11:49:34Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44729222090/job/136264363054",
+      "name": "gate (py3.13)",
+      "startedAt": "2026-11-20T11:38:18Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    }
+  ],
+  "title": "fix(nn): choose nearest odd-r cell by center distance",
+  "url": "https://github.com/FuRongJun-1999/lingshu/pull/1473"
+}

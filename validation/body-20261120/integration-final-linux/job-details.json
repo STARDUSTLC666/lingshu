@@ -1,0 +1,131 @@
+[
+  {
+    "job_id": 136338819053,
+    "name": "gate (py3.12)",
+    "url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44751075692/job/136338819053",
+    "head_sha": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+    "conclusion": "success",
+    "runtime_headers": [
+      "platform linux -- Python 3.12.16, pytest-9.2.0, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.12.16/x64/bin/python"
+    ],
+    "installed_package_versions_from_actual_pip_success_lines": {
+      "pillow": "12.3.0",
+      "pyyaml": "6.0.3",
+      "numpy": "2.5.5",
+      "pytest": "9.2.0"
+    },
+    "actual_checkout_sha_seen": true,
+    "brain_clone_step_conclusions": [
+      "success"
+    ],
+    "brain_fetch_pinned_sha_seen": true,
+    "brain_summary_pairs": [
+      [
+        "23",
+        "23"
+      ]
+    ],
+    "brain_real_23_of_23": true,
+    "scripts_match_workflow": true,
+    "script_groups": 102,
+    "pytest_summary": "= 5662 passed, 40 skipped, 10450 warnings, 98 subtests passed in 550.36s (0:09:10) =",
+    "pytest_counts": {
+      "passed": 5662,
+      "failed": 0,
+      "skipped": 40,
+      "errors": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "subtests_passed": 98
+    },
+    "pytest_warnings": 10450,
+    "original_job_log_sha256": "115b5a0bd6c3fce1975359e21e8166629601e9652e0740aa2c83ec8b1e7b4110",
+    "brain_section_sha256": "f84b5635bfbb644439883ee5ef293086117266c15720834b064a50208045d097"
+  },
+  {
+    "job_id": 136338819496,
+    "name": "gate (py3.13)",
+    "url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44751075692/job/136338819496",
+    "head_sha": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+    "conclusion": "success",
+    "runtime_headers": [
+      "platform linux -- Python 3.13.18, pytest-9.2.0, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.13.18/x64/bin/python"
+    ],
+    "installed_package_versions_from_actual_pip_success_lines": {
+      "pillow": "12.3.0",
+      "pyyaml": "6.0.3",
+      "numpy": "2.5.5",
+      "pytest": "9.2.0"
+    },
+    "actual_checkout_sha_seen": true,
+    "brain_clone_step_conclusions": [
+      "success"
+    ],
+    "brain_fetch_pinned_sha_seen": true,
+    "brain_summary_pairs": [
+      [
+        "23",
+        "23"
+      ]
+    ],
+    "brain_real_23_of_23": true,
+    "scripts_match_workflow": true,
+    "script_groups": 102,
+    "pytest_summary": "= 5662 passed, 40 skipped, 10459 warnings, 98 subtests passed in 633.06s (0:10:33) =",
+    "pytest_counts": {
+      "passed": 5662,
+      "failed": 0,
+      "skipped": 40,
+      "errors": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "subtests_passed": 98
+    },
+    "pytest_warnings": 10459,
+    "original_job_log_sha256": "3bb1b7454d14871d3e7efea4ec9e59aad888738757d4e0e63a4c8f2adc233168",
+    "brain_section_sha256": "f84b5635bfbb644439883ee5ef293086117266c15720834b064a50208045d097"
+  },
+  {
+    "job_id": 136338819513,
+    "name": "gate (py3.12 · 依赖下界)",
+    "url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44751075692/job/136338819513",
+    "head_sha": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+    "conclusion": "success",
+    "runtime_headers": [
+      "platform linux -- Python 3.12.16, pytest-9.2.0, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.12.16/x64/bin/python"
+    ],
+    "installed_package_versions_from_actual_pip_success_lines": {
+      "pillow": "12.3.0",
+      "pyyaml": "6.0.3",
+      "numpy": "2.3.5",
+      "pytest": "9.2.0"
+    },
+    "actual_checkout_sha_seen": true,
+    "brain_clone_step_conclusions": [
+      "success"
+    ],
+    "brain_fetch_pinned_sha_seen": true,
+    "brain_summary_pairs": [
+      [
+        "23",
+        "23"
+      ]
+    ],
+    "brain_real_23_of_23": true,
+    "scripts_match_workflow": true,
+    "script_groups": 102,
+    "pytest_summary": "= 5662 passed, 40 skipped, 10455 warnings, 98 subtests passed in 719.79s (0:11:59) =",
+    "pytest_counts": {
+      "passed": 5662,
+      "failed": 0,
+      "skipped": 40,
+      "errors": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "subtests_passed": 98
+    },
+    "pytest_warnings": 10455,
+    "original_job_log_sha256": "cd444766ee8b9d2fe7c699abefed979083c4f23e5f3bd53afe137ff16f1ea99b",
+    "brain_section_sha256": "f84b5635bfbb644439883ee5ef293086117266c15720834b064a50208045d097"
+  }
+]

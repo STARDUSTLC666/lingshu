@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.775" timestamp="2026-11-20T21:26:16.372437+08:00" hostname="STARDUST"><testcase classname="tests.test_issue498_atomic_write_perm_symlink_guard" name="test_p1_符号链接量具能力探测" time="0.003"><failure message="AssertionError: P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核&#10;assert False">tests\test_issue498_atomic_write_perm_symlink_guard.py:202: in test_p1_符号链接量具能力探测
+    assert POSIX, "P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核"
+E   AssertionError: P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核
+E   assert False</failure></testcase></testsuite></testsuites>

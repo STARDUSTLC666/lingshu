@@ -1,0 +1,670 @@
+{
+  "ref": "a9fe000938a536134f4a21f83b4a633afe8413e5",
+  "checks": [
+    {
+      "check": "alpha_fixture_variants_differ_only_in_baseline_failures",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "replay-expanded-baseline_baseline_ref",
+      "pass": true,
+      "details": {
+        "replay": "replay-expanded-baseline",
+        "baseline": "fb8eaada60fdabcd3069e531fa498d8d784609a1",
+        "failed": 6,
+        "passed": 19,
+        "mutants": 10,
+        "guard_sha256": "4b37db0c8a3dd406e2566067c59c60824e6e0bbe3c33b059c714b5be9a1960b4"
+      }
+    },
+    {
+      "check": "replay-expanded-baseline_fixture_failure_set",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "replay-expanded-baseline_expected_counts",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "replay-expanded-baseline_baseline_source_hash",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "replay-expanded-baseline_fixed_source_hash",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "replay-expanded-baseline_guard_identical",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "replay-expanded-baseline_no_errors_or_skips_and_expected_mutations",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "replay-original-baseline_baseline_ref",
+      "pass": true,
+      "details": {
+        "replay": "replay-original-baseline",
+        "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+        "failed": 15,
+        "passed": 10,
+        "mutants": 10,
+        "guard_sha256": "4b37db0c8a3dd406e2566067c59c60824e6e0bbe3c33b059c714b5be9a1960b4"
+      }
+    },
+    {
+      "check": "replay-original-baseline_fixture_failure_set",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "replay-original-baseline_expected_counts",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "replay-original-baseline_baseline_source_hash",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "replay-original-baseline_fixed_source_hash",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "replay-original-baseline_guard_identical",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "replay-original-baseline_no_errors_or_skips_and_expected_mutations",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "crossfix_baseline_Git_source_hash",
+      "pass": true,
+      "details": {
+        "variant": "baseline",
+        "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+        "git_eval_lf_sha256": "cc1a58e6665099ba43d406c709323227f7c0162b85fb7b1652b4fa9ee304644c",
+        "recorded_eval_lf_sha256": "cc1a58e6665099ba43d406c709323227f7c0162b85fb7b1652b4fa9ee304644c"
+      }
+    },
+    {
+      "check": "crossfix_math_only_Git_source_hash",
+      "pass": true,
+      "details": {
+        "variant": "math_only",
+        "commit": "e0771a810b8846676f3545542b2e70d5e0011467",
+        "git_eval_lf_sha256": "f2b24ec11fbdef01d56c7d354ef247fc1bfdda9dfc14588f8830a3cf62b01aad",
+        "recorded_eval_lf_sha256": "f2b24ec11fbdef01d56c7d354ef247fc1bfdda9dfc14588f8830a3cf62b01aad"
+      }
+    },
+    {
+      "check": "crossfix_top_level_only_Git_source_hash",
+      "pass": true,
+      "details": {
+        "variant": "top_level_only",
+        "commit": "1ab5cc7f295ed5748b50c7ffde26cf2a34663204",
+        "git_eval_lf_sha256": "1574bfb6555bf396da3aefb7c5de150e29c76adbcd1580e3c939d7f9117482b9",
+        "recorded_eval_lf_sha256": "1574bfb6555bf396da3aefb7c5de150e29c76adbcd1580e3c939d7f9117482b9"
+      }
+    },
+    {
+      "check": "crossfix_combined_Git_source_hash",
+      "pass": true,
+      "details": {
+        "variant": "combined",
+        "commit": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+        "git_eval_lf_sha256": "8c973edbf7768dcb891546ba24422b020a85ad4b2a987a64c0581e846773f4f8",
+        "recorded_eval_lf_sha256": "8c973edbf7768dcb891546ba24422b020a85ad4b2a987a64c0581e846773f4f8"
+      }
+    },
+    {
+      "check": "crossfix_combined_784_10976_pass",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "crossfix_combined_top_and_explicit_both_784",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "crossfix_isolates_interaction",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "crossfix_all_four_anonymous_fresh_remote_fetches",
+      "pass": true,
+      "details": {
+        "record": "commit-a9fe-remote-fetch.json"
+      }
+    },
+    {
+      "check": "patch_verbatim_SHA_and_bytes",
+      "pass": true,
+      "details": {
+        "base_commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+        "target_commit": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+        "target_tree_sha": "94c97c2e4e65d6e454416b126388eb11f02ee4f9",
+        "patch_file": "combined-fixes.patch",
+        "patch_sha256": "1a72746fa61f9a1babc370c80320d92bfd9b0724e66b04d6731b17f9170ddd38",
+        "patch_bytes": 135257,
+        "changed_file_count": 33,
+        "command": [
+          "git",
+          "diff",
+          "--binary",
+          "d74848fb33dbff1d719959df19d1266a1ac60f44",
+          "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0"
+        ],
+        "driver_sha256": "d76b23c179e4940b0798101ef196b8d6405692cf6fca6e43c4815b1fc78bec45"
+      }
+    },
+    {
+      "check": "combined_tree_and_all_33_file_names",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "all_33_committed_source_hashes",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "all_critical_hashes_match_changed_file_table",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "published_patch_clean_remote_baseline_apply_and_exact_tree",
+      "pass": true,
+      "details": {
+        "sandbox": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\public-evidence-audit\\patch-reconstruction-a9fe-lf",
+        "owned_bare_repository": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\public-evidence-audit\\fetch-a9fe-fresh.git",
+        "index_file": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\public-evidence-audit\\patch-reconstruction-a9fe-lf.index",
+        "apply_check_exit": 0,
+        "apply_check_stderr": "",
+        "apply_exit": 0,
+        "apply_stderr": "",
+        "rebuilt_tree": "94c97c2e4e65d6e454416b126388eb11f02ee4f9",
+        "expected_tree": "94c97c2e4e65d6e454416b126388eb11f02ee4f9"
+      }
+    },
+    {
+      "check": "CI_snapshot_eight_exact_heads_three_gate_legs_and_title",
+      "pass": true,
+      "details": [
+        {
+          "number": 1469,
+          "head": "cc68a82baace16e92ff6ce770330b65102a530a5",
+          "state": "OPEN",
+          "latest_checks": {
+            "gate (py3.12)": "SUCCESS",
+            "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+            "gate (py3.12 · 依赖下界)": "SUCCESS",
+            "gate (py3.13)": "SUCCESS"
+          },
+          "matches_snapshot_claim": true
+        },
+        {
+          "number": 1470,
+          "head": "433befa7b356eebecbc457ecd8f8a123ec1540cc",
+          "state": "OPEN",
+          "latest_checks": {
+            "gate (py3.12)": "SUCCESS",
+            "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+            "gate (py3.12 · 依赖下界)": "SUCCESS",
+            "gate (py3.13)": "SUCCESS"
+          },
+          "matches_snapshot_claim": true
+        },
+        {
+          "number": 1471,
+          "head": "39d379552f34026ef46ad0515831319b1494a5d3",
+          "state": "OPEN",
+          "latest_checks": {
+            "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+            "gate (py3.12)": "SUCCESS",
+            "gate (py3.12 · 依赖下界)": "SUCCESS",
+            "gate (py3.13)": "SUCCESS"
+          },
+          "matches_snapshot_claim": true
+        },
+        {
+          "number": 1472,
+          "head": "a663512dd0fbc44a9fb08a55751951009586d172",
+          "state": "OPEN",
+          "latest_checks": {
+            "gate (py3.12)": "SUCCESS",
+            "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+            "gate (py3.12 · 依赖下界)": "SUCCESS",
+            "gate (py3.13)": "SUCCESS"
+          },
+          "matches_snapshot_claim": true
+        },
+        {
+          "number": 1473,
+          "head": "cff189b3438623feaebdf1a874fafdd03080acb1",
+          "state": "OPEN",
+          "latest_checks": {
+            "gate (py3.12)": "SUCCESS",
+            "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+            "gate (py3.12 · 依赖下界)": "SUCCESS",
+            "gate (py3.13)": "SUCCESS"
+          },
+          "matches_snapshot_claim": true
+        },
+        {
+          "number": 1474,
+          "head": "fb6c9cabc939a6defcc44ef661b3048d47155d87",
+          "state": "OPEN",
+          "latest_checks": {
+            "gate (py3.12)": "SUCCESS",
+            "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+            "gate (py3.12 · 依赖下界)": "SUCCESS",
+            "gate (py3.13)": "SUCCESS"
+          },
+          "matches_snapshot_claim": true
+        },
+        {
+          "number": 1475,
+          "head": "e0771a810b8846676f3545542b2e70d5e0011467",
+          "state": "OPEN",
+          "latest_checks": {
+            "gate (py3.12)": "SUCCESS",
+            "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+            "gate (py3.12 · 依赖下界)": "SUCCESS",
+            "gate (py3.13)": "SUCCESS"
+          },
+          "matches_snapshot_claim": true
+        },
+        {
+          "number": 1476,
+          "head": "1ab5cc7f295ed5748b50c7ffde26cf2a34663204",
+          "state": "OPEN",
+          "latest_checks": {
+            "gate (py3.12)": "SUCCESS",
+            "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+            "gate (py3.12 · 依赖下界)": "SUCCESS",
+            "gate (py3.13)": "SUCCESS"
+          },
+          "matches_snapshot_claim": true
+        }
+      ]
+    },
+    {
+      "check": "README_does_not_claim_pending_final_r2_complete",
+      "pass": true,
+      "details": null
+    }
+  ],
+  "failed_checks": 0,
+  "alpha": [
+    {
+      "replay": "replay-expanded-baseline",
+      "baseline": "fb8eaada60fdabcd3069e531fa498d8d784609a1",
+      "failed": 6,
+      "passed": 19,
+      "mutants": 10,
+      "guard_sha256": "4b37db0c8a3dd406e2566067c59c60824e6e0bbe3c33b059c714b5be9a1960b4"
+    },
+    {
+      "replay": "replay-original-baseline",
+      "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "failed": 15,
+      "passed": 10,
+      "mutants": 10,
+      "guard_sha256": "4b37db0c8a3dd406e2566067c59c60824e6e0bbe3c33b059c714b5be9a1960b4"
+    }
+  ],
+  "crossfix_sources": [
+    {
+      "variant": "baseline",
+      "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "git_eval_lf_sha256": "cc1a58e6665099ba43d406c709323227f7c0162b85fb7b1652b4fa9ee304644c",
+      "recorded_eval_lf_sha256": "cc1a58e6665099ba43d406c709323227f7c0162b85fb7b1652b4fa9ee304644c"
+    },
+    {
+      "variant": "math_only",
+      "commit": "e0771a810b8846676f3545542b2e70d5e0011467",
+      "git_eval_lf_sha256": "f2b24ec11fbdef01d56c7d354ef247fc1bfdda9dfc14588f8830a3cf62b01aad",
+      "recorded_eval_lf_sha256": "f2b24ec11fbdef01d56c7d354ef247fc1bfdda9dfc14588f8830a3cf62b01aad"
+    },
+    {
+      "variant": "top_level_only",
+      "commit": "1ab5cc7f295ed5748b50c7ffde26cf2a34663204",
+      "git_eval_lf_sha256": "1574bfb6555bf396da3aefb7c5de150e29c76adbcd1580e3c939d7f9117482b9",
+      "recorded_eval_lf_sha256": "1574bfb6555bf396da3aefb7c5de150e29c76adbcd1580e3c939d7f9117482b9"
+    },
+    {
+      "variant": "combined",
+      "commit": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+      "git_eval_lf_sha256": "8c973edbf7768dcb891546ba24422b020a85ad4b2a987a64c0581e846773f4f8",
+      "recorded_eval_lf_sha256": "8c973edbf7768dcb891546ba24422b020a85ad4b2a987a64c0581e846773f4f8"
+    }
+  ],
+  "file_hashes": [
+    {
+      "path": "bench/repro/pendulum_release_accuracy.py",
+      "expected": "f0c163e8540a052ded44efcd843d97acde20d3cdac9149520115a701b41d21bf",
+      "actual": "f0c163e8540a052ded44efcd843d97acde20d3cdac9149520115a701b41d21bf",
+      "matches": true
+    },
+    {
+      "path": "bridges/blender/wm_bridge/factory/anim/_det/gate_physics.py",
+      "expected": "6b0e1d50e3e1ea74c0bc7a1a4c84783cc1c459b263f7f8f612e8e9ab8a06fcb2",
+      "actual": "6b0e1d50e3e1ea74c0bc7a1a4c84783cc1c459b263f7f8f612e8e9ab8a06fcb2",
+      "matches": true
+    },
+    {
+      "path": "bridges/blender/wm_bridge/factory/anim/eval.py",
+      "expected": "8c973edbf7768dcb891546ba24422b020a85ad4b2a987a64c0581e846773f4f8",
+      "actual": "8c973edbf7768dcb891546ba24422b020a85ad4b2a987a64c0581e846773f4f8",
+      "matches": true
+    },
+    {
+      "path": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "expected": "b166c18a6d0b9b8807174988acd5d4273c82a8d4a0908f0cf30bfab03b3ac422",
+      "actual": "b166c18a6d0b9b8807174988acd5d4273c82a8d4a0908f0cf30bfab03b3ac422",
+      "matches": true
+    },
+    {
+      "path": "lingshu/core/core.py",
+      "expected": "07ed97c044399d6d59c36fa95c0bdb734b43f83af693f57fe998202477c25983",
+      "actual": "07ed97c044399d6d59c36fa95c0bdb734b43f83af693f57fe998202477c25983",
+      "matches": true
+    },
+    {
+      "path": "lingshu/core/longterm_gate.py",
+      "expected": "88d7df98aeace5d78e64de39abaecd035baa39f3b4990541928ed646ee6f2a3b",
+      "actual": "88d7df98aeace5d78e64de39abaecd035baa39f3b4990541928ed646ee6f2a3b",
+      "matches": true
+    },
+    {
+      "path": "lingshu/nn/hex_cnn.py",
+      "expected": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081",
+      "actual": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081",
+      "matches": true
+    },
+    {
+      "path": "lingshu/vision/lineart.py",
+      "expected": "01d203a87a95021c99080f583e79868feafbf22251d3497b4e4765543cddca9c",
+      "actual": "01d203a87a95021c99080f583e79868feafbf22251d3497b4e4765543cddca9c",
+      "matches": true
+    },
+    {
+      "path": "lingshu/world/motion_groups.py",
+      "expected": "261f48459c03bdd297d923581ed01efed12d6293aaaffe3319fd321772eacaeb",
+      "actual": "261f48459c03bdd297d923581ed01efed12d6293aaaffe3319fd321772eacaeb",
+      "matches": true
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "expected": "a7feda86def2e2f6aff24c9d0e1dbe0791a6b8909f391051035df2bd3b40222f",
+      "actual": "a7feda86def2e2f6aff24c9d0e1dbe0791a6b8909f391051035df2bd3b40222f",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/bridge_pendulum_release_mutations.json",
+      "expected": "5deb9eb3af204cab8a8f26185148e77576a88a9a334647cab3e407ffd71c1fa7",
+      "actual": "5deb9eb3af204cab8a8f26185148e77576a88a9a334647cab3e407ffd71c1fa7",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/bridge_top_level_motions_mutations.json",
+      "expected": "1be34c919a5eeb008d1c8039b39d2236e7765c2d723994924ebc40139b606068",
+      "actual": "1be34c919a5eeb008d1c8039b39d2236e7765c2d723994924ebc40139b606068",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/hexgrid_odd_r_nearest_cell_mutations.json",
+      "expected": "cd048817bf3fe2dc069578bb79f51b38bf3a7b2e513044ab49cdce2cadaf1a8b",
+      "actual": "cd048817bf3fe2dc069578bb79f51b38bf3a7b2e513044ab49cdce2cadaf1a8b",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/longterm_gate_mixed_in_place_update_mutations.json",
+      "expected": "a12738913dc3604a56f13e4177b1aa0750df3eb3e8af2f6c96f08b7ca8e74234",
+      "actual": "a12738913dc3604a56f13e4177b1aa0750df3eb3e8af2f6c96f08b7ca8e74234",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/motion_group_identifier_encoding_mutations.json",
+      "expected": "26bcdee1d7e08fddee716e2b86c2058fc50f8fd1cdf81dc39afd5f54f4997fc9",
+      "actual": "26bcdee1d7e08fddee716e2b86c2058fc50f8fd1cdf81dc39afd5f54f4997fc9",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/obb_nonorthogonal_sat_mutations.json",
+      "expected": "2d08da10c09f1d4ab73558029775b213bcd4fea0f5e167136e7afb69c1ca627a",
+      "actual": "2d08da10c09f1d4ab73558029775b213bcd4fea0f5e167136e7afb69c1ca627a",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/pendulum_elliptic_angle_mutations.json",
+      "expected": "05ae4ab1a98335d24e847b477caf2d333f93ce2d184283f6d5d4d0d7a41c0682",
+      "actual": "05ae4ab1a98335d24e847b477caf2d333f93ce2d184283f6d5d4d0d7a41c0682",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/search_skills_limit_semantics_mutations.json",
+      "expected": "66246f2f95a8370741b543034d49f1d47de095c134a2ef72687695e36e834abf",
+      "actual": "66246f2f95a8370741b543034d49f1d47de095c134a2ef72687695e36e834abf",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/vision_lineart_alpha_mutations.json",
+      "expected": "c3356c80aa30e7895dd78ec18f0bfc67a73ef6e3c972d4cd1b146760e70f03fb",
+      "actual": "c3356c80aa30e7895dd78ec18f0bfc67a73ef6e3c972d4cd1b146760e70f03fb",
+      "matches": true
+    },
+    {
+      "path": "tests/test_bridge_pendulum_release_solution.py",
+      "expected": "e778cce223fd5ea9838361bab2379a7c2bfc4bf35c980a3b576c84a955a6dc47",
+      "actual": "e778cce223fd5ea9838361bab2379a7c2bfc4bf35c980a3b576c84a955a6dc47",
+      "matches": true
+    },
+    {
+      "path": "tests/test_bridge_top_level_motions.py",
+      "expected": "68aaada8b713525075914fad8630aa924a475d5423d2bf247b7ecb7ee18e9e58",
+      "actual": "68aaada8b713525075914fad8630aa924a475d5423d2bf247b7ecb7ee18e9e58",
+      "matches": true
+    },
+    {
+      "path": "tests/test_hexgrid_odd_r_nearest_cell.py",
+      "expected": "9111d42af04b25c3493e109af3badc82cc6cd5bad4826b2242046e5ac7649c90",
+      "actual": "9111d42af04b25c3493e109af3badc82cc6cd5bad4826b2242046e5ac7649c90",
+      "matches": true
+    },
+    {
+      "path": "tests/test_issue770_snapshot_atomicity_and_signature_guard.py",
+      "expected": "57bc41dced9458a6f0dc4bf01dc75d4a28b15c94e94aab7dcf3ce0b7feba50c0",
+      "actual": "57bc41dced9458a6f0dc4bf01dc75d4a28b15c94e94aab7dcf3ce0b7feba50c0",
+      "matches": true
+    },
+    {
+      "path": "tests/test_longterm_gate_mixed_in_place_update.py",
+      "expected": "055b5df1ff69d83cef4d2e1d6003e6dec4a9f946659d64d176c5994eaff5b4c4",
+      "actual": "055b5df1ff69d83cef4d2e1d6003e6dec4a9f946659d64d176c5994eaff5b4c4",
+      "matches": true
+    },
+    {
+      "path": "tests/test_motion_group_identifier_encoding.py",
+      "expected": "58bf90d8c5538b209ca8551fc53526e94a2890deff30719decdeba86d8628cc7",
+      "actual": "58bf90d8c5538b209ca8551fc53526e94a2890deff30719decdeba86d8628cc7",
+      "matches": true
+    },
+    {
+      "path": "tests/test_obb_nonorthogonal_sat.py",
+      "expected": "2b762f9bc8b670b6932157b3a1c4cd8a38cc30e115aaa002e518e77ca5c9b5dd",
+      "actual": "2b762f9bc8b670b6932157b3a1c4cd8a38cc30e115aaa002e518e77ca5c9b5dd",
+      "matches": true
+    },
+    {
+      "path": "tests/test_pendulum_release_solution.py",
+      "expected": "5fcdd9cc22fe878cbee91ec6cc2e88bbb0cabbf96f357c84fd585a5a2fa93cd2",
+      "actual": "5fcdd9cc22fe878cbee91ec6cc2e88bbb0cabbf96f357c84fd585a5a2fa93cd2",
+      "matches": true
+    },
+    {
+      "path": "tests/test_physics_predict.py",
+      "expected": "2c2c6aebd181d250eb0175001d2b56d9fe4787c715d2d115a07d65dd21643dc2",
+      "actual": "2c2c6aebd181d250eb0175001d2b56d9fe4787c715d2d115a07d65dd21643dc2",
+      "matches": true
+    },
+    {
+      "path": "tests/test_search_skills_limit_semantics.py",
+      "expected": "fd52bbafdf9ea896b4143d05698a036f5032d8193a501d1eb4745c5d023acf1e",
+      "actual": "fd52bbafdf9ea896b4143d05698a036f5032d8193a501d1eb4745c5d023acf1e",
+      "matches": true
+    },
+    {
+      "path": "tests/test_vision_lineart_alpha.py",
+      "expected": "4b37db0c8a3dd406e2566067c59c60824e6e0bbe3c33b059c714b5be9a1960b4",
+      "actual": "4b37db0c8a3dd406e2566067c59c60824e6e0bbe3c33b059c714b5be9a1960b4",
+      "matches": true
+    },
+    {
+      "path": "tools/testing/bench_bridge_motions.py",
+      "expected": "ae6e38e92dce20dd462b50bb89ab122709b11bc40e95836d4765998fd147a219",
+      "actual": "ae6e38e92dce20dd462b50bb89ab122709b11bc40e95836d4765998fd147a219",
+      "matches": true
+    },
+    {
+      "path": "tools/testing/replay_save_guards.py",
+      "expected": "af47c847469b43788c85c1982f4f5903a80b95b2e5d2aa97368a12aed5722cae",
+      "actual": "af47c847469b43788c85c1982f4f5903a80b95b2e5d2aa97368a12aed5722cae",
+      "matches": true
+    },
+    {
+      "path": "tools/time_core_lint_baseline.txt",
+      "expected": "b48c074ae1e2cdf52fce6eda051857a2644390ddda94b06fbb2fef10b99c547b",
+      "actual": "b48c074ae1e2cdf52fce6eda051857a2644390ddda94b06fbb2fef10b99c547b",
+      "matches": true
+    }
+  ],
+  "patch_rebuild": {
+    "sandbox": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\public-evidence-audit\\patch-reconstruction-a9fe-lf",
+    "owned_bare_repository": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\public-evidence-audit\\fetch-a9fe-fresh.git",
+    "index_file": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\public-evidence-audit\\patch-reconstruction-a9fe-lf.index",
+    "apply_check_exit": 0,
+    "apply_check_stderr": "",
+    "apply_exit": 0,
+    "apply_stderr": "",
+    "rebuilt_tree": "94c97c2e4e65d6e454416b126388eb11f02ee4f9",
+    "expected_tree": "94c97c2e4e65d6e454416b126388eb11f02ee4f9"
+  },
+  "CI_snapshot_captured_utc": "2026-11-20T14:02:23.4592796Z",
+  "CI_snapshot": [
+    {
+      "number": 1469,
+      "head": "cc68a82baace16e92ff6ce770330b65102a530a5",
+      "state": "OPEN",
+      "latest_checks": {
+        "gate (py3.12)": "SUCCESS",
+        "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+        "gate (py3.12 · 依赖下界)": "SUCCESS",
+        "gate (py3.13)": "SUCCESS"
+      },
+      "matches_snapshot_claim": true
+    },
+    {
+      "number": 1470,
+      "head": "433befa7b356eebecbc457ecd8f8a123ec1540cc",
+      "state": "OPEN",
+      "latest_checks": {
+        "gate (py3.12)": "SUCCESS",
+        "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+        "gate (py3.12 · 依赖下界)": "SUCCESS",
+        "gate (py3.13)": "SUCCESS"
+      },
+      "matches_snapshot_claim": true
+    },
+    {
+      "number": 1471,
+      "head": "39d379552f34026ef46ad0515831319b1494a5d3",
+      "state": "OPEN",
+      "latest_checks": {
+        "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+        "gate (py3.12)": "SUCCESS",
+        "gate (py3.12 · 依赖下界)": "SUCCESS",
+        "gate (py3.13)": "SUCCESS"
+      },
+      "matches_snapshot_claim": true
+    },
+    {
+      "number": 1472,
+      "head": "a663512dd0fbc44a9fb08a55751951009586d172",
+      "state": "OPEN",
+      "latest_checks": {
+        "gate (py3.12)": "SUCCESS",
+        "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+        "gate (py3.12 · 依赖下界)": "SUCCESS",
+        "gate (py3.13)": "SUCCESS"
+      },
+      "matches_snapshot_claim": true
+    },
+    {
+      "number": 1473,
+      "head": "cff189b3438623feaebdf1a874fafdd03080acb1",
+      "state": "OPEN",
+      "latest_checks": {
+        "gate (py3.12)": "SUCCESS",
+        "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+        "gate (py3.12 · 依赖下界)": "SUCCESS",
+        "gate (py3.13)": "SUCCESS"
+      },
+      "matches_snapshot_claim": true
+    },
+    {
+      "number": 1474,
+      "head": "fb6c9cabc939a6defcc44ef661b3048d47155d87",
+      "state": "OPEN",
+      "latest_checks": {
+        "gate (py3.12)": "SUCCESS",
+        "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+        "gate (py3.12 · 依赖下界)": "SUCCESS",
+        "gate (py3.13)": "SUCCESS"
+      },
+      "matches_snapshot_claim": true
+    },
+    {
+      "number": 1475,
+      "head": "e0771a810b8846676f3545542b2e70d5e0011467",
+      "state": "OPEN",
+      "latest_checks": {
+        "gate (py3.12)": "SUCCESS",
+        "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+        "gate (py3.12 · 依赖下界)": "SUCCESS",
+        "gate (py3.13)": "SUCCESS"
+      },
+      "matches_snapshot_claim": true
+    },
+    {
+      "number": 1476,
+      "head": "1ab5cc7f295ed5748b50c7ffde26cf2a34663204",
+      "state": "OPEN",
+      "latest_checks": {
+        "gate (py3.12)": "SUCCESS",
+        "PR 标题约定（type(scope) + 摘要）": "SUCCESS",
+        "gate (py3.12 · 依赖下界)": "SUCCESS",
+        "gate (py3.13)": "SUCCESS"
+      },
+      "matches_snapshot_claim": true
+    }
+  ],
+  "remote_fetch_record": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\public-evidence-audit\\commit-a9fe-remote-fetch.json"
+}

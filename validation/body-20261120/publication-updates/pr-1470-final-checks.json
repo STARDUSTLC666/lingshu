@@ -1,0 +1,59 @@
+{
+  "headRefOid": "433befa7b356eebecbc457ecd8f8a123ec1540cc",
+  "mergeStateStatus": "CLEAN",
+  "number": 1470,
+  "state": "OPEN",
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T13:19:39Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44741019064/job/136304395304",
+      "name": "gate (py3.12)",
+      "startedAt": "2026-11-20T13:03:54Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T13:04:00Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44741019304/job/136304395339",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T13:03:55Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T14:11:52Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44751103742/job/136338907258",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T14:11:45Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T13:19:59Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44741019064/job/136304395353",
+      "name": "gate (py3.12 · 依赖下界)",
+      "startedAt": "2026-11-20T13:03:55Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T13:19:09Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44741019064/job/136304395602",
+      "name": "gate (py3.13)",
+      "startedAt": "2026-11-20T13:03:55Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    }
+  ],
+  "url": "https://github.com/FuRongJun-1999/lingshu/pull/1470"
+}

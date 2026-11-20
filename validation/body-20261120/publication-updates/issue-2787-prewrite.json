@@ -1,0 +1,8 @@
+{
+  "body": "<!-- intake:v1 {\"project\":\"lingshu\",\"difficulty\":\"easy\",\"impact\":\"B\",\"target\":\"FuRongJun-1999/lingshu\",\"form\":\"intake\",\"pr\":\"https://github.com/FuRongJun-1999/lingshu/pull/1473\"} -->\n\nPR: https://github.com/FuRongJun-1999/lingshu/pull/1473\n\n修复 HexGrid odd_r_offset 的最近格查询只按 y 选行，忽略相邻错行水平偏移的问题。固定输入 (√3/2, 0.74) 改前返回 (0,0)，中心距离 1.1391；最近格 (0,1) 距离 0.76。现在比较上下相邻行中最近列的实际格心距离，默认 axial 行为保持不变。\n\n验证：PR 当前头 Python 3.12、依赖下界、3.13 三档门禁与标题检查全通过。本地 HexGrid/#6 回归 10 passed；基线 4 项失败，修复 4 项通过，具名 y-only 回退变异按预期失败；strict manifest 64/64 MATCH。原始复测日志与 JUnit 在 [workspace]\\lingshu\\outputs\\hexgrid-odd-r-nearest-20261120。\r\n",
+  "labels": [],
+  "number": 2787,
+  "state": "OPEN",
+  "title": "lingshu 身体模块：修复 odd-r 蜂窝网最近格误判（PR #1473）",
+  "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2787"
+}

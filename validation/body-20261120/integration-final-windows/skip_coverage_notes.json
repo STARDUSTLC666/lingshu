@@ -1,0 +1,182 @@
+{
+  "source_head": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+  "main_pytest": {
+    "passed": 5673,
+    "failed": 1,
+    "skipped": 28,
+    "subtests_passed": 98,
+    "wall_seconds_footer": 1383.07
+  },
+  "main_failures_preserved": [
+    {
+      "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_p1_符号链接量具能力探测",
+      "kind": "failure",
+      "message": "AssertionError: P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核",
+      "detail": "tests\\test_issue498_atomic_write_perm_symlink_guard.py:202: in test_p1_符号链接量具能力探测\n    assert POSIX, \"P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核\"\n           ^^^^^\nE   AssertionError: P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核"
+    }
+  ],
+  "main_skips_covered_by_separate_supplements": [
+    {
+      "test": "tests.test_physics_predict::test_G2_no_env_is_field_identical_to_legacy",
+      "reason": "冻结基线树不存在：[workspace]\\lingshu\\base\\FuRongJun-1999-lingshu-124ea43（设 LINGSHU_BASE_TREE 指过去）",
+      "supplement": "supplemental_frozen_baseline.xml",
+      "method": "Original pytest cases with verified authentic historical baseline commit 124ea433fe9a2ad2fd66a7360df85f6d61bab793"
+    },
+    {
+      "test": "tests.test_physics_predict::test_G6_mutation_new_kinds_in_first_pass_turns_red",
+      "reason": "冻结基线树不存在：[workspace]\\lingshu\\base\\FuRongJun-1999-lingshu-124ea43（设 LINGSHU_BASE_TREE 指过去）",
+      "supplement": "supplemental_frozen_baseline.xml",
+      "method": "Original pytest cases with verified authentic historical baseline commit 124ea433fe9a2ad2fd66a7360df85f6d61bab793"
+    },
+    {
+      "test": "tests.test_physics_predict::test_G7_mutation_env_used_key_turns_red",
+      "reason": "冻结基线树不存在：[workspace]\\lingshu\\base\\FuRongJun-1999-lingshu-124ea43（设 LINGSHU_BASE_TREE 指过去）",
+      "supplement": "supplemental_frozen_baseline.xml",
+      "method": "Original pytest cases with verified authentic historical baseline commit 124ea433fe9a2ad2fd66a7360df85f6d61bab793"
+    },
+    {
+      "test": "tests.test_physics_predict::test_G2c_classify_field_set_frozen_against_baseline",
+      "reason": "冻结基线树不存在：[workspace]\\lingshu\\base\\FuRongJun-1999-lingshu-124ea43（设 LINGSHU_BASE_TREE 指过去）",
+      "supplement": "supplemental_frozen_baseline.xml",
+      "method": "Original pytest cases with verified authentic historical baseline commit 124ea433fe9a2ad2fd66a7360df85f6d61bab793"
+    },
+    {
+      "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_a6_posix_符号链接目标保持且真实件更新",
+      "reason": "本机 win32：`os.symlink` 抛 OSError(22, '客户端没有所需的特权')（非开发者模式/无 SeCreateSymbolicLinkPrivilege）⇒ 符链面不可端到端复现；该语义由 A4/B4/C4 用 `..` 路径跨平台取证",
+      "supplement": "supplemental_symlink.json",
+      "method": "Original unmodified test body called after a real Windows symlink capability probe; original skip marker untouched"
+    },
+    {
+      "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_b6_posix_符号链接目标保持且真实件更新",
+      "reason": "本机 win32：`os.symlink` 抛 OSError(22, '客户端没有所需的特权')（非开发者模式/无 SeCreateSymbolicLinkPrivilege）⇒ 符链面不可端到端复现；该语义由 A4/B4/C4 用 `..` 路径跨平台取证",
+      "supplement": "supplemental_symlink.json",
+      "method": "Original unmodified test body called after a real Windows symlink capability probe; original skip marker untouched"
+    },
+    {
+      "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_c6_posix_符号链接目标保持且真实件更新",
+      "reason": "本机 win32：`os.symlink` 抛 OSError(22, '客户端没有所需的特权')（非开发者模式/无 SeCreateSymbolicLinkPrivilege）⇒ 符链面不可端到端复现；该语义由 A4/B4/C4 用 `..` 路径跨平台取证",
+      "supplement": "supplemental_symlink.json",
+      "method": "Original unmodified test body called after a real Windows symlink capability probe; original skip marker untouched"
+    },
+    {
+      "test": "tests.test_issue252_self_check_cycle_enum_limit_guard::test_q2_time_bounded",
+      "reason": "时间量具只在受控（串行）环境有效：`-n auto` 满载下本进程 CPU 时间也会被缓存/内存带宽争抢抬高（实测串行 0.02–0.03s、满载 >1s）——非受控测量不可判。CI（gate.yml）串行跑，Q2 在 CI 全效力；本地并行下 Q1/Q3/Q4 仍守语义。",
+      "supplement": "controlled_timing.xml",
+      "method": "Original pytest cases run serially after the full parallel leg"
+    }
+  ],
+  "covered_skip_count": 8,
+  "remaining_unexecuted_skipped_cases": [
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_b2_网格场景两次导出逐字节相同_真模型",
+      "reason": "turret 模型不在本机：/mnt/d/DSH/blender/out/wmtest/turret/mesh.obj",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_e3_未登记的Pillow主版本命中skip分支而不是红",
+      "reason": "没有冻结基线文件（[workspace]\\lingshu\\work\\lingshu-body-integration-20261120\\tests\\..\\_evidence\\vec-svg\\baseline.json）",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_e1_图元场景render_svg与冻结sha256相同",
+      "reason": "没有冻结基线文件（[workspace]\\lingshu\\work\\lingshu-body-integration-20261120\\tests\\..\\_evidence\\vec-svg\\baseline.json）",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_e2_图元场景位图逐字节不变_按Pillow主版本分档",
+      "reason": "没有冻结基线文件（[workspace]\\lingshu\\work\\lingshu-body-integration-20261120\\tests\\..\\_evidence\\vec-svg\\baseline.json）",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_f1_与render_svg的多边形序列逐点相同",
+      "reason": "turret 模型不在本机：/mnt/d/DSH/blender/out/wmtest/turret/mesh.obj",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_i1_注入分层后端_几何与既有出口逐点相同",
+      "reason": "turret 模型不在本机：/mnt/d/DSH/blender/out/wmtest/turret/mesh.obj",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_i2_注入后端与自带编排的几何一致",
+      "reason": "turret 模型不在本机：/mnt/d/DSH/blender/out/wmtest/turret/mesh.obj",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_g1_预设不改变几何与顺序",
+      "reason": "turret 模型不在本机：/mnt/d/DSH/blender/out/wmtest/turret/mesh.obj",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_h4_断开画家序_则F组红",
+      "reason": "turret 模型不在本机：/mnt/d/DSH/blender/out/wmtest/turret/mesh.obj",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_a5_posix_0600目标写后仍0600",
+      "reason": "本机 win32：`os.chmod(0o600)` 后 st_mode 仍为 0o666（Windows 只表达只读位）⇒ 0600 权限面不可端到端复现；该语义由 A3/B3/C3 打桩取证",
+      "category": "Windows cannot express POSIX chmod permissions"
+    },
+    {
+      "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_b5_posix_0600目标写后仍0600",
+      "reason": "本机 win32：`os.chmod(0o600)` 后 st_mode 仍为 0o666（Windows 只表达只读位）⇒ 0600 权限面不可端到端复现；该语义由 A3/B3/C3 打桩取证",
+      "category": "Windows cannot express POSIX chmod permissions"
+    },
+    {
+      "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_c5_posix_0600目标写后仍0600",
+      "reason": "本机 win32：`os.chmod(0o600)` 后 st_mode 仍为 0o666（Windows 只表达只读位）⇒ 0600 权限面不可端到端复现；该语义由 A3/B3/C3 打桩取证",
+      "category": "Windows cannot express POSIX chmod permissions"
+    },
+    {
+      "test": "tests.test_issue427_shade_paint_guard::test_c1_studio在合成模型上_最暗前景与对比度值域三项全胜回退管线",
+      "reason": "shade_metrics 不在本树（CI 无 _evidence/shade-paint/）—— 本用例需它做像素度量",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_issue427_shade_paint_guard::test_c2_八角柱的面必须互相可区分",
+      "reason": "shade_metrics 不在本树（CI 无 _evidence/shade-paint/）—— 本用例需它做像素度量",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_issue427_shade_paint_guard::test_c3_toon模式下前景色阶数受控",
+      "reason": "shade_metrics 不在本树（CI 无 _evidence/shade-paint/）—— 本用例需它做像素度量",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_issue427_shade_paint_guard::test_d1_真实turret_同机位下studio越线而回退不越线_回退即红",
+      "reason": "turret OBJ 不在本机",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_mesh3d_zbuffer_guard::test_a2_zbuffer_与逐像素真值参考逐字节一致_12668面真模型",
+      "reason": "hex01 真模型不在本机（/mnt/d/DSH/blender/out/hex01/deliver/HEX01.obj）—— 本用例需真实几何才有判别力",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_mesh3d_zbuffer_guard::test_b1_画家序在真模型上确实穿模_且zbuffer与它可测地不同",
+      "reason": "hex01 真模型不在本机（/mnt/d/DSH/blender/out/hex01/deliver/HEX01.obj）—— 本用例需真实几何才有判别力",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_mesh3d_zbuffer_guard::test_b3_面序反转渲染逐字节相同",
+      "reason": "hex01 真模型不在本机（/mnt/d/DSH/blender/out/hex01/deliver/HEX01.obj）—— 本用例需真实几何才有判别力",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    },
+    {
+      "test": "tests.test_mesh3d_obj_ngon_guard::test_g_真实模型逐面型读数与帧一致",
+      "reason": "真实模型不在本机：/mnt/d/DSH/blender/out/wmtest/arm/mesh.obj",
+      "category": "Missing original model or frozen pixel/metric artifact"
+    }
+  ],
+  "remaining_unexecuted_count": 20,
+  "remaining_categories": {
+    "Missing original model or frozen pixel/metric artifact": 17,
+    "Windows cannot express POSIX chmod permissions": 3
+  },
+  "supplemental_runs": {
+    "frozen_baseline": "43 passed, 0 skipped; 4 of these were skipped in the main run",
+    "symlink": "3 original test bodies passed after actual capability probe; 3 were skipped in the main run",
+    "controlled_timing": "4 passed serially; 1 was skipped in the main parallel run"
+  },
+  "counting_note": "Supplemental runs overlap main passed cases. They are not added to the main pytest passed count. Main failure and skip records are unchanged."
+}

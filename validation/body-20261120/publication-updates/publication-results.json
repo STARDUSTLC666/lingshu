@@ -1,0 +1,156 @@
+[
+  {
+    "kind": "pr",
+    "number": 1469,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1469",
+    "verified": true,
+    "already_applied": false,
+    "edit_returncode": 0,
+    "head": "cc68a82baace16e92ff6ce770330b65102a530a5",
+    "body_sha256": "01567f9543dd4447c7a5139101e51d01813e8f080a5cd6db4b6ea20e75be180f",
+    "intake_header_preserved": true
+  },
+  {
+    "kind": "pr",
+    "number": 1470,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1470",
+    "verified": true,
+    "already_applied": false,
+    "edit_returncode": 0,
+    "head": "433befa7b356eebecbc457ecd8f8a123ec1540cc",
+    "body_sha256": "94cb984d465fe83f5934742b7a473d85aa1ff213dd5111218d899dc028df9012",
+    "intake_header_preserved": true
+  },
+  {
+    "kind": "pr",
+    "number": 1471,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1471",
+    "verified": true,
+    "already_applied": false,
+    "edit_returncode": 0,
+    "head": "39d379552f34026ef46ad0515831319b1494a5d3",
+    "body_sha256": "9b0938c974aee3ae54db4e051b02094e89a50affe516206beb38d59ed3538683",
+    "intake_header_preserved": true
+  },
+  {
+    "kind": "pr",
+    "number": 1472,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1472",
+    "verified": true,
+    "already_applied": false,
+    "edit_returncode": 0,
+    "head": "a663512dd0fbc44a9fb08a55751951009586d172",
+    "body_sha256": "5af63fc33b334709198929fd7616d356c6acd7cac703fce5368eeb03c4a28cce",
+    "intake_header_preserved": true
+  },
+  {
+    "kind": "pr",
+    "number": 1473,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1473",
+    "verified": true,
+    "already_applied": false,
+    "edit_returncode": 0,
+    "head": "cff189b3438623feaebdf1a874fafdd03080acb1",
+    "body_sha256": "1e480485aee133c28a2435929bbc3eee8efb025e049491697710ed48f511b49e",
+    "intake_header_preserved": true
+  },
+  {
+    "kind": "pr",
+    "number": 1474,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1474",
+    "verified": true,
+    "already_applied": false,
+    "edit_returncode": 0,
+    "head": "fb6c9cabc939a6defcc44ef661b3048d47155d87",
+    "body_sha256": "c0a1d50212c2bfaac4723f184777e3dac90950d1822083338fe3bcb84f94e756",
+    "intake_header_preserved": true
+  },
+  {
+    "kind": "pr",
+    "number": 1475,
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1475",
+    "verified": true,
+    "already_applied": false,
+    "edit_returncode": 0,
+    "head": "e0771a810b8846676f3545542b2e70d5e0011467",
+    "body_sha256": "c8b361a835f33159bfcd547f7185b3ce6ec922ee37ac864fa2019f9cee63bd11",
+    "intake_header_preserved": true
+  },
+  {
+    "kind": "issue",
+    "number": 2783,
+    "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2783",
+    "verified": true,
+    "already_applied": false,
+    "edit_returncode": 0,
+    "head": "cc68a82baace16e92ff6ce770330b65102a530a5",
+    "body_sha256": "a706f9e8dff1f7e9b5062b1392c7a9fe1ccee7191be2501548514c31a773e20b",
+    "intake_header_preserved": true
+  },
+  {
+    "kind": "issue",
+    "number": 2784,
+    "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2784",
+    "verified": true,
+    "already_applied": false,
+    "edit_returncode": 0,
+    "head": "433befa7b356eebecbc457ecd8f8a123ec1540cc",
+    "body_sha256": "88d7230516abf4e4865af2808a530ad247c2257029e9f20d57a0be2f3238af61",
+    "intake_header_preserved": true
+  },
+  {
+    "kind": "issue",
+    "number": 2785,
+    "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2785",
+    "verified": true,
+    "already_applied": false,
+    "edit_returncode": 0,
+    "head": "39d379552f34026ef46ad0515831319b1494a5d3",
+    "body_sha256": "b9915768b1a6c9378143a64a601cbf513b20f6164aa4c40d78349c8bf785f592",
+    "intake_header_preserved": true
+  },
+  {
+    "kind": "issue",
+    "number": 2786,
+    "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2786",
+    "verified": true,
+    "already_applied": false,
+    "edit_returncode": 0,
+    "head": "a663512dd0fbc44a9fb08a55751951009586d172",
+    "body_sha256": "878119b3b56042605ce38a3933026311a05ff0580eff836a1914f0cd51fb19d6",
+    "intake_header_preserved": true
+  },
+  {
+    "kind": "issue",
+    "number": 2787,
+    "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2787",
+    "verified": true,
+    "already_applied": false,
+    "edit_returncode": 0,
+    "head": "cff189b3438623feaebdf1a874fafdd03080acb1",
+    "body_sha256": "dd48eca2cc3fe48aa1658422b2cc87360396b9cbc66d6cea507faa4ef8d09d00",
+    "intake_header_preserved": true
+  },
+  {
+    "kind": "issue",
+    "number": 2788,
+    "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2788",
+    "verified": true,
+    "already_applied": false,
+    "edit_returncode": 0,
+    "head": "fb6c9cabc939a6defcc44ef661b3048d47155d87",
+    "body_sha256": "fdb196838d725864ba327be0d315e79367f36407bb170208214be9013406a909",
+    "intake_header_preserved": true
+  },
+  {
+    "kind": "issue",
+    "number": 2789,
+    "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2789",
+    "verified": true,
+    "already_applied": false,
+    "edit_returncode": 0,
+    "head": "e0771a810b8846676f3545542b2e70d5e0011467",
+    "body_sha256": "7ffcdd6bad833a22a4d1075fcf01ad6f8534d0ba97aabeff577cde4523494e43",
+    "intake_header_preserved": true
+  }
+]

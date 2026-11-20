@@ -1,0 +1,36 @@
+{
+  "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "target": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+  "conclusion": "No newly introduced material regression found in the reviewed production diff and call paths.",
+  "blocking_findings": [],
+  "read_only": true,
+  "full_tests_rerun": false,
+  "source_clean_after_review": true,
+  "production_files_reviewed": [
+    "lingshu/core/core.py",
+    "lingshu/core/longterm_gate.py",
+    "lingshu/world/motion_groups.py",
+    "lingshu/nn/hex_cnn.py",
+    "lingshu/vision/lineart.py",
+    "lingshu/world/physics.py",
+    "bridges/blender/wm_bridge/factory/anim/eval.py"
+  ],
+  "helper_reviewed": "tools/testing/replay_save_guards.py",
+  "sat_domain": {
+    "normalization": "Each row normalized before determinant/triple-product check",
+    "reject_if": "abs(dot(axis0, cross(axis1, axis2))) <= 1e-9",
+    "threshold": 1e-09,
+    "oracle_domain_not_extrapolated": "abs(det) > 0.15 does not establish nearly singular behavior"
+  },
+  "intentional_input_domain_changes": [
+    "Exact pendulum finite numeric inputs and finite phase product",
+    "Exact pendulum abs(theta0_rad) < pi",
+    "Body exact pendulum tol_deg in [0,180]",
+    "Numerically degenerate SAT frames rejected"
+  ],
+  "compatibility_statement": "Preserves supported-path signatures and result schemas; does not promise every previously accepted invalid/coercible input or corrected numerical output remains unchanged.",
+  "reports": {
+    "README.md": "2dbb771936306690209505b7e7f791a744945c1a1bfa0748819f85a8d46ab212",
+    "core-identity-review.md": "bdbdcf80cc1055de5f7749bcea8bea28e7265a358643dbe066585a3f6f3b442d"
+  }
+}

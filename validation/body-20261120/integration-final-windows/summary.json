@@ -1,0 +1,1725 @@
+{
+  "root": "[workspace]\\lingshu\\work\\lingshu-body-integration-20261120",
+  "head": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+  "status_before": "",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "source_snapshot_before": {
+    "sha256": "2d6e6a8ba4e3e418b1f385054b84cac3c0802a65ae6b27fc8ae3bc11503860a9",
+    "file_count": 1618,
+    "convention": "Git HEAD/status plus raw bytes of tracked and nonignored untracked files"
+  },
+  "executable": "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+  "workers": 4,
+  "lingshu_import_path": "[workspace]\\lingshu\\work\\lingshu-body-integration-20261120\\lingshu\\__init__.py",
+  "inherited_pythonpath": null,
+  "inherited_pytest_addopts": null,
+  "dependencies": {
+    "numpy": "2.5.5",
+    "Pillow": "12.3.0",
+    "scipy": "1.18.1",
+    "pytest": "9.2.0",
+    "pytest-xdist": "3.8.0",
+    "PyYAML": "6.0.3",
+    "markdown-it-py": "4.3.0"
+  },
+  "git_version": "git version 2.54.0.windows.1",
+  "brain": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\brain-pinned",
+  "brain_expected_head": "98d6b899533a82fb1047f952987229c62a9929fb",
+  "brain_head": "98d6b899533a82fb1047f952987229c62a9929fb",
+  "brain_status_before": "",
+  "openssl": "C:\\Program Files\\Git\\mingw64\\bin\\openssl.EXE",
+  "openssl_version": {
+    "returncode": 0,
+    "stdout": "OpenSSL 3.5.6 7 Apr 2026 (Library: OpenSSL 3.5.6 7 Apr 2026)\nbuilt on: Tue Apr 14 14:00:29 2026 UTC\nplatform: mingw64\noptions:  bn(64,64)\ncompiler: gcc -m64 -Wall -O3 -DL_ENDIAN -DOPENSSL_PIC -DUNICODE -D_UNICODE -DWIN32_LEAN_AND_MEAN -D_MT -DOPENSSL_BUILDING_OPENSSL -DZLIB -DZLIB_SHARED -DNDEBUG -DOPENSSLBIN=\"\\\\\"/mingw64/bin\\\\\"\"\nOPENSSLDIR: \"/mingw64/etc/ssl\"\nENGINESDIR: \"/mingw64/lib/engines-3\"\nMODULESDIR: \"/mingw64/lib/ossl-modules\"\nSeeding source: os-specific\nCPUINFO: OPENSSL_ia32cap=0xfed8320b078bffff:0x00405fc6f1bf97a9:0x0000002000000010:0x0000000000000000:0x0000000000000000\n",
+    "stderr": ""
+  },
+  "workflow_sha256": "bad4c9471f71ac7af55ba3e153500cf9c6b4f2f194961d4556c7ecfa39fbf0a4",
+  "driver_sha256": "d76b23c179e4940b0798101ef196b8d6405692cf6fca6e43c4815b1fc78bec45",
+  "environment_overrides": {
+    "PYTHONUTF8": "1",
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTEST_ADDOPTS": "",
+    "TEMP": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\tmp",
+    "TMP": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\tmp",
+    "MDCG_BRAIN_PYTHONPATH": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\brain-pinned"
+  },
+  "started_utc": "2026-11-20T13:49:47+00:00",
+  "script_results": [
+    {
+      "name": "script_000_test_brain_store",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_brain_store.py"
+      ],
+      "returncode": 0,
+      "seconds": 4.058,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_000_test_brain_store.log",
+      "test": "tests/test_brain_store.py"
+    },
+    {
+      "name": "script_001_test_wm_verify_unobserved",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_wm_verify_unobserved.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.413,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_001_test_wm_verify_unobserved.log",
+      "test": "tests/test_wm_verify_unobserved.py"
+    },
+    {
+      "name": "script_002_test_hex_cnn",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_hex_cnn.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.3,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_002_test_hex_cnn.log",
+      "test": "tests/test_hex_cnn.py"
+    },
+    {
+      "name": "script_003_test_hex_composite",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_hex_composite.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.282,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_003_test_hex_composite.log",
+      "test": "tests/test_hex_composite.py"
+    },
+    {
+      "name": "script_004_test_hex_gen",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_hex_gen.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.438,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_004_test_hex_gen.log",
+      "test": "tests/test_hex_gen.py"
+    },
+    {
+      "name": "script_005_test_core_export_all",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_core_export_all.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.387,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_005_test_core_export_all.log",
+      "test": "tests/test_core_export_all.py"
+    },
+    {
+      "name": "script_006_test_scene_follow_patrol",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_scene_follow_patrol.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.195,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_006_test_scene_follow_patrol.log",
+      "test": "tests/test_scene_follow_patrol.py"
+    },
+    {
+      "name": "script_007_test_issue145_causal_depth_cycles",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue145_causal_depth_cycles.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.669,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_007_test_issue145_causal_depth_cycles.log",
+      "test": "tests/test_issue145_causal_depth_cycles.py"
+    },
+    {
+      "name": "script_008_test_causal_end_id_truncation",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_causal_end_id_truncation.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.598,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_008_test_causal_end_id_truncation.log",
+      "test": "tests/test_causal_end_id_truncation.py"
+    },
+    {
+      "name": "script_009_test_coggraph_r4_and_viewer",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_coggraph_r4_and_viewer.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.483,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_009_test_coggraph_r4_and_viewer.log",
+      "test": "tests/test_coggraph_r4_and_viewer.py"
+    },
+    {
+      "name": "script_010_test_coggraph_generic_tag",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_coggraph_generic_tag.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.119,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_010_test_coggraph_generic_tag.log",
+      "test": "tests/test_coggraph_generic_tag.py"
+    },
+    {
+      "name": "script_011_test_hexgen_multi_seed_metric",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_hexgen_multi_seed_metric.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.297,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_011_test_hexgen_multi_seed_metric.log",
+      "test": "tests/test_hexgen_multi_seed_metric.py"
+    },
+    {
+      "name": "script_012_test_longterm_gate_novelty",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_longterm_gate_novelty.py"
+      ],
+      "returncode": 0,
+      "seconds": 3.435,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_012_test_longterm_gate_novelty.log",
+      "test": "tests/test_longterm_gate_novelty.py"
+    },
+    {
+      "name": "script_013_test_state_write_observable",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_state_write_observable.py"
+      ],
+      "returncode": 0,
+      "seconds": 9.541,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_013_test_state_write_observable.log",
+      "test": "tests/test_state_write_observable.py"
+    },
+    {
+      "name": "script_014_test_coggraph_naming_report",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_coggraph_naming_report.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.416,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_014_test_coggraph_naming_report.log",
+      "test": "tests/test_coggraph_naming_report.py"
+    },
+    {
+      "name": "script_015_test_issue606_naming_r5in_phantom_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue606_naming_r5in_phantom_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.027,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_015_test_issue606_naming_r5in_phantom_guard.log",
+      "test": "tests/test_issue606_naming_r5in_phantom_guard.py"
+    },
+    {
+      "name": "script_016_test_skeleton_fk_order_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_skeleton_fk_order_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.195,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_016_test_skeleton_fk_order_guard.log",
+      "test": "tests/test_skeleton_fk_order_guard.py"
+    },
+    {
+      "name": "script_017_test_expression_render_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_expression_render_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.541,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_017_test_expression_render_guard.log",
+      "test": "tests/test_expression_render_guard.py"
+    },
+    {
+      "name": "script_018_test_hex_grid_extent",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_hex_grid_extent.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.515,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_018_test_hex_grid_extent.log",
+      "test": "tests/test_hex_grid_extent.py"
+    },
+    {
+      "name": "script_019_test_hex_text_contracts",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_hex_text_contracts.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.274,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_019_test_hex_text_contracts.log",
+      "test": "tests/test_hex_text_contracts.py"
+    },
+    {
+      "name": "script_020_test_issue_ingest_scene_state_batch",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_ingest_scene_state_batch.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.091,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_020_test_issue_ingest_scene_state_batch.log",
+      "test": "tests/test_issue_ingest_scene_state_batch.py"
+    },
+    {
+      "name": "script_021_test_core_nplus1_getstats_forgetadvisor",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_core_nplus1_getstats_forgetadvisor.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.326,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_021_test_core_nplus1_getstats_forgetadvisor.log",
+      "test": "tests/test_core_nplus1_getstats_forgetadvisor.py"
+    },
+    {
+      "name": "script_022_test_traverse_frontier_batch",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_traverse_frontier_batch.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.518,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_022_test_traverse_frontier_batch.log",
+      "test": "tests/test_traverse_frontier_batch.py"
+    },
+    {
+      "name": "script_023_test_prediction_path_nodes_single_fetch",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_prediction_path_nodes_single_fetch.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.095,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_023_test_prediction_path_nodes_single_fetch.log",
+      "test": "tests/test_prediction_path_nodes_single_fetch.py"
+    },
+    {
+      "name": "script_024_test_coggraph_utf8_bom",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_coggraph_utf8_bom.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.332,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_024_test_coggraph_utf8_bom.log",
+      "test": "tests/test_coggraph_utf8_bom.py"
+    },
+    {
+      "name": "script_025_test_issue454_unpack_out_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue454_unpack_out_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.747,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_025_test_issue454_unpack_out_guard.log",
+      "test": "tests/test_issue454_unpack_out_guard.py"
+    },
+    {
+      "name": "script_026_test_issue_get_edge_id_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_get_edge_id_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.223,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_026_test_issue_get_edge_id_type_guard.log",
+      "test": "tests/test_issue_get_edge_id_type_guard.py"
+    },
+    {
+      "name": "script_027_test_issue_increment_access_id_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_increment_access_id_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.236,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_027_test_issue_increment_access_id_type_guard.log",
+      "test": "tests/test_issue_increment_access_id_type_guard.py"
+    },
+    {
+      "name": "script_028_test_issue_traverse_start_id_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_traverse_start_id_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.223,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_028_test_issue_traverse_start_id_type_guard.log",
+      "test": "tests/test_issue_traverse_start_id_type_guard.py"
+    },
+    {
+      "name": "script_029_test_issue_prune_action_logs_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_prune_action_logs_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.22,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_029_test_issue_prune_action_logs_type_guard.log",
+      "test": "tests/test_issue_prune_action_logs_type_guard.py"
+    },
+    {
+      "name": "script_030_test_issue_get-incoming-edges_id_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_get-incoming-edges_id_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.23,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_030_test_issue_get-incoming-edges_id_type_guard.log",
+      "test": "tests/test_issue_get-incoming-edges_id_type_guard.py"
+    },
+    {
+      "name": "script_031_test_issue_get-outgoing-edges_id_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_get-outgoing-edges_id_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.24,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_031_test_issue_get-outgoing-edges_id_type_guard.log",
+      "test": "tests/test_issue_get-outgoing-edges_id_type_guard.py"
+    },
+    {
+      "name": "script_032_test_issue_escalation_code_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_escalation_code_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.237,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_032_test_issue_escalation_code_type_guard.log",
+      "test": "tests/test_issue_escalation_code_type_guard.py"
+    },
+    {
+      "name": "script_033_test_issue_prune_self_keep_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_prune_self_keep_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.249,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_033_test_issue_prune_self_keep_type_guard.log",
+      "test": "tests/test_issue_prune_self_keep_type_guard.py"
+    },
+    {
+      "name": "script_034_test_issue_get_nodes_by_tag_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_get_nodes_by_tag_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.242,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_034_test_issue_get_nodes_by_tag_type_guard.log",
+      "test": "tests/test_issue_get_nodes_by_tag_type_guard.py"
+    },
+    {
+      "name": "script_035_test_issue_get_nodes_by_tag_limit_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_get_nodes_by_tag_limit_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.262,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_035_test_issue_get_nodes_by_tag_limit_type_guard.log",
+      "test": "tests/test_issue_get_nodes_by_tag_limit_type_guard.py"
+    },
+    {
+      "name": "script_036_test_issue_increment_many_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_increment_many_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.241,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_036_test_issue_increment_many_type_guard.log",
+      "test": "tests/test_issue_increment_many_type_guard.py"
+    },
+    {
+      "name": "script_037_test_issue_update_importance_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_update_importance_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.254,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_037_test_issue_update_importance_type_guard.log",
+      "test": "tests/test_issue_update_importance_type_guard.py"
+    },
+    {
+      "name": "script_038_test_issue_update_confidence_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_update_confidence_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.235,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_038_test_issue_update_confidence_type_guard.log",
+      "test": "tests/test_issue_update_confidence_type_guard.py"
+    },
+    {
+      "name": "script_039_test_issue_get_skill_by_name_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_get_skill_by_name_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.24,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_039_test_issue_get_skill_by_name_type_guard.log",
+      "test": "tests/test_issue_get_skill_by_name_type_guard.py"
+    },
+    {
+      "name": "script_040_test_issue_search_skills_query_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_search_skills_query_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.229,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_040_test_issue_search_skills_query_type_guard.log",
+      "test": "tests/test_issue_search_skills_query_type_guard.py"
+    },
+    {
+      "name": "script_041_test_issue_recent_context_limit_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_recent_context_limit_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.231,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_041_test_issue_recent_context_limit_type_guard.log",
+      "test": "tests/test_issue_recent_context_limit_type_guard.py"
+    },
+    {
+      "name": "script_042_test_issue_update_skill_confidence_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_update_skill_confidence_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.219,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_042_test_issue_update_skill_confidence_type_guard.log",
+      "test": "tests/test_issue_update_skill_confidence_type_guard.py"
+    },
+    {
+      "name": "script_043_test_issue_append_skill_procedure_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_append_skill_procedure_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.254,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_043_test_issue_append_skill_procedure_type_guard.log",
+      "test": "tests/test_issue_append_skill_procedure_type_guard.py"
+    },
+    {
+      "name": "script_044_test_issue_jaccard_arg_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_jaccard_arg_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.222,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_044_test_issue_jaccard_arg_type_guard.log",
+      "test": "tests/test_issue_jaccard_arg_type_guard.py"
+    },
+    {
+      "name": "script_045_test_issue_expand_terms_query_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_expand_terms_query_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.223,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_045_test_issue_expand_terms_query_type_guard.log",
+      "test": "tests/test_issue_expand_terms_query_type_guard.py"
+    },
+    {
+      "name": "script_046_test_issue_range_time_layer_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_range_time_layer_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.231,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_046_test_issue_range_time_layer_type_guard.log",
+      "test": "tests/test_issue_range_time_layer_type_guard.py"
+    },
+    {
+      "name": "script_047_test_issue_by_time_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_by_time_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.245,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_047_test_issue_by_time_type_guard.log",
+      "test": "tests/test_issue_by_time_type_guard.py"
+    },
+    {
+      "name": "script_048_test_issue_subgraph_root_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_subgraph_root_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.22,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_048_test_issue_subgraph_root_type_guard.log",
+      "test": "tests/test_issue_subgraph_root_type_guard.py"
+    },
+    {
+      "name": "script_049_test_issue_find_cycles_depth_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_find_cycles_depth_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.223,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_049_test_issue_find_cycles_depth_type_guard.log",
+      "test": "tests/test_issue_find_cycles_depth_type_guard.py"
+    },
+    {
+      "name": "script_050_test_issue_spatiotemporal_center_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_spatiotemporal_center_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.236,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_050_test_issue_spatiotemporal_center_type_guard.log",
+      "test": "tests/test_issue_spatiotemporal_center_type_guard.py"
+    },
+    {
+      "name": "script_051_test_issue_insight_content_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_insight_content_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.256,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_051_test_issue_insight_content_type_guard.log",
+      "test": "tests/test_issue_insight_content_type_guard.py"
+    },
+    {
+      "name": "script_052_test_issue_count_layer_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_count_layer_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.277,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_052_test_issue_count_layer_type_guard.log",
+      "test": "tests/test_issue_count_layer_type_guard.py"
+    },
+    {
+      "name": "script_053_test_issue_get_meta_key_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_get_meta_key_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.261,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_053_test_issue_get_meta_key_type_guard.log",
+      "test": "tests/test_issue_get_meta_key_type_guard.py"
+    },
+    {
+      "name": "script_054_test_issue_tag_node_missing_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_tag_node_missing_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.239,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_054_test_issue_tag_node_missing_guard.log",
+      "test": "tests/test_issue_tag_node_missing_guard.py"
+    },
+    {
+      "name": "script_055_test_issue_verify_edge_id_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_verify_edge_id_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.26,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_055_test_issue_verify_edge_id_type_guard.log",
+      "test": "tests/test_issue_verify_edge_id_type_guard.py"
+    },
+    {
+      "name": "script_056_test_issue_scene_pos_readable_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_pos_readable_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.202,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_056_test_issue_scene_pos_readable_guard.log",
+      "test": "tests/test_issue_scene_pos_readable_guard.py"
+    },
+    {
+      "name": "script_057_test_issue_scene_path_points_readable_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_path_points_readable_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.181,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_057_test_issue_scene_path_points_readable_guard.log",
+      "test": "tests/test_issue_scene_path_points_readable_guard.py"
+    },
+    {
+      "name": "script_058_test_issue_untag_node_id_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_untag_node_id_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.295,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_058_test_issue_untag_node_id_type_guard.log",
+      "test": "tests/test_issue_untag_node_id_type_guard.py"
+    },
+    {
+      "name": "script_059_test_issue_query_layer_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_query_layer_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.23,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_059_test_issue_query_layer_type_guard.log",
+      "test": "tests/test_issue_query_layer_type_guard.py"
+    },
+    {
+      "name": "script_060_test_issue_scene_step_int_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_step_int_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.198,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_060_test_issue_scene_step_int_guard.log",
+      "test": "tests/test_issue_scene_step_int_guard.py"
+    },
+    {
+      "name": "script_061_test_issue_rejected_path_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_rejected_path_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.24,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_061_test_issue_rejected_path_type_guard.log",
+      "test": "tests/test_issue_rejected_path_type_guard.py"
+    },
+    {
+      "name": "script_062_test_issue_scene_trees_range_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_trees_range_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.203,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_062_test_issue_scene_trees_range_guard.log",
+      "test": "tests/test_issue_scene_trees_range_guard.py"
+    },
+    {
+      "name": "script_063_test_issue_search_layers_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_search_layers_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.251,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_063_test_issue_search_layers_type_guard.log",
+      "test": "tests/test_issue_search_layers_type_guard.py"
+    },
+    {
+      "name": "script_064_test_issue_insight_evidence_str_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_insight_evidence_str_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.309,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_064_test_issue_insight_evidence_str_guard.log",
+      "test": "tests/test_issue_insight_evidence_str_guard.py"
+    },
+    {
+      "name": "script_065_test_issue_scene_goal_str_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_goal_str_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.194,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_065_test_issue_scene_goal_str_guard.log",
+      "test": "tests/test_issue_scene_goal_str_guard.py"
+    },
+    {
+      "name": "script_066_test_issue_scene_water_bool_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_water_bool_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.179,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_066_test_issue_scene_water_bool_guard.log",
+      "test": "tests/test_issue_scene_water_bool_guard.py"
+    },
+    {
+      "name": "script_067_test_issue_blindspot_str_args_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_blindspot_str_args_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.252,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_067_test_issue_blindspot_str_args_guard.log",
+      "test": "tests/test_issue_blindspot_str_args_guard.py"
+    },
+    {
+      "name": "script_068_test_issue_scene_behavior_str_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_behavior_str_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.18,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_068_test_issue_scene_behavior_str_guard.log",
+      "test": "tests/test_issue_scene_behavior_str_guard.py"
+    },
+    {
+      "name": "script_069_test_issue_add_path_id_str_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_add_path_id_str_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.205,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_069_test_issue_add_path_id_str_guard.log",
+      "test": "tests/test_issue_add_path_id_str_guard.py"
+    },
+    {
+      "name": "script_070_test_issue_insight_importance_range_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_insight_importance_range_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.284,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_070_test_issue_insight_importance_range_guard.log",
+      "test": "tests/test_issue_insight_importance_range_guard.py"
+    },
+    {
+      "name": "script_071_test_issue_auto_decay_interval_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_auto_decay_interval_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.576,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_071_test_issue_auto_decay_interval_guard.log",
+      "test": "tests/test_issue_auto_decay_interval_guard.py"
+    },
+    {
+      "name": "script_072_test_issue_conflict_self_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_conflict_self_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.281,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_072_test_issue_conflict_self_guard.log",
+      "test": "tests/test_issue_conflict_self_guard.py"
+    },
+    {
+      "name": "script_073_test_issue_insight_conditions_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_insight_conditions_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.343,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_073_test_issue_insight_conditions_type_guard.log",
+      "test": "tests/test_issue_insight_conditions_type_guard.py"
+    },
+    {
+      "name": "script_074_test_issue_dedup_config_args_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_dedup_config_args_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.252,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_074_test_issue_dedup_config_args_guard.log",
+      "test": "tests/test_issue_dedup_config_args_guard.py"
+    },
+    {
+      "name": "script_075_test_issue_insight_window_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_insight_window_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.249,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_075_test_issue_insight_window_type_guard.log",
+      "test": "tests/test_issue_insight_window_type_guard.py"
+    },
+    {
+      "name": "script_076_test_issue_add_edge_cs_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_add_edge_cs_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.299,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_076_test_issue_add_edge_cs_type_guard.log",
+      "test": "tests/test_issue_add_edge_cs_type_guard.py"
+    },
+    {
+      "name": "script_077_test_issue_register_conflict_cs_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_register_conflict_cs_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.26,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_077_test_issue_register_conflict_cs_type_guard.log",
+      "test": "tests/test_issue_register_conflict_cs_type_guard.py"
+    },
+    {
+      "name": "script_078_test_issue_spatial_coords_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_spatial_coords_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.241,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_078_test_issue_spatial_coords_type_guard.log",
+      "test": "tests/test_issue_spatial_coords_type_guard.py"
+    },
+    {
+      "name": "script_079_test_issue_search_content_query_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_search_content_query_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.258,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_079_test_issue_search_content_query_type_guard.log",
+      "test": "tests/test_issue_search_content_query_type_guard.py"
+    },
+    {
+      "name": "script_080_test_issue_export_path_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_export_path_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.255,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_080_test_issue_export_path_type_guard.log",
+      "test": "tests/test_issue_export_path_type_guard.py"
+    },
+    {
+      "name": "script_081_test_issue_import_path_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_import_path_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.244,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_081_test_issue_import_path_type_guard.log",
+      "test": "tests/test_issue_import_path_type_guard.py"
+    },
+    {
+      "name": "script_082_test_issue_set_meta_key_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_set_meta_key_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.279,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_082_test_issue_set_meta_key_type_guard.log",
+      "test": "tests/test_issue_set_meta_key_type_guard.py"
+    },
+    {
+      "name": "script_083_test_issue_decay_factor_range_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_decay_factor_range_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.409,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_083_test_issue_decay_factor_range_guard.log",
+      "test": "tests/test_issue_decay_factor_range_guard.py"
+    },
+    {
+      "name": "script_084_test_issue_min_confidence_range_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_min_confidence_range_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.313,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_084_test_issue_min_confidence_range_guard.log",
+      "test": "tests/test_issue_min_confidence_range_guard.py"
+    },
+    {
+      "name": "script_085_test_issue_scene_speed_negative_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_speed_negative_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.215,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_085_test_issue_scene_speed_negative_guard.log",
+      "test": "tests/test_issue_scene_speed_negative_guard.py"
+    },
+    {
+      "name": "script_086_test_issue_time_core_arg_types_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_time_core_arg_types_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.119,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_086_test_issue_time_core_arg_types_guard.log",
+      "test": "tests/test_issue_time_core_arg_types_guard.py"
+    },
+    {
+      "name": "script_087_test_issue_gap_dual_arg_types_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_gap_dual_arg_types_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.127,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_087_test_issue_gap_dual_arg_types_guard.log",
+      "test": "tests/test_issue_gap_dual_arg_types_guard.py"
+    },
+    {
+      "name": "script_088_test_issue_protect_reason_empty_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_protect_reason_empty_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.274,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_088_test_issue_protect_reason_empty_guard.log",
+      "test": "tests/test_issue_protect_reason_empty_guard.py"
+    },
+    {
+      "name": "script_089_test_issue_blindspot_input_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_blindspot_input_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.256,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_089_test_issue_blindspot_input_guard.log",
+      "test": "tests/test_issue_blindspot_input_guard.py"
+    },
+    {
+      "name": "script_090_test_issue_hex_extract_args_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_hex_extract_args_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.255,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_090_test_issue_hex_extract_args_guard.log",
+      "test": "tests/test_issue_hex_extract_args_guard.py"
+    },
+    {
+      "name": "script_091_test_issue_insight_level_type_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_insight_level_type_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.288,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_091_test_issue_insight_level_type_guard.log",
+      "test": "tests/test_issue_insight_level_type_guard.py"
+    },
+    {
+      "name": "script_092_test_issue_add_edge_missing_endpoint_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_add_edge_missing_endpoint_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.226,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_092_test_issue_add_edge_missing_endpoint_guard.log",
+      "test": "tests/test_issue_add_edge_missing_endpoint_guard.py"
+    },
+    {
+      "name": "script_093_test_issue_condition_normalize_nondict_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_condition_normalize_nondict_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.125,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_093_test_issue_condition_normalize_nondict_guard.log",
+      "test": "tests/test_issue_condition_normalize_nondict_guard.py"
+    },
+    {
+      "name": "script_094_test_issue281_insight_report_conditions_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue281_insight_report_conditions_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.52,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_094_test_issue281_insight_report_conditions_guard.log",
+      "test": "tests/test_issue281_insight_report_conditions_guard.py"
+    },
+    {
+      "name": "script_095_test_issue_context_cap_negative_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_context_cap_negative_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.434,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_095_test_issue_context_cap_negative_guard.log",
+      "test": "tests/test_issue_context_cap_negative_guard.py"
+    },
+    {
+      "name": "script_096_test_issue_verdict_input_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue_verdict_input_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.135,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_096_test_issue_verdict_input_guard.log",
+      "test": "tests/test_issue_verdict_input_guard.py"
+    },
+    {
+      "name": "script_097_test_issue274_structural_influence_guard",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue274_structural_influence_guard.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.355,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_097_test_issue274_structural_influence_guard.log",
+      "test": "tests/test_issue274_structural_influence_guard.py"
+    },
+    {
+      "name": "script_098_test_issue521_activation_conflict_veto",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue521_activation_conflict_veto.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.864,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_098_test_issue521_activation_conflict_veto.log",
+      "test": "tests/test_issue521_activation_conflict_veto.py"
+    },
+    {
+      "name": "script_099_test_issue481_snapshot_divergence",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue481_snapshot_divergence.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.441,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_099_test_issue481_snapshot_divergence.log",
+      "test": "tests/test_issue481_snapshot_divergence.py"
+    },
+    {
+      "name": "script_100_test_issue487b_launch_dir",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue487b_launch_dir.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.233,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_100_test_issue487b_launch_dir.log",
+      "test": "tests/test_issue487b_launch_dir.py"
+    },
+    {
+      "name": "script_101_test_issue825_text_gates",
+      "command": [
+        "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "tests/test_issue825_text_gates.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.105,
+      "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\script_101_test_issue825_text_gates.log",
+      "test": "tests/test_issue825_text_gates.py"
+    }
+  ],
+  "pytest": {
+    "name": "pytest_full",
+    "command": [
+      "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "pytest",
+      "tests/",
+      "-q",
+      "-n",
+      "4",
+      "--dist",
+      "loadfile",
+      "--tb=short",
+      "--durations=40",
+      "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\pytest.xml",
+      "--basetemp=[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\tmp\\pytest",
+      "--ignore=tests/test_brain_store.py",
+      "--ignore=tests/test_wm_verify_unobserved.py",
+      "--ignore=tests/test_hex_cnn.py",
+      "--ignore=tests/test_hex_composite.py",
+      "--ignore=tests/test_hex_gen.py",
+      "--ignore=tests/test_core_export_all.py",
+      "--ignore=tests/test_scene_follow_patrol.py",
+      "--ignore=tests/test_issue145_causal_depth_cycles.py",
+      "--ignore=tests/test_causal_end_id_truncation.py",
+      "--ignore=tests/test_coggraph_r4_and_viewer.py",
+      "--ignore=tests/test_coggraph_generic_tag.py",
+      "--ignore=tests/test_hexgen_multi_seed_metric.py",
+      "--ignore=tests/test_longterm_gate_novelty.py",
+      "--ignore=tests/test_state_write_observable.py",
+      "--ignore=tests/test_coggraph_naming_report.py",
+      "--ignore=tests/test_issue606_naming_r5in_phantom_guard.py",
+      "--ignore=tests/test_skeleton_fk_order_guard.py",
+      "--ignore=tests/test_expression_render_guard.py",
+      "--ignore=tests/test_hex_grid_extent.py",
+      "--ignore=tests/test_hex_text_contracts.py",
+      "--ignore=tests/test_issue_ingest_scene_state_batch.py",
+      "--ignore=tests/test_core_nplus1_getstats_forgetadvisor.py",
+      "--ignore=tests/test_traverse_frontier_batch.py",
+      "--ignore=tests/test_prediction_path_nodes_single_fetch.py",
+      "--ignore=tests/test_coggraph_utf8_bom.py",
+      "--ignore=tests/test_issue454_unpack_out_guard.py",
+      "--ignore=tests/test_issue_get_edge_id_type_guard.py",
+      "--ignore=tests/test_issue_increment_access_id_type_guard.py",
+      "--ignore=tests/test_issue_traverse_start_id_type_guard.py",
+      "--ignore=tests/test_issue_prune_action_logs_type_guard.py",
+      "--ignore=tests/test_issue_get-incoming-edges_id_type_guard.py",
+      "--ignore=tests/test_issue_get-outgoing-edges_id_type_guard.py",
+      "--ignore=tests/test_issue_escalation_code_type_guard.py",
+      "--ignore=tests/test_issue_prune_self_keep_type_guard.py",
+      "--ignore=tests/test_issue_get_nodes_by_tag_type_guard.py",
+      "--ignore=tests/test_issue_get_nodes_by_tag_limit_type_guard.py",
+      "--ignore=tests/test_issue_increment_many_type_guard.py",
+      "--ignore=tests/test_issue_update_importance_type_guard.py",
+      "--ignore=tests/test_issue_update_confidence_type_guard.py",
+      "--ignore=tests/test_issue_get_skill_by_name_type_guard.py",
+      "--ignore=tests/test_issue_search_skills_query_type_guard.py",
+      "--ignore=tests/test_issue_recent_context_limit_type_guard.py",
+      "--ignore=tests/test_issue_update_skill_confidence_type_guard.py",
+      "--ignore=tests/test_issue_append_skill_procedure_type_guard.py",
+      "--ignore=tests/test_issue_jaccard_arg_type_guard.py",
+      "--ignore=tests/test_issue_expand_terms_query_type_guard.py",
+      "--ignore=tests/test_issue_range_time_layer_type_guard.py",
+      "--ignore=tests/test_issue_by_time_type_guard.py",
+      "--ignore=tests/test_issue_subgraph_root_type_guard.py",
+      "--ignore=tests/test_issue_find_cycles_depth_type_guard.py",
+      "--ignore=tests/test_issue_spatiotemporal_center_type_guard.py",
+      "--ignore=tests/test_issue_insight_content_type_guard.py",
+      "--ignore=tests/test_issue_count_layer_type_guard.py",
+      "--ignore=tests/test_issue_get_meta_key_type_guard.py",
+      "--ignore=tests/test_issue_tag_node_missing_guard.py",
+      "--ignore=tests/test_issue_verify_edge_id_type_guard.py",
+      "--ignore=tests/test_issue_scene_pos_readable_guard.py",
+      "--ignore=tests/test_issue_scene_path_points_readable_guard.py",
+      "--ignore=tests/test_issue_untag_node_id_type_guard.py",
+      "--ignore=tests/test_issue_query_layer_type_guard.py",
+      "--ignore=tests/test_issue_scene_step_int_guard.py",
+      "--ignore=tests/test_issue_rejected_path_type_guard.py",
+      "--ignore=tests/test_issue_scene_trees_range_guard.py",
+      "--ignore=tests/test_issue_search_layers_type_guard.py",
+      "--ignore=tests/test_issue_insight_evidence_str_guard.py",
+      "--ignore=tests/test_issue_scene_goal_str_guard.py",
+      "--ignore=tests/test_issue_scene_water_bool_guard.py",
+      "--ignore=tests/test_issue_blindspot_str_args_guard.py",
+      "--ignore=tests/test_issue_scene_behavior_str_guard.py",
+      "--ignore=tests/test_issue_add_path_id_str_guard.py",
+      "--ignore=tests/test_issue_insight_importance_range_guard.py",
+      "--ignore=tests/test_issue_auto_decay_interval_guard.py",
+      "--ignore=tests/test_issue_conflict_self_guard.py",
+      "--ignore=tests/test_issue_insight_conditions_type_guard.py",
+      "--ignore=tests/test_issue_dedup_config_args_guard.py",
+      "--ignore=tests/test_issue_insight_window_type_guard.py",
+      "--ignore=tests/test_issue_add_edge_cs_type_guard.py",
+      "--ignore=tests/test_issue_register_conflict_cs_type_guard.py",
+      "--ignore=tests/test_issue_spatial_coords_type_guard.py",
+      "--ignore=tests/test_issue_search_content_query_type_guard.py",
+      "--ignore=tests/test_issue_export_path_type_guard.py",
+      "--ignore=tests/test_issue_import_path_type_guard.py",
+      "--ignore=tests/test_issue_set_meta_key_type_guard.py",
+      "--ignore=tests/test_issue_decay_factor_range_guard.py",
+      "--ignore=tests/test_issue_min_confidence_range_guard.py",
+      "--ignore=tests/test_issue_scene_speed_negative_guard.py",
+      "--ignore=tests/test_issue_time_core_arg_types_guard.py",
+      "--ignore=tests/test_issue_gap_dual_arg_types_guard.py",
+      "--ignore=tests/test_issue_protect_reason_empty_guard.py",
+      "--ignore=tests/test_issue_blindspot_input_guard.py",
+      "--ignore=tests/test_issue_hex_extract_args_guard.py",
+      "--ignore=tests/test_issue_insight_level_type_guard.py",
+      "--ignore=tests/test_issue_add_edge_missing_endpoint_guard.py",
+      "--ignore=tests/test_issue_condition_normalize_nondict_guard.py",
+      "--ignore=tests/test_issue281_insight_report_conditions_guard.py",
+      "--ignore=tests/test_issue_context_cap_negative_guard.py",
+      "--ignore=tests/test_issue_verdict_input_guard.py",
+      "--ignore=tests/test_issue274_structural_influence_guard.py",
+      "--ignore=tests/test_issue521_activation_conflict_veto.py",
+      "--ignore=tests/test_issue481_snapshot_divergence.py",
+      "--ignore=tests/test_issue487b_launch_dir.py",
+      "--ignore=tests/test_issue825_text_gates.py"
+    ],
+    "returncode": 1,
+    "seconds": 1384.212,
+    "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\pytest_full.log"
+  },
+  "junit_totals": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "1",
+      "skipped": "28",
+      "tests": "5800",
+      "time": "1382.900",
+      "timestamp": "2026-11-20T21:50:37.370214+08:00",
+      "hostname": "STARDUST"
+    }
+  ],
+  "skip_reasons": {
+    "冻结基线树不存在：E:\\lingshu\\base\\FuRongJun-1999-lingshu-124ea43（设 LINGSHU_BASE_TREE 指过去）": 4,
+    "turret 模型不在本机：/mnt/d/DSH/blender/out/wmtest/turret/mesh.obj": 6,
+    "没有冻结基线文件（E:\\lingshu\\work\\lingshu-body-integration-20261120\\tests\\..\\_evidence\\vec-svg\\baseline.json）": 3,
+    "本机 win32：`os.chmod(0o600)` 后 st_mode 仍为 0o666（Windows 只表达只读位）⇒ 0600 权限面不可端到端复现；该语义由 A3/B3/C3 打桩取证": 3,
+    "本机 win32：`os.symlink` 抛 OSError(22, '客户端没有所需的特权')（非开发者模式/无 SeCreateSymbolicLinkPrivilege）⇒ 符链面不可端到端复现；该语义由 A4/B4/C4 用 `..` 路径跨平台取证": 3,
+    "shade_metrics 不在本树（CI 无 _evidence/shade-paint/）—— 本用例需它做像素度量": 3,
+    "turret OBJ 不在本机": 1,
+    "hex01 真模型不在本机（/mnt/d/DSH/blender/out/hex01/deliver/HEX01.obj）—— 本用例需真实几何才有判别力": 3,
+    "真实模型不在本机：/mnt/d/DSH/blender/out/wmtest/arm/mesh.obj": 1,
+    "时间量具只在受控（串行）环境有效：`-n auto` 满载下本进程 CPU 时间也会被缓存/内存带宽争抢抬高（实测串行 0.02–0.03s、满载 >1s）——非受控测量不可判。CI（gate.yml）串行跑，Q2 在 CI 全效力；本地并行下 Q1/Q3/Q4 仍守语义。": 1
+  },
+  "skipped_tests": [
+    {
+      "test": "tests.test_physics_predict::test_G2_no_env_is_field_identical_to_legacy",
+      "reason": "冻结基线树不存在：[workspace]\\lingshu\\base\\FuRongJun-1999-lingshu-124ea43（设 LINGSHU_BASE_TREE 指过去）"
+    },
+    {
+      "test": "tests.test_physics_predict::test_G6_mutation_new_kinds_in_first_pass_turns_red",
+      "reason": "冻结基线树不存在：[workspace]\\lingshu\\base\\FuRongJun-1999-lingshu-124ea43（设 LINGSHU_BASE_TREE 指过去）"
+    },
+    {
+      "test": "tests.test_physics_predict::test_G7_mutation_env_used_key_turns_red",
+      "reason": "冻结基线树不存在：[workspace]\\lingshu\\base\\FuRongJun-1999-lingshu-124ea43（设 LINGSHU_BASE_TREE 指过去）"
+    },
+    {
+      "test": "tests.test_physics_predict::test_G2c_classify_field_set_frozen_against_baseline",
+      "reason": "冻结基线树不存在：[workspace]\\lingshu\\base\\FuRongJun-1999-lingshu-124ea43（设 LINGSHU_BASE_TREE 指过去）"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_b2_网格场景两次导出逐字节相同_真模型",
+      "reason": "turret 模型不在本机：/mnt/d/DSH/blender/out/wmtest/turret/mesh.obj"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_e3_未登记的Pillow主版本命中skip分支而不是红",
+      "reason": "没有冻结基线文件（[workspace]\\lingshu\\work\\lingshu-body-integration-20261120\\tests\\..\\_evidence\\vec-svg\\baseline.json）"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_e1_图元场景render_svg与冻结sha256相同",
+      "reason": "没有冻结基线文件（[workspace]\\lingshu\\work\\lingshu-body-integration-20261120\\tests\\..\\_evidence\\vec-svg\\baseline.json）"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_e2_图元场景位图逐字节不变_按Pillow主版本分档",
+      "reason": "没有冻结基线文件（[workspace]\\lingshu\\work\\lingshu-body-integration-20261120\\tests\\..\\_evidence\\vec-svg\\baseline.json）"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_f1_与render_svg的多边形序列逐点相同",
+      "reason": "turret 模型不在本机：/mnt/d/DSH/blender/out/wmtest/turret/mesh.obj"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_i1_注入分层后端_几何与既有出口逐点相同",
+      "reason": "turret 模型不在本机：/mnt/d/DSH/blender/out/wmtest/turret/mesh.obj"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_i2_注入后端与自带编排的几何一致",
+      "reason": "turret 模型不在本机：/mnt/d/DSH/blender/out/wmtest/turret/mesh.obj"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_g1_预设不改变几何与顺序",
+      "reason": "turret 模型不在本机：/mnt/d/DSH/blender/out/wmtest/turret/mesh.obj"
+    },
+    {
+      "test": "tests.test_mesh_svg_layered_guard::test_h4_断开画家序_则F组红",
+      "reason": "turret 模型不在本机：/mnt/d/DSH/blender/out/wmtest/turret/mesh.obj"
+    },
+    {
+      "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_a5_posix_0600目标写后仍0600",
+      "reason": "本机 win32：`os.chmod(0o600)` 后 st_mode 仍为 0o666（Windows 只表达只读位）⇒ 0600 权限面不可端到端复现；该语义由 A3/B3/C3 打桩取证"
+    },
+    {
+      "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_a6_posix_符号链接目标保持且真实件更新",
+      "reason": "本机 win32：`os.symlink` 抛 OSError(22, '客户端没有所需的特权')（非开发者模式/无 SeCreateSymbolicLinkPrivilege）⇒ 符链面不可端到端复现；该语义由 A4/B4/C4 用 `..` 路径跨平台取证"
+    },
+    {
+      "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_b5_posix_0600目标写后仍0600",
+      "reason": "本机 win32：`os.chmod(0o600)` 后 st_mode 仍为 0o666（Windows 只表达只读位）⇒ 0600 权限面不可端到端复现；该语义由 A3/B3/C3 打桩取证"
+    },
+    {
+      "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_b6_posix_符号链接目标保持且真实件更新",
+      "reason": "本机 win32：`os.symlink` 抛 OSError(22, '客户端没有所需的特权')（非开发者模式/无 SeCreateSymbolicLinkPrivilege）⇒ 符链面不可端到端复现；该语义由 A4/B4/C4 用 `..` 路径跨平台取证"
+    },
+    {
+      "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_c5_posix_0600目标写后仍0600",
+      "reason": "本机 win32：`os.chmod(0o600)` 后 st_mode 仍为 0o666（Windows 只表达只读位）⇒ 0600 权限面不可端到端复现；该语义由 A3/B3/C3 打桩取证"
+    },
+    {
+      "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_c6_posix_符号链接目标保持且真实件更新",
+      "reason": "本机 win32：`os.symlink` 抛 OSError(22, '客户端没有所需的特权')（非开发者模式/无 SeCreateSymbolicLinkPrivilege）⇒ 符链面不可端到端复现；该语义由 A4/B4/C4 用 `..` 路径跨平台取证"
+    },
+    {
+      "test": "tests.test_issue427_shade_paint_guard::test_c1_studio在合成模型上_最暗前景与对比度值域三项全胜回退管线",
+      "reason": "shade_metrics 不在本树（CI 无 _evidence/shade-paint/）—— 本用例需它做像素度量"
+    },
+    {
+      "test": "tests.test_issue427_shade_paint_guard::test_c2_八角柱的面必须互相可区分",
+      "reason": "shade_metrics 不在本树（CI 无 _evidence/shade-paint/）—— 本用例需它做像素度量"
+    },
+    {
+      "test": "tests.test_issue427_shade_paint_guard::test_c3_toon模式下前景色阶数受控",
+      "reason": "shade_metrics 不在本树（CI 无 _evidence/shade-paint/）—— 本用例需它做像素度量"
+    },
+    {
+      "test": "tests.test_issue427_shade_paint_guard::test_d1_真实turret_同机位下studio越线而回退不越线_回退即红",
+      "reason": "turret OBJ 不在本机"
+    },
+    {
+      "test": "tests.test_mesh3d_zbuffer_guard::test_a2_zbuffer_与逐像素真值参考逐字节一致_12668面真模型",
+      "reason": "hex01 真模型不在本机（/mnt/d/DSH/blender/out/hex01/deliver/HEX01.obj）—— 本用例需真实几何才有判别力"
+    },
+    {
+      "test": "tests.test_mesh3d_zbuffer_guard::test_b1_画家序在真模型上确实穿模_且zbuffer与它可测地不同",
+      "reason": "hex01 真模型不在本机（/mnt/d/DSH/blender/out/hex01/deliver/HEX01.obj）—— 本用例需真实几何才有判别力"
+    },
+    {
+      "test": "tests.test_mesh3d_zbuffer_guard::test_b3_面序反转渲染逐字节相同",
+      "reason": "hex01 真模型不在本机（/mnt/d/DSH/blender/out/hex01/deliver/HEX01.obj）—— 本用例需真实几何才有判别力"
+    },
+    {
+      "test": "tests.test_mesh3d_obj_ngon_guard::test_g_真实模型逐面型读数与帧一致",
+      "reason": "真实模型不在本机：/mnt/d/DSH/blender/out/wmtest/arm/mesh.obj"
+    },
+    {
+      "test": "tests.test_issue252_self_check_cycle_enum_limit_guard::test_q2_time_bounded",
+      "reason": "时间量具只在受控（串行）环境有效：`-n auto` 满载下本进程 CPU 时间也会被缓存/内存带宽争抢抬高（实测串行 0.02–0.03s、满载 >1s）——非受控测量不可判。CI（gate.yml）串行跑，Q2 在 CI 全效力；本地并行下 Q1/Q3/Q4 仍守语义。"
+    }
+  ],
+  "failed_tests": [
+    {
+      "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_p1_符号链接量具能力探测",
+      "kind": "failure",
+      "message": "AssertionError: P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核",
+      "detail": "tests\\test_issue498_atomic_write_perm_symlink_guard.py:202: in test_p1_符号链接量具能力探测\n    assert POSIX, \"P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核\"\n           ^^^^^\nE   AssertionError: P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核"
+    }
+  ],
+  "controlled_timing": {
+    "name": "controlled_timing",
+    "command": [
+      "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "pytest",
+      "tests/test_issue252_self_check_cycle_enum_limit_guard.py",
+      "-q",
+      "--tb=short",
+      "--durations=10",
+      "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\controlled_timing.xml",
+      "--basetemp=[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\tmp\\controlled_timing"
+    ],
+    "returncode": 0,
+    "seconds": 1.317,
+    "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\controlled_timing.log"
+  },
+  "controlled_timing_details": {
+    "junit_totals": [
+      {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "4",
+        "time": "0.842",
+        "timestamp": "2026-11-20T22:13:41.486292+08:00",
+        "hostname": "STARDUST"
+      }
+    ],
+    "skip_reasons": {},
+    "skipped_tests": [],
+    "failed_tests": []
+  },
+  "strict_manifest": {
+    "name": "strict_manifest",
+    "command": [
+      "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "tools/verify_manifest.py",
+      "--strict",
+      "--quiet"
+    ],
+    "returncode": 0,
+    "seconds": 0.165,
+    "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\strict_manifest.log"
+  },
+  "time_core_lint": {
+    "name": "time_core_lint",
+    "command": [
+      "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "tools/time_core_lint.py",
+      "--json"
+    ],
+    "returncode": 0,
+    "seconds": 8.77,
+    "log": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final-r2\\time_core_lint.log"
+  },
+  "head_after": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+  "status_after": "",
+  "source_snapshot_after": {
+    "sha256": "2d6e6a8ba4e3e418b1f385054b84cac3c0802a65ae6b27fc8ae3bc11503860a9",
+    "file_count": 1618,
+    "convention": "Git HEAD/status plus raw bytes of tracked and nonignored untracked files"
+  },
+  "brain_head_after": "98d6b899533a82fb1047f952987229c62a9929fb",
+  "brain_status_after": "",
+  "source_unchanged": true,
+  "source_changed_files": [],
+  "brain_unchanged": true,
+  "finished_utc": "2026-11-20T14:13:52+00:00",
+  "gate_ok": false
+}

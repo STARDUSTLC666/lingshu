@@ -1,0 +1,51 @@
+{
+  "body": "## 改动说明\n\n修复 `motion_groups._group_id()` 将成员名用 `|` 拼接后再哈希造成的确定性碰撞。例如 `[\"a|b\", \"c\"]` 与 `[\"a\", \"b|c\"]` 是两组不同成员，却会得到同一 group ID；经 core 的 `predict_groups` 时会混淆两组预测归属。含分隔符的成员名现在使用规范 JSON 数组编码和独立的 `mg_v2_` 前缀，普通成员名保持原 group ID。新增回归守卫与定点变异夹具，并刷新已登记的源码指纹。\n\n## 复跑命令与读数\n\n```sh\npython -X utf8 -m pytest tests/test_motion_group_identifier_encoding.py -q --no-header -p no:cacheprovider\n# 9 passed\n\npython -X utf8 tools/testing/replay_save_guards.py --spec tests/fixtures/motion_group_identifier_encoding_mutations.json --baseline 6e9c90bfcba1bfb7c14cdf526611501d526f6777 --mutate --output artifacts/motion-group-id-encoding-20261120\n# fixed: 9 passed; baseline: 5 failed / 4 passed; 2/2 named mutations failed at their expected assertions\n\npython -X utf8 -m pytest tests/test_motion_group_identifier_encoding.py tests/test_motion_groups.py tests/test_motion_group_anchor_consistency.py tests/test_world_process_core.py tests/test_issue2152_2160_family_guard.py -q --no-header -p no:cacheprovider\n# 74 passed, 1 skipped\n\npython -X utf8 tools/verify_manifest.py --strict --quiet\n# 64/64 MATCH; exit 0\n```\n\n## 未验证项 / 边界\n\n未用生产轨迹验证。为避免改变现有消费者看到的普通成员组 ID，仅分隔符成员改用新编码；12 位截断哈希仍不承诺不存在一般哈希碰撞。\n\n<!-- body-validation-20261120:expanded:start -->\n## 2026-11-20 扩展验证（固定证据）\n\n精确当前 head：`cc68a82baace16e92ff6ce770330b65102a530a5`。该 head 的 Python 3.12、3.12 依赖下界、3.13 三档完整 gate 及标题检查均已 SUCCESS；见[固定 CI 快照](https://github.com/STARDUSTLC666/lingshu/blob/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/ci-all-eight.json)和[PR 检查页](https://github.com/FuRongJun-1999/lingshu/pull/1469/checks)。PR/申报仍待维护者审核、合并与验收。\n\n- 独立套件 `motion_groups`：以 `d74848fb33dbff1d719959df19d1266a1ac60f44` 为基线，失败项 / 实际执行断言为 **81 / 165 → 0 / 165**。输入被拒绝或执行分支不同会使两个版本的断言数不同，按原始计数保留，不强行对齐分母。\n- 时延与内存：8 帧 × 96 实体检测批次的中位时延为 17.678667 → 20.047600 ms（1.134×）；独立 tracemalloc 峰值中位数 573,832 → 574,956 B。\n- [完整正确性与 latency 报告](https://github.com/STARDUSTLC666/lingshu/blob/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/six-fixes/report.md)、[独立 memory 报告](https://github.com/STARDUSTLC666/lingshu/blob/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/six-fixes/memory_report.md)、[可移植复跑用法](https://github.com/STARDUSTLC666/lingshu/blob/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/six-fixes/README.md)。将两个脚本放在同一目录，分别用 `--only motion_groups` 选择本套件；每次必须显式给 `--output`，不替换缺失的精确源提交。\n\n测量范围：合成 CPU/内存 SQLite 负载，共享主机、未固定 CPU 亲和性或功耗方案；时延为描述性样本，不作统计显著性或普遍加速承诺。内存探针与时延分开，tracemalloc 可漏掉 Pillow/SQLite 原生缓冲，进程 working set 也不是单次调用的专属峰值。真实资产、生产数据库、Blender/bpy 与 GPU 范围仍未验证。\n本地整体门禁不宣称全绿：既有 [Windows symlink P1](https://github.com/STARDUSTLC666/lingshu/tree/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/integration-six)及[手工物理门 P1](https://github.com/STARDUSTLC666/lingshu/tree/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120/manual-physics)的失败和原始基线证据保留，没有为本修复跳过或改写无关判据。本段不提供最终八项 r2 的完成计数。[固定公开证据总目录](https://github.com/STARDUSTLC666/lingshu/tree/a9fe000938a536134f4a21f83b4a633afe8413e5/validation/body-20261120)。\n<!-- body-validation-20261120:expanded:end -->\n",
+  "headRefOid": "cc68a82baace16e92ff6ce770330b65102a530a5",
+  "mergeStateStatus": "CLEAN",
+  "number": 1469,
+  "state": "OPEN",
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T08:12:02Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44699399907/job/136163829771",
+      "name": "gate (py3.12)",
+      "startedAt": "2026-11-20T08:02:30Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T08:02:40Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44699399893/job/136163829816",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T08:02:30Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T08:14:11Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44699399907/job/136163829485",
+      "name": "gate (py3.12 · 依赖下界)",
+      "startedAt": "2026-11-20T08:02:30Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T08:17:30Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44699399907/job/136163829897",
+      "name": "gate (py3.13)",
+      "startedAt": "2026-11-20T08:02:30Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    }
+  ],
+  "title": "fix(world): encode motion group IDs without delimiter collisions",
+  "url": "https://github.com/FuRongJun-1999/lingshu/pull/1469"
+}

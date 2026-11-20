@@ -1,0 +1,15 @@
+{
+  "run_id": 44751075692,
+  "head_sha": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+  "all_three_actual_job_conclusions_success": true,
+  "matrix_evidence_complete": true,
+  "all_three_actual_checkout_sha_seen": true,
+  "all_three_pinned_brain_fetch_seen": true,
+  "all_three_brain_23_of_23": true,
+  "all_three_script_lists_equal_frozen_workflow": true,
+  "monitor_sha256": "33fdf542ccf7159b0fa847e167ea58aad79218fb300fb33eb29a0ef80167a53a",
+  "detail_extractor_sha256": "4be196e68a4ae9a42e4042047b5c8fad8696dcd5e7e92ecf580c5925735aca78",
+  "final_run_api_sha256": "c70da11f105dedc0562e95c1bfb625f5e116429e2d89c1cb0e017c70f077a3bb",
+  "final_jobs_api_sha256": "9d0fb29f57d249d183aa5fab9f77b9da5e71169d2c2a93e7a89cd864f12e5039",
+  "read_only_monitor_no_dispatch_rerun_or_configuration_change": true
+}

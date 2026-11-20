@@ -1,0 +1,18 @@
+{
+  "root": "[workspace]\\lingshu\\work\\lingshu-audit-core-20261120",
+  "head": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "status": "",
+  "command": [
+    "[workspace]\\lingshu\\work\\lingshu-body-final-validation-20261120-venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "tests/test_issue498_atomic_write_perm_symlink_guard.py::test_p1_符号链接量具能力探测",
+    "-q",
+    "--tb=short",
+    "--junitxml=[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final\\baseline_symlink.xml",
+    "--basetemp=[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-final\\tmp\\baseline_symlink\\pytest"
+  ],
+  "returncode": 1
+}

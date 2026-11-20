@@ -1,0 +1,51 @@
+{
+  "body": "## 改动说明\n\n修复 LongTermMemoryGate 缓存增量更新只证明“追加”而未核对旧行正文的问题。相同 rowid 的正文原地改写后再追加新行，会导致旧 gram 留在长期记忆参考集中、改写正文的 gram 漏入，常驻 gate 与新建 gate 对同一数据库产生不同 novelty。增量分支现在保留并比较旧 rowid 的正文摘要；任一旧摘要变化就完整重建。纯追加仍保留增量路径。更新了 #770 的边界说明和登记源码指纹。\n\n## 复跑命令与读数\n\n```sh\npython -X utf8 -m pytest tests/test_longterm_gate_mixed_in_place_update.py tests/test_issue770_snapshot_atomicity_and_signature_guard.py tests/test_issue462_longterm_gate_cache_stale_guard.py tests/test_longterm_gate_novelty.py tests/test_longterm_gate_p1_defects.py tests/test_issue587_gate_sql_clamp.py tests/test_issue2379_guard.py tests/test_issue573_novelty_template_guard.py -q --no-header -p no:cacheprovider\n# 47 passed\n\npython -X utf8 tools/testing/replay_save_guards.py --spec tests/fixtures/longterm_gate_mixed_in_place_update_mutations.json --baseline d74848fb33dbff1d719959df19d1266a1ac60f44 --mutate --output [workspace]/lingshu/outputs/longterm-gate-mixed-update-20261120\n# fixed: 1 passed; baseline: 1 failed; named mutation hit its expected assertion\n\npython -X utf8 tools/time_core_lint.py --json\n# exit 0; 23 registered, 0 new, 0 stale\n\npython -X utf8 tools/verify_manifest.py --strict --quiet\n# 64/64 MATCH; exit 0\n```\n\n## 未验证项 / 边界\n\n验证覆盖同 rowid 更新后再追加的缓存形态及相邻 novelty/删除/追加守卫；未做大库性能基准。摘要校验复用签名扫描时已计算的逐行摘要，仍需线性遍历现存正文。\r\n",
+  "headRefOid": "a663512dd0fbc44a9fb08a55751951009586d172",
+  "mergeStateStatus": "CLEAN",
+  "number": 1472,
+  "state": "OPEN",
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T11:04:11Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44723143499/job/136243727955",
+      "name": "gate (py3.12)",
+      "startedAt": "2026-11-20T10:54:28Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T10:54:35Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44723143434/job/136243727547",
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "startedAt": "2026-11-20T10:54:28Z",
+      "status": "COMPLETED",
+      "workflowName": "pr-lint"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T11:04:29Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44723143499/job/136243727916",
+      "name": "gate (py3.12 · 依赖下界)",
+      "startedAt": "2026-11-20T10:54:28Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-20T11:03:39Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44723143499/job/136243727610",
+      "name": "gate (py3.13)",
+      "startedAt": "2026-11-20T10:54:28Z",
+      "status": "COMPLETED",
+      "workflowName": "gate"
+    }
+  ],
+  "title": "fix(core): rebuild novelty cache after mixed row rewrite",
+  "url": "https://github.com/FuRongJun-1999/lingshu/pull/1472"
+}

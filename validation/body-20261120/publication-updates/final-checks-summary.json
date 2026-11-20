@@ -1,0 +1,72 @@
+[
+  {
+    "pr": 1469,
+    "head_unchanged": true,
+    "gate_count": 3,
+    "gates_success": true,
+    "latest_title_status": "COMPLETED",
+    "latest_title_conclusion": "SUCCESS",
+    "merge_state": "CLEAN",
+    "ok": true
+  },
+  {
+    "pr": 1470,
+    "head_unchanged": true,
+    "gate_count": 3,
+    "gates_success": true,
+    "latest_title_status": "COMPLETED",
+    "latest_title_conclusion": "SUCCESS",
+    "merge_state": "CLEAN",
+    "ok": true
+  },
+  {
+    "pr": 1471,
+    "head_unchanged": true,
+    "gate_count": 3,
+    "gates_success": true,
+    "latest_title_status": "COMPLETED",
+    "latest_title_conclusion": "SUCCESS",
+    "merge_state": "CLEAN",
+    "ok": true
+  },
+  {
+    "pr": 1472,
+    "head_unchanged": true,
+    "gate_count": 3,
+    "gates_success": true,
+    "latest_title_status": "COMPLETED",
+    "latest_title_conclusion": "SUCCESS",
+    "merge_state": "CLEAN",
+    "ok": true
+  },
+  {
+    "pr": 1473,
+    "head_unchanged": true,
+    "gate_count": 3,
+    "gates_success": true,
+    "latest_title_status": "COMPLETED",
+    "latest_title_conclusion": "SUCCESS",
+    "merge_state": "CLEAN",
+    "ok": true
+  },
+  {
+    "pr": 1474,
+    "head_unchanged": true,
+    "gate_count": 3,
+    "gates_success": true,
+    "latest_title_status": "COMPLETED",
+    "latest_title_conclusion": "SUCCESS",
+    "merge_state": "CLEAN",
+    "ok": true
+  },
+  {
+    "pr": 1475,
+    "head_unchanged": true,
+    "gate_count": 3,
+    "gates_success": true,
+    "latest_title_status": "COMPLETED",
+    "latest_title_conclusion": "SUCCESS",
+    "merge_state": "CLEAN",
+    "ok": true
+  }
+]

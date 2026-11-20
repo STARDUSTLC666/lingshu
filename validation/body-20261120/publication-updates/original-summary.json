@@ -1,0 +1,266 @@
+[
+  {
+    "kind": "pr",
+    "number": 1469,
+    "title": "fix(world): encode motion group IDs without delimiter collisions",
+    "body_chars": 1172,
+    "head": "cc68a82baace16e92ff6ce770330b65102a530a5",
+    "checks": [
+      {
+        "name": "gate (py3.12)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "PR 标题约定（type(scope) + 摘要）",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "gate (py3.12 · 依赖下界)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "gate (py3.13)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      }
+    ]
+  },
+  {
+    "kind": "pr",
+    "number": 1470,
+    "title": "fix(vision): composite alpha before lineart detection",
+    "body_chars": 1282,
+    "head": "433befa7b356eebecbc457ecd8f8a123ec1540cc",
+    "checks": [
+      {
+        "name": "gate (py3.12)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "PR 标题约定（type(scope) + 摘要）",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "gate (py3.12 · 依赖下界)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "gate (py3.13)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      }
+    ]
+  },
+  {
+    "kind": "pr",
+    "number": 1471,
+    "title": "fix(world): test face normals for skew SAT boxes",
+    "body_chars": 1265,
+    "head": "39d379552f34026ef46ad0515831319b1494a5d3",
+    "checks": [
+      {
+        "name": "PR 标题约定（type(scope) + 摘要）",
+        "status": "COMPLETED",
+        "conclusion": "CANCELLED"
+      },
+      {
+        "name": "gate (py3.12)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "PR 标题约定（type(scope) + 摘要）",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "gate (py3.12 · 依赖下界)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "gate (py3.13)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      }
+    ]
+  },
+  {
+    "kind": "pr",
+    "number": 1472,
+    "title": "fix(core): rebuild novelty cache after mixed row rewrite",
+    "body_chars": 1271,
+    "head": "a663512dd0fbc44a9fb08a55751951009586d172",
+    "checks": [
+      {
+        "name": "gate (py3.12)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "PR 标题约定（type(scope) + 摘要）",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "gate (py3.12 · 依赖下界)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "gate (py3.13)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      }
+    ]
+  },
+  {
+    "kind": "pr",
+    "number": 1473,
+    "title": "fix(nn): choose nearest odd-r cell by center distance",
+    "body_chars": 964,
+    "head": "cff189b3438623feaebdf1a874fafdd03080acb1",
+    "checks": [
+      {
+        "name": "gate (py3.12)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "PR 标题约定（type(scope) + 摘要）",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "gate (py3.12 · 依赖下界)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "gate (py3.13)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      }
+    ]
+  },
+  {
+    "kind": "pr",
+    "number": 1474,
+    "title": "fix(core): normalize skill search limits",
+    "body_chars": 917,
+    "head": "fb6c9cabc939a6defcc44ef661b3048d47155d87",
+    "checks": [
+      {
+        "name": "gate (py3.12)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "PR 标题约定（type(scope) + 摘要）",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "gate (py3.12 · 依赖下界)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "gate (py3.13)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      }
+    ]
+  },
+  {
+    "kind": "pr",
+    "number": 1475,
+    "title": "fix(world): 修正零初速释放单摆椭圆解及近分离点精度",
+    "body_chars": 2488,
+    "head": "e0771a810b8846676f3545542b2e70d5e0011467",
+    "checks": [
+      {
+        "name": "gate (py3.12)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "PR 标题约定（type(scope) + 摘要）",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "gate (py3.12 · 依赖下界)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      },
+      {
+        "name": "gate (py3.13)",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      }
+    ]
+  },
+  {
+    "kind": "issue",
+    "number": 2783,
+    "title": "lingshu 身体模块：消除运动组成员 ID 的分隔符碰撞（PR #1469）",
+    "body_chars": 748,
+    "head": null,
+    "checks": []
+  },
+  {
+    "kind": "issue",
+    "number": 2784,
+    "title": "lingshu 身体模块：修复透明底线稿被漏检（PR #1470）",
+    "body_chars": 631,
+    "head": null,
+    "checks": []
+  },
+  {
+    "kind": "issue",
+    "number": 2785,
+    "title": "lingshu 身体模块：补齐非正交 OBB 的 SAT 面法线（PR #1471）",
+    "body_chars": 654,
+    "head": null,
+    "checks": []
+  },
+  {
+    "kind": "issue",
+    "number": 2786,
+    "title": "lingshu 身体模块：修复正文改写后追加导致新奇度缓存失步（PR #1472）",
+    "body_chars": 731,
+    "head": null,
+    "checks": []
+  },
+  {
+    "kind": "issue",
+    "number": 2787,
+    "title": "lingshu 身体模块：修复 odd-r 蜂窝网最近格误判（PR #1473）",
+    "body_chars": 597,
+    "head": null,
+    "checks": []
+  },
+  {
+    "kind": "issue",
+    "number": 2788,
+    "title": "lingshu 身体模块：修复技能检索负数上限丢失命中（PR #1474）",
+    "body_chars": 677,
+    "head": null,
+    "checks": []
+  },
+  {
+    "kind": "issue",
+    "number": 2789,
+    "title": "lingshu 身体模块：修正释放单摆椭圆解与近180°精度（PR #1475）",
+    "body_chars": 1382,
+    "head": null,
+    "checks": []
+  }
+]
