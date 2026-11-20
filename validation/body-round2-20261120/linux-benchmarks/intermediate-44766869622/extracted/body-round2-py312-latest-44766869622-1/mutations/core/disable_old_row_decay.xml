@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.217" timestamp="2026-11-20T15:50:22.008831+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_fresh_row_decay" name="test_old_and_new_rows_have_independent_ages_in_one_tick[context]" time="0.016"><failure message="AssertionError: old row missed downtime decay&#10;assert 0.5 is None&#10; +  where 0.5 = _value(&lt;lingshu.core.core.LayeredStore object at 0x7374881496d0&gt;, 'context', 'old')">tests/test_fresh_row_decay.py:87: in test_old_and_new_rows_have_independent_ages_in_one_tick
+    assert _value(store, kind, "old") is None, "old row missed downtime decay"
+E   AssertionError: old row missed downtime decay
+E   assert 0.5 is None
+E    +  where 0.5 = _value(&lt;lingshu.core.core.LayeredStore object at 0x7374881496d0&gt;, 'context', 'old')</failure></testcase></testsuite></testsuites>

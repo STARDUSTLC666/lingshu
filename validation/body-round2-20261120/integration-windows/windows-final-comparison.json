@@ -1,0 +1,48 @@
+{
+  "source": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+  "source_after": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+  "source_unchanged": true,
+  "snapshot": {
+    "sha256": "1e043e675a8fb94f723110328c7f6a5ae83b74f054c58842be4f224e629b50bf",
+    "file_count": 1634,
+    "convention": "Git HEAD/status plus raw bytes of tracked and nonignored untracked files"
+  },
+  "brain_unchanged": true,
+  "script_count": 102,
+  "script_errors": [],
+  "junit_totals": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "1",
+      "skipped": "28",
+      "tests": "5965",
+      "time": "1238.484",
+      "timestamp": "2026-11-20T23:33:56.672186+08:00",
+      "hostname": "STARDUST"
+    }
+  ],
+  "skips_identical_to_previous_batch": false,
+  "new_skip_ids": [],
+  "failed_test_ids": [
+    "tests.test_issue498_atomic_write_perm_symlink_guard::test_p1_符号链接量具能力探测"
+  ],
+  "same_failure_ids_as_previous_batch": true,
+  "gate_ok": false,
+  "timing_junit": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "4",
+      "time": "0.809",
+      "timestamp": "2026-11-20T23:54:36.438246+08:00",
+      "hostname": "STARDUST"
+    }
+  ],
+  "skip_ids_unchanged": true,
+  "skip_reasons_equal_after_checkout_path_normalization": true,
+  "changed_skip_reason_ids": [],
+  "junit_pass_count_includes_98_subtests": true
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.199" timestamp="2026-11-20T15:50:22.176337+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_fresh_row_decay" name="test_newborn_uses_only_its_post_birth_span[1.0-edge]" time="0.016"><failure message="AssertionError: newborn was aged before its birth&#10;assert 1.810560263659002e-89 == 0.4998316724462135 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 1.810560263659002e-89&#10;  Expected: 0.4998316724462135 ± 1.0e-12">tests/test_fresh_row_decay.py:73: in test_newborn_uses_only_its_post_birth_span
+    assert _value(store, kind, "newborn") == pytest.approx(
+E   AssertionError: newborn was aged before its birth
+E   assert 1.810560263659002e-89 == 0.4998316724462135 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.4998316724462135 ± 1.0e-12</failure></testcase></testsuite></testsuites>

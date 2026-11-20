@@ -1,0 +1,39 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___________ test_last_cell_energy_and_color_reach_bottom_right[4-4] ____________
+tests/test_spatial_detect_complete_partition.py:79: in test_last_cell_energy_and_color_reach_bottom_right
+    assert [(d["pos"], d["obj"], d["share"]) for d in result] == [
+E   AssertionError: last-cell evidence was lost or assigned to another zone
+E   assert [('r8', 'circle|red', 1.0)] == [('r8', 'circle|blue', 1.0)]
+E     
+E     At index 0 diff: ('r8', 'circle|red', 1.0) != ('r8', 'circle|blue', 1.0)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               'r8',
+E     -         'circle|blue',
+E     ?                 ^^^
+E     +         'circle|red',
+E     ?                 ^ +
+E               1.0,
+E           ),
+E       ]
+=========================== short test summary info ============================
+FAILED tests/test_spatial_detect_complete_partition.py::test_last_cell_energy_and_color_reach_bottom_right[4-4] - AssertionError: last-cell evidence was lost or assigned to another zone
+assert [('r8', 'circle|red', 1.0)] == [('r8', 'circle|blue', 1.0)]
+  
+  At index 0 diff: ('r8', 'circle|red', 1.0) != ('r8', 'circle|blue', 1.0)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            'r8',
+  -         'circle|blue',
+  ?                 ^^^
+  +         'circle|red',
+  ?                 ^ +
+            1.0,
+        ),
+    ]
+1 failed in 0.09s

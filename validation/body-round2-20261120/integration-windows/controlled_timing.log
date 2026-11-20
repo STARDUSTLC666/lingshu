@@ -1,0 +1,71 @@
+....                                                                     [100%]
+============================== warnings summary ===============================
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q1_enumeration_is_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q2_time_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q3_capped_is_observable
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q4_default_limit_unchanged
+  [workspace]:7671: ComponentDiscoveryWarning: [issue156] 组件 'entity_registry' 未在受控解析面找到（已查 7 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from entity_registry import EntityRegistry
+
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q1_enumeration_is_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q2_time_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q3_capped_is_observable
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q4_default_limit_unchanged
+  [workspace]:7657: ComponentDiscoveryWarning: [issue156] 组件 'semantic_space' 未在受控解析面找到（已查 7 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from semantic_space import SemanticSpaceProvider
+
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q1_enumeration_is_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q2_time_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q3_capped_is_observable
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q4_default_limit_unchanged
+  [workspace]:7647: ComponentDiscoveryWarning: [issue156] 组件 'attention_policy' 未在受控解析面找到（已查 7 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from attention_policy import AttentionPolicy
+
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q1_enumeration_is_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q2_time_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q3_capped_is_observable
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q4_default_limit_unchanged
+  [workspace]:7622: ComponentDiscoveryWarning: [issue156] 组件 'prediction_engine' 未在受控解析面找到（已查 7 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from prediction_engine import PredictionEngine
+
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q1_enumeration_is_bounded
+  [workspace]:30: ComponentDiscoveryWarning: [issue156] 组件 'spacetime_memory_core' 未在受控解析面找到（已查 7 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from spacetime_memory_core import LayeredStore as _LayeredStore
+
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q1_enumeration_is_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q2_time_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q3_capped_is_observable
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q4_default_limit_unchanged
+  [workspace]:7597: ComponentDiscoveryWarning: [issue156] 组件 'lifecycle_engine' 未在受控解析面找到（已查 7 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from lifecycle_engine import LifecycleEngine
+
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q1_enumeration_is_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q2_time_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q3_capped_is_observable
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q4_default_limit_unchanged
+  [workspace]:7565: ComponentDiscoveryWarning: [issue156] 组件 'flywheel_engine' 未在受控解析面找到（已查 7 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from flywheel_engine import FlywheelEngine
+
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q1_enumeration_is_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q2_time_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q3_capped_is_observable
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q4_default_limit_unchanged
+  [workspace]:7575: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 7 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from self_cognition_engine import SelfCognitionEngine
+
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q1_enumeration_is_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q2_time_bounded
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q3_capped_is_observable
+tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q4_default_limit_unchanged
+  [workspace]:7554: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 7 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from body import build_default_registry
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================ slowest 10 durations =============================
+0.12s call     tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q3_capped_is_observable
+0.08s call     tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q4_default_limit_unchanged
+0.07s call     tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q1_enumeration_is_bounded
+0.06s call     tests/test_issue252_self_check_cycle_enum_limit_guard.py::test_q2_time_bounded
+
+(6 durations < 0.005s hidden.  Use -vv to show these durations.)
+4 passed, 33 warnings in 0.85s

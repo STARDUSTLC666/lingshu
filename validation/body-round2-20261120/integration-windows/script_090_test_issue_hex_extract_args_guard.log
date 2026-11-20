@@ -1,0 +1,8 @@
+  PASS A01 quadrant=None -> 可读 ValueError
+  PASS A02 quadrant 非数字拒绝
+  PASS A03 未知 color 不再抛裸 KeyError
+  PASS A04 calib 非 dict 拒绝
+  PASS A05 正对照：合法输入 tx=1.0 / solid
+  PASS E01 钉子：quadrant 文案
+  PASS E02 钉子：color 文案
+通过 7 / 失败 0

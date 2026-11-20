@@ -1,0 +1,336 @@
+{
+  "source_root": "/home/runner/work/lingshu/lingshu/source",
+  "python": "3.12.16 (main, Oct 26 2026, 02:48:44) [GCC 15.2.0]",
+  "platform": "Linux-7.0.0-1020-azure-x86_64-with-glibc2.43",
+  "sqlite": "3.46.1",
+  "pid": 2805,
+  "timer": "perf_counter_ns",
+  "memory": "tracemalloc Python allocations, not RSS",
+  "source_sha256": "4ce414e49f0165f9d03b5a834b1d5dbaac354251cc9aa33b44eaf11cbf0a21c2",
+  "records": [
+    {
+      "nodes": 0,
+      "edges": 0,
+      "mode": "clock_old",
+      "warmups": 3,
+      "latency_ms_samples": [
+        0.119173,
+        0.118903,
+        0.114855,
+        0.122199,
+        0.115456,
+        0.111699,
+        0.113041,
+        0.11243,
+        0.114414
+      ],
+      "latency_ms_median": 0.114855,
+      "python_traced_peak_bytes_samples": [
+        9256,
+        5896,
+        6184
+      ],
+      "python_traced_peak_bytes_median": 6184,
+      "oracle_checks": 0,
+      "oracle_failures": 0,
+      "first_oracle_failures": []
+    },
+    {
+      "nodes": 0,
+      "edges": 0,
+      "mode": "clock_mixed",
+      "warmups": 3,
+      "latency_ms_samples": [
+        0.116458,
+        0.112019,
+        0.11218,
+        0.109735,
+        0.109456,
+        0.110647,
+        0.127359,
+        0.110507,
+        0.113612
+      ],
+      "latency_ms_median": 0.112019,
+      "python_traced_peak_bytes_samples": [
+        9256,
+        5896,
+        6184
+      ],
+      "python_traced_peak_bytes_median": 6184,
+      "oracle_checks": 0,
+      "oracle_failures": 0,
+      "first_oracle_failures": []
+    },
+    {
+      "nodes": 0,
+      "edges": 0,
+      "mode": "discrete_mixed",
+      "warmups": 3,
+      "latency_ms_samples": [
+        0.0642,
+        0.060844,
+        0.060213,
+        0.059392,
+        0.063649,
+        0.05889,
+        0.060253,
+        0.060383,
+        0.060003
+      ],
+      "latency_ms_median": 0.060253,
+      "python_traced_peak_bytes_samples": [
+        4957,
+        4957,
+        4957
+      ],
+      "python_traced_peak_bytes_median": 4957,
+      "oracle_checks": 0,
+      "oracle_failures": 0,
+      "first_oracle_failures": []
+    },
+    {
+      "nodes": 100,
+      "edges": 50,
+      "mode": "clock_old",
+      "warmups": 3,
+      "latency_ms_samples": [
+        1.977031,
+        1.95489,
+        1.957675,
+        1.956112,
+        1.956693,
+        1.982992,
+        1.955411,
+        2.071398,
+        1.942868
+      ],
+      "latency_ms_median": 1.956693,
+      "python_traced_peak_bytes_samples": [
+        65875,
+        65779,
+        66067
+      ],
+      "python_traced_peak_bytes_median": 65875,
+      "oracle_checks": 150,
+      "oracle_failures": 0,
+      "first_oracle_failures": []
+    },
+    {
+      "nodes": 100,
+      "edges": 50,
+      "mode": "clock_mixed",
+      "warmups": 3,
+      "latency_ms_samples": [
+        1.989014,
+        1.998271,
+        2.017156,
+        2.022627,
+        1.98696,
+        1.99202,
+        1.985717,
+        2.011206,
+        1.977382
+      ],
+      "latency_ms_median": 1.99202,
+      "python_traced_peak_bytes_samples": [
+        65899,
+        65803,
+        66091
+      ],
+      "python_traced_peak_bytes_median": 65899,
+      "oracle_checks": 150,
+      "oracle_failures": 0,
+      "first_oracle_failures": []
+    },
+    {
+      "nodes": 100,
+      "edges": 50,
+      "mode": "discrete_mixed",
+      "warmups": 3,
+      "latency_ms_samples": [
+        1.895519,
+        1.904966,
+        1.884648,
+        1.902553,
+        1.911308,
+        1.881231,
+        1.889729,
+        1.899816,
+        1.888566
+      ],
+      "latency_ms_median": 1.895519,
+      "python_traced_peak_bytes_samples": [
+        64920,
+        64920,
+        64920
+      ],
+      "python_traced_peak_bytes_median": 64920,
+      "oracle_checks": 150,
+      "oracle_failures": 0,
+      "first_oracle_failures": []
+    },
+    {
+      "nodes": 1000,
+      "edges": 500,
+      "mode": "clock_old",
+      "warmups": 3,
+      "latency_ms_samples": [
+        17.764447,
+        17.791999,
+        17.524689,
+        17.672766,
+        17.752775,
+        17.815272,
+        17.634264,
+        17.624305,
+        17.589059
+      ],
+      "latency_ms_median": 17.672766,
+      "python_traced_peak_bytes_samples": [
+        534147,
+        534051,
+        534339
+      ],
+      "python_traced_peak_bytes_median": 534147,
+      "oracle_checks": 1500,
+      "oracle_failures": 0,
+      "first_oracle_failures": []
+    },
+    {
+      "nodes": 1000,
+      "edges": 500,
+      "mode": "clock_mixed",
+      "warmups": 3,
+      "latency_ms_samples": [
+        18.191777,
+        18.088223,
+        18.074558,
+        17.979721,
+        18.593669,
+        17.992364,
+        17.96898,
+        18.021378,
+        17.936069
+      ],
+      "latency_ms_median": 18.021378,
+      "python_traced_peak_bytes_samples": [
+        534171,
+        534075,
+        534363
+      ],
+      "python_traced_peak_bytes_median": 534171,
+      "oracle_checks": 1500,
+      "oracle_failures": 0,
+      "first_oracle_failures": []
+    },
+    {
+      "nodes": 1000,
+      "edges": 500,
+      "mode": "discrete_mixed",
+      "warmups": 3,
+      "latency_ms_samples": [
+        17.731285,
+        17.53622,
+        17.587907,
+        17.74487,
+        17.559152,
+        17.494191,
+        17.506494,
+        17.494461,
+        17.821374
+      ],
+      "latency_ms_median": 17.559152,
+      "python_traced_peak_bytes_samples": [
+        533192,
+        533192,
+        533192
+      ],
+      "python_traced_peak_bytes_median": 533192,
+      "oracle_checks": 1500,
+      "oracle_failures": 0,
+      "first_oracle_failures": []
+    },
+    {
+      "nodes": 5000,
+      "edges": 2500,
+      "mode": "clock_old",
+      "warmups": 3,
+      "latency_ms_samples": [
+        87.54766,
+        87.70833,
+        88.455449,
+        89.64135,
+        89.469368,
+        89.196296,
+        89.127196,
+        90.365214,
+        90.344486
+      ],
+      "latency_ms_median": 89.196296,
+      "python_traced_peak_bytes_samples": [
+        2611290,
+        2611194,
+        2611482
+      ],
+      "python_traced_peak_bytes_median": 2611290,
+      "oracle_checks": 7500,
+      "oracle_failures": 0,
+      "first_oracle_failures": []
+    },
+    {
+      "nodes": 5000,
+      "edges": 2500,
+      "mode": "clock_mixed",
+      "warmups": 3,
+      "latency_ms_samples": [
+        88.441545,
+        89.441387,
+        90.46851,
+        89.391734,
+        89.123401,
+        89.144501,
+        89.020508,
+        89.483706,
+        89.615202
+      ],
+      "latency_ms_median": 89.391734,
+      "python_traced_peak_bytes_samples": [
+        2611314,
+        2611218,
+        2611506
+      ],
+      "python_traced_peak_bytes_median": 2611314,
+      "oracle_checks": 7500,
+      "oracle_failures": 0,
+      "first_oracle_failures": []
+    },
+    {
+      "nodes": 5000,
+      "edges": 2500,
+      "mode": "discrete_mixed",
+      "warmups": 3,
+      "latency_ms_samples": [
+        136.466128,
+        136.699785,
+        137.109312,
+        124.949378,
+        88.242192,
+        87.136431,
+        86.35554,
+        87.34963,
+        87.155938
+      ],
+      "latency_ms_median": 88.242192,
+      "python_traced_peak_bytes_samples": [
+        2610335,
+        2610335,
+        2610335
+      ],
+      "python_traced_peak_bytes_median": 2610335,
+      "oracle_checks": 7500,
+      "oracle_failures": 0,
+      "first_oracle_failures": []
+    }
+  ]
+}

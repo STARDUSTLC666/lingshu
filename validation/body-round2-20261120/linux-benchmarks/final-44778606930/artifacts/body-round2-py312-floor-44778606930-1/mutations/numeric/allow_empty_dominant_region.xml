@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.143" timestamp="2026-11-20T17:00:44.184707+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_spatial_detect_complete_partition" name="test_dark_tiny_lattice_does_not_classify_empty_quadrants[1-1]" time="0.001"><failure message="AssertionError: nonempty dominant region disappeared&#10;assert 0 == 1&#10; +  where 0 = len([])&#10; +    where [] = &lt;test_spatial_detect_complete_partition.CropRecorder object at 0x71e7d65ea9c0&gt;.crops">tests/test_spatial_detect_complete_partition.py:138: in test_dark_tiny_lattice_does_not_classify_empty_quadrants
+    assert len(result[0]) == len(net.crops) == 1, "nonempty dominant region disappeared"
+E   AssertionError: nonempty dominant region disappeared
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = &lt;test_spatial_detect_complete_partition.CropRecorder object at 0x71e7d65ea9c0&gt;.crops</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,55 @@
+{
+  "zip_sha256": "24a279d06912cc5a6ee8e19d09fd2092b4fc2c9b98c7c9af844ac56dee31a497",
+  "files": [
+    {
+      "path": "0_PR 标题约定（type(scope) + 摘要）.txt",
+      "bytes": 20729,
+      "sha256": "836df09787ed00e9a8c7015dd9d7b7530d62d9b3766035e2ce7eb974e66f6c7b"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/system.txt",
+      "bytes": 584,
+      "sha256": "48853a1a9194d5b658aea8125ca329da5da148f575047b28f2a1f26029bf0637"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/1_Set up job.txt",
+      "bytes": 2129,
+      "sha256": "c6b64c3d6646ef5998ed13c9628511edcce51584f46e98fc6f8bed20b6f840a9"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/2_Run actions_checkout@11d5960a326750d5838078e36cf38b85af677262.txt",
+      "bytes": 7004,
+      "sha256": "fd5b518394c6004652ce2420cde37735c3ad6b4df4b9395a765c59b2541e6f8c"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/3_Run actions_setup-python@a26af69be951a213d495a4c3e4e4022e16d87065.txt",
+      "bytes": 1047,
+      "sha256": "488b23864ef42cd9b13e75ce3894bd42abf37115cf55240863619e4a8787b8a0"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/4_校验器自检（正负例）.txt",
+      "bytes": 6637,
+      "sha256": "0d15b2cbc707daa884fd23c601b2996286a6b6f9c5fa89191896214682de384e"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/5_校验 PR 标题.txt",
+      "bytes": 1470,
+      "sha256": "c38d633758fe4684538a741a1c328de62ec60aa6a8e1e3120c554a48ecf15656"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/9_Post Run actions_setup-python@a26af69be951a213d495a4c3e4e4022e16d87065.txt",
+      "bytes": 305,
+      "sha256": "d9754d80db55bc2d5b86b171ee8bc334a56ba894c22b09e05d0db0f72d13e702"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/10_Post Run actions_checkout@11d5960a326750d5838078e36cf38b85af677262.txt",
+      "bytes": 1709,
+      "sha256": "e59ae3e90521f1f557966d772735616818bfe1081f1bc9b1c5ea8cdd0a6da137"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/11_Complete job.txt",
+      "bytes": 449,
+      "sha256": "9ce4af8168ca81dc80a0f58b0e59653bd77836cef452d3cbdeea32e1401b2bed"
+    }
+  ]
+}

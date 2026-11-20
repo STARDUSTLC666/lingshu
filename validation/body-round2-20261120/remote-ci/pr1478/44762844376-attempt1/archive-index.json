@@ -1,0 +1,220 @@
+{
+  "zip_sha256": "d15cea4764b15c5c52b5eab8cf8040f6c932222efedf81940c1222179e3d6718",
+  "files": [
+    {
+      "path": "0_gate (py3.12 · 依赖下界).txt",
+      "bytes": 1438345,
+      "sha256": "7d5346a5fc6a9779a49525e5d9c3392f8f28ff3d98b590bb884635819f18e25a"
+    },
+    {
+      "path": "gate (py3.12 · 依赖下界)/system.txt",
+      "bytes": 577,
+      "sha256": "503216e6d4046b02474d907e613428508c37fe1479549ffa285c25aaba5a274f"
+    },
+    {
+      "path": "gate (py3.12 · 依赖下界)/1_Set up job.txt",
+      "bytes": 2115,
+      "sha256": "76f3ae5b5f666fb81ab7d416db7f34b4ac6d4a512124064274345d369333766d"
+    },
+    {
+      "path": "gate (py3.12 · 依赖下界)/2_Run actions_checkout@11d5960a326750d5838078e36cf38b85af677262.txt",
+      "bytes": 11528,
+      "sha256": "fd5acea738b453e22bf2e1b32ef7f4aba95c753e0b5ca11cca09f09494af5f1c"
+    },
+    {
+      "path": "gate (py3.12 · 依赖下界)/3_Run actions_setup-python@a26af69be951a213d495a4c3e4e4022e16d87065.txt",
+      "bytes": 6820,
+      "sha256": "01c37e02ad9858a69a592c0a0fd1bf35cb812f2a05ffa4080a60c7225598b653"
+    },
+    {
+      "path": "gate (py3.12 · 依赖下界)/4_安装依赖（pip install -e .[full,dev]）.txt",
+      "bytes": 12068,
+      "sha256": "15670615c3f61aadead6d97a3cdc72f7a573a97c27d86239b73d2662fb33b8b7"
+    },
+    {
+      "path": "gate (py3.12 · 依赖下界)/5_钉死依赖下界（仅「依赖下界」档；#209）.txt",
+      "bytes": 6349,
+      "sha256": "8c14b333a4aa556e62ad495ef5b772b26ed4d7dcf3ed52e88b24318de30188f0"
+    },
+    {
+      "path": "gate (py3.12 · 依赖下界)/6_Clone 脑端公开仓（dsh-memory）供 MDCG_BRAIN_PYTHONPATH.txt",
+      "bytes": 6087,
+      "sha256": "72286e031a878f1d5569b9227e37f9961bef638d5041b12d00f0dad233d30024"
+    },
+    {
+      "path": "gate (py3.12 · 依赖下界)/7_决定 test_brain_store 前置（脑端可达则真跑；否则显式 SKIP）.txt",
+      "bytes": 6225,
+      "sha256": "d38a391ad9fa1341b735e5970867c81b50221c5875e8a0eada66bdf6e37ca755"
+    },
+    {
+      "path": "gate (py3.12 · 依赖下界)/8_脚本式测试（逐件单跑，任一失败即红）.txt",
+      "bytes": 391093,
+      "sha256": "620ba0d279da827ad6065f7fbe94f73601c26439ec9683179a5cb2d2424aa43f"
+    },
+    {
+      "path": "gate (py3.12 · 依赖下界)/9_pytest 式测试（tests_ 自动收集）.txt",
+      "bytes": 987044,
+      "sha256": "f7038e94203dadaf413dd9373f93abdaef1c59ccf0bd1a0f89e128b93ea8fd2b"
+    },
+    {
+      "path": "gate (py3.12 · 依赖下界)/10_汇总（写入 Step Summary）.txt",
+      "bytes": 6383,
+      "sha256": "5ae3da7d6868d558e945f97867d3833d0e56030c801187f735ffe1b9bd7a501f"
+    },
+    {
+      "path": "gate (py3.12 · 依赖下界)/19_Post Run actions_setup-python@a26af69be951a213d495a4c3e4e4022e16d87065.txt",
+      "bytes": 511,
+      "sha256": "4e772dfd715ef3925ea094115347a3d269c1734a9bab049a554859d972bd080c"
+    },
+    {
+      "path": "gate (py3.12 · 依赖下界)/20_Post Run actions_checkout@11d5960a326750d5838078e36cf38b85af677262.txt",
+      "bytes": 1709,
+      "sha256": "255096b2c018a5b282d4dc9c91a7707d4f35f16aa0407be87b9f0c2bff076594"
+    },
+    {
+      "path": "gate (py3.12 · 依赖下界)/21_Complete job.txt",
+      "bytes": 449,
+      "sha256": "16f3350664cb47b90011532bf561370ae70d2ed1d5715809248c9c1e410d2f9d"
+    },
+    {
+      "path": "1_gate (py3.13).txt",
+      "bytes": 1429311,
+      "sha256": "096d15f3455372f9bb8f4b088e90ef83dcb68a3d4ccec32e1b92156d8a3da513"
+    },
+    {
+      "path": "gate (py3.13)/system.txt",
+      "bytes": 577,
+      "sha256": "d4bc1885d7e60dd8fe6ccb5b4f90c5e879e979d68339971ee49d1935316eb704"
+    },
+    {
+      "path": "gate (py3.13)/1_Set up job.txt",
+      "bytes": 2101,
+      "sha256": "f1c75c12a3fc8ac185d737f8fea2f7a6f337fed56a590ed26b5a9df457658855"
+    },
+    {
+      "path": "gate (py3.13)/2_Run actions_checkout@11d5960a326750d5838078e36cf38b85af677262.txt",
+      "bytes": 11528,
+      "sha256": "9539a1ea50e6f4ae5bdfe30f422a52e036a95e3eb5e195face6a6bb9110d59b5"
+    },
+    {
+      "path": "gate (py3.13)/3_Run actions_setup-python@a26af69be951a213d495a4c3e4e4022e16d87065.txt",
+      "bytes": 6821,
+      "sha256": "f0d60d41bdbf381121d16bd206758f7465a4263a2f27e8c9f59dfb8943c52d27"
+    },
+    {
+      "path": "gate (py3.13)/4_安装依赖（pip install -e .[full,dev]）.txt",
+      "bytes": 12068,
+      "sha256": "38dd4d387b47e4e892789f7fb68da298cdee668cbedca70581749dd27f6b515e"
+    },
+    {
+      "path": "gate (py3.13)/6_Clone 脑端公开仓（dsh-memory）供 MDCG_BRAIN_PYTHONPATH.txt",
+      "bytes": 6087,
+      "sha256": "22658c21568905df97ca5ec993aabeefcfef06f519ed522b53c81b138af3b3ee"
+    },
+    {
+      "path": "gate (py3.13)/7_决定 test_brain_store 前置（脑端可达则真跑；否则显式 SKIP）.txt",
+      "bytes": 6225,
+      "sha256": "d63e269844bda3cc10f7492eed2b94c8351129964edb205d30fda71fd2b184fc"
+    },
+    {
+      "path": "gate (py3.13)/8_脚本式测试（逐件单跑，任一失败即红）.txt",
+      "bytes": 391093,
+      "sha256": "51cd8f3eac33ecc042f75b60127d299fa58fa35b35456840a57f2a8fd6a13fdf"
+    },
+    {
+      "path": "gate (py3.13)/9_pytest 式测试（tests_ 自动收集）.txt",
+      "bytes": 984412,
+      "sha256": "8fea1b8641386421a247004ebe0d4019066df717d763b30785a0a2c65452bab8"
+    },
+    {
+      "path": "gate (py3.13)/10_汇总（写入 Step Summary）.txt",
+      "bytes": 6340,
+      "sha256": "7eb7903c7d3aefd3f0e9e4caad30f9925bf498b2ceb0ff10595404e2c1cf205b"
+    },
+    {
+      "path": "gate (py3.13)/19_Post Run actions_setup-python@a26af69be951a213d495a4c3e4e4022e16d87065.txt",
+      "bytes": 511,
+      "sha256": "bddb85b3afedab6b4df56cd4c7139286040becc7286cdc38afde4ac2f130c330"
+    },
+    {
+      "path": "gate (py3.13)/20_Post Run actions_checkout@11d5960a326750d5838078e36cf38b85af677262.txt",
+      "bytes": 1709,
+      "sha256": "ac04c5ba3804849a6beb594e9bfb6bb2cfd952987f5bb1b99196fd927ef8f9f6"
+    },
+    {
+      "path": "gate (py3.13)/21_Complete job.txt",
+      "bytes": 449,
+      "sha256": "b07317322c91046e1b4d21d877e32dfeceea7136645fddb1fc0cf83454f2a1ce"
+    },
+    {
+      "path": "2_gate (py3.12).txt",
+      "bytes": 1426624,
+      "sha256": "5cf3766166fe4234863cb0609e42250a3e24d6f39f7f374daac78c82d0f398b1"
+    },
+    {
+      "path": "gate (py3.12)/system.txt",
+      "bytes": 577,
+      "sha256": "37e42f468d3f0f9224bedc1e3a0c388a7967fa43186174e178f65ddf237a7ff5"
+    },
+    {
+      "path": "gate (py3.12)/1_Set up job.txt",
+      "bytes": 2102,
+      "sha256": "fc5c3a0dc312b67531e02b7225e4e2694a4de798bda5fa3cfe46ee90ab42f5c6"
+    },
+    {
+      "path": "gate (py3.12)/2_Run actions_checkout@11d5960a326750d5838078e36cf38b85af677262.txt",
+      "bytes": 11528,
+      "sha256": "7bc21513555cc71b6a9f121ab890e826b1de0e028869491815b0feba586245f6"
+    },
+    {
+      "path": "gate (py3.12)/3_Run actions_setup-python@a26af69be951a213d495a4c3e4e4022e16d87065.txt",
+      "bytes": 6820,
+      "sha256": "2928121672a9ef6270d7d9b8bae44e8164f9735c1df3ff9b682d39e49b3a2dd8"
+    },
+    {
+      "path": "gate (py3.12)/4_安装依赖（pip install -e .[full,dev]）.txt",
+      "bytes": 12068,
+      "sha256": "1362a0e3ba3fe922230225b92510c8708918ae50aab390ebad059a4cbf6eb277"
+    },
+    {
+      "path": "gate (py3.12)/6_Clone 脑端公开仓（dsh-memory）供 MDCG_BRAIN_PYTHONPATH.txt",
+      "bytes": 6087,
+      "sha256": "6ca4f600f195cb9372312a020b85f00cd6ec0d84514521dfbc35800ca89df210"
+    },
+    {
+      "path": "gate (py3.12)/7_决定 test_brain_store 前置（脑端可达则真跑；否则显式 SKIP）.txt",
+      "bytes": 6225,
+      "sha256": "dfec79b49597ce4a8ea7e4a6e3c3b203a749032d4ffba2501afcd9e84cf66dca"
+    },
+    {
+      "path": "gate (py3.12)/8_脚本式测试（逐件单跑，任一失败即红）.txt",
+      "bytes": 391093,
+      "sha256": "cea81eb69adad9e16ea9ed01e39843436d732be59dedeac51b1d4cb4477969b7"
+    },
+    {
+      "path": "gate (py3.12)/9_pytest 式测试（tests_ 自动收集）.txt",
+      "bytes": 981724,
+      "sha256": "a7a5d471de5438b33c9afca66be6f5bef2d95810cd57c6df593eed7e87949be9"
+    },
+    {
+      "path": "gate (py3.12)/10_汇总（写入 Step Summary）.txt",
+      "bytes": 6341,
+      "sha256": "627042212c4b65bd074f503d0efcf23431c21a1e770772aad8844623214eef8e"
+    },
+    {
+      "path": "gate (py3.12)/19_Post Run actions_setup-python@a26af69be951a213d495a4c3e4e4022e16d87065.txt",
+      "bytes": 511,
+      "sha256": "b1082af306e58cc2e94af72372dad4079e1b72a437d96bce95dfc60046049b1a"
+    },
+    {
+      "path": "gate (py3.12)/20_Post Run actions_checkout@11d5960a326750d5838078e36cf38b85af677262.txt",
+      "bytes": 1709,
+      "sha256": "85e3c7b60264aca0574fd3c1e61c7e60b3bc2d2111d8d496c1849dd4cbf45aa2"
+    },
+    {
+      "path": "gate (py3.12)/21_Complete job.txt",
+      "bytes": 449,
+      "sha256": "b795501f27420b1fc724dd11eacdb75d46836bf8aa21e1aaeca809d16a97d447"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="25" skipped="0" tests="48" time="0.780" timestamp="2026-11-20T17:00:31.029232+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_fresh_row_decay" name="test_newborn_uses_only_its_post_birth_span[0.0-context]" time="0.015"><failure message="AssertionError: newborn was aged before its birth&#10;assert 1.810560263659002e-89 == 0.5 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 1.810560263659002e-89&#10;  Expected: 0.5 ± 1.0e-12">tests/test_fresh_row_decay.py:73: in test_newborn_uses_only_its_post_birth_span
+    assert _value(store, kind, "newborn") == pytest.approx(
+E   AssertionError: newborn was aged before its birth
+E   assert 1.810560263659002e-89 == 0.5 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.5 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_newborn_uses_only_its_post_birth_span[0.0-knowledge]" time="0.008"><failure message="AssertionError: newborn was aged before its birth&#10;assert 1.810560263659002e-89 == 0.5 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 1.810560263659002e-89&#10;  Expected: 0.5 ± 1.0e-12">tests/test_fresh_row_decay.py:73: in test_newborn_uses_only_its_post_birth_span
+    assert _value(store, kind, "newborn") == pytest.approx(
+E   AssertionError: newborn was aged before its birth
+E   assert 1.810560263659002e-89 == 0.5 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.5 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_newborn_uses_only_its_post_birth_span[0.0-edge]" time="0.009"><failure message="AssertionError: newborn was aged before its birth&#10;assert 1.810560263659002e-89 == 0.5 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 1.810560263659002e-89&#10;  Expected: 0.5 ± 1.0e-12">tests/test_fresh_row_decay.py:73: in test_newborn_uses_only_its_post_birth_span
+    assert _value(store, kind, "newborn") == pytest.approx(
+E   AssertionError: newborn was aged before its birth
+E   assert 1.810560263659002e-89 == 0.5 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.5 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_newborn_uses_only_its_post_birth_span[1.0-context]" time="0.008"><failure message="AssertionError: newborn was aged before its birth&#10;assert 1.810560263659002e-89 == 0.4998316724462135 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 1.810560263659002e-89&#10;  Expected: 0.4998316724462135 ± 1.0e-12">tests/test_fresh_row_decay.py:73: in test_newborn_uses_only_its_post_birth_span
+    assert _value(store, kind, "newborn") == pytest.approx(
+E   AssertionError: newborn was aged before its birth
+E   assert 1.810560263659002e-89 == 0.4998316724462135 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.4998316724462135 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_newborn_uses_only_its_post_birth_span[1.0-knowledge]" time="0.008"><failure message="AssertionError: newborn was aged before its birth&#10;assert 1.810560263659002e-89 == 0.4998316724462135 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 1.810560263659002e-89&#10;  Expected: 0.4998316724462135 ± 1.0e-12">tests/test_fresh_row_decay.py:73: in test_newborn_uses_only_its_post_birth_span
+    assert _value(store, kind, "newborn") == pytest.approx(
+E   AssertionError: newborn was aged before its birth
+E   assert 1.810560263659002e-89 == 0.4998316724462135 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.4998316724462135 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_newborn_uses_only_its_post_birth_span[1.0-edge]" time="0.009"><failure message="AssertionError: newborn was aged before its birth&#10;assert 1.810560263659002e-89 == 0.4998316724462135 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 1.810560263659002e-89&#10;  Expected: 0.4998316724462135 ± 1.0e-12">tests/test_fresh_row_decay.py:73: in test_newborn_uses_only_its_post_birth_span
+    assert _value(store, kind, "newborn") == pytest.approx(
+E   AssertionError: newborn was aged before its birth
+E   assert 1.810560263659002e-89 == 0.4998316724462135 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.4998316724462135 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_newborn_uses_only_its_post_birth_span[60.0-context]" time="0.007"><failure message="AssertionError: newborn was aged before its birth&#10;assert 1.810560263659002e-89 == 0.49 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 1.810560263659002e-89&#10;  Expected: 0.49 ± 1.0e-12">tests/test_fresh_row_decay.py:73: in test_newborn_uses_only_its_post_birth_span
+    assert _value(store, kind, "newborn") == pytest.approx(
+E   AssertionError: newborn was aged before its birth
+E   assert 1.810560263659002e-89 == 0.49 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.49 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_newborn_uses_only_its_post_birth_span[60.0-knowledge]" time="0.008"><failure message="AssertionError: newborn was aged before its birth&#10;assert 1.810560263659002e-89 == 0.49 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 1.810560263659002e-89&#10;  Expected: 0.49 ± 1.0e-12">tests/test_fresh_row_decay.py:73: in test_newborn_uses_only_its_post_birth_span
+    assert _value(store, kind, "newborn") == pytest.approx(
+E   AssertionError: newborn was aged before its birth
+E   assert 1.810560263659002e-89 == 0.49 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.49 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_newborn_uses_only_its_post_birth_span[60.0-edge]" time="0.009"><failure message="AssertionError: newborn was aged before its birth&#10;assert 1.810560263659002e-89 == 0.49 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 1.810560263659002e-89&#10;  Expected: 0.49 ± 1.0e-12">tests/test_fresh_row_decay.py:73: in test_newborn_uses_only_its_post_birth_span
+    assert _value(store, kind, "newborn") == pytest.approx(
+E   AssertionError: newborn was aged before its birth
+E   assert 1.810560263659002e-89 == 0.49 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.49 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_newborn_uses_only_its_post_birth_span[3600.0-context]" time="0.008"><failure message="AssertionError: newborn was aged before its birth&#10;assert 1.810560263659002e-89 == 0.1487765713460602 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 1.810560263659002e-89&#10;  Expected: 0.1487765713460602 ± 1.0e-12">tests/test_fresh_row_decay.py:73: in test_newborn_uses_only_its_post_birth_span
+    assert _value(store, kind, "newborn") == pytest.approx(
+E   AssertionError: newborn was aged before its birth
+E   assert 1.810560263659002e-89 == 0.1487765713460602 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.1487765713460602 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_newborn_uses_only_its_post_birth_span[3600.0-knowledge]" time="0.008"><failure message="AssertionError: newborn was aged before its birth&#10;assert 1.810560263659002e-89 == 0.1487765713460602 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 1.810560263659002e-89&#10;  Expected: 0.1487765713460602 ± 1.0e-12">tests/test_fresh_row_decay.py:73: in test_newborn_uses_only_its_post_birth_span
+    assert _value(store, kind, "newborn") == pytest.approx(
+E   AssertionError: newborn was aged before its birth
+E   assert 1.810560263659002e-89 == 0.1487765713460602 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.1487765713460602 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_newborn_uses_only_its_post_birth_span[3600.0-edge]" time="0.009"><failure message="AssertionError: newborn was aged before its birth&#10;assert 1.810560263659002e-89 == 0.1487765713460602 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 1.810560263659002e-89&#10;  Expected: 0.1487765713460602 ± 1.0e-12">tests/test_fresh_row_decay.py:73: in test_newborn_uses_only_its_post_birth_span
+    assert _value(store, kind, "newborn") == pytest.approx(
+E   AssertionError: newborn was aged before its birth
+E   assert 1.810560263659002e-89 == 0.1487765713460602 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.1487765713460602 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_old_and_new_rows_have_independent_ages_in_one_tick[context]" time="0.008"><failure message="AssertionError: fresh row was lost with old rows&#10;assert None == 0.4949747468305833 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: None&#10;  Expected: 0.4949747468305833 ± 1.0e-12">tests/test_fresh_row_decay.py:88: in test_old_and_new_rows_have_independent_ages_in_one_tick
+    assert _value(store, kind, "new") == pytest.approx(
+E   AssertionError: fresh row was lost with old rows
+E   assert None == 0.4949747468305833 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: None
+E     Expected: 0.4949747468305833 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_old_and_new_rows_have_independent_ages_in_one_tick[knowledge]" time="0.008"><failure message="AssertionError: fresh row was lost with old rows&#10;assert 1.810560263659002e-89 == 0.4949747468305833 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 1.810560263659002e-89&#10;  Expected: 0.4949747468305833 ± 1.0e-12">tests/test_fresh_row_decay.py:88: in test_old_and_new_rows_have_independent_ages_in_one_tick
+    assert _value(store, kind, "new") == pytest.approx(
+E   AssertionError: fresh row was lost with old rows
+E   assert 1.810560263659002e-89 == 0.4949747468305833 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.4949747468305833 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_old_and_new_rows_have_independent_ages_in_one_tick[edge]" time="0.011"><failure message="AssertionError: fresh row was lost with old rows&#10;assert None == 0.4949747468305833 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: None&#10;  Expected: 0.4949747468305833 ± 1.0e-12">tests/test_fresh_row_decay.py:88: in test_old_and_new_rows_have_independent_ages_in_one_tick
+    assert _value(store, kind, "new") == pytest.approx(
+E   AssertionError: fresh row was lost with old rows
+E   assert None == 0.4949747468305833 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: None
+E     Expected: 0.4949747468305833 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_public_creation_after_downtime_survives_the_next_tick" time="0.024"><failure message="AssertionError: normal public creation was aged through pre-birth downtime&#10;assert None == 0.49983135601535855 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: None&#10;  Expected: 0.49983135601535855 ± 1.0e-12">tests/test_fresh_row_decay.py:103: in test_public_creation_after_downtime_survives_the_next_tick
+    assert _value(engine.store, kind, row.id) == pytest.approx(
+E   AssertionError: normal public creation was aged through pre-birth downtime
+E   assert None == 0.49983135601535855 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: None
+E     Expected: 0.49983135601535855 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_zero_age_and_repeated_now_do_not_decay[context-0.02]" time="0.008"><failure message="AssertionError: zero elapsed time changed a row&#10;assert None == 0.5&#10; +  where None = _value(&lt;lingshu.core.core.LayeredStore object at 0x73bf4b87f3b0&gt;, 'context', 'new')">tests/test_fresh_row_decay.py:117: in test_zero_age_and_repeated_now_do_not_decay
+    assert _value(store, kind, "new") == 0.5, "zero elapsed time changed a row"
+E   AssertionError: zero elapsed time changed a row
+E   assert None == 0.5
+E    +  where None = _value(&lt;lingshu.core.core.LayeredStore object at 0x73bf4b87f3b0&gt;, 'context', 'new')</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_zero_age_and_repeated_now_do_not_decay[context-1.0]" time="0.008"><failure message="AssertionError: zero elapsed time changed a row&#10;assert None == 0.5&#10; +  where None = _value(&lt;lingshu.core.core.LayeredStore object at 0x73bf4b87f260&gt;, 'context', 'new')">tests/test_fresh_row_decay.py:117: in test_zero_age_and_repeated_now_do_not_decay
+    assert _value(store, kind, "new") == 0.5, "zero elapsed time changed a row"
+E   AssertionError: zero elapsed time changed a row
+E   assert None == 0.5
+E    +  where None = _value(&lt;lingshu.core.core.LayeredStore object at 0x73bf4b87f260&gt;, 'context', 'new')</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_zero_age_and_repeated_now_do_not_decay[knowledge-0.02]" time="0.022"><failure message="AssertionError: zero elapsed time changed a row&#10;assert 1.810560263659002e-89 == 0.5&#10; +  where 1.810560263659002e-89 = _value(&lt;lingshu.core.core.LayeredStore object at 0x73bf4b88a750&gt;, 'knowledge', 'new')">tests/test_fresh_row_decay.py:117: in test_zero_age_and_repeated_now_do_not_decay
+    assert _value(store, kind, "new") == 0.5, "zero elapsed time changed a row"
+E   AssertionError: zero elapsed time changed a row
+E   assert 1.810560263659002e-89 == 0.5
+E    +  where 1.810560263659002e-89 = _value(&lt;lingshu.core.core.LayeredStore object at 0x73bf4b88a750&gt;, 'knowledge', 'new')</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_zero_age_and_repeated_now_do_not_decay[knowledge-1.0]" time="0.007"><failure message="AssertionError: zero elapsed time changed a row&#10;assert 0.0 == 0.5&#10; +  where 0.0 = _value(&lt;lingshu.core.core.LayeredStore object at 0x73bf4b888410&gt;, 'knowledge', 'new')">tests/test_fresh_row_decay.py:117: in test_zero_age_and_repeated_now_do_not_decay
+    assert _value(store, kind, "new") == 0.5, "zero elapsed time changed a row"
+E   AssertionError: zero elapsed time changed a row
+E   assert 0.0 == 0.5
+E    +  where 0.0 = _value(&lt;lingshu.core.core.LayeredStore object at 0x73bf4b888410&gt;, 'knowledge', 'new')</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_zero_age_and_repeated_now_do_not_decay[edge-0.02]" time="0.008"><failure message="AssertionError: zero elapsed time changed a row&#10;assert None == 0.5&#10; +  where None = _value(&lt;lingshu.core.core.LayeredStore object at 0x73bf4b889220&gt;, 'edge', 'new')">tests/test_fresh_row_decay.py:117: in test_zero_age_and_repeated_now_do_not_decay
+    assert _value(store, kind, "new") == 0.5, "zero elapsed time changed a row"
+E   AssertionError: zero elapsed time changed a row
+E   assert None == 0.5
+E    +  where None = _value(&lt;lingshu.core.core.LayeredStore object at 0x73bf4b889220&gt;, 'edge', 'new')</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_zero_age_and_repeated_now_do_not_decay[edge-1.0]" time="0.008"><failure message="AssertionError: zero elapsed time changed a row&#10;assert None == 0.5&#10; +  where None = _value(&lt;lingshu.core.core.LayeredStore object at 0x73bf4b88bf20&gt;, 'edge', 'new')">tests/test_fresh_row_decay.py:117: in test_zero_age_and_repeated_now_do_not_decay
+    assert _value(store, kind, "new") == 0.5, "zero elapsed time changed a row"
+E   AssertionError: zero elapsed time changed a row
+E   assert None == 0.5
+E    +  where None = _value(&lt;lingshu.core.core.LayeredStore object at 0x73bf4b88bf20&gt;, 'edge', 'new')</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_first_clock_tick_keeps_the_existing_one_period_bootstrap[context]" time="0.007" /><testcase classname="tests.test_fresh_row_decay" name="test_first_clock_tick_keeps_the_existing_one_period_bootstrap[knowledge]" time="0.006" /><testcase classname="tests.test_fresh_row_decay" name="test_first_clock_tick_keeps_the_existing_one_period_bootstrap[edge]" time="0.008" /><testcase classname="tests.test_fresh_row_decay" name="test_no_clock_keeps_discrete_step_semantics[context]" time="0.007" /><testcase classname="tests.test_fresh_row_decay" name="test_no_clock_keeps_discrete_step_semantics[knowledge]" time="0.008" /><testcase classname="tests.test_fresh_row_decay" name="test_no_clock_keeps_discrete_step_semantics[edge]" time="0.009" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-1800604801.0]" time="0.008" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-1900604800.0]" time="0.009" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-None]" time="0.008" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-invalid]" time="0.008" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-inf]" time="0.008" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-1800604801.0]" time="0.008" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-1900604800.0]" time="0.008" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-None]" time="0.008" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-invalid]" time="0.008" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-inf]" time="0.008" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-1800604801.0]" time="0.010" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-1900604800.0]" time="0.009" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-None]" time="0.009" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-invalid]" time="0.010" /><testcase classname="tests.test_fresh_row_decay" name="test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-inf]" time="0.010" /><testcase classname="tests.test_fresh_row_decay" name="test_rollback_and_recovery_do_not_double_age_newborn[context]" time="0.014"><failure message="assert 0.48019999999999996 == 0.4850752518939716 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 0.48019999999999996&#10;  Expected: 0.4850752518939716 ± 1.0e-12">tests/test_fresh_row_decay.py:157: in test_rollback_and_recovery_do_not_double_age_newborn
+    assert _value(store, kind, "row") == pytest.approx(
+E   assert 0.48019999999999996 == 0.4850752518939716 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 0.48019999999999996
+E     Expected: 0.4850752518939716 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_rollback_and_recovery_do_not_double_age_newborn[knowledge]" time="0.008"><failure message="assert 0.48019999999999996 == 0.4850752518939716 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 0.48019999999999996&#10;  Expected: 0.4850752518939716 ± 1.0e-12">tests/test_fresh_row_decay.py:157: in test_rollback_and_recovery_do_not_double_age_newborn
+    assert _value(store, kind, "row") == pytest.approx(
+E   assert 0.48019999999999996 == 0.4850752518939716 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 0.48019999999999996
+E     Expected: 0.4850752518939716 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_rollback_and_recovery_do_not_double_age_newborn[edge]" time="0.011"><failure message="assert 0.48019999999999996 == 0.4850752518939716 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 0.48019999999999996&#10;  Expected: 0.4850752518939716 ± 1.0e-12">tests/test_fresh_row_decay.py:157: in test_rollback_and_recovery_do_not_double_age_newborn
+    assert _value(store, kind, "row") == pytest.approx(
+E   assert 0.48019999999999996 == 0.4850752518939716 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 0.48019999999999996
+E     Expected: 0.4850752518939716 ± 1.0e-12</failure></testcase><testcase classname="tests.test_fresh_row_decay" name="test_failure_rolls_back_row_values_and_the_clock_cursor" time="0.009" /><testcase classname="tests.test_fresh_row_decay" name="test_newborn_protection_and_immutable_edge_rules_remain_in_force" time="0.011" /></testsuite></testsuites>

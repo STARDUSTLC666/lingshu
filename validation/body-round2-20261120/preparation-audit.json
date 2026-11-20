@@ -1,25 +1,25 @@
 {
-  "status": "staged four local scoped evidence sets; combined/CI pending; not committed or pushed",
-  "artifact_count": 400,
-  "published_bytes": 3512549,
-  "checks": {
-    "numeric_json_leaves_verified": 35352,
-    "json_copied": 51,
-    "xml_semantics_verified": 96,
-    "third_party_body_files_not_copied": 12,
-    "jsonl_copied": 4,
-    "nonstandard_json_raw_text": 1
-  },
-  "canonical_blob_hashes_verified": 400,
-  "remaining_slices": [
-    "integration",
-    "remote CI",
-    "Linux benchmark/mutation workflow results"
+  "ok": true,
+  "source_sha": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+  "linux_benchmark_run": 44778606930,
+  "canonical_blobs_verified": 1636,
+  "artifact_count": 1636,
+  "new_benchmark_files_copied": 867,
+  "new_numeric_leaves_preserved": 83036,
+  "xml_files": 315,
+  "windows_gate_ok": false,
+  "windows_failure_preserved": "existing POSIX-only symlink capability assertion",
+  "scope": "completed four-fix batch; continuous contribution goal remains active",
+  "detached_metadata": [
+    "final-seal-audit.json",
+    "preparation-audit.json",
+    "sanitization-manifest.json"
   ],
-  "manifest_and_audit_excluded_from_own_digest_list": true,
-  "staged_files": 402,
-  "additional_control_files": [
-    ".github/workflows/body-round2-benchmarks.yml"
-  ],
-  "final_parse_and_path_scan": "passed"
+  "status": "verified completed four-contribution evidence seal",
+  "staged_evidence_files": 1639,
+  "manifest_and_detached_audits_excluded_from_own_digest_list": true,
+  "numeric_json_object_keys_and_values_redacted_without_key_collisions": true,
+  "current_core_pr_head": "41dc5e01fd710ffeab79aa4d566d8ed5ed5baf50",
+  "current_core_ci_gate_run": 44781318899,
+  "current_core_ci_verified_success": true
 }

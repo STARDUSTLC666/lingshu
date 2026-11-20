@@ -1,0 +1,42 @@
+{
+  "1477": {
+    "pr": "https://github.com/FuRongJun-1999/lingshu/pull/1477",
+    "source_head": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+    "ci_run": 44761889152,
+    "issue_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2791",
+    "issue_number": 2791,
+    "evidence_commit": "f769b3ac33eb5221ad66f6a4384aa6429b26e597",
+    "verified": true,
+    "labels_observed": []
+  },
+  "1478": {
+    "pr": "https://github.com/FuRongJun-1999/lingshu/pull/1478",
+    "source_head": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+    "ci_run": 44762844376,
+    "issue_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2792",
+    "issue_number": 2792,
+    "evidence_commit": "f769b3ac33eb5221ad66f6a4384aa6429b26e597",
+    "verified": true,
+    "labels_observed": []
+  },
+  "1479": {
+    "pr": "https://github.com/FuRongJun-1999/lingshu/pull/1479",
+    "source_head": "13952c82874fb9ee19a4f1b660e3144134367a53",
+    "ci_run": 44763098857,
+    "issue_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2793",
+    "issue_number": 2793,
+    "evidence_commit": "f769b3ac33eb5221ad66f6a4384aa6429b26e597",
+    "verified": true,
+    "labels_observed": []
+  },
+  "1480": {
+    "pr": "https://github.com/FuRongJun-1999/lingshu/pull/1480",
+    "source_head": "a357dbbe96905848fd81b7249814576fb2743674",
+    "ci_run": 44764764765,
+    "issue_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2794",
+    "issue_number": 2794,
+    "evidence_commit": "f769b3ac33eb5221ad66f6a4384aa6429b26e597",
+    "verified": true,
+    "labels_observed": []
+  }
+}

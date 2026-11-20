@@ -1,0 +1,11 @@
+Collecting numpy==2.3.5
+  Downloading numpy-2.3.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Requirement already satisfied: Pillow==12.3.0 in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (12.3.0)
+Downloading numpy-2.3.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 100.6 MB/s  0:00:00
+Installing collected packages: numpy
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.5.5
+    Uninstalling numpy-2.5.5:
+      Successfully uninstalled numpy-2.5.5
+Successfully installed numpy-2.3.5

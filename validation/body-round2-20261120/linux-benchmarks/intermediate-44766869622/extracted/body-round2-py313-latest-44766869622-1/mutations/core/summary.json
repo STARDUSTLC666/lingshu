@@ -1,0 +1,262 @@
+{
+  "python": "3.13.18",
+  "platform": "Linux",
+  "sqlite": "3.46.1",
+  "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "guard_sha256": "ed2c7b4c1e50ecb38d832d33898a3c9bb7445764b7ebbed24e3922a808a2d6b5",
+  "records": [
+    {
+      "case": "fixed",
+      "ok": true,
+      "returncode": 0,
+      "passed": 48,
+      "failed_tests": [],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [],
+      "expected_assertion": "",
+      "pytest_summary": "48 passed in 0.59s",
+      "source_sha256": {
+        "lingshu/core/core.py": "4ce414e49f0165f9d03b5a834b1d5dbaac354251cc9aa33b44eaf11cbf0a21c2"
+      }
+    },
+    {
+      "case": "baseline",
+      "ok": true,
+      "returncode": 1,
+      "passed": 23,
+      "failed_tests": [
+        "test_newborn_uses_only_its_post_birth_span[0.0-context]",
+        "test_newborn_uses_only_its_post_birth_span[0.0-edge]",
+        "test_newborn_uses_only_its_post_birth_span[0.0-knowledge]",
+        "test_newborn_uses_only_its_post_birth_span[1.0-context]",
+        "test_newborn_uses_only_its_post_birth_span[1.0-edge]",
+        "test_newborn_uses_only_its_post_birth_span[1.0-knowledge]",
+        "test_newborn_uses_only_its_post_birth_span[3600.0-context]",
+        "test_newborn_uses_only_its_post_birth_span[3600.0-edge]",
+        "test_newborn_uses_only_its_post_birth_span[3600.0-knowledge]",
+        "test_newborn_uses_only_its_post_birth_span[60.0-context]",
+        "test_newborn_uses_only_its_post_birth_span[60.0-edge]",
+        "test_newborn_uses_only_its_post_birth_span[60.0-knowledge]",
+        "test_old_and_new_rows_have_independent_ages_in_one_tick[context]",
+        "test_old_and_new_rows_have_independent_ages_in_one_tick[edge]",
+        "test_old_and_new_rows_have_independent_ages_in_one_tick[knowledge]",
+        "test_public_creation_after_downtime_survives_the_next_tick",
+        "test_rollback_and_recovery_do_not_double_age_newborn[context]",
+        "test_rollback_and_recovery_do_not_double_age_newborn[edge]",
+        "test_rollback_and_recovery_do_not_double_age_newborn[knowledge]",
+        "test_zero_age_and_repeated_now_do_not_decay[context-0.02]",
+        "test_zero_age_and_repeated_now_do_not_decay[context-1.0]",
+        "test_zero_age_and_repeated_now_do_not_decay[edge-0.02]",
+        "test_zero_age_and_repeated_now_do_not_decay[edge-1.0]",
+        "test_zero_age_and_repeated_now_do_not_decay[knowledge-0.02]",
+        "test_zero_age_and_repeated_now_do_not_decay[knowledge-1.0]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_newborn_uses_only_its_post_birth_span[0.0-context]",
+        "test_newborn_uses_only_its_post_birth_span[0.0-edge]",
+        "test_newborn_uses_only_its_post_birth_span[0.0-knowledge]",
+        "test_newborn_uses_only_its_post_birth_span[1.0-context]",
+        "test_newborn_uses_only_its_post_birth_span[1.0-edge]",
+        "test_newborn_uses_only_its_post_birth_span[1.0-knowledge]",
+        "test_newborn_uses_only_its_post_birth_span[3600.0-context]",
+        "test_newborn_uses_only_its_post_birth_span[3600.0-edge]",
+        "test_newborn_uses_only_its_post_birth_span[3600.0-knowledge]",
+        "test_newborn_uses_only_its_post_birth_span[60.0-context]",
+        "test_newborn_uses_only_its_post_birth_span[60.0-edge]",
+        "test_newborn_uses_only_its_post_birth_span[60.0-knowledge]",
+        "test_old_and_new_rows_have_independent_ages_in_one_tick[context]",
+        "test_old_and_new_rows_have_independent_ages_in_one_tick[edge]",
+        "test_old_and_new_rows_have_independent_ages_in_one_tick[knowledge]",
+        "test_public_creation_after_downtime_survives_the_next_tick",
+        "test_rollback_and_recovery_do_not_double_age_newborn[context]",
+        "test_rollback_and_recovery_do_not_double_age_newborn[edge]",
+        "test_rollback_and_recovery_do_not_double_age_newborn[knowledge]",
+        "test_zero_age_and_repeated_now_do_not_decay[context-0.02]",
+        "test_zero_age_and_repeated_now_do_not_decay[context-1.0]",
+        "test_zero_age_and_repeated_now_do_not_decay[edge-0.02]",
+        "test_zero_age_and_repeated_now_do_not_decay[edge-1.0]",
+        "test_zero_age_and_repeated_now_do_not_decay[knowledge-0.02]",
+        "test_zero_age_and_repeated_now_do_not_decay[knowledge-1.0]"
+      ],
+      "expected_assertion": "",
+      "pytest_summary": "25 failed, 23 passed in 0.68s",
+      "source_sha256": {
+        "lingshu/core/core.py": "4b67f6109ebf62eb74a921fd0a5d4e810e846e05643332ceaa1fb1a8739fe771"
+      }
+    },
+    {
+      "case": "omit_birth_clipping",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_newborn_uses_only_its_post_birth_span[0.0-context]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_newborn_uses_only_its_post_birth_span[0.0-context]"
+      ],
+      "expected_assertion": "newborn was aged before its birth",
+      "pytest_summary": "1 failed in 0.19s",
+      "source_sha256": {
+        "lingshu/core/core.py": "8f64a5c62134f0ac569729eced92b722ffdb734a8a0df7030ccc25619f1f200f"
+      }
+    },
+    {
+      "case": "omit_context_leg",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_newborn_uses_only_its_post_birth_span[1.0-context]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_newborn_uses_only_its_post_birth_span[1.0-context]"
+      ],
+      "expected_assertion": "newborn was aged before its birth",
+      "pytest_summary": "1 failed in 0.19s",
+      "source_sha256": {
+        "lingshu/core/core.py": "b28a9d90b09239198e75b564ea08665cbc789162aa68c20925c88a350de71c0c"
+      }
+    },
+    {
+      "case": "omit_knowledge_leg",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_newborn_uses_only_its_post_birth_span[1.0-knowledge]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_newborn_uses_only_its_post_birth_span[1.0-knowledge]"
+      ],
+      "expected_assertion": "newborn was aged before its birth",
+      "pytest_summary": "1 failed in 0.19s",
+      "source_sha256": {
+        "lingshu/core/core.py": "da46410a5cf9221011626ecce27bc8155c4772b0a958c7b1074d82d1eaa11756"
+      }
+    },
+    {
+      "case": "omit_edge_leg",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_newborn_uses_only_its_post_birth_span[1.0-edge]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_newborn_uses_only_its_post_birth_span[1.0-edge]"
+      ],
+      "expected_assertion": "newborn was aged before its birth",
+      "pytest_summary": "1 failed in 0.19s",
+      "source_sha256": {
+        "lingshu/core/core.py": "5a8a4365a450078953171feea8b00fb4067689b3402566158a55a1f40ca5783c"
+      }
+    },
+    {
+      "case": "accept_future_birth_as_comparable",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-1800604801.0]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-1800604801.0]"
+      ],
+      "expected_assertion": "noncomparable creation metadata froze",
+      "pytest_summary": "1 failed in 0.19s",
+      "source_sha256": {
+        "lingshu/core/core.py": "431b258d2d9a64602ad3ff9aa0624c1980d958ade9c4e9542c6c9a19d2f16203"
+      }
+    },
+    {
+      "case": "freeze_all_newborns",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_newborn_uses_only_its_post_birth_span[60.0-context]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_newborn_uses_only_its_post_birth_span[60.0-context]"
+      ],
+      "expected_assertion": "newborn was aged before its birth",
+      "pytest_summary": "1 failed in 0.19s",
+      "source_sha256": {
+        "lingshu/core/core.py": "c33577f5dcb0ed23ce1cd229f4191a4a52744babcaa0ace4b063ec8acb7ac910"
+      }
+    },
+    {
+      "case": "decay_even_when_elapsed_is_zero",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_zero_age_and_repeated_now_do_not_decay[context-1.0]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_zero_age_and_repeated_now_do_not_decay[context-1.0]"
+      ],
+      "expected_assertion": "zero elapsed time changed a row",
+      "pytest_summary": "1 failed in 0.19s",
+      "source_sha256": {
+        "lingshu/core/core.py": "622f154f58c3a6bc998e6d94a268ab6a97b2250c99f6ce6a06b92e565dbeda55"
+      }
+    },
+    {
+      "case": "clip_first_clock_tick",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_first_clock_tick_keeps_the_existing_one_period_bootstrap[context]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_first_clock_tick_keeps_the_existing_one_period_bootstrap[context]"
+      ],
+      "expected_assertion": "first clock tick lost its bootstrap decay",
+      "pytest_summary": "1 failed in 0.19s",
+      "source_sha256": {
+        "lingshu/core/core.py": "a9c6813b7c86f87556b7d439e7481b0ea2d6b299e28478971d8402e1990c3565"
+      }
+    },
+    {
+      "case": "disable_old_row_decay",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_old_and_new_rows_have_independent_ages_in_one_tick[context]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_old_and_new_rows_have_independent_ages_in_one_tick[context]"
+      ],
+      "expected_assertion": "old row missed downtime decay",
+      "pytest_summary": "1 failed in 0.19s",
+      "source_sha256": {
+        "lingshu/core/core.py": "eb522bfd75b87a31d747c71a0418b0400ec1b87425394da18a4353038ad132f3"
+      }
+    }
+  ]
+}

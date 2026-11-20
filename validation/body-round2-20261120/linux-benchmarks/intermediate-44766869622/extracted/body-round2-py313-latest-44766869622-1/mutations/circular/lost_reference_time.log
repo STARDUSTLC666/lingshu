@@ -1,0 +1,27 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___________ test_epoch_angular_and_vertical_fits_remain_nonsingular ____________
+tests/test_circular_time_residual_guard.py:56: in test_epoch_angular_and_vertical_fits_remain_nonsingular
+    assert pos == pytest.approx(expected_pos, abs=1e-9), "epoch helix position drifted"
+E   AssertionError: epoch helix position drifted
+E   assert (-3399999996....0468227122151) == approx((3.0 ±...96 ± 1.0e-09))
+E     
+E     comparison failed. Mismatched elements: 3 / 3:
+E     Max absolute difference: 3399999999.999998
+E     Max relative difference: 1.2743802334441574
+E     Index | Obtained           | Expected                      
+E     0     | -3399999996.999998 | 3.0 ± 1.0e-09                 
+E     1     | 2.859182677997591  | 3.84212198800577 ± 1.0e-09    
+E     2     | 0.8060468227122151 | -0.22116331538269896 ± 1.0e-09
+=========================== short test summary info ============================
+FAILED tests/test_circular_time_residual_guard.py::test_epoch_angular_and_vertical_fits_remain_nonsingular - AssertionError: epoch helix position drifted
+assert (-3399999996....0468227122151) == approx((3.0 ±...96 ± 1.0e-09))
+  
+  comparison failed. Mismatched elements: 3 / 3:
+  Max absolute difference: 3399999999.999998
+  Max relative difference: 1.2743802334441574
+  Index | Obtained           | Expected                      
+  0     | -3399999996.999998 | 3.0 ± 1.0e-09                 
+  1     | 2.859182677997591  | 3.84212198800577 ± 1.0e-09    
+  2     | 0.8060468227122151 | -0.22116331538269896 ± 1.0e-09
+1 failed in 0.07s

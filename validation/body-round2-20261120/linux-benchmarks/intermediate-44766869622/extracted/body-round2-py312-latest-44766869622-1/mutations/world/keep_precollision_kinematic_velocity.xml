@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.117" timestamp="2026-11-20T15:50:33.473891+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_kinematic_velocity_still_records_collision_corrected_displacement" time="0.031"><failure message="AssertionError: SCENE_KINEMATIC_DISPLACEMENT_CHANGED&#10;assert (4.0, 0.0, 0.0) == (2.0, 0.0, 0.0)&#10;  &#10;  At index 0 diff: 4.0 != 2.0&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    (&#10;  -     2.0,&#10;  ?     ^&#10;  +     4.0,&#10;  ?     ^&#10;        0.0,&#10;        0.0,&#10;    )">tests/test_scene_collision_freeflight_velocity.py:172: in test_kinematic_velocity_still_records_collision_corrected_displacement
+    assert s.entities[a].velocity == (2., 0., 0.), "SCENE_KINEMATIC_DISPLACEMENT_CHANGED"
+E   AssertionError: SCENE_KINEMATIC_DISPLACEMENT_CHANGED
+E   assert (4.0, 0.0, 0.0) == (2.0, 0.0, 0.0)
+E     
+E     At index 0 diff: 4.0 != 2.0
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       (
+E     -     2.0,
+E     ?     ^
+E     +     4.0,
+E     ?     ^
+E           0.0,
+E           0.0,
+E       )</failure></testcase></testsuite></testsuites>

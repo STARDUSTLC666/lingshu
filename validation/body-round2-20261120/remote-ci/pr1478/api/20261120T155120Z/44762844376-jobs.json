@@ -1,0 +1,401 @@
+{
+  "total_count": 3,
+  "jobs": [
+    {
+      "id": 136379751127,
+      "run_id": 44762844376,
+      "workflow_name": "gate",
+      "head_branch": "fix/core-fresh-decay-20261120",
+      "run_url": "https://api.github.com/repos/FuRongJun-1999/lingshu/actions/runs/44762844376",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOU6uWo88AAAAfwN3a1w",
+      "head_sha": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+      "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/actions/jobs/136379751127",
+      "html_url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44762844376/job/136379751127",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-20T15:24:03Z",
+      "started_at": "2026-11-20T15:24:05Z",
+      "completed_at": "2026-11-20T15:33:37Z",
+      "name": "gate (py3.12)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-20T15:24:05Z",
+          "completed_at": "2026-11-20T15:24:06Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-20T15:24:06Z",
+          "completed_at": "2026-11-20T15:24:08Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-20T15:24:08Z",
+          "completed_at": "2026-11-20T15:24:09Z"
+        },
+        {
+          "name": "安装依赖（pip install -e \".[full,dev]\"）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-20T15:24:09Z",
+          "completed_at": "2026-11-20T15:24:14Z"
+        },
+        {
+          "name": "钉死依赖下界（仅「依赖下界」档；#209）",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-11-20T15:24:14Z",
+          "completed_at": "2026-11-20T15:24:14Z"
+        },
+        {
+          "name": "Clone 脑端公开仓（dsh-memory）供 MDCG_BRAIN_PYTHONPATH",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-20T15:24:14Z",
+          "completed_at": "2026-11-20T15:24:17Z"
+        },
+        {
+          "name": "决定 test_brain_store 前置（脑端可达则真跑；否则显式 SKIP）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-20T15:24:17Z",
+          "completed_at": "2026-11-20T15:24:17Z"
+        },
+        {
+          "name": "脚本式测试（逐件单跑，任一失败即红）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-20T15:24:17Z",
+          "completed_at": "2026-11-20T15:24:35Z"
+        },
+        {
+          "name": "pytest 式测试（tests/ 自动收集）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-20T15:24:35Z",
+          "completed_at": "2026-11-20T15:33:33Z"
+        },
+        {
+          "name": "汇总（写入 Step Summary）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-20T15:33:33Z",
+          "completed_at": "2026-11-20T15:33:33Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-11-20T15:33:33Z",
+          "completed_at": "2026-11-20T15:33:33Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-11-20T15:33:33Z",
+          "completed_at": "2026-11-20T15:33:33Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-11-20T15:33:33Z",
+          "completed_at": "2026-11-20T15:33:33Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/FuRongJun-1999/lingshu/check-runs/136379751127",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000022180,
+      "runner_name": "GitHub Actions 1000022180",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 136379751835,
+      "run_id": 44762844376,
+      "workflow_name": "gate",
+      "head_branch": "fix/core-fresh-decay-20261120",
+      "run_url": "https://api.github.com/repos/FuRongJun-1999/lingshu/actions/runs/44762844376",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOU6uWo88AAAAfwN3dmw",
+      "head_sha": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+      "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/actions/jobs/136379751835",
+      "html_url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44762844376/job/136379751835",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-20T15:24:03Z",
+      "started_at": "2026-11-20T15:24:05Z",
+      "completed_at": "2026-11-20T15:38:52Z",
+      "name": "gate (py3.13)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-20T15:24:05Z",
+          "completed_at": "2026-11-20T15:24:06Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-20T15:24:06Z",
+          "completed_at": "2026-11-20T15:24:07Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-20T15:24:07Z",
+          "completed_at": "2026-11-20T15:24:09Z"
+        },
+        {
+          "name": "安装依赖（pip install -e \".[full,dev]\"）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-20T15:24:09Z",
+          "completed_at": "2026-11-20T15:24:18Z"
+        },
+        {
+          "name": "钉死依赖下界（仅「依赖下界」档；#209）",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-11-20T15:24:18Z",
+          "completed_at": "2026-11-20T15:24:18Z"
+        },
+        {
+          "name": "Clone 脑端公开仓（dsh-memory）供 MDCG_BRAIN_PYTHONPATH",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-20T15:24:18Z",
+          "completed_at": "2026-11-20T15:24:20Z"
+        },
+        {
+          "name": "决定 test_brain_store 前置（脑端可达则真跑；否则显式 SKIP）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-20T15:24:20Z",
+          "completed_at": "2026-11-20T15:24:20Z"
+        },
+        {
+          "name": "脚本式测试（逐件单跑，任一失败即红）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-20T15:24:20Z",
+          "completed_at": "2026-11-20T15:24:49Z"
+        },
+        {
+          "name": "pytest 式测试（tests/ 自动收集）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-20T15:24:49Z",
+          "completed_at": "2026-11-20T15:38:49Z"
+        },
+        {
+          "name": "汇总（写入 Step Summary）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-20T15:38:49Z",
+          "completed_at": "2026-11-20T15:38:49Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-11-20T15:38:49Z",
+          "completed_at": "2026-11-20T15:38:50Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-11-20T15:38:50Z",
+          "completed_at": "2026-11-20T15:38:50Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-11-20T15:38:50Z",
+          "completed_at": "2026-11-20T15:38:50Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/FuRongJun-1999/lingshu/check-runs/136379751835",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000022182,
+      "runner_name": "GitHub Actions 1000022182",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 136379751853,
+      "run_id": 44762844376,
+      "workflow_name": "gate",
+      "head_branch": "fix/core-fresh-decay-20261120",
+      "run_url": "https://api.github.com/repos/FuRongJun-1999/lingshu/actions/runs/44762844376",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOU6uWo88AAAAfwN3drQ",
+      "head_sha": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+      "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/actions/jobs/136379751853",
+      "html_url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44762844376/job/136379751853",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-20T15:24:03Z",
+      "started_at": "2026-11-20T15:24:05Z",
+      "completed_at": "2026-11-20T15:35:52Z",
+      "name": "gate (py3.12 · 依赖下界)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-20T15:24:05Z",
+          "completed_at": "2026-11-20T15:24:08Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-20T15:24:08Z",
+          "completed_at": "2026-11-20T15:24:13Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-20T15:24:13Z",
+          "completed_at": "2026-11-20T15:24:18Z"
+        },
+        {
+          "name": "安装依赖（pip install -e \".[full,dev]\"）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-20T15:24:18Z",
+          "completed_at": "2026-11-20T15:24:26Z"
+        },
+        {
+          "name": "钉死依赖下界（仅「依赖下界」档；#209）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-20T15:24:26Z",
+          "completed_at": "2026-11-20T15:24:28Z"
+        },
+        {
+          "name": "Clone 脑端公开仓（dsh-memory）供 MDCG_BRAIN_PYTHONPATH",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-20T15:24:28Z",
+          "completed_at": "2026-11-20T15:24:30Z"
+        },
+        {
+          "name": "决定 test_brain_store 前置（脑端可达则真跑；否则显式 SKIP）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-20T15:24:30Z",
+          "completed_at": "2026-11-20T15:24:30Z"
+        },
+        {
+          "name": "脚本式测试（逐件单跑，任一失败即红）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-20T15:24:30Z",
+          "completed_at": "2026-11-20T15:24:50Z"
+        },
+        {
+          "name": "pytest 式测试（tests/ 自动收集）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-20T15:24:50Z",
+          "completed_at": "2026-11-20T15:35:50Z"
+        },
+        {
+          "name": "汇总（写入 Step Summary）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-20T15:35:50Z",
+          "completed_at": "2026-11-20T15:35:50Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-11-20T15:35:50Z",
+          "completed_at": "2026-11-20T15:35:50Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-11-20T15:35:50Z",
+          "completed_at": "2026-11-20T15:35:50Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-11-20T15:35:50Z",
+          "completed_at": "2026-11-20T15:35:50Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/FuRongJun-1999/lingshu/check-runs/136379751853",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000022181,
+      "runner_name": "GitHub Actions 1000022181",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

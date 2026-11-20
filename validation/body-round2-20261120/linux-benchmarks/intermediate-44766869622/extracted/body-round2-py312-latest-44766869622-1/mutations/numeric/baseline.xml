@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="59" skipped="0" tests="70" time="0.571" timestamp="2026-11-20T15:50:27.094555+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_spatial_detect_complete_partition" name="test_quadrant_crops_cover_each_cell_exactly_once" time="0.001"><failure message="AssertionError: classified an empty crop&#10;assert (0 &gt; 0)">tests/test_spatial_detect_complete_partition.py:53: in test_quadrant_crops_cover_each_cell_exactly_once
+    spatial_detect(net, ids, exist_mult=0)
+lingshu/nn/hex_text.py:206: in spatial_detect
+    sf, cf = net.l2_features(sub)
+             ^^^^^^^^^^^^^^^^^^^^
+tests/test_spatial_detect_complete_partition.py:28: in l2_features
+    assert lat.shape[1] &gt; 0 and lat.shape[2] &gt; 0, "classified an empty crop"
+E   AssertionError: classified an empty crop
+E   assert (0 &gt; 0)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_last_cell_energy_and_color_reach_bottom_right[4-4]" time="0.007"><failure message="AssertionError: last-cell evidence was lost or assigned to another zone&#10;assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]&#10;  &#10;  At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    [&#10;        (&#10;  -         'r8',&#10;  ?           ^&#10;  +         'r0',&#10;  ?           ^&#10;  -         'circle|blue',&#10;  ?                 ^^^&#10;  +         'circle|red',&#10;  ?                 ^ +&#10;  -         1.0,&#10;  ?         ^&#10;[+4 more lines; full report in element text]">tests/test_spatial_detect_complete_partition.py:79: in test_last_cell_energy_and_color_reach_bottom_right
+    assert [(d["pos"], d["obj"], d["share"]) for d in result] == [
+E   AssertionError: last-cell evidence was lost or assigned to another zone
+E   assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]
+E     
+E     At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E     -         'r8',
+E     ?           ^
+E     +         'r0',
+E     ?           ^
+E     -         'circle|blue',
+E     ?                 ^^^
+E     +         'circle|red',
+E     ?                 ^ +
+E     -         1.0,
+E     ?         ^
+E     +         0.0,
+E     ?         ^
+E           ),
+E       ]</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_last_cell_energy_and_color_reach_bottom_right[6-7]" time="0.001"><failure message="AssertionError: last-cell evidence was lost or assigned to another zone&#10;assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]&#10;  &#10;  At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    [&#10;        (&#10;  -         'r8',&#10;  ?           ^&#10;  +         'r0',&#10;  ?           ^&#10;  -         'circle|blue',&#10;  ?                 ^^^&#10;  +         'circle|red',&#10;  ?                 ^ +&#10;  -         1.0,&#10;  ?         ^&#10;[+4 more lines; full report in element text]">tests/test_spatial_detect_complete_partition.py:79: in test_last_cell_energy_and_color_reach_bottom_right
+    assert [(d["pos"], d["obj"], d["share"]) for d in result] == [
+E   AssertionError: last-cell evidence was lost or assigned to another zone
+E   assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]
+E     
+E     At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E     -         'r8',
+E     ?           ^
+E     +         'r0',
+E     ?           ^
+E     -         'circle|blue',
+E     ?                 ^^^
+E     +         'circle|red',
+E     ?                 ^ +
+E     -         1.0,
+E     ?         ^
+E     +         0.0,
+E     ?         ^
+E           ),
+E       ]</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_last_cell_energy_and_color_reach_bottom_right[7-6]" time="0.001"><failure message="AssertionError: last-cell evidence was lost or assigned to another zone&#10;assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]&#10;  &#10;  At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    [&#10;        (&#10;  -         'r8',&#10;  ?           ^&#10;  +         'r0',&#10;  ?           ^&#10;  -         'circle|blue',&#10;  ?                 ^^^&#10;  +         'circle|red',&#10;  ?                 ^ +&#10;  -         1.0,&#10;  ?         ^&#10;[+4 more lines; full report in element text]">tests/test_spatial_detect_complete_partition.py:79: in test_last_cell_energy_and_color_reach_bottom_right
+    assert [(d["pos"], d["obj"], d["share"]) for d in result] == [
+E   AssertionError: last-cell evidence was lost or assigned to another zone
+E   assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]
+E     
+E     At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E     -         'r8',
+E     ?           ^
+E     +         'r0',
+E     ?           ^
+E     -         'circle|blue',
+E     ?                 ^^^
+E     +         'circle|red',
+E     ?                 ^ +
+E     -         1.0,
+E     ?         ^
+E     +         0.0,
+E     ?         ^
+E           ),
+E       ]</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_last_cell_energy_and_color_reach_bottom_right[18-16]" time="0.001"><failure message="AssertionError: last-cell evidence was lost or assigned to another zone&#10;assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]&#10;  &#10;  At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    [&#10;        (&#10;  -         'r8',&#10;  ?           ^&#10;  +         'r0',&#10;  ?           ^&#10;  -         'circle|blue',&#10;  ?                 ^^^&#10;  +         'circle|red',&#10;  ?                 ^ +&#10;  -         1.0,&#10;  ?         ^&#10;[+4 more lines; full report in element text]">tests/test_spatial_detect_complete_partition.py:79: in test_last_cell_energy_and_color_reach_bottom_right
+    assert [(d["pos"], d["obj"], d["share"]) for d in result] == [
+E   AssertionError: last-cell evidence was lost or assigned to another zone
+E   assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]
+E     
+E     At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E     -         'r8',
+E     ?           ^
+E     +         'r0',
+E     ?           ^
+E     -         'circle|blue',
+E     ?                 ^^^
+E     +         'circle|red',
+E     ?                 ^ +
+E     -         1.0,
+E     ?         ^
+E     +         0.0,
+E     ?         ^
+E           ),
+E       ]</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_last_cell_energy_and_color_reach_bottom_right[19-17]" time="0.001"><failure message="AssertionError: last-cell evidence was lost or assigned to another zone&#10;assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]&#10;  &#10;  At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    [&#10;        (&#10;  -         'r8',&#10;  ?           ^&#10;  +         'r0',&#10;  ?           ^&#10;  -         'circle|blue',&#10;  ?                 ^^^&#10;  +         'circle|red',&#10;  ?                 ^ +&#10;  -         1.0,&#10;  ?         ^&#10;[+4 more lines; full report in element text]">tests/test_spatial_detect_complete_partition.py:79: in test_last_cell_energy_and_color_reach_bottom_right
+    assert [(d["pos"], d["obj"], d["share"]) for d in result] == [
+E   AssertionError: last-cell evidence was lost or assigned to another zone
+E   assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]
+E     
+E     At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E     -         'r8',
+E     ?           ^
+E     +         'r0',
+E     ?           ^
+E     -         'circle|blue',
+E     ?                 ^^^
+E     +         'circle|red',
+E     ?                 ^ +
+E     -         1.0,
+E     ?         ^
+E     +         0.0,
+E     ?         ^
+E           ),
+E       ]</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_last_cell_energy_and_color_reach_bottom_right[6-6]" time="0.001" /><testcase classname="tests.test_spatial_detect_complete_partition" name="test_real_image_final_column_reaches_multimodal_check[16]" time="0.004"><failure message="AssertionError: sampled final image column disappeared&#10;assert {'r0'} == {'r2', 'r5', 'r8'}&#10;  &#10;  Extra items in the left set:&#10;  'r0'&#10;  Extra items in the right set:&#10;  'r2'&#10;  'r5'&#10;  'r8'&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    {&#10;  -     'r2',&#10;  ?       ^&#10;  +     'r0',&#10;  ?       ^&#10;  -     'r5',&#10;  -     'r8',&#10;    }">tests/test_spatial_detect_complete_partition.py:94: in test_real_image_final_column_reaches_multimodal_check
+    assert {d["pos"] for d in found} == {"r2", "r5", "r8"}, "sampled final image column disappeared"
+E   AssertionError: sampled final image column disappeared
+E   assert {'r0'} == {'r2', 'r5', 'r8'}
+E     
+E     Extra items in the left set:
+E     'r0'
+E     Extra items in the right set:
+E     'r2'
+E     'r5'
+E     'r8'
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E     -     'r2',
+E     ?       ^
+E     +     'r0',
+E     ?       ^
+E     -     'r5',
+E     -     'r8',
+E       }</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_real_image_final_column_reaches_multimodal_check[17]" time="0.004"><failure message="AssertionError: sampled final image column disappeared&#10;assert {'r0'} == {'r2', 'r5', 'r8'}&#10;  &#10;  Extra items in the left set:&#10;  'r0'&#10;  Extra items in the right set:&#10;  'r2'&#10;  'r5'&#10;  'r8'&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    {&#10;  -     'r2',&#10;  ?       ^&#10;  +     'r0',&#10;  ?       ^&#10;  -     'r5',&#10;  -     'r8',&#10;    }">tests/test_spatial_detect_complete_partition.py:94: in test_real_image_final_column_reaches_multimodal_check
+    assert {d["pos"] for d in found} == {"r2", "r5", "r8"}, "sampled final image column disappeared"
+E   AssertionError: sampled final image column disappeared
+E   assert {'r0'} == {'r2', 'r5', 'r8'}
+E     
+E     Extra items in the left set:
+E     'r0'
+E     Extra items in the right set:
+E     'r2'
+E     'r5'
+E     'r8'
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E     -     'r2',
+E     ?       ^
+E     +     'r0',
+E     ?       ^
+E     -     'r5',
+E     -     'r8',
+E       }</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_real_image_final_column_reaches_multimodal_check[19]" time="0.005"><failure message="AssertionError: sampled final image column disappeared&#10;assert {'r0'} == {'r2', 'r5', 'r8'}&#10;  &#10;  Extra items in the left set:&#10;  'r0'&#10;  Extra items in the right set:&#10;  'r2'&#10;  'r5'&#10;  'r8'&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    {&#10;  -     'r2',&#10;  ?       ^&#10;  +     'r0',&#10;  ?       ^&#10;  -     'r5',&#10;  -     'r8',&#10;    }">tests/test_spatial_detect_complete_partition.py:94: in test_real_image_final_column_reaches_multimodal_check
+    assert {d["pos"] for d in found} == {"r2", "r5", "r8"}, "sampled final image column disappeared"
+E   AssertionError: sampled final image column disappeared
+E   assert {'r0'} == {'r2', 'r5', 'r8'}
+E     
+E     Extra items in the left set:
+E     'r0'
+E     Extra items in the right set:
+E     'r2'
+E     'r5'
+E     'r8'
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E     -     'r2',
+E     ?       ^
+E     +     'r0',
+E     ?       ^
+E     -     'r5',
+E     -     'r8',
+E       }</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_real_image_final_column_reaches_multimodal_check[23]" time="0.006"><failure message="AssertionError: sampled final image column disappeared&#10;assert {'r0'} == {'r2', 'r5', 'r8'}&#10;  &#10;  Extra items in the left set:&#10;  'r0'&#10;  Extra items in the right set:&#10;  'r2'&#10;  'r5'&#10;  'r8'&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    {&#10;  -     'r2',&#10;  ?       ^&#10;  +     'r0',&#10;  ?       ^&#10;  -     'r5',&#10;  -     'r8',&#10;    }">tests/test_spatial_detect_complete_partition.py:94: in test_real_image_final_column_reaches_multimodal_check
+    assert {d["pos"] for d in found} == {"r2", "r5", "r8"}, "sampled final image column disappeared"
+E   AssertionError: sampled final image column disappeared
+E   assert {'r0'} == {'r2', 'r5', 'r8'}
+E     
+E     Extra items in the left set:
+E     'r0'
+E     Extra items in the right set:
+E     'r2'
+E     'r5'
+E     'r8'
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E     -     'r2',
+E     ?       ^
+E     +     'r0',
+E     ?       ^
+E     -     'r5',
+E     -     'r8',
+E       }</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_energy_and_classification_use_the_same_uneven_crops" time="0.002"><failure message="AssertionError: energy shares and classified crops use different partitions&#10;assert {'r8': 0.196,...': 0.121, ...} == {'r0': 0.019,...': 0.073, ...}&#10;  &#10;  Differing items:&#10;  {'r2': 0.045} != {'r2': 0.032}&#10;  {'r4': 0.111} != {'r4': 0.08}&#10;  {'r6': 0.177} != {'r6': 0.128}&#10;  {'r3': 0.102} != {'r3': 0.073}&#10;  {'r7': 0.187} != {'r7': 0.134}&#10;  {'r1': 0.035} != {'r1': 0.026}&#10;  {'r0': 0.026} != {'r0': 0.019}&#10;  {'r8': 0.196} != {'r8': 0.141}&#10;  {'r5': 0.121} != {'r5': 0.087}&#10;  &#10;[+25 more lines; full report in element text]">tests/test_spatial_detect_complete_partition.py:107: in test_energy_and_classification_use_the_same_uneven_crops
+    assert {d["pos"]: d["share"] for d in found} == expected, (
+E   AssertionError: energy shares and classified crops use different partitions
+E   assert {'r8': 0.196,...': 0.121, ...} == {'r0': 0.019,...': 0.073, ...}
+E     
+E     Differing items:
+E     {'r2': 0.045} != {'r2': 0.032}
+E     {'r4': 0.111} != {'r4': 0.08}
+E     {'r6': 0.177} != {'r6': 0.128}
+E     {'r3': 0.102} != {'r3': 0.073}
+E     {'r7': 0.187} != {'r7': 0.134}
+E     {'r1': 0.035} != {'r1': 0.026}
+E     {'r0': 0.026} != {'r0': 0.019}
+E     {'r8': 0.196} != {'r8': 0.141}
+E     {'r5': 0.121} != {'r5': 0.087}
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E     -     'r0': 0.019,
+E     ?       ^     -
+E     +     'r8': 0.196,
+E     ?       ^       +
+E     +     'r7': 0.187,
+E     +     'r6': 0.177,
+E     +     'r5': 0.121,
+E     +     'r4': 0.111,
+E     +     'r3': 0.102,
+E     +     'r2': 0.045,
+E     +     'r1': 0.035,
+E     -     'r1': 0.026,
+E     ?       ^
+E     +     'r0': 0.026,
+E     ?       ^
+E     -     'r2': 0.032,
+E     -     'r3': 0.073,
+E     -     'r4': 0.08,
+E     -     'r5': 0.087,
+E     -     'r6': 0.128,
+E     -     'r7': 0.134,
+E     -     'r8': 0.141,
+E       }</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_divisible_grid_keeps_original_crops_and_results" time="0.001" /><testcase classname="tests.test_spatial_detect_complete_partition" name="test_batched_samples_partition_independently" time="0.001"><failure message="AssertionError: assert [[('r0', 'cir...circle|red')]] == [[('r8', 'cir...rcle|green')]]&#10;  &#10;  At index 0 diff: [('r0', 'circle|red')] != [('r8', 'circle|blue')]&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    [&#10;        [&#10;            (&#10;  -             'r8',&#10;  ?               ^&#10;  +             'r0',&#10;  ?               ^&#10;  -             'circle|blue',&#10;  ?                     ^^^&#10;  +             'circle|red',&#10;  ?                     ^ +&#10;            ),&#10;        ],&#10;        [&#10;[+12 more lines; full report in element text]">tests/test_spatial_detect_complete_partition.py:126: in test_batched_samples_partition_independently
+    assert [[(d["pos"],d["obj"]) for d in sample] for sample in result] == [
+E   AssertionError: assert [[('r0', 'cir...circle|red')]] == [[('r8', 'cir...rcle|green')]]
+E     
+E     At index 0 diff: [('r0', 'circle|red')] != [('r8', 'circle|blue')]
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           [
+E               (
+E     -             'r8',
+E     ?               ^
+E     +             'r0',
+E     ?               ^
+E     -             'circle|blue',
+E     ?                     ^^^
+E     +             'circle|red',
+E     ?                     ^ +
+E               ),
+E           ],
+E           [
+E               (
+E     -             'r8',
+E     ?               ^
+E     +             'r0',
+E     ?               ^
+E     -             'circle|green',
+E     ?                     -  ^^
+E     +             'circle|red',
+E     ?                       ^
+E               ),
+E           ],
+E       ]</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_empty_batch_remains_empty" time="0.000" /><testcase classname="tests.test_spatial_detect_complete_partition" name="test_dark_tiny_lattice_does_not_classify_empty_quadrants[1-1]" time="0.001"><failure message="AssertionError: classified an empty crop&#10;assert (0 &gt; 0)">tests/test_spatial_detect_complete_partition.py:137: in test_dark_tiny_lattice_does_not_classify_empty_quadrants
+    result = spatial_detect(net,np.zeros((1,rows,cols,1)))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lingshu/nn/hex_text.py:206: in spatial_detect
+    sf, cf = net.l2_features(sub)
+             ^^^^^^^^^^^^^^^^^^^^
+tests/test_spatial_detect_complete_partition.py:28: in l2_features
+    assert lat.shape[1] &gt; 0 and lat.shape[2] &gt; 0, "classified an empty crop"
+E   AssertionError: classified an empty crop
+E   assert (0 &gt; 0)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_dark_tiny_lattice_does_not_classify_empty_quadrants[2-2]" time="0.001"><failure message="AssertionError: classified an empty crop&#10;assert (0 &gt; 0)">tests/test_spatial_detect_complete_partition.py:137: in test_dark_tiny_lattice_does_not_classify_empty_quadrants
+    result = spatial_detect(net,np.zeros((1,rows,cols,1)))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lingshu/nn/hex_text.py:206: in spatial_detect
+    sf, cf = net.l2_features(sub)
+             ^^^^^^^^^^^^^^^^^^^^
+tests/test_spatial_detect_complete_partition.py:28: in l2_features
+    assert lat.shape[1] &gt; 0 and lat.shape[2] &gt; 0, "classified an empty crop"
+E   AssertionError: classified an empty crop
+E   assert (0 &gt; 0)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_dark_tiny_lattice_does_not_classify_empty_quadrants[1-5]" time="0.001"><failure message="AssertionError: classified an empty crop&#10;assert (0 &gt; 0)">tests/test_spatial_detect_complete_partition.py:137: in test_dark_tiny_lattice_does_not_classify_empty_quadrants
+    result = spatial_detect(net,np.zeros((1,rows,cols,1)))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lingshu/nn/hex_text.py:206: in spatial_detect
+    sf, cf = net.l2_features(sub)
+             ^^^^^^^^^^^^^^^^^^^^
+tests/test_spatial_detect_complete_partition.py:28: in l2_features
+    assert lat.shape[1] &gt; 0 and lat.shape[2] &gt; 0, "classified an empty crop"
+E   AssertionError: classified an empty crop
+E   assert (0 &gt; 0)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_dark_tiny_lattice_does_not_classify_empty_quadrants[5-2]" time="0.001"><failure message="AssertionError: classified an empty crop&#10;assert (1 &gt; 0 and 0 &gt; 0)">tests/test_spatial_detect_complete_partition.py:137: in test_dark_tiny_lattice_does_not_classify_empty_quadrants
+    result = spatial_detect(net,np.zeros((1,rows,cols,1)))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lingshu/nn/hex_text.py:206: in spatial_detect
+    sf, cf = net.l2_features(sub)
+             ^^^^^^^^^^^^^^^^^^^^
+tests/test_spatial_detect_complete_partition.py:28: in l2_features
+    assert lat.shape[1] &gt; 0 and lat.shape[2] &gt; 0, "classified an empty crop"
+E   AssertionError: classified an empty crop
+E   assert (1 &gt; 0 and 0 &gt; 0)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.0-1-1]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bfd8c0&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bfd8c0&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.0-1-2]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65be0d60&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65be0d60&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.0-2-1]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a73140&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a73140&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.0-2-2]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a71fc0&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a71fc0&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.0-4-4]" time="0.001" /><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.0-5-5]" time="0.001" /><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.0-8-8]" time="0.001" /><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.0-18-16]" time="0.001" /><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.25-1-1]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a71000&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a71000&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.25-1-2]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a70660&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a70660&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.25-2-1]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a73840&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a73840&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.25-2-2]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65adc4a0&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65adc4a0&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.25-4-4]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.062&#10; +  where 0.062 = round((1 / (4 * 4)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.062
+E    +  where 0.062 = round((1 / (4 * 4)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.25-5-5]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.04&#10; +  where 0.04 = round((1 / (5 * 5)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.04
+E    +  where 0.04 = round((1 / (5 * 5)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.25-8-8]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.062&#10; +  where 0.062 = round((4 / (8 * 8)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.062
+E    +  where 0.062 = round((4 / (8 * 8)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-0.25-18-16]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.104&#10; +  where 0.104 = round((30 / (18 * 16)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.104
+E    +  where 0.104 = round((30 / (18 * 16)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-1.0-1-1]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a73140&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a73140&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-1.0-1-2]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65be0d60&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65be0d60&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-1.0-2-1]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bfe260&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bfe260&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-1.0-2-2]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bfce40&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bfce40&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-1.0-4-4]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.062&#10; +  where 0.062 = round((1 / (4 * 4)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.062
+E    +  where 0.062 = round((1 / (4 * 4)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-1.0-5-5]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.04&#10; +  where 0.04 = round((1 / (5 * 5)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.04
+E    +  where 0.04 = round((1 / (5 * 5)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-1.0-8-8]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.062&#10; +  where 0.062 = round((4 / (8 * 8)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.062
+E    +  where 0.062 = round((4 / (8 * 8)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[default-1.0-18-16]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.104&#10; +  where 0.104 = round((30 / (18 * 16)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.104
+E    +  where 0.104 = round((30 / (18 * 16)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.0-1-1]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65aa18c0&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65aa18c0&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.0-1-2]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bfeb20&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bfeb20&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.0-2-1]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bfd000&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bfd000&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.0-2-2]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bfe260&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bfe260&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.0-4-4]" time="0.001" /><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.0-5-5]" time="0.001" /><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.0-8-8]" time="0.001" /><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.0-18-16]" time="0.001" /><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.25-1-1]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bc20a0&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bc20a0&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.25-1-2]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a72420&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a72420&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.25-2-1]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a71620&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a71620&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.25-2-2]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a72dc0&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a72dc0&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.25-4-4]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.062&#10; +  where 0.062 = round((1 / (4 * 4)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.062
+E    +  where 0.062 = round((1 / (4 * 4)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.25-5-5]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.04&#10; +  where 0.04 = round((1 / (5 * 5)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.04
+E    +  where 0.04 = round((1 / (5 * 5)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.25-8-8]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.062&#10; +  where 0.062 = round((4 / (8 * 8)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.062
+E    +  where 0.062 = round((4 / (8 * 8)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-0.25-18-16]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.104&#10; +  where 0.104 = round((30 / (18 * 16)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.104
+E    +  where 0.104 = round((30 / (18 * 16)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-1.0-1-1]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65aa3300&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65aa3300&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-1.0-1-2]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a71380&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a71380&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-1.0-2-1]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a73140&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65a73140&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-1.0-2-2]" time="0.001"><failure message="AssertionError: uniform field was classified through an empty crop&#10;assert False&#10; +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bc1620&gt;)">tests/test_spatial_detect_complete_partition.py:151: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert all(np.isfinite(d["conf"]) and np.isfinite(d["share"]) for d in result), (
+E   AssertionError: uniform field was classified through an empty crop
+E   assert False
+E    +  where False = all(&lt;generator object test_uniform_real_network_does_not_mistake_area_for_extra_evidence.&lt;locals&gt;.&lt;genexpr&gt; at 0x70ab65bc1620&gt;)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-1.0-4-4]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.062&#10; +  where 0.062 = round((1 / (4 * 4)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.062
+E    +  where 0.062 = round((1 / (4 * 4)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-1.0-5-5]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.04&#10; +  where 0.04 = round((1 / (5 * 5)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.04
+E    +  where 0.04 = round((1 / (5 * 5)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-1.0-8-8]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.062&#10; +  where 0.062 = round((4 / (8 * 8)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.062
+E    +  where 0.062 = round((4 / (8 * 8)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-1.0-18-16]" time="0.001"><failure message="AssertionError: share ceased to mean total-energy fraction&#10;assert 0.111 == 0.104&#10; +  where 0.104 = round((30 / (18 * 16)), 3)">tests/test_spatial_detect_complete_partition.py:157: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert result[0]["share"] == round(area/(rows*cols),3), "share ceased to mean total-energy fraction"
+E   AssertionError: share ceased to mean total-energy fraction
+E   assert 0.111 == 0.104
+E    +  where 0.104 = round((30 / (18 * 16)), 3)</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_empty_spatial_extent_has_no_regions[0-5]" time="0.001"><failure message="AssertionError: assert [[{'pos': 'r0...share': 0.0}]] == [[], []]&#10;  &#10;  At index 0 diff: [{'pos': 'r0', 'obj': 'circle|red', 'conf': nan, 'share': 0.0}] != []&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    [&#10;  +     [&#10;  +         {&#10;  +             'pos': 'r0',&#10;  +             'obj': 'circle|red',&#10;  +             'conf': nan,&#10;  +             'share': 0.0,&#10;  +         },&#10;  -     [],&#10;  ?     -&#10;  +     ],&#10;  +     [&#10;  +         {&#10;  +             'pos': 'r0',&#10;[+8 more lines; full report in element text]">tests/test_spatial_detect_complete_partition.py:162: in test_empty_spatial_extent_has_no_regions
+    assert spatial_detect(_color_net(),np.zeros((2,rows,cols,3))) == [[],[]]
+E   AssertionError: assert [[{'pos': 'r0...share': 0.0}]] == [[], []]
+E     
+E     At index 0 diff: [{'pos': 'r0', 'obj': 'circle|red', 'conf': nan, 'share': 0.0}] != []
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E     +     [
+E     +         {
+E     +             'pos': 'r0',
+E     +             'obj': 'circle|red',
+E     +             'conf': nan,
+E     +             'share': 0.0,
+E     +         },
+E     -     [],
+E     ?     -
+E     +     ],
+E     +     [
+E     +         {
+E     +             'pos': 'r0',
+E     +             'obj': 'circle|red',
+E     +             'conf': nan,
+E     +             'share': 0.0,
+E     +         },
+E     -     [],
+E     ?     -
+E     +     ],
+E       ]</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_empty_spatial_extent_has_no_regions[5-0]" time="0.001"><failure message="AssertionError: assert [[{'pos': 'r0...share': 0.0}]] == [[], []]&#10;  &#10;  At index 0 diff: [{'pos': 'r0', 'obj': 'circle|red', 'conf': nan, 'share': 0.0}] != []&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    [&#10;  +     [&#10;  +         {&#10;  +             'pos': 'r0',&#10;  +             'obj': 'circle|red',&#10;  +             'conf': nan,&#10;  +             'share': 0.0,&#10;  +         },&#10;  -     [],&#10;  ?     -&#10;  +     ],&#10;  +     [&#10;  +         {&#10;  +             'pos': 'r0',&#10;[+8 more lines; full report in element text]">tests/test_spatial_detect_complete_partition.py:162: in test_empty_spatial_extent_has_no_regions
+    assert spatial_detect(_color_net(),np.zeros((2,rows,cols,3))) == [[],[]]
+E   AssertionError: assert [[{'pos': 'r0...share': 0.0}]] == [[], []]
+E     
+E     At index 0 diff: [{'pos': 'r0', 'obj': 'circle|red', 'conf': nan, 'share': 0.0}] != []
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E     +     [
+E     +         {
+E     +             'pos': 'r0',
+E     +             'obj': 'circle|red',
+E     +             'conf': nan,
+E     +             'share': 0.0,
+E     +         },
+E     -     [],
+E     ?     -
+E     +     ],
+E     +     [
+E     +         {
+E     +             'pos': 'r0',
+E     +             'obj': 'circle|red',
+E     +             'conf': nan,
+E     +             'share': 0.0,
+E     +         },
+E     -     [],
+E     ?     -
+E     +     ],
+E       ]</failure></testcase><testcase classname="tests.test_spatial_detect_complete_partition" name="test_empty_spatial_extent_has_no_regions[0-0]" time="0.001"><failure message="AssertionError: assert [[{'pos': 'r0...share': 0.0}]] == [[], []]&#10;  &#10;  At index 0 diff: [{'pos': 'r0', 'obj': 'circle|red', 'conf': nan, 'share': 0.0}] != []&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    [&#10;  +     [&#10;  +         {&#10;  +             'pos': 'r0',&#10;  +             'obj': 'circle|red',&#10;  +             'conf': nan,&#10;  +             'share': 0.0,&#10;  +         },&#10;  -     [],&#10;  ?     -&#10;  +     ],&#10;  +     [&#10;  +         {&#10;  +             'pos': 'r0',&#10;[+8 more lines; full report in element text]">tests/test_spatial_detect_complete_partition.py:162: in test_empty_spatial_extent_has_no_regions
+    assert spatial_detect(_color_net(),np.zeros((2,rows,cols,3))) == [[],[]]
+E   AssertionError: assert [[{'pos': 'r0...share': 0.0}]] == [[], []]
+E     
+E     At index 0 diff: [{'pos': 'r0', 'obj': 'circle|red', 'conf': nan, 'share': 0.0}] != []
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E     +     [
+E     +         {
+E     +             'pos': 'r0',
+E     +             'obj': 'circle|red',
+E     +             'conf': nan,
+E     +             'share': 0.0,
+E     +         },
+E     -     [],
+E     ?     -
+E     +     ],
+E     +     [
+E     +         {
+E     +             'pos': 'r0',
+E     +             'obj': 'circle|red',
+E     +             'conf': nan,
+E     +             'share': 0.0,
+E     +         },
+E     -     [],
+E     ?     -
+E     +     ],
+E       ]</failure></testcase></testsuite></testsuites>

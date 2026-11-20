@@ -1,0 +1,246 @@
+2026-11-20T15:18:10.3686757Z Current runner version: '2.338.2'
+2026-11-20T15:18:10.3704878Z ##[group]Runner Image Provisioner
+2026-11-20T15:18:10.3705624Z Hosted Compute Agent
+2026-11-20T15:18:10.3706036Z Version: 20261111.635
+2026-11-20T15:18:10.3706485Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-20T15:18:10.3707033Z Build Date: 2026-11-11T01:49:01Z
+2026-11-20T15:18:10.3707537Z Worker ID: {6463aedc-3c4a-48ab-897f-cebf5f34b7cf}
+2026-11-20T15:18:10.3708062Z Region: us-west-2
+2026-11-20T15:18:10.3708448Z Cloud: AWS
+2026-11-20T15:18:10.3708815Z ##[endgroup]
+2026-11-20T15:18:10.3709766Z ##[group]Operating System
+2026-11-20T15:18:10.3710194Z Ubuntu
+2026-11-20T15:18:10.3710566Z 26.04.1
+2026-11-20T15:18:10.3710928Z LTS
+2026-11-20T15:18:10.3711276Z ##[endgroup]
+2026-11-20T15:18:10.3711691Z ##[group]Runner Image
+2026-11-20T15:18:10.3712133Z Image: ubuntu-26.04
+2026-11-20T15:18:10.3712536Z Version: 20261116.88.1
+2026-11-20T15:18:10.3713442Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.88/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-20T15:18:10.3714754Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.88
+2026-11-20T15:18:10.3715508Z ##[endgroup]
+2026-11-20T15:18:10.3716284Z ##[group]GITHUB_TOKEN Permissions
+2026-11-20T15:18:10.3717981Z Contents: read
+2026-11-20T15:18:10.3718415Z Metadata: read
+2026-11-20T15:18:10.3718804Z ##[endgroup]
+2026-11-20T15:18:10.3720248Z Secret source: None
+2026-11-20T15:18:10.3720908Z Cache mode: write
+2026-11-20T15:18:10.3721533Z Prepare workflow directory
+2026-11-20T15:18:10.3985695Z Prepare all required actions
+2026-11-20T15:18:10.4021562Z Getting action download info
+2026-11-20T15:18:10.7071579Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-20T15:18:12.4503585Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-20T15:18:12.8011059Z Complete job name: PR 标题约定（type(scope) + 摘要）
+2026-11-20T15:18:12.8597758Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-11-20T15:18:12.8598341Z with:
+2026-11-20T15:18:12.8598629Z   repository: FuRongJun-1999/lingshu
+2026-11-20T15:18:12.8600881Z   token: ***
+2026-11-20T15:18:12.8601204Z   ssh-strict: true
+2026-11-20T15:18:12.8601468Z   ssh-user: git
+2026-11-20T15:18:12.8601737Z   persist-credentials: true
+2026-11-20T15:18:12.8602023Z   clean: true
+2026-11-20T15:18:12.8602293Z   sparse-checkout-cone-mode: true
+2026-11-20T15:18:12.8602619Z   fetch-depth: 1
+2026-11-20T15:18:12.8602873Z   fetch-tags: false
+2026-11-20T15:18:12.8603121Z   show-progress: true
+2026-11-20T15:18:12.8603415Z   lfs: false
+2026-11-20T15:18:12.8603673Z   submodules: false
+2026-11-20T15:18:12.8603987Z   set-safe-directory: true
+2026-11-20T15:18:12.8604283Z   allow-unsafe-pr-checkout: false
+2026-11-20T15:18:12.8604922Z env:
+2026-11-20T15:18:12.8605262Z   PYTHONUTF8: 1
+2026-11-20T15:18:12.8605535Z   PYTHONIOENCODING: utf-8
+2026-11-20T15:18:12.8605951Z ##[endgroup]
+2026-11-20T15:18:16.4138254Z Syncing repository: FuRongJun-1999/lingshu
+2026-11-20T15:18:16.4139804Z ##[group]Getting Git version info
+2026-11-20T15:18:16.4140212Z Working directory is '/home/runner/work/lingshu/lingshu'
+2026-11-20T15:18:16.4140810Z [command]/usr/bin/git version
+2026-11-20T15:18:16.4148916Z git version 2.56.1
+2026-11-20T15:18:16.4161905Z ##[endgroup]
+2026-11-20T15:18:16.4170692Z Temporarily overriding HOME='/home/runner/work/_temp/60eaa2e6-5400-4fe7-a0a2-60adc243f078' before making global git config changes
+2026-11-20T15:18:16.4171729Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-20T15:18:16.4173968Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/lingshu/lingshu
+2026-11-20T15:18:16.4642061Z Deleting the contents of '/home/runner/work/lingshu/lingshu'
+2026-11-20T15:18:16.4644789Z ##[group]Initializing the repository
+2026-11-20T15:18:16.4649725Z [command]/usr/bin/git init /home/runner/work/lingshu/lingshu
+2026-11-20T15:18:16.5310285Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-20T15:18:16.5311089Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-20T15:18:16.5311637Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-20T15:18:16.5312039Z hint: call:
+2026-11-20T15:18:16.5312304Z hint:
+2026-11-20T15:18:16.5312712Z hint: 	git config --global init.defaultBranch <name>
+2026-11-20T15:18:16.5313036Z hint:
+2026-11-20T15:18:16.5313385Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-20T15:18:16.5313843Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-20T15:18:16.5314260Z hint:
+2026-11-20T15:18:16.5314510Z hint: 	git branch -m <name>
+2026-11-20T15:18:16.5315580Z hint:
+2026-11-20T15:18:16.5315982Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-20T15:18:16.5336000Z Initialized empty Git repository in /home/runner/work/lingshu/lingshu/.git/
+2026-11-20T15:18:16.5346454Z [command]/usr/bin/git remote add origin https://github.com/FuRongJun-1999/lingshu
+2026-11-20T15:18:16.5403717Z ##[endgroup]
+2026-11-20T15:18:16.5404467Z ##[group]Disabling automatic garbage collection
+2026-11-20T15:18:16.5406934Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-20T15:18:16.5428601Z ##[endgroup]
+2026-11-20T15:18:16.5429118Z ##[group]Setting up auth
+2026-11-20T15:18:16.5435740Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-20T15:18:16.5456315Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-20T15:18:16.9578908Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-20T15:18:16.9603598Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-20T15:18:16.9775255Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-20T15:18:16.9796924Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-20T15:18:16.9968412Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-20T15:18:16.9992617Z ##[endgroup]
+2026-11-20T15:18:16.9993150Z ##[group]Fetching the repository
+2026-11-20T15:18:16.9998939Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e0846b0af00363b4ca863f7eca76452eeaa07565:refs/remotes/pull/1477/merge
+2026-11-20T15:18:18.1017623Z From https://github.com/FuRongJun-1999/lingshu
+2026-11-20T15:18:18.1018261Z  * [new ref]         e0846b0af00363b4ca863f7eca76452eeaa07565 -> pull/1477/merge
+2026-11-20T15:18:18.1021218Z ##[endgroup]
+2026-11-20T15:18:18.1021628Z ##[group]Determining the checkout info
+2026-11-20T15:18:18.1023792Z ##[endgroup]
+2026-11-20T15:18:18.1038140Z [command]/usr/bin/git sparse-checkout disable
+2026-11-20T15:18:18.1090194Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-20T15:18:18.1112445Z ##[group]Checking out the ref
+2026-11-20T15:18:18.1116097Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1477/merge
+2026-11-20T15:18:18.1943343Z Note: switching to 'refs/remotes/pull/1477/merge'.
+2026-11-20T15:18:18.1943608Z 
+2026-11-20T15:18:18.1944016Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-20T15:18:18.1944474Z changes and commit them, and you can discard any commits you make in this
+2026-11-20T15:18:18.1945089Z state without impacting any branches by switching back to a branch.
+2026-11-20T15:18:18.1945408Z 
+2026-11-20T15:18:18.1945609Z If you want to create a new branch to retain commits you create, you may
+2026-11-20T15:18:18.1946197Z do so (now or later) by using -c with the switch command. Example:
+2026-11-20T15:18:18.1946411Z 
+2026-11-20T15:18:18.1946588Z   git switch -c <new-branch-name>
+2026-11-20T15:18:18.1946765Z 
+2026-11-20T15:18:18.1946896Z Or undo this operation with:
+2026-11-20T15:18:18.1947082Z 
+2026-11-20T15:18:18.1947368Z   git switch -
+2026-11-20T15:18:18.1947536Z 
+2026-11-20T15:18:18.1947800Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-20T15:18:18.1948131Z 
+2026-11-20T15:18:18.1948491Z HEAD is now at e0846b0 Merge e821bbb1fac57fa638640e3caf153caf7f1b1973 into d74848fb33dbff1d719959df19d1266a1ac60f44
+2026-11-20T15:18:18.1957386Z ##[endgroup]
+2026-11-20T15:18:18.2018048Z [command]/usr/bin/git log -1 --format=%H
+2026-11-20T15:18:18.2037678Z e0846b0af00363b4ca863f7eca76452eeaa07565
+2026-11-20T15:18:18.2243756Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-11-20T15:18:18.2244122Z with:
+2026-11-20T15:18:18.2244353Z   python-version: 3.12
+2026-11-20T15:18:18.2244823Z   check-latest: false
+2026-11-20T15:18:18.2246663Z   token: ***
+2026-11-20T15:18:18.2247118Z   update-environment: true
+2026-11-20T15:18:18.2247407Z   allow-prereleases: false
+2026-11-20T15:18:18.2247637Z   freethreaded: false
+2026-11-20T15:18:18.2247864Z env:
+2026-11-20T15:18:18.2248065Z   PYTHONUTF8: 1
+2026-11-20T15:18:18.2248299Z   PYTHONIOENCODING: utf-8
+2026-11-20T15:18:18.2248541Z ##[endgroup]
+2026-11-20T15:18:18.3262230Z ##[group]Installed versions
+2026-11-20T15:18:18.8515171Z (node:2356) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-20T15:18:18.8516221Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-20T15:18:18.8516694Z Successfully set up CPython (3.12.16)
+2026-11-20T15:18:18.8528408Z ##[endgroup]
+2026-11-20T15:18:18.8639064Z ##[group]Run python -X utf8 scripts/check_pr_title.py --selftest
+2026-11-20T15:18:18.8639895Z [36;1mpython -X utf8 scripts/check_pr_title.py --selftest[0m
+2026-11-20T15:18:18.9430982Z shell: /usr/bin/bash -e {0}
+2026-11-20T15:18:18.9431302Z env:
+2026-11-20T15:18:18.9431746Z   PYTHONUTF8: 1
+2026-11-20T15:18:18.9431978Z   PYTHONIOENCODING: utf-8
+2026-11-20T15:18:18.9432280Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:18:18.9432680Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-20T15:18:18.9433077Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:18:18.9433468Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:18:18.9433836Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:18:18.9434171Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-20T15:18:18.9434483Z ##[endgroup]
+2026-11-20T15:18:19.4972549Z /home/runner/work/lingshu/lingshu/scripts/check_pr_title.py:13: SyntaxWarning: invalid escape sequence '\s'
+2026-11-20T15:18:19.4976404Z   ——这类字符既不被 `str.strip()` 也不被正则 `\s` 认作空白，可用「视觉为空」
+2026-11-20T15:18:19.7827070Z OK: type=fix scope=world breaking=False summary=BrainStore 读条数参数 limit→k——21 实体场景不再漏 1
+2026-11-20T15:18:19.7828063Z OK: type=docs scope=deps breaking=False summary=声明已测版本区间与矩阵——numpy>=2.3.5,<2.6 / Pillow>=12.2,<13
+2026-11-20T15:18:19.7828798Z OK: type=init scope=- breaking=False summary=灵枢聚合仓骨架
+2026-11-20T15:18:19.7829268Z OK: type=feat scope=world breaking=True summary=破坏性改动示例
+2026-11-20T15:18:19.7829672Z OK: type=chore scope=privacy breaking=False summary=公开面前进式脱敏
+2026-11-20T15:18:19.7830078Z OK: type=ci scope=gate breaking=False summary=新增 CI 门禁
+2026-11-20T15:18:19.7830431Z OK（Revert 特例放行）：Revert "docs: 某次改动"
+2026-11-20T15:18:19.7845888Z ##[error]标题不符合约定 `type(scope): 摘要`：'修复了一个 bug'
+2026-11-20T15:18:19.7851036Z   · 示例：`fix(world): BrainStore 读条数参数 limit→k`
+2026-11-20T15:18:19.7851453Z   · 示例：`docs(deps): 声明已测版本区间与矩阵`
+2026-11-20T15:18:19.7851836Z   · 注意：冒号后要有空格，且摘要不得为空；type 用英文小写。
+2026-11-20T15:18:19.7852316Z   · 允许的 type：init, feat, fix, docs, chore, tools, code, theory, test, perf, refactor, style, build, ci, revert
+2026-11-20T15:18:19.7853746Z ##[error]标题不符合约定 `type(scope): 摘要`：'fix:nospace'
+2026-11-20T15:18:19.7854880Z   · 示例：`fix(world): BrainStore 读条数参数 limit→k`
+2026-11-20T15:18:19.7855273Z   · 示例：`docs(deps): 声明已测版本区间与矩阵`
+2026-11-20T15:18:19.7855710Z   · 注意：冒号后要有空格，且摘要不得为空；type 用英文小写。
+2026-11-20T15:18:19.7856252Z   · 允许的 type：init, feat, fix, docs, chore, tools, code, theory, test, perf, refactor, style, build, ci, revert
+2026-11-20T15:18:19.7857307Z ##[error]type 'unknown' 不在白名单内。
+2026-11-20T15:18:19.7858356Z   · 允许的 type：init, feat, fix, docs, chore, tools, code, theory, test, perf, refactor, style, build, ci, revert
+2026-11-20T15:18:19.7859050Z   · 如确需新 type，请先与维护者确认后在 ALLOWED_TYPES 登记（勿临时放宽）。
+2026-11-20T15:18:19.7859877Z ##[error]标题不符合约定 `type(scope): 摘要`：'fix(): 摘要'
+2026-11-20T15:18:19.7860600Z   · 示例：`fix(world): BrainStore 读条数参数 limit→k`
+2026-11-20T15:18:19.7860927Z   · 示例：`docs(deps): 声明已测版本区间与矩阵`
+2026-11-20T15:18:19.7861221Z   · 注意：冒号后要有空格，且摘要不得为空；type 用英文小写。
+2026-11-20T15:18:19.7861634Z   · 允许的 type：init, feat, fix, docs, chore, tools, code, theory, test, perf, refactor, style, build, ci, revert
+2026-11-20T15:18:19.7862429Z ##[error]标题首尾含多余空白。
+2026-11-20T15:18:19.7862987Z   · 实际标题：'fix: '
+2026-11-20T15:18:19.7863647Z ##[error]标题不符合约定 `type(scope): 摘要`：'Fix(world): 摘要'
+2026-11-20T15:18:19.7864286Z   · 示例：`fix(world): BrainStore 读条数参数 limit→k`
+2026-11-20T15:18:19.7865031Z   · 示例：`docs(deps): 声明已测版本区间与矩阵`
+2026-11-20T15:18:19.7865323Z   · 注意：冒号后要有空格，且摘要不得为空；type 用英文小写。
+2026-11-20T15:18:19.7865793Z   · 允许的 type：init, feat, fix, docs, chore, tools, code, theory, test, perf, refactor, style, build, ci, revert
+2026-11-20T15:18:19.7866672Z ##[error]标题首尾含多余空白。
+2026-11-20T15:18:19.7867225Z   · 实际标题：' fix: 摘要'
+2026-11-20T15:18:19.7867879Z ##[error]标题不符合约定 `type(scope): 摘要`：'fix(world):'
+2026-11-20T15:18:19.7868782Z   · 示例：`fix(world): BrainStore 读条数参数 limit→k`
+2026-11-20T15:18:19.7869098Z   · 示例：`docs(deps): 声明已测版本区间与矩阵`
+2026-11-20T15:18:19.7869420Z   · 注意：冒号后要有空格，且摘要不得为空；type 用英文小写。
+2026-11-20T15:18:19.7869867Z   · 允许的 type：init, feat, fix, docs, chore, tools, code, theory, test, perf, refactor, style, build, ci, revert
+2026-11-20T15:18:19.7870677Z ##[error]标题含不可见字符（视觉为空/视觉伪装的标题不得过闸，#361 残余①）。
+2026-11-20T15:18:19.7871328Z   · 不可见字符：U+200B
+2026-11-20T15:18:19.7871569Z   · 请用可见字符重写摘要/scope。
+2026-11-20T15:18:19.7872206Z ##[error]标题含不可见字符（视觉为空/视觉伪装的标题不得过闸，#361 残余①）。
+2026-11-20T15:18:19.7872803Z   · 不可见字符：U+200B
+2026-11-20T15:18:19.7873032Z   · 请用可见字符重写摘要/scope。
+2026-11-20T15:18:19.7873685Z ##[error]标题含不可见字符（视觉为空/视觉伪装的标题不得过闸，#361 残余①）。
+2026-11-20T15:18:19.7874265Z   · 不可见字符：U+202E
+2026-11-20T15:18:19.7874491Z   · 请用可见字符重写摘要/scope。
+2026-11-20T15:18:19.7875342Z ##[error]标题过长（343 > 300 字符）。
+2026-11-20T15:18:19.7876023Z   · 请把细节放进 PR 正文，标题只留一句摘要。
+2026-11-20T15:18:19.7876799Z ##[error]未提供 PR 标题（缺 argv 参数且环境变量 PR_TITLE 为空）。
+2026-11-20T15:18:19.7877483Z   · 用法：python -X utf8 scripts/check_pr_title.py "<PR 标题>"
+2026-11-20T15:18:19.7877824Z selftest: OK（正例 7 · 负例 12）
+2026-11-20T15:18:19.7918932Z ##[group]Run python -X utf8 scripts/check_pr_title.py "$PR_TITLE"
+2026-11-20T15:18:19.7919345Z [36;1mpython -X utf8 scripts/check_pr_title.py "$PR_TITLE"[0m
+2026-11-20T15:18:19.7938273Z shell: /usr/bin/bash -e {0}
+2026-11-20T15:18:19.7938633Z env:
+2026-11-20T15:18:19.7938925Z   PYTHONUTF8: 1
+2026-11-20T15:18:19.7939185Z   PYTHONIOENCODING: utf-8
+2026-11-20T15:18:19.7939539Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:18:19.7939927Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-20T15:18:19.7940289Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:18:19.7940683Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:18:19.7941035Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:18:19.7941376Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-20T15:18:19.7941889Z   PR_TITLE: fix(world): anchor circular fits and score vertical residuals
+2026-11-20T15:18:19.7942291Z ##[endgroup]
+2026-11-20T15:18:19.8051277Z /home/runner/work/lingshu/lingshu/scripts/check_pr_title.py:13: SyntaxWarning: invalid escape sequence '\s'
+2026-11-20T15:18:19.8052243Z   ——这类字符既不被 `str.strip()` 也不被正则 `\s` 认作空白，可用「视觉为空」
+2026-11-20T15:18:19.8110398Z OK: type=fix scope=world breaking=False summary=anchor circular fits and score vertical residuals
+2026-11-20T15:18:19.8209598Z Post job cleanup.
+2026-11-20T15:18:19.9120386Z (node:2370) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-20T15:18:19.9121085Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-20T15:18:19.9258608Z Post job cleanup.
+2026-11-20T15:18:19.9883151Z [command]/usr/bin/git version
+2026-11-20T15:18:19.9913378Z git version 2.56.1
+2026-11-20T15:18:19.9939546Z Temporarily overriding HOME='/home/runner/work/_temp/4df9a3fd-1139-4623-a30a-1dccfa85be3b' before making global git config changes
+2026-11-20T15:18:19.9940733Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-20T15:18:19.9943383Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/lingshu/lingshu
+2026-11-20T15:18:19.9971359Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-20T15:18:19.9996666Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-20T15:18:20.0189224Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-20T15:18:20.0204770Z http.https://github.com/.extraheader
+2026-11-20T15:18:20.0212897Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-20T15:18:20.0236495Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-20T15:18:20.0427605Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-20T15:18:20.0462009Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-20T15:18:20.0749067Z Cleaning up orphan processes
+2026-11-20T15:18:20.0995916Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.113" timestamp="2026-11-20T17:00:38.677879+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_noncontact_keeps_original_physics_state" time="0.031"><failure message="AssertionError: SCENE_NO_CONTACT_RESEEDED&#10;assert {'p0': (64.10..., 'mass': 2.5} == {'p0': (64.0,..., 'mass': 2.5}&#10;  &#10;  Omitting 1 identical items, use -vv to show&#10;  Differing items:&#10;  {'t_ref': 0.4} != {'t_ref': 0.0}&#10;  {'v0': (0.25, -3.5, -0.1)} != {'v0': (0.25, 0.5, -0.1)}&#10;  {'p0': (64.10000000000002, 999.4000000000002, 63.96000000000001)} != {'p0': (64.0, 1000.0, 64.0)}&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    {&#10;        'p0': (&#10;  -         64.0,&#10;  -         1000.0,&#10;[+19 more lines; full report in element text]">tests/test_scene_collision_freeflight_velocity.py:75: in test_noncontact_keeps_original_physics_state
+    assert s.entities[a].attrs["physics_state"] == original, "SCENE_NO_CONTACT_RESEEDED"
+E   AssertionError: SCENE_NO_CONTACT_RESEEDED
+E   assert {'p0': (64.10..., 'mass': 2.5} == {'p0': (64.0,..., 'mass': 2.5}
+E     
+E     Omitting 1 identical items, use -vv to show
+E     Differing items:
+E     {'t_ref': 0.4} != {'t_ref': 0.0}
+E     {'v0': (0.25, -3.5, -0.1)} != {'v0': (0.25, 0.5, -0.1)}
+E     {'p0': (64.10000000000002, 999.4000000000002, 63.96000000000001)} != {'p0': (64.0, 1000.0, 64.0)}
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E           'p0': (
+E     -         64.0,
+E     -         1000.0,
+E     -         64.0,
+E     +         64.10000000000002,
+E     +         999.4000000000002,
+E     +         63.96000000000001,
+E           ),
+E           'v0': (
+E               0.25,
+E     -         0.5,
+E     ?         ^
+E     +         -3.5,
+E     ?         ^^
+E               -0.1,
+E           ),
+E     -     't_ref': 0.0,
+E     ?                ^
+E     +     't_ref': 0.4,
+E     ?                ^
+E           'mass': 2.5,
+E       }</failure></testcase></testsuite></testsuites>

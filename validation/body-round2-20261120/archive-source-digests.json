@@ -1,0 +1,47 @@
+{
+  "archives": [
+    {
+      "source": "audit-world/ci-round2/linux-benchmarks/artifacts/body-round2-py312-floor-44766869622-1.zip",
+      "sha256": "0c11b5eda7a7a04193879433271c9b284274822f3dae853ea5d1062a7adff679",
+      "bytes": 339598,
+      "policy": "original downloaded archive retained privately; extracted original outputs and digests published"
+    },
+    {
+      "source": "audit-world/ci-round2/linux-benchmarks/artifacts/body-round2-py312-latest-44766869622-1.zip",
+      "sha256": "72879401d05edf9383f966d099556df01e776da34b484988812c5b5dd2bfa521",
+      "bytes": 339187,
+      "policy": "original downloaded archive retained privately; extracted original outputs and digests published"
+    },
+    {
+      "source": "audit-world/ci-round2/linux-benchmarks/artifacts/body-round2-py313-latest-44766869622-1.zip",
+      "sha256": "863f99866e4668834ce5f86ccaccc161e3c38f260dc8be4d19cb19f4873bb12f",
+      "bytes": 339062,
+      "policy": "original downloaded archive retained privately; extracted original outputs and digests published"
+    },
+    {
+      "source": "audit-world/ci-round2/final-44778606930/44778606930-attempt1/all-run-logs.zip",
+      "sha256": "a46c1b8800761e2e776fd69e8493b4f84d8c87e7030cae2cb4018c13f6723948",
+      "bytes": 115889,
+      "policy": "original downloaded archive retained privately; extracted original outputs and digests published"
+    },
+    {
+      "source": "audit-world/ci-round2/final-44778606930/artifacts/body-round2-py312-floor-44778606930-1.zip",
+      "sha256": "ca86f2c54e740c1c87dd1c5e18e4ce643f4fb377de52597f9c1adf9644428907",
+      "bytes": 339755,
+      "policy": "original downloaded archive retained privately; extracted original outputs and digests published"
+    },
+    {
+      "source": "audit-world/ci-round2/final-44778606930/artifacts/body-round2-py312-latest-44778606930-1.zip",
+      "sha256": "6ba2bf41ded7b9fe6422c7845766c062d3a07470d0bfae51be8e4dccca492a6c",
+      "bytes": 339305,
+      "policy": "original downloaded archive retained privately; extracted original outputs and digests published"
+    },
+    {
+      "source": "audit-world/ci-round2/final-44778606930/artifacts/body-round2-py313-latest-44778606930-1.zip",
+      "sha256": "266e8bc0efb5ac45b54be6e75d63584145cc839f3ea550e5061a2bc1504dda16",
+      "bytes": 339079,
+      "policy": "original downloaded archive retained privately; extracted original outputs and digests published"
+    }
+  ],
+  "note": "Uploaded artifact ZIP digests independently matched GitHub. Public text applies declared path/LF normalization; source and canonical digests are separate."
+}

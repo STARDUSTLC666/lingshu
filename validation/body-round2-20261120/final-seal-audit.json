@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "source_sha": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+  "linux_benchmark_run": 44778606930,
+  "canonical_blobs_verified": 1636,
+  "artifact_count": 1636,
+  "new_benchmark_files_copied": 867,
+  "new_numeric_leaves_preserved": 83036,
+  "xml_files": 315,
+  "windows_gate_ok": false,
+  "windows_failure_preserved": "existing POSIX-only symlink capability assertion",
+  "scope": "completed four-fix batch; continuous contribution goal remains active",
+  "detached_metadata": [
+    "final-seal-audit.json",
+    "preparation-audit.json",
+    "sanitization-manifest.json"
+  ],
+  "current_core_pr_head": "41dc5e01fd710ffeab79aa4d566d8ed5ed5baf50",
+  "current_core_ci_gate_run": 44781318899,
+  "current_core_ci_verified_success": true
+}

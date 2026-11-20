@@ -1,0 +1,35 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_______ test_real_collision_still_reseeds_at_the_correct_contact_surface _______
+tests/test_scene_collision_freeflight_velocity.py:130: in test_real_collision_still_reseeds_at_the_correct_contact_surface
+    assert st["p0"] == e.pos and st["v0"] == e.velocity, "SCENE_CONTACT_WAS_NOT_RESEEDED"
+E   AssertionError: SCENE_CONTACT_WAS_NOT_RESEEDED
+E   assert ((10.0, 10.0, 10.0) == (11.5, 10.0, 10.0)
+E     
+E     At index 0 diff: 10.0 != 11.5
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       (
+E     -     11.5,
+E     ?      ^ ^
+E     +     10.0,
+E     ?      ^ ^
+E           10.0,
+E           10.0,
+E       ))
+=========================== short test summary info ============================
+FAILED tests/test_scene_collision_freeflight_velocity.py::test_real_collision_still_reseeds_at_the_correct_contact_surface - AssertionError: SCENE_CONTACT_WAS_NOT_RESEEDED
+assert ((10.0, 10.0, 10.0) == (11.5, 10.0, 10.0)
+  
+  At index 0 diff: 10.0 != 11.5
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    (
+  -     11.5,
+  ?      ^ ^
+  +     10.0,
+  ?      ^ ^
+        10.0,
+        10.0,
+    ))
+1 failed in 0.11s

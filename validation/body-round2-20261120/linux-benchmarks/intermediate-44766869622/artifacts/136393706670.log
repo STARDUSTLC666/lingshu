@@ -1,0 +1,709 @@
+2026-11-20T15:47:55.4190368Z Current runner version: '2.338.2'
+2026-11-20T15:47:55.4215050Z ##[group]Runner Image Provisioner
+2026-11-20T15:47:55.4216641Z Hosted Compute Agent
+2026-11-20T15:47:55.4217386Z Version: 20261111.635
+2026-11-20T15:47:55.4218046Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-20T15:47:55.4218829Z Build Date: 2026-11-11T01:49:01Z
+2026-11-20T15:47:55.4219606Z Worker ID: {45c8cf50-123b-4a87-8cf8-30bb716a9b70}
+2026-11-20T15:47:55.4220390Z Region: eastus
+2026-11-20T15:47:55.4220988Z Cloud: Azure
+2026-11-20T15:47:55.4221535Z ##[endgroup]
+2026-11-20T15:47:55.4223597Z ##[group]Operating System
+2026-11-20T15:47:55.4224279Z Ubuntu
+2026-11-20T15:47:55.4224848Z 26.04.1
+2026-11-20T15:47:55.4225618Z LTS
+2026-11-20T15:47:55.4226160Z ##[endgroup]
+2026-11-20T15:47:55.4226772Z ##[group]Runner Image
+2026-11-20T15:47:55.4227484Z Image: ubuntu-26.04
+2026-11-20T15:47:55.4228122Z Version: 20261116.202.1
+2026-11-20T15:47:55.4229487Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.202/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-20T15:47:55.4231132Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.202
+2026-11-20T15:47:55.4232136Z ##[endgroup]
+2026-11-20T15:47:55.4233307Z ##[group]GITHUB_TOKEN Permissions
+2026-11-20T15:47:55.4236129Z Contents: read
+2026-11-20T15:47:55.4236842Z Metadata: read
+2026-11-20T15:47:55.4237441Z ##[endgroup]
+2026-11-20T15:47:55.4239601Z Secret source: Actions
+2026-11-20T15:47:55.4240731Z Cache mode: write
+2026-11-20T15:47:55.4241662Z Prepare workflow directory
+2026-11-20T15:47:55.4635956Z Prepare all required actions
+2026-11-20T15:47:55.4684173Z Getting action download info
+2026-11-20T15:47:55.6267025Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-20T15:47:55.7454834Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-20T15:47:55.8032297Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-20T15:47:56.0043747Z Complete job name: benchmark (3.12, py312-latest)
+2026-11-20T15:47:56.0931510Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-11-20T15:47:56.0932604Z with:
+2026-11-20T15:47:56.0933028Z   path: evidence
+2026-11-20T15:47:56.0933499Z   persist-credentials: false
+2026-11-20T15:47:56.0934047Z   repository: STARDUSTLC666/lingshu
+2026-11-20T15:47:56.0938206Z   token: ***
+2026-11-20T15:47:56.0938658Z   ssh-strict: true
+2026-11-20T15:47:56.0939106Z   ssh-user: git
+2026-11-20T15:47:56.0939539Z   clean: true
+2026-11-20T15:47:56.0939990Z   sparse-checkout-cone-mode: true
+2026-11-20T15:47:56.0940522Z   fetch-depth: 1
+2026-11-20T15:47:56.0940950Z   fetch-tags: false
+2026-11-20T15:47:56.0941406Z   show-progress: true
+2026-11-20T15:47:56.0941857Z   lfs: false
+2026-11-20T15:47:56.0942273Z   submodules: false
+2026-11-20T15:47:56.0942722Z   set-safe-directory: true
+2026-11-20T15:47:56.0943255Z   allow-unsafe-pr-checkout: false
+2026-11-20T15:47:56.0944022Z env:
+2026-11-20T15:47:56.0944520Z   SOURCE_SHA: 5226860c1d70bc7fc6619cf79aff10c4f9a2a234
+2026-11-20T15:47:56.0945385Z   BASELINE_SHA: d74848fb33dbff1d719959df19d1266a1ac60f44
+2026-11-20T15:47:56.0946050Z   PYTHONUTF8: 1
+2026-11-20T15:47:56.0946506Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-20T15:47:56.0947010Z   PYTHONHASHSEED: 0
+2026-11-20T15:47:56.0947470Z   OPENBLAS_NUM_THREADS: 1
+2026-11-20T15:47:56.0947949Z   OMP_NUM_THREADS: 1
+2026-11-20T15:47:56.0948399Z   MKL_NUM_THREADS: 1
+2026-11-20T15:47:56.0948853Z ##[endgroup]
+2026-11-20T15:47:56.3607754Z Syncing repository: STARDUSTLC666/lingshu
+2026-11-20T15:47:56.3610427Z ##[group]Getting Git version info
+2026-11-20T15:47:56.3611723Z Working directory is '/home/runner/work/lingshu/lingshu/evidence'
+2026-11-20T15:47:56.3613797Z [command]/usr/bin/git version
+2026-11-20T15:47:56.3629142Z git version 2.56.1
+2026-11-20T15:47:56.3652044Z ##[endgroup]
+2026-11-20T15:47:56.3667375Z Temporarily overriding HOME='/home/runner/work/_temp/820492cb-3e9f-4076-a1c3-e5743c3c4c74' before making global git config changes
+2026-11-20T15:47:56.3670234Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-20T15:47:56.3673423Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/lingshu/lingshu/evidence
+2026-11-20T15:47:56.3739446Z ##[group]Initializing the repository
+2026-11-20T15:47:56.3744579Z [command]/usr/bin/git init /home/runner/work/lingshu/lingshu/evidence
+2026-11-20T15:47:56.3853928Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-20T15:47:56.3856500Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-20T15:47:56.3858515Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-20T15:47:56.3859505Z hint: call:
+2026-11-20T15:47:56.3860086Z hint:
+2026-11-20T15:47:56.3860756Z hint: 	git config --global init.defaultBranch <name>
+2026-11-20T15:47:56.3861578Z hint:
+2026-11-20T15:47:56.3862320Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-20T15:47:56.3863467Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-20T15:47:56.3864416Z hint:
+2026-11-20T15:47:56.3864982Z hint: 	git branch -m <name>
+2026-11-20T15:47:56.3866046Z hint:
+2026-11-20T15:47:56.3866985Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-20T15:47:56.3878041Z Initialized empty Git repository in /home/runner/work/lingshu/lingshu/evidence/.git/
+2026-11-20T15:47:56.3893017Z [command]/usr/bin/git remote add origin https://github.com/STARDUSTLC666/lingshu
+2026-11-20T15:47:56.3951523Z ##[endgroup]
+2026-11-20T15:47:56.3952968Z ##[group]Disabling automatic garbage collection
+2026-11-20T15:47:56.3955215Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-20T15:47:56.3999211Z ##[endgroup]
+2026-11-20T15:47:56.4000650Z ##[group]Setting up auth
+2026-11-20T15:47:56.4006544Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-20T15:47:56.4061488Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-20T15:47:56.4680680Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-20T15:47:56.4722858Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-20T15:47:56.5033901Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-20T15:47:56.5079898Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-20T15:47:56.5372555Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-20T15:47:56.5415100Z ##[endgroup]
+2026-11-20T15:47:56.5417728Z ##[group]Fetching the repository
+2026-11-20T15:47:56.5428243Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f769b3ac33eb5221ad66f6a4384aa6429b26e597:refs/remotes/origin/validation/body-round2-evidence-20261120
+2026-11-20T15:47:57.1436364Z From https://github.com/STARDUSTLC666/lingshu
+2026-11-20T15:47:57.1438987Z  * [new ref]         f769b3ac33eb5221ad66f6a4384aa6429b26e597 -> origin/validation/body-round2-evidence-20261120
+2026-11-20T15:47:57.1444412Z ##[endgroup]
+2026-11-20T15:47:57.1446787Z ##[group]Determining the checkout info
+2026-11-20T15:47:57.1448801Z ##[endgroup]
+2026-11-20T15:47:57.1450102Z [command]/usr/bin/git sparse-checkout disable
+2026-11-20T15:47:57.1509775Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-20T15:47:57.1540506Z ##[group]Checking out the ref
+2026-11-20T15:47:57.1544089Z [command]/usr/bin/git checkout --progress --force -B validation/body-round2-evidence-20261120 refs/remotes/origin/validation/body-round2-evidence-20261120
+2026-11-20T15:47:57.3068891Z Switched to a new branch 'validation/body-round2-evidence-20261120'
+2026-11-20T15:47:57.3074728Z branch 'validation/body-round2-evidence-20261120' set up to track 'origin/validation/body-round2-evidence-20261120'.
+2026-11-20T15:47:57.3087556Z ##[endgroup]
+2026-11-20T15:47:57.3145112Z [command]/usr/bin/git log -1 --format=%H
+2026-11-20T15:47:57.3165098Z f769b3ac33eb5221ad66f6a4384aa6429b26e597
+2026-11-20T15:47:57.3181429Z ##[group]Removing auth
+2026-11-20T15:47:57.3184924Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-20T15:47:57.3217989Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-20T15:47:57.3599873Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-20T15:47:57.3606891Z http.https://github.com/.extraheader
+2026-11-20T15:47:57.3612754Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-20T15:47:57.3623044Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-20T15:47:57.3871670Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-20T15:47:57.3904934Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-20T15:47:57.4177781Z ##[endgroup]
+2026-11-20T15:47:57.4438714Z ##[group]Run set -euo pipefail
+2026-11-20T15:47:57.4440096Z [36;1mset -euo pipefail[0m
+2026-11-20T15:47:57.4441387Z [36;1m[[ "$SOURCE_SHA" =~ ^[0-9a-f]{40}$ ]][0m
+2026-11-20T15:47:57.4442908Z [36;1m[[ "$BASELINE_SHA" =~ ^[0-9a-f]{40}$ ]][0m
+2026-11-20T15:47:57.4483293Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-20T15:47:57.4484896Z env:
+2026-11-20T15:47:57.4486299Z   SOURCE_SHA: 5226860c1d70bc7fc6619cf79aff10c4f9a2a234
+2026-11-20T15:47:57.4488009Z   BASELINE_SHA: d74848fb33dbff1d719959df19d1266a1ac60f44
+2026-11-20T15:47:57.4489503Z   PYTHONUTF8: 1
+2026-11-20T15:47:57.4490527Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-20T15:47:57.4491666Z   PYTHONHASHSEED: 0
+2026-11-20T15:47:57.4492653Z   OPENBLAS_NUM_THREADS: 1
+2026-11-20T15:47:57.4493694Z   OMP_NUM_THREADS: 1
+2026-11-20T15:47:57.4494659Z   MKL_NUM_THREADS: 1
+2026-11-20T15:47:57.4495839Z ##[endgroup]
+2026-11-20T15:47:57.4847226Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-11-20T15:47:57.4848865Z with:
+2026-11-20T15:47:57.4849704Z   path: source
+2026-11-20T15:47:57.4850704Z   ref: 5226860c1d70bc7fc6619cf79aff10c4f9a2a234
+2026-11-20T15:47:57.4851981Z   fetch-depth: 0
+2026-11-20T15:47:57.4852970Z   persist-credentials: false
+2026-11-20T15:47:57.4854098Z   repository: STARDUSTLC666/lingshu
+2026-11-20T15:47:57.4864752Z   token: ***
+2026-11-20T15:47:57.4865740Z   ssh-strict: true
+2026-11-20T15:47:57.4866662Z   ssh-user: git
+2026-11-20T15:47:57.4867550Z   clean: true
+2026-11-20T15:47:57.4868477Z   sparse-checkout-cone-mode: true
+2026-11-20T15:47:57.4869605Z   fetch-tags: false
+2026-11-20T15:47:57.4870531Z   show-progress: true
+2026-11-20T15:47:57.4871462Z   lfs: false
+2026-11-20T15:47:57.4872417Z   submodules: false
+2026-11-20T15:47:57.4873392Z   set-safe-directory: true
+2026-11-20T15:47:57.4874486Z   allow-unsafe-pr-checkout: false
+2026-11-20T15:47:57.4875686Z env:
+2026-11-20T15:47:57.4876705Z   SOURCE_SHA: 5226860c1d70bc7fc6619cf79aff10c4f9a2a234
+2026-11-20T15:47:57.4878243Z   BASELINE_SHA: d74848fb33dbff1d719959df19d1266a1ac60f44
+2026-11-20T15:47:57.4879632Z   PYTHONUTF8: 1
+2026-11-20T15:47:57.4880570Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-20T15:47:57.4881640Z   PYTHONHASHSEED: 0
+2026-11-20T15:47:57.4882790Z   OPENBLAS_NUM_THREADS: 1
+2026-11-20T15:47:57.4883794Z   OMP_NUM_THREADS: 1
+2026-11-20T15:47:57.4884728Z   MKL_NUM_THREADS: 1
+2026-11-20T15:47:57.4885745Z ##[endgroup]
+2026-11-20T15:47:57.5786943Z Syncing repository: STARDUSTLC666/lingshu
+2026-11-20T15:47:57.5793988Z ##[group]Getting Git version info
+2026-11-20T15:47:57.5796921Z Working directory is '/home/runner/work/lingshu/lingshu/source'
+2026-11-20T15:47:57.5839809Z [command]/usr/bin/git version
+2026-11-20T15:47:57.5892400Z git version 2.56.1
+2026-11-20T15:47:57.5926571Z ##[endgroup]
+2026-11-20T15:47:57.5934317Z Temporarily overriding HOME='/home/runner/work/_temp/74b7b761-d96d-49d5-9738-7700a149667c' before making global git config changes
+2026-11-20T15:47:57.5939917Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-20T15:47:57.5944383Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/lingshu/lingshu/source
+2026-11-20T15:47:57.5982279Z ##[group]Initializing the repository
+2026-11-20T15:47:57.5988415Z [command]/usr/bin/git init /home/runner/work/lingshu/lingshu/source
+2026-11-20T15:47:57.6038341Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-20T15:47:57.6042468Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-20T15:47:57.6047362Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-20T15:47:57.6050349Z hint: call:
+2026-11-20T15:47:57.6052071Z hint:
+2026-11-20T15:47:57.6053471Z hint: 	git config --global init.defaultBranch <name>
+2026-11-20T15:47:57.6054809Z hint:
+2026-11-20T15:47:57.6056419Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-20T15:47:57.6058531Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-20T15:47:57.6060182Z hint:
+2026-11-20T15:47:57.6061060Z hint: 	git branch -m <name>
+2026-11-20T15:47:57.6062073Z hint:
+2026-11-20T15:47:57.6063438Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-20T15:47:57.6065996Z Initialized empty Git repository in /home/runner/work/lingshu/lingshu/source/.git/
+2026-11-20T15:47:57.6072232Z [command]/usr/bin/git remote add origin https://github.com/STARDUSTLC666/lingshu
+2026-11-20T15:47:57.6111900Z ##[endgroup]
+2026-11-20T15:47:57.6113547Z ##[group]Disabling automatic garbage collection
+2026-11-20T15:47:57.6116600Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-20T15:47:57.6153144Z ##[endgroup]
+2026-11-20T15:47:57.6154652Z ##[group]Setting up auth
+2026-11-20T15:47:57.6162719Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-20T15:47:57.6202240Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-20T15:47:57.6529619Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-20T15:47:57.6581849Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-20T15:47:57.6907501Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-20T15:47:57.6946894Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-20T15:47:57.7221897Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-20T15:47:57.7263260Z ##[endgroup]
+2026-11-20T15:47:57.7266326Z ##[group]Fetching the repository
+2026-11-20T15:47:57.7276667Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-11-20T15:47:59.3168776Z From https://github.com/STARDUSTLC666/lingshu
+2026-11-20T15:47:59.3170378Z  * [new branch]      feat-local-visual-query -> origin/feat-local-visual-query
+2026-11-20T15:47:59.3171728Z  * [new branch]      feat/audio-event-profile-20261119 -> origin/feat/audio-event-profile-20261119
+2026-11-20T15:47:59.3173003Z  * [new branch]      feat/body-module-function-20261108 -> origin/feat/body-module-function-20261108
+2026-11-20T15:47:59.3174276Z  * [new branch]      feat/depth-samples-20261120 -> origin/feat/depth-samples-20261120
+2026-11-20T15:47:59.3175844Z  * [new branch]      feat/film-p3-external-audio-analyzer -> origin/feat/film-p3-external-audio-analyzer
+2026-11-20T15:47:59.3177278Z  * [new branch]      feat/film-p7-negative-memory-loop -> origin/feat/film-p7-negative-memory-loop
+2026-11-20T15:47:59.3178596Z  * [new branch]      feat/gen-subject-domains-solver -> origin/feat/gen-subject-domains-solver
+2026-11-20T15:47:59.3179917Z  * [new branch]      feat/image-pixel-stats-20261119 -> origin/feat/image-pixel-stats-20261119
+2026-11-20T15:47:59.3181495Z  * [new branch]      feat/issue110-competing-response-evidence -> origin/feat/issue110-competing-response-evidence
+2026-11-20T15:47:59.3182928Z  * [new branch]      feat/issue172-hex-shape-color-perceive -> origin/feat/issue172-hex-shape-color-perceive
+2026-11-20T15:47:59.3184354Z  * [new branch]      feat/issue172-module-connectivity-ledger -> origin/feat/issue172-module-connectivity-ledger
+2026-11-20T15:47:59.3185985Z  * [new branch]      feat/issue172-perception-noise-curve -> origin/feat/issue172-perception-noise-curve
+2026-11-20T15:47:59.3187490Z  * [new branch]      feat/m43-multi-object-occlusion-search -> origin/feat/m43-multi-object-occlusion-search
+2026-11-20T15:47:59.3188886Z  * [new branch]      feat/m5-hanzi-radical-composition -> origin/feat/m5-hanzi-radical-composition
+2026-11-20T15:47:59.3190226Z  * [new branch]      feat/m55-perception-knowledge-bridge -> origin/feat/m55-perception-knowledge-bridge
+2026-11-20T15:47:59.3191538Z  * [new branch]      feat/m7-stcnn-motion-prediction -> origin/feat/m7-stcnn-motion-prediction
+2026-11-20T15:47:59.3192748Z  * [new branch]      feat/nn-hex-gen-open-vocab-readback -> origin/feat/nn-hex-gen-open-vocab-readback
+2026-11-20T15:47:59.3194123Z  * [new branch]      feat/nn-train-stratified-and-grad-diag -> origin/feat/nn-train-stratified-and-grad-diag
+2026-11-20T15:47:59.3195547Z  * [new branch]      feat/scenario-integration -> origin/feat/scenario-integration
+2026-11-20T15:47:59.3196887Z  * [new branch]      feat/video-frame-diff-20261119 -> origin/feat/video-frame-diff-20261119
+2026-11-20T15:47:59.3198160Z  * [new branch]      feat/vision-mask-geometry-20261120 -> origin/feat/vision-mask-geometry-20261120
+2026-11-20T15:47:59.3199832Z  * [new branch]      feat/world-conservative-identity-20261024 -> origin/feat/world-conservative-identity-20261024
+2026-11-20T15:47:59.3201315Z  * [new branch]      feat/world-counterfactual-isolation-20261024 -> origin/feat/world-counterfactual-isolation-20261024
+2026-11-20T15:47:59.3202761Z  * [new branch]      feat/world-qualified-feedback-20261024 -> origin/feat/world-qualified-feedback-20261024
+2026-11-20T15:47:59.3203879Z  * [new branch]      fix-cam-inverse         -> origin/fix-cam-inverse
+2026-11-20T15:47:59.3205097Z  * [new branch]      fix/1106-structure-bounds-20261030 -> origin/fix/1106-structure-bounds-20261030
+2026-11-20T15:47:59.3206658Z  * [new branch]      fix/1107-structure-validation-20261030 -> origin/fix/1107-structure-validation-20261030
+2026-11-20T15:47:59.3207963Z  * [new branch]      fix/274-structural-influence-20261030 -> origin/fix/274-structural-influence-20261030
+2026-11-20T15:47:59.3209260Z  * [new branch]      fix/279-v17-migration-once-20261030 -> origin/fix/279-v17-migration-once-20261030
+2026-11-20T15:47:59.3210384Z  * [new branch]      fix/281-insight-report-20261030 -> origin/fix/281-insight-report-20261030
+2026-11-20T15:47:59.3211512Z  * [new branch]      fix/481-snapshot-divergence-20261019 -> origin/fix/481-snapshot-divergence-20261019
+2026-11-20T15:47:59.3212693Z  * [new branch]      fix/487b-argv-launch-dir-20261020 -> origin/fix/487b-argv-launch-dir-20261020
+2026-11-20T15:47:59.3214308Z  * [new branch]      fix/521-activation-conflict-veto-20261019 -> origin/fix/521-activation-conflict-veto-20261019
+2026-11-20T15:47:59.3215668Z  * [new branch]      fix/825-text-gates-20261019 -> origin/fix/825-text-gates-20261019
+2026-11-20T15:47:59.3216744Z  * [new branch]      fix/activation-bound-path-20261022 -> origin/fix/activation-bound-path-20261022
+2026-11-20T15:47:59.3217846Z  * [new branch]      fix/activation-empty-graph -> origin/fix/activation-empty-graph
+2026-11-20T15:47:59.3218847Z  * [new branch]      fix/activation-graph-refresh -> origin/fix/activation-graph-refresh
+2026-11-20T15:47:59.3220138Z  * [new branch]      fix/activation-transaction-ownership-20261020 -> origin/fix/activation-transaction-ownership-20261020
+2026-11-20T15:47:59.3221437Z  * [new branch]      fix/add-edge-cs-type-20261102 -> origin/fix/add-edge-cs-type-20261102
+2026-11-20T15:47:59.3222655Z  * [new branch]      fix/add-edge-missing-node-20261030 -> origin/fix/add-edge-missing-node-20261030
+2026-11-20T15:47:59.3223750Z  * [new branch]      fix/add-path-id-str-20261102 -> origin/fix/add-path-id-str-20261102
+2026-11-20T15:47:59.3224939Z  * [new branch]      fix/append-skill-procedure-type-20261108 -> origin/fix/append-skill-procedure-type-20261108
+2026-11-20T15:47:59.3226552Z  * [new branch]      fix/archive-schema-registration-20261022 -> origin/fix/archive-schema-registration-20261022
+2026-11-20T15:47:59.3227828Z  * [new branch]      fix/auto-decay-interval-20261030 -> origin/fix/auto-decay-interval-20261030
+2026-11-20T15:47:59.3229079Z  * [new branch]      fix/blindspot-input-guard-20261030 -> origin/fix/blindspot-input-guard-20261030
+2026-11-20T15:47:59.3230309Z  * [new branch]      fix/blindspot-str-args-20261102 -> origin/fix/blindspot-str-args-20261102
+2026-11-20T15:47:59.3231450Z  * [new branch]      fix/body-audit-round5-20261021 -> origin/fix/body-audit-round5-20261021
+2026-11-20T15:47:59.3232678Z  * [new branch]      fix/bridge-top-level-motions-20261120 -> origin/fix/bridge-top-level-motions-20261120
+2026-11-20T15:47:59.3233909Z  * [new branch]      fix/by-time-type-20261106 -> origin/fix/by-time-type-20261106
+2026-11-20T15:47:59.3235072Z  * [new branch]      fix/camera-tolerated-loss-20261104 -> origin/fix/camera-tolerated-loss-20261104
+2026-11-20T15:47:59.3236762Z  * [new branch]      fix/channel-calibration-load-domain-20261023 -> origin/fix/channel-calibration-load-domain-20261023
+2026-11-20T15:47:59.3237994Z  * [new branch]      fix/ci-causal-guard     -> origin/fix/ci-causal-guard
+2026-11-20T15:47:59.3239077Z  * [new branch]      fix/circular-local-time-20261120 -> origin/fix/circular-local-time-20261120
+2026-11-20T15:47:59.3240551Z  * [new branch]      fix/coggraph-deterministic-r3 -> origin/fix/coggraph-deterministic-r3
+2026-11-20T15:47:59.3241758Z  * [new branch]      fix/coggraph-qualified-test-import -> origin/fix/coggraph-qualified-test-import
+2026-11-20T15:47:59.3243142Z  * [new branch]      fix/condition-normalize-nondict-20261030 -> origin/fix/condition-normalize-nondict-20261030
+2026-11-20T15:47:59.3244389Z  * [new branch]      fix/conflict-self-20261030 -> origin/fix/conflict-self-20261030
+2026-11-20T15:47:59.3245961Z  * [new branch]      fix/connection-library-atomic-save-20261023 -> origin/fix/connection-library-atomic-save-20261023
+2026-11-20T15:47:59.3247663Z  * [new branch]      fix/consolidated-kernel-contract-20261023 -> origin/fix/consolidated-kernel-contract-20261023
+2026-11-20T15:47:59.3249116Z  * [new branch]      fix/consolidated-save-isolation-20261020 -> origin/fix/consolidated-save-isolation-20261020
+2026-11-20T15:47:59.3250470Z  * [new branch]      fix/context-cap-negative-20261030 -> origin/fix/context-cap-negative-20261030
+2026-11-20T15:47:59.3251859Z  * [new branch]      fix/context-capacity-atomic-20261019 -> origin/fix/context-capacity-atomic-20261019
+2026-11-20T15:47:59.3253311Z  * [new branch]      fix/context-write-unit-20261021 -> origin/fix/context-write-unit-20261021
+2026-11-20T15:47:59.3254733Z  * [new branch]      fix/core-fresh-decay-20261120 -> origin/fix/core-fresh-decay-20261120
+2026-11-20T15:47:59.3256054Z  * [new branch]      fix/core-layer-enumeration -> origin/fix/core-layer-enumeration
+2026-11-20T15:47:59.3257100Z  * [new branch]      fix/count-layer-type-20261106 -> origin/fix/count-layer-type-20261106
+2026-11-20T15:47:59.3258200Z  * [new branch]      fix/decay-factor-range-20261030 -> origin/fix/decay-factor-range-20261030
+2026-11-20T15:47:59.3259308Z  * [new branch]      fix/dedup-config-args-20261102 -> origin/fix/dedup-config-args-20261102
+2026-11-20T15:47:59.3260658Z  * [new branch]      fix/demonstration-distinct-roles-20261104 -> origin/fix/demonstration-distinct-roles-20261104
+2026-11-20T15:47:59.3262045Z  * [new branch]      fix/escalation-code-type-20261107 -> origin/fix/escalation-code-type-20261107
+2026-11-20T15:47:59.3263366Z  * [new branch]      fix/event-echo-unique-evidence-20261104 -> origin/fix/event-echo-unique-evidence-20261104
+2026-11-20T15:47:59.3264889Z  * [new branch]      fix/expand-terms-query-type-20261108 -> origin/fix/expand-terms-query-type-20261108
+2026-11-20T15:47:59.3267160Z  * [new branch]      fix/export-live-database-guard-20261018 -> origin/fix/export-live-database-guard-20261018
+2026-11-20T15:47:59.3268274Z  * [new branch]      fix/export-path-type-20261102 -> origin/fix/export-path-type-20261102
+2026-11-20T15:47:59.3269401Z  * [new branch]      fix/extension-transaction-ownership-20261019 -> origin/fix/extension-transaction-ownership-20261019
+2026-11-20T15:47:59.3270640Z  * [new branch]      fix/find-cycles-depth-type-20261106 -> origin/fix/find-cycles-depth-type-20261106
+2026-11-20T15:47:59.3271769Z  * [new branch]      fix/fts-lifecycle-fallback-20261021 -> origin/fix/fts-lifecycle-fallback-20261021
+2026-11-20T15:47:59.3272889Z  * [new branch]      fix/gap-dual-arg-types-20261030 -> origin/fix/gap-dual-arg-types-20261030
+2026-11-20T15:47:59.3274040Z  * [new branch]      fix/get-edge-id-type-20261106 -> origin/fix/get-edge-id-type-20261106
+2026-11-20T15:47:59.3275409Z  * [new branch]      fix/get-incoming-edges-id-type-20261107 -> origin/fix/get-incoming-edges-id-type-20261107
+2026-11-20T15:47:59.3276568Z  * [new branch]      fix/get-meta-key-type-20261106 -> origin/fix/get-meta-key-type-20261106
+2026-11-20T15:47:59.3277956Z  * [new branch]      fix/get-nodes-by-tag-limit-type-20261108 -> origin/fix/get-nodes-by-tag-limit-type-20261108
+2026-11-20T15:47:59.3279232Z  * [new branch]      fix/get-nodes-by-tag-type-20261105 -> origin/fix/get-nodes-by-tag-type-20261105
+2026-11-20T15:47:59.3280540Z  * [new branch]      fix/get-outgoing-edges-id-type-20261107 -> origin/fix/get-outgoing-edges-id-type-20261107
+2026-11-20T15:47:59.3282168Z  * [new branch]      fix/get-skill-by-name-type-20261106 -> origin/fix/get-skill-by-name-type-20261106
+2026-11-20T15:47:59.3283534Z  * [new branch]      fix/group-visible-consistency-20261104 -> origin/fix/group-visible-consistency-20261104
+2026-11-20T15:47:59.3284847Z  * [new branch]      fix/growth-complete-revert-20261022 -> origin/fix/growth-complete-revert-20261022
+2026-11-20T15:47:59.3286227Z  * [new branch]      fix/hex-extract-args-20261030 -> origin/fix/hex-extract-args-20261030
+2026-11-20T15:47:59.3287260Z  * [new branch]      fix/hex-hier-shape-marginal -> origin/fix/hex-hier-shape-marginal
+2026-11-20T15:47:59.3288177Z  * [new branch]      fix/hex-query-json      -> origin/fix/hex-query-json
+2026-11-20T15:47:59.3289256Z  * [new branch]      fix/hexgrid-odd-r-nearest-cell-20261120 -> origin/fix/hexgrid-odd-r-nearest-cell-20261120
+2026-11-20T15:47:59.3290591Z  * [new branch]      fix/hier-logit-cross-entropy-20261023 -> origin/fix/hier-logit-cross-entropy-20261023
+2026-11-20T15:47:59.3291870Z  * [new branch]      fix/identity-reserved-ids-20261022 -> origin/fix/identity-reserved-ids-20261022
+2026-11-20T15:47:59.3292955Z  * [new branch]      fix/import-atomic-rollback -> origin/fix/import-atomic-rollback
+2026-11-20T15:47:59.3294056Z  * [new branch]      fix/import-gap-history-refresh-1141 -> origin/fix/import-gap-history-refresh-1141
+2026-11-20T15:47:59.3295695Z  * [new branch]      fix/import-path-type-20261102 -> origin/fix/import-path-type-20261102
+2026-11-20T15:47:59.3296879Z  * [new branch]      fix/increment-access-id-type-20261106 -> origin/fix/increment-access-id-type-20261106
+2026-11-20T15:47:59.3298082Z  * [new branch]      fix/increment-many-type-20261108 -> origin/fix/increment-many-type-20261108
+2026-11-20T15:47:59.3299283Z  * [new branch]      fix/insight-conditions-type-20261102 -> origin/fix/insight-conditions-type-20261102
+2026-11-20T15:47:59.3300490Z  * [new branch]      fix/insight-content-type-20261106 -> origin/fix/insight-content-type-20261106
+2026-11-20T15:47:59.3301655Z  * [new branch]      fix/insight-evidence-str-20261104 -> origin/fix/insight-evidence-str-20261104
+2026-11-20T15:47:59.3302875Z  * [new branch]      fix/insight-importance-range-20261102 -> origin/fix/insight-importance-range-20261102
+2026-11-20T15:47:59.3304243Z  * [new branch]      fix/insight-verify-level-type-20261030 -> origin/fix/insight-verify-level-type-20261030
+2026-11-20T15:47:59.3305671Z  * [new branch]      fix/insight-window-type-20261102 -> origin/fix/insight-window-type-20261102
+2026-11-20T15:47:59.3306715Z  * [new branch]      fix/issue196-batch-next -> origin/fix/issue196-batch-next
+2026-11-20T15:47:59.3307635Z  * [new branch]      fix/issue196-batch10-world -> origin/fix/issue196-batch10-world
+2026-11-20T15:47:59.3308533Z  * [new branch]      fix/issue196-batch11-nn -> origin/fix/issue196-batch11-nn
+2026-11-20T15:47:59.3309525Z  * [new branch]      fix/issue196-batch12-world -> origin/fix/issue196-batch12-world
+2026-11-20T15:47:59.3310627Z  * [new branch]      fix/issue196-batch13-multiview -> origin/fix/issue196-batch13-multiview
+2026-11-20T15:47:59.3311652Z  * [new branch]      fix/issue196-batch14-body -> origin/fix/issue196-batch14-body
+2026-11-20T15:47:59.3312604Z  * [new branch]      fix/issue196-batch9-world -> origin/fix/issue196-batch9-world
+2026-11-20T15:47:59.3313648Z  * [new branch]      fix/issue196-vision-lineart-gate -> origin/fix/issue196-vision-lineart-gate
+2026-11-20T15:47:59.3314831Z  * [new branch]      fix/issue434-hex-composite-parity -> origin/fix/issue434-hex-composite-parity
+2026-11-20T15:47:59.3316224Z  * [new branch]      fix/issue434-prediction-decouple -> origin/fix/issue434-prediction-decouple
+2026-11-20T15:47:59.3317407Z  * [new branch]      fix/issue434-scenario-decouple -> origin/fix/issue434-scenario-decouple
+2026-11-20T15:47:59.3318888Z  * [new branch]      fix/jaccard-arg-type-20261108 -> origin/fix/jaccard-arg-type-20261108
+2026-11-20T15:47:59.3320674Z  * [new branch]      fix/lineart-transparent-alpha-20261120 -> origin/fix/lineart-transparent-alpha-20261120
+2026-11-20T15:47:59.3322643Z  * [new branch]      fix/longterm-gate-mixed-update-20261120 -> origin/fix/longterm-gate-mixed-update-20261120
+2026-11-20T15:47:59.3323919Z  * [new branch]      fix/manifest-search-baseline -> origin/fix/manifest-search-baseline
+2026-11-20T15:47:59.3324902Z  * [new branch]      fix/mcp-stderr-deadlock -> origin/fix/mcp-stderr-deadlock
+2026-11-20T15:47:59.3326186Z  * [new branch]      fix/min-confidence-range-20261030 -> origin/fix/min-confidence-range-20261030
+2026-11-20T15:47:59.3327421Z  * [new branch]      fix/motion-group-id-encoding-20261120 -> origin/fix/motion-group-id-encoding-20261120
+2026-11-20T15:47:59.3328500Z  * [new branch]      fix/mv-judge-exitcode   -> origin/fix/mv-judge-exitcode
+2026-11-20T15:47:59.3329430Z  * [new branch]      fix/mv-judge-two-lanes-1144 -> origin/fix/mv-judge-two-lanes-1144
+2026-11-20T15:47:59.3330578Z  * [new branch]      fix/obb-skew-separating-axes-20261120 -> origin/fix/obb-skew-separating-axes-20261120
+2026-11-20T15:47:59.3331975Z  * [new branch]      fix/pendulum-elliptic-exact-angle-20261120 -> origin/fix/pendulum-elliptic-exact-angle-20261120
+2026-11-20T15:47:59.3333332Z  * [new branch]      fix/protect-reason-empty-20261030 -> origin/fix/protect-reason-empty-20261030
+2026-11-20T15:47:59.3334477Z  * [new branch]      fix/provenance-explicit-source -> origin/fix/provenance-explicit-source
+2026-11-20T15:47:59.3336262Z  * [new branch]      fix/prune-action-logs-keep-rows-type-20261106 -> origin/fix/prune-action-logs-keep-rows-type-20261106
+2026-11-20T15:47:59.3337635Z  * [new branch]      fix/prune-self-keep-type-20261107 -> origin/fix/prune-self-keep-type-20261107
+2026-11-20T15:47:59.3338840Z  * [new branch]      fix/query-nodes-layer-type-20261103 -> origin/fix/query-nodes-layer-type-20261103
+2026-11-20T15:47:59.3340053Z  * [new branch]      fix/range-time-layer-type-20261106 -> origin/fix/range-time-layer-type-20261106
+2026-11-20T15:47:59.3341348Z  * [new branch]      fix/recent-context-limit-type-20261108 -> origin/fix/recent-context-limit-type-20261108
+2026-11-20T15:47:59.3342398Z  * [new branch]      fix/register-conflict-cs-type-20261102 -> origin/fix/register-conflict-cs-type-20261102
+2026-11-20T15:47:59.3343184Z  * [new branch]      fix/rejected-path-type-20261103 -> origin/fix/rejected-path-type-20261103
+2026-11-20T15:47:59.3344342Z  * [new branch]      fix/rust-training-workspace-20261021 -> origin/fix/rust-training-workspace-20261021
+2026-11-20T15:47:59.3345005Z  * [new branch]      fix/scene-behavior-str-20261102 -> origin/fix/scene-behavior-str-20261102
+2026-11-20T15:47:59.3346014Z  * [new branch]      fix/scene-collision-freeflight-velocity-20261120 -> origin/fix/scene-collision-freeflight-velocity-20261120
+2026-11-20T15:47:59.3346721Z  * [new branch]      fix/scene-goal-str-20261104 -> origin/fix/scene-goal-str-20261104
+2026-11-20T15:47:59.3347365Z  * [new branch]      fix/scene-path-points-readable-20261105 -> origin/fix/scene-path-points-readable-20261105
+2026-11-20T15:47:59.3348043Z  * [new branch]      fix/scene-pos-readable-20261105 -> origin/fix/scene-pos-readable-20261105
+2026-11-20T15:47:59.3348885Z  * [new branch]      fix/scene-speed-negative-20261030 -> origin/fix/scene-speed-negative-20261030
+2026-11-20T15:47:59.3349793Z  * [new branch]      fix/scene-step-int-20261103 -> origin/fix/scene-step-int-20261103
+2026-11-20T15:47:59.3350348Z  * [new branch]      fix/scene-trees-range-20261103 -> origin/fix/scene-trees-range-20261103
+2026-11-20T15:47:59.3350915Z  * [new branch]      fix/scene-water-bool-20261104 -> origin/fix/scene-water-bool-20261104
+2026-11-20T15:47:59.3351556Z  * [new branch]      fix/search-content-query-type-20261102 -> origin/fix/search-content-query-type-20261102
+2026-11-20T15:47:59.3352206Z  * [new branch]      fix/search-layers-type-20261104 -> origin/fix/search-layers-type-20261104
+2026-11-20T15:47:59.3352877Z  * [new branch]      fix/search-skills-negative-limit-20261120 -> origin/fix/search-skills-negative-limit-20261120
+2026-11-20T15:47:59.3353789Z  * [new branch]      fix/search-skills-query-type-20261108 -> origin/fix/search-skills-query-type-20261108
+2026-11-20T15:47:59.3354531Z  * [new branch]      fix/self-model-save-baseline-20261020 -> origin/fix/self-model-save-baseline-20261020
+2026-11-20T15:47:59.3355716Z  * [new branch]      fix/self-source-enum-identity-20261023 -> origin/fix/self-source-enum-identity-20261023
+2026-11-20T15:47:59.3356419Z  * [new branch]      fix/set-meta-key-type-20261102 -> origin/fix/set-meta-key-type-20261102
+2026-11-20T15:47:59.3357010Z  * [new branch]      fix/spatial-coords-type-20261102 -> origin/fix/spatial-coords-type-20261102
+2026-11-20T15:47:59.3357762Z  * [new branch]      fix/spatial-detect-complete-partition-20261120 -> origin/fix/spatial-detect-complete-partition-20261120
+2026-11-20T15:47:59.3358572Z  * [new branch]      fix/spatiotemporal-center-type-20261106 -> origin/fix/spatiotemporal-center-type-20261106
+2026-11-20T15:47:59.3359237Z  * [new branch]      fix/spatiotemporal-zero-radius -> origin/fix/spatiotemporal-zero-radius
+2026-11-20T15:47:59.3359950Z  * [new branch]      fix/stcnn-independent-write-snapshot-20261023 -> origin/fix/stcnn-independent-write-snapshot-20261023
+2026-11-20T15:47:59.3360704Z  * [new branch]      fix/structure-grant-arrays-20261029 -> origin/fix/structure-grant-arrays-20261029
+2026-11-20T15:47:59.3361372Z  * [new branch]      fix/structure-read-deadline-20261029 -> origin/fix/structure-read-deadline-20261029
+2026-11-20T15:47:59.3362224Z  * [new branch]      fix/structure-write-lock-order-20261021 -> origin/fix/structure-write-lock-order-20261021
+2026-11-20T15:47:59.3362882Z  * [new branch]      fix/subgraph-root-type-20261106 -> origin/fix/subgraph-root-type-20261106
+2026-11-20T15:47:59.3363620Z  * [new branch]      fix/subtree-write-snapshot-20261021 -> origin/fix/subtree-write-snapshot-20261021
+2026-11-20T15:47:59.3364820Z  * [new branch]      fix/tag-node-missing-lookup-20261106 -> origin/fix/tag-node-missing-lookup-20261106
+2026-11-20T15:47:59.3366167Z  * [new branch]      fix/time-core-arg-types-20261030 -> origin/fix/time-core-arg-types-20261030
+2026-11-20T15:47:59.3366911Z  * [new branch]      fix/tms-missing-roots-20261022 -> origin/fix/tms-missing-roots-20261022
+2026-11-20T15:47:59.3367623Z  * [new branch]      fix/trajectory-resolved-observations-20261022 -> origin/fix/trajectory-resolved-observations-20261022
+2026-11-20T15:47:59.3368414Z  * [new branch]      fix/transaction-exit-rollback-20261018 -> origin/fix/transaction-exit-rollback-20261018
+2026-11-20T15:47:59.3369106Z  * [new branch]      fix/traverse-start-id-type-20261106 -> origin/fix/traverse-start-id-type-20261106
+2026-11-20T15:47:59.3369703Z  * [new branch]      fix/unit-direction-20261022 -> origin/fix/unit-direction-20261022
+2026-11-20T15:47:59.3370262Z  * [new branch]      fix/untag-node-id-type-20261105 -> origin/fix/untag-node-id-type-20261105
+2026-11-20T15:47:59.3370887Z  * [new branch]      fix/update-confidence-type-20261106 -> origin/fix/update-confidence-type-20261106
+2026-11-20T15:47:59.3371541Z  * [new branch]      fix/update-importance-type-20261106 -> origin/fix/update-importance-type-20261106
+2026-11-20T15:47:59.3372253Z  * [new branch]      fix/update-skill-confidence-type-20261108 -> origin/fix/update-skill-confidence-type-20261108
+2026-11-20T15:47:59.3372960Z  * [new branch]      fix/verdict-input-contract-20261030 -> origin/fix/verdict-input-contract-20261030
+2026-11-20T15:47:59.3373584Z  * [new branch]      fix/verify-edge-id-type-20261106 -> origin/fix/verify-edge-id-type-20261106
+2026-11-20T15:47:59.3374333Z  * [new branch]      fix/world-anchor-conflict-refresh-20261027 -> origin/fix/world-anchor-conflict-refresh-20261027
+2026-11-20T15:47:59.3374991Z  * [new branch]      fix/world-bug-audit-20261029 -> origin/fix/world-bug-audit-20261029
+2026-11-20T15:47:59.3375896Z  * [new branch]      fix/world-motion-finite-arithmetic-20261028 -> origin/fix/world-motion-finite-arithmetic-20261028
+2026-11-20T15:47:59.3376671Z  * [new branch]      fix/world-observation-atomicity-20261026 -> origin/fix/world-observation-atomicity-20261026
+2026-11-20T15:47:59.3377570Z  * [new branch]      fix/world-period-phase-wrap-20261027 -> origin/fix/world-period-phase-wrap-20261027
+2026-11-20T15:47:59.3378309Z  * [new branch]      fix/world-prior-atomic-restore-20261022 -> origin/fix/world-prior-atomic-restore-20261022
+2026-11-20T15:47:59.3379114Z  * [new branch]      fix/world-rotation-quaternion-validity-20261026 -> origin/fix/world-rotation-quaternion-validity-20261026
+2026-11-20T15:47:59.3379907Z  * [new branch]      fix/world-rotation-tick-clock-20261026 -> origin/fix/world-rotation-tick-clock-20261026
+2026-11-20T15:47:59.3380637Z  * [new branch]      fix/world-verify-finite-evidence-20261028 -> origin/fix/world-verify-finite-evidence-20261028
+2026-11-20T15:47:59.3381197Z  * [new branch]      main                    -> origin/main
+2026-11-20T15:47:59.3381674Z  * [new branch]      perf/issue661-add-perception-m5 -> origin/perf/issue661-add-perception-m5
+2026-11-20T15:47:59.3382334Z  * [new branch]      perf/world-motion-stat-reuse-20261028 -> origin/perf/world-motion-stat-reuse-20261028
+2026-11-20T15:47:59.3383052Z  * [new branch]      perf/world-restore-bounded-tail-20261028 -> origin/perf/world-restore-bounded-tail-20261028
+2026-11-20T15:47:59.3383742Z  * [new branch]      validation/body-benchmarks-20261120 -> origin/validation/body-benchmarks-20261120
+2026-11-20T15:47:59.3384444Z  * [new branch]      validation/body-eight-integration-20261120 -> origin/validation/body-eight-integration-20261120
+2026-11-20T15:47:59.3385564Z  * [new branch]      validation/body-round2-evidence-20261120 -> origin/validation/body-round2-evidence-20261120
+2026-11-20T15:47:59.3386444Z  * [new branch]      validation/body-twelve-integration-20261120 -> origin/validation/body-twelve-integration-20261120
+2026-11-20T15:47:59.3387735Z [command]/usr/bin/git rev-parse --verify --quiet 5226860c1d70bc7fc6619cf79aff10c4f9a2a234^{object}
+2026-11-20T15:47:59.3388247Z 5226860c1d70bc7fc6619cf79aff10c4f9a2a234
+2026-11-20T15:47:59.3388950Z ##[endgroup]
+2026-11-20T15:47:59.3389295Z ##[group]Determining the checkout info
+2026-11-20T15:47:59.3389678Z ##[endgroup]
+2026-11-20T15:47:59.3389898Z [command]/usr/bin/git sparse-checkout disable
+2026-11-20T15:47:59.3390560Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-20T15:47:59.3391322Z ##[group]Checking out the ref
+2026-11-20T15:47:59.3391727Z [command]/usr/bin/git checkout --progress --force 5226860c1d70bc7fc6619cf79aff10c4f9a2a234
+2026-11-20T15:47:59.4662769Z Note: switching to '5226860c1d70bc7fc6619cf79aff10c4f9a2a234'.
+2026-11-20T15:47:59.4663499Z 
+2026-11-20T15:47:59.4663986Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-20T15:47:59.4664752Z changes and commit them, and you can discard any commits you make in this
+2026-11-20T15:47:59.4665657Z state without impacting any branches by switching back to a branch.
+2026-11-20T15:47:59.4666175Z 
+2026-11-20T15:47:59.4666520Z If you want to create a new branch to retain commits you create, you may
+2026-11-20T15:47:59.4667290Z do so (now or later) by using -c with the switch command. Example:
+2026-11-20T15:47:59.4667633Z 
+2026-11-20T15:47:59.4667762Z   git switch -c <new-branch-name>
+2026-11-20T15:47:59.4667969Z 
+2026-11-20T15:47:59.4668079Z Or undo this operation with:
+2026-11-20T15:47:59.4668265Z 
+2026-11-20T15:47:59.4668362Z   git switch -
+2026-11-20T15:47:59.4668508Z 
+2026-11-20T15:47:59.4668774Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-20T15:47:59.4669156Z 
+2026-11-20T15:47:59.4669390Z HEAD is now at 5226860 fix(nn): scale quadrant evidence gates by actual area
+2026-11-20T15:47:59.4674935Z ##[endgroup]
+2026-11-20T15:47:59.4718995Z [command]/usr/bin/git log -1 --format=%H
+2026-11-20T15:47:59.4747578Z 5226860c1d70bc7fc6619cf79aff10c4f9a2a234
+2026-11-20T15:47:59.4757486Z ##[group]Removing auth
+2026-11-20T15:47:59.4761405Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-20T15:47:59.4793775Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-20T15:47:59.5085034Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-20T15:47:59.5110945Z http.https://github.com/.extraheader
+2026-11-20T15:47:59.5120400Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-20T15:47:59.5160476Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-20T15:47:59.5442366Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-20T15:47:59.5480377Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-20T15:47:59.5753444Z ##[endgroup]
+2026-11-20T15:47:59.5879582Z ##[group]Run set -euo pipefail
+2026-11-20T15:47:59.5879924Z [36;1mset -euo pipefail[0m
+2026-11-20T15:47:59.5880296Z [36;1mtest "$(git -C source rev-parse HEAD)" = "$SOURCE_SHA"[0m
+2026-11-20T15:47:59.5880708Z [36;1mgit -C source cat-file -e "$BASELINE_SHA^{commit}"[0m
+2026-11-20T15:47:59.5881057Z [36;1mmkdir baseline-root[0m
+2026-11-20T15:47:59.5881586Z [36;1mgit -C source archive "$BASELINE_SHA" | tar -x -C baseline-root[0m
+2026-11-20T15:47:59.5882046Z [36;1mprintf '%s\n' "$BASELINE_SHA" > baseline-root/.source-commit[0m
+2026-11-20T15:47:59.5935629Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-20T15:47:59.5935983Z env:
+2026-11-20T15:47:59.5936230Z   SOURCE_SHA: 5226860c1d70bc7fc6619cf79aff10c4f9a2a234
+2026-11-20T15:47:59.5936600Z   BASELINE_SHA: d74848fb33dbff1d719959df19d1266a1ac60f44
+2026-11-20T15:47:59.5936905Z   PYTHONUTF8: 1
+2026-11-20T15:47:59.5937128Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-20T15:47:59.5937370Z   PYTHONHASHSEED: 0
+2026-11-20T15:47:59.5937612Z   OPENBLAS_NUM_THREADS: 1
+2026-11-20T15:47:59.5937831Z   OMP_NUM_THREADS: 1
+2026-11-20T15:47:59.5938030Z   MKL_NUM_THREADS: 1
+2026-11-20T15:47:59.5938226Z ##[endgroup]
+2026-11-20T15:47:59.6988939Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-11-20T15:47:59.6989367Z with:
+2026-11-20T15:47:59.6989561Z   python-version: 3.12
+2026-11-20T15:47:59.6989795Z   check-latest: false
+2026-11-20T15:47:59.6992303Z   token: ***
+2026-11-20T15:47:59.6992512Z   update-environment: true
+2026-11-20T15:47:59.6992752Z   allow-prereleases: false
+2026-11-20T15:47:59.6992983Z   freethreaded: false
+2026-11-20T15:47:59.6993192Z env:
+2026-11-20T15:47:59.6993420Z   SOURCE_SHA: 5226860c1d70bc7fc6619cf79aff10c4f9a2a234
+2026-11-20T15:47:59.6993776Z   BASELINE_SHA: d74848fb33dbff1d719959df19d1266a1ac60f44
+2026-11-20T15:47:59.6994084Z   PYTHONUTF8: 1
+2026-11-20T15:47:59.6994299Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-20T15:47:59.6994535Z   PYTHONHASHSEED: 0
+2026-11-20T15:47:59.6994740Z   OPENBLAS_NUM_THREADS: 1
+2026-11-20T15:47:59.6995086Z   OMP_NUM_THREADS: 1
+2026-11-20T15:47:59.6995428Z   MKL_NUM_THREADS: 1
+2026-11-20T15:47:59.6995634Z ##[endgroup]
+2026-11-20T15:47:59.8383470Z ##[group]Installed versions
+2026-11-20T15:47:59.8507974Z (node:2698) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-20T15:47:59.8508723Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-20T15:47:59.8509537Z Successfully set up CPython (3.12.16)
+2026-11-20T15:47:59.8510249Z ##[endgroup]
+2026-11-20T15:47:59.8641564Z ##[group]Run set -euo pipefail
+2026-11-20T15:47:59.8641902Z [36;1mset -euo pipefail[0m
+2026-11-20T15:47:59.8642200Z [36;1mmkdir -p "$RUNNER_TEMP/body-round2-output"[0m
+2026-11-20T15:47:59.8642753Z [36;1mpython -m pip install --upgrade pip 2>&1 | tee "$RUNNER_TEMP/body-round2-output/pip-upgrade.log"[0m
+2026-11-20T15:47:59.8643463Z [36;1mpython -m pip install -e './source[full,dev]' 2>&1 | tee "$RUNNER_TEMP/body-round2-output/pip-install.log"[0m
+2026-11-20T15:47:59.8643967Z [36;1mif [ -n "$PINNED_DEPS" ]; then[0m
+2026-11-20T15:47:59.8644435Z [36;1m  python -m pip install $PINNED_DEPS 2>&1 | tee "$RUNNER_TEMP/body-round2-output/pip-floor.log"[0m
+2026-11-20T15:47:59.8644884Z [36;1mfi[0m
+2026-11-20T15:47:59.8645209Z [36;1mpython -m pip freeze > "$RUNNER_TEMP/body-round2-output/pip-freeze.txt"[0m
+2026-11-20T15:47:59.8695687Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-20T15:47:59.8696048Z env:
+2026-11-20T15:47:59.8696328Z   SOURCE_SHA: 5226860c1d70bc7fc6619cf79aff10c4f9a2a234
+2026-11-20T15:47:59.8696729Z   BASELINE_SHA: d74848fb33dbff1d719959df19d1266a1ac60f44
+2026-11-20T15:47:59.8697037Z   PYTHONUTF8: 1
+2026-11-20T15:47:59.8697253Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-20T15:47:59.8697488Z   PYTHONHASHSEED: 0
+2026-11-20T15:47:59.8697691Z   OPENBLAS_NUM_THREADS: 1
+2026-11-20T15:47:59.8697907Z   OMP_NUM_THREADS: 1
+2026-11-20T15:47:59.8698098Z   MKL_NUM_THREADS: 1
+2026-11-20T15:47:59.8698356Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:47:59.8698794Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-20T15:47:59.8699232Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:47:59.8699611Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:47:59.8699983Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:47:59.8700549Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-20T15:47:59.8700866Z   PINNED_DEPS: 
+2026-11-20T15:47:59.8701068Z ##[endgroup]
+2026-11-20T15:48:00.5457371Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages (26.3)
+2026-11-20T15:48:01.0786038Z Obtaining file:///home/runner/work/lingshu/lingshu/source
+2026-11-20T15:48:01.0804266Z   Installing build dependencies: started
+2026-11-20T15:48:01.7633976Z   Installing build dependencies: finished with status 'done'
+2026-11-20T15:48:01.7640569Z   Checking if build backend supports build_editable: started
+2026-11-20T15:48:02.0953168Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-11-20T15:48:02.0960983Z   Getting requirements to build editable: started
+2026-11-20T15:48:02.5841767Z   Getting requirements to build editable: finished with status 'done'
+2026-11-20T15:48:02.5850316Z   Preparing editable metadata (pyproject.toml): started
+2026-11-20T15:48:03.0680810Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-11-20T15:48:03.3736490Z Collecting numpy<2.6,>=2.3.5 (from lingshu==0.0.1)
+2026-11-20T15:48:03.3980835Z   Downloading numpy-2.5.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2026-11-20T15:48:03.5695604Z Collecting Pillow<13,>=12.3 (from lingshu==0.0.1)
+2026-11-20T15:48:03.5739419Z   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+2026-11-20T15:48:03.6193719Z Collecting pytest (from lingshu==0.0.1)
+2026-11-20T15:48:03.6230161Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+2026-11-20T15:48:03.6724199Z Collecting PyYAML<7,>=6.0 (from lingshu==0.0.1)
+2026-11-20T15:48:03.6760969Z   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-11-20T15:48:03.7031507Z Collecting pytest-xdist<4,>=3.6 (from lingshu==0.0.1)
+2026-11-20T15:48:03.7064059Z   Downloading pytest_xdist-3.8.0-py3-none-any.whl.metadata (3.0 kB)
+2026-11-20T15:48:03.7338001Z Collecting markdown-it-py (from lingshu==0.0.1)
+2026-11-20T15:48:03.7378618Z   Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+2026-11-20T15:48:03.7649644Z Collecting execnet>=2.1 (from pytest-xdist<4,>=3.6->lingshu==0.0.1)
+2026-11-20T15:48:03.7682749Z   Downloading execnet-2.1.2-py3-none-any.whl.metadata (2.9 kB)
+2026-11-20T15:48:03.7945834Z Collecting iniconfig>=2 (from pytest->lingshu==0.0.1)
+2026-11-20T15:48:03.7978626Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-11-20T15:48:03.8252936Z Collecting packaging>=24 (from pytest->lingshu==0.0.1)
+2026-11-20T15:48:03.8302321Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-11-20T15:48:03.8551525Z Collecting pluggy<2,>=1.6 (from pytest->lingshu==0.0.1)
+2026-11-20T15:48:03.8591075Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+2026-11-20T15:48:03.8892583Z Collecting pygments>=2.15 (from pytest->lingshu==0.0.1)
+2026-11-20T15:48:03.8928742Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-11-20T15:48:03.9179842Z Collecting mdurl~=0.1 (from markdown-it-py->lingshu==0.0.1)
+2026-11-20T15:48:03.9221403Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-11-20T15:48:03.9308927Z Downloading numpy-2.5.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (15.7 MB)
+2026-11-20T15:48:03.9912960Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 283.9 MB/s  0:00:00
+2026-11-20T15:48:03.9955672Z Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+2026-11-20T15:48:04.0230219Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 275.1 MB/s  0:00:00
+2026-11-20T15:48:04.0289121Z Downloading pytest_xdist-3.8.0-py3-none-any.whl (46 kB)
+2026-11-20T15:48:04.0379858Z Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+2026-11-20T15:48:04.0439031Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 168.9 MB/s  0:00:00
+2026-11-20T15:48:04.0483196Z Downloading execnet-2.1.2-py3-none-any.whl (40 kB)
+2026-11-20T15:48:04.0551835Z Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+2026-11-20T15:48:04.0614302Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+2026-11-20T15:48:04.0669943Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-11-20T15:48:04.0723801Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-11-20T15:48:04.0779336Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-11-20T15:48:04.0847503Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 236.4 MB/s  0:00:00
+2026-11-20T15:48:04.0882713Z Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+2026-11-20T15:48:04.0939901Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-11-20T15:48:04.1518767Z Building wheels for collected packages: lingshu
+2026-11-20T15:48:04.1528858Z   Building editable for lingshu (pyproject.toml): started
+2026-11-20T15:48:04.6734191Z   Building editable for lingshu (pyproject.toml): finished with status 'done'
+2026-11-20T15:48:04.6742470Z   /tmp/pip-build-env-pfyozxxr/overlay/lib/python3.12/site-packages/setuptools/command/editable_wheel.py:354: BuildBackendWarning: Editable installation.
+2026-11-20T15:48:04.6743740Z   !!
+2026-11-20T15:48:04.6744047Z   
+2026-11-20T15:48:04.6744471Z           ********************************************************************************
+2026-11-20T15:48:04.6745502Z           Please be careful with folders in your working directory with the same
+2026-11-20T15:48:04.6746457Z           name as your package as they may take precedence during imports.
+2026-11-20T15:48:04.6747216Z           ********************************************************************************
+2026-11-20T15:48:04.6747796Z   
+2026-11-20T15:48:04.6748103Z   !!
+2026-11-20T15:48:04.6748567Z     with strategy, WheelFile(wheel_path, "w") as wheel_obj:
+2026-11-20T15:48:04.6749935Z   Created wheel for lingshu: filename=lingshu-0.0.1-0.editable-py3-none-any.whl size=7912 sha256=8d0135ad28313a146256cfc3ae4ac69e99634858d85fd3b33f73ba23809d6354
+2026-11-20T15:48:04.6752064Z   Stored in directory: /tmp/pip-ephem-wheel-cache-7ghk0133/wheels/c6/d0/5f/ad15062221e4d55b62447bd5f0a5591463e268ea9c83c5f750
+2026-11-20T15:48:04.6770159Z Successfully built lingshu
+2026-11-20T15:48:04.7266086Z Installing collected packages: PyYAML, pygments, pluggy, Pillow, packaging, numpy, mdurl, lingshu, iniconfig, execnet, pytest, markdown-it-py, pytest-xdist
+2026-11-20T15:48:08.1678673Z 
+2026-11-20T15:48:08.1696723Z Successfully installed Pillow-12.3.0 PyYAML-6.0.3 execnet-2.1.2 iniconfig-2.3.1 lingshu-0.0.1 markdown-it-py-4.3.0 mdurl-0.1.2 numpy-2.5.5 packaging-26.3 pluggy-1.7.0 pygments-2.21.0 pytest-9.2.0 pytest-xdist-3.8.0
+2026-11-20T15:48:08.4781203Z ##[group]Run set -euo pipefail
+2026-11-20T15:48:08.4781554Z [36;1mset -euo pipefail[0m
+2026-11-20T15:48:08.4782053Z [36;1mpython -X utf8 -B evidence/validation/body-round2-20261120/tools/run_round2_linux_benchmarks.py \[0m
+2026-11-20T15:48:08.4782606Z [36;1m  --source "$GITHUB_WORKSPACE/source" \[0m
+2026-11-20T15:48:08.4782971Z [36;1m  --baseline-root "$GITHUB_WORKSPACE/baseline-root" \[0m
+2026-11-20T15:48:08.4783347Z [36;1m  --output "$RUNNER_TEMP/body-round2-output" \[0m
+2026-11-20T15:48:08.4783742Z [36;1m  --source-sha "$SOURCE_SHA" --baseline-sha "$BASELINE_SHA" \[0m
+2026-11-20T15:48:08.4784161Z [36;1m  2>&1 | tee "$RUNNER_TEMP/body-round2-output/driver.log"[0m
+2026-11-20T15:48:08.4817776Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-20T15:48:08.4818114Z env:
+2026-11-20T15:48:08.4818354Z   SOURCE_SHA: 5226860c1d70bc7fc6619cf79aff10c4f9a2a234
+2026-11-20T15:48:08.4818719Z   BASELINE_SHA: d74848fb33dbff1d719959df19d1266a1ac60f44
+2026-11-20T15:48:08.4819057Z   PYTHONUTF8: 1
+2026-11-20T15:48:08.4819275Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-20T15:48:08.4819516Z   PYTHONHASHSEED: 0
+2026-11-20T15:48:08.4819722Z   OPENBLAS_NUM_THREADS: 1
+2026-11-20T15:48:08.4820111Z   OMP_NUM_THREADS: 1
+2026-11-20T15:48:08.4820312Z   MKL_NUM_THREADS: 1
+2026-11-20T15:48:08.4820573Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:48:08.4820994Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-20T15:48:08.4821420Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:48:08.4821791Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:48:08.4822166Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:48:08.4822541Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-20T15:48:08.4822978Z ##[endgroup]
+2026-11-20T15:48:17.7673833Z {"label": "core-baseline", "command": ["/opt/hostedtoolcache/Python/3.12.16/x64/bin/python", "-X", "utf8", "-B", "/home/runner/work/lingshu/lingshu/source/bench/bench_fresh_row_decay.py", "--root", "/home/runner/work/lingshu/lingshu/baseline-root", "--output", "/home/runner/work/_temp/body-round2-output/core/baseline.json"], "cwd": "/home/runner/work/lingshu/lingshu/source", "started_utc": "2026-11-20T15:48:08.782549+00:00", "elapsed_seconds": 8.984110790999978, "exit_code": 0, "stdout_sha256": "ec66cd9edb1fd0fed010925f12a41e816f10ffd5e02b81b2d6d76e54bc4fa2d7", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+2026-11-20T15:48:27.8325475Z {"label": "core-fixed", "command": ["/opt/hostedtoolcache/Python/3.12.16/x64/bin/python", "-X", "utf8", "-B", "/home/runner/work/lingshu/lingshu/source/bench/bench_fresh_row_decay.py", "--root", "/home/runner/work/lingshu/lingshu/source", "--output", "/home/runner/work/_temp/body-round2-output/core/fixed.json"], "cwd": "/home/runner/work/lingshu/lingshu/source", "started_utc": "2026-11-20T15:48:17.766951+00:00", "elapsed_seconds": 10.064693613000003, "exit_code": 0, "stdout_sha256": "0e0525f7ef793d0282768327699641144b221cf7cef6b23fb8c82bf3584e3c9c", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+2026-11-20T15:48:28.7251163Z {"label": "circular-paired", "command": ["/opt/hostedtoolcache/Python/3.12.16/x64/bin/python", "-X", "utf8", "-B", "/home/runner/work/lingshu/lingshu/source/bench/circular_time_residual.py", "--baseline", "d74848fb33dbff1d719959df19d1266a1ac60f44", "--output", "/home/runner/work/_temp/body-round2-output/circular/paired.json"], "cwd": "/home/runner/work/lingshu/lingshu/source", "started_utc": "2026-11-20T15:48:27.831993+00:00", "elapsed_seconds": 0.8921198589999904, "exit_code": 0, "stdout_sha256": "0a4bdbfb0d69d52cb774c45d3c9e4c099fd76a0dee5de71d7103287348523c17", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+2026-11-20T15:48:29.7779781Z {"label": "numeric-baseline", "command": ["/opt/hostedtoolcache/Python/3.12.16/x64/bin/python", "-X", "utf8", "-B", "/home/runner/work/lingshu/lingshu/source/bench/bench_spatial_detect_partition.py", "--source-root", "/home/runner/work/lingshu/lingshu/baseline-root", "--out", "/home/runner/work/_temp/body-round2-output/numeric/baseline.json"], "cwd": "/home/runner/work/lingshu/lingshu/source", "started_utc": "2026-11-20T15:48:28.724599+00:00", "elapsed_seconds": 1.0522712060000003, "exit_code": 0, "stdout_sha256": "987dd8e22f90a3b3c427bd7423538980554ce9a94ec1a098214b4d4348ae680d", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+2026-11-20T15:48:30.8757945Z {"label": "numeric-fixed", "command": ["/opt/hostedtoolcache/Python/3.12.16/x64/bin/python", "-X", "utf8", "-B", "/home/runner/work/lingshu/lingshu/source/bench/bench_spatial_detect_partition.py", "--source-root", "/home/runner/work/lingshu/lingshu/source", "--out", "/home/runner/work/_temp/body-round2-output/numeric/fixed.json"], "cwd": "/home/runner/work/lingshu/lingshu/source", "started_utc": "2026-11-20T15:48:29.777418+00:00", "elapsed_seconds": 1.0973652350000123, "exit_code": 0, "stdout_sha256": "ce091954e81abda84c4b533bfe98660e79ed988bead426d595f40d1db40af465", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+2026-11-20T15:50:14.3692330Z {"label": "world-paired", "command": ["/opt/hostedtoolcache/Python/3.12.16/x64/bin/python", "-X", "utf8", "-B", "/home/runner/work/lingshu/lingshu/source/bench/bench_scene_collision_freeflight.py", "--baseline", "d74848fb33dbff1d719959df19d1266a1ac60f44", "--output", "/home/runner/work/_temp/body-round2-output/world", "--ticks", "80", "--repeats", "11"], "cwd": "/home/runner/work/lingshu/lingshu/source", "started_utc": "2026-11-20T15:48:30.875263+00:00", "elapsed_seconds": 103.49288272199999, "exit_code": 0, "stdout_sha256": "53dd38538d26155b7afee314de0aafccf9a669609a807718443c943c1e936309", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+2026-11-20T15:50:22.2821880Z {"label": "mutations-core", "command": ["/opt/hostedtoolcache/Python/3.12.16/x64/bin/python", "-X", "utf8", "-B", "/home/runner/work/lingshu/lingshu/source/tools/testing/replay_transaction_guards.py", "--spec", "tests/fixtures/fresh_row_decay_mutations.json", "--baseline", "d74848fb33dbff1d719959df19d1266a1ac60f44", "--mutate", "--output", "/home/runner/work/_temp/body-round2-output/mutations/core"], "cwd": "/home/runner/work/lingshu/lingshu/source", "started_utc": "2026-11-20T15:50:14.368682+00:00", "elapsed_seconds": 7.912394685000038, "exit_code": 0, "stdout_sha256": "974588cc006cf0ae7de95912c0029ea150935ec34461a3bca7be51887e214f93", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+2026-11-20T15:50:26.0994149Z {"label": "mutations-circular", "command": ["/opt/hostedtoolcache/Python/3.12.16/x64/bin/python", "-X", "utf8", "-B", "/home/runner/work/lingshu/lingshu/source/tools/testing/replay_save_guards.py", "--spec", "tests/fixtures/circular_time_residual_mutations.json", "--baseline", "d74848fb33dbff1d719959df19d1266a1ac60f44", "--mutate", "--output", "/home/runner/work/_temp/body-round2-output/mutations/circular"], "cwd": "/home/runner/work/lingshu/lingshu/source", "started_utc": "2026-11-20T15:50:22.281614+00:00", "elapsed_seconds": 3.816616022000005, "exit_code": 0, "stdout_sha256": "db72825dc19783a45b564f77dc80d1fa0eee0825793b2914da55710f0e7ed10d", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+2026-11-20T15:50:30.3815430Z {"label": "mutations-numeric", "command": ["/opt/hostedtoolcache/Python/3.12.16/x64/bin/python", "-X", "utf8", "-B", "/home/runner/work/lingshu/lingshu/source/tools/testing/replay_save_guards.py", "--spec", "tests/fixtures/spatial_detect_complete_partition_mutations.json", "--baseline", "d74848fb33dbff1d719959df19d1266a1ac60f44", "--mutate", "--output", "/home/runner/work/_temp/body-round2-output/mutations/numeric"], "cwd": "/home/runner/work/lingshu/lingshu/source", "started_utc": "2026-11-20T15:50:26.098800+00:00", "elapsed_seconds": 4.28145316399997, "exit_code": 0, "stdout_sha256": "82b99fc28eb56dc756dc79eccac64e9de8475cea57011f0916f4c909a91df372", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+2026-11-20T15:50:34.0375523Z {"label": "mutations-world", "command": ["/opt/hostedtoolcache/Python/3.12.16/x64/bin/python", "-X", "utf8", "-B", "/home/runner/work/lingshu/lingshu/source/tools/testing/replay_save_guards.py", "--spec", "tests/fixtures/scene_collision_freeflight_velocity_mutations.json", "--baseline", "d74848fb33dbff1d719959df19d1266a1ac60f44", "--mutate", "--output", "/home/runner/work/_temp/body-round2-output/mutations/world"], "cwd": "/home/runner/work/lingshu/lingshu/source", "started_utc": "2026-11-20T15:50:30.380856+00:00", "elapsed_seconds": 3.6552106720000097, "exit_code": 0, "stdout_sha256": "2382b06829248ee07e7bbab0d6601571d4f184d5785819b5f03438850cd85235", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+2026-11-20T15:50:34.1132188Z {
+2026-11-20T15:50:34.1132703Z   "source_sha": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+2026-11-20T15:50:34.1133561Z   "baseline_sha": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+2026-11-20T15:50:34.1134144Z   "checks": [
+2026-11-20T15:50:34.1136280Z     "core fixed oracle has zero failures; all raw timing/memory samples present",
+2026-11-20T15:50:34.1137467Z     "circular fixed analytic oracle 7146/7146; baseline failures retained",
+2026-11-20T15:50:34.1138379Z     "numeric A/B inputs and weights identical; divisible output SHA identical",
+2026-11-20T15:50:34.1139235Z     "world fixed analytic oracle clear; four unchanged controls match in both modes",
+2026-11-20T15:50:34.1140065Z     "all four fixed guards / exact baseline failures / 27 named mutants verified"
+2026-11-20T15:50:34.1140640Z   ],
+2026-11-20T15:50:34.1140903Z   "errors": [],
+2026-11-20T15:50:34.1141183Z   "commands": 10,
+2026-11-20T15:50:34.1141508Z   "named_mutations_expected": 27,
+2026-11-20T15:50:34.1141908Z   "all_command_exit_codes_zero": true,
+2026-11-20T15:50:34.1142328Z   "source_unchanged": true,
+2026-11-20T15:50:34.1142682Z   "ok": true,
+2026-11-20T15:50:34.1143323Z   "scope": "four benchmark workloads and mutation replays; complete repository/brain gate runs separately"
+2026-11-20T15:50:34.1144070Z }
+2026-11-20T15:50:34.1290304Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-11-20T15:50:34.1290715Z with:
+2026-11-20T15:50:34.1290942Z   name: body-round2-py312-latest-44766869622-1
+2026-11-20T15:50:34.1291230Z   retention-days: 90
+2026-11-20T15:50:34.1291446Z   if-no-files-found: error
+2026-11-20T15:50:34.1292983Z   path: /home/runner/work/_temp/body-round2-output/**
+!/home/runner/work/_temp/body-round2-output/**/tmp/**
+!/home/runner/work/_temp/body-round2-output/**/sandbox/**
+!/home/runner/work/_temp/body-round2-output/**/guard-*/**
+!/home/runner/work/_temp/body-round2-output/**/__pycache__/**
+!/home/runner/work/_temp/body-round2-output/**/*.db
+!/home/runner/work/_temp/body-round2-output/**/*.sqlite
+!/home/runner/work/_temp/body-round2-output/**/*.sqlite3
+
+2026-11-20T15:50:34.1294673Z   compression-level: 6
+2026-11-20T15:50:34.1294882Z   overwrite: false
+2026-11-20T15:50:34.1295095Z   include-hidden-files: false
+2026-11-20T15:50:34.1295556Z env:
+2026-11-20T15:50:34.1295836Z   SOURCE_SHA: 5226860c1d70bc7fc6619cf79aff10c4f9a2a234
+2026-11-20T15:50:34.1296203Z   BASELINE_SHA: d74848fb33dbff1d719959df19d1266a1ac60f44
+2026-11-20T15:50:34.1296741Z   PYTHONUTF8: 1
+2026-11-20T15:50:34.1296995Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-20T15:50:34.1297232Z   PYTHONHASHSEED: 0
+2026-11-20T15:50:34.1297436Z   OPENBLAS_NUM_THREADS: 1
+2026-11-20T15:50:34.1297747Z   OMP_NUM_THREADS: 1
+2026-11-20T15:50:34.1298046Z   MKL_NUM_THREADS: 1
+2026-11-20T15:50:34.1298402Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:50:34.1299034Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-20T15:50:34.1299591Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:50:34.1300104Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:50:34.1300593Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-20T15:50:34.1301064Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-20T15:50:34.1355758Z ##[endgroup]
+2026-11-20T15:50:34.3102313Z (node:2958) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-20T15:50:34.3103242Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-20T15:50:34.3658465Z With the provided path, there will be 138 files uploaded
+2026-11-20T15:50:34.3659547Z Artifact name is valid!
+2026-11-20T15:50:34.3660075Z Root directory input is valid!
+2026-11-20T15:50:34.5836892Z Beginning upload of artifact content to blob storage
+2026-11-20T15:50:34.7291303Z (node:2958) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-20T15:50:34.8053937Z Uploaded bytes 339187
+2026-11-20T15:50:34.8226806Z Finished uploading artifact content to blob storage!
+2026-11-20T15:50:34.8228655Z SHA256 digest of uploaded artifact zip is 72879401d05edf9383f966d099556df01e776da34b484988812c5b5dd2bfa521
+2026-11-20T15:50:34.8230331Z Finalizing artifact upload
+2026-11-20T15:50:35.1467153Z Artifact body-round2-py312-latest-44766869622-1.zip successfully finalized. Artifact ID 14645996616
+2026-11-20T15:50:35.1469092Z Artifact body-round2-py312-latest-44766869622-1 has been successfully uploaded! Final size is 339187 bytes. Artifact ID is 14645996616
+2026-11-20T15:50:35.1475869Z Artifact download URL: https://github.com/STARDUSTLC666/lingshu/actions/runs/44766869622/artifacts/14645996616
+2026-11-20T15:50:35.1683014Z Post job cleanup.
+2026-11-20T15:50:35.2939464Z (node:2970) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-20T15:50:35.2940787Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-20T15:50:35.3071972Z Post job cleanup.
+2026-11-20T15:50:35.4017841Z [command]/usr/bin/git version
+2026-11-20T15:50:35.4059995Z git version 2.56.1
+2026-11-20T15:50:35.4104175Z Temporarily overriding HOME='/home/runner/work/_temp/e8e5025b-977b-46de-a6ee-ebfaa8927697' before making global git config changes
+2026-11-20T15:50:35.4106055Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-20T15:50:35.4111029Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/lingshu/lingshu/source
+2026-11-20T15:50:35.4163095Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-20T15:50:35.4206765Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-20T15:50:35.4652543Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-20T15:50:35.4743980Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-20T15:50:35.5115868Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-20T15:50:35.5155524Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-20T15:50:35.5635061Z Post job cleanup.
+2026-11-20T15:50:35.6525604Z [command]/usr/bin/git version
+2026-11-20T15:50:35.6570595Z git version 2.56.1
+2026-11-20T15:50:35.6610660Z Temporarily overriding HOME='/home/runner/work/_temp/c6242825-2b00-4ae5-af6f-d7ad17896947' before making global git config changes
+2026-11-20T15:50:35.6612053Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-20T15:50:35.6616331Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/lingshu/lingshu/evidence
+2026-11-20T15:50:35.6659993Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-20T15:50:35.6762218Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-20T15:50:35.7129038Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-20T15:50:35.7153363Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-20T15:50:35.7459935Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-20T15:50:35.7495163Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-20T15:50:35.7941812Z Cleaning up orphan processes
+2026-11-20T15:50:35.8341846Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

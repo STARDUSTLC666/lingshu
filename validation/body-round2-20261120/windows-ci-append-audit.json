@@ -1,0 +1,71 @@
+{
+  "status": "Windows/CI append staged and independently blob-verified; index-clean Linux benchmark rerun pending",
+  "base_commit": "f769b3ac33eb5221ad66f6a4384aa6429b26e597",
+  "newly_copied_files": 110,
+  "total_artifacts": 708,
+  "canonical_blobs_verified": 708,
+  "new_numeric_leaves_verified": 1697,
+  "excluded_zip_convenience_copies": 10,
+  "excluded_zip_index": [
+    {
+      "source": "audit-world/ci-round2/combined/44764384747-attempt1/all-run-logs.zip",
+      "sha256": "633d6a6b358f9e0d1b4aee88c5640bcf7518f429e05102843c33d286eb1104db",
+      "bytes": 1400203,
+      "reason": "compressed convenience copy omitted; exact decoded raw job logs and per-job hashes are included"
+    },
+    {
+      "source": "audit-world/ci-round2/linux-benchmarks/44766869622-attempt1/all-run-logs.zip",
+      "sha256": "e28e909cd3f304867245cfbdc8a3817dae14c9479b3ca3f323ff1b30aecde022",
+      "bytes": 115946,
+      "reason": "uploaded artifact ZIP retained in audited private cache; extracted original outputs are published"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761888700-attempt1/all-run-logs.zip",
+      "sha256": "a4a850ea8a855afed59d18313fe6d51c4bf062311c8a036fe1a548564f2fd820",
+      "bytes": 15836,
+      "reason": "compressed convenience copy omitted; exact decoded raw job logs and per-job hashes are included"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761889152-attempt1/all-run-logs.zip",
+      "sha256": "7b6c6dca742937191c36ed8dbc812c697c5009b65b8808ca426e63493483b7ac",
+      "bytes": 1375112,
+      "reason": "compressed convenience copy omitted; exact decoded raw job logs and per-job hashes are included"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844234-attempt1/all-run-logs.zip",
+      "sha256": "24a279d06912cc5a6ee8e19d09fd2092b4fc2c9b98c7c9af844ac56dee31a497",
+      "bytes": 15943,
+      "reason": "compressed convenience copy omitted; exact decoded raw job logs and per-job hashes are included"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844376-attempt1/all-run-logs.zip",
+      "sha256": "d15cea4764b15c5c52b5eab8cf8040f6c932222efedf81940c1222179e3d6718",
+      "bytes": 1371022,
+      "reason": "compressed convenience copy omitted; exact decoded raw job logs and per-job hashes are included"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763098857-attempt1/all-run-logs.zip",
+      "sha256": "063b09406db0c7f193e67a5bb3162f79f468cc4bb71cab116b70a075284267a2",
+      "bytes": 1378196,
+      "reason": "compressed convenience copy omitted; exact decoded raw job logs and per-job hashes are included"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763099047-attempt1/all-run-logs.zip",
+      "sha256": "1b9b2d96da4d803823b7c5e24a340334d05333a28aed6706839d9c9716ff3b4d",
+      "bytes": 15937,
+      "reason": "compressed convenience copy omitted; exact decoded raw job logs and per-job hashes are included"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/44764764765-attempt1/all-run-logs.zip",
+      "sha256": "7d0ba7aff48ba74203ae61a5fd5660ec6fd38010990c2ef1ba671a9c6a42a92c",
+      "bytes": 1375783,
+      "reason": "compressed convenience copy omitted; exact decoded raw job logs and per-job hashes are included"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/44764764805-attempt1/all-run-logs.zip",
+      "sha256": "03705ca4fd93d669499bd9c3bab3f242767894175e81f7662381e0f42c3c16c5",
+      "bytes": 15964,
+      "reason": "compressed convenience copy omitted; exact decoded raw job logs and per-job hashes are included"
+    }
+  ]
+}

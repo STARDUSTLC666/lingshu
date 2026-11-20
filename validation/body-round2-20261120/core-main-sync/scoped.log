@@ -1,0 +1,52 @@
+............................................................             [100%]
+============================== warnings summary ===============================
+tests/test_issue176_time_based_decay_guard.py: 6 warnings
+tests/test_issue176_clock_rollback_decay_guard.py: 5 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+  [workspace]/lingshu/work\lingshu-body-fresh-decay-20261120\lingshu\core\core.py:7671: ComponentDiscoveryWarning: [issue156] 组件 'entity_registry' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from entity_registry import EntityRegistry
+
+tests/test_issue176_time_based_decay_guard.py: 6 warnings
+tests/test_issue176_clock_rollback_decay_guard.py: 5 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+  [workspace]/lingshu/work\lingshu-body-fresh-decay-20261120\lingshu\core\core.py:7657: ComponentDiscoveryWarning: [issue156] 组件 'semantic_space' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from semantic_space import SemanticSpaceProvider
+
+tests/test_issue176_time_based_decay_guard.py: 6 warnings
+tests/test_issue176_clock_rollback_decay_guard.py: 5 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+  [workspace]/lingshu/work\lingshu-body-fresh-decay-20261120\lingshu\core\core.py:7647: ComponentDiscoveryWarning: [issue156] 组件 'attention_policy' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from attention_policy import AttentionPolicy
+
+tests/test_issue176_time_based_decay_guard.py: 6 warnings
+tests/test_issue176_clock_rollback_decay_guard.py: 5 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+  [workspace]/lingshu/work\lingshu-body-fresh-decay-20261120\lingshu\core\core.py:7622: ComponentDiscoveryWarning: [issue156] 组件 'prediction_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from prediction_engine import PredictionEngine
+
+tests/test_issue176_time_based_decay_guard.py: 6 warnings
+tests/test_issue176_clock_rollback_decay_guard.py: 5 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+  [workspace]/lingshu/work\lingshu-body-fresh-decay-20261120\lingshu\core\core.py:7597: ComponentDiscoveryWarning: [issue156] 组件 'lifecycle_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from lifecycle_engine import LifecycleEngine
+
+tests/test_issue176_time_based_decay_guard.py: 6 warnings
+tests/test_issue176_clock_rollback_decay_guard.py: 5 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+  [workspace]/lingshu/work\lingshu-body-fresh-decay-20261120\lingshu\core\core.py:7565: ComponentDiscoveryWarning: [issue156] 组件 'flywheel_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from flywheel_engine import FlywheelEngine
+
+tests/test_issue176_time_based_decay_guard.py: 6 warnings
+tests/test_issue176_clock_rollback_decay_guard.py: 5 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+  [workspace]/lingshu/work\lingshu-body-fresh-decay-20261120\lingshu\core\core.py:7575: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from self_cognition_engine import SelfCognitionEngine
+
+tests/test_issue176_time_based_decay_guard.py: 6 warnings
+tests/test_issue176_clock_rollback_decay_guard.py: 5 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+  [workspace]/lingshu/work\lingshu-body-fresh-decay-20261120\lingshu\core\core.py:7554: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from body import build_default_registry
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+60 passed, 96 warnings in 6.03s

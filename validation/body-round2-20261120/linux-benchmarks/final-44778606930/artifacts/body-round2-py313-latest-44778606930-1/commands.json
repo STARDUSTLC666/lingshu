@@ -1,0 +1,218 @@
+[
+  {
+    "label": "core-baseline",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.18/x64/bin/python",
+      "-X",
+      "utf8",
+      "-B",
+      "/home/runner/work/lingshu/lingshu/source/bench/bench_fresh_row_decay.py",
+      "--root",
+      "/home/runner/work/lingshu/lingshu/baseline-root",
+      "--output",
+      "/home/runner/work/_temp/body-round2-output/core/baseline.json"
+    ],
+    "cwd": "/home/runner/work/lingshu/lingshu/source",
+    "started_utc": "2026-11-20T16:58:15.841416+00:00",
+    "elapsed_seconds": 6.459311283000002,
+    "exit_code": 0,
+    "stdout_sha256": "6e5f1b8011abd70612dc0a978b79b75f32c9c7762fc4c8deb7e199f5ba98a9b0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "core-fixed",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.18/x64/bin/python",
+      "-X",
+      "utf8",
+      "-B",
+      "/home/runner/work/lingshu/lingshu/source/bench/bench_fresh_row_decay.py",
+      "--root",
+      "/home/runner/work/lingshu/lingshu/source",
+      "--output",
+      "/home/runner/work/_temp/body-round2-output/core/fixed.json"
+    ],
+    "cwd": "/home/runner/work/lingshu/lingshu/source",
+    "started_utc": "2026-11-20T16:58:22.300945+00:00",
+    "elapsed_seconds": 6.689483658,
+    "exit_code": 0,
+    "stdout_sha256": "a1e016474e86c042f4b5482e466497c26585c0b9024f09ff5160481d3ffb826d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "circular-paired",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.18/x64/bin/python",
+      "-X",
+      "utf8",
+      "-B",
+      "/home/runner/work/lingshu/lingshu/source/bench/circular_time_residual.py",
+      "--baseline",
+      "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "--output",
+      "/home/runner/work/_temp/body-round2-output/circular/paired.json"
+    ],
+    "cwd": "/home/runner/work/lingshu/lingshu/source",
+    "started_utc": "2026-11-20T16:58:28.990695+00:00",
+    "elapsed_seconds": 0.6933855370000046,
+    "exit_code": 0,
+    "stdout_sha256": "b597b8f5b7fa152aedb78022e95cadba75778ce5c112729d78a238a4e215d736",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "numeric-baseline",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.18/x64/bin/python",
+      "-X",
+      "utf8",
+      "-B",
+      "/home/runner/work/lingshu/lingshu/source/bench/bench_spatial_detect_partition.py",
+      "--source-root",
+      "/home/runner/work/lingshu/lingshu/baseline-root",
+      "--out",
+      "/home/runner/work/_temp/body-round2-output/numeric/baseline.json"
+    ],
+    "cwd": "/home/runner/work/lingshu/lingshu/source",
+    "started_utc": "2026-11-20T16:58:29.687001+00:00",
+    "elapsed_seconds": 0.7513179700000023,
+    "exit_code": 0,
+    "stdout_sha256": "6007712ccdcaf6a81c9b68a15f5fc806b22b2945ab4f19e41829f500a99e86c1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "numeric-fixed",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.18/x64/bin/python",
+      "-X",
+      "utf8",
+      "-B",
+      "/home/runner/work/lingshu/lingshu/source/bench/bench_spatial_detect_partition.py",
+      "--source-root",
+      "/home/runner/work/lingshu/lingshu/source",
+      "--out",
+      "/home/runner/work/_temp/body-round2-output/numeric/fixed.json"
+    ],
+    "cwd": "/home/runner/work/lingshu/lingshu/source",
+    "started_utc": "2026-11-20T16:58:30.438775+00:00",
+    "elapsed_seconds": 0.743258548,
+    "exit_code": 0,
+    "stdout_sha256": "f2df5095a6eb1d28d4776f3cec6f3d4059d165ad99ab0e8738e986efb47582cf",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "world-paired",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.18/x64/bin/python",
+      "-X",
+      "utf8",
+      "-B",
+      "/home/runner/work/lingshu/lingshu/source/bench/bench_scene_collision_freeflight.py",
+      "--baseline",
+      "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "--output",
+      "/home/runner/work/_temp/body-round2-output/world",
+      "--ticks",
+      "80",
+      "--repeats",
+      "11"
+    ],
+    "cwd": "/home/runner/work/lingshu/lingshu/source",
+    "started_utc": "2026-11-20T16:58:31.182509+00:00",
+    "elapsed_seconds": 78.20548069099999,
+    "exit_code": 0,
+    "stdout_sha256": "da426e264898e7d28332289eefd3b13bd94f9c8ea183e56331d9e7999f2e0365",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "mutations-core",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.18/x64/bin/python",
+      "-X",
+      "utf8",
+      "-B",
+      "/home/runner/work/lingshu/lingshu/source/tools/testing/replay_transaction_guards.py",
+      "--spec",
+      "tests/fixtures/fresh_row_decay_mutations.json",
+      "--baseline",
+      "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "--mutate",
+      "--output",
+      "/home/runner/work/_temp/body-round2-output/mutations/core"
+    ],
+    "cwd": "/home/runner/work/lingshu/lingshu/source",
+    "started_utc": "2026-11-20T16:59:49.388472+00:00",
+    "elapsed_seconds": 7.4999520260000025,
+    "exit_code": 0,
+    "stdout_sha256": "992db1943165f3167ccbf75e25bf750c5522702af69b2cbb2370e361b014499a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "mutations-circular",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.18/x64/bin/python",
+      "-X",
+      "utf8",
+      "-B",
+      "/home/runner/work/lingshu/lingshu/source/tools/testing/replay_save_guards.py",
+      "--spec",
+      "tests/fixtures/circular_time_residual_mutations.json",
+      "--baseline",
+      "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "--mutate",
+      "--output",
+      "/home/runner/work/_temp/body-round2-output/mutations/circular"
+    ],
+    "cwd": "/home/runner/work/lingshu/lingshu/source",
+    "started_utc": "2026-11-20T16:59:56.888854+00:00",
+    "elapsed_seconds": 3.147156166000002,
+    "exit_code": 0,
+    "stdout_sha256": "914be169fc2779598eb64789c80e329b484e6e309e7549224b433bebd16253a8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "mutations-numeric",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.18/x64/bin/python",
+      "-X",
+      "utf8",
+      "-B",
+      "/home/runner/work/lingshu/lingshu/source/tools/testing/replay_save_guards.py",
+      "--spec",
+      "tests/fixtures/spatial_detect_complete_partition_mutations.json",
+      "--baseline",
+      "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "--mutate",
+      "--output",
+      "/home/runner/work/_temp/body-round2-output/mutations/numeric"
+    ],
+    "cwd": "/home/runner/work/lingshu/lingshu/source",
+    "started_utc": "2026-11-20T17:00:00.036502+00:00",
+    "elapsed_seconds": 3.4764372310000056,
+    "exit_code": 0,
+    "stdout_sha256": "9fb99a8a8c916a1c03c9579ad5f40dd261a6a5f039e85bd79b9a6950cb0ca9ba",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "mutations-world",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.18/x64/bin/python",
+      "-X",
+      "utf8",
+      "-B",
+      "/home/runner/work/lingshu/lingshu/source/tools/testing/replay_save_guards.py",
+      "--spec",
+      "tests/fixtures/scene_collision_freeflight_velocity_mutations.json",
+      "--baseline",
+      "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "--mutate",
+      "--output",
+      "/home/runner/work/_temp/body-round2-output/mutations/world"
+    ],
+    "cwd": "/home/runner/work/lingshu/lingshu/source",
+    "started_utc": "2026-11-20T17:00:03.513427+00:00",
+    "elapsed_seconds": 3.00657454200001,
+    "exit_code": 0,
+    "stdout_sha256": "13fa5cf8354d6951912e93a937d6c1f2e88b3f0dbb688892b633b9a2e8fc04b0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

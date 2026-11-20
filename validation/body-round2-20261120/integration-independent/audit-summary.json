@@ -1,0 +1,1743 @@
+{
+  "date_utc": "2026-11-20T15:44:18.642702+00:00",
+  "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "head": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+  "tree": "529e1e150aa2c05a2f5bee3126c4678a58695e21",
+  "remote_pr_heads": [
+    {
+      "pr": 1469,
+      "head": "cc68a82baace16e92ff6ce770330b65102a530a5",
+      "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "state": "open",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/1469",
+      "title": "fix(world): encode motion group IDs without delimiter collisions"
+    },
+    {
+      "pr": 1470,
+      "head": "433befa7b356eebecbc457ecd8f8a123ec1540cc",
+      "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "state": "open",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/1470",
+      "title": "fix(vision): composite alpha before lineart detection"
+    },
+    {
+      "pr": 1471,
+      "head": "39d379552f34026ef46ad0515831319b1494a5d3",
+      "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "state": "open",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/1471",
+      "title": "fix(world): test face normals for skew SAT boxes"
+    },
+    {
+      "pr": 1472,
+      "head": "a663512dd0fbc44a9fb08a55751951009586d172",
+      "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "state": "open",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/1472",
+      "title": "fix(core): rebuild novelty cache after mixed row rewrite"
+    },
+    {
+      "pr": 1473,
+      "head": "cff189b3438623feaebdf1a874fafdd03080acb1",
+      "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "state": "open",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/1473",
+      "title": "fix(nn): choose nearest odd-r cell by center distance"
+    },
+    {
+      "pr": 1474,
+      "head": "fb6c9cabc939a6defcc44ef661b3048d47155d87",
+      "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "state": "open",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/1474",
+      "title": "fix(core): normalize skill search limits"
+    },
+    {
+      "pr": 1475,
+      "head": "e0771a810b8846676f3545542b2e70d5e0011467",
+      "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "state": "open",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/1475",
+      "title": "fix(world): 修正零初速释放单摆椭圆解及近分离点精度"
+    },
+    {
+      "pr": 1476,
+      "head": "1ab5cc7f295ed5748b50c7ffde26cf2a34663204",
+      "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "state": "open",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/1476",
+      "title": "fix(anim): accept top-level motions with strict spec normalization"
+    },
+    {
+      "pr": 1477,
+      "head": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+      "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "state": "open",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/1477",
+      "title": "fix(world): anchor circular fits and score vertical residuals"
+    },
+    {
+      "pr": 1478,
+      "head": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+      "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "state": "open",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/1478",
+      "title": "fix(core): limit newborn decay to comparable post-birth time"
+    },
+    {
+      "pr": 1479,
+      "head": "13952c82874fb9ee19a4f1b660e3144134367a53",
+      "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "state": "open",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/1479",
+      "title": "fix(world): preserve free-flight velocity without collision contact"
+    },
+    {
+      "pr": 1480,
+      "head": "a357dbbe96905848fd81b7249814576fb2743674",
+      "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "state": "open",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/1480",
+      "title": "fix(nn): cover complete spatial partitions with area-aware evidence gates"
+    }
+  ],
+  "production_files": [
+    {
+      "file": "bridges/blender/wm_bridge/factory/anim/_det/gate_physics.py",
+      "owners": [
+        1475
+      ],
+      "steps": [
+        {
+          "pr": 1475,
+          "merged_lf_sha256": "6b0e1d50e3e1ea74c0bc7a1a4c84783cc1c459b263f7f8f612e8e9ab8a06fcb2"
+        }
+      ],
+      "merged_lf_sha256": "6b0e1d50e3e1ea74c0bc7a1a4c84783cc1c459b263f7f8f612e8e9ab8a06fcb2",
+      "actual_lf_sha256": "6b0e1d50e3e1ea74c0bc7a1a4c84783cc1c459b263f7f8f612e8e9ab8a06fcb2",
+      "byte_exact_union": true
+    },
+    {
+      "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
+      "owners": [
+        1475,
+        1476
+      ],
+      "steps": [
+        {
+          "pr": 1475,
+          "merged_lf_sha256": "f2b24ec11fbdef01d56c7d354ef247fc1bfdda9dfc14588f8830a3cf62b01aad"
+        },
+        {
+          "pr": 1476,
+          "merged_lf_sha256": "8c973edbf7768dcb891546ba24422b020a85ad4b2a987a64c0581e846773f4f8"
+        }
+      ],
+      "merged_lf_sha256": "8c973edbf7768dcb891546ba24422b020a85ad4b2a987a64c0581e846773f4f8",
+      "actual_lf_sha256": "8c973edbf7768dcb891546ba24422b020a85ad4b2a987a64c0581e846773f4f8",
+      "byte_exact_union": true
+    },
+    {
+      "file": "lingshu/core/core.py",
+      "owners": [
+        1474,
+        1478
+      ],
+      "steps": [
+        {
+          "pr": 1474,
+          "merged_lf_sha256": "07ed97c044399d6d59c36fa95c0bdb734b43f83af693f57fe998202477c25983"
+        },
+        {
+          "pr": 1478,
+          "merged_lf_sha256": "4ce414e49f0165f9d03b5a834b1d5dbaac354251cc9aa33b44eaf11cbf0a21c2"
+        }
+      ],
+      "merged_lf_sha256": "4ce414e49f0165f9d03b5a834b1d5dbaac354251cc9aa33b44eaf11cbf0a21c2",
+      "actual_lf_sha256": "4ce414e49f0165f9d03b5a834b1d5dbaac354251cc9aa33b44eaf11cbf0a21c2",
+      "byte_exact_union": true
+    },
+    {
+      "file": "lingshu/core/longterm_gate.py",
+      "owners": [
+        1472
+      ],
+      "steps": [
+        {
+          "pr": 1472,
+          "merged_lf_sha256": "88d7df98aeace5d78e64de39abaecd035baa39f3b4990541928ed646ee6f2a3b"
+        }
+      ],
+      "merged_lf_sha256": "88d7df98aeace5d78e64de39abaecd035baa39f3b4990541928ed646ee6f2a3b",
+      "actual_lf_sha256": "88d7df98aeace5d78e64de39abaecd035baa39f3b4990541928ed646ee6f2a3b",
+      "byte_exact_union": true
+    },
+    {
+      "file": "lingshu/nn/hex_cnn.py",
+      "owners": [
+        1473
+      ],
+      "steps": [
+        {
+          "pr": 1473,
+          "merged_lf_sha256": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081"
+        }
+      ],
+      "merged_lf_sha256": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081",
+      "actual_lf_sha256": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081",
+      "byte_exact_union": true
+    },
+    {
+      "file": "lingshu/nn/hex_text.py",
+      "owners": [
+        1480
+      ],
+      "steps": [
+        {
+          "pr": 1480,
+          "merged_lf_sha256": "f6bc776209577f4f506cf1663a90ced937c3f0d55ab2fd8f9e58587442fdb907"
+        }
+      ],
+      "merged_lf_sha256": "f6bc776209577f4f506cf1663a90ced937c3f0d55ab2fd8f9e58587442fdb907",
+      "actual_lf_sha256": "f6bc776209577f4f506cf1663a90ced937c3f0d55ab2fd8f9e58587442fdb907",
+      "byte_exact_union": true
+    },
+    {
+      "file": "lingshu/vision/lineart.py",
+      "owners": [
+        1470
+      ],
+      "steps": [
+        {
+          "pr": 1470,
+          "merged_lf_sha256": "01d203a87a95021c99080f583e79868feafbf22251d3497b4e4765543cddca9c"
+        }
+      ],
+      "merged_lf_sha256": "01d203a87a95021c99080f583e79868feafbf22251d3497b4e4765543cddca9c",
+      "actual_lf_sha256": "01d203a87a95021c99080f583e79868feafbf22251d3497b4e4765543cddca9c",
+      "byte_exact_union": true
+    },
+    {
+      "file": "lingshu/world/motion_groups.py",
+      "owners": [
+        1469
+      ],
+      "steps": [
+        {
+          "pr": 1469,
+          "merged_lf_sha256": "261f48459c03bdd297d923581ed01efed12d6293aaaffe3319fd321772eacaeb"
+        }
+      ],
+      "merged_lf_sha256": "261f48459c03bdd297d923581ed01efed12d6293aaaffe3319fd321772eacaeb",
+      "actual_lf_sha256": "261f48459c03bdd297d923581ed01efed12d6293aaaffe3319fd321772eacaeb",
+      "byte_exact_union": true
+    },
+    {
+      "file": "lingshu/world/physics.py",
+      "owners": [
+        1471,
+        1475,
+        1477
+      ],
+      "steps": [
+        {
+          "pr": 1471,
+          "merged_lf_sha256": "188cfa80a69c58fc855c98a5fd4b30ad0c367067332cb2813551fbeb2216d03f"
+        },
+        {
+          "pr": 1475,
+          "merged_lf_sha256": "a7feda86def2e2f6aff24c9d0e1dbe0791a6b8909f391051035df2bd3b40222f"
+        },
+        {
+          "pr": 1477,
+          "merged_lf_sha256": "bfb46c186fc51c92e8009d3a9de6ba5c07cdf082f4d509d6c6bf0c1c6721f6c6"
+        }
+      ],
+      "merged_lf_sha256": "bfb46c186fc51c92e8009d3a9de6ba5c07cdf082f4d509d6c6bf0c1c6721f6c6",
+      "actual_lf_sha256": "bfb46c186fc51c92e8009d3a9de6ba5c07cdf082f4d509d6c6bf0c1c6721f6c6",
+      "byte_exact_union": true
+    },
+    {
+      "file": "lingshu/world/scene_simulator.py",
+      "owners": [
+        1479
+      ],
+      "steps": [
+        {
+          "pr": 1479,
+          "merged_lf_sha256": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8"
+        }
+      ],
+      "merged_lf_sha256": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "actual_lf_sha256": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "byte_exact_union": true
+    }
+  ],
+  "per_pr": [
+    {
+      "pr": 1469,
+      "head": "cc68a82baace16e92ff6ce770330b65102a530a5",
+      "contribution_base": "6e9c90bfcba1bfb7c14cdf526611501d526f6777",
+      "production_files": [
+        "lingshu/world/motion_groups.py"
+      ],
+      "changed_functions": [
+        {
+          "file": "lingshu/world/motion_groups.py",
+          "function": "_group_id",
+          "kind": "modified",
+          "pr_ast_sha256": "4251befb139bf2f0ed2c6ae70c80e224f1af1e1da6445444efc93cac5387ce7f",
+          "pr_text_sha256": "4405cdfd9bf5c13b35f8b202385e29b5cecd25d7fdd51c3102ae3b79050c8361"
+        }
+      ]
+    },
+    {
+      "pr": 1470,
+      "head": "433befa7b356eebecbc457ecd8f8a123ec1540cc",
+      "contribution_base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "production_files": [
+        "lingshu/vision/lineart.py"
+      ],
+      "changed_functions": [
+        {
+          "file": "lingshu/vision/lineart.py",
+          "function": "_luma",
+          "kind": "modified",
+          "pr_ast_sha256": "4ab8061559ae8450ba56ee5f7027427f6652be80452390fd307a132bd275c50b",
+          "pr_text_sha256": "8b4fc4a9ff1003e63f20dfbdc8347cac701fa96a8a4dd66d1f0c09042ae96c49"
+        },
+        {
+          "file": "lingshu/vision/lineart.py",
+          "function": "darkline",
+          "kind": "modified",
+          "pr_ast_sha256": "09f28abbc944e6ba67aeace955e29da2e09d4206a7c3355301a846bd9184dc89",
+          "pr_text_sha256": "7fdf817231000433b835a02a005edae1e5f88d73e5da2dd0eed6e26e9ed4050b"
+        }
+      ]
+    },
+    {
+      "pr": 1471,
+      "head": "39d379552f34026ef46ad0515831319b1494a5d3",
+      "contribution_base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "production_files": [
+        "lingshu/world/physics.py"
+      ],
+      "changed_functions": [
+        {
+          "file": "lingshu/world/physics.py",
+          "function": "_box_frame",
+          "kind": "modified",
+          "pr_ast_sha256": "5b12e63b06d895588c8acdc75f6bbbf8fb58a2ca08c30ac33dc0472b307054ac",
+          "pr_text_sha256": "95a658986ede9f2bc9f0b86a93dc277e4e6d6441d556787b8357235ecf2aeac8"
+        },
+        {
+          "file": "lingshu/world/physics.py",
+          "function": "_sat_axes",
+          "kind": "modified",
+          "pr_ast_sha256": "3eaf855ccaea882a893e9c8425d349df99785bea56e61ef1e8d704d97f490ff1",
+          "pr_text_sha256": "ca90fa3cefba796739f2449c7ef103957f948fd03f820a07eebee6b68475c38f"
+        },
+        {
+          "file": "lingshu/world/physics.py",
+          "function": "obb_of",
+          "kind": "modified",
+          "pr_ast_sha256": "819591e9b6045601f28f3ae325818c0fb124271290df212d98e69e6d7657ae47",
+          "pr_text_sha256": "f11612167b9bc19653763bbdb2c3e3b7decd181033a47375262ede39e157bb7a"
+        },
+        {
+          "file": "lingshu/world/physics.py",
+          "function": "obb_overlap",
+          "kind": "modified",
+          "pr_ast_sha256": "20e2014fb4a7315e2607b83dc83499cc8c5ab2c581def82de6247b96a90da620",
+          "pr_text_sha256": "008c04f86b9cf92877bd1aa08fe1a08a14012b8f7894a48069f9a71f7da3548e"
+        }
+      ]
+    },
+    {
+      "pr": 1472,
+      "head": "a663512dd0fbc44a9fb08a55751951009586d172",
+      "contribution_base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "production_files": [
+        "lingshu/core/longterm_gate.py"
+      ],
+      "changed_functions": [
+        {
+          "file": "lingshu/core/longterm_gate.py",
+          "function": "LongTermMemoryGate.__init__",
+          "kind": "modified",
+          "pr_ast_sha256": "db8a9874bdbd49bc15787b41e8c10fbedec2a2f468b489e9d857715c0df97178",
+          "pr_text_sha256": "fe67b16d8fd9435825e03a23ea0caf7f6da5af21d75bad19c74ea4521e4f2d16"
+        },
+        {
+          "file": "lingshu/core/longterm_gate.py",
+          "function": "LongTermMemoryGate._known_snapshot",
+          "kind": "modified",
+          "pr_ast_sha256": "1770028b355bffb3b44087735e31a6344aafe91e2d8d8064fe7cf8d54ebca501",
+          "pr_text_sha256": "e424f625ffa3ff779abb5f2a27c04ba57220107c278c7fe04a082b1b3f829390"
+        }
+      ]
+    },
+    {
+      "pr": 1473,
+      "head": "cff189b3438623feaebdf1a874fafdd03080acb1",
+      "contribution_base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "production_files": [
+        "lingshu/nn/hex_cnn.py"
+      ],
+      "changed_functions": [
+        {
+          "file": "lingshu/nn/hex_cnn.py",
+          "function": "HexGrid.pixel_to_cell",
+          "kind": "modified",
+          "pr_ast_sha256": "8df61423430b92443b6019bea0cd46185bef11d7ac2800c3abab8a78c16aaf05",
+          "pr_text_sha256": "89675e9ef35196c245532057751376c1c49f492959f1e691121c36f85647344d"
+        }
+      ]
+    },
+    {
+      "pr": 1474,
+      "head": "fb6c9cabc939a6defcc44ef661b3048d47155d87",
+      "contribution_base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "production_files": [
+        "lingshu/core/core.py"
+      ],
+      "changed_functions": [
+        {
+          "file": "lingshu/core/core.py",
+          "function": "LayeredStore.search_skills",
+          "kind": "modified",
+          "pr_ast_sha256": "c9b2d43671632c2d4930c160e315e5846ca3712eec966507c66c27cfc2b1d985",
+          "pr_text_sha256": "0c753b9b949b2b7b08437ec692d624812aa396ed8efea9d697064d87adb48171"
+        }
+      ]
+    },
+    {
+      "pr": 1475,
+      "head": "e0771a810b8846676f3545542b2e70d5e0011467",
+      "contribution_base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "production_files": [
+        "bridges/blender/wm_bridge/factory/anim/_det/gate_physics.py",
+        "bridges/blender/wm_bridge/factory/anim/eval.py",
+        "lingshu/world/physics.py"
+      ],
+      "changed_functions": [
+        {
+          "file": "bridges/blender/wm_bridge/factory/anim/_det/gate_physics.py",
+          "function": "main",
+          "kind": "modified",
+          "pr_ast_sha256": "0d30fdfb4abf0bb448aac36951fe38a861e8a5db6bc765132b0bdba0a9c0aef6",
+          "pr_text_sha256": "b40dc504d4b13bd78dd1cfe2941f671b1f6f9d126183c56f235186c848c16c2e"
+        },
+        {
+          "file": "bridges/blender/wm_bridge/factory/anim/_det/gate_physics.py",
+          "function": "rk4_pendulum",
+          "kind": "modified",
+          "pr_ast_sha256": "f4fb3b867dd4a31bcc2cd40f371ab0d9e3d529b96eea04e824670b67fbe1b358",
+          "pr_text_sha256": "3364e7e6bd74399cda75b44e248c31ae66f9065f34bfb8f628aab0f84d2a3077"
+        },
+        {
+          "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
+          "function": "_jacobi_amplitude",
+          "kind": "added",
+          "pr_ast_sha256": "ee06d9a6453c8a6ca6b85ca2bcb98555956c4a3f6cf746518d1b109e981014b0",
+          "pr_text_sha256": "e57f434e581b81ad1f01bc28d4de6fdf46804a88f186207bb2f4e3b1f688b4df"
+        },
+        {
+          "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
+          "function": "_jacobi_cn",
+          "kind": "modified",
+          "pr_ast_sha256": "eb0ee657639c4623b3445aea37da29911ff8a12bb7e368183d7409ae5e5523b3",
+          "pr_text_sha256": "feb13dfc7334c9c85d3f4bdc42a72f025a51296d5c847f4c7e63b0f523825f50"
+        },
+        {
+          "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
+          "function": "pendulum_exact_angle",
+          "kind": "modified",
+          "pr_ast_sha256": "de2486be1b843993310fc7873587d23c309f1103ef3af81c4d0b922f14ca5b61",
+          "pr_text_sha256": "3d08f1cfe6d18ccd2a7560a580e83cea40ca8a63d7b89c0e48c4b9f25d1a7b2a"
+        },
+        {
+          "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
+          "function": "pendulum_truth",
+          "kind": "modified",
+          "pr_ast_sha256": "558a6233e559bbbb023f18632e6309e8ef79c99ce3819f7eb358f0ca81db4295",
+          "pr_text_sha256": "eda191c1fb89fbbc34b8930e3a72bc3378538424f32636105804368dd0c60b53"
+        },
+        {
+          "file": "lingshu/world/physics.py",
+          "function": "_jacobi_amplitude",
+          "kind": "added",
+          "pr_ast_sha256": "59578229705e0256bf76a5fb3ea8f8eebe2d2e74572fedc7b743757a3a10accd",
+          "pr_text_sha256": "592d6287402cc12c355625813e1bddbc768e9d5dfa769c6e1b79472f99321d63"
+        },
+        {
+          "file": "lingshu/world/physics.py",
+          "function": "jacobi_cn",
+          "kind": "modified",
+          "pr_ast_sha256": "7b9d35330b361afbe393750ad797f3b43fb7fc4ee88f051c6f9d578d61bc0fb2",
+          "pr_text_sha256": "d4149588fd5c53bed88a037e902fea1276c353fa45b578578d7d546edafff0ec"
+        },
+        {
+          "file": "lingshu/world/physics.py",
+          "function": "pendulum_exact_angle",
+          "kind": "modified",
+          "pr_ast_sha256": "5466e132d1a9e3a97486e06db097d1f25b5d89727f1d15b3968615e879ef6c39",
+          "pr_text_sha256": "c30af1b0777301a48a006d2143e0db0ee3393f24fb66bb59cf90199e79d3f8cb"
+        },
+        {
+          "file": "lingshu/world/physics.py",
+          "function": "pendulum_truth",
+          "kind": "modified",
+          "pr_ast_sha256": "057321ea4dcb3cacf8e42978c3b7c306e614251ce288aadba555bb43d957ac3e",
+          "pr_text_sha256": "e77efd8794d9dee1277ac62ab9e0193c50374bdcc9376a4e0c26ee92abd06bf3"
+        }
+      ]
+    },
+    {
+      "pr": 1476,
+      "head": "1ab5cc7f295ed5748b50c7ffde26cf2a34663204",
+      "contribution_base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "production_files": [
+        "bridges/blender/wm_bridge/factory/anim/eval.py"
+      ],
+      "changed_functions": [
+        {
+          "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
+          "function": "eval_at",
+          "kind": "modified",
+          "pr_ast_sha256": "b2b26131da73f9544c4192ee6abbd035d86b03b38b46f6357a1aa21bb0357e9f",
+          "pr_text_sha256": "0adda132bdd690c851f47c369fd99794b68bff1d2838dcefa2cd563560c8e844"
+        },
+        {
+          "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
+          "function": "normalize",
+          "kind": "modified",
+          "pr_ast_sha256": "6bb5b9f46d50db29004bd007966dd865de90747eeec915debc307cfa176a3ef3",
+          "pr_text_sha256": "37b84882ad4193d81112df089598a2eaf85fa422f74a4c3e69d4cde3484353f2"
+        }
+      ]
+    },
+    {
+      "pr": 1477,
+      "head": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+      "contribution_base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "production_files": [
+        "lingshu/world/physics.py"
+      ],
+      "changed_functions": [
+        {
+          "file": "lingshu/world/physics.py",
+          "function": "fit_circular",
+          "kind": "modified",
+          "pr_ast_sha256": "723f2fc5fd490119e59f356715e50a875dadb7b8cc76bd85032fa37d385ba0a7",
+          "pr_text_sha256": "925286980e65cf96b98202af9682bd18dec6c3f9e1a5f498e01b1495bf612a12"
+        }
+      ]
+    },
+    {
+      "pr": 1478,
+      "head": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+      "contribution_base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "production_files": [
+        "lingshu/core/core.py"
+      ],
+      "changed_functions": [
+        {
+          "file": "lingshu/core/core.py",
+          "function": "LayeredStore._decay_value",
+          "kind": "modified",
+          "pr_ast_sha256": "22f773129a19e20a6ccb15055f3638b306bee51880e0e6b25fdf732c0064affa",
+          "pr_text_sha256": "bc7e2e7a571221c93894155b3910dd00796b4869774d3e494cd9bc373998cbe3"
+        },
+        {
+          "file": "lingshu/core/core.py",
+          "function": "LayeredStore._row_decay_dt",
+          "kind": "added",
+          "pr_ast_sha256": "16549959209f5f59edd6a6dd98965f07eeaf78e6389a2774d90b1a7f11900a57",
+          "pr_text_sha256": "b989fd9bc6dfd096cd8d16f093dcd1048615b406e09d0e07f79a52e30b6e4ac8"
+        },
+        {
+          "file": "lingshu/core/core.py",
+          "function": "LayeredStore.decay_cycle",
+          "kind": "modified",
+          "pr_ast_sha256": "2c2bbc4b6e31867c0c02e39ff2a8b7eeaf4d88ff9cbf6f1e5b764e13a5c05ebd",
+          "pr_text_sha256": "a5ac710d82f64e9072868275c490bc16bc93124774de3fd38dfb3905f7c750eb"
+        }
+      ]
+    },
+    {
+      "pr": 1479,
+      "head": "13952c82874fb9ee19a4f1b660e3144134367a53",
+      "contribution_base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "production_files": [
+        "lingshu/world/scene_simulator.py"
+      ],
+      "changed_functions": [
+        {
+          "file": "lingshu/world/scene_simulator.py",
+          "function": "SceneSimulator._resolve_collisions",
+          "kind": "modified",
+          "pr_ast_sha256": "495c94fe1b41df6ac0e9b06cf10e53f4df7afaec3db9c3c7b61c2e4ed44e6436",
+          "pr_text_sha256": "87ebdbdf20a1bbc1c546cb81362c9b7340e18223dc4feea0cc1ca2c802fe8f2c"
+        }
+      ]
+    },
+    {
+      "pr": 1480,
+      "head": "a357dbbe96905848fd81b7249814576fb2743674",
+      "contribution_base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "production_files": [
+        "lingshu/nn/hex_text.py"
+      ],
+      "changed_functions": [
+        {
+          "file": "lingshu/nn/hex_text.py",
+          "function": "spatial_detect",
+          "kind": "modified",
+          "pr_ast_sha256": "ecc7079067174dc4f4fbde7b675dafc4233f06f1aa8de6b4e2aa44b48c7b5a96",
+          "pr_text_sha256": "7e727df2d0e9fc17620ecda012445b42d06d78dcdb843134dae5a0b18f4d5d83"
+        }
+      ]
+    }
+  ],
+  "changed_function_ownership": [
+    {
+      "file": "bridges/blender/wm_bridge/factory/anim/_det/gate_physics.py",
+      "function": "main",
+      "owners": [
+        1475
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "bridges/blender/wm_bridge/factory/anim/_det/gate_physics.py",
+      "function": "rk4_pendulum",
+      "owners": [
+        1475
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
+      "function": "_jacobi_amplitude",
+      "owners": [
+        1475
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
+      "function": "_jacobi_cn",
+      "owners": [
+        1475
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
+      "function": "eval_at",
+      "owners": [
+        1476
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
+      "function": "normalize",
+      "owners": [
+        1476
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
+      "function": "pendulum_exact_angle",
+      "owners": [
+        1475
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
+      "function": "pendulum_truth",
+      "owners": [
+        1475
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/core/core.py",
+      "function": "LayeredStore._decay_value",
+      "owners": [
+        1478
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/core/core.py",
+      "function": "LayeredStore._row_decay_dt",
+      "owners": [
+        1478
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/core/core.py",
+      "function": "LayeredStore.decay_cycle",
+      "owners": [
+        1478
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/core/core.py",
+      "function": "LayeredStore.search_skills",
+      "owners": [
+        1474
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/core/longterm_gate.py",
+      "function": "LongTermMemoryGate.__init__",
+      "owners": [
+        1472
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/core/longterm_gate.py",
+      "function": "LongTermMemoryGate._known_snapshot",
+      "owners": [
+        1472
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/nn/hex_cnn.py",
+      "function": "HexGrid.pixel_to_cell",
+      "owners": [
+        1473
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/nn/hex_text.py",
+      "function": "spatial_detect",
+      "owners": [
+        1480
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/vision/lineart.py",
+      "function": "_luma",
+      "owners": [
+        1470
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/vision/lineart.py",
+      "function": "darkline",
+      "owners": [
+        1470
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/world/motion_groups.py",
+      "function": "_group_id",
+      "owners": [
+        1469
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/world/physics.py",
+      "function": "_box_frame",
+      "owners": [
+        1471
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/world/physics.py",
+      "function": "_jacobi_amplitude",
+      "owners": [
+        1475
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/world/physics.py",
+      "function": "_sat_axes",
+      "owners": [
+        1471
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/world/physics.py",
+      "function": "fit_circular",
+      "owners": [
+        1477
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/world/physics.py",
+      "function": "jacobi_cn",
+      "owners": [
+        1475
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/world/physics.py",
+      "function": "obb_of",
+      "owners": [
+        1471
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/world/physics.py",
+      "function": "obb_overlap",
+      "owners": [
+        1471
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/world/physics.py",
+      "function": "pendulum_exact_angle",
+      "owners": [
+        1475
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/world/physics.py",
+      "function": "pendulum_truth",
+      "owners": [
+        1475
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    },
+    {
+      "file": "lingshu/world/scene_simulator.py",
+      "function": "SceneSimulator._resolve_collisions",
+      "owners": [
+        1479
+      ],
+      "single_owner_ast_exact": true,
+      "single_owner_text_exact": true,
+      "merged_source_union_exact": true
+    }
+  ],
+  "manifest_records": [
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/anchor_verify.py",
+      "recorded_sha256": "e1496eaf87968f05",
+      "actual_lf_sha256": "e1496eaf87968f05bd3455b392d243436fa8d49981cc132dd3c28d4d7541e30d",
+      "lf_bytes": 18064,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/anchored_verification.py",
+      "recorded_sha256": "e50f42f82b94b919",
+      "actual_lf_sha256": "e50f42f82b94b919ecc4621e0d78d2e3c928d4c23c346a59198a6d52997cf65c",
+      "lf_bytes": 7255,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/channel_credibility.py",
+      "recorded_sha256": "318ac1a1133d59c9",
+      "actual_lf_sha256": "318ac1a1133d59c9c92c05487bb19078ca9affc03974dd35ecb32475e9f6ed84",
+      "lf_bytes": 19197,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/confirmation.py",
+      "recorded_sha256": "2741c1011064d489",
+      "actual_lf_sha256": "2741c1011064d489f9f5ef14f6739e043e98d0df77fdccc8c38b3c91026dc636",
+      "lf_bytes": 9255,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/curiosity_explorer.py",
+      "recorded_sha256": "75b675c57a21868e",
+      "actual_lf_sha256": "75b675c57a21868e7255ba4f2b5164bd546b77a9c568cf2ed016fda81259d108",
+      "lf_bytes": 24435,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/gap_dual.py",
+      "recorded_sha256": "8f899b2d8de21855",
+      "actual_lf_sha256": "8f899b2d8de21855259f5760b633ad65d8d829928ebcea6601ee7c57c30882f2",
+      "lf_bytes": 12241,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/motion_groups.py",
+      "recorded_sha256": "261f48459c03bdd2",
+      "actual_lf_sha256": "261f48459c03bdd297d923581ed01efed12d6293aaaffe3319fd321772eacaeb",
+      "lf_bytes": 19124,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/multiview.py",
+      "recorded_sha256": "5b43bc061a7e4da0",
+      "actual_lf_sha256": "5b43bc061a7e4da0233036c1d3211c3f203b7686234a8ac017af5e35159ec993",
+      "lf_bytes": 12755,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/prediction.py",
+      "recorded_sha256": "75bc1ddc925535c9",
+      "actual_lf_sha256": "75bc1ddc925535c9fec7087570d6dffb2c6ac8a8c762a9970d6fd8a3f9b7d66c",
+      "lf_bytes": 33395,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/scene_model.py",
+      "recorded_sha256": "2852357120ff7054",
+      "actual_lf_sha256": "2852357120ff70549e4a26f733433781a34e9d6f8fdfc4c24e9ae8f4e21e048c",
+      "lf_bytes": 34416,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/scene_simulator.py",
+      "recorded_sha256": "f1f759ec3cff06a2",
+      "actual_lf_sha256": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "lf_bytes": 78363,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/semantic_anchor_graph.py",
+      "recorded_sha256": "a7ef66d6b57d375e",
+      "actual_lf_sha256": "a7ef66d6b57d375eba63cc8026d9f30f7c793914856b04565d7fef685d6a4fba",
+      "lf_bytes": 16633,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/seven_layer_loop.py",
+      "recorded_sha256": "ee07f9ddb46d301b",
+      "actual_lf_sha256": "ee07f9ddb46d301bb575abbfead2af0d81c06bca325726737d4964187b2b2f1a",
+      "lf_bytes": 56530,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/shapes.py",
+      "recorded_sha256": "ae6b51116e4d08f8",
+      "actual_lf_sha256": "ae6b51116e4d08f80e6c4ccf310a7c3f6a413bcb331c14c63ea64ecfa84ea98f",
+      "lf_bytes": 27705,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/silhouette3d.py",
+      "recorded_sha256": "ab76906e5fcaf8f1",
+      "actual_lf_sha256": "ab76906e5fcaf8f1ad41f4ed24cb1c4c5f9b4e9e2990a6f1df61f6bfa0051891",
+      "lf_bytes": 71093,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/skeleton3d.py",
+      "recorded_sha256": "c52d984697eaa106",
+      "actual_lf_sha256": "c52d984697eaa1060df92592a02c42d9ac9969ed3010e24bb48a766794cb3e69",
+      "lf_bytes": 35423,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/spacetime_consistency.py",
+      "recorded_sha256": "cd46c8c9877bfa40",
+      "actual_lf_sha256": "cd46c8c9877bfa4017b465988d057fd3c43a40e7e3dd237ffb9bc5e882c4518f",
+      "lf_bytes": 33634,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/stable_lease.py",
+      "recorded_sha256": "bb07e562020feb74",
+      "actual_lf_sha256": "bb07e562020feb74bd800fe235b915639f4e07c0b16d4ba6ad748a333ff4755c",
+      "lf_bytes": 21706,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/time_core.py",
+      "recorded_sha256": "73e2cf1eb27d81d7",
+      "actual_lf_sha256": "73e2cf1eb27d81d7ee7f747d5e3f5600b63aac7f97b1239e45417f77f709a926",
+      "lf_bytes": 4957,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/voxel_world.py",
+      "recorded_sha256": "c8c0299e1a88c0b0",
+      "actual_lf_sha256": "c8c0299e1a88c0b08704fc5de62f9539e97f3f449647865ced3a596c8603deb7",
+      "lf_bytes": 13355,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/vprim.py",
+      "recorded_sha256": "649978c9e9b53aff",
+      "actual_lf_sha256": "649978c9e9b53aff2a2dd63c9a5b970921f0e0e6b69a13e8da5df781c58c0b22",
+      "lf_bytes": 17952,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/wm_simloop.py",
+      "recorded_sha256": "bea92f8529c58180",
+      "actual_lf_sha256": "bea92f8529c5818090bc5f327a046015d724ae5723925e1ff76fe3be9c3df72a",
+      "lf_bytes": 60546,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/world3d.py",
+      "recorded_sha256": "5d62ca7ad225f744",
+      "actual_lf_sha256": "5d62ca7ad225f74489c3ffdf7f35c0e5ef22f8115547953da27961699062be1b",
+      "lf_bytes": 88280,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/world_learner.py",
+      "recorded_sha256": "d5b87d647bff8500",
+      "actual_lf_sha256": "d5b87d647bff8500af2717dde04390d516b2bed4b4cd4cb3972ece8fccfed3c1",
+      "lf_bytes": 31860,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/world_model.py",
+      "recorded_sha256": "f9a119f4d8de7ced",
+      "actual_lf_sha256": "f9a119f4d8de7ced6b996d947e8a84bd6c7e1140049e34f8d080f035d3b34076",
+      "lf_bytes": 143602,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/process_ops.py",
+      "recorded_sha256": "78f3e5d67545c9a6",
+      "actual_lf_sha256": "78f3e5d67545c9a60d0aac31751d254ec1defa54ad51bdb3a4f4dc28af4e7c43",
+      "lf_bytes": 27131,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/world/world_process.py",
+      "recorded_sha256": "c88d225d4a49521f",
+      "actual_lf_sha256": "c88d225d4a49521f084484af5e85077d280187df1722fedd1c74bf26392d990d",
+      "lf_bytes": 57108,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/core/activation.py",
+      "recorded_sha256": "de97f1af3805020b",
+      "actual_lf_sha256": "de97f1af3805020b0c6fabc52f26605653dc37aad8daf735d7e4ba87b6c441d5",
+      "lf_bytes": 42913,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/core/condition_normalize.py",
+      "recorded_sha256": "cdfcb6d6a13bfe2b",
+      "actual_lf_sha256": "cdfcb6d6a13bfe2bb7b26d7d11463933fcdc51634f4b2bacc32ec9a2d659ae55",
+      "lf_bytes": 13414,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/core/core.py",
+      "recorded_sha256": "4ce414e49f0165f9",
+      "actual_lf_sha256": "4ce414e49f0165f9d03b5a834b1d5dbaac354251cc9aa33b44eaf11cbf0a21c2",
+      "lf_bytes": 1035877,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/core/longterm_gate.py",
+      "recorded_sha256": "88d7df98aeace5d7",
+      "actual_lf_sha256": "88d7df98aeace5d78e64de39abaecd035baa39f3b4990541928ed646ee6f2a3b",
+      "lf_bytes": 58190,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/core/provenance.py",
+      "recorded_sha256": "dbe8c989ba11e489",
+      "actual_lf_sha256": "dbe8c989ba11e489af5c5925bea97df94c61a2e4293985fff40ae1b02d4fd38e",
+      "lf_bytes": 22521,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/core/time_core.py",
+      "recorded_sha256": "73e2cf1eb27d81d7",
+      "actual_lf_sha256": "73e2cf1eb27d81d7ee7f747d5e3f5600b63aac7f97b1239e45417f77f709a926",
+      "lf_bytes": 4957,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/core/verdict.py",
+      "recorded_sha256": "50ef0a6b6d349648",
+      "actual_lf_sha256": "50ef0a6b6d3496486dae8e69233e65d4f9c0cf9660f4a65602e36f30055b0ba6",
+      "lf_bytes": 8606,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/nn/hex_cnn.py",
+      "recorded_sha256": "e1b21e3b7e74cbdd",
+      "actual_lf_sha256": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081",
+      "lf_bytes": 32925,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/nn/hex_composite.py",
+      "recorded_sha256": "5b0bd22884d11150",
+      "actual_lf_sha256": "5b0bd22884d11150f44432651bea1374d8fa975b8b673ac85707343ef8163b44",
+      "lf_bytes": 22658,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/nn/hex_gen.py",
+      "recorded_sha256": "f5bc3b8a13facd94",
+      "actual_lf_sha256": "f5bc3b8a13facd944647858ac395d06ca545c633cd0b6e6104da90bace0f1ebd",
+      "lf_bytes": 45113,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/nn/hex_hier.py",
+      "recorded_sha256": "e6988f75e8ddaa1f",
+      "actual_lf_sha256": "e6988f75e8ddaa1fe03cb90c3c04eacc877374a5cac4991dc65666b581380a36",
+      "lf_bytes": 24279,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/nn/hex_nn_preview.py",
+      "recorded_sha256": "d9fa7e989f5068cf",
+      "actual_lf_sha256": "d9fa7e989f5068cfef2e4f80eaa8e146ad2838642c899f8693c5fb3050c86808",
+      "lf_bytes": 3199,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/nn/hex_ortho.py",
+      "recorded_sha256": "07976d3902f8bba3",
+      "actual_lf_sha256": "07976d3902f8bba3c1e02bff8c3c966c2fa6ae85e0be25510b6c6298314201b3",
+      "lf_bytes": 15279,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/nn/hex_query.py",
+      "recorded_sha256": "073cddf4d56284ca",
+      "actual_lf_sha256": "073cddf4d56284ca4eafe6090347b95979543d1fcd60479197f9b7ef438c1a9f",
+      "lf_bytes": 31026,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/nn/hex_recon.py",
+      "recorded_sha256": "5f42c0e0348a3227",
+      "actual_lf_sha256": "5f42c0e0348a322785a5556f93cb53ee6f0231c48078c3d26e11e12f52f0fd4a",
+      "lf_bytes": 8617,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/nn/hex_search.py",
+      "recorded_sha256": "e7c71ec837ae6747",
+      "actual_lf_sha256": "e7c71ec837ae67473933f99138ebd9d88dde685ba0223a007687d3abc6403af1",
+      "lf_bytes": 15323,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/nn/hex_text.py",
+      "recorded_sha256": "f6bc776209577f4f",
+      "actual_lf_sha256": "f6bc776209577f4f506cf1663a90ced937c3f0d55ab2fd8f9e58587442fdb907",
+      "lf_bytes": 15543,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/nn/hex_train.py",
+      "recorded_sha256": "1a443c27d8423b8e",
+      "actual_lf_sha256": "1a443c27d8423b8e1a317ddd6d1ce1e6923275d6c0f2bc33289f48b50379a7cc",
+      "lf_bytes": 34845,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/nn/hex_unit.py",
+      "recorded_sha256": "3b16d8252a4c5969",
+      "actual_lf_sha256": "3b16d8252a4c5969b2adc9a1b51130021aaba6242bd60eb31780df6fb38147f8",
+      "lf_bytes": 9584,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/nn/rust_bridge.py",
+      "recorded_sha256": "84a41bc1b951b6f6",
+      "actual_lf_sha256": "84a41bc1b951b6f6069dff9ad9ec1fae128e5688814bd7c052dc1c3330581e3c",
+      "lf_bytes": 24206,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/nn/stcnn.py",
+      "recorded_sha256": "406538be87fab512",
+      "actual_lf_sha256": "406538be87fab5126421f2d9ddd984fe598ff686e2510c738ffafc798cd25509",
+      "lf_bytes": 25323,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/gen/hex_composite.py",
+      "recorded_sha256": "5b0bd22884d11150",
+      "actual_lf_sha256": "5b0bd22884d11150f44432651bea1374d8fa975b8b673ac85707343ef8163b44",
+      "lf_bytes": 22658,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/gen/hexgen_align_probe.py",
+      "recorded_sha256": "4dced4c36731b7bb",
+      "actual_lf_sha256": "4dced4c36731b7bbe03fa3f95722878c7e741c0fce3cc1f8ebd0873479599107",
+      "lf_bytes": 16614,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/gen/hexgen_c1_real.py",
+      "recorded_sha256": "fff30be688399856",
+      "actual_lf_sha256": "fff30be6883998567a7aa69ec1724d0b1bfd86ad9b248d830249c712bdd4fa33",
+      "lf_bytes": 77586,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/gen/hexgen_multi_seed.py",
+      "recorded_sha256": "d02a60418da1385e",
+      "actual_lf_sha256": "d02a60418da1385e820efbd5ea295b8e5b1e48ebb667f6663e82d7923fddb18c",
+      "lf_bytes": 24152,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/gen/hexgen_pack_certify.py",
+      "recorded_sha256": "87218d9932fa58e8",
+      "actual_lf_sha256": "87218d9932fa58e89331cb1ea71ca0811cf8cda0f6b3028a155d50df6eeeb07a",
+      "lf_bytes": 16316,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/gen/hexgen_self_source.py",
+      "recorded_sha256": "2182e91584570d68",
+      "actual_lf_sha256": "2182e91584570d683935afe198418d3d5dd9bca68fbbbc25eb6b9b456b49c562",
+      "lf_bytes": 78095,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "source": "lingshu/gen/hexgen_subject_split.py",
+      "recorded_sha256": "13de1215b1c71358",
+      "actual_lf_sha256": "13de1215b1c713583ca5a194708448248f57ecc8eec05dc8fcb2e19111eb6be7",
+      "lf_bytes": 39778,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.2/_export_manifest.json",
+      "source": "lingshu/nn/assets/kernels_img0.json",
+      "recorded_sha256": "dc8d9f9013d4c71c47e6fc93a6e649b69f383d04a3a3edb92e91558e1db57de6",
+      "actual_lf_sha256": "dc8d9f9013d4c71c47e6fc93a6e649b69f383d04a3a3edb92e91558e1db57de6",
+      "lf_bytes": 779,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.2/_export_manifest.json",
+      "source": "tests/test_hex_cnn.py",
+      "recorded_sha256": "2f38c413c1d1c1e6",
+      "actual_lf_sha256": "2f38c413c1d1c1e687e6bd84f1d348ce3769e76639fcbaa326d0d79ce9961d51",
+      "lf_bytes": 8932,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.2/_export_manifest.json",
+      "source": "tests/test_hex_composite.py",
+      "recorded_sha256": "d47c2e08b285ac94",
+      "actual_lf_sha256": "d47c2e08b285ac94324bde291fc556749f0d7bd6debc49e4b17df3fb7bc68e3b",
+      "lf_bytes": 6591,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.2/_export_manifest.json",
+      "source": "tests/test_hex_gen.py",
+      "recorded_sha256": "fbfcbe63d0d199b6",
+      "actual_lf_sha256": "fbfcbe63d0d199b6719f43366b58d05dcf6c99d0cf710a356ab9200e6d31a624",
+      "lf_bytes": 12507,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.2/_export_manifest.json",
+      "source": "tests/test_hex_hier.py",
+      "recorded_sha256": "d529489f699f2854",
+      "actual_lf_sha256": "d529489f699f2854ba7dc87e929de3aef503bc8672141508284529c9f49e5a64",
+      "lf_bytes": 7108,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.2/_export_manifest.json",
+      "source": "tests/test_hex_ortho.py",
+      "recorded_sha256": "e491ed11723bb6c4",
+      "actual_lf_sha256": "e491ed11723bb6c4ce751d42e75ed1544046564ac30de83c7e65f80fe7cd32c2",
+      "lf_bytes": 5633,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.2/_export_manifest.json",
+      "source": "tests/test_hex_search.py",
+      "recorded_sha256": "74b46d934cc5b10f",
+      "actual_lf_sha256": "74b46d934cc5b10f19f0a65faced9c1b8548a8e5f2b82b542b5d53ccb632a79b",
+      "lf_bytes": 11537,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.2/_export_manifest.json",
+      "source": "tests/test_hex_text.py",
+      "recorded_sha256": "2c7ea244e6b90629",
+      "actual_lf_sha256": "2c7ea244e6b9062972ec1cd31d3367ef480c597b98fc0abf0b451308c3f5f831",
+      "lf_bytes": 7786,
+      "ok": true
+    },
+    {
+      "manifest": "docs/intake/body-export-v0.2/_export_manifest.json",
+      "source": "tests/test_hex_train.py",
+      "recorded_sha256": "cb94a81e3d53dfda",
+      "actual_lf_sha256": "cb94a81e3d53dfdaa24e09361c0fc6613e4282c7fd751a1536eb671bebd3f911",
+      "lf_bytes": 12602,
+      "ok": true
+    }
+  ],
+  "time_baseline": {
+    "before": [
+      {
+        "path": "lingshu/core/activation.py",
+        "line": 355,
+        "rule": "R3",
+        "code": "d *= cond_match(cur_cs.get(src), cur_cs.get(dst))",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 379,
+        "rule": "R1",
+        "code": "e = [math.exp(-k * x) for x in tau]",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 407,
+        "rule": "R1",
+        "code": "e = [math.exp(-k * x) for x in tau]",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 524,
+        "rule": "R3",
+        "code": "p = vadd(vadd(model[\"p0\"], vscale(model[\"v0\"], tau)), vscale(a, 0.5 * tau * tau))",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 528,
+        "rule": "R3",
+        "code": "p = vadd(vadd(model[\"p0\"], vscale(model[\"v0\"], tau)), vscale(a, 0.5 * tau * tau))",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 532,
+        "rule": "R1",
+        "code": "e = math.exp(-kk * tau)",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 532,
+        "rule": "R3",
+        "code": "e = math.exp(-kk * tau)",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 539,
+        "rule": "R3",
+        "code": "th = model[\"theta0\"] + model[\"omega\"] * tau",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 542,
+        "rule": "R3",
+        "code": "vert = model[\"center\"][up] + model[\"v_up\"] * tau",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 559,
+        "rule": "R3",
+        "code": "u = u0 + g * tau / vt",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 568,
+        "rule": "R3",
+        "code": "p[i] = float(model[\"p0\"][i]) + float(drift[i]) * tau",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 599,
+        "rule": "R3",
+        "code": "s = v_s0 * tau + 0.5 * a_raw * tau * tau",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 600,
+        "rule": "R3",
+        "code": "v_s = v_s0 + a_raw * tau",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 602,
+        "rule": "R3",
+        "code": "p = tuple(float(model[\"p0\"][i]) + u_dir[i] * s + float(drift[i]) * tau for i in range(3))",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 1011,
+        "rule": "R1",
+        "code": "return a + math.log1p(math.exp(-2.0 * a)) - math.log(2.0)",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 2554,
+        "rule": "R1",
+        "code": "e = math.exp(-z * w * tt)",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 2557,
+        "rule": "R1",
+        "code": "return (1.0 + w * tt) * math.exp(-w * tt)",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 2559,
+        "rule": "R1",
+        "code": "e = math.exp(-z * w * tt)",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 2575,
+        "rule": "R1",
+        "code": "out[\"amplitude_ratio_per_period\"] = math.exp(-2.0 * math.pi * z / math.sqrt(1.0 - z * z))",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 2674,
+        "rule": "R1",
+        "code": "out[\"amplitude_ratio_per_period\"] = math.exp(",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 2716,
+        "rule": "R3",
+        "code": "return (tuple(p0[i] + v0[i] * tau + 0.5 * g[i] * tau * tau for i in range(3)),",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/shade_paint.py",
+        "line": 215,
+        "rule": "R1",
+        "code": "return SHOULDER + span * (1.0 - math.exp(-(v - SHOULDER) / span))",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/stable_lease.py",
+        "line": 302,
+        "rule": "R1",
+        "code": "decayed_conf = lease[\"confidence\"] * math.exp(-self.gamma * age)",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      }
+    ],
+    "after": [
+      {
+        "path": "lingshu/core/activation.py",
+        "line": 355,
+        "rule": "R3",
+        "code": "d *= cond_match(cur_cs.get(src), cur_cs.get(dst))",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 379,
+        "rule": "R1",
+        "code": "e = [math.exp(-k * x) for x in tau]",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 407,
+        "rule": "R1",
+        "code": "e = [math.exp(-k * x) for x in tau]",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 528,
+        "rule": "R3",
+        "code": "p = vadd(vadd(model[\"p0\"], vscale(model[\"v0\"], tau)), vscale(a, 0.5 * tau * tau))",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 532,
+        "rule": "R3",
+        "code": "p = vadd(vadd(model[\"p0\"], vscale(model[\"v0\"], tau)), vscale(a, 0.5 * tau * tau))",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 536,
+        "rule": "R1",
+        "code": "e = math.exp(-kk * tau)",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 536,
+        "rule": "R3",
+        "code": "e = math.exp(-kk * tau)",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 543,
+        "rule": "R3",
+        "code": "th = model[\"theta0\"] + model[\"omega\"] * tau",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 546,
+        "rule": "R3",
+        "code": "vert = model[\"center\"][up] + model[\"v_up\"] * tau",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 563,
+        "rule": "R3",
+        "code": "u = u0 + g * tau / vt",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 572,
+        "rule": "R3",
+        "code": "p[i] = float(model[\"p0\"][i]) + float(drift[i]) * tau",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 603,
+        "rule": "R3",
+        "code": "s = v_s0 * tau + 0.5 * a_raw * tau * tau",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 604,
+        "rule": "R3",
+        "code": "v_s = v_s0 + a_raw * tau",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 606,
+        "rule": "R3",
+        "code": "p = tuple(float(model[\"p0\"][i]) + u_dir[i] * s + float(drift[i]) * tau for i in range(3))",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 1015,
+        "rule": "R1",
+        "code": "return a + math.log1p(math.exp(-2.0 * a)) - math.log(2.0)",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 2565,
+        "rule": "R1",
+        "code": "e = math.exp(-z * w * tt)",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 2568,
+        "rule": "R1",
+        "code": "return (1.0 + w * tt) * math.exp(-w * tt)",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 2570,
+        "rule": "R1",
+        "code": "e = math.exp(-z * w * tt)",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 2586,
+        "rule": "R1",
+        "code": "out[\"amplitude_ratio_per_period\"] = math.exp(-2.0 * math.pi * z / math.sqrt(1.0 - z * z))",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 2708,
+        "rule": "R1",
+        "code": "out[\"amplitude_ratio_per_period\"] = math.exp(",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/physics.py",
+        "line": 2750,
+        "rule": "R3",
+        "code": "return (tuple(p0[i] + v0[i] * tau + 0.5 * g[i] * tau * tau for i in range(3)),",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/shade_paint.py",
+        "line": 215,
+        "rule": "R1",
+        "code": "return SHOULDER + span * (1.0 - math.exp(-(v - SHOULDER) / span))",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      },
+      {
+        "path": "lingshu/world/stable_lease.py",
+        "line": 302,
+        "rule": "R1",
+        "code": "decayed_conf = lease[\"confidence\"] * math.exp(-self.gamma * age)",
+        "comment": "# 既有：由 --update-baseline 机械登记，性质待人工复核"
+      }
+    ],
+    "count": 23,
+    "same_source_statement_multiset": true,
+    "historical_comments_preserved": true
+  },
+  "status_before": "",
+  "status_after": "",
+  "verdict": "PASS"
+}

@@ -1,0 +1,27 @@
+{
+  "probes": [
+    {
+      "probe": "same_engine_fresh_decay_and_old_skill_limit",
+      "actual_importance": 0.4998316724462135,
+      "oracle_importance": 0.4998316724462135,
+      "negative_skill_hits": 5
+    },
+    {
+      "probe": "epoch_circular_fit",
+      "max_coordinate_error": 2.842170943040401e-14,
+      "residual_rms": 8.266171889940315e-15
+    },
+    {
+      "probe": "pendulum_release_independent_rk4",
+      "actual_angle": 0.9495307676215753,
+      "rk4_angle": 0.9495307676215722,
+      "absolute_error": 3.1086244689504383e-15
+    },
+    {
+      "probe": "skew_sat_independent_vertex_projection",
+      "separation_gap": 0.03214809930113154,
+      "overlap": false
+    }
+  ],
+  "verdict": "PASS"
+}

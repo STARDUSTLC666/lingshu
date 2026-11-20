@@ -1,0 +1,33 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+______ test_fully_overlapping_static_boxes_keep_existing_contact_velocity ______
+tests/test_scene_collision_freeflight_velocity.py:209: in test_fully_overlapping_static_boxes_keep_existing_contact_velocity
+    assert e.velocity == (0., 0., 0.), "SCENE_STATIC_CONTACT_VELOCITY_CHANGED"
+E   AssertionError: SCENE_STATIC_CONTACT_VELOCITY_CHANGED
+E   assert (0.0, -0.0625, 0.0) == (0.0, 0.0, 0.0)
+E     
+E     At index 1 diff: -0.0625 != 0.0
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       (
+E           0.0,
+E     -     0.0,
+E     +     -0.0625,
+E     ?     +   +++
+E           0.0,
+E       )
+=========================== short test summary info ============================
+FAILED tests/test_scene_collision_freeflight_velocity.py::test_fully_overlapping_static_boxes_keep_existing_contact_velocity - AssertionError: SCENE_STATIC_CONTACT_VELOCITY_CHANGED
+assert (0.0, -0.0625, 0.0) == (0.0, 0.0, 0.0)
+  
+  At index 1 diff: -0.0625 != 0.0
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    (
+        0.0,
+  -     0.0,
+  +     -0.0625,
+  ?     +   +++
+        0.0,
+    )
+1 failed in 0.10s

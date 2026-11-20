@@ -1,0 +1,30 @@
+[workspace]:7671: ComponentDiscoveryWarning: [issue156] 组件 'entity_registry' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from entity_registry import EntityRegistry
+[workspace]:7657: ComponentDiscoveryWarning: [issue156] 组件 'semantic_space' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from semantic_space import SemanticSpaceProvider
+[workspace]:7647: ComponentDiscoveryWarning: [issue156] 组件 'attention_policy' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from attention_policy import AttentionPolicy
+[workspace]:7622: ComponentDiscoveryWarning: [issue156] 组件 'prediction_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from prediction_engine import PredictionEngine
+[workspace]:30: ComponentDiscoveryWarning: [issue156] 组件 'spacetime_memory_core' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from spacetime_memory_core import LayeredStore as _LayeredStore
+[workspace]:7597: ComponentDiscoveryWarning: [issue156] 组件 'lifecycle_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from lifecycle_engine import LifecycleEngine
+[workspace]:7565: ComponentDiscoveryWarning: [issue156] 组件 'flywheel_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from flywheel_engine import FlywheelEngine
+[workspace]:7575: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from self_cognition_engine import SelfCognitionEngine
+[workspace]:7554: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from body import build_default_registry
+== A 组：写序与置信 ==
+  PASS A01 前提：M5 自动建 OPPOSITE 边（confidence 0.3、verified 0）
+  PASS A02 ★行：TRUE 先写、FALSE 后写——TRUE 仍在工作态
+  PASS A03 ★行：FALSE 先写、TRUE 后写——TRUE 仍在工作态
+  PASS A04 ★行：满额 1.0 时 TRUE 激活显著低于 0.3 边（证明缩放承重）
+  PASS A05 对照：只有 TRUE 时正常激活（抑制通路不误伤）
+== B 组：edge-list 降级 ==
+  PASS B01 ★行：edge-list 降级下两种写序 TRUE 都在（同口径）
+== E 组：源码钉子 ==
+  PASS E01 ★钉子：抑制幅度乘边置信
+  PASS E02 ★钉子：低置信边稀疏/边表两路径都双向
+通过 8 / 失败 0

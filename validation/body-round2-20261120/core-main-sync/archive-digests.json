@@ -1,0 +1,16 @@
+{
+  "archives": [
+    {
+      "source": "core-main-sync/ci/pr1478/44781318899-attempt1/all-run-logs.zip",
+      "bytes": 1382292,
+      "sha256": "d1693cc6d2c2aa4e03e26e016e65c242a7ebe8b8e23a726fe7cc58243c86ffea",
+      "policy": "complete decoded job logs published; compressed convenience copy retained privately"
+    },
+    {
+      "source": "core-main-sync/ci/pr1478/44781318941-attempt1/all-run-logs.zip",
+      "bytes": 15974,
+      "sha256": "bd355db7102f5211be34a4d4257c140a99324eb4880fa42e4079fb23f3a4f40a",
+      "policy": "complete decoded job logs published; compressed convenience copy retained privately"
+    }
+  ]
+}

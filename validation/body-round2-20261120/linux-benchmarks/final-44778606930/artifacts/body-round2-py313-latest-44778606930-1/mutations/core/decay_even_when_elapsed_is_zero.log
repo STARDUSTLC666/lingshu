@@ -1,0 +1,13 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___________ test_zero_age_and_repeated_now_do_not_decay[context-1.0] ___________
+tests/test_fresh_row_decay.py:117: in test_zero_age_and_repeated_now_do_not_decay
+    assert _value(store, kind, "new") == 0.5, "zero elapsed time changed a row"
+E   AssertionError: zero elapsed time changed a row
+E   assert None == 0.5
+E    +  where None = _value(<lingshu.core.core.LayeredStore object at 0x78c338819400>, 'context', 'new')
+=========================== short test summary info ============================
+FAILED tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[context-1.0] - AssertionError: zero elapsed time changed a row
+assert None == 0.5
+ +  where None = _value(<lingshu.core.core.LayeredStore object at 0x78c338819400>, 'context', 'new')
+1 failed in 0.16s

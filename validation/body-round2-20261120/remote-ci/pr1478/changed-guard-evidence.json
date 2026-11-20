@@ -1,0 +1,229 @@
+{
+  "pr": 1478,
+  "head": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+  "all_complete": true,
+  "all_success": true,
+  "semantic_evidence_verified": true,
+  "changed_guard_paths": [
+    "tests/test_fresh_row_decay.py"
+  ],
+  "changed_guard_outcomes": [
+    {
+      "job_id": 136379751127,
+      "name": "gate (py3.12)",
+      "outcomes": {
+        "tests/test_fresh_row_decay.py": {
+          "counts": {
+            "PASSED": 48
+          },
+          "lines": [
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[0.0-context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[0.0-knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[0.0-edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[1.0-context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[1.0-knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[1.0-edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[60.0-context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[60.0-knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[60.0-edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[3600.0-context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[3600.0-knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[3600.0-edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_old_and_new_rows_have_independent_ages_in_one_tick[context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_old_and_new_rows_have_independent_ages_in_one_tick[knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_old_and_new_rows_have_independent_ages_in_one_tick[edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_public_creation_after_downtime_survives_the_next_tick PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[context-0.02] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[context-1.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[knowledge-0.02] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[knowledge-1.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[edge-0.02] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[edge-1.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_first_clock_tick_keeps_the_existing_one_period_bootstrap[context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_first_clock_tick_keeps_the_existing_one_period_bootstrap[knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_first_clock_tick_keeps_the_existing_one_period_bootstrap[edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_no_clock_keeps_discrete_step_semantics[context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_no_clock_keeps_discrete_step_semantics[knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_no_clock_keeps_discrete_step_semantics[edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-1800604801.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-1900604800.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-None] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-invalid] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-inf] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-1800604801.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-1900604800.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-None] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-invalid] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-inf] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-1800604801.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-1900604800.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-None] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-invalid] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-inf] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_rollback_and_recovery_do_not_double_age_newborn[context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_rollback_and_recovery_do_not_double_age_newborn[knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_rollback_and_recovery_do_not_double_age_newborn[edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_failure_rolls_back_row_values_and_the_clock_cursor PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_protection_and_immutable_edge_rules_remain_in_force PASSED [ 15%]"
+          ]
+        }
+      }
+    },
+    {
+      "job_id": 136379751835,
+      "name": "gate (py3.13)",
+      "outcomes": {
+        "tests/test_fresh_row_decay.py": {
+          "counts": {
+            "PASSED": 48
+          },
+          "lines": [
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[0.0-context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[0.0-knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[0.0-edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[1.0-context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[1.0-knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[1.0-edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[60.0-context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[60.0-knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[60.0-edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[3600.0-context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[3600.0-knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[3600.0-edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_old_and_new_rows_have_independent_ages_in_one_tick[context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_old_and_new_rows_have_independent_ages_in_one_tick[knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_old_and_new_rows_have_independent_ages_in_one_tick[edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_public_creation_after_downtime_survives_the_next_tick PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[context-0.02] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[context-1.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[knowledge-0.02] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[knowledge-1.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[edge-0.02] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[edge-1.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_first_clock_tick_keeps_the_existing_one_period_bootstrap[context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_first_clock_tick_keeps_the_existing_one_period_bootstrap[knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_first_clock_tick_keeps_the_existing_one_period_bootstrap[edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_no_clock_keeps_discrete_step_semantics[context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_no_clock_keeps_discrete_step_semantics[knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_no_clock_keeps_discrete_step_semantics[edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-1800604801.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-1900604800.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-None] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-invalid] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-inf] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-1800604801.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-1900604800.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-None] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-invalid] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-inf] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-1800604801.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-1900604800.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-None] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-invalid] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-inf] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_rollback_and_recovery_do_not_double_age_newborn[context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_rollback_and_recovery_do_not_double_age_newborn[knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_rollback_and_recovery_do_not_double_age_newborn[edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_failure_rolls_back_row_values_and_the_clock_cursor PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_protection_and_immutable_edge_rules_remain_in_force PASSED [ 15%]"
+          ]
+        }
+      }
+    },
+    {
+      "job_id": 136379751853,
+      "name": "gate (py3.12 · 依赖下界)",
+      "outcomes": {
+        "tests/test_fresh_row_decay.py": {
+          "counts": {
+            "PASSED": 48
+          },
+          "lines": [
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[0.0-context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[0.0-knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[0.0-edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[1.0-context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[1.0-knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[1.0-edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[60.0-context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[60.0-knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[60.0-edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[3600.0-context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[3600.0-knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[3600.0-edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_old_and_new_rows_have_independent_ages_in_one_tick[context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_old_and_new_rows_have_independent_ages_in_one_tick[knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_old_and_new_rows_have_independent_ages_in_one_tick[edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_public_creation_after_downtime_survives_the_next_tick PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[context-0.02] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[context-1.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[knowledge-0.02] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[knowledge-1.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[edge-0.02] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_zero_age_and_repeated_now_do_not_decay[edge-1.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_first_clock_tick_keeps_the_existing_one_period_bootstrap[context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_first_clock_tick_keeps_the_existing_one_period_bootstrap[knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_first_clock_tick_keeps_the_existing_one_period_bootstrap[edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_no_clock_keeps_discrete_step_semantics[context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_no_clock_keeps_discrete_step_semantics[knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_no_clock_keeps_discrete_step_semantics[edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-1800604801.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-1900604800.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-None] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-invalid] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-inf] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-1800604801.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-1900604800.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-None] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-invalid] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[knowledge-inf] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-1800604801.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-1900604800.0] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-None] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-invalid] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_noncomparable_birth_metadata_preserves_existing_clock_semantics[edge-inf] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_rollback_and_recovery_do_not_double_age_newborn[context] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_rollback_and_recovery_do_not_double_age_newborn[knowledge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_rollback_and_recovery_do_not_double_age_newborn[edge] PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_failure_rolls_back_row_values_and_the_clock_cursor PASSED [ 15%]",
+            "tests/test_fresh_row_decay.py::test_newborn_protection_and_immutable_edge_rules_remain_in_force PASSED [ 15%]"
+          ]
+        }
+      }
+    }
+  ],
+  "runs": [
+    {
+      "id": 44762844234,
+      "name": "pr-lint",
+      "head": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+      "attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44762844234"
+    },
+    {
+      "id": 44762844376,
+      "name": "gate",
+      "head": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+      "attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44762844376"
+    }
+  ],
+  "title_jobs": [
+    {
+      "job_id": 136379585802,
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44762844234/job/136379585802",
+      "head_sha": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+      "status": "completed",
+      "conclusion": "success",
+      "running_steps": [],
+      "raw_log_sha256": "836df09787ed00e9a8c7015dd9d7b7530d62d9b3766035e2ce7eb974e66f6c7b",
+      "raw_log_bytes": 20729,
+      "failed_steps": []
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+________________ test_shifted_helix_is_anchored_at_first_sample ________________
+tests/test_circular_time_residual_guard.py:37: in test_shifted_helix_is_anchored_at_first_sample
+    assert model["center"][up] == pytest.approx(3.0, abs=1e-10), "helix center must be at t_ref"
+E   AssertionError: helix center must be at t_ref
+E   assert 23.000000000000103 == 3.0 ± 1.0e-10
+E     
+E     comparison failed
+E     Obtained: 23.000000000000103
+E     Expected: 3.0 ± 1.0e-10
+=========================== short test summary info ============================
+FAILED tests/test_circular_time_residual_guard.py::test_shifted_helix_is_anchored_at_first_sample - AssertionError: helix center must be at t_ref
+assert 23.000000000000103 == 3.0 ± 1.0e-10
+  
+  comparison failed
+  Obtained: 23.000000000000103
+  Expected: 3.0 ± 1.0e-10
+1 failed in 0.08s

@@ -1,0 +1,18 @@
+{
+  "source_sha": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+  "baseline_sha": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "checks": [
+    "core fixed oracle has zero failures; all raw timing/memory samples present",
+    "circular fixed analytic oracle 7146/7146; baseline failures retained",
+    "numeric A/B inputs and weights identical; divisible output SHA identical",
+    "world fixed analytic oracle clear; four unchanged controls match in both modes",
+    "all four fixed guards / exact baseline failures / 27 named mutants verified"
+  ],
+  "errors": [],
+  "commands": 10,
+  "named_mutations_expected": 27,
+  "all_command_exit_codes_zero": true,
+  "source_unchanged": true,
+  "ok": true,
+  "scope": "four benchmark workloads and mutation replays; complete repository/brain gate runs separately"
+}

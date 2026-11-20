@@ -1,0 +1,103 @@
+{
+  "pr": 1477,
+  "head": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+  "all_complete": true,
+  "all_success": true,
+  "semantic_evidence_verified": true,
+  "changed_guard_paths": [
+    "tests/test_circular_time_residual_guard.py"
+  ],
+  "changed_guard_outcomes": [
+    {
+      "job_id": 136376277504,
+      "name": "gate (py3.13)",
+      "outcomes": {
+        "tests/test_circular_time_residual_guard.py": {
+          "counts": {
+            "PASSED": 6
+          },
+          "lines": [
+            "tests/test_circular_time_residual_guard.py::test_shifted_helix_is_anchored_at_first_sample PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_epoch_angular_and_vertical_fits_remain_nonsingular PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_irregular_time_translation_preserves_parameters PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_vertical_fit_residual_matches_centered_regression_oracle PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_planar_noise_uses_same_three_coordinate_rms PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_classification_scores_vertical_mismatch_before_selecting_circular PASSED [  7%]"
+          ]
+        }
+      }
+    },
+    {
+      "job_id": 136376277987,
+      "name": "gate (py3.12)",
+      "outcomes": {
+        "tests/test_circular_time_residual_guard.py": {
+          "counts": {
+            "PASSED": 6
+          },
+          "lines": [
+            "tests/test_circular_time_residual_guard.py::test_shifted_helix_is_anchored_at_first_sample PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_epoch_angular_and_vertical_fits_remain_nonsingular PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_irregular_time_translation_preserves_parameters PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_vertical_fit_residual_matches_centered_regression_oracle PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_planar_noise_uses_same_three_coordinate_rms PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_classification_scores_vertical_mismatch_before_selecting_circular PASSED [  7%]"
+          ]
+        }
+      }
+    },
+    {
+      "job_id": 136376277993,
+      "name": "gate (py3.12 · 依赖下界)",
+      "outcomes": {
+        "tests/test_circular_time_residual_guard.py": {
+          "counts": {
+            "PASSED": 6
+          },
+          "lines": [
+            "tests/test_circular_time_residual_guard.py::test_shifted_helix_is_anchored_at_first_sample PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_epoch_angular_and_vertical_fits_remain_nonsingular PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_irregular_time_translation_preserves_parameters PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_vertical_fit_residual_matches_centered_regression_oracle PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_planar_noise_uses_same_three_coordinate_rms PASSED [  7%]",
+            "tests/test_circular_time_residual_guard.py::test_classification_scores_vertical_mismatch_before_selecting_circular PASSED [  7%]"
+          ]
+        }
+      }
+    }
+  ],
+  "runs": [
+    {
+      "id": 44761888700,
+      "name": "pr-lint",
+      "head": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+      "attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44761888700"
+    },
+    {
+      "id": 44761889152,
+      "name": "gate",
+      "head": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+      "attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44761889152"
+    }
+  ],
+  "title_jobs": [
+    {
+      "job_id": 136376276312,
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44761888700/job/136376276312",
+      "head_sha": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+      "status": "completed",
+      "conclusion": "success",
+      "running_steps": [],
+      "raw_log_sha256": "8b7b1d49ff8375bc90735aae44f5bb8d5656ef75f6463fea0da481fee1705257",
+      "raw_log_bytes": 20729,
+      "failed_steps": []
+    }
+  ]
+}

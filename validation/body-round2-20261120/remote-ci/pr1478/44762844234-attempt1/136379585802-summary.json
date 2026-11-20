@@ -1,0 +1,12 @@
+{
+  "job_id": 136379585802,
+  "name": "PR 标题约定（type(scope) + 摘要）",
+  "url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44762844234/job/136379585802",
+  "head_sha": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+  "status": "completed",
+  "conclusion": "success",
+  "running_steps": [],
+  "raw_log_sha256": "836df09787ed00e9a8c7015dd9d7b7530d62d9b3766035e2ce7eb974e66f6c7b",
+  "raw_log_bytes": 20729,
+  "failed_steps": []
+}

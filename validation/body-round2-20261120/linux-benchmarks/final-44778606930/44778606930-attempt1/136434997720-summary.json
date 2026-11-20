@@ -1,0 +1,10 @@
+{
+  "job_id": 136434997720,
+  "name": "benchmark (3.12, py312-floor, numpy==2.3.5 Pillow==12.3.0)",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44778606930/job/136434997720",
+  "running_steps": [],
+  "raw_log_sha256": "9c8b3bcf2f9ff6820f7a121d9739d5406bcdb777901dfcde8eee1d55fb06ecfd",
+  "failed_steps": []
+}

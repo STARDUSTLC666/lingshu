@@ -1,0 +1,26 @@
+[✓] A0 已定位 traverse — [workspace]
+— A 等价性（真跑：内嵌旧实现 vs 被测新实现）—
+[✓] A tricky out
+[✓] A tricky both
+[✓] A tricky in
+[✓] A tricky causal
+[✓] A tricky depth1
+[✓] A tricky minimport
+[✓] A tricky max3
+[✓] A fan6 out
+[✓] A fan6 both d2
+— B 查询条数不随扇出线性增长 —
+[✓] B 扇出 6: 查询 3 条（= 2×深度+1 = 5，与扇出无关） — 实测 3 条 / 结果 12 条
+[✓] B 扇出 40: 查询 3 条（= 2×深度+1 = 5，与扇出无关） — 实测 3 条 / 结果 80 条
+[✓] B 扇出 120: 查询 3 条（= 2×深度+1 = 5，与扇出无关） — 实测 3 条 / 结果 240 条
+[✓] B 旧实现同例需 >40 条（扇出线性） — 实测 42 条
+— C 静态面 —
+[✓] C 用整层 `IN (...)` 取边
+[✓] C 沿用 `_SQL_IN_CHUNK`（#417 的 IN 上限单点）
+[✓] C 仍按 frontier 原顺序消费（`for nid in frontier`）
+[✓] C `visited` 仍在循环内即时更新（决定 result 顺序）
+[✓] C **未**新增 `ORDER BY`（不改变行序口径） — SQL 常量里出现 ORDER BY：[]
+[✓] C `rel_clause` / `params` 原样沿用（类型过滤语义未变）
+[✓] C importance 补全仍按 `_SQL_IN_CHUNK` 分批（#417 未回退）
+
+=== traverse 整层批量守卫: 21/21 通过 ===

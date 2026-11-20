@@ -1,0 +1,17 @@
+{
+  "scope": "artifact-index metadata fixtures only; no production or benchmark execution",
+  "tests": 4,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "ok": true,
+  "positive": [
+    "final validation summary is indexed",
+    "live driver.log append leaves listed hashes valid",
+    "tmp/sandbox/databases/self are excluded"
+  ],
+  "negative": [
+    "same-size listed-file tampering is detected",
+    "summary tampering is detected"
+  ]
+}

@@ -1,0 +1,329 @@
+{
+  "verdict": "PASS",
+  "all_changed_paths": 52,
+  "nonproduction_artifacts": 40,
+  "records": [
+    {
+      "file": "bench/bench_fresh_row_decay.py",
+      "owners": [
+        1478
+      ],
+      "lf_sha256": "91e1b97a57304305658ab3872a0fff78636467e1923843a5809f480e0c6a81ca",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "bench/bench_scene_collision_freeflight.py",
+      "owners": [
+        1479
+      ],
+      "lf_sha256": "de7e2eea70b4b9a26e886078ca91d3b75b4e02f4f74464d6f026c7419d90a122",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "bench/bench_spatial_detect_partition.py",
+      "owners": [
+        1480
+      ],
+      "lf_sha256": "62a89152bd2a70c19ad3e69db593854c9f3eef0e725a8dcef483e3c49218eb8e",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "bench/circular_time_residual.py",
+      "owners": [
+        1477
+      ],
+      "lf_sha256": "686fcf6c174e3aafa35c2ec12a5347266e505ee11d901514deaedfc07191570e",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "bench/repro/pendulum_release_accuracy.py",
+      "owners": [
+        1475
+      ],
+      "lf_sha256": "f0c163e8540a052ded44efcd843d97acde20d3cdac9149520115a701b41d21bf",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "docs/testing/circular-time-residual-20261120.md",
+      "owners": [
+        1477
+      ],
+      "lf_sha256": "dc3b2b372b1b92e9824aa13556668c25a18c1ce704628c5bba147a3d410c2c44",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "docs/testing/fresh-row-decay-20261120.md",
+      "owners": [
+        1478
+      ],
+      "lf_sha256": "c2b28635deb5caf1e046b6f58e78c5c35fe421cd93eccace2437bc57934b2c27",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "docs/testing/scene-collision-freeflight-velocity-20261120.md",
+      "owners": [
+        1479
+      ],
+      "lf_sha256": "a30569398abe55b035ecd00878d4cccce05915c08f028d28be9018ec68422e0d",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "docs/testing/spatial-detect-complete-partition-20261120.md",
+      "owners": [
+        1480
+      ],
+      "lf_sha256": "e5cb90295154c8806c4f76fd7b210d0fe02bdab6523f1f0247a332f5cb9e747e",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/fixtures/bridge_pendulum_release_mutations.json",
+      "owners": [
+        1475
+      ],
+      "lf_sha256": "5deb9eb3af204cab8a8f26185148e77576a88a9a334647cab3e407ffd71c1fa7",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/fixtures/bridge_top_level_motions_mutations.json",
+      "owners": [
+        1476
+      ],
+      "lf_sha256": "1be34c919a5eeb008d1c8039b39d2236e7765c2d723994924ebc40139b606068",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/fixtures/circular_time_residual_mutations.json",
+      "owners": [
+        1477
+      ],
+      "lf_sha256": "08ef7b24c5a804c4569b906713a92a34b2e6caa55924cb37f6c1d8194aa789a2",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/fixtures/fresh_row_decay_mutations.json",
+      "owners": [
+        1478
+      ],
+      "lf_sha256": "b0fd96bb2a9ca49566870fa8805fba09c172f81191a383670cabffc5928a2f5c",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/fixtures/hexgrid_odd_r_nearest_cell_mutations.json",
+      "owners": [
+        1473
+      ],
+      "lf_sha256": "cd048817bf3fe2dc069578bb79f51b38bf3a7b2e513044ab49cdce2cadaf1a8b",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/fixtures/longterm_gate_mixed_in_place_update_mutations.json",
+      "owners": [
+        1472
+      ],
+      "lf_sha256": "a12738913dc3604a56f13e4177b1aa0750df3eb3e8af2f6c96f08b7ca8e74234",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/fixtures/motion_group_identifier_encoding_mutations.json",
+      "owners": [
+        1469
+      ],
+      "lf_sha256": "26bcdee1d7e08fddee716e2b86c2058fc50f8fd1cdf81dc39afd5f54f4997fc9",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/fixtures/obb_nonorthogonal_sat_mutations.json",
+      "owners": [
+        1471
+      ],
+      "lf_sha256": "2d08da10c09f1d4ab73558029775b213bcd4fea0f5e167136e7afb69c1ca627a",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/fixtures/pendulum_elliptic_angle_mutations.json",
+      "owners": [
+        1475
+      ],
+      "lf_sha256": "05ae4ab1a98335d24e847b477caf2d333f93ce2d184283f6d5d4d0d7a41c0682",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/fixtures/scene_collision_freeflight_velocity_mutations.json",
+      "owners": [
+        1479
+      ],
+      "lf_sha256": "3cdc69e5d6c981d0b5a16b73b66613f90d21ac7b24880afab4bceab609c70387",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/fixtures/search_skills_limit_semantics_mutations.json",
+      "owners": [
+        1474
+      ],
+      "lf_sha256": "66246f2f95a8370741b543034d49f1d47de095c134a2ef72687695e36e834abf",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/fixtures/spatial_detect_complete_partition_mutations.json",
+      "owners": [
+        1480
+      ],
+      "lf_sha256": "43a0d9ca782364c979cb7b08ccec74ac8d34926f663d3b18355bc05e29d44a6c",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/fixtures/vision_lineart_alpha_mutations.json",
+      "owners": [
+        1470
+      ],
+      "lf_sha256": "c3356c80aa30e7895dd78ec18f0bfc67a73ef6e3c972d4cd1b146760e70f03fb",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_bridge_pendulum_release_solution.py",
+      "owners": [
+        1475
+      ],
+      "lf_sha256": "e778cce223fd5ea9838361bab2379a7c2bfc4bf35c980a3b576c84a955a6dc47",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_bridge_top_level_motions.py",
+      "owners": [
+        1476
+      ],
+      "lf_sha256": "68aaada8b713525075914fad8630aa924a475d5423d2bf247b7ecb7ee18e9e58",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_circular_time_residual_guard.py",
+      "owners": [
+        1477
+      ],
+      "lf_sha256": "bed50c99ea22ab3d1e138f84267d89ec685f154a80d36a599663e8aa6a14301a",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_fresh_row_decay.py",
+      "owners": [
+        1478
+      ],
+      "lf_sha256": "ed2c7b4c1e50ecb38d832d33898a3c9bb7445764b7ebbed24e3922a808a2d6b5",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_hexgrid_odd_r_nearest_cell.py",
+      "owners": [
+        1473
+      ],
+      "lf_sha256": "9111d42af04b25c3493e109af3badc82cc6cd5bad4826b2242046e5ac7649c90",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_issue1959_reseed_physics_guard.py",
+      "owners": [
+        1479
+      ],
+      "lf_sha256": "7e0a8e4b3fa5a2ace48e64115d4cf3887e3d82c2b8fa172719ed0cc72c9a309b",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_issue770_snapshot_atomicity_and_signature_guard.py",
+      "owners": [
+        1472
+      ],
+      "lf_sha256": "57bc41dced9458a6f0dc4bf01dc75d4a28b15c94e94aab7dcf3ce0b7feba50c0",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_longterm_gate_mixed_in_place_update.py",
+      "owners": [
+        1472
+      ],
+      "lf_sha256": "055b5df1ff69d83cef4d2e1d6003e6dec4a9f946659d64d176c5994eaff5b4c4",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_motion_group_identifier_encoding.py",
+      "owners": [
+        1469
+      ],
+      "lf_sha256": "58bf90d8c5538b209ca8551fc53526e94a2890deff30719decdeba86d8628cc7",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_obb_nonorthogonal_sat.py",
+      "owners": [
+        1471
+      ],
+      "lf_sha256": "2b762f9bc8b670b6932157b3a1c4cd8a38cc30e115aaa002e518e77ca5c9b5dd",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_pendulum_release_solution.py",
+      "owners": [
+        1475
+      ],
+      "lf_sha256": "5fcdd9cc22fe878cbee91ec6cc2e88bbb0cabbf96f357c84fd585a5a2fa93cd2",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_physics_predict.py",
+      "owners": [
+        1475
+      ],
+      "lf_sha256": "2c2c6aebd181d250eb0175001d2b56d9fe4787c715d2d115a07d65dd21643dc2",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_scene_collision_freeflight_velocity.py",
+      "owners": [
+        1479
+      ],
+      "lf_sha256": "a53b3be54c4bb0983c3e669c042b862ab61e367757a01fc4edd2f0905e62b2bf",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_search_skills_limit_semantics.py",
+      "owners": [
+        1474
+      ],
+      "lf_sha256": "fd52bbafdf9ea896b4143d05698a036f5032d8193a501d1eb4745c5d023acf1e",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_spatial_detect_complete_partition.py",
+      "owners": [
+        1480
+      ],
+      "lf_sha256": "38458e61dbca712bd2ffa56eecba7ff6483223bf0f2255fa3601b6fd25a301a7",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tests/test_vision_lineart_alpha.py",
+      "owners": [
+        1470
+      ],
+      "lf_sha256": "4b37db0c8a3dd406e2566067c59c60824e6e0bbe3c33b059c714b5be9a1960b4",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tools/testing/bench_bridge_motions.py",
+      "owners": [
+        1476
+      ],
+      "lf_sha256": "ae6e38e92dce20dd462b50bb89ab122709b11bc40e95836d4765998fd147a219",
+      "exact_pr_contribution_union": true
+    },
+    {
+      "file": "tools/testing/replay_save_guards.py",
+      "owners": [
+        1475,
+        1476
+      ],
+      "lf_sha256": "af47c847469b43788c85c1982f4f5903a80b95b2e5d2aa97368a12aed5722cae",
+      "exact_pr_contribution_union": true
+    }
+  ],
+  "source_and_two_registration_files": "independently checked by audit_twelve_integration.py"
+}

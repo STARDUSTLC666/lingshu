@@ -1,0 +1,401 @@
+{
+  "total_count": 3,
+  "jobs": [
+    {
+      "id": 136376277504,
+      "run_id": 44761889152,
+      "workflow_name": "gate",
+      "head_branch": "fix/circular-local-time-20261120",
+      "run_url": "https://api.github.com/repos/FuRongJun-1999/lingshu/actions/runs/44761889152",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOU6uWo88AAAAfwKjaAA",
+      "head_sha": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+      "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/actions/jobs/136376277504",
+      "html_url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44761889152/job/136376277504",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-20T15:18:07Z",
+      "started_at": "2026-11-20T15:18:09Z",
+      "completed_at": "2026-11-20T15:34:08Z",
+      "name": "gate (py3.13)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-20T15:18:10Z",
+          "completed_at": "2026-11-20T15:18:11Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-20T15:18:11Z",
+          "completed_at": "2026-11-20T15:18:15Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-20T15:18:15Z",
+          "completed_at": "2026-11-20T15:18:18Z"
+        },
+        {
+          "name": "安装依赖（pip install -e \".[full,dev]\"）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-20T15:18:18Z",
+          "completed_at": "2026-11-20T15:18:27Z"
+        },
+        {
+          "name": "钉死依赖下界（仅「依赖下界」档；#209）",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-11-20T15:18:27Z",
+          "completed_at": "2026-11-20T15:18:27Z"
+        },
+        {
+          "name": "Clone 脑端公开仓（dsh-memory）供 MDCG_BRAIN_PYTHONPATH",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-20T15:18:27Z",
+          "completed_at": "2026-11-20T15:18:29Z"
+        },
+        {
+          "name": "决定 test_brain_store 前置（脑端可达则真跑；否则显式 SKIP）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-20T15:18:29Z",
+          "completed_at": "2026-11-20T15:18:29Z"
+        },
+        {
+          "name": "脚本式测试（逐件单跑，任一失败即红）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-20T15:18:29Z",
+          "completed_at": "2026-11-20T15:18:56Z"
+        },
+        {
+          "name": "pytest 式测试（tests/ 自动收集）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-20T15:18:56Z",
+          "completed_at": "2026-11-20T15:34:04Z"
+        },
+        {
+          "name": "汇总（写入 Step Summary）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-20T15:34:04Z",
+          "completed_at": "2026-11-20T15:34:04Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-11-20T15:34:04Z",
+          "completed_at": "2026-11-20T15:34:04Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-11-20T15:34:04Z",
+          "completed_at": "2026-11-20T15:34:04Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-11-20T15:34:04Z",
+          "completed_at": "2026-11-20T15:34:04Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/FuRongJun-1999/lingshu/check-runs/136376277504",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000022172,
+      "runner_name": "GitHub Actions 1000022172",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 136376277987,
+      "run_id": 44761889152,
+      "workflow_name": "gate",
+      "head_branch": "fix/circular-local-time-20261120",
+      "run_url": "https://api.github.com/repos/FuRongJun-1999/lingshu/actions/runs/44761889152",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOU6uWo88AAAAfwKjb4w",
+      "head_sha": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+      "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/actions/jobs/136376277987",
+      "html_url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44761889152/job/136376277987",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-20T15:18:07Z",
+      "started_at": "2026-11-20T15:18:09Z",
+      "completed_at": "2026-11-20T15:30:29Z",
+      "name": "gate (py3.12)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-20T15:18:09Z",
+          "completed_at": "2026-11-20T15:18:10Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-20T15:18:10Z",
+          "completed_at": "2026-11-20T15:18:11Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-20T15:18:11Z",
+          "completed_at": "2026-11-20T15:18:13Z"
+        },
+        {
+          "name": "安装依赖（pip install -e \".[full,dev]\"）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-20T15:18:13Z",
+          "completed_at": "2026-11-20T15:18:19Z"
+        },
+        {
+          "name": "钉死依赖下界（仅「依赖下界」档；#209）",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-11-20T15:18:19Z",
+          "completed_at": "2026-11-20T15:18:19Z"
+        },
+        {
+          "name": "Clone 脑端公开仓（dsh-memory）供 MDCG_BRAIN_PYTHONPATH",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-20T15:18:19Z",
+          "completed_at": "2026-11-20T15:18:21Z"
+        },
+        {
+          "name": "决定 test_brain_store 前置（脑端可达则真跑；否则显式 SKIP）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-20T15:18:21Z",
+          "completed_at": "2026-11-20T15:18:21Z"
+        },
+        {
+          "name": "脚本式测试（逐件单跑，任一失败即红）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-20T15:18:21Z",
+          "completed_at": "2026-11-20T15:18:45Z"
+        },
+        {
+          "name": "pytest 式测试（tests/ 自动收集）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-20T15:18:45Z",
+          "completed_at": "2026-11-20T15:30:26Z"
+        },
+        {
+          "name": "汇总（写入 Step Summary）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-20T15:30:26Z",
+          "completed_at": "2026-11-20T15:30:26Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-11-20T15:30:26Z",
+          "completed_at": "2026-11-20T15:30:26Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-11-20T15:30:26Z",
+          "completed_at": "2026-11-20T15:30:26Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-11-20T15:30:26Z",
+          "completed_at": "2026-11-20T15:30:26Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/FuRongJun-1999/lingshu/check-runs/136376277987",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000022174,
+      "runner_name": "GitHub Actions 1000022174",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 136376277993,
+      "run_id": 44761889152,
+      "workflow_name": "gate",
+      "head_branch": "fix/circular-local-time-20261120",
+      "run_url": "https://api.github.com/repos/FuRongJun-1999/lingshu/actions/runs/44761889152",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOU6uWo88AAAAfwKjb6Q",
+      "head_sha": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+      "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/actions/jobs/136376277993",
+      "html_url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44761889152/job/136376277993",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-20T15:18:07Z",
+      "started_at": "2026-11-20T15:18:09Z",
+      "completed_at": "2026-11-20T15:34:19Z",
+      "name": "gate (py3.12 · 依赖下界)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-20T15:18:10Z",
+          "completed_at": "2026-11-20T15:18:10Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-20T15:18:10Z",
+          "completed_at": "2026-11-20T15:18:12Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-20T15:18:12Z",
+          "completed_at": "2026-11-20T15:18:16Z"
+        },
+        {
+          "name": "安装依赖（pip install -e \".[full,dev]\"）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-20T15:18:16Z",
+          "completed_at": "2026-11-20T15:18:25Z"
+        },
+        {
+          "name": "钉死依赖下界（仅「依赖下界」档；#209）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-20T15:18:25Z",
+          "completed_at": "2026-11-20T15:18:28Z"
+        },
+        {
+          "name": "Clone 脑端公开仓（dsh-memory）供 MDCG_BRAIN_PYTHONPATH",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-20T15:18:28Z",
+          "completed_at": "2026-11-20T15:18:30Z"
+        },
+        {
+          "name": "决定 test_brain_store 前置（脑端可达则真跑；否则显式 SKIP）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-20T15:18:30Z",
+          "completed_at": "2026-11-20T15:18:30Z"
+        },
+        {
+          "name": "脚本式测试（逐件单跑，任一失败即红）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-20T15:18:30Z",
+          "completed_at": "2026-11-20T15:19:00Z"
+        },
+        {
+          "name": "pytest 式测试（tests/ 自动收集）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-20T15:19:00Z",
+          "completed_at": "2026-11-20T15:34:15Z"
+        },
+        {
+          "name": "汇总（写入 Step Summary）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-20T15:34:15Z",
+          "completed_at": "2026-11-20T15:34:15Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-11-20T15:34:15Z",
+          "completed_at": "2026-11-20T15:34:16Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-11-20T15:34:16Z",
+          "completed_at": "2026-11-20T15:34:16Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-11-20T15:34:16Z",
+          "completed_at": "2026-11-20T15:34:16Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/FuRongJun-1999/lingshu/check-runs/136376277993",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000022173,
+      "runner_name": "GitHub Actions 1000022173",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

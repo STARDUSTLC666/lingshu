@@ -1,0 +1,19 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+________ test_vertical_fit_residual_matches_centered_regression_oracle _________
+tests/test_circular_time_residual_guard.py:85: in test_vertical_fit_residual_matches_centered_regression_oracle
+    assert model["residual_rms"] == pytest.approx(expected_rms, rel=1e-10), "vertical residual must contribute to 3D coordinate RMS"
+E   AssertionError: vertical residual must contribute to 3D coordinate RMS
+E   assert 4.2537626889034324e-16 == 4.185633912563305 ± 4.2e-10
+E     
+E     comparison failed
+E     Obtained: 4.2537626889034324e-16
+E     Expected: 4.185633912563305 ± 4.2e-10
+=========================== short test summary info ============================
+FAILED tests/test_circular_time_residual_guard.py::test_vertical_fit_residual_matches_centered_regression_oracle - AssertionError: vertical residual must contribute to 3D coordinate RMS
+assert 4.2537626889034324e-16 == 4.185633912563305 ± 4.2e-10
+  
+  comparison failed
+  Obtained: 4.2537626889034324e-16
+  Expected: 4.185633912563305 ± 4.2e-10
+1 failed in 0.08s

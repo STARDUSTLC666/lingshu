@@ -1,0 +1,24 @@
+Obtaining file:///[workspace]
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: lingshu
+  Building editable for lingshu (pyproject.toml): started
+  Building editable for lingshu (pyproject.toml): finished with status 'done'
+  Created wheel for lingshu: filename=lingshu-0.0.1-0.editable-py3-none-any.whl size=7973 sha256=acdfe9e46cb8ae055b93df142218d199d43d654c666c65515002a6939837aba0
+  Stored in directory: [user-home]
+Successfully built lingshu
+Installing collected packages: lingshu
+  Attempting uninstall: lingshu
+    Found existing installation: lingshu 0.0.1
+    Uninstalling lingshu-0.0.1:
+      Successfully uninstalled lingshu-0.0.1
+Successfully installed lingshu-0.0.1
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: [workspace]

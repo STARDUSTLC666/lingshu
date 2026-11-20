@@ -1,0 +1,9 @@
+{
+  "old_pr_head": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+  "new_pr_head": "41dc5e01fd710ffeab79aa4d566d8ed5ed5baf50",
+  "merged_main": "04e0ecb6a3669c90efbb4a1583816a8f7ca26bc7",
+  "combined_source": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+  "core_module_lf_sha256": "4ce414e49f0165f9d03b5a834b1d5dbaac354251cc9aa33b44eaf11cbf0a21c2",
+  "entire_core_module_identical_to_validated_combined_source": true,
+  "scope": "Maintainer merged previous PR1474; refresh only core fingerprint merge conflict. Fresh-decay functions unchanged, no new bug/bounty claim. Existing precise89-source measurements remain historical; combined522 core benchmarks cover the identical current module."
+}

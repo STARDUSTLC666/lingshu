@@ -1,15 +1,24 @@
 {
   "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
-  "scope": "four local scoped evidence sets; combined/CI validation pending",
+  "scope": "Completed four-fix delivery batch; continuous contribution goal remains active. Linux gates and benchmark/mutation matrices PASS; Windows full-gate known baseline failure preserved.",
   "combined_source_sha": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
   "core": {
     "measured_commit": "bae2eaea9fb77e9e451f1b220d17f9096d06ee78",
-    "final_pr_head": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+    "final_pr_head": "41dc5e01fd710ffeab79aa4d566d8ed5ed5baf50",
     "pr": "https://github.com/FuRongJun-1999/lingshu/pull/1478",
-    "production_canonical_sha256": "da1d0ddf76f5037f0cb1542241d9d3aceb64d5cf8391f807dbdd369154f4ce01",
-    "measurement_source_identical_to_final_head": true,
+    "production_canonical_sha256": "4ce414e49f0165f9d03b5a834b1d5dbaac354251cc9aa33b44eaf11cbf0a21c2",
+    "measurement_source_identical_to_final_head": false,
     "final_head_delta": [
-      "docs/intake/body-export-v0.1/_export_manifest.json"
+      "docs/intake/body-export-v0.1/_export_manifest.json",
+      "lingshu/core/core.py",
+      "lingshu/nn/hex_cnn.py",
+      "lingshu/world/motion_groups.py",
+      "tests/fixtures/hexgrid_odd_r_nearest_cell_mutations.json",
+      "tests/fixtures/motion_group_identifier_encoding_mutations.json",
+      "tests/fixtures/search_skills_limit_semantics_mutations.json",
+      "tests/test_hexgrid_odd_r_nearest_cell.py",
+      "tests/test_motion_group_identifier_encoding.py",
+      "tests/test_search_skills_limit_semantics.py"
     ],
     "manifest_note": "Prepublication terminal inspection found the old manifest hash; no initial raw file was saved. The final recorded strict result is audit-core/manifest-final.json (64 matches / zero mismatches). No initial raw result is fabricated.",
     "non_claims": [
@@ -31,7 +40,24 @@
         "raw_source_verified": true,
         "LF_normalized_bytes_identical_to_declared_commit": true
       }
-    ]
+    ],
+    "pre_main_sync_validated_pr_head": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+    "pre_main_sync_production_canonical_sha256": "da1d0ddf76f5037f0cb1542241d9d3aceb64d5cf8391f807dbdd369154f4ce01",
+    "measurement_source_identical_to_pre_sync_pr_head": true,
+    "main_sync": {
+      "merged_main": "04e0ecb6a3669c90efbb4a1583816a8f7ca26bc7",
+      "head": "41dc5e01fd710ffeab79aa4d566d8ed5ed5baf50",
+      "ci_gate_run": 44781318899,
+      "all_three_gate_legs_and_title_success": true,
+      "pytest_passed_each_leg": 5638,
+      "core_module_identical_to_benchmarked_combined_source": true,
+      "production_functions_changed_by_merge": [
+        "search_skills"
+      ],
+      "all_fresh_decay_functions_unchanged": true,
+      "combined_source": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+      "reason": "Maintainer merged previous PR1474; only the core fingerprint conflicted. Fresh-decay functions unchanged. No new finding or bounty."
+    }
   },
   "circular": {
     "final_pr_head": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
@@ -61,5 +87,190 @@
     "failed_tests_fit_errors_unexecuted_checks_and_skips_retained": true,
     "initial_zero_collection_and_incomplete_expected_failure_spec_retained": true,
     "third_party_full_bodies_copied": false
+  },
+  "independent_combined_review": {
+    "head": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+    "tree": "529e1e150aa2c05a2f5bee3126c4678a58695e21",
+    "directory": "integration-independent",
+    "new_guard_tests": 165,
+    "scope": "Exact independent contribution composition and specified scoped tests/probes; not a substitute for complete gates."
+  },
+  "cross_model_box_probe": {
+    "fixed_source": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+    "baseline_source": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "scenes_per_source": 108,
+    "ticks_per_source": 648,
+    "checks_per_source": 3024,
+    "fixed_failures": 0,
+    "baseline_failures": 602,
+    "scope": "Public-API 0/1/2-box registration invariance across projectile/drag2/slope_friction/rolling; supplements independent free-fall analytic tests and does not prove exhaustive physics accuracy."
+  },
+  "linux_benchmark_execution": {
+    "intermediate_run": 44766869622,
+    "source_sha": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+    "source_workflow_head": "f769b3ac33eb5221ad66f6a4384aa6429b26e597",
+    "actual_measurements_verified": true,
+    "inner_index_driver_log_stale": true,
+    "classification": "valid intermediate measurements; not index-clean final evidence"
+  },
+  "linux_artifact_index_metadata_correction": {
+    "original_run": 44766869622,
+    "scope": "Index metadata only; production source and actual benchmark/mutation measurements are not changed or reclassified as production failures.",
+    "old_index_issue": "The first runner indexed live tee driver.log before its final print and before writing validation-summary.json.",
+    "correction": "Write final validation-summary first, then index immutable completed outputs; explicitly exclude artifact-index.json itself, live driver.log and temporary/database files.",
+    "fixture": "linux-index-fixture/summary.json",
+    "tests": 4,
+    "failures": 0,
+    "original_run_preserved_as_intermediate": true,
+    "new_index_clean_run_pending": false
+  },
+  "windows_complete_gate": {
+    "source_sha": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+    "gate_ok": false,
+    "pytest_main_passed": 5838,
+    "known_baseline_failed": 1,
+    "skipped": 28,
+    "passed_subtests": 98,
+    "scripts_succeeded": 102,
+    "controlled_timing_passed": 4,
+    "source_files_unchanged": 1634,
+    "source_unchanged": true,
+    "brain_unchanged": true,
+    "failure_scope": "Existing Windows symlink capability P1 assertion; same failed ID as previous batch.",
+    "skip_scope": "IDs unchanged; reasons equal only after checkout-path normalization. The original unnormalized false comparison flag is preserved.",
+    "driver_original_sha256": "d76b23c179e4940b0798101ef196b8d6405692cf6fca6e43c4815b1fc78bec45",
+    "raw_directory": "integration-windows"
+  },
+  "baseline_windows_symlink_p1": {
+    "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "raw_xml": "integration-windows/baseline-symlink-p1.xml",
+    "raw_log": "integration-windows/baseline-symlink-p1.log",
+    "tests": 1,
+    "failed": 1,
+    "exit_code": 1,
+    "test_id": "tests.test_issue498_atomic_write_perm_symlink_guard::test_p1_符号链接量具能力探测",
+    "source_test_sha256": "a6d11458ce8a27d8dab0f9ed489adf8ddca21b943241d12b713e64fcf9d1631a",
+    "same_test_body": true,
+    "host_capability": "Windows symlink creation succeeded; baseline test expects POSIX and fails its capability assertion.",
+    "excluded_from_full_gate_counts": true
+  },
+  "bounty_intake_receipts": {
+    "directory": "publication-receipts",
+    "issue_numbers": [
+      2791,
+      2792,
+      2793,
+      2794
+    ],
+    "initial_evidence_commit": "f769b3ac33eb5221ad66f6a4384aa6429b26e597",
+    "readback_verified": true,
+    "note": "Original create/readback receipts retained; immutable final evidence links will be appended after the clean Linux benchmark run."
+  },
+  "remote_ci": {
+    "status": "all four exact PR heads and exact combined workflow dispatch verified success",
+    "pull_requests": {
+      "1477": {
+        "head": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+        "gate_and_title_jobs": 4,
+        "gate_jobs": 3,
+        "pytest_passed_each_gate": 5582,
+        "skipped_each_gate": 40,
+        "subtests_each_gate": 98,
+        "scripts_each_gate": "102/102",
+        "real_brain_each_gate": "23/23",
+        "run": 44761889152,
+        "title_run": 44761888700
+      },
+      "1478": {
+        "head": "41dc5e01fd710ffeab79aa4d566d8ed5ed5baf50",
+        "gate_and_title_jobs": 4,
+        "gate_jobs": 3,
+        "pytest_passed_each_gate": 5638,
+        "skipped_each_gate": 40,
+        "subtests_each_gate": 98,
+        "scripts_each_gate": "102/102",
+        "real_brain_each_gate": "23/23",
+        "run": 44781318899,
+        "title_run": 44781318941,
+        "directory": "core-main-sync/ci/pr1478"
+      },
+      "1479": {
+        "head": "13952c82874fb9ee19a4f1b660e3144134367a53",
+        "gate_and_title_jobs": 4,
+        "gate_jobs": 3,
+        "pytest_passed_each_gate": 5617,
+        "skipped_each_gate": 40,
+        "subtests_each_gate": 98,
+        "scripts_each_gate": "102/102",
+        "real_brain_each_gate": "23/23",
+        "run": 44763098857,
+        "title_run": 44763099047
+      },
+      "1480": {
+        "head": "a357dbbe96905848fd81b7249814576fb2743674",
+        "gate_and_title_jobs": 4,
+        "gate_jobs": 3,
+        "pytest_passed_each_gate": 5646,
+        "skipped_each_gate": 40,
+        "subtests_each_gate": 98,
+        "scripts_each_gate": "102/102",
+        "real_brain_each_gate": "23/23",
+        "run": 44764764765,
+        "title_run": 44764764805
+      }
+    },
+    "combined": {
+      "source_head": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+      "event": "workflow_dispatch",
+      "run": 44764384747,
+      "gate_jobs": 3,
+      "pytest_passed_each_gate": 5827,
+      "skipped_each_gate": 40,
+      "subtests_each_gate": 98,
+      "scripts_each_gate": "102/102",
+      "real_brain_each_gate": "23/23"
+    },
+    "historical_pre_sync_core_head": {
+      "head": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+      "gate_and_title_jobs": 4,
+      "gate_jobs": 3,
+      "pytest_passed_each_gate": 5624,
+      "skipped_each_gate": 40,
+      "subtests_each_gate": 98,
+      "scripts_each_gate": "102/102",
+      "real_brain_each_gate": "23/23",
+      "run": 44762844376,
+      "title_run": 44762844234
+    }
+  },
+  "windows_supplements": {
+    "historical_physics_guard": "43 passed; 4 original main-suite skips covered, not added to main count",
+    "original_symlink_test_bodies": "3/3 pass after actual capability probe; original skip markers unchanged and excluded from main count",
+    "same_failure_on_authentic_d748_baseline": true,
+    "baseline_probe": "1 original POSIX-only capability assertion failed on the same Windows-host condition; isolated, excluded from full-gate totals"
+  },
+  "linux_benchmark_final": {
+    "run_id": 44778606930,
+    "metadata_head": "ff22bf03a53e422fedc029fbd0d24445aef3dbe7",
+    "measured_source_head": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+    "jobs": 3,
+    "all_verified_success": true,
+    "inner_artifact_indexes_clean": true,
+    "named_mutants_per_job": 27,
+    "actual_benchmark_source_hashes_and_xml_assertions_independently_verified": true,
+    "directory": "linux-benchmarks/final-44778606930"
+  },
+  "remaining_scope": {
+    "unavailable_authentic_model_or_pixel_asset_cases": 17,
+    "note": "No original assets were invented. Windows cannot express three POSIX permission modes, exercised in the complete Linux jobs. Historical/symlink/timing supplements are separate from main counts."
+  },
+  "upstream_merged_previous_contributions": {
+    "main": "04e0ecb6a3669c90efbb4a1583816a8f7ca26bc7",
+    "merged_prs": [
+      1469,
+      1473,
+      1474
+    ],
+    "note": "These contributions were merged by the maintainer, not by this task; all are already present in the frozen combined patch union."
   }
 }

@@ -1,0 +1,28 @@
+{
+  "source_sha": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+  "test_sha256_lf": "a6d11458ce8a27d8dab0f9ed489adf8ddca21b943241d12b713e64fcf9d1631a",
+  "capability": {
+    "symlink_created": true,
+    "is_symlink": true,
+    "target_read_verified": true
+  },
+  "cases": [
+    {
+      "test": "test_a6_posix_符号链接目标保持且真实件更新",
+      "passed": true,
+      "seconds": 0.05142659999546595
+    },
+    {
+      "test": "test_b6_posix_符号链接目标保持且真实件更新",
+      "passed": true,
+      "seconds": 0.0038215999957174063
+    },
+    {
+      "test": "test_c6_posix_符号链接目标保持且真实件更新",
+      "passed": true,
+      "seconds": 0.004694200004450977
+    }
+  ],
+  "passed": true,
+  "scope": "Three unchanged original test bodies; supplemental to, never added to or substituted for, the main full-gate totals/failure/skips."
+}

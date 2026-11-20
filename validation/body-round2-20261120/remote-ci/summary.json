@@ -1,0 +1,77 @@
+{
+  "status": "all four exact PR heads and exact combined workflow dispatch verified success",
+  "pull_requests": {
+    "1477": {
+      "head": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+      "gate_and_title_jobs": 4,
+      "gate_jobs": 3,
+      "pytest_passed_each_gate": 5582,
+      "skipped_each_gate": 40,
+      "subtests_each_gate": 98,
+      "scripts_each_gate": "102/102",
+      "real_brain_each_gate": "23/23",
+      "run": 44761889152,
+      "title_run": 44761888700
+    },
+    "1478": {
+      "head": "41dc5e01fd710ffeab79aa4d566d8ed5ed5baf50",
+      "gate_and_title_jobs": 4,
+      "gate_jobs": 3,
+      "pytest_passed_each_gate": 5638,
+      "skipped_each_gate": 40,
+      "subtests_each_gate": 98,
+      "scripts_each_gate": "102/102",
+      "real_brain_each_gate": "23/23",
+      "run": 44781318899,
+      "title_run": 44781318941,
+      "directory": "core-main-sync/ci/pr1478"
+    },
+    "1479": {
+      "head": "13952c82874fb9ee19a4f1b660e3144134367a53",
+      "gate_and_title_jobs": 4,
+      "gate_jobs": 3,
+      "pytest_passed_each_gate": 5617,
+      "skipped_each_gate": 40,
+      "subtests_each_gate": 98,
+      "scripts_each_gate": "102/102",
+      "real_brain_each_gate": "23/23",
+      "run": 44763098857,
+      "title_run": 44763099047
+    },
+    "1480": {
+      "head": "a357dbbe96905848fd81b7249814576fb2743674",
+      "gate_and_title_jobs": 4,
+      "gate_jobs": 3,
+      "pytest_passed_each_gate": 5646,
+      "skipped_each_gate": 40,
+      "subtests_each_gate": 98,
+      "scripts_each_gate": "102/102",
+      "real_brain_each_gate": "23/23",
+      "run": 44764764765,
+      "title_run": 44764764805
+    }
+  },
+  "combined": {
+    "source_head": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+    "event": "workflow_dispatch",
+    "run": 44764384747,
+    "gate_jobs": 3,
+    "pytest_passed_each_gate": 5827,
+    "skipped_each_gate": 40,
+    "subtests_each_gate": 98,
+    "scripts_each_gate": "102/102",
+    "real_brain_each_gate": "23/23"
+  },
+  "historical_pre_sync_core_head": {
+    "head": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+    "gate_and_title_jobs": 4,
+    "gate_jobs": 3,
+    "pytest_passed_each_gate": 5624,
+    "skipped_each_gate": 40,
+    "subtests_each_gate": 98,
+    "scripts_each_gate": "102/102",
+    "real_brain_each_gate": "23/23",
+    "run": 44762844376,
+    "title_run": 44762844234
+  }
+}

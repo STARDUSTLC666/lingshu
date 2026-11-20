@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.155" timestamp="2026-11-20T17:00:43.256281+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_spatial_detect_complete_partition" name="test_last_cell_energy_and_color_reach_bottom_right[4-4]" time="0.010"><failure message="AssertionError: last-cell evidence was lost or assigned to another zone&#10;assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]&#10;  &#10;  At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    [&#10;        (&#10;  -         'r8',&#10;  ?           ^&#10;  +         'r0',&#10;  ?           ^&#10;  -         'circle|blue',&#10;  ?                 ^^^&#10;  +         'circle|red',&#10;  ?                 ^ +&#10;  -         1.0,&#10;  ?         ^&#10;[+4 more lines; full report in element text]">tests/test_spatial_detect_complete_partition.py:79: in test_last_cell_energy_and_color_reach_bottom_right
+    assert [(d["pos"], d["obj"], d["share"]) for d in result] == [
+E   AssertionError: last-cell evidence was lost or assigned to another zone
+E   assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]
+E     
+E     At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E     -         'r8',
+E     ?           ^
+E     +         'r0',
+E     ?           ^
+E     -         'circle|blue',
+E     ?                 ^^^
+E     +         'circle|red',
+E     ?                 ^ +
+E     -         1.0,
+E     ?         ^
+E     +         0.0,
+E     ?         ^
+E           ),
+E       ]</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="32" skipped="0" tests="41" time="0.231" timestamp="2026-11-20T15:49:52.900816+00:00" hostname="ip-10-0-137-17"><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[0.5-0.01-0]" time="0.021"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.24750000000040018, 0.49999999999954525, -0.09999999999976694), (0.245, 0.5, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac47918f1f0&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.24750000000040018, 0.49999999999954525, -0.09999999999976694), (0.245, 0.5, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac47918f1f0&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[0.5-0.01-1]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.24999999999977263, 0.49749999999448846, -0.09999999999976694), (0.25, 0.495, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f68a90&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.24999999999977263, 0.49749999999448846, -0.09999999999976694), (0.25, 0.495, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f68a90&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[0.5-0.01-2]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.24999999999977263, 0.49999999999954525, -0.10249999999984993), (0.25, 0.5, -0.10500000000000001))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f69210&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.24999999999977263, 0.49999999999954525, -0.10249999999984993), (0.25, 0.5, -0.10500000000000001))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f69210&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[0.5-0.05-0]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.2375000000000682, 0.49999999999954525, -0.10000000000005116), (0.225, 0.5, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f69a80&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.2375000000000682, 0.49999999999954525, -0.10000000000005116), (0.225, 0.5, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f69a80&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[0.5-0.05-1]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25000000000005684, 0.4874999999992724, -0.10000000000005116), (0.25, 0.475, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6a3e0&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25000000000005684, 0.4874999999992724, -0.10000000000005116), (0.25, 0.475, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6a3e0&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[0.5-0.05-2]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25000000000005684, 0.49999999999954525, -0.11250000000003979), (0.25, 0.5, -0.125))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6ab60&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25000000000005684, 0.49999999999954525, -0.11250000000003979), (0.25, 0.5, -0.125))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6ab60&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[0.5-0.2-0]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.1999999999999602, 0.5000000000001137, -0.10000000000001563), (0.15, 0.5, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6b100&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.1999999999999602, 0.5000000000001137, -0.10000000000001563), (0.15, 0.5, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6b100&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[0.5-0.2-1]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.2499999999999858, 0.45000000000015916, -0.10000000000001563), (0.25, 0.4, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6b6a0&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.2499999999999858, 0.45000000000015916, -0.10000000000001563), (0.25, 0.4, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6b6a0&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[0.5-0.2-2]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.2499999999999858, 0.5000000000001137, -0.15000000000000568), (0.25, 0.5, -0.2))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6bc40&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.2499999999999858, 0.5000000000001137, -0.15000000000000568), (0.25, 0.5, -0.2))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6bc40&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[0.5-0.5-0]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.125, 0.5, -0.09999999999999432), (0.0, 0.5, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f48220&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.125, 0.5, -0.09999999999999432), (0.0, 0.5, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f48220&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[0.5-0.5-1]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25, 0.375, -0.09999999999999432), (0.25, 0.25, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f488b0&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25, 0.375, -0.09999999999999432), (0.25, 0.25, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f488b0&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[0.5-0.5-2]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25, 0.5, -0.22499999999999432), (0.25, 0.5, -0.35))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f48e50&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25, 0.5, -0.22499999999999432), (0.25, 0.5, -0.35))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f48e50&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[9.80665-0.01-0]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.20096675000047526, 0.49999999999954525, -0.09999999999976694), (0.1519335, 0.5, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f494e0&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.20096675000047526, 0.49999999999954525, -0.09999999999976694), (0.1519335, 0.5, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f494e0&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[9.80665-0.01-1]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.24999999999977263, 0.4509667499974057, -0.09999999999976694), (0.25, 0.4019335, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac47918fd30&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.24999999999977263, 0.4509667499974057, -0.09999999999976694), (0.25, 0.4019335, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac47918fd30&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[9.80665-0.01-2]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.24999999999977263, 0.49999999999954525, -0.14903324999977485), (0.25, 0.5, -0.1980665))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6ba60&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.24999999999977263, 0.49999999999954525, -0.14903324999977485), (0.25, 0.5, -0.1980665))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6ba60&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[9.80665-0.05-0]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.004833750000159398, 0.49999999999954525, -0.10000000000005116), (-0.2403325, 0.5, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6b4c0&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.004833750000159398, 0.49999999999954525, -0.10000000000005116), (-0.2403325, 0.5, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6b4c0&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[9.80665-0.05-1]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25000000000005684, 0.25483375000021624, -0.10000000000005116), (0.25, 0.009667499999999996, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6af20&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25000000000005684, 0.25483375000021624, -0.10000000000005116), (0.25, 0.009667499999999996, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6af20&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[9.80665-0.05-2]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25000000000005684, 0.49999999999954525, -0.3451662500000907), (0.25, 0.5, -0.5903325))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6a7a0&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25000000000005684, 0.49999999999954525, -0.3451662500000907), (0.25, 0.5, -0.5903325))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6a7a0&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[9.80665-0.2-0]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (-0.7306650000000303, 0.5000000000001137, -0.10000000000001563), (-1.71133, 0.5, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f69e40&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (-0.7306650000000303, 0.5000000000001137, -0.10000000000001563), (-1.71133, 0.5, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f69e40&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[9.80665-0.2-1]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.2499999999999858, -0.48066500000004453, -0.10000000000001563), (0.25, -1.46133, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f69c60&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.2499999999999858, -0.48066500000004453, -0.10000000000001563), (0.25, -1.46133, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f69c60&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[9.80665-0.2-2]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.2499999999999858, 0.5000000000001137, -1.0806650000000317), (0.25, 0.5, -2.06133))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f69b70&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.2499999999999858, 0.5000000000001137, -1.0806650000000317), (0.25, 0.5, -2.06133))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f69b70&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[9.80665-0.5-0]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (-2.2016624999999976, 0.5, -0.09999999999999432), (-4.653325, 0.5, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f69210&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (-2.2016624999999976, 0.5, -0.09999999999999432), (-4.653325, 0.5, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f69210&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[9.80665-0.5-1]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25, -1.9516625000001113, -0.09999999999999432), (0.25, -4.403325, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac4791eff10&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25, -1.9516625000001113, -0.09999999999999432), (0.25, -4.403325, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac4791eff10&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_freeflight_all_axes_and_step_sizes[9.80665-0.5-2]" time="0.001"><failure message="AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25, 0.5, -2.551662499999992), (0.25, 0.5, -5.003324999999999))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f49030&gt;)">tests/test_scene_collision_freeflight_velocity.py:61: in test_freeflight_all_axes_and_step_sizes
+    _assert_close(e.velocity, v, "SCENE_FREEFLIGHT_ENDPOINT_VELOCITY")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_FREEFLIGHT_ENDPOINT_VELOCITY', (0.25, 0.5, -2.551662499999992), (0.25, 0.5, -5.003324999999999))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f49030&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_noncontact_keeps_instantaneous_endpoint_velocity" time="0.000"><failure message="AssertionError: ('SCENE_ENDPOINT_IS_NOT_MEAN', (0.25000000000005684, 0.0, -0.0999999999999801), (0.25, -0.5, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f486d0&gt;)">tests/test_scene_collision_freeflight_velocity.py:68: in test_noncontact_keeps_instantaneous_endpoint_velocity
+    _assert_close(s.entities[a].velocity, expected, "SCENE_ENDPOINT_IS_NOT_MEAN")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_ENDPOINT_IS_NOT_MEAN', (0.25000000000005684, 0.0, -0.0999999999999801), (0.25, -0.5, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f486d0&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_noncontact_keeps_original_physics_state" time="0.001"><failure message="AssertionError: SCENE_NO_CONTACT_RESEEDED&#10;assert {'p0': (64.10..., 'mass': 2.5} == {'p0': (64.0,..., 'mass': 2.5}&#10;  &#10;  Omitting 1 identical items, use -vv to show&#10;  Differing items:&#10;  {'t_ref': 0.4} != {'t_ref': 0.0}&#10;  {'v0': (0.25000000000005684, -1.4999999999986358, -0.0999999999999801)} != {'v0': (0.25, 0.5, -0.1)}&#10;  {'p0': (64.10000000000002, 999.7000000000003, 63.96000000000001)} != {'p0': (64.0, 1000.0, 64.0)}&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    {&#10;[+22 more lines; full report in element text]">tests/test_scene_collision_freeflight_velocity.py:75: in test_noncontact_keeps_original_physics_state
+    assert s.entities[a].attrs["physics_state"] == original, "SCENE_NO_CONTACT_RESEEDED"
+E   AssertionError: SCENE_NO_CONTACT_RESEEDED
+E   assert {'p0': (64.10..., 'mass': 2.5} == {'p0': (64.0,..., 'mass': 2.5}
+E     
+E     Omitting 1 identical items, use -vv to show
+E     Differing items:
+E     {'t_ref': 0.4} != {'t_ref': 0.0}
+E     {'v0': (0.25000000000005684, -1.4999999999986358, -0.0999999999999801)} != {'v0': (0.25, 0.5, -0.1)}
+E     {'p0': (64.10000000000002, 999.7000000000003, 63.96000000000001)} != {'p0': (64.0, 1000.0, 64.0)}
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E           'p0': (
+E     -         64.0,
+E     -         1000.0,
+E     -         64.0,
+E     +         64.10000000000002,
+E     +         999.7000000000003,
+E     +         63.96000000000001,
+E           ),
+E           'v0': (
+E     -         0.25,
+E     -         0.5,
+E     -         -0.1,
+E     +         0.25000000000005684,
+E     +         -1.4999999999986358,
+E     +         -0.0999999999999801,
+E           ),
+E     -     't_ref': 0.0,
+E     ?                ^
+E     +     't_ref': 0.4,
+E     ?                ^
+E           'mass': 2.5,
+E       }</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_physics_readout_matches_public_noncontact_endpoint" time="0.001"><failure message="AssertionError: SCENE_READOUT_ENDPOINT_DRIFT&#10;assert (0.2500000000...9999999999801) == (0.25, -0.5, -0.1)&#10;  &#10;  At index 0 diff: 0.25000000000005684 != 0.25&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    (&#10;  +     0.25000000000005684,&#10;  -     0.25,&#10;  ?       ^^&#10;  +     0.0,&#10;  ?       ^&#10;  +     -0.0999999999999801,&#10;  -     -0.5,&#10;  -     -0.1,&#10;    )">tests/test_scene_collision_freeflight_velocity.py:82: in test_physics_readout_matches_public_noncontact_endpoint
+    assert e.velocity == e.attrs["physics_readout"]["vel"], "SCENE_READOUT_ENDPOINT_DRIFT"
+E   AssertionError: SCENE_READOUT_ENDPOINT_DRIFT
+E   assert (0.2500000000...9999999999801) == (0.25, -0.5, -0.1)
+E     
+E     At index 0 diff: 0.25000000000005684 != 0.25
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       (
+E     +     0.25000000000005684,
+E     -     0.25,
+E     ?       ^^
+E     +     0.0,
+E     ?       ^
+E     +     -0.0999999999999801,
+E     -     -0.5,
+E     -     -0.1,
+E       )</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_adding_a_distant_box_keeps_the_same_closed_form_trajectory[0]" time="0.001" /><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_adding_a_distant_box_keeps_the_same_closed_form_trajectory[1]" time="0.000" /><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_adding_a_distant_box_keeps_the_same_closed_form_trajectory[2]" time="0.001"><failure message="AssertionError: ('SCENE_BOX_COUNT_CHANGED_FREEFLIGHT', (64.25000000000006, 997.750000000002, 63.90000000000002), (64.25, 995.5, 63.9))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f697b0&gt;)">tests/test_scene_collision_freeflight_velocity.py:90: in test_adding_a_distant_box_keeps_the_same_closed_form_trajectory
+    _assert_close(s.entities[a].pos, p, "SCENE_BOX_COUNT_CHANGED_FREEFLIGHT")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_BOX_COUNT_CHANGED_FREEFLIGHT', (64.25000000000006, 997.750000000002, 63.90000000000002), (64.25, 995.5, 63.9))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f697b0&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_noncontact_obb_keeps_endpoint_and_initial_state" time="0.001"><failure message="AssertionError: ('SCENE_OBB_FREEFLIGHT_POSITION', (64.20000000000005, 998.6000000000013, 63.920000000000016), (64.2, 997.1999999999999, 63.92))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6a3e0&gt;)">tests/test_scene_collision_freeflight_velocity.py:99: in test_noncontact_obb_keeps_endpoint_and_initial_state
+    _assert_close(s.entities[a].pos, p, "SCENE_OBB_FREEFLIGHT_POSITION")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_OBB_FREEFLIGHT_POSITION', (64.20000000000005, 998.6000000000013, 63.920000000000016), (64.2, 997.1999999999999, 63.92))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6a3e0&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_real_collision_still_reseeds_at_the_correct_contact_surface" time="0.001" /><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_initial_overlap_still_reseeds_after_penetration_correction" time="0.000" /><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_colliding_pair_does_not_reseed_a_third_free_entity[False]" time="0.001"><failure message="AssertionError: ('SCENE_THIRD_ENTITY_VELOCITY_CHANGED', (0.25, 0.4375, -0.09999999999999432), (0.25, 0.375, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f694e0&gt;)">tests/test_scene_collision_freeflight_velocity.py:156: in test_colliding_pair_does_not_reseed_a_third_free_entity
+    _assert_close(free.velocity, v, "SCENE_THIRD_ENTITY_VELOCITY_CHANGED")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_THIRD_ENTITY_VELOCITY_CHANGED', (0.25, 0.4375, -0.09999999999999432), (0.25, 0.375, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f694e0&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_colliding_pair_does_not_reseed_a_third_free_entity[True]" time="0.001"><failure message="AssertionError: ('SCENE_THIRD_ENTITY_VELOCITY_CHANGED', (0.25, 0.4375, -0.09999999999999432), (0.25, 0.375, -0.1))&#10;assert False&#10; +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6a890&gt;)">tests/test_scene_collision_freeflight_velocity.py:156: in test_colliding_pair_does_not_reseed_a_third_free_entity
+    _assert_close(free.velocity, v, "SCENE_THIRD_ENTITY_VELOCITY_CHANGED")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_THIRD_ENTITY_VELOCITY_CHANGED', (0.25, 0.4375, -0.09999999999999432), (0.25, 0.375, -0.1))
+E   assert False
+E    +  where False = all(&lt;generator object _assert_close.&lt;locals&gt;.&lt;genexpr&gt; at 0x7ac478f6a890&gt;)</failure></testcase><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_kinematic_velocity_still_records_collision_corrected_displacement" time="0.000" /><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_start_contact_keeps_existing_reseed_semantics[1.0-10.0-10.0]" time="0.000" /><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_start_contact_keeps_existing_reseed_semantics[0.0-0.0-9.0]" time="0.000" /><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_start_contact_keeps_existing_reseed_semantics[0.25--3.0-9.25]" time="0.000" /><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_fully_overlapping_static_boxes_keep_existing_contact_velocity" time="0.000" /><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_end_of_tick_touch_is_not_a_collision_and_keeps_endpoint_velocity" time="0.001"><failure message="AssertionError: SCENE_END_TOUCH_REPLACED_ENDPOINT&#10;assert (10.0, 0.0, 0.0) == (10.0, -0.0625, 0.0)&#10;  &#10;  At index 1 diff: 0.0 != -0.0625&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    (&#10;        10.0,&#10;  -     -0.0625,&#10;  ?     -   ---&#10;  +     0.0,&#10;        0.0,&#10;    )">tests/test_scene_collision_freeflight_velocity.py:220: in test_end_of_tick_touch_is_not_a_collision_and_keeps_endpoint_velocity
+    assert e.velocity == (10., -.0625, 0.), "SCENE_END_TOUCH_REPLACED_ENDPOINT"
+E   AssertionError: SCENE_END_TOUCH_REPLACED_ENDPOINT
+E   assert (10.0, 0.0, 0.0) == (10.0, -0.0625, 0.0)
+E     
+E     At index 1 diff: 0.0 != -0.0625
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       (
+E           10.0,
+E     -     -0.0625,
+E     ?     -   ---
+E     +     0.0,
+E           0.0,
+E       )</failure></testcase></testsuite></testsuites>

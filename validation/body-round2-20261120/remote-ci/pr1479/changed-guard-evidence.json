@@ -1,0 +1,242 @@
+{
+  "pr": 1479,
+  "head": "13952c82874fb9ee19a4f1b660e3144134367a53",
+  "all_complete": true,
+  "all_success": true,
+  "semantic_evidence_verified": true,
+  "changed_guard_paths": [
+    "tests/test_issue1959_reseed_physics_guard.py",
+    "tests/test_scene_collision_freeflight_velocity.py"
+  ],
+  "changed_guard_outcomes": [
+    {
+      "job_id": 136380486612,
+      "name": "gate (py3.12 · 依赖下界)",
+      "outcomes": {
+        "tests/test_issue1959_reseed_physics_guard.py": {
+          "counts": {
+            "PASSED": 4
+          },
+          "lines": [
+            "tests/test_issue1959_reseed_physics_guard.py::test_reseed_keeps_beta_radius_mass_with_collision_boxes PASSED [ 30%]",
+            "tests/test_issue1959_reseed_physics_guard.py::test_reseed_control_group_unchanged PASSED [ 30%]",
+            "tests/test_issue1959_reseed_physics_guard.py::test_static_entity_physics_state_not_reseeded PASSED [ 30%]",
+            "tests/test_issue1959_reseed_physics_guard.py::test_rolling_not_degraded_after_reseed PASSED [ 30%]"
+          ]
+        },
+        "tests/test_scene_collision_freeflight_velocity.py": {
+          "counts": {
+            "PASSED": 41
+          },
+          "lines": [
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.01-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.01-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.01-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.05-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.05-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.05-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.2-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.2-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.2-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.5-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.5-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.5-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.01-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.01-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.01-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.05-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.05-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.05-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.2-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.2-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.2-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.5-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.5-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.5-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_noncontact_keeps_instantaneous_endpoint_velocity PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_noncontact_keeps_original_physics_state PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_physics_readout_matches_public_noncontact_endpoint PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_adding_a_distant_box_keeps_the_same_closed_form_trajectory[0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_adding_a_distant_box_keeps_the_same_closed_form_trajectory[1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_adding_a_distant_box_keeps_the_same_closed_form_trajectory[2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_noncontact_obb_keeps_endpoint_and_initial_state PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_real_collision_still_reseeds_at_the_correct_contact_surface PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_initial_overlap_still_reseeds_after_penetration_correction PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_colliding_pair_does_not_reseed_a_third_free_entity[False] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_colliding_pair_does_not_reseed_a_third_free_entity[True] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_kinematic_velocity_still_records_collision_corrected_displacement PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_start_contact_keeps_existing_reseed_semantics[1.0-10.0-10.0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_start_contact_keeps_existing_reseed_semantics[0.0-0.0-9.0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_start_contact_keeps_existing_reseed_semantics[0.25--3.0-9.25] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_fully_overlapping_static_boxes_keep_existing_contact_velocity PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_end_of_tick_touch_is_not_a_collision_and_keeps_endpoint_velocity PASSED [ 82%]"
+          ]
+        }
+      }
+    },
+    {
+      "job_id": 136380487147,
+      "name": "gate (py3.12)",
+      "outcomes": {
+        "tests/test_issue1959_reseed_physics_guard.py": {
+          "counts": {
+            "PASSED": 4
+          },
+          "lines": [
+            "tests/test_issue1959_reseed_physics_guard.py::test_reseed_keeps_beta_radius_mass_with_collision_boxes PASSED [ 30%]",
+            "tests/test_issue1959_reseed_physics_guard.py::test_reseed_control_group_unchanged PASSED [ 30%]",
+            "tests/test_issue1959_reseed_physics_guard.py::test_static_entity_physics_state_not_reseeded PASSED [ 30%]",
+            "tests/test_issue1959_reseed_physics_guard.py::test_rolling_not_degraded_after_reseed PASSED [ 30%]"
+          ]
+        },
+        "tests/test_scene_collision_freeflight_velocity.py": {
+          "counts": {
+            "PASSED": 41
+          },
+          "lines": [
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.01-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.01-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.01-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.05-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.05-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.05-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.2-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.2-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.2-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.5-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.5-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.5-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.01-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.01-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.01-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.05-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.05-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.05-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.2-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.2-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.2-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.5-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.5-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.5-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_noncontact_keeps_instantaneous_endpoint_velocity PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_noncontact_keeps_original_physics_state PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_physics_readout_matches_public_noncontact_endpoint PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_adding_a_distant_box_keeps_the_same_closed_form_trajectory[0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_adding_a_distant_box_keeps_the_same_closed_form_trajectory[1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_adding_a_distant_box_keeps_the_same_closed_form_trajectory[2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_noncontact_obb_keeps_endpoint_and_initial_state PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_real_collision_still_reseeds_at_the_correct_contact_surface PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_initial_overlap_still_reseeds_after_penetration_correction PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_colliding_pair_does_not_reseed_a_third_free_entity[False] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_colliding_pair_does_not_reseed_a_third_free_entity[True] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_kinematic_velocity_still_records_collision_corrected_displacement PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_start_contact_keeps_existing_reseed_semantics[1.0-10.0-10.0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_start_contact_keeps_existing_reseed_semantics[0.0-0.0-9.0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_start_contact_keeps_existing_reseed_semantics[0.25--3.0-9.25] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_fully_overlapping_static_boxes_keep_existing_contact_velocity PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_end_of_tick_touch_is_not_a_collision_and_keeps_endpoint_velocity PASSED [ 82%]"
+          ]
+        }
+      }
+    },
+    {
+      "job_id": 136380487206,
+      "name": "gate (py3.13)",
+      "outcomes": {
+        "tests/test_issue1959_reseed_physics_guard.py": {
+          "counts": {
+            "PASSED": 4
+          },
+          "lines": [
+            "tests/test_issue1959_reseed_physics_guard.py::test_reseed_keeps_beta_radius_mass_with_collision_boxes PASSED [ 30%]",
+            "tests/test_issue1959_reseed_physics_guard.py::test_reseed_control_group_unchanged PASSED [ 30%]",
+            "tests/test_issue1959_reseed_physics_guard.py::test_static_entity_physics_state_not_reseeded PASSED [ 30%]",
+            "tests/test_issue1959_reseed_physics_guard.py::test_rolling_not_degraded_after_reseed PASSED [ 30%]"
+          ]
+        },
+        "tests/test_scene_collision_freeflight_velocity.py": {
+          "counts": {
+            "PASSED": 41
+          },
+          "lines": [
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.01-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.01-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.01-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.05-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.05-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.05-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.2-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.2-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.2-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.5-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.5-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[0.5-0.5-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.01-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.01-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.01-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.05-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.05-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.05-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.2-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.2-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.2-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.5-0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.5-1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_freeflight_all_axes_and_step_sizes[9.80665-0.5-2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_noncontact_keeps_instantaneous_endpoint_velocity PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_noncontact_keeps_original_physics_state PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_physics_readout_matches_public_noncontact_endpoint PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_adding_a_distant_box_keeps_the_same_closed_form_trajectory[0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_adding_a_distant_box_keeps_the_same_closed_form_trajectory[1] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_adding_a_distant_box_keeps_the_same_closed_form_trajectory[2] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_noncontact_obb_keeps_endpoint_and_initial_state PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_real_collision_still_reseeds_at_the_correct_contact_surface PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_initial_overlap_still_reseeds_after_penetration_correction PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_colliding_pair_does_not_reseed_a_third_free_entity[False] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_colliding_pair_does_not_reseed_a_third_free_entity[True] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_kinematic_velocity_still_records_collision_corrected_displacement PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_start_contact_keeps_existing_reseed_semantics[1.0-10.0-10.0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_start_contact_keeps_existing_reseed_semantics[0.0-0.0-9.0] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_start_contact_keeps_existing_reseed_semantics[0.25--3.0-9.25] PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_fully_overlapping_static_boxes_keep_existing_contact_velocity PASSED [ 82%]",
+            "tests/test_scene_collision_freeflight_velocity.py::test_end_of_tick_touch_is_not_a_collision_and_keeps_endpoint_velocity PASSED [ 82%]"
+          ]
+        }
+      }
+    }
+  ],
+  "runs": [
+    {
+      "id": 44763098857,
+      "name": "gate",
+      "head": "13952c82874fb9ee19a4f1b660e3144134367a53",
+      "attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44763098857"
+    },
+    {
+      "id": 44763099047,
+      "name": "pr-lint",
+      "head": "13952c82874fb9ee19a4f1b660e3144134367a53",
+      "attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44763099047"
+    }
+  ],
+  "title_jobs": [
+    {
+      "job_id": 136380486960,
+      "name": "PR 标题约定（type(scope) + 摘要）",
+      "url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44763099047/job/136380486960",
+      "head_sha": "13952c82874fb9ee19a4f1b660e3144134367a53",
+      "status": "completed",
+      "conclusion": "success",
+      "running_steps": [],
+      "raw_log_sha256": "5a2638833f100609437c3c1d55c626ce3e77bf21d0383385a6b53d194548a743",
+      "raw_log_bytes": 20750,
+      "failed_steps": []
+    }
+  ]
+}

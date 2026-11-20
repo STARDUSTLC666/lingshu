@@ -1,0 +1,15 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____________ test_noncontact_keeps_instantaneous_endpoint_velocity _____________
+tests/test_scene_collision_freeflight_velocity.py:68: in test_noncontact_keeps_instantaneous_endpoint_velocity
+    _assert_close(s.entities[a].velocity, expected, "SCENE_ENDPOINT_IS_NOT_MEAN")
+tests/test_scene_collision_freeflight_velocity.py:46: in _assert_close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('SCENE_ENDPOINT_IS_NOT_MEAN', (0.25000000000005684, 0.0, -0.0999999999999801), (0.25, -0.5, -0.1))
+E   assert False
+E    +  where False = all(<generator object _assert_close.<locals>.<genexpr> at 0x7ccc4d127010>)
+=========================== short test summary info ============================
+FAILED tests/test_scene_collision_freeflight_velocity.py::test_noncontact_keeps_instantaneous_endpoint_velocity - AssertionError: ('SCENE_ENDPOINT_IS_NOT_MEAN', (0.25000000000005684, 0.0, -0.0999999999999801), (0.25, -0.5, -0.1))
+assert False
+ +  where False = all(<generator object _assert_close.<locals>.<genexpr> at 0x7ccc4d127010>)
+1 failed in 0.11s

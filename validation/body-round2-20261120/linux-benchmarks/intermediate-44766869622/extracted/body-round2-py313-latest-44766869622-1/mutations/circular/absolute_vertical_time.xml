@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.078" timestamp="2026-11-20T15:50:26.963344+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_circular_time_residual_guard" name="test_shifted_helix_is_anchored_at_first_sample" time="0.001"><failure message="AssertionError: helix center must be at t_ref&#10;assert 23.000000000000103 == 3.0 ± 1.0e-10&#10;  &#10;  comparison failed&#10;  Obtained: 23.000000000000103&#10;  Expected: 3.0 ± 1.0e-10">tests/test_circular_time_residual_guard.py:37: in test_shifted_helix_is_anchored_at_first_sample
+    assert model["center"][up] == pytest.approx(3.0, abs=1e-10), "helix center must be at t_ref"
+E   AssertionError: helix center must be at t_ref
+E   assert 23.000000000000103 == 3.0 ± 1.0e-10
+E     
+E     comparison failed
+E     Obtained: 23.000000000000103
+E     Expected: 3.0 ± 1.0e-10</failure></testcase></testsuite></testsuites>

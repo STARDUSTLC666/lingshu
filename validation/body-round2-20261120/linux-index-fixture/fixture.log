@@ -1,0 +1,26 @@
+test_final_summary_is_indexed_and_mutable_or_temporary_files_are_excluded (__main__.ArtifactIndexFixture.test_final_summary_is_indexed_and_mutable_or_temporary_files_are_excluded) ... ok
+test_final_summary_tampering_is_detected (__main__.ArtifactIndexFixture.test_final_summary_tampering_is_detected) ... ok
+test_live_driver_log_append_does_not_invalidate_listed_hashes (__main__.ArtifactIndexFixture.test_live_driver_log_append_does_not_invalidate_listed_hashes) ... ok
+test_same_size_tampering_of_a_listed_file_is_detected (__main__.ArtifactIndexFixture.test_same_size_tampering_of_a_listed_file_is_detected) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.030s
+
+OK
+{
+  "scope": "artifact-index metadata fixtures only; no production or benchmark execution",
+  "tests": 4,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "ok": true,
+  "positive": [
+    "final validation summary is indexed",
+    "live driver.log append leaves listed hashes valid",
+    "tmp/sandbox/databases/self are excluded"
+  ],
+  "negative": [
+    "same-size listed-file tampering is detected",
+    "summary tampering is detected"
+  ]
+}

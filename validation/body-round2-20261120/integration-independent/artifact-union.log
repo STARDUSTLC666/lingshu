@@ -1,0 +1,6 @@
+{
+  "verdict": "PASS",
+  "all_changed_paths": 52,
+  "nonproduction_artifacts": 40,
+  "source_and_two_registration_files": "independently checked by audit_twelve_integration.py"
+}

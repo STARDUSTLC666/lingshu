@@ -1,0 +1,188 @@
+{
+  "core_checks_ok": true,
+  "source_sha": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+  "baseline_sha": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "metadata_head": "f769b3ac33eb5221ad66f6a4384aa6429b26e597",
+  "checks": [
+    "metadata head f769b3a and actual benchmark source5226860/baseline d74848f separately proven; all declared measured input files match Git blobs",
+    "all ten benchmark/replay outer command exit codes zero and both original stream hashes match",
+    "core twelve workloads: fixed oracle0, baseline discrimination and9 timing/3 memory samples",
+    "circular7146/7146 independent analytic checks and baseline red; all latency samples",
+    "numeric three exact same-input/weights A/B workloads; divisible-grid output unchanged",
+    "world28 rows/14 comparisons: fixed oracle0, baseline red, all four unchanged controls in both modes",
+    "all27 named mutant source hashes independently reconstructed; each exactly targeted XML assertion red and no errors/skips; fixed/baseline XML counts exact"
+  ],
+  "mutants": [
+    {
+      "family": "core",
+      "name": "omit_birth_clipping",
+      "failed_test": "test_newborn_uses_only_its_post_birth_span[0.0-context]",
+      "assertion": "newborn was aged before its birth"
+    },
+    {
+      "family": "core",
+      "name": "omit_context_leg",
+      "failed_test": "test_newborn_uses_only_its_post_birth_span[1.0-context]",
+      "assertion": "newborn was aged before its birth"
+    },
+    {
+      "family": "core",
+      "name": "omit_knowledge_leg",
+      "failed_test": "test_newborn_uses_only_its_post_birth_span[1.0-knowledge]",
+      "assertion": "newborn was aged before its birth"
+    },
+    {
+      "family": "core",
+      "name": "omit_edge_leg",
+      "failed_test": "test_newborn_uses_only_its_post_birth_span[1.0-edge]",
+      "assertion": "newborn was aged before its birth"
+    },
+    {
+      "family": "core",
+      "name": "accept_future_birth_as_comparable",
+      "failed_test": "test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-1800604801.0]",
+      "assertion": "noncomparable creation metadata froze"
+    },
+    {
+      "family": "core",
+      "name": "freeze_all_newborns",
+      "failed_test": "test_newborn_uses_only_its_post_birth_span[60.0-context]",
+      "assertion": "newborn was aged before its birth"
+    },
+    {
+      "family": "core",
+      "name": "decay_even_when_elapsed_is_zero",
+      "failed_test": "test_zero_age_and_repeated_now_do_not_decay[context-1.0]",
+      "assertion": "zero elapsed time changed a row"
+    },
+    {
+      "family": "core",
+      "name": "clip_first_clock_tick",
+      "failed_test": "test_first_clock_tick_keeps_the_existing_one_period_bootstrap[context]",
+      "assertion": "first clock tick lost its bootstrap decay"
+    },
+    {
+      "family": "core",
+      "name": "disable_old_row_decay",
+      "failed_test": "test_old_and_new_rows_have_independent_ages_in_one_tick[context]",
+      "assertion": "old row missed downtime decay"
+    },
+    {
+      "family": "circular",
+      "name": "absolute_angle_time",
+      "failed_test": "test_epoch_angular_and_vertical_fits_remain_nonsingular",
+      "assertion": "epoch helix must remain nonsingular"
+    },
+    {
+      "family": "circular",
+      "name": "absolute_vertical_time",
+      "failed_test": "test_shifted_helix_is_anchored_at_first_sample",
+      "assertion": "helix center must be at t_ref"
+    },
+    {
+      "family": "circular",
+      "name": "omit_vertical_residual",
+      "failed_test": "test_vertical_fit_residual_matches_centered_regression_oracle",
+      "assertion": "vertical residual must contribute to 3D coordinate RMS"
+    },
+    {
+      "family": "circular",
+      "name": "horizontal_only_denominator",
+      "failed_test": "test_planar_noise_uses_same_three_coordinate_rms",
+      "assertion": "all fits must use three-coordinate normalization"
+    },
+    {
+      "family": "circular",
+      "name": "lost_reference_time",
+      "failed_test": "test_epoch_angular_and_vertical_fits_remain_nonsingular",
+      "assertion": "epoch helix position drifted"
+    },
+    {
+      "family": "circular",
+      "name": "prediction_uses_absolute_angle",
+      "failed_test": "test_planar_noise_uses_same_three_coordinate_rms",
+      "assertion": "all fits must use three-coordinate normalization"
+    },
+    {
+      "family": "numeric",
+      "name": "drop_remainder_rows",
+      "failed_test": "test_last_cell_energy_and_color_reach_bottom_right[7-6]",
+      "assertion": "last-cell evidence was lost"
+    },
+    {
+      "family": "numeric",
+      "name": "drop_remainder_columns",
+      "failed_test": "test_last_cell_energy_and_color_reach_bottom_right[6-7]",
+      "assertion": "last-cell evidence was lost"
+    },
+    {
+      "family": "numeric",
+      "name": "energy_uses_truncated_partition",
+      "failed_test": "test_last_cell_energy_and_color_reach_bottom_right[4-4]",
+      "assertion": "last-cell evidence was lost"
+    },
+    {
+      "family": "numeric",
+      "name": "classification_uses_truncated_partition",
+      "failed_test": "test_last_cell_energy_and_color_reach_bottom_right[4-4]",
+      "assertion": "last-cell evidence was lost"
+    },
+    {
+      "family": "numeric",
+      "name": "allow_empty_dominant_region",
+      "failed_test": "test_dark_tiny_lattice_does_not_classify_empty_quadrants[1-1]",
+      "assertion": "nonempty dominant region disappeared"
+    },
+    {
+      "family": "numeric",
+      "name": "fixed_one_ninth_area_baseline",
+      "failed_test": "test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-1.0-5-5]",
+      "assertion": "uniform field produced extra detections from unequal quadrant areas"
+    },
+    {
+      "family": "world",
+      "name": "replace_endpoint_with_average_again",
+      "failed_test": "test_noncontact_keeps_instantaneous_endpoint_velocity",
+      "assertion": "SCENE_ENDPOINT_IS_NOT_MEAN"
+    },
+    {
+      "family": "world",
+      "name": "reseed_unmodified_endpoint",
+      "failed_test": "test_noncontact_keeps_original_physics_state",
+      "assertion": "SCENE_NO_CONTACT_RESEEDED"
+    },
+    {
+      "family": "world",
+      "name": "skip_reseed_for_real_contacts",
+      "failed_test": "test_real_collision_still_reseeds_at_the_correct_contact_surface",
+      "assertion": "SCENE_CONTACT_WAS_NOT_RESEEDED"
+    },
+    {
+      "family": "world",
+      "name": "drop_contact_reseed",
+      "failed_test": "test_real_collision_still_reseeds_at_the_correct_contact_surface",
+      "assertion": "SCENE_CONTACT_WAS_NOT_RESEEDED"
+    },
+    {
+      "family": "world",
+      "name": "keep_precollision_kinematic_velocity",
+      "failed_test": "test_kinematic_velocity_still_records_collision_corrected_displacement",
+      "assertion": "SCENE_KINEMATIC_DISPLACEMENT_CHANGED"
+    },
+    {
+      "family": "world",
+      "name": "use_position_equality_instead_of_contact",
+      "failed_test": "test_fully_overlapping_static_boxes_keep_existing_contact_velocity",
+      "assertion": "SCENE_STATIC_CONTACT_VELOCITY_CHANGED"
+    }
+  ],
+  "named_mutants_verified": 27,
+  "artifact_index_mismatches": [
+    "driver.log"
+  ],
+  "artifact_index_note": "driver.log is a live tee stream; original inventory may predate the final driver summary. Original bytes remain unchanged; independent post-download hashes are separate.",
+  "artifact_name": "body-round2-py313-latest-44766869622-1",
+  "artifact_id": 14643868512,
+  "artifact_zip_sha256": "863f99866e4668834ce5f86ccaccc161e3c38f260dc8be4d19cb19f4873bb12f",
+  "api_artifact_digest": "sha256:863f99866e4668834ce5f86ccaccc161e3c38f260dc8be4d19cb19f4873bb12f"
+}

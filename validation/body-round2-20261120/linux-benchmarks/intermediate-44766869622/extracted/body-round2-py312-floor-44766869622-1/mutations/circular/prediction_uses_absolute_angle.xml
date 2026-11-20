@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.056" timestamp="2026-11-20T15:49:49.178633+00:00" hostname="ip-10-0-137-17"><testcase classname="tests.test_circular_time_residual_guard" name="test_planar_noise_uses_same_three_coordinate_rms" time="0.001"><failure message="AssertionError: all fits must use three-coordinate normalization&#10;assert 0.462079569885686 == 0.020097416995108582 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 0.462079569885686&#10;  Expected: 0.020097416995108582 ± 1.0e-12">tests/test_circular_time_residual_guard.py:106: in test_planar_noise_uses_same_three_coordinate_rms
+    assert model["residual_rms"] == pytest.approx(rms, rel=1e-12), "all fits must use three-coordinate normalization"
+E   AssertionError: all fits must use three-coordinate normalization
+E   assert 0.462079569885686 == 0.020097416995108582 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 0.462079569885686
+E     Expected: 0.020097416995108582 ± 1.0e-12</failure></testcase></testsuite></testsuites>

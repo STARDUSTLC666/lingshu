@@ -1,0 +1,98 @@
+[
+  {
+    "pr": 1469,
+    "head": "cc68a82baace16e92ff6ce770330b65102a530a5",
+    "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "state": "open",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1469",
+    "title": "fix(world): encode motion group IDs without delimiter collisions"
+  },
+  {
+    "pr": 1470,
+    "head": "433befa7b356eebecbc457ecd8f8a123ec1540cc",
+    "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "state": "open",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1470",
+    "title": "fix(vision): composite alpha before lineart detection"
+  },
+  {
+    "pr": 1471,
+    "head": "39d379552f34026ef46ad0515831319b1494a5d3",
+    "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "state": "open",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1471",
+    "title": "fix(world): test face normals for skew SAT boxes"
+  },
+  {
+    "pr": 1472,
+    "head": "a663512dd0fbc44a9fb08a55751951009586d172",
+    "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "state": "open",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1472",
+    "title": "fix(core): rebuild novelty cache after mixed row rewrite"
+  },
+  {
+    "pr": 1473,
+    "head": "cff189b3438623feaebdf1a874fafdd03080acb1",
+    "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "state": "open",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1473",
+    "title": "fix(nn): choose nearest odd-r cell by center distance"
+  },
+  {
+    "pr": 1474,
+    "head": "fb6c9cabc939a6defcc44ef661b3048d47155d87",
+    "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "state": "open",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1474",
+    "title": "fix(core): normalize skill search limits"
+  },
+  {
+    "pr": 1475,
+    "head": "e0771a810b8846676f3545542b2e70d5e0011467",
+    "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "state": "open",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1475",
+    "title": "fix(world): 修正零初速释放单摆椭圆解及近分离点精度"
+  },
+  {
+    "pr": 1476,
+    "head": "1ab5cc7f295ed5748b50c7ffde26cf2a34663204",
+    "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "state": "open",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1476",
+    "title": "fix(anim): accept top-level motions with strict spec normalization"
+  },
+  {
+    "pr": 1477,
+    "head": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+    "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "state": "open",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1477",
+    "title": "fix(world): anchor circular fits and score vertical residuals"
+  },
+  {
+    "pr": 1478,
+    "head": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+    "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "state": "open",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1478",
+    "title": "fix(core): limit newborn decay to comparable post-birth time"
+  },
+  {
+    "pr": 1479,
+    "head": "13952c82874fb9ee19a4f1b660e3144134367a53",
+    "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "state": "open",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1479",
+    "title": "fix(world): preserve free-flight velocity without collision contact"
+  },
+  {
+    "pr": 1480,
+    "head": "a357dbbe96905848fd81b7249814576fb2743674",
+    "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "state": "open",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1480",
+    "title": "fix(nn): cover complete spatial partitions with area-aware evidence gates"
+  }
+]
