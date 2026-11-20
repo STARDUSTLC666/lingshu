@@ -1,0 +1,12 @@
+{
+  "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+  "records": [
+    {
+      "title": "[core/add_edge][P2·数据质量] 同一节点对可无限重复添加边——5 次 add_edge 产出 5 条独立边记录，图算法（find_cycles/shortest_path）被平行边污染",
+      "url": "https://github.com/FuRongJun-1999/lingshu/issues/801",
+      "state": "CLOSED",
+      "number": 801,
+      "comment_count": 0
+    }
+  ]
+}

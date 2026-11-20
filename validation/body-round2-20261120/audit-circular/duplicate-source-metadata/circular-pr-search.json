@@ -1,0 +1,40 @@
+{
+  "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+  "records": [
+    {
+      "title": "fix(world): #786——physics 真值三项（circular roundtrip / Reflector 负初速 / apex 世界高度）＋守卫",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/829",
+      "number": 829
+    },
+    {
+      "title": "fix(nn): query_match 报告排名字典自引用——非空查询结果可 JSON 序列化（#46）",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/63",
+      "number": 63
+    },
+    {
+      "title": "fix(world): #673——fit_damped 的 v0 去掉多余负号，六类 v0==predict_at(t_ref) 不变量恢复＋守卫",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/685",
+      "number": 685
+    },
+    {
+      "title": "feat(world): 世界模型自己长出三项能力——多面数自生成建模/物理运动预测/多面数呈现",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/560",
+      "number": 560
+    },
+    {
+      "title": "feat(bridges): 新增 Blender 侧世界模型桥——独立逐 tick 真值源 + OBJ/SHA-256 几何供货",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/472",
+      "number": 472
+    },
+    {
+      "title": "feat(world): 自生成多面数建模 + 物理运动预测 + 多面数呈现（rebase 拆分版）",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/584",
+      "number": 584
+    },
+    {
+      "title": "feat(world): 自生成多面数建模 + 物理运动预测 + 多面数呈现（rebase 拆分版）",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/583",
+      "number": 583
+    }
+  ]
+}

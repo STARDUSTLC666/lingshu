@@ -1,0 +1,1381 @@
+{
+  "upstream": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "sliding": [
+    {
+      "fraction": 0.0,
+      "normal_axis": "x",
+      "actual": [
+        10.0,
+        1.5,
+        10.0
+      ],
+      "expected": [
+        10.0,
+        1.5,
+        12.0
+      ],
+      "velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contacts": [
+        {
+          "i": "scene_42ae2a72",
+          "j": "scene_6f1232dc",
+          "hit": true,
+          "toi": 0.0,
+          "depth": 0.0,
+          "depth_at_dt": 0.0,
+          "axis": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ],
+      "correct": false
+    },
+    {
+      "fraction": 0.25,
+      "normal_axis": "x",
+      "actual": [
+        10.5,
+        1.5,
+        10.5
+      ],
+      "expected": [
+        10.5,
+        1.5,
+        12.0
+      ],
+      "velocity": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "contacts": [
+        {
+          "i": "scene_76419361",
+          "j": "scene_05304637",
+          "hit": true,
+          "toi": 0.25,
+          "depth": 0.0,
+          "depth_at_dt": 0.5,
+          "axis": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ],
+      "correct": false
+    },
+    {
+      "fraction": 0.5,
+      "normal_axis": "x",
+      "actual": [
+        11.0,
+        1.5,
+        11.0
+      ],
+      "expected": [
+        11.0,
+        1.5,
+        12.0
+      ],
+      "velocity": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "contacts": [
+        {
+          "i": "scene_ade084d8",
+          "j": "scene_9a48e7d2",
+          "hit": true,
+          "toi": 0.5,
+          "depth": 0.0,
+          "depth_at_dt": 1.0,
+          "axis": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ],
+      "correct": false
+    },
+    {
+      "fraction": 0.75,
+      "normal_axis": "x",
+      "actual": [
+        11.5,
+        1.5,
+        11.5
+      ],
+      "expected": [
+        11.5,
+        1.5,
+        12.0
+      ],
+      "velocity": [
+        1.5,
+        0.0,
+        1.5
+      ],
+      "contacts": [
+        {
+          "i": "scene_a9bbcca2",
+          "j": "scene_6b27ba6c",
+          "hit": true,
+          "toi": 0.75,
+          "depth": 0.0,
+          "depth_at_dt": 0.5,
+          "axis": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ],
+      "correct": false
+    },
+    {
+      "fraction": 1.0,
+      "normal_axis": "x",
+      "actual": [
+        12.0,
+        1.5,
+        12.0
+      ],
+      "expected": [
+        12.0,
+        1.5,
+        12.0
+      ],
+      "velocity": [
+        2.0,
+        0.0,
+        2.0
+      ],
+      "contacts": [
+        {
+          "i": "scene_5e7b3a41",
+          "j": "scene_8999c55a",
+          "hit": false,
+          "toi": null,
+          "depth": 0.0,
+          "depth_at_dt": 0.0,
+          "axis": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ],
+      "correct": true
+    },
+    {
+      "fraction": 0.0,
+      "normal_axis": "z",
+      "actual": [
+        10.0,
+        1.5,
+        10.0
+      ],
+      "expected": [
+        12.0,
+        1.5,
+        10.0
+      ],
+      "velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contacts": [
+        {
+          "i": "scene_000b2fbd",
+          "j": "scene_79cf626e",
+          "hit": true,
+          "toi": 0.0,
+          "depth": 0.0,
+          "depth_at_dt": 0.0,
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ],
+      "correct": false
+    },
+    {
+      "fraction": 0.25,
+      "normal_axis": "z",
+      "actual": [
+        10.5,
+        1.5,
+        10.5
+      ],
+      "expected": [
+        12.0,
+        1.5,
+        10.5
+      ],
+      "velocity": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "contacts": [
+        {
+          "i": "scene_aeb22b87",
+          "j": "scene_60a62272",
+          "hit": true,
+          "toi": 0.25,
+          "depth": 0.0,
+          "depth_at_dt": 0.5,
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ],
+      "correct": false
+    },
+    {
+      "fraction": 0.5,
+      "normal_axis": "z",
+      "actual": [
+        11.0,
+        1.5,
+        11.0
+      ],
+      "expected": [
+        12.0,
+        1.5,
+        11.0
+      ],
+      "velocity": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "contacts": [
+        {
+          "i": "scene_20b967e8",
+          "j": "scene_4a12f21e",
+          "hit": true,
+          "toi": 0.5,
+          "depth": 0.0,
+          "depth_at_dt": 1.0,
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ],
+      "correct": false
+    },
+    {
+      "fraction": 0.75,
+      "normal_axis": "z",
+      "actual": [
+        11.5,
+        1.5,
+        11.5
+      ],
+      "expected": [
+        12.0,
+        1.5,
+        11.5
+      ],
+      "velocity": [
+        1.5,
+        0.0,
+        1.5
+      ],
+      "contacts": [
+        {
+          "i": "scene_e13c8bbb",
+          "j": "scene_b8561571",
+          "hit": true,
+          "toi": 0.75,
+          "depth": 0.0,
+          "depth_at_dt": 0.5,
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ],
+      "correct": false
+    },
+    {
+      "fraction": 1.0,
+      "normal_axis": "z",
+      "actual": [
+        12.0,
+        1.5,
+        12.0
+      ],
+      "expected": [
+        12.0,
+        1.5,
+        12.0
+      ],
+      "velocity": [
+        2.0,
+        0.0,
+        2.0
+      ],
+      "contacts": [
+        {
+          "i": "scene_990b4898",
+          "j": "scene_260243f9",
+          "hit": false,
+          "toi": null,
+          "depth": 0.0,
+          "depth_at_dt": 0.0,
+          "axis": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ],
+      "correct": true
+    }
+  ],
+  "free_fall": [
+    {
+      "n_boxes": 0,
+      "rows": [
+        {
+          "tick": 1,
+          "actual_pos": [
+            10.1,
+            99.95,
+            10.0
+          ],
+          "expected_pos": [
+            10.1,
+            99.95,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -1.0,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -1.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -1.0,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 2,
+          "actual_pos": [
+            10.2,
+            99.8,
+            10.0
+          ],
+          "expected_pos": [
+            10.2,
+            99.8,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -2.0,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -2.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -2.0,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 3,
+          "actual_pos": [
+            10.3,
+            99.55,
+            10.0
+          ],
+          "expected_pos": [
+            10.3,
+            99.55,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -3.0000000000000004,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -3.0000000000000004,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -3.0000000000000004,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 4,
+          "actual_pos": [
+            10.4,
+            99.2,
+            10.0
+          ],
+          "expected_pos": [
+            10.4,
+            99.2,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -4.0,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -4.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -4.0,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 5,
+          "actual_pos": [
+            10.5,
+            98.75,
+            10.0
+          ],
+          "expected_pos": [
+            10.5,
+            98.75,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -5.0,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -5.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -5.0,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 6,
+          "actual_pos": [
+            10.6,
+            98.2,
+            10.0
+          ],
+          "expected_pos": [
+            10.6,
+            98.2,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -6.000000000000001,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -6.000000000000001,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -6.000000000000001,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 7,
+          "actual_pos": [
+            10.7,
+            97.55,
+            10.0
+          ],
+          "expected_pos": [
+            10.7,
+            97.55,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -7.000000000000001,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -7.000000000000001,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -7.000000000000001,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 8,
+          "actual_pos": [
+            10.8,
+            96.8,
+            10.0
+          ],
+          "expected_pos": [
+            10.8,
+            96.8,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -8.0,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -8.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -8.0,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 9,
+          "actual_pos": [
+            10.9,
+            95.95,
+            10.0
+          ],
+          "expected_pos": [
+            10.9,
+            95.95,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -9.0,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -9.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -9.0,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 10,
+          "actual_pos": [
+            11.0,
+            95.0,
+            10.0
+          ],
+          "expected_pos": [
+            11.0,
+            95.0,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -10.0,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -10.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -10.0,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        }
+      ],
+      "state": {
+        "p0": [
+          10.0,
+          100.0,
+          10.0
+        ],
+        "v0": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "t_ref": 0.0
+      }
+    },
+    {
+      "n_boxes": 1,
+      "rows": [
+        {
+          "tick": 1,
+          "actual_pos": [
+            10.1,
+            99.95,
+            10.0
+          ],
+          "expected_pos": [
+            10.1,
+            99.95,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -1.0,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -1.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -1.0,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 2,
+          "actual_pos": [
+            10.2,
+            99.8,
+            10.0
+          ],
+          "expected_pos": [
+            10.2,
+            99.8,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -2.0,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -2.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -2.0,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 3,
+          "actual_pos": [
+            10.3,
+            99.55,
+            10.0
+          ],
+          "expected_pos": [
+            10.3,
+            99.55,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -3.0000000000000004,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -3.0000000000000004,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -3.0000000000000004,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 4,
+          "actual_pos": [
+            10.4,
+            99.2,
+            10.0
+          ],
+          "expected_pos": [
+            10.4,
+            99.2,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -4.0,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -4.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -4.0,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 5,
+          "actual_pos": [
+            10.5,
+            98.75,
+            10.0
+          ],
+          "expected_pos": [
+            10.5,
+            98.75,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -5.0,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -5.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -5.0,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 6,
+          "actual_pos": [
+            10.6,
+            98.2,
+            10.0
+          ],
+          "expected_pos": [
+            10.6,
+            98.2,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -6.000000000000001,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -6.000000000000001,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -6.000000000000001,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 7,
+          "actual_pos": [
+            10.7,
+            97.55,
+            10.0
+          ],
+          "expected_pos": [
+            10.7,
+            97.55,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -7.000000000000001,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -7.000000000000001,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -7.000000000000001,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 8,
+          "actual_pos": [
+            10.8,
+            96.8,
+            10.0
+          ],
+          "expected_pos": [
+            10.8,
+            96.8,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -8.0,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -8.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -8.0,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 9,
+          "actual_pos": [
+            10.9,
+            95.95,
+            10.0
+          ],
+          "expected_pos": [
+            10.9,
+            95.95,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -9.0,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -9.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -9.0,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        },
+        {
+          "tick": 10,
+          "actual_pos": [
+            11.0,
+            95.0,
+            10.0
+          ],
+          "expected_pos": [
+            11.0,
+            95.0,
+            10.0
+          ],
+          "actual_vel": [
+            1.0,
+            -10.0,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -10.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -10.0,
+            0.0
+          ],
+          "hit": [],
+          "correct_pos": true,
+          "correct_vel": true
+        }
+      ],
+      "state": {
+        "p0": [
+          10.0,
+          100.0,
+          10.0
+        ],
+        "v0": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "t_ref": 0.0
+      }
+    },
+    {
+      "n_boxes": 2,
+      "rows": [
+        {
+          "tick": 1,
+          "actual_pos": [
+            10.1,
+            99.95,
+            10.0
+          ],
+          "expected_pos": [
+            10.1,
+            99.95,
+            10.0
+          ],
+          "actual_vel": [
+            0.9999999999999964,
+            -0.4999999999999716,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -1.0,
+            0.0
+          ],
+          "readout_vel": [
+            1.0,
+            -1.0,
+            0.0
+          ],
+          "hit": [
+            false
+          ],
+          "correct_pos": true,
+          "correct_vel": false
+        },
+        {
+          "tick": 2,
+          "actual_pos": [
+            10.2,
+            99.85000000000001,
+            10.0
+          ],
+          "expected_pos": [
+            10.2,
+            99.8,
+            10.0
+          ],
+          "actual_vel": [
+            0.9999999999999964,
+            -0.9999999999999432,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -2.0,
+            0.0
+          ],
+          "readout_vel": [
+            0.9999999999999964,
+            -1.4999999999999716,
+            0.0
+          ],
+          "hit": [
+            false
+          ],
+          "correct_pos": false,
+          "correct_vel": false
+        },
+        {
+          "tick": 3,
+          "actual_pos": [
+            10.299999999999999,
+            99.70000000000002,
+            10.0
+          ],
+          "expected_pos": [
+            10.3,
+            99.55,
+            10.0
+          ],
+          "actual_vel": [
+            0.9999999999999964,
+            -1.4999999999999147,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -3.0000000000000004,
+            0.0
+          ],
+          "readout_vel": [
+            0.9999999999999964,
+            -1.9999999999999436,
+            0.0
+          ],
+          "hit": [
+            false
+          ],
+          "correct_pos": false,
+          "correct_vel": false
+        },
+        {
+          "tick": 4,
+          "actual_pos": [
+            10.399999999999999,
+            99.50000000000003,
+            10.0
+          ],
+          "expected_pos": [
+            10.4,
+            99.2,
+            10.0
+          ],
+          "actual_vel": [
+            0.9999999999999964,
+            -1.9999999999998863,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -4.0,
+            0.0
+          ],
+          "readout_vel": [
+            0.9999999999999964,
+            -2.4999999999999147,
+            0.0
+          ],
+          "hit": [
+            false
+          ],
+          "correct_pos": false,
+          "correct_vel": false
+        },
+        {
+          "tick": 5,
+          "actual_pos": [
+            10.499999999999998,
+            99.25000000000004,
+            10.0
+          ],
+          "expected_pos": [
+            10.5,
+            98.75,
+            10.0
+          ],
+          "actual_vel": [
+            0.9999999999999964,
+            -2.499999999999858,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -5.0,
+            0.0
+          ],
+          "readout_vel": [
+            0.9999999999999964,
+            -2.9999999999998863,
+            0.0
+          ],
+          "hit": [
+            false
+          ],
+          "correct_pos": false,
+          "correct_vel": false
+        },
+        {
+          "tick": 6,
+          "actual_pos": [
+            10.599999999999998,
+            98.95000000000006,
+            10.0
+          ],
+          "expected_pos": [
+            10.6,
+            98.2,
+            10.0
+          ],
+          "actual_vel": [
+            0.9999999999999964,
+            -2.9999999999998295,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -6.000000000000001,
+            0.0
+          ],
+          "readout_vel": [
+            0.9999999999999964,
+            -3.499999999999859,
+            0.0
+          ],
+          "hit": [
+            false
+          ],
+          "correct_pos": false,
+          "correct_vel": false
+        },
+        {
+          "tick": 7,
+          "actual_pos": [
+            10.699999999999998,
+            98.60000000000008,
+            10.0
+          ],
+          "expected_pos": [
+            10.7,
+            97.55,
+            10.0
+          ],
+          "actual_vel": [
+            0.9999999999999964,
+            -3.499999999999801,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -7.000000000000001,
+            0.0
+          ],
+          "readout_vel": [
+            0.9999999999999964,
+            -3.9999999999998295,
+            0.0
+          ],
+          "hit": [
+            false
+          ],
+          "correct_pos": false,
+          "correct_vel": false
+        },
+        {
+          "tick": 8,
+          "actual_pos": [
+            10.799999999999997,
+            98.2000000000001,
+            10.0
+          ],
+          "expected_pos": [
+            10.8,
+            96.8,
+            10.0
+          ],
+          "actual_vel": [
+            0.9999999999999964,
+            -3.9999999999997726,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -8.0,
+            0.0
+          ],
+          "readout_vel": [
+            0.9999999999999964,
+            -4.499999999999801,
+            0.0
+          ],
+          "hit": [
+            false
+          ],
+          "correct_pos": false,
+          "correct_vel": false
+        },
+        {
+          "tick": 9,
+          "actual_pos": [
+            10.899999999999997,
+            97.75000000000013,
+            10.0
+          ],
+          "expected_pos": [
+            10.9,
+            95.95,
+            10.0
+          ],
+          "actual_vel": [
+            0.9999999999999964,
+            -4.499999999999744,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -9.0,
+            0.0
+          ],
+          "readout_vel": [
+            0.9999999999999964,
+            -4.999999999999773,
+            0.0
+          ],
+          "hit": [
+            false
+          ],
+          "correct_pos": false,
+          "correct_vel": false
+        },
+        {
+          "tick": 10,
+          "actual_pos": [
+            10.999999999999996,
+            97.25000000000016,
+            10.0
+          ],
+          "expected_pos": [
+            11.0,
+            95.0,
+            10.0
+          ],
+          "actual_vel": [
+            0.9999999999999964,
+            -4.999999999999716,
+            0.0
+          ],
+          "expected_vel": [
+            1.0,
+            -10.0,
+            0.0
+          ],
+          "readout_vel": [
+            0.9999999999999964,
+            -5.499999999999744,
+            0.0
+          ],
+          "hit": [
+            false
+          ],
+          "correct_pos": false,
+          "correct_vel": false
+        }
+      ],
+      "state": {
+        "p0": [
+          10.999999999999996,
+          97.25000000000016,
+          10.0
+        ],
+        "v0": [
+          0.9999999999999964,
+          -4.999999999999716,
+          0.0
+        ],
+        "t_ref": 1.0
+      }
+    }
+  ]
+}

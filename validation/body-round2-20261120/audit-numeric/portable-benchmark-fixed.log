@@ -1,0 +1,199 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "numpy": "2.5.5",
+  "source_root": "[workspace]/lingshu/work\\lingshu-body-spatial-partition-20261120",
+  "source_lf_sha256": "cb65757a17a5d7bdb5d23f2583453ef24b3d2d96ef104f192c6db62e92ee6f71",
+  "thread_limits": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "records": [
+    {
+      "case": "divisible_2x18x18",
+      "shape": [
+        2,
+        18,
+        18,
+        3
+      ],
+      "seed": 20261120,
+      "iterations_per_sample": 40,
+      "warmup_samples": 3,
+      "retained_samples": 9,
+      "milliseconds": [
+        0.4780325,
+        0.47619749999999994,
+        0.47435499999999997,
+        0.47269249999999996,
+        0.4799675,
+        0.47565749999999996,
+        0.47991,
+        0.48569000000000007,
+        0.47444499999999995
+      ],
+      "median_ms": 0.47619749999999994,
+      "traced_peak_bytes": [
+        179696,
+        179696,
+        179696
+      ],
+      "median_traced_peak_bytes": 179696,
+      "input_sha256": "5182df121a56483e842e747ac36a91984bcce48af22e1f4aa9473c9cb0e82247",
+      "weights_sha256": "39e4c94d31492c8a8802fcd70412be4729dcae277579582f3e24b7d30da3eb49",
+      "output_sha256": "32702b686df8b22466bf12221ff7097e3f84594ea748d37a70cd10eeba5a3d0c",
+      "output": [
+        [
+          {
+            "pos": "r7",
+            "obj": "circle|blue",
+            "conf": 0.357,
+            "share": 0.132
+          },
+          {
+            "pos": "r6",
+            "obj": "circle|blue",
+            "conf": 0.397,
+            "share": 0.129
+          }
+        ],
+        [
+          {
+            "pos": "r4",
+            "obj": "circle|blue",
+            "conf": 0.401,
+            "share": 0.129
+          }
+        ]
+      ]
+    },
+    {
+      "case": "uneven_2x18x16",
+      "shape": [
+        2,
+        18,
+        16,
+        3
+      ],
+      "seed": 20261120,
+      "iterations_per_sample": 40,
+      "warmup_samples": 3,
+      "retained_samples": 9,
+      "milliseconds": [
+        0.7734924999999999,
+        0.7795775,
+        0.7748,
+        0.7755799999999999,
+        0.774585,
+        0.7885774999999999,
+        0.774655,
+        0.7835799999999999,
+        0.7892325
+      ],
+      "median_ms": 0.7755799999999999,
+      "traced_peak_bytes": [
+        160496,
+        160496,
+        160496
+      ],
+      "median_traced_peak_bytes": 160496,
+      "input_sha256": "a8e80d384117a40276e2bf29f7defc34f768e03a4c6da8e9520954a41e4c8478",
+      "weights_sha256": "39e4c94d31492c8a8802fcd70412be4729dcae277579582f3e24b7d30da3eb49",
+      "output_sha256": "e0b66477eac5776a4373377cbddab2b82b85118982dcab1db9c7e35bf19d4ddb",
+      "output": [
+        [
+          {
+            "pos": "r8",
+            "obj": "circle|blue",
+            "conf": 0.363,
+            "share": 0.142
+          },
+          {
+            "pos": "r5",
+            "obj": "circle|blue",
+            "conf": 0.359,
+            "share": 0.136
+          },
+          {
+            "pos": "r2",
+            "obj": "circle|blue",
+            "conf": 0.363,
+            "share": 0.131
+          }
+        ],
+        [
+          {
+            "pos": "r5",
+            "obj": "circle|blue",
+            "conf": 0.43,
+            "share": 0.141
+          },
+          {
+            "pos": "r2",
+            "obj": "circle|blue",
+            "conf": 0.365,
+            "share": 0.134
+          },
+          {
+            "pos": "r8",
+            "obj": "circle|blue",
+            "conf": 0.406,
+            "share": 0.13
+          }
+        ]
+      ]
+    },
+    {
+      "case": "uneven_2x65x67",
+      "shape": [
+        2,
+        65,
+        67,
+        3
+      ],
+      "seed": 20261120,
+      "iterations_per_sample": 15,
+      "warmup_samples": 3,
+      "retained_samples": 9,
+      "milliseconds": [
+        2.2153066666666663,
+        2.4681533333333334,
+        2.4120666666666666,
+        2.29878,
+        2.1030866666666665,
+        2.1468800000000003,
+        2.208806666666667,
+        2.119053333333333,
+        2.12566
+      ],
+      "median_ms": 2.208806666666667,
+      "traced_peak_bytes": [
+        2317280,
+        2317280,
+        2317280
+      ],
+      "median_traced_peak_bytes": 2317280,
+      "input_sha256": "b3e8018d9a1e94f79cb99613e9b5b2df74692a09df2b86ebb4214a22ac1a3186",
+      "weights_sha256": "39e4c94d31492c8a8802fcd70412be4729dcae277579582f3e24b7d30da3eb49",
+      "output_sha256": "d01cf00c529c939756196ee09b3451ed653b518a5a83ec7b56f1bd308b891603",
+      "output": [
+        [
+          {
+            "pos": "r5",
+            "obj": "circle|blue",
+            "conf": 0.391,
+            "share": 0.124
+          }
+        ],
+        [
+          {
+            "pos": "r5",
+            "obj": "circle|blue",
+            "conf": 0.366,
+            "share": 0.118
+          }
+        ]
+      ]
+    }
+  ]
+}

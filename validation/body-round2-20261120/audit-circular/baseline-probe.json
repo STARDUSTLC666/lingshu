@@ -1,0 +1,325 @@
+{
+  "source_commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "imported_module": "[workspace]/lingshu/work\\lingshu-audit-core-20261120\\lingshu\\world\\physics.py",
+  "source_sha256": "bb422f2a67bf752d25bacc2cb32b1330eded8800ed17ac984f2fd0640c8f41f2",
+  "python": "3.12.10",
+  "helix": [
+    {
+      "up": 0,
+      "epoch": 0.0,
+      "center": [
+        3.000000000000002,
+        1.9999999999999993,
+        -0.9999999999999998
+      ],
+      "omega": 1.5000000000000002,
+      "v_up": 1.999999999999999,
+      "max_prediction_error": 2.220446049250313e-15,
+      "reported_rms": 5.322127100896028e-16
+    },
+    {
+      "up": 0,
+      "epoch": -10.0,
+      "center": [
+        23.000000000000103,
+        1.9999999999999993,
+        -0.9999999999999998
+      ],
+      "omega": 1.5000000000000089,
+      "v_up": 2.000000000000012,
+      "max_prediction_error": 20.00000000000014,
+      "reported_rms": 2.1489880202888166e-14
+    },
+    {
+      "up": 0,
+      "epoch": 10.0,
+      "center": [
+        -17.000000000000185,
+        1.9999999999999993,
+        -0.9999999999999998
+      ],
+      "omega": 1.500000000000016,
+      "v_up": 2.000000000000016,
+      "max_prediction_error": 20.000000000000185,
+      "reported_rms": 3.9072980357969407e-14
+    },
+    {
+      "up": 0,
+      "epoch": 1024.0,
+      "center": [
+        -2044.9999999573267,
+        1.9999999999999993,
+        -0.9999999999999998
+      ],
+      "omega": 1.4999999999684321,
+      "v_up": 1.9999999999583877,
+      "max_prediction_error": 2047.9999999574516,
+      "reported_rms": 7.812701156365021e-11
+    },
+    {
+      "up": 0,
+      "epoch": 1700000000.0,
+      "error": "PhysicsError: solve_linear：矩阵奇异（第 1 列主元 ~0）"
+    },
+    {
+      "up": 1,
+      "epoch": 0.0,
+      "center": [
+        1.9999999999999993,
+        3.000000000000002,
+        -0.9999999999999998
+      ],
+      "omega": 1.5000000000000002,
+      "v_up": 1.999999999999999,
+      "max_prediction_error": 2.220446049250313e-15,
+      "reported_rms": 5.322127100896028e-16
+    },
+    {
+      "up": 1,
+      "epoch": -10.0,
+      "center": [
+        1.9999999999999993,
+        23.000000000000103,
+        -0.9999999999999998
+      ],
+      "omega": 1.5000000000000089,
+      "v_up": 2.000000000000012,
+      "max_prediction_error": 20.00000000000014,
+      "reported_rms": 2.1489880202888166e-14
+    },
+    {
+      "up": 1,
+      "epoch": 10.0,
+      "center": [
+        1.9999999999999993,
+        -17.000000000000185,
+        -0.9999999999999998
+      ],
+      "omega": 1.500000000000016,
+      "v_up": 2.000000000000016,
+      "max_prediction_error": 20.000000000000185,
+      "reported_rms": 3.9072980357969407e-14
+    },
+    {
+      "up": 1,
+      "epoch": 1024.0,
+      "center": [
+        1.9999999999999993,
+        -2044.9999999573267,
+        -0.9999999999999998
+      ],
+      "omega": 1.4999999999684321,
+      "v_up": 1.9999999999583877,
+      "max_prediction_error": 2047.9999999574516,
+      "reported_rms": 7.812701156365021e-11
+    },
+    {
+      "up": 1,
+      "epoch": 1700000000.0,
+      "error": "PhysicsError: solve_linear：矩阵奇异（第 1 列主元 ~0）"
+    },
+    {
+      "up": 2,
+      "epoch": 0.0,
+      "center": [
+        1.9999999999999993,
+        -0.9999999999999998,
+        3.000000000000002
+      ],
+      "omega": 1.5000000000000002,
+      "v_up": 1.999999999999999,
+      "max_prediction_error": 2.220446049250313e-15,
+      "reported_rms": 5.322127100896028e-16
+    },
+    {
+      "up": 2,
+      "epoch": -10.0,
+      "center": [
+        1.9999999999999993,
+        -0.9999999999999998,
+        23.000000000000103
+      ],
+      "omega": 1.5000000000000089,
+      "v_up": 2.000000000000012,
+      "max_prediction_error": 20.00000000000014,
+      "reported_rms": 2.1489880202888166e-14
+    },
+    {
+      "up": 2,
+      "epoch": 10.0,
+      "center": [
+        1.9999999999999993,
+        -0.9999999999999998,
+        -17.000000000000185
+      ],
+      "omega": 1.500000000000016,
+      "v_up": 2.000000000000016,
+      "max_prediction_error": 20.000000000000185,
+      "reported_rms": 3.9072980357969407e-14
+    },
+    {
+      "up": 2,
+      "epoch": 1024.0,
+      "center": [
+        1.9999999999999993,
+        -0.9999999999999998,
+        -2044.9999999573267
+      ],
+      "omega": 1.4999999999684321,
+      "v_up": 1.9999999999583877,
+      "max_prediction_error": 2047.9999999574516,
+      "reported_rms": 7.812701156365021e-11
+    },
+    {
+      "up": 2,
+      "epoch": 1700000000.0,
+      "error": "PhysicsError: solve_linear：矩阵奇异（第 1 列主元 ~0）"
+    }
+  ],
+  "vertical_residual": [
+    {
+      "up": 0,
+      "vertical_acceleration": 0.0,
+      "reported_rms": 5.322127100896028e-16,
+      "independent_3d_coordinate_rms": 8.360404483218504e-16,
+      "max_point_error": 2.275280134513746e-15,
+      "selected_kind": "circular",
+      "classification_residuals": {
+        "static": 1.5139083095224224,
+        "uniform": 0.6877619028341599,
+        "accelerated": 0.2849416052898243,
+        "projectile": 2.164524558480812,
+        "damped": 0.6877619028507121,
+        "circular": 5.322127100896028e-16
+      }
+    },
+    {
+      "up": 0,
+      "vertical_acceleration": 2.0,
+      "reported_rms": 5.322127100896028e-16,
+      "independent_3d_coordinate_rms": 0.4185633912563305,
+      "max_point_error": 1.4375000000000036,
+      "selected_kind": "circular",
+      "classification_residuals": {
+        "static": 2.855628421580973,
+        "uniform": 0.8051159838744133,
+        "accelerated": 0.2849416052898243,
+        "projectile": 2.5648471666153285,
+        "damped": 0.8051166284134298,
+        "circular": 5.322127100896028e-16
+      }
+    },
+    {
+      "up": 0,
+      "vertical_acceleration": 20.0,
+      "reported_rms": 5.322127100896028e-16,
+      "independent_3d_coordinate_rms": 4.185633912563305,
+      "max_point_error": 14.375,
+      "selected_kind": "circular",
+      "classification_residuals": {
+        "static": 17.20643628470582,
+        "uniform": 4.241762332449811,
+        "accelerated": 0.2849416052898243,
+        "projectile": 6.275785921105642,
+        "damped": 4.241766136846078,
+        "circular": 5.322127100896028e-16
+      }
+    },
+    {
+      "up": 1,
+      "vertical_acceleration": 0.0,
+      "reported_rms": 5.322127100896028e-16,
+      "independent_3d_coordinate_rms": 8.360404483218504e-16,
+      "max_point_error": 2.275280134513746e-15,
+      "selected_kind": "circular",
+      "classification_residuals": {
+        "static": 1.5139083095224224,
+        "uniform": 0.6877619028341599,
+        "accelerated": 0.2849416052898243,
+        "projectile": 2.164524558480812,
+        "damped": 0.6877619028507121,
+        "circular": 5.322127100896028e-16
+      }
+    },
+    {
+      "up": 1,
+      "vertical_acceleration": 2.0,
+      "reported_rms": 5.322127100896028e-16,
+      "independent_3d_coordinate_rms": 0.4185633912563305,
+      "max_point_error": 1.4375000000000036,
+      "selected_kind": "circular",
+      "classification_residuals": {
+        "static": 2.855628421580973,
+        "uniform": 0.8051159838744133,
+        "accelerated": 0.2849416052898243,
+        "projectile": 2.5648471666153285,
+        "damped": 0.8051166284134298,
+        "circular": 5.322127100896028e-16
+      }
+    },
+    {
+      "up": 1,
+      "vertical_acceleration": 20.0,
+      "reported_rms": 5.322127100896028e-16,
+      "independent_3d_coordinate_rms": 4.185633912563305,
+      "max_point_error": 14.375,
+      "selected_kind": "circular",
+      "classification_residuals": {
+        "static": 17.20643628470582,
+        "uniform": 4.241762332449811,
+        "accelerated": 0.2849416052898243,
+        "projectile": 6.275785921105642,
+        "damped": 4.241766136846078,
+        "circular": 5.322127100896028e-16
+      }
+    },
+    {
+      "up": 2,
+      "vertical_acceleration": 0.0,
+      "reported_rms": 5.322127100896028e-16,
+      "independent_3d_coordinate_rms": 8.360404483218504e-16,
+      "max_point_error": 2.275280134513746e-15,
+      "selected_kind": "circular",
+      "classification_residuals": {
+        "static": 1.5139083095224224,
+        "uniform": 0.6877619028341599,
+        "accelerated": 0.2849416052898243,
+        "projectile": 2.164524558480812,
+        "damped": 0.6877619028507121,
+        "circular": 5.322127100896028e-16
+      }
+    },
+    {
+      "up": 2,
+      "vertical_acceleration": 2.0,
+      "reported_rms": 5.322127100896028e-16,
+      "independent_3d_coordinate_rms": 0.4185633912563305,
+      "max_point_error": 1.4375000000000036,
+      "selected_kind": "circular",
+      "classification_residuals": {
+        "static": 2.855628421580973,
+        "uniform": 0.8051159838744133,
+        "accelerated": 0.2849416052898243,
+        "projectile": 2.5648471666153285,
+        "damped": 0.8051166284134298,
+        "circular": 5.322127100896028e-16
+      }
+    },
+    {
+      "up": 2,
+      "vertical_acceleration": 20.0,
+      "reported_rms": 5.322127100896028e-16,
+      "independent_3d_coordinate_rms": 4.185633912563305,
+      "max_point_error": 14.375,
+      "selected_kind": "circular",
+      "classification_residuals": {
+        "static": 17.20643628470582,
+        "uniform": 4.241762332449811,
+        "accelerated": 0.2849416052898243,
+        "projectile": 6.275785921105642,
+        "damped": 4.241766136846077,
+        "circular": 5.322127100896028e-16
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "head": "13952c82874fb9ee19a4f1b660e3144134367a53",
+  "base": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "branch": "fix/scene-collision-freeflight-velocity-20261120",
+  "working_tree_clean": true,
+  "published": false,
+  "files": [
+    {
+      "path": "bench/bench_scene_collision_freeflight.py",
+      "git_blob": "9f03a6cac5c54cdc57e7c99081ce7509e5630f57",
+      "sha256_lf": "de7e2eea70b4b9a26e886078ca91d3b75b4e02f4f74464d6f026c7419d90a122",
+      "bytes_lf": 10757
+    },
+    {
+      "path": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "git_blob": "a29e7cfafb776e3bc389e98bbf6f105fdd5c7222",
+      "sha256_lf": "b269feea562b6be05ee7f9f6d9375372b5c886f531e9d0e60cae365df3b0fe23",
+      "bytes_lf": 32120
+    },
+    {
+      "path": "docs/testing/scene-collision-freeflight-velocity-20261120.md",
+      "git_blob": "7f56c374ada1b7927003e33a61c6fba9f3877816",
+      "sha256_lf": "a30569398abe55b035ecd00878d4cccce05915c08f028d28be9018ec68422e0d",
+      "bytes_lf": 5345
+    },
+    {
+      "path": "lingshu/world/scene_simulator.py",
+      "git_blob": "1c137e69be6e18bda29a55e604772dd8b0a7f581",
+      "sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "bytes_lf": 78363
+    },
+    {
+      "path": "tests/fixtures/scene_collision_freeflight_velocity_mutations.json",
+      "git_blob": "5438edcbe240455d35f091fe9da8965cb6c6ddff",
+      "sha256_lf": "3cdc69e5d6c981d0b5a16b73b66613f90d21ac7b24880afab4bceab609c70387",
+      "bytes_lf": 5405
+    },
+    {
+      "path": "tests/test_issue1959_reseed_physics_guard.py",
+      "git_blob": "106864ad419fe1c3ecf0551dd9a83dd9972b4e08",
+      "sha256_lf": "7e0a8e4b3fa5a2ace48e64115d4cf3887e3d82c2b8fa172719ed0cc72c9a309b",
+      "bytes_lf": 5132
+    },
+    {
+      "path": "tests/test_scene_collision_freeflight_velocity.py",
+      "git_blob": "56ca03276117beafcddb361c1e4ff0baea7b793e",
+      "sha256_lf": "a53b3be54c4bb0983c3e669c042b862ab61e367757a01fc4edd2f0905e62b2bf",
+      "bytes_lf": 9224
+    }
+  ],
+  "benchmark_source_matches_commit": true,
+  "mutation_source_matches_commit": true
+}

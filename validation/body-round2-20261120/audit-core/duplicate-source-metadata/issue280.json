@@ -1,0 +1,12 @@
+{
+  "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+  "records": [
+    {
+      "title": "[core/activation] 自条件 × Σ 扩散跨轮指数发散：6 条普通相似记忆每轮激活 ×7，第 46 轮 float32 溢出为 inf——工作态被旧话题永久锁死，换任何查询 top 都是旧节点（inf），新话题节点只有 1.0，且随激活表跨进程持久化",
+      "url": "https://github.com/FuRongJun-1999/lingshu/issues/280",
+      "state": "CLOSED",
+      "number": 280,
+      "comment_count": 5
+    }
+  ]
+}

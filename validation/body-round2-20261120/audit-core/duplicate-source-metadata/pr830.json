@@ -1,0 +1,12 @@
+{
+  "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+  "records": [
+    {
+      "title": "fix(core): OPPOSITE 抑制按边置信缩放并双向——写序不再决定真命题去留",
+      "url": "https://github.com/FuRongJun-1999/lingshu/pull/830",
+      "state": "MERGED",
+      "number": 830,
+      "comment_count": 1
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "root": "[workspace]/lingshu/work\\lingshu-body-spatial-partition-20261120",
+  "cases": [
+    {
+      "shape": [
+        1,
+        1
+      ],
+      "count": 1,
+      "result": [
+        {
+          "pos": "r8",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 1.0
+        }
+      ]
+    },
+    {
+      "shape": [
+        1,
+        2
+      ],
+      "count": 2,
+      "result": [
+        {
+          "pos": "r7",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.5
+        },
+        {
+          "pos": "r8",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.5
+        }
+      ]
+    },
+    {
+      "shape": [
+        2,
+        1
+      ],
+      "count": 2,
+      "result": [
+        {
+          "pos": "r5",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.5
+        },
+        {
+          "pos": "r8",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.5
+        }
+      ]
+    },
+    {
+      "shape": [
+        2,
+        2
+      ],
+      "count": 4,
+      "result": [
+        {
+          "pos": "r4",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.25
+        },
+        {
+          "pos": "r5",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.25
+        },
+        {
+          "pos": "r7",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.25
+        },
+        {
+          "pos": "r8",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.25
+        }
+      ]
+    },
+    {
+      "shape": [
+        4,
+        4
+      ],
+      "count": 1,
+      "result": [
+        {
+          "pos": "r8",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.25
+        }
+      ]
+    },
+    {
+      "shape": [
+        5,
+        5
+      ],
+      "count": 4,
+      "result": [
+        {
+          "pos": "r4",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.16
+        },
+        {
+          "pos": "r5",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.16
+        },
+        {
+          "pos": "r7",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.16
+        },
+        {
+          "pos": "r8",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.16
+        }
+      ]
+    },
+    {
+      "shape": [
+        8,
+        8
+      ],
+      "count": 4,
+      "result": [
+        {
+          "pos": "r4",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.141
+        },
+        {
+          "pos": "r5",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.141
+        },
+        {
+          "pos": "r7",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.141
+        },
+        {
+          "pos": "r8",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.141
+        }
+      ]
+    },
+    {
+      "shape": [
+        18,
+        16
+      ],
+      "count": 1,
+      "result": [
+        {
+          "pos": "r2",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.125
+        }
+      ]
+    },
+    {
+      "shape": [
+        18,
+        18
+      ],
+      "count": 1,
+      "result": [
+        {
+          "pos": "r0",
+          "obj": "circle|red",
+          "conf": 1.0,
+          "share": 0.111
+        }
+      ]
+    },
+    {
+      "shape": [
+        0,
+        3
+      ],
+      "count": 0,
+      "result": []
+    },
+    {
+      "shape": [
+        3,
+        0
+      ],
+      "count": 0,
+      "result": []
+    },
+    {
+      "shape": [
+        0,
+        0
+      ],
+      "count": 0,
+      "result": []
+    }
+  ]
+}

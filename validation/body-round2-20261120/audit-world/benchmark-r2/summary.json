@@ -1,0 +1,2966 @@
+{
+  "schema": 1,
+  "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "head": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "ticks": 80,
+  "timing_repeats": 11,
+  "memory_repeats": 3,
+  "method": "isolated interpreters; randomized job order seed4242; one warmup; setup/import/hash/oracle excluded; GC disabled equally",
+  "memory_scope": "tracemalloc Python allocations inside step only; excludes interpreter/native allocations and prebuilt scene",
+  "scene_source_sha256_lf": {
+    "baseline": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+    "fixed": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8"
+  },
+  "dependency_source_sha256_lf": {
+    "lingshu/__init__.py": "99d7e9a38bfaab8d913152c9d8b80928a4557c51d65f8547da06d44cc1e3c504",
+    "lingshu/_pathguard.py": "3632ec75eee7d5a8dec016268b8bc529eaabd17f5596e429530e041d4479505f",
+    "lingshu/core/__init__.py": "c44d5ddba5251a463d0499522d8c1139658924ade10bc72061f75cd5b8f4ebba",
+    "lingshu/core/activation.py": "de97f1af3805020b0c6fabc52f26605653dc37aad8daf735d7e4ba87b6c441d5",
+    "lingshu/core/component_resolver.py": "23aead3904256151d868bdfac2a76d5dbb7eaacc4f2034389703fa4a6b3593ff",
+    "lingshu/core/condition_normalize.py": "cdfcb6d6a13bfe2bb7b26d7d11463933fcdc51634f4b2bacc32ec9a2d659ae55",
+    "lingshu/core/contradiction.py": "a4543567cec5592ed7458ee498b6c617af274717fa0f1cba0b1756248c6f0a0b",
+    "lingshu/core/core.py": "4b67f6109ebf62eb74a921fd0a5d4e810e846e05643332ceaa1fb1a8739fe771",
+    "lingshu/core/evidence.py": "61790c2071f4030da148ed662f707d6b60c299852d15e93b5bd02125f4ab25e9",
+    "lingshu/core/longterm_gate.py": "68e10ba7f880f9ae89c343b60e5c012bc7509157511e897e2f9dc2a90bd739cc",
+    "lingshu/core/provenance.py": "dbe8c989ba11e489af5c5925bea97df94c61a2e4293985fff40ae1b02d4fd38e",
+    "lingshu/core/retrieval.py": "c918eb7f007ca1cf87eec72ec4ade0561a2a3623a5863b9473805736c676c2b9",
+    "lingshu/core/structure_permissions.py": "72549826d6b9771ad2eabf68a84beba5e42f69c28ddf0304082c60c404322360",
+    "lingshu/core/structure_service.py": "26b06777a18ddde3453c4414d146c7e928b2465338addc4251113df430a23720",
+    "lingshu/core/structure_writer.py": "4f7e9d2bf78ab8b5f649825fdbdb49e3797db679a65566528a99e4d6a6acb617",
+    "lingshu/core/time_core.py": "73e2cf1eb27d81d7ee7f747d5e3f5600b63aac7f97b1239e45417f77f709a926",
+    "lingshu/core/tms.py": "8fb4537fdfc29b86bca1026587d05ba3672e82c996d79a73d4f3bdfcf4c6fa64",
+    "lingshu/core/verdict.py": "50ef0a6b6d3496486dae8e69233e65d4f9c0cf9660f4a65602e36f30055b0ba6",
+    "lingshu/gen/__init__.py": "15e98f30dcb46da990583768b494cd4333a85780e81b6084a0c6ea9da72bebc7",
+    "lingshu/gen/hex_composite.py": "5b0bd22884d11150f44432651bea1374d8fa975b8b673ac85707343ef8163b44",
+    "lingshu/gen/hexgen_align_probe.py": "4dced4c36731b7bbe03fa3f95722878c7e741c0fce3cc1f8ebd0873479599107",
+    "lingshu/gen/hexgen_c1_real.py": "fff30be6883998567a7aa69ec1724d0b1bfd86ad9b248d830249c712bdd4fa33",
+    "lingshu/gen/hexgen_multi_seed.py": "d02a60418da1385e820efbd5ea295b8e5b1e48ebb667f6663e82d7923fddb18c",
+    "lingshu/gen/hexgen_pack_certify.py": "87218d9932fa58e89331cb1ea71ca0811cf8cda0f6b3028a155d50df6eeeb07a",
+    "lingshu/gen/hexgen_self_source.py": "2182e91584570d683935afe198418d3d5dd9bca68fbbbc25eb6b9b456b49c562",
+    "lingshu/gen/hexgen_subject_split.py": "13de1215b1c713583ca5a194708448248f57ecc8eec05dc8fcb2e19111eb6be7",
+    "lingshu/nn/__init__.py": "4ba504401a291047bc0a9c662fee95f12d48d07832c963d4ebae2b6403cabcc7",
+    "lingshu/nn/hex_cnn.py": "8a4a5e501a92a4b17024eb9dee36f8da004e9d036d9eb766212ac30303b7aac5",
+    "lingshu/nn/hex_composite.py": "5b0bd22884d11150f44432651bea1374d8fa975b8b673ac85707343ef8163b44",
+    "lingshu/nn/hex_gen.py": "f5bc3b8a13facd944647858ac395d06ca545c633cd0b6e6104da90bace0f1ebd",
+    "lingshu/nn/hex_hier.py": "e6988f75e8ddaa1fe03cb90c3c04eacc877374a5cac4991dc65666b581380a36",
+    "lingshu/nn/hex_nn_preview.py": "d9fa7e989f5068cfef2e4f80eaa8e146ad2838642c899f8693c5fb3050c86808",
+    "lingshu/nn/hex_ortho.py": "07976d3902f8bba3c1e02bff8c3c966c2fa6ae85e0be25510b6c6298314201b3",
+    "lingshu/nn/hex_query.py": "073cddf4d56284ca4eafe6090347b95979543d1fcd60479197f9b7ef438c1a9f",
+    "lingshu/nn/hex_recon.py": "5f42c0e0348a322785a5556f93cb53ee6f0231c48078c3d26e11e12f52f0fd4a",
+    "lingshu/nn/hex_search.py": "e7c71ec837ae67473933f99138ebd9d88dde685ba0223a007687d3abc6403af1",
+    "lingshu/nn/hex_text.py": "330269be933d1949c42739fd9dcf284369a1b52aac7b74fb82c74af2c2bd95db",
+    "lingshu/nn/hex_train.py": "1a443c27d8423b8e1a317ddd6d1ce1e6923275d6c0f2bc33289f48b50379a7cc",
+    "lingshu/nn/hex_unit.py": "3b16d8252a4c5969b2adc9a1b51130021aaba6242bd60eb31780df6fb38147f8",
+    "lingshu/nn/rust_bridge.py": "84a41bc1b951b6f6069dff9ad9ec1fae128e5688814bd7c052dc1c3330581e3c",
+    "lingshu/nn/stcnn.py": "406538be87fab5126421f2d9ddd984fe598ff686e2510c738ffafc798cd25509",
+    "lingshu/vision/__init__.py": "145d2721f87ee071a140de2b1b6005636bd6452963296a8b16eb910b0b6fca30",
+    "lingshu/vision/image_stats.py": "ce33e6acb0222d0cb79e22495ba0eef2c3c8c7ed7d5dddba69c1fe49af64decb",
+    "lingshu/vision/lineart.py": "b33bdfcca84be434ff49efb1003c23dfcbe75a56d15713d178301ecf39536418",
+    "lingshu/world/__init__.py": "700d97c453cb1c0ba9ba65141ac1938b8289a9802bab29ab97a13866cfc5b680",
+    "lingshu/world/anchor_verify.py": "e1496eaf87968f05bd3455b392d243436fa8d49981cc132dd3c28d4d7541e30d",
+    "lingshu/world/anchored_verification.py": "e50f42f82b94b919ecc4621e0d78d2e3c928d4c23c346a59198a6d52997cf65c",
+    "lingshu/world/anim.py": "04712c23295c31e5cae86c05c51f6c19cb7fc4115cf0bc52f0670591fa8b0de2",
+    "lingshu/world/autoframe.py": "d3e494b8f2aeb4750db2396a5a790d18174bc68f01c0a299a2b123e558379cc2",
+    "lingshu/world/brain_store.py": "3c3c13a276281847b6a76da86995a6c5dba95686f3fa95e7e02fc332f8724e47",
+    "lingshu/world/camera_bridge.py": "d39fd1c9567a62610a0e5f9ad19d0bcfc290870b6048279c657448d3e0c7c226",
+    "lingshu/world/camera_calib.py": "1df6c7b0ff10f5c473f8f46d428c674a16831be18c08be084f343e2c96bab731",
+    "lingshu/world/camera_calibrate.py": "f4eb35cfad063ee2ac3e3538ad0c8f2e1f30c2ed91a66d04ecc99b5c09ab10be",
+    "lingshu/world/channel_credibility.py": "318ac1a1133d59c9c92c05487bb19078ca9affc03974dd35ecb32475e9f6ed84",
+    "lingshu/world/confirmation.py": "2741c1011064d489f9f5ef14f6739e043e98d0df77fdccc8c38b3c91026dc636",
+    "lingshu/world/coord_contract.py": "2393d826d520f340be1e73b6f3ec0d85a7df4afff70460478663cd94a8dd1d29",
+    "lingshu/world/curiosity_explorer.py": "75b675c57a21868e7255ba4f2b5164bd546b77a9c568cf2ed016fda81259d108",
+    "lingshu/world/gap_dual.py": "8f899b2d8de21855259f5760b633ad65d8d829928ebcea6601ee7c57c30882f2",
+    "lingshu/world/identity.py": "76fa201dbae46776337ff03e60a3bd99e238bd32818605d7d061c914e0c2abf2",
+    "lingshu/world/mesh3d.py": "995feec5dd4af54449e80a6d9b563489b8d28889dba7833cea0b68aa66d51e80",
+    "lingshu/world/mesh_gen.py": "b2c798eb6dd39f42fde022abb1ad134d0786a0b5b4d69273fd5ffbbf822dbbb4",
+    "lingshu/world/mesh_svg.py": "6dfb2a2230680bc5f3963368e3141948d3d845555ebf155f1cd9b52c88561670",
+    "lingshu/world/motion.py": "8911ca9947c2b72e643d627b0711fce0d7e2dea5c63ad91e0842484debadad77",
+    "lingshu/world/motion_groups.py": "fa755466da9a4babb31d5b7fc07c9c447becdd5d5df31066e34a554d0b02a254",
+    "lingshu/world/multiview.py": "5b43bc061a7e4da0233036c1d3211c3f203b7686234a8ac017af5e35159ec993",
+    "lingshu/world/physics.py": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a",
+    "lingshu/world/physics_predict.py": "11a55469cf79005f8ba3b0fb92143f3ccd2c6cfd0cbf958285fc7ca60c7cdea9",
+    "lingshu/world/prediction.py": "75bc1ddc925535c9fec7087570d6dffb2c6ac8a8c762a9970d6fd8a3f9b7d66c",
+    "lingshu/world/process_ops.py": "78f3e5d67545c9a60d0aac31751d254ec1defa54ad51bdb3a4f4dc28af4e7c43",
+    "lingshu/world/scenario.py": "8ccf1a898ea3298a1fdca6308254820e23d8ee115a31d914ec7506d91c75d525",
+    "lingshu/world/scenario_cli.py": "8db0146b224b117bb3978f2170e659eaee78468337b8738d240e97272e3cb066",
+    "lingshu/world/scene_model.py": "2852357120ff70549e4a26f733433781a34e9d6f8fdfc4c24e9ae8f4e21e048c",
+    "lingshu/world/scene_simulator.py": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+    "lingshu/world/semantic_anchor_graph.py": "a7ef66d6b57d375eba63cc8026d9f30f7c793914856b04565d7fef685d6a4fba",
+    "lingshu/world/seven_layer_loop.py": "ee07f9ddb46d301bb575abbfead2af0d81c06bca325726737d4964187b2b2f1a",
+    "lingshu/world/shade_paint.py": "dfb7a4d49e4a232daf3a4fda61150654380e89a2befa3e71a668702097d48339",
+    "lingshu/world/shapes.py": "ae6b51116e4d08f80e6c4ccf310a7c3f6a413bcb331c14c63ea64ecfa84ea98f",
+    "lingshu/world/silhouette3d.py": "ab76906e5fcaf8f1ad41f4ed24cb1c4c5f9b4e9e2990a6f1df61f6bfa0051891",
+    "lingshu/world/skeleton3d.py": "c52d984697eaa1060df92592a02c42d9ac9969ed3010e24bb48a766794cb3e69",
+    "lingshu/world/spacetime_consistency.py": "cd46c8c9877bfa4017b465988d057fd3c43a40e7e3dd237ffb9bc5e882c4518f",
+    "lingshu/world/stable_lease.py": "bb07e562020feb74bd800fe235b915639f4e07c0b16d4ba6ad748a333ff4755c",
+    "lingshu/world/svg_backend.py": "5c3d03229514ce667b51d308ae8393d175ad880c49771ba8c7b60d814d22aee3",
+    "lingshu/world/time_core.py": "73e2cf1eb27d81d7ee7f747d5e3f5600b63aac7f97b1239e45417f77f709a926",
+    "lingshu/world/voxel_world.py": "c8c0299e1a88c0b08704fc5de62f9539e97f3f449647865ced3a596c8603deb7",
+    "lingshu/world/vprim.py": "649978c9e9b53aff2a2dd63c9a5b970921f0e0e6b69a13e8da5df781c58c0b22",
+    "lingshu/world/wm_simloop.py": "bea92f8529c5818090bc5f327a046015d724ae5723925e1ff76fe3be9c3df72a",
+    "lingshu/world/world3d.py": "5d62ca7ad225f74489c3ffdf7f35c0e5ef22f8115547953da27961699062be1b",
+    "lingshu/world/world_learner.py": "d5b87d647bff8500af2717dde04390d516b2bed4b4cd4cb3972ece8fccfed3c1",
+    "lingshu/world/world_model.py": "f9a119f4d8de7ced6b996d947e8a84bd6c7e1140049e34f8d080f035d3b34076",
+    "lingshu/world/world_process.py": "c88d225d4a49521f084484af5e85077d280187df1722fedd1c74bf26392d990d"
+  },
+  "rows": [
+    {
+      "case": "dynamic_default_8",
+      "mode": "memory",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        333376,
+        333376,
+        333376
+      ],
+      "median": 333376,
+      "unit": "traced_peak_bytes",
+      "retained_bytes": [
+        331496,
+        331496,
+        331496
+      ],
+      "output_sha256": "45f1f78baab5d6ea40e42608a08d760a2f157757ae658feac1e4f83fa633ecbc",
+      "oracle": {
+        "assertions": 16,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "variant": "fixed"
+    },
+    {
+      "case": "dynamic_boxes_24",
+      "mode": "time",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        0.8948879,
+        0.9309418,
+        1.2577203,
+        1.0514819,
+        1.1888484,
+        1.0014911,
+        0.9803045,
+        1.1856442,
+        1.3600648,
+        1.1414772,
+        1.2252346
+      ],
+      "median": 1.1414772,
+      "unit": "seconds",
+      "retained_bytes": [],
+      "output_sha256": "0e89f3cd03a543d1c93456a83fabe8a6df3fd3107a5a4f558b5a8e809df49f70",
+      "oracle": {
+        "assertions": 48,
+        "failures": [
+          {
+            "entity": 0,
+            "field": "pos",
+            "actual": [
+              10.19999999999996,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              10.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 0,
+            "field": "vel",
+            "actual": [
+              0.24999999999995026,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 1,
+            "field": "pos",
+            "actual": [
+              22.200000000000102,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              22.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 1,
+            "field": "vel",
+            "actual": [
+              0.2500000000001279,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 2,
+            "field": "pos",
+            "actual": [
+              34.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              34.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 2,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 3,
+            "field": "pos",
+            "actual": [
+              46.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              46.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 3,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 4,
+            "field": "pos",
+            "actual": [
+              58.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              58.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 4,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 5,
+            "field": "pos",
+            "actual": [
+              70.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              70.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 5,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 6,
+            "field": "pos",
+            "actual": [
+              10.19999999999996,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              10.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 6,
+            "field": "vel",
+            "actual": [
+              0.24999999999995026,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 7,
+            "field": "pos",
+            "actual": [
+              22.200000000000102,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              22.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 7,
+            "field": "vel",
+            "actual": [
+              0.2500000000001279,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 8,
+            "field": "pos",
+            "actual": [
+              34.19999999999982,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              34.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 8,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 9,
+            "field": "pos",
+            "actual": [
+              46.19999999999982,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              46.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 9,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 10,
+            "field": "pos",
+            "actual": [
+              58.19999999999982,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              58.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 10,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 11,
+            "field": "pos",
+            "actual": [
+              70.19999999999982,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              70.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 11,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 12,
+            "field": "pos",
+            "actual": [
+              10.19999999999996,
+              1000.3189999998358,
+              33.920000000000186
+            ],
+            "expected": [
+              10.2,
+              1000.24,
+              33.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 12,
+            "field": "vel",
+            "actual": [
+              0.24999999999995026,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 13,
+            "field": "pos",
+            "actual": [
+              22.200000000000102,
+              1000.3189999998358,
+              33.920000000000186
+            ],
+            "expected": [
+              22.2,
+              1000.24,
+              33.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 13,
+            "field": "vel",
+            "actual": [
+              0.2500000000001279,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 14,
+            "field": "pos",
+            "actual": [
+              34.19999999999982,
+              1000.3189999998358,
+              33.920000000000186
+            ],
+            "expected": [
+              34.2,
+              1000.24,
+              33.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 14,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 15,
+            "field": "pos",
+            "actual": [
+              46.19999999999982,
+              1000.3189999998358,
+              33.920000000000186
+            ],
+            "expected": [
+              46.2,
+              1000.24,
+              33.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 15,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 16,
+            "field": "pos",
+            "actual": [
+              58.19999999999982,
+              1000.3189999998358,
+              33.920000000000186
+            ],
+            "expected": [
+              58.2,
+              1000.24,
+              33.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 16,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 17,
+            "field": "pos",
+            "actual": [
+              70.19999999999982,
+              1000.3189999998358,
+              33.920000000000186
+            ],
+            "expected": [
+              70.2,
+              1000.24,
+              33.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 17,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 18,
+            "field": "pos",
+            "actual": [
+              10.19999999999996,
+              1000.3189999998358,
+              45.920000000000186
+            ],
+            "expected": [
+              10.2,
+              1000.24,
+              45.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 18,
+            "field": "vel",
+            "actual": [
+              0.24999999999995026,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 19,
+            "field": "pos",
+            "actual": [
+              22.200000000000102,
+              1000.3189999998358,
+              45.920000000000186
+            ],
+            "expected": [
+              22.2,
+              1000.24,
+              45.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 19,
+            "field": "vel",
+            "actual": [
+              0.2500000000001279,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 20,
+            "field": "pos",
+            "actual": [
+              34.19999999999982,
+              1000.3189999998358,
+              45.920000000000186
+            ],
+            "expected": [
+              34.2,
+              1000.24,
+              45.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 20,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 21,
+            "field": "pos",
+            "actual": [
+              46.19999999999982,
+              1000.3189999998358,
+              45.920000000000186
+            ],
+            "expected": [
+              46.2,
+              1000.24,
+              45.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 21,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 22,
+            "field": "pos",
+            "actual": [
+              58.19999999999982,
+              1000.3189999998358,
+              45.920000000000186
+            ],
+            "expected": [
+              58.2,
+              1000.24,
+              45.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 22,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 23,
+            "field": "pos",
+            "actual": [
+              70.19999999999982,
+              1000.3189999998358,
+              45.920000000000186
+            ],
+            "expected": [
+              70.2,
+              1000.24,
+              45.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 23,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          }
+        ]
+      },
+      "scene_source_sha256_lf": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+      "variant": "baseline"
+    },
+    {
+      "case": "kinematic_default",
+      "mode": "memory",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        234360,
+        234360,
+        234360
+      ],
+      "median": 234360,
+      "unit": "traced_peak_bytes",
+      "retained_bytes": [
+        234048,
+        234048,
+        234048
+      ],
+      "output_sha256": "b750d48f46f21ecefa517507618c8dc8512ce7209cdeeae07b55a5aa0831a921",
+      "oracle": {
+        "assertions": 0,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "variant": "fixed"
+    },
+    {
+      "case": "dynamic_boxes_8",
+      "mode": "memory",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        472888,
+        472888,
+        472888
+      ],
+      "median": 472888,
+      "unit": "traced_peak_bytes",
+      "retained_bytes": [
+        469016,
+        469016,
+        469016
+      ],
+      "output_sha256": "e8b3eebb049d0d0faf6981ceffb5736c6e753da47bffce12240f03909e81179d",
+      "oracle": {
+        "assertions": 16,
+        "failures": [
+          {
+            "entity": 0,
+            "field": "pos",
+            "actual": [
+              10.19999999999996,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              10.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 0,
+            "field": "vel",
+            "actual": [
+              0.24999999999995026,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 1,
+            "field": "pos",
+            "actual": [
+              22.200000000000102,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              22.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 1,
+            "field": "vel",
+            "actual": [
+              0.2500000000001279,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 2,
+            "field": "pos",
+            "actual": [
+              34.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              34.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 2,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 3,
+            "field": "pos",
+            "actual": [
+              46.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              46.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 3,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 4,
+            "field": "pos",
+            "actual": [
+              58.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              58.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 4,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 5,
+            "field": "pos",
+            "actual": [
+              70.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              70.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 5,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 6,
+            "field": "pos",
+            "actual": [
+              10.19999999999996,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              10.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 6,
+            "field": "vel",
+            "actual": [
+              0.24999999999995026,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 7,
+            "field": "pos",
+            "actual": [
+              22.200000000000102,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              22.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 7,
+            "field": "vel",
+            "actual": [
+              0.2500000000001279,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          }
+        ]
+      },
+      "scene_source_sha256_lf": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+      "variant": "baseline"
+    },
+    {
+      "case": "kinematic_boxes_8",
+      "mode": "memory",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        376288,
+        376288,
+        376288
+      ],
+      "median": 376288,
+      "unit": "traced_peak_bytes",
+      "retained_bytes": [
+        372416,
+        372416,
+        372416
+      ],
+      "output_sha256": "997c84e0462925f6073e3fca10a02a2a38ec0d51139b5a7a160f90ea08455921",
+      "oracle": {
+        "assertions": 0,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+      "variant": "baseline"
+    },
+    {
+      "case": "mixed_contact",
+      "mode": "time",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        0.0131191,
+        0.0131277,
+        0.0135219,
+        0.0130577,
+        0.013145,
+        0.013402,
+        0.0135157,
+        0.0130999,
+        0.013024,
+        0.0130254,
+        0.0130242
+      ],
+      "median": 0.0131191,
+      "unit": "seconds",
+      "retained_bytes": [],
+      "output_sha256": "a93481e7c05a36640e4ff56253f2b3566144d5ea07cda5bce45fa0feec311465",
+      "oracle": {
+        "assertions": 2,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "variant": "fixed"
+    },
+    {
+      "case": "dynamic_boxes_24",
+      "mode": "memory",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        1177848,
+        1177848,
+        1177848
+      ],
+      "median": 1177848,
+      "unit": "traced_peak_bytes",
+      "retained_bytes": [
+        1171432,
+        1171432,
+        1171432
+      ],
+      "output_sha256": "3271fe4b0bdb0768c8d60c86d97c281306a343d310f41f07ae0abd8893179a45",
+      "oracle": {
+        "assertions": 48,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "variant": "fixed"
+    },
+    {
+      "case": "dynamic_boxes_8",
+      "mode": "time",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        0.0929202,
+        0.0934014,
+        0.0936453,
+        0.0955876,
+        0.1028834,
+        0.1029548,
+        0.1037034,
+        0.1039947,
+        0.0952575,
+        0.0925271,
+        0.0958396
+      ],
+      "median": 0.0955876,
+      "unit": "seconds",
+      "retained_bytes": [],
+      "output_sha256": "45f1f78baab5d6ea40e42608a08d760a2f157757ae658feac1e4f83fa633ecbc",
+      "oracle": {
+        "assertions": 16,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "variant": "fixed"
+    },
+    {
+      "case": "kinematic_default",
+      "mode": "time",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        0.003038,
+        0.0030901,
+        0.0030264,
+        0.0030288,
+        0.0030122,
+        0.003028,
+        0.003087,
+        0.0043179,
+        0.0030426,
+        0.0030261,
+        0.0030239
+      ],
+      "median": 0.0030288,
+      "unit": "seconds",
+      "retained_bytes": [],
+      "output_sha256": "b750d48f46f21ecefa517507618c8dc8512ce7209cdeeae07b55a5aa0831a921",
+      "oracle": {
+        "assertions": 0,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "variant": "fixed"
+    },
+    {
+      "case": "dynamic_one_box",
+      "mode": "memory",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        333584,
+        333584,
+        333584
+      ],
+      "median": 333584,
+      "unit": "traced_peak_bytes",
+      "retained_bytes": [
+        331704,
+        331704,
+        331704
+      ],
+      "output_sha256": "45f1f78baab5d6ea40e42608a08d760a2f157757ae658feac1e4f83fa633ecbc",
+      "oracle": {
+        "assertions": 16,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+      "variant": "baseline"
+    },
+    {
+      "case": "dynamic_default_8",
+      "mode": "time",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        0.0097802,
+        0.0097777,
+        0.009775,
+        0.0097821,
+        0.0098159,
+        0.0097889,
+        0.0107374,
+        0.0097324,
+        0.009792,
+        0.0100782,
+        0.0097779
+      ],
+      "median": 0.0097821,
+      "unit": "seconds",
+      "retained_bytes": [],
+      "output_sha256": "45f1f78baab5d6ea40e42608a08d760a2f157757ae658feac1e4f83fa633ecbc",
+      "oracle": {
+        "assertions": 16,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "variant": "fixed"
+    },
+    {
+      "case": "dynamic_boxes_24",
+      "mode": "time",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        0.8592024,
+        0.9159259,
+        1.2492585,
+        1.3832216,
+        1.2932047,
+        1.5511352,
+        1.3986929,
+        1.3627247,
+        1.4807706,
+        1.4773357,
+        1.1994001
+      ],
+      "median": 1.3627247,
+      "unit": "seconds",
+      "retained_bytes": [],
+      "output_sha256": "3271fe4b0bdb0768c8d60c86d97c281306a343d310f41f07ae0abd8893179a45",
+      "oracle": {
+        "assertions": 48,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "variant": "fixed"
+    },
+    {
+      "case": "kinematic_default",
+      "mode": "memory",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        234360,
+        234360,
+        234360
+      ],
+      "median": 234360,
+      "unit": "traced_peak_bytes",
+      "retained_bytes": [
+        234048,
+        234048,
+        234048
+      ],
+      "output_sha256": "b750d48f46f21ecefa517507618c8dc8512ce7209cdeeae07b55a5aa0831a921",
+      "oracle": {
+        "assertions": 0,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+      "variant": "baseline"
+    },
+    {
+      "case": "kinematic_boxes_8",
+      "mode": "memory",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        376288,
+        376288,
+        376288
+      ],
+      "median": 376288,
+      "unit": "traced_peak_bytes",
+      "retained_bytes": [
+        372416,
+        372416,
+        372416
+      ],
+      "output_sha256": "997c84e0462925f6073e3fca10a02a2a38ec0d51139b5a7a160f90ea08455921",
+      "oracle": {
+        "assertions": 0,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "variant": "fixed"
+    },
+    {
+      "case": "mixed_contact",
+      "mode": "memory",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        263640,
+        263640,
+        263640
+      ],
+      "median": 263640,
+      "unit": "traced_peak_bytes",
+      "retained_bytes": [
+        260296,
+        260296,
+        260296
+      ],
+      "output_sha256": "ed5cc3acbe1567d2b5690d14e791ae20df8aade384bb29fd5315b4726cc307ff",
+      "oracle": {
+        "assertions": 2,
+        "failures": [
+          {
+            "entity": 2,
+            "field": "pos",
+            "actual": [
+              64.19999999999982,
+              1000.3189999998358,
+              63.920000000000186
+            ],
+            "expected": [
+              64.2,
+              1000.24,
+              63.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 2,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          }
+        ]
+      },
+      "scene_source_sha256_lf": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+      "variant": "baseline"
+    },
+    {
+      "case": "mixed_contact",
+      "mode": "time",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        0.0142169,
+        0.0146369,
+        0.0138549,
+        0.0138994,
+        0.0137602,
+        0.0139513,
+        0.0138134,
+        0.0138587,
+        0.0139049,
+        0.013982,
+        0.0138549
+      ],
+      "median": 0.0138994,
+      "unit": "seconds",
+      "retained_bytes": [],
+      "output_sha256": "ed5cc3acbe1567d2b5690d14e791ae20df8aade384bb29fd5315b4726cc307ff",
+      "oracle": {
+        "assertions": 2,
+        "failures": [
+          {
+            "entity": 2,
+            "field": "pos",
+            "actual": [
+              64.19999999999982,
+              1000.3189999998358,
+              63.920000000000186
+            ],
+            "expected": [
+              64.2,
+              1000.24,
+              63.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 2,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          }
+        ]
+      },
+      "scene_source_sha256_lf": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+      "variant": "baseline"
+    },
+    {
+      "case": "dynamic_one_box",
+      "mode": "memory",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        333584,
+        333584,
+        333584
+      ],
+      "median": 333584,
+      "unit": "traced_peak_bytes",
+      "retained_bytes": [
+        331704,
+        331704,
+        331704
+      ],
+      "output_sha256": "45f1f78baab5d6ea40e42608a08d760a2f157757ae658feac1e4f83fa633ecbc",
+      "oracle": {
+        "assertions": 16,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "variant": "fixed"
+    },
+    {
+      "case": "dynamic_boxes_8",
+      "mode": "time",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        0.099245,
+        0.094241,
+        0.0949771,
+        0.0939818,
+        0.0946192,
+        0.0948026,
+        0.095448,
+        0.094333,
+        0.0948934,
+        0.094316,
+        0.0950811
+      ],
+      "median": 0.0948026,
+      "unit": "seconds",
+      "retained_bytes": [],
+      "output_sha256": "e8b3eebb049d0d0faf6981ceffb5736c6e753da47bffce12240f03909e81179d",
+      "oracle": {
+        "assertions": 16,
+        "failures": [
+          {
+            "entity": 0,
+            "field": "pos",
+            "actual": [
+              10.19999999999996,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              10.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 0,
+            "field": "vel",
+            "actual": [
+              0.24999999999995026,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 1,
+            "field": "pos",
+            "actual": [
+              22.200000000000102,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              22.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 1,
+            "field": "vel",
+            "actual": [
+              0.2500000000001279,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 2,
+            "field": "pos",
+            "actual": [
+              34.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              34.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 2,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 3,
+            "field": "pos",
+            "actual": [
+              46.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              46.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 3,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 4,
+            "field": "pos",
+            "actual": [
+              58.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              58.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 4,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 5,
+            "field": "pos",
+            "actual": [
+              70.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              70.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 5,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 6,
+            "field": "pos",
+            "actual": [
+              10.19999999999996,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              10.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 6,
+            "field": "vel",
+            "actual": [
+              0.24999999999995026,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 7,
+            "field": "pos",
+            "actual": [
+              22.200000000000102,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              22.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 7,
+            "field": "vel",
+            "actual": [
+              0.2500000000001279,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          }
+        ]
+      },
+      "scene_source_sha256_lf": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+      "variant": "baseline"
+    },
+    {
+      "case": "kinematic_boxes_8",
+      "mode": "time",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        0.0971094,
+        0.0933056,
+        0.0876368,
+        0.0872912,
+        0.0876913,
+        0.0874638,
+        0.0876252,
+        0.0895033,
+        0.088524,
+        0.0876918,
+        0.0870918
+      ],
+      "median": 0.0876913,
+      "unit": "seconds",
+      "retained_bytes": [],
+      "output_sha256": "997c84e0462925f6073e3fca10a02a2a38ec0d51139b5a7a160f90ea08455921",
+      "oracle": {
+        "assertions": 0,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "variant": "fixed"
+    },
+    {
+      "case": "dynamic_default_8",
+      "mode": "time",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        0.0099711,
+        0.0102894,
+        0.0110337,
+        0.0108995,
+        0.0107508,
+        0.0107566,
+        0.0107876,
+        0.0107903,
+        0.0109604,
+        0.0106997,
+        0.0112339
+      ],
+      "median": 0.0107876,
+      "unit": "seconds",
+      "retained_bytes": [],
+      "output_sha256": "45f1f78baab5d6ea40e42608a08d760a2f157757ae658feac1e4f83fa633ecbc",
+      "oracle": {
+        "assertions": 16,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+      "variant": "baseline"
+    },
+    {
+      "case": "dynamic_default_8",
+      "mode": "memory",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        333376,
+        333376,
+        333376
+      ],
+      "median": 333376,
+      "unit": "traced_peak_bytes",
+      "retained_bytes": [
+        331496,
+        331496,
+        331496
+      ],
+      "output_sha256": "45f1f78baab5d6ea40e42608a08d760a2f157757ae658feac1e4f83fa633ecbc",
+      "oracle": {
+        "assertions": 16,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+      "variant": "baseline"
+    },
+    {
+      "case": "dynamic_boxes_24",
+      "mode": "memory",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        1181328,
+        1181328,
+        1181328
+      ],
+      "median": 1181328,
+      "unit": "traced_peak_bytes",
+      "retained_bytes": [
+        1174912,
+        1174912,
+        1174912
+      ],
+      "output_sha256": "0e89f3cd03a543d1c93456a83fabe8a6df3fd3107a5a4f558b5a8e809df49f70",
+      "oracle": {
+        "assertions": 48,
+        "failures": [
+          {
+            "entity": 0,
+            "field": "pos",
+            "actual": [
+              10.19999999999996,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              10.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 0,
+            "field": "vel",
+            "actual": [
+              0.24999999999995026,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 1,
+            "field": "pos",
+            "actual": [
+              22.200000000000102,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              22.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 1,
+            "field": "vel",
+            "actual": [
+              0.2500000000001279,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 2,
+            "field": "pos",
+            "actual": [
+              34.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              34.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 2,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 3,
+            "field": "pos",
+            "actual": [
+              46.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              46.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 3,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 4,
+            "field": "pos",
+            "actual": [
+              58.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              58.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 4,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 5,
+            "field": "pos",
+            "actual": [
+              70.19999999999982,
+              1000.3189999998358,
+              9.920000000000044
+            ],
+            "expected": [
+              70.2,
+              1000.24,
+              9.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 5,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999994458
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 6,
+            "field": "pos",
+            "actual": [
+              10.19999999999996,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              10.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 6,
+            "field": "vel",
+            "actual": [
+              0.24999999999995026,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 7,
+            "field": "pos",
+            "actual": [
+              22.200000000000102,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              22.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 7,
+            "field": "vel",
+            "actual": [
+              0.2500000000001279,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 8,
+            "field": "pos",
+            "actual": [
+              34.19999999999982,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              34.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 8,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 9,
+            "field": "pos",
+            "actual": [
+              46.19999999999982,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              46.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 9,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 10,
+            "field": "pos",
+            "actual": [
+              58.19999999999982,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              58.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 10,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 11,
+            "field": "pos",
+            "actual": [
+              70.19999999999982,
+              1000.3189999998358,
+              21.919999999999902
+            ],
+            "expected": [
+              70.2,
+              1000.24,
+              21.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 11,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.10000000000012221
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 12,
+            "field": "pos",
+            "actual": [
+              10.19999999999996,
+              1000.3189999998358,
+              33.920000000000186
+            ],
+            "expected": [
+              10.2,
+              1000.24,
+              33.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 12,
+            "field": "vel",
+            "actual": [
+              0.24999999999995026,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 13,
+            "field": "pos",
+            "actual": [
+              22.200000000000102,
+              1000.3189999998358,
+              33.920000000000186
+            ],
+            "expected": [
+              22.2,
+              1000.24,
+              33.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 13,
+            "field": "vel",
+            "actual": [
+              0.2500000000001279,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 14,
+            "field": "pos",
+            "actual": [
+              34.19999999999982,
+              1000.3189999998358,
+              33.920000000000186
+            ],
+            "expected": [
+              34.2,
+              1000.24,
+              33.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 14,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 15,
+            "field": "pos",
+            "actual": [
+              46.19999999999982,
+              1000.3189999998358,
+              33.920000000000186
+            ],
+            "expected": [
+              46.2,
+              1000.24,
+              33.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 15,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 16,
+            "field": "pos",
+            "actual": [
+              58.19999999999982,
+              1000.3189999998358,
+              33.920000000000186
+            ],
+            "expected": [
+              58.2,
+              1000.24,
+              33.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 16,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 17,
+            "field": "pos",
+            "actual": [
+              70.19999999999982,
+              1000.3189999998358,
+              33.920000000000186
+            ],
+            "expected": [
+              70.2,
+              1000.24,
+              33.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 17,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 18,
+            "field": "pos",
+            "actual": [
+              10.19999999999996,
+              1000.3189999998358,
+              45.920000000000186
+            ],
+            "expected": [
+              10.2,
+              1000.24,
+              45.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 18,
+            "field": "vel",
+            "actual": [
+              0.24999999999995026,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 19,
+            "field": "pos",
+            "actual": [
+              22.200000000000102,
+              1000.3189999998358,
+              45.920000000000186
+            ],
+            "expected": [
+              22.2,
+              1000.24,
+              45.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 19,
+            "field": "vel",
+            "actual": [
+              0.2500000000001279,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 20,
+            "field": "pos",
+            "actual": [
+              34.19999999999982,
+              1000.3189999998358,
+              45.920000000000186
+            ],
+            "expected": [
+              34.2,
+              1000.24,
+              45.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 20,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 21,
+            "field": "pos",
+            "actual": [
+              46.19999999999982,
+              1000.3189999998358,
+              45.920000000000186
+            ],
+            "expected": [
+              46.2,
+              1000.24,
+              45.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 21,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 22,
+            "field": "pos",
+            "actual": [
+              58.19999999999982,
+              1000.3189999998358,
+              45.920000000000186
+            ],
+            "expected": [
+              58.2,
+              1000.24,
+              45.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 22,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          },
+          {
+            "entity": 23,
+            "field": "pos",
+            "actual": [
+              70.19999999999982,
+              1000.3189999998358,
+              45.920000000000186
+            ],
+            "expected": [
+              70.2,
+              1000.24,
+              45.92
+            ],
+            "max_error": 0.0789999998357871
+          },
+          {
+            "entity": 23,
+            "field": "vel",
+            "actual": [
+              0.24999999999977263,
+              0.299999999595002,
+              -0.09999999999976694
+            ],
+            "expected": [
+              0.25,
+              0.09999999999999998,
+              -0.1
+            ],
+            "max_error": 0.19999999959500203
+          }
+        ]
+      },
+      "scene_source_sha256_lf": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+      "variant": "baseline"
+    },
+    {
+      "case": "dynamic_one_box",
+      "mode": "time",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        0.0105094,
+        0.0107128,
+        0.0109828,
+        0.0108467,
+        0.0111435,
+        0.010844,
+        0.0107765,
+        0.0114131,
+        0.0110158,
+        0.0110468,
+        0.0111979
+      ],
+      "median": 0.0109828,
+      "unit": "seconds",
+      "retained_bytes": [],
+      "output_sha256": "45f1f78baab5d6ea40e42608a08d760a2f157757ae658feac1e4f83fa633ecbc",
+      "oracle": {
+        "assertions": 16,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+      "variant": "baseline"
+    },
+    {
+      "case": "dynamic_boxes_8",
+      "mode": "memory",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        472824,
+        472824,
+        472824
+      ],
+      "median": 472824,
+      "unit": "traced_peak_bytes",
+      "retained_bytes": [
+        468952,
+        468952,
+        468952
+      ],
+      "output_sha256": "45f1f78baab5d6ea40e42608a08d760a2f157757ae658feac1e4f83fa633ecbc",
+      "oracle": {
+        "assertions": 16,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "variant": "fixed"
+    },
+    {
+      "case": "kinematic_default",
+      "mode": "time",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        0.0030883,
+        0.0030791,
+        0.0031098,
+        0.0030867,
+        0.003067,
+        0.0030749,
+        0.0031338,
+        0.0031208,
+        0.0030555,
+        0.0030588,
+        0.0031429
+      ],
+      "median": 0.0030867,
+      "unit": "seconds",
+      "retained_bytes": [],
+      "output_sha256": "b750d48f46f21ecefa517507618c8dc8512ce7209cdeeae07b55a5aa0831a921",
+      "oracle": {
+        "assertions": 0,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+      "variant": "baseline"
+    },
+    {
+      "case": "kinematic_boxes_8",
+      "mode": "time",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        0.1021366,
+        0.103218,
+        0.1018175,
+        0.1026025,
+        0.104684,
+        0.1029335,
+        0.1019272,
+        0.1039651,
+        0.1035116,
+        0.1061587,
+        0.1020832
+      ],
+      "median": 0.1029335,
+      "unit": "seconds",
+      "retained_bytes": [],
+      "output_sha256": "997c84e0462925f6073e3fca10a02a2a38ec0d51139b5a7a160f90ea08455921",
+      "oracle": {
+        "assertions": 0,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+      "variant": "baseline"
+    },
+    {
+      "case": "dynamic_one_box",
+      "mode": "time",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        0.0099954,
+        0.010085,
+        0.0100275,
+        0.0100453,
+        0.0099955,
+        0.0100751,
+        0.0100963,
+        0.0100435,
+        0.0112188,
+        0.0099281,
+        0.0099803
+      ],
+      "median": 0.0100435,
+      "unit": "seconds",
+      "retained_bytes": [],
+      "output_sha256": "45f1f78baab5d6ea40e42608a08d760a2f157757ae658feac1e4f83fa633ecbc",
+      "oracle": {
+        "assertions": 16,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "variant": "fixed"
+    },
+    {
+      "case": "mixed_contact",
+      "mode": "memory",
+      "ticks": 80,
+      "warmups": 1,
+      "samples": [
+        263384,
+        263384,
+        263384
+      ],
+      "median": 263384,
+      "unit": "traced_peak_bytes",
+      "retained_bytes": [
+        260040,
+        260040,
+        260040
+      ],
+      "output_sha256": "a93481e7c05a36640e4ff56253f2b3566144d5ea07cda5bce45fa0feec311465",
+      "oracle": {
+        "assertions": 2,
+        "failures": []
+      },
+      "scene_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "variant": "fixed"
+    }
+  ],
+  "comparisons": [
+    {
+      "case": "kinematic_default",
+      "mode": "time",
+      "fixed_over_baseline": 0.9812421032170279,
+      "baseline_median": 0.0030867,
+      "fixed_median": 0.0030288,
+      "output_equal": true
+    },
+    {
+      "case": "kinematic_default",
+      "mode": "memory",
+      "fixed_over_baseline": 1.0,
+      "baseline_median": 234360,
+      "fixed_median": 234360,
+      "output_equal": true
+    },
+    {
+      "case": "kinematic_boxes_8",
+      "mode": "time",
+      "fixed_over_baseline": 0.8519218718881608,
+      "baseline_median": 0.1029335,
+      "fixed_median": 0.0876913,
+      "output_equal": true
+    },
+    {
+      "case": "kinematic_boxes_8",
+      "mode": "memory",
+      "fixed_over_baseline": 1.0,
+      "baseline_median": 376288,
+      "fixed_median": 376288,
+      "output_equal": true
+    },
+    {
+      "case": "dynamic_default_8",
+      "mode": "time",
+      "fixed_over_baseline": 0.9067911305573065,
+      "baseline_median": 0.0107876,
+      "fixed_median": 0.0097821,
+      "output_equal": true
+    },
+    {
+      "case": "dynamic_default_8",
+      "mode": "memory",
+      "fixed_over_baseline": 1.0,
+      "baseline_median": 333376,
+      "fixed_median": 333376,
+      "output_equal": true
+    },
+    {
+      "case": "dynamic_one_box",
+      "mode": "time",
+      "fixed_over_baseline": 0.9144753614743054,
+      "baseline_median": 0.0109828,
+      "fixed_median": 0.0100435,
+      "output_equal": true
+    },
+    {
+      "case": "dynamic_one_box",
+      "mode": "memory",
+      "fixed_over_baseline": 1.0,
+      "baseline_median": 333584,
+      "fixed_median": 333584,
+      "output_equal": true
+    },
+    {
+      "case": "dynamic_boxes_8",
+      "mode": "time",
+      "fixed_over_baseline": 1.0082803636187192,
+      "baseline_median": 0.0948026,
+      "fixed_median": 0.0955876,
+      "output_equal": false
+    },
+    {
+      "case": "dynamic_boxes_8",
+      "mode": "memory",
+      "fixed_over_baseline": 0.9998646613997395,
+      "baseline_median": 472888,
+      "fixed_median": 472824,
+      "output_equal": false
+    },
+    {
+      "case": "dynamic_boxes_24",
+      "mode": "time",
+      "fixed_over_baseline": 1.1938255972173601,
+      "baseline_median": 1.1414772,
+      "fixed_median": 1.3627247,
+      "output_equal": false
+    },
+    {
+      "case": "dynamic_boxes_24",
+      "mode": "memory",
+      "fixed_over_baseline": 0.997054162772744,
+      "baseline_median": 1181328,
+      "fixed_median": 1177848,
+      "output_equal": false
+    },
+    {
+      "case": "mixed_contact",
+      "mode": "time",
+      "fixed_over_baseline": 0.9438608860814136,
+      "baseline_median": 0.0138994,
+      "fixed_median": 0.0131191,
+      "output_equal": false
+    },
+    {
+      "case": "mixed_contact",
+      "mode": "memory",
+      "fixed_over_baseline": 0.9990289789106357,
+      "baseline_median": 263640,
+      "fixed_median": 263384,
+      "output_equal": false
+    }
+  ]
+}

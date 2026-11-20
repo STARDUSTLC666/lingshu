@@ -1,0 +1,14 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+____________ test_newborn_uses_only_its_post_birth_span[1.0-edge] _____________
+tests\test_fresh_row_decay.py:73: in test_newborn_uses_only_its_post_birth_span
+    assert _value(store, kind, "newborn") == pytest.approx(
+E   AssertionError: newborn was aged before its birth
+E   assert 1.810560263659002e-89 == 0.4998316724462135 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 1.810560263659002e-89
+E     Expected: 0.4998316724462135 ± 1.0e-12
+=========================== short test summary info ===========================
+FAILED tests/test_fresh_row_decay.py::test_newborn_uses_only_its_post_birth_span[1.0-edge]
+1 failed in 0.49s

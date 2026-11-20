@@ -1,0 +1,573 @@
+{
+  "source_commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "source_sha256": "330269be933d1949c42739fd9dcf284369a1b52aac7b74fb82c74af2c2bd95db",
+  "numpy": "2.5.5",
+  "records": [
+    {
+      "type": "lattice",
+      "shape": [
+        1,
+        4,
+        4,
+        3
+      ],
+      "blue_cell": [
+        3,
+        3
+      ],
+      "balanced_zone": "r8",
+      "actual": [
+        {
+          "pos": "r0",
+          "obj": "circle|red",
+          "conf": 0.111,
+          "share": 0.0
+        }
+      ],
+      "balanced_partition": [
+        {
+          "pos": "r8",
+          "obj": "circle|blue",
+          "share": 1.0
+        }
+      ]
+    },
+    {
+      "type": "lattice",
+      "shape": [
+        1,
+        6,
+        7,
+        3
+      ],
+      "blue_cell": [
+        5,
+        6
+      ],
+      "balanced_zone": "r8",
+      "actual": [
+        {
+          "pos": "r0",
+          "obj": "circle|red",
+          "conf": 0.111,
+          "share": 0.0
+        }
+      ],
+      "balanced_partition": [
+        {
+          "pos": "r8",
+          "obj": "circle|blue",
+          "share": 1.0
+        }
+      ]
+    },
+    {
+      "type": "lattice",
+      "shape": [
+        1,
+        7,
+        6,
+        3
+      ],
+      "blue_cell": [
+        6,
+        5
+      ],
+      "balanced_zone": "r8",
+      "actual": [
+        {
+          "pos": "r0",
+          "obj": "circle|red",
+          "conf": 0.111,
+          "share": 0.0
+        }
+      ],
+      "balanced_partition": [
+        {
+          "pos": "r8",
+          "obj": "circle|blue",
+          "share": 1.0
+        }
+      ]
+    },
+    {
+      "type": "lattice",
+      "shape": [
+        1,
+        18,
+        16,
+        3
+      ],
+      "blue_cell": [
+        9,
+        15
+      ],
+      "balanced_zone": "r5",
+      "actual": [
+        {
+          "pos": "r0",
+          "obj": "circle|red",
+          "conf": 0.111,
+          "share": 0.0
+        }
+      ],
+      "balanced_partition": [
+        {
+          "pos": "r5",
+          "obj": "circle|blue",
+          "share": 1.0
+        }
+      ]
+    },
+    {
+      "type": "lattice",
+      "shape": [
+        1,
+        18,
+        16,
+        3
+      ],
+      "blue_cell": [
+        9,
+        14
+      ],
+      "balanced_zone": "r5",
+      "actual": [
+        {
+          "pos": "r5",
+          "obj": "circle|blue",
+          "conf": 0.778,
+          "share": 1.0
+        }
+      ],
+      "balanced_partition": [
+        {
+          "pos": "r5",
+          "obj": "circle|blue",
+          "share": 1.0
+        }
+      ]
+    },
+    {
+      "type": "lattice",
+      "shape": [
+        1,
+        6,
+        6,
+        3
+      ],
+      "blue_cell": [
+        5,
+        5
+      ],
+      "balanced_zone": "r8",
+      "actual": [
+        {
+          "pos": "r8",
+          "obj": "circle|blue",
+          "conf": 1.0,
+          "share": 1.0
+        }
+      ],
+      "balanced_partition": [
+        {
+          "pos": "r8",
+          "obj": "circle|blue",
+          "share": 1.0
+        }
+      ]
+    },
+    {
+      "type": "image_to_grid",
+      "image_shape": [
+        48,
+        48,
+        3
+      ],
+      "blue_pixels": "entire final image column",
+      "cells_across": 16,
+      "shape": [
+        1,
+        18,
+        16,
+        3
+      ],
+      "nonzero_cells": [
+        [
+          1,
+          15
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          9,
+          15
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          17,
+          15
+        ]
+      ],
+      "actual": [
+        {
+          "pos": "r0",
+          "obj": "circle|red",
+          "conf": 0.111,
+          "share": 0.0
+        }
+      ],
+      "balanced_partition": [
+        {
+          "pos": "r2",
+          "obj": "circle|blue",
+          "share": 0.333
+        },
+        {
+          "pos": "r5",
+          "obj": "circle|blue",
+          "share": 0.333
+        },
+        {
+          "pos": "r8",
+          "obj": "circle|blue",
+          "share": 0.333
+        }
+      ],
+      "multimodal_actual": {
+        "verdict": "REJECT",
+        "score": 0.0,
+        "note": "图文冲突(0.00):子句无图像证据支持",
+        "align": 0.0,
+        "clauses": 1,
+        "detections": 1
+      },
+      "multimodal_balanced": {
+        "verdict": "ACCEPT",
+        "score": 1.0,
+        "note": "图文一致(1.00):全部子句获图像证据支持"
+      }
+    },
+    {
+      "type": "image_to_grid",
+      "image_shape": [
+        48,
+        48,
+        3
+      ],
+      "blue_pixels": "entire final image column",
+      "cells_across": 17,
+      "shape": [
+        1,
+        19,
+        17,
+        3
+      ],
+      "nonzero_cells": [
+        [
+          1,
+          16
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          7,
+          16
+        ],
+        [
+          9,
+          16
+        ],
+        [
+          11,
+          16
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          17,
+          16
+        ]
+      ],
+      "actual": [
+        {
+          "pos": "r0",
+          "obj": "circle|red",
+          "conf": 0.111,
+          "share": 0.0
+        }
+      ],
+      "balanced_partition": [
+        {
+          "pos": "r2",
+          "obj": "circle|blue",
+          "share": 0.333
+        },
+        {
+          "pos": "r5",
+          "obj": "circle|blue",
+          "share": 0.333
+        },
+        {
+          "pos": "r8",
+          "obj": "circle|blue",
+          "share": 0.333
+        }
+      ],
+      "multimodal_actual": {
+        "verdict": "REJECT",
+        "score": 0.0,
+        "note": "图文冲突(0.00):子句无图像证据支持",
+        "align": 0.0,
+        "clauses": 1,
+        "detections": 1
+      },
+      "multimodal_balanced": {
+        "verdict": "ACCEPT",
+        "score": 1.0,
+        "note": "图文一致(1.00):全部子句获图像证据支持"
+      }
+    },
+    {
+      "type": "image_to_grid",
+      "image_shape": [
+        48,
+        48,
+        3
+      ],
+      "blue_pixels": "entire final image column",
+      "cells_across": 19,
+      "shape": [
+        1,
+        22,
+        19,
+        3
+      ],
+      "nonzero_cells": [
+        [
+          1,
+          18
+        ],
+        [
+          3,
+          18
+        ],
+        [
+          5,
+          18
+        ],
+        [
+          7,
+          18
+        ],
+        [
+          9,
+          18
+        ],
+        [
+          11,
+          18
+        ],
+        [
+          13,
+          18
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          19,
+          18
+        ],
+        [
+          21,
+          18
+        ]
+      ],
+      "actual": [
+        {
+          "pos": "r0",
+          "obj": "circle|red",
+          "conf": 0.111,
+          "share": 0.0
+        }
+      ],
+      "balanced_partition": [
+        {
+          "pos": "r2",
+          "obj": "circle|blue",
+          "share": 0.273
+        },
+        {
+          "pos": "r5",
+          "obj": "circle|blue",
+          "share": 0.364
+        },
+        {
+          "pos": "r8",
+          "obj": "circle|blue",
+          "share": 0.364
+        }
+      ],
+      "multimodal_actual": {
+        "verdict": "REJECT",
+        "score": 0.0,
+        "note": "图文冲突(0.00):子句无图像证据支持",
+        "align": 0.0,
+        "clauses": 1,
+        "detections": 1
+      },
+      "multimodal_balanced": {
+        "verdict": "ACCEPT",
+        "score": 1.0,
+        "note": "图文一致(1.00):全部子句获图像证据支持"
+      }
+    },
+    {
+      "type": "image_to_grid",
+      "image_shape": [
+        48,
+        48,
+        3
+      ],
+      "blue_pixels": "entire final image column",
+      "cells_across": 23,
+      "shape": [
+        1,
+        26,
+        23,
+        3
+      ],
+      "nonzero_cells": [
+        [
+          1,
+          22
+        ],
+        [
+          3,
+          22
+        ],
+        [
+          5,
+          22
+        ],
+        [
+          7,
+          22
+        ],
+        [
+          9,
+          22
+        ],
+        [
+          11,
+          22
+        ],
+        [
+          13,
+          22
+        ],
+        [
+          15,
+          22
+        ],
+        [
+          17,
+          22
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          21,
+          22
+        ],
+        [
+          23,
+          22
+        ],
+        [
+          25,
+          22
+        ]
+      ],
+      "actual": [
+        {
+          "pos": "r0",
+          "obj": "circle|red",
+          "conf": 0.111,
+          "share": 0.0
+        }
+      ],
+      "balanced_partition": [
+        {
+          "pos": "r2",
+          "obj": "circle|blue",
+          "share": 0.308
+        },
+        {
+          "pos": "r5",
+          "obj": "circle|blue",
+          "share": 0.308
+        },
+        {
+          "pos": "r8",
+          "obj": "circle|blue",
+          "share": 0.385
+        }
+      ],
+      "multimodal_actual": {
+        "verdict": "REJECT",
+        "score": 0.0,
+        "note": "图文冲突(0.00):子句无图像证据支持",
+        "align": 0.0,
+        "clauses": 1,
+        "detections": 1
+      },
+      "multimodal_balanced": {
+        "verdict": "ACCEPT",
+        "score": 1.0,
+        "note": "图文一致(1.00):全部子句获图像证据支持"
+      }
+    }
+  ]
+}

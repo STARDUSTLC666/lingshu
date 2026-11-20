@@ -1,0 +1,35 @@
+{
+  "results": [
+    {
+      "case": "divisible_2x18x18",
+      "baseline_ms": 0.5169275,
+      "fixed_ms": 0.46195250000000004,
+      "fixed_over_baseline_time": 0.8936504635563015,
+      "baseline_peak_bytes": 179696,
+      "fixed_peak_bytes": 179696,
+      "fixed_over_baseline_peak": 1.0,
+      "output_equal": true
+    },
+    {
+      "case": "uneven_2x18x16",
+      "baseline_ms": 0.379065,
+      "fixed_ms": 0.758845,
+      "fixed_over_baseline_time": 2.001886220041418,
+      "baseline_peak_bytes": 160496,
+      "fixed_peak_bytes": 160496,
+      "fixed_over_baseline_peak": 1.0,
+      "output_equal": false
+    },
+    {
+      "case": "uneven_2x65x67",
+      "baseline_ms": 2.26314,
+      "fixed_ms": 2.1009266666666666,
+      "fixed_over_baseline_time": 0.9283237743430219,
+      "baseline_peak_bytes": 2317280,
+      "fixed_peak_bytes": 2317280,
+      "fixed_over_baseline_peak": 1.0,
+      "output_equal": false
+    }
+  ],
+  "caveat": "Shared Windows host; descriptive timings, not statistical significance or isolated CPU guarantees. Uneven grids now classify the full input rather than a truncated subset."
+}

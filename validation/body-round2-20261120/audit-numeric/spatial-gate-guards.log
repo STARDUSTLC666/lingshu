@@ -1,0 +1,40 @@
+........................................................................ [ 56%]
+........................................................                 [100%]
+============================== warnings summary ===============================
+tests/test_doc_module_counts_guard.py::test_no_other_guard_reads_doc_counts
+tests/test_issue455_subprocess_encoding.py::test_no_text_mode_subprocess_without_encoding
+  <unknown>:6: SyntaxWarning: invalid escape sequence '\`'
+
+tests/test_doc_module_counts_guard.py::test_no_other_guard_reads_doc_counts
+tests/test_issue455_subprocess_encoding.py::test_no_text_mode_subprocess_without_encoding
+  <unknown>:72: SyntaxWarning: invalid escape sequence '\`'
+
+tests/test_doc_module_counts_guard.py::test_no_other_guard_reads_doc_counts
+tests/test_issue455_subprocess_encoding.py::test_no_text_mode_subprocess_without_encoding
+  <unknown>:5: SyntaxWarning: invalid escape sequence '\d'
+
+tests/test_doc_module_counts_guard.py::test_no_other_guard_reads_doc_counts
+tests/test_issue455_subprocess_encoding.py::test_no_text_mode_subprocess_without_encoding
+  <unknown>:32: SyntaxWarning: invalid escape sequence '\s'
+
+tests/test_pytest_collection_guard.py::test_no_module_level_sys_exit_in_tests
+  [workspace]/lingshu/work\lingshu-body-spatial-partition-20261120\tests\test_batch103_sec_fences_guard.py:6: SyntaxWarning: invalid escape sequence '\`'
+    #2565 `scenario_cli` 的脑根渲染围栏被 `\\?\` 逐字前缀绕过
+
+tests/test_pytest_collection_guard.py::test_no_module_level_sys_exit_in_tests
+  [workspace]/lingshu/work\lingshu-body-spatial-partition-20261120\tests\test_batch103_sec_fences_guard.py:72: SyntaxWarning: invalid escape sequence '\`'
+    """G2 根因复现（Windows 专属）：`\\?\` 前缀让 `is_relative_to` 恒 False。"""
+
+tests/test_pytest_collection_guard.py::test_no_module_level_sys_exit_in_tests
+  [workspace]/lingshu/work\lingshu-body-spatial-partition-20261120\tests\test_coggraph_generic_tag.py:5: SyntaxWarning: invalid escape sequence '\d'
+    `GENERIC_TAG` 三个短前缀分支只锚定了开头（`^sha` / `^precise` / `^v\d`）⇒
+
+tests/test_pytest_collection_guard.py::test_no_module_level_sys_exit_in_tests
+  [workspace]/lingshu/work\lingshu-body-spatial-partition-20261120\tests\test_issue1010_vprim_category_roundtrip.py:32: SyntaxWarning: invalid escape sequence '\s'
+    "multi word", 'q"uote', "back\slash"])
+
+tests/test_issue455_subprocess_encoding.py::test_no_text_mode_subprocess_without_encoding
+  <unknown>:13: SyntaxWarning: invalid escape sequence '\s'
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+128 passed, 13 warnings in 276.56s (0:04:36)

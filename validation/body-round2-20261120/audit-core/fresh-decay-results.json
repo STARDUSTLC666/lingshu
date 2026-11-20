@@ -1,0 +1,34 @@
+{
+  "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "prior_tick": 1794582489.4455307,
+  "now": 1795187289.4495301,
+  "birth": {
+    "context": 1795187289.446531,
+    "premise": 1795187289.4475296,
+    "edge": 1795187289.4490306
+  },
+  "ages_seconds": {
+    "context": 0.0029990673065185547,
+    "premise": 0.002000570297241211,
+    "edge": 0.0004994869232177734
+  },
+  "before": {
+    "context": 0.5,
+    "premise": 0.5,
+    "edge": 0.5
+  },
+  "after": {
+    "context": null,
+    "premise": 1.8105578254347584e-89,
+    "edge": null
+  },
+  "oracle": {
+    "context": 0.49999949508959646,
+    "premise": 0.4999996631923119,
+    "edge": 0.4999999159084394
+  },
+  "expected_global_old_value": 1.810557825434767e-89,
+  "cursor": {
+    "_last_decay_at": "1795187289.4495301"
+  }
+}

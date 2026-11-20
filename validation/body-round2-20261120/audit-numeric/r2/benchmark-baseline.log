@@ -1,0 +1,175 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "numpy": "2.5.5",
+  "source_root": "[workspace]/lingshu/work\\lingshu-audit-core-20261120",
+  "source_lf_sha256": "330269be933d1949c42739fd9dcf284369a1b52aac7b74fb82c74af2c2bd95db",
+  "thread_limits": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "records": [
+    {
+      "case": "divisible_2x18x18",
+      "shape": [
+        2,
+        18,
+        18,
+        3
+      ],
+      "seed": 20261120,
+      "iterations_per_sample": 40,
+      "warmup_samples": 3,
+      "retained_samples": 9,
+      "milliseconds": [
+        0.5503525,
+        0.5822125,
+        0.58223,
+        0.5706249999999999,
+        0.5483024999999999,
+        0.5112574999999999,
+        0.49435250000000003,
+        0.510575,
+        0.5436275
+      ],
+      "median_ms": 0.5483024999999999,
+      "traced_peak_bytes": [
+        179696,
+        179696,
+        179696
+      ],
+      "median_traced_peak_bytes": 179696,
+      "input_sha256": "5182df121a56483e842e747ac36a91984bcce48af22e1f4aa9473c9cb0e82247",
+      "weights_sha256": "39e4c94d31492c8a8802fcd70412be4729dcae277579582f3e24b7d30da3eb49",
+      "output_sha256": "32702b686df8b22466bf12221ff7097e3f84594ea748d37a70cd10eeba5a3d0c",
+      "output": [
+        [
+          {
+            "pos": "r7",
+            "obj": "circle|blue",
+            "conf": 0.357,
+            "share": 0.132
+          },
+          {
+            "pos": "r6",
+            "obj": "circle|blue",
+            "conf": 0.397,
+            "share": 0.129
+          }
+        ],
+        [
+          {
+            "pos": "r4",
+            "obj": "circle|blue",
+            "conf": 0.401,
+            "share": 0.129
+          }
+        ]
+      ]
+    },
+    {
+      "case": "uneven_2x18x16",
+      "shape": [
+        2,
+        18,
+        16,
+        3
+      ],
+      "seed": 20261120,
+      "iterations_per_sample": 40,
+      "warmup_samples": 3,
+      "retained_samples": 9,
+      "milliseconds": [
+        0.458685,
+        0.5155350000000001,
+        0.436045,
+        0.3694425,
+        0.3621275,
+        0.35622,
+        0.34263499999999997,
+        0.34808500000000003,
+        0.343175
+      ],
+      "median_ms": 0.3621275,
+      "traced_peak_bytes": [
+        160496,
+        160496,
+        160496
+      ],
+      "median_traced_peak_bytes": 160496,
+      "input_sha256": "a8e80d384117a40276e2bf29f7defc34f768e03a4c6da8e9520954a41e4c8478",
+      "weights_sha256": "39e4c94d31492c8a8802fcd70412be4729dcae277579582f3e24b7d30da3eb49",
+      "output_sha256": "8d525d0c9ca86f0408e4b73354169303b3d8ce96906b5d51e29540651cef8e53",
+      "output": [
+        [
+          {
+            "pos": "r8",
+            "obj": "circle|blue",
+            "conf": 0.331,
+            "share": 0.13
+          }
+        ],
+        [
+          {
+            "pos": "r5",
+            "obj": "circle|blue",
+            "conf": 0.402,
+            "share": 0.121
+          }
+        ]
+      ]
+    },
+    {
+      "case": "uneven_2x65x67",
+      "shape": [
+        2,
+        65,
+        67,
+        3
+      ],
+      "seed": 20261120,
+      "iterations_per_sample": 15,
+      "warmup_samples": 3,
+      "retained_samples": 9,
+      "milliseconds": [
+        2.1024866666666666,
+        2.0917333333333334,
+        2.04572,
+        2.08798,
+        2.0186333333333333,
+        2.03342,
+        2.03276,
+        2.027073333333333,
+        2.0158533333333333
+      ],
+      "median_ms": 2.03342,
+      "traced_peak_bytes": [
+        2317280,
+        2317280,
+        2317280
+      ],
+      "median_traced_peak_bytes": 2317280,
+      "input_sha256": "b3e8018d9a1e94f79cb99613e9b5b2df74692a09df2b86ebb4214a22ac1a3186",
+      "weights_sha256": "39e4c94d31492c8a8802fcd70412be4729dcae277579582f3e24b7d30da3eb49",
+      "output_sha256": "769382bb5ae32f1b2b85fb5b23de2f52760792a91138119fc3ae50d3f1a0bb29",
+      "output": [
+        [
+          {
+            "pos": "r5",
+            "obj": "circle|blue",
+            "conf": 0.391,
+            "share": 0.12
+          }
+        ],
+        [
+          {
+            "pos": "r3",
+            "obj": "circle|blue",
+            "conf": 0.369,
+            "share": 0.118
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,470 @@
+{
+  "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "numpy": "2.5.5",
+  "scipy": "1.18.1",
+  "cases": [
+    {
+      "backend": "scipy",
+      "cyclic": false,
+      "edges": [
+        {
+          "source": "source",
+          "target": "target",
+          "relation": "causal",
+          "merged": false
+        },
+        {
+          "source": "source",
+          "target": "target",
+          "relation": "similar",
+          "merged": false
+        }
+      ],
+      "seed_bound": 1.0,
+      "expected_first_target": 0.85,
+      "states": [
+        {
+          "result": {
+            "status": "ok",
+            "workset": "audit",
+            "size": 2,
+            "top": [
+              [
+                "target",
+                1.6
+              ],
+              [
+                "source",
+                1.0
+              ]
+            ],
+            "seeds": 1,
+            "hops": 1,
+            "carried": 0,
+            "latency_ms": 1.0
+          },
+          "state": {
+            "target": 1.6,
+            "source": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "backend": "edge-list",
+      "cyclic": false,
+      "edges": [
+        {
+          "source": "source",
+          "target": "target",
+          "relation": "causal",
+          "merged": false
+        },
+        {
+          "source": "source",
+          "target": "target",
+          "relation": "similar",
+          "merged": false
+        }
+      ],
+      "seed_bound": 1.0,
+      "expected_first_target": 0.85,
+      "states": [
+        {
+          "result": {
+            "status": "ok",
+            "workset": "audit",
+            "size": 2,
+            "top": [
+              [
+                "source",
+                1.0
+              ],
+              [
+                "target",
+                0.85
+              ]
+            ],
+            "seeds": 1,
+            "hops": 1,
+            "carried": 0,
+            "latency_ms": 0.5
+          },
+          "state": {
+            "source": 1.0,
+            "target": 0.85
+          }
+        }
+      ]
+    },
+    {
+      "backend": "scipy",
+      "cyclic": true,
+      "edges": [
+        {
+          "source": "source",
+          "target": "target",
+          "relation": "causal",
+          "merged": false
+        },
+        {
+          "source": "source",
+          "target": "target",
+          "relation": "similar",
+          "merged": false
+        },
+        {
+          "source": "target",
+          "target": "source",
+          "relation": "causal",
+          "merged": false
+        },
+        {
+          "source": "target",
+          "target": "source",
+          "relation": "similar",
+          "merged": false
+        }
+      ],
+      "seed_bound": 1.0,
+      "expected_first_target": 0.85,
+      "states": [
+        {
+          "result": {
+            "status": "ok",
+            "workset": "audit",
+            "size": 2,
+            "top": [
+              [
+                "source",
+                2.56
+              ],
+              [
+                "target",
+                1.6
+              ]
+            ],
+            "seeds": 1,
+            "hops": 2,
+            "carried": 0,
+            "latency_ms": 0.5
+          },
+          "state": {
+            "source": 2.56,
+            "target": 1.6
+          }
+        },
+        {
+          "result": {
+            "status": "ok",
+            "workset": "audit",
+            "size": 2,
+            "top": [
+              [
+                "source",
+                3.2768
+              ],
+              [
+                "target",
+                2.048
+              ]
+            ],
+            "seeds": 1,
+            "hops": 2,
+            "carried": 2,
+            "latency_ms": 1.0
+          },
+          "state": {
+            "source": 3.2768,
+            "target": 2.048
+          }
+        },
+        {
+          "result": {
+            "status": "ok",
+            "workset": "audit",
+            "size": 2,
+            "top": [
+              [
+                "source",
+                4.1943
+              ],
+              [
+                "target",
+                2.6214
+              ]
+            ],
+            "seeds": 1,
+            "hops": 2,
+            "carried": 2,
+            "latency_ms": 1.0
+          },
+          "state": {
+            "source": 4.1943,
+            "target": 2.6214
+          }
+        },
+        {
+          "result": {
+            "status": "ok",
+            "workset": "audit",
+            "size": 2,
+            "top": [
+              [
+                "source",
+                5.3687
+              ],
+              [
+                "target",
+                3.3554
+              ]
+            ],
+            "seeds": 1,
+            "hops": 2,
+            "carried": 2,
+            "latency_ms": 0.5
+          },
+          "state": {
+            "source": 5.3687,
+            "target": 3.3554
+          }
+        },
+        {
+          "result": {
+            "status": "ok",
+            "workset": "audit",
+            "size": 2,
+            "top": [
+              [
+                "source",
+                6.8719
+              ],
+              [
+                "target",
+                4.295
+              ]
+            ],
+            "seeds": 1,
+            "hops": 2,
+            "carried": 2,
+            "latency_ms": 0.5
+          },
+          "state": {
+            "source": 6.8719,
+            "target": 4.295
+          }
+        },
+        {
+          "result": {
+            "status": "ok",
+            "workset": "audit",
+            "size": 2,
+            "top": [
+              [
+                "source",
+                8.796
+              ],
+              [
+                "target",
+                5.4976
+              ]
+            ],
+            "seeds": 1,
+            "hops": 2,
+            "carried": 2,
+            "latency_ms": 1.0
+          },
+          "state": {
+            "source": 8.796,
+            "target": 5.4976
+          }
+        }
+      ]
+    },
+    {
+      "backend": "edge-list",
+      "cyclic": true,
+      "edges": [
+        {
+          "source": "source",
+          "target": "target",
+          "relation": "causal",
+          "merged": false
+        },
+        {
+          "source": "source",
+          "target": "target",
+          "relation": "similar",
+          "merged": false
+        },
+        {
+          "source": "target",
+          "target": "source",
+          "relation": "causal",
+          "merged": false
+        },
+        {
+          "source": "target",
+          "target": "source",
+          "relation": "similar",
+          "merged": false
+        }
+      ],
+      "seed_bound": 1.0,
+      "expected_first_target": 0.85,
+      "states": [
+        {
+          "result": {
+            "status": "ok",
+            "workset": "audit",
+            "size": 2,
+            "top": [
+              [
+                "source",
+                1.0
+              ],
+              [
+                "target",
+                0.85
+              ]
+            ],
+            "seeds": 1,
+            "hops": 2,
+            "carried": 0,
+            "latency_ms": 0.5
+          },
+          "state": {
+            "source": 1.0,
+            "target": 0.85
+          }
+        },
+        {
+          "result": {
+            "status": "ok",
+            "workset": "audit",
+            "size": 2,
+            "top": [
+              [
+                "source",
+                1.0
+              ],
+              [
+                "target",
+                0.85
+              ]
+            ],
+            "seeds": 1,
+            "hops": 2,
+            "carried": 2,
+            "latency_ms": 1.1
+          },
+          "state": {
+            "source": 1.0,
+            "target": 0.85
+          }
+        },
+        {
+          "result": {
+            "status": "ok",
+            "workset": "audit",
+            "size": 2,
+            "top": [
+              [
+                "source",
+                1.0
+              ],
+              [
+                "target",
+                0.85
+              ]
+            ],
+            "seeds": 1,
+            "hops": 2,
+            "carried": 2,
+            "latency_ms": 1.0
+          },
+          "state": {
+            "source": 1.0,
+            "target": 0.85
+          }
+        },
+        {
+          "result": {
+            "status": "ok",
+            "workset": "audit",
+            "size": 2,
+            "top": [
+              [
+                "source",
+                1.0
+              ],
+              [
+                "target",
+                0.85
+              ]
+            ],
+            "seeds": 1,
+            "hops": 2,
+            "carried": 2,
+            "latency_ms": 0.4
+          },
+          "state": {
+            "source": 1.0,
+            "target": 0.85
+          }
+        },
+        {
+          "result": {
+            "status": "ok",
+            "workset": "audit",
+            "size": 2,
+            "top": [
+              [
+                "source",
+                1.0
+              ],
+              [
+                "target",
+                0.85
+              ]
+            ],
+            "seeds": 1,
+            "hops": 2,
+            "carried": 2,
+            "latency_ms": 1.0
+          },
+          "state": {
+            "source": 1.0,
+            "target": 0.85
+          }
+        },
+        {
+          "result": {
+            "status": "ok",
+            "workset": "audit",
+            "size": 2,
+            "top": [
+              [
+                "source",
+                1.0
+              ],
+              [
+                "target",
+                0.85
+              ]
+            ],
+            "seeds": 1,
+            "hops": 2,
+            "carried": 2,
+            "latency_ms": 0.5
+          },
+          "state": {
+            "source": 1.0,
+            "target": 0.85
+          }
+        }
+      ]
+    }
+  ]
+}

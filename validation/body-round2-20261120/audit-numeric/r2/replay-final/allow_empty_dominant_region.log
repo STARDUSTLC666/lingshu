@@ -1,0 +1,12 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+________ test_dark_tiny_lattice_does_not_classify_empty_quadrants[1-1] ________
+tests\test_spatial_detect_complete_partition.py:138: in test_dark_tiny_lattice_does_not_classify_empty_quadrants
+    assert len(result[0]) == len(net.crops) == 1, "nonempty dominant region disappeared"
+E   AssertionError: nonempty dominant region disappeared
+E   assert 0 == 1
+E    +  where 0 = len([])
+E    +    where [] = <test_spatial_detect_complete_partition.CropRecorder object at 0x00000189179CCA10>.crops
+=========================== short test summary info ===========================
+FAILED tests/test_spatial_detect_complete_partition.py::test_dark_tiny_lattice_does_not_classify_empty_quadrants[1-1]
+1 failed in 0.31s

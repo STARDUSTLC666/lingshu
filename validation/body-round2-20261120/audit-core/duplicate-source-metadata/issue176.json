@@ -1,0 +1,12 @@
+{
+  "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+  "records": [
+    {
+      "title": "[core/time_core] 时间核章程未兑现：连续核 cred(dt) 全仓零调用，记忆遗忘按「调用次数」而非流逝时间——interval 改 60 倍遗忘就差 60 倍、停机一周零遗忘；time_core 自身有两份副本",
+      "url": "https://github.com/FuRongJun-1999/lingshu/issues/176",
+      "state": "CLOSED",
+      "number": 176,
+      "comment_count": 6
+    }
+  ]
+}

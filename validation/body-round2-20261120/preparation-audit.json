@@ -1,0 +1,25 @@
+{
+  "status": "staged four local scoped evidence sets; combined/CI pending; not committed or pushed",
+  "artifact_count": 400,
+  "published_bytes": 3512549,
+  "checks": {
+    "numeric_json_leaves_verified": 35352,
+    "json_copied": 51,
+    "xml_semantics_verified": 96,
+    "third_party_body_files_not_copied": 12,
+    "jsonl_copied": 4,
+    "nonstandard_json_raw_text": 1
+  },
+  "canonical_blob_hashes_verified": 400,
+  "remaining_slices": [
+    "integration",
+    "remote CI",
+    "Linux benchmark/mutation workflow results"
+  ],
+  "manifest_and_audit_excluded_from_own_digest_list": true,
+  "staged_files": 402,
+  "additional_control_files": [
+    ".github/workflows/body-round2-benchmarks.yml"
+  ],
+  "final_parse_and_path_scan": "passed"
+}

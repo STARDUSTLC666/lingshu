@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="6" time="0.383" timestamp="2026-11-20T23:13:09.007669+08:00" hostname="STARDUST"><testcase classname="tests.test_circular_time_residual_guard" name="test_shifted_helix_is_anchored_at_first_sample" time="0.001"><failure message="AssertionError: helix center must be at t_ref&#10;assert 23.000000000000103 == 3.0 ± 1.0e-10&#10;  &#10;  comparison failed&#10;  Obtained: 23.000000000000103&#10;  Expected: 3.0 ± 1.0e-10">tests\test_circular_time_residual_guard.py:37: in test_shifted_helix_is_anchored_at_first_sample
+    assert model["center"][up] == pytest.approx(3.0, abs=1e-10), "helix center must be at t_ref"
+E   AssertionError: helix center must be at t_ref
+E   assert 23.000000000000103 == 3.0 ± 1.0e-10
+E     
+E     comparison failed
+E     Obtained: 23.000000000000103
+E     Expected: 3.0 ± 1.0e-10</failure></testcase><testcase classname="tests.test_circular_time_residual_guard" name="test_epoch_angular_and_vertical_fits_remain_nonsingular" time="0.001"><failure message="Failed: epoch helix must remain nonsingular: solve_linear：矩阵奇异（第 1 列主元 ~0）">tests\test_circular_time_residual_guard.py:50: in test_epoch_angular_and_vertical_fits_remain_nonsingular
+    model = P.fit_circular(_samples(up, epoch), up=up)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lingshu\world\physics.py:462: in fit_circular
+    cw = polyfit(ts, ang, 1)
+         ^^^^^^^^^^^^^^^^^^^
+lingshu\world\physics.py:207: in polyfit
+    return solve_linear(a, b)
+           ^^^^^^^^^^^^^^^^^^
+lingshu\world\physics.py:183: in solve_linear
+    raise PhysicsError("solve_linear：矩阵奇异（第 %d 列主元 ~0）" % col)
+E   lingshu.world.physics.PhysicsError: solve_linear：矩阵奇异（第 1 列主元 ~0）
+
+During handling of the above exception, another exception occurred:
+tests\test_circular_time_residual_guard.py:52: in test_epoch_angular_and_vertical_fits_remain_nonsingular
+    pytest.fail("epoch helix must remain nonsingular: " + str(exc))
+E   Failed: epoch helix must remain nonsingular: solve_linear：矩阵奇异（第 1 列主元 ~0）</failure></testcase><testcase classname="tests.test_circular_time_residual_guard" name="test_irregular_time_translation_preserves_parameters" time="0.001"><failure message="lingshu.world.physics.PhysicsError: solve_linear：矩阵奇异（第 1 列主元 ~0）">tests\test_circular_time_residual_guard.py:66: in test_irregular_time_translation_preserves_parameters
+    shifted = P.fit_circular([(t + 1700000000.0, pos) for t, pos in samples], up=up)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lingshu\world\physics.py:462: in fit_circular
+    cw = polyfit(ts, ang, 1)
+         ^^^^^^^^^^^^^^^^^^^
+lingshu\world\physics.py:207: in polyfit
+    return solve_linear(a, b)
+           ^^^^^^^^^^^^^^^^^^
+lingshu\world\physics.py:183: in solve_linear
+    raise PhysicsError("solve_linear：矩阵奇异（第 %d 列主元 ~0）" % col)
+E   lingshu.world.physics.PhysicsError: solve_linear：矩阵奇异（第 1 列主元 ~0）</failure></testcase><testcase classname="tests.test_circular_time_residual_guard" name="test_vertical_fit_residual_matches_centered_regression_oracle" time="0.001"><failure message="AssertionError: vertical residual must contribute to 3D coordinate RMS&#10;assert 5.322127100896028e-16 == 4.185633912563305 ± 4.2e-10&#10;  &#10;  comparison failed&#10;  Obtained: 5.322127100896028e-16&#10;  Expected: 4.185633912563305 ± 4.2e-10">tests\test_circular_time_residual_guard.py:85: in test_vertical_fit_residual_matches_centered_regression_oracle
+    assert model["residual_rms"] == pytest.approx(expected_rms, rel=1e-10), "vertical residual must contribute to 3D coordinate RMS"
+E   AssertionError: vertical residual must contribute to 3D coordinate RMS
+E   assert 5.322127100896028e-16 == 4.185633912563305 ± 4.2e-10
+E     
+E     comparison failed
+E     Obtained: 5.322127100896028e-16
+E     Expected: 4.185633912563305 ± 4.2e-10</failure></testcase><testcase classname="tests.test_circular_time_residual_guard" name="test_planar_noise_uses_same_three_coordinate_rms" time="0.001"><failure message="AssertionError: all fits must use three-coordinate normalization&#10;assert 0.024614208392977403 == 0.020097416995108586 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 0.024614208392977403&#10;  Expected: 0.020097416995108586 ± 1.0e-12">tests\test_circular_time_residual_guard.py:106: in test_planar_noise_uses_same_three_coordinate_rms
+    assert model["residual_rms"] == pytest.approx(rms, rel=1e-12), "all fits must use three-coordinate normalization"
+E   AssertionError: all fits must use three-coordinate normalization
+E   assert 0.024614208392977403 == 0.020097416995108586 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 0.024614208392977403
+E     Expected: 0.020097416995108586 ± 1.0e-12</failure></testcase><testcase classname="tests.test_circular_time_residual_guard" name="test_classification_scores_vertical_mismatch_before_selecting_circular" time="0.048"><failure message="AssertionError: vertical acceleration must not masquerade as a perfect helix&#10;assert 'circular' == 'accelerated'&#10;  &#10;  - accelerated&#10;  + circular">tests\test_circular_time_residual_guard.py:112: in test_classification_scores_vertical_mismatch_before_selecting_circular
+    assert bad["kind"] == "accelerated", "vertical acceleration must not masquerade as a perfect helix"
+E   AssertionError: vertical acceleration must not masquerade as a perfect helix
+E   assert 'circular' == 'accelerated'
+E     
+E     - accelerated
+E     + circular</failure></testcase></testsuite></testsuites>

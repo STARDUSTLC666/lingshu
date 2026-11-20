@@ -1,0 +1,65 @@
+{
+  "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "scope": "four local scoped evidence sets; combined/CI validation pending",
+  "combined_source_sha": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+  "core": {
+    "measured_commit": "bae2eaea9fb77e9e451f1b220d17f9096d06ee78",
+    "final_pr_head": "89c005b7fdd48f64c603d34c280a4d18a93956f7",
+    "pr": "https://github.com/FuRongJun-1999/lingshu/pull/1478",
+    "production_canonical_sha256": "da1d0ddf76f5037f0cb1542241d9d3aceb64d5cf8391f807dbdd369154f4ce01",
+    "measurement_source_identical_to_final_head": true,
+    "final_head_delta": [
+      "docs/intake/body-export-v0.1/_export_manifest.json"
+    ],
+    "manifest_note": "Prepublication terminal inspection found the old manifest hash; no initial raw file was saved. The final recorded strict result is audit-core/manifest-final.json (64 matches / zero mismatches). No initial raw result is fabricated.",
+    "non_claims": [
+      "Known CSR duplicate-coordinate finding is historical audit evidence, not a new discovery or bounty claim.",
+      "Spatial peer-review results describe the early reviewed tree, not the subsequent final spatial fix."
+    ],
+    "benchmark_source_alignment": [
+      {
+        "artifact": "audit-core/bench-baseline.json",
+        "recorded_raw_sha256": "5a2c132548f63aa3ce173e7e538a97e7d91f17ab09e1b7684670e9e8cb703b99",
+        "canonical_lf_sha256": "4b67f6109ebf62eb74a921fd0a5d4e810e846e05643332ceaa1fb1a8739fe771",
+        "raw_source_verified": true,
+        "LF_normalized_bytes_identical_to_declared_commit": true
+      },
+      {
+        "artifact": "audit-core/bench-fixed.json",
+        "recorded_raw_sha256": "1ced866b6dc912537e754d405d4acd512cff9703cda564e26c5eebc4d93a94bb",
+        "canonical_lf_sha256": "da1d0ddf76f5037f0cb1542241d9d3aceb64d5cf8391f807dbdd369154f4ce01",
+        "raw_source_verified": true,
+        "LF_normalized_bytes_identical_to_declared_commit": true
+      }
+    ]
+  },
+  "circular": {
+    "final_pr_head": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+    "pr": "https://github.com/FuRongJun-1999/lingshu/pull/1477",
+    "production_canonical_sha256": "61c497fe3e077c7c3bf4542e58e27f0811735d992e8ae9ba868e19ce1e2e7ff6"
+  },
+  "numeric": {
+    "final_pr_head": "a357dbbe96905848fd81b7249814576fb2743674",
+    "pr": "https://github.com/FuRongJun-1999/lingshu/pull/1480",
+    "final_guard_tests": 70,
+    "final_baseline_failed": 59,
+    "final_baseline_passed": 11,
+    "named_mutations": 6,
+    "production_canonical_sha256": "f6bc776209577f4f506cf1663a90ced937c3f0d55ab2fd8f9e58587442fdb907",
+    "history_note": "R1 and intermediate R2 results are retained; old 43/27 counts are intermediate, not final. Final R2 is replay-final-verified."
+  },
+  "world": {
+    "final_pr_head": "13952c82874fb9ee19a4f1b660e3144134367a53",
+    "pr": "https://github.com/FuRongJun-1999/lingshu/pull/1479",
+    "final_guard_tests": 41,
+    "named_mutations": 6,
+    "production_canonical_sha256": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+    "history_note": "Both R1 and final R2 A/B/replay iterations are retained."
+  },
+  "preservation": {
+    "all_available_A_B_measurement_iterations": true,
+    "failed_tests_fit_errors_unexecuted_checks_and_skips_retained": true,
+    "initial_zero_collection_and_incomplete_expected_failure_spec_retained": true,
+    "third_party_full_bodies_copied": false
+  }
+}

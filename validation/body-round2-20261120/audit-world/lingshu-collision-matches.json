@@ -1,0 +1,56 @@
+[
+  {
+    "number": 1228,
+    "title": "fix(world): camera 桥五键畸变收口＋标定残差闸＋四处守卫判别力补钉（镜像 #1227，dsh-bounty #2314/#2316 配套）",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1228",
+    "pr": true
+  },
+  {
+    "number": 1195,
+    "title": "feat(world/calib): 相机标定三步（规格→内参 / 棋盘格→内参&畸变 / 接进 Camera3D）· 纯标准库",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1195",
+    "pr": true
+  },
+  {
+    "number": 1162,
+    "title": "fix(world): _reseed_physics 保留 beta/radius/mass 并跳过 static（lingshu bounty #1959，镜像 #1125 净增量）",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1162",
+    "pr": true
+  },
+  {
+    "number": 1138,
+    "title": "fix(world): scene_simulator 碰撞门推离跳过与 add_entity 维度校验（lingshu #1133/#1134）",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/1138",
+    "pr": true
+  },
+  {
+    "number": 829,
+    "title": "fix(world): #786——physics 真值三项（circular roundtrip / Reflector 负初速 / apex 世界高度）＋守卫",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/829",
+    "pr": true
+  },
+  {
+    "number": 818,
+    "title": "fix(factory+world): 身体库 P1 四条——驱动沙箱 RCE、score 幂等、GIF 烘焙接线、积分器法向力",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/818",
+    "pr": true
+  },
+  {
+    "number": 777,
+    "title": "[world/physics][P2] projectile_state 在弹跳次数用尽与贴地初值两条通路上返回 ground_z 以下坐标并随 t 无界下降：docstring 写「不会穿透」，而仓内守卫的扫描窗口止于 2·t_land 因而仍判绿",
+    "url": "https://github.com/FuRongJun-1999/lingshu/issues/777",
+    "pr": false
+  },
+  {
+    "number": 703,
+    "title": "[world/physics] sweep_aabb 在「仅 t=0 相切且随后相离」时误报 hit/toi=0，scene_simulator 据此把动力学实体冻在接触点（两条通路，200 tick 不恢复）",
+    "url": "https://github.com/FuRongJun-1999/lingshu/issues/703",
+    "pr": false
+  },
+  {
+    "number": 697,
+    "title": "feat(world): 物理仿真深化（环境动力学 · 环境感知预测 · 仿真环境层）＋ 碰撞箱与防穿模",
+    "url": "https://github.com/FuRongJun-1999/lingshu/pull/697",
+    "pr": true
+  }
+]

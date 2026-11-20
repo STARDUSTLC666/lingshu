@@ -1,0 +1,31 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+________ test_dark_tiny_lattice_does_not_classify_empty_quadrants[1-1] ________
+
+rows = 1, cols = 1
+
+    @pytest.mark.parametrize("rows,cols", [(1,1), (2,2), (1,5), (5,2)])
+    def test_dark_tiny_lattice_does_not_classify_empty_quadrants(rows, cols):
+        net = CropRecorder()
+>       assert spatial_detect(net,np.zeros((1,rows,cols,1))) == [[]]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_spatial_detect_complete_partition.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\work\lingshu-body-spatial-partition-20261120\lingshu\nn\hex_text.py:213: in spatial_detect
+    sf, cf = net.l2_features(sub)
+             ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <test_spatial_detect_complete_partition.CropRecorder object at 0x0000025005BE4E60>
+lat = array([], shape=(1, 0, 0, 1), dtype=float64)
+
+    def l2_features(self, lat):
+>       assert lat.shape[1] > 0 and lat.shape[2] > 0, "classified an empty crop"
+E       AssertionError: classified an empty crop
+E       assert (0 > 0)
+
+test_spatial_detect_complete_partition.py:28: AssertionError
+=========================== short test summary info ===========================
+FAILED test_spatial_detect_complete_partition.py::test_dark_tiny_lattice_does_not_classify_empty_quadrants[1-1]
+1 failed in 0.21s

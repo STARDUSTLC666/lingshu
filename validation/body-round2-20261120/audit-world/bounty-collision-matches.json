@@ -1,0 +1,26 @@
+[
+  {
+    "number": 2362,
+    "title": "新发现：lingshu #1133 现象三（斜向碰撞切向滑行丢失）——main 上仍可复现（纯法向回退 dx=0）",
+    "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2362",
+    "pr": false
+  },
+  {
+    "number": 2006,
+    "title": "第三方独立复验：lingshu PR #1138（#1133 碰撞门+#1134 维度校验）——#1134 全修/#1133 现象一修（守卫4红→6绿）；现象二原主张未复现（三轮审核修订）",
+    "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2006",
+    "pr": false
+  },
+  {
+    "number": 1811,
+    "title": "[intake 输入] lingshu #1007：旋转预测时间轴与周期相位修复交付",
+    "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1811",
+    "pr": false
+  },
+  {
+    "number": 626,
+    "title": "【intake 输入】lingshu：sweep_aabb 相切相离误报 hit/toi=0 ⇒ 防穿模层把动力学实体冻在接触点（上游 #703）",
+    "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/626",
+    "pr": false
+  }
+]

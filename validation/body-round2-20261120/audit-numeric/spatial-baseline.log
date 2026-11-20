@@ -1,0 +1,391 @@
+FFFFFF.FFFFF.F.FFFF                                                      [100%]
+================================== FAILURES ===================================
+______________ test_quadrant_crops_cover_each_cell_exactly_once _______________
+
+    def test_quadrant_crops_cover_each_cell_exactly_once():
+        """All 400 row/column pairs cover every cell, including sub-3 axes."""
+        for rows in range(1, 21):
+            for cols in range(1, 21):
+                net = CropRecorder()
+                ids = np.arange(1, rows * cols + 1).reshape(1, rows, cols, 1)
+>               spatial_detect(net, ids, exist_mult=0)
+
+test_spatial_detect_complete_partition.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\work\lingshu-audit-core-20261120\lingshu\nn\hex_text.py:206: in spatial_detect
+    sf, cf = net.l2_features(sub)
+             ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <test_spatial_detect_complete_partition.CropRecorder object at 0x000001DCBBBCBE00>
+lat = array([], shape=(1, 0, 0, 1), dtype=int64)
+
+    def l2_features(self, lat):
+>       assert lat.shape[1] > 0 and lat.shape[2] > 0, "classified an empty crop"
+E       AssertionError: classified an empty crop
+E       assert (0 > 0)
+
+test_spatial_detect_complete_partition.py:28: AssertionError
+___________ test_last_cell_energy_and_color_reach_bottom_right[4-4] ___________
+
+rows = 4, cols = 4
+
+    @pytest.mark.parametrize("rows,cols", [(4,4), (6,7), (7,6), (18,16), (19,17), (6,6)])
+    def test_last_cell_energy_and_color_reach_bottom_right(rows, cols):
+        lat = np.zeros((1, rows, cols, 3))
+        lat[0, -1, -1, 2] = 1
+        result = spatial_detect(_color_net(), lat)[0]
+>       assert [(d["pos"], d["obj"], d["share"]) for d in result] == [
+            ("r8", "circle|blue", 1.0)], "last-cell evidence was lost or assigned to another zone"
+E       AssertionError: last-cell evidence was lost or assigned to another zone
+E       assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]
+E         
+E         At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)
+E         Use -v to get more diff
+
+test_spatial_detect_complete_partition.py:69: AssertionError
+___________ test_last_cell_energy_and_color_reach_bottom_right[6-7] ___________
+
+rows = 6, cols = 7
+
+    @pytest.mark.parametrize("rows,cols", [(4,4), (6,7), (7,6), (18,16), (19,17), (6,6)])
+    def test_last_cell_energy_and_color_reach_bottom_right(rows, cols):
+        lat = np.zeros((1, rows, cols, 3))
+        lat[0, -1, -1, 2] = 1
+        result = spatial_detect(_color_net(), lat)[0]
+>       assert [(d["pos"], d["obj"], d["share"]) for d in result] == [
+            ("r8", "circle|blue", 1.0)], "last-cell evidence was lost or assigned to another zone"
+E       AssertionError: last-cell evidence was lost or assigned to another zone
+E       assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]
+E         
+E         At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)
+E         Use -v to get more diff
+
+test_spatial_detect_complete_partition.py:69: AssertionError
+___________ test_last_cell_energy_and_color_reach_bottom_right[7-6] ___________
+
+rows = 7, cols = 6
+
+    @pytest.mark.parametrize("rows,cols", [(4,4), (6,7), (7,6), (18,16), (19,17), (6,6)])
+    def test_last_cell_energy_and_color_reach_bottom_right(rows, cols):
+        lat = np.zeros((1, rows, cols, 3))
+        lat[0, -1, -1, 2] = 1
+        result = spatial_detect(_color_net(), lat)[0]
+>       assert [(d["pos"], d["obj"], d["share"]) for d in result] == [
+            ("r8", "circle|blue", 1.0)], "last-cell evidence was lost or assigned to another zone"
+E       AssertionError: last-cell evidence was lost or assigned to another zone
+E       assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]
+E         
+E         At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)
+E         Use -v to get more diff
+
+test_spatial_detect_complete_partition.py:69: AssertionError
+__________ test_last_cell_energy_and_color_reach_bottom_right[18-16] __________
+
+rows = 18, cols = 16
+
+    @pytest.mark.parametrize("rows,cols", [(4,4), (6,7), (7,6), (18,16), (19,17), (6,6)])
+    def test_last_cell_energy_and_color_reach_bottom_right(rows, cols):
+        lat = np.zeros((1, rows, cols, 3))
+        lat[0, -1, -1, 2] = 1
+        result = spatial_detect(_color_net(), lat)[0]
+>       assert [(d["pos"], d["obj"], d["share"]) for d in result] == [
+            ("r8", "circle|blue", 1.0)], "last-cell evidence was lost or assigned to another zone"
+E       AssertionError: last-cell evidence was lost or assigned to another zone
+E       assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]
+E         
+E         At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)
+E         Use -v to get more diff
+
+test_spatial_detect_complete_partition.py:69: AssertionError
+__________ test_last_cell_energy_and_color_reach_bottom_right[19-17] __________
+
+rows = 19, cols = 17
+
+    @pytest.mark.parametrize("rows,cols", [(4,4), (6,7), (7,6), (18,16), (19,17), (6,6)])
+    def test_last_cell_energy_and_color_reach_bottom_right(rows, cols):
+        lat = np.zeros((1, rows, cols, 3))
+        lat[0, -1, -1, 2] = 1
+        result = spatial_detect(_color_net(), lat)[0]
+>       assert [(d["pos"], d["obj"], d["share"]) for d in result] == [
+            ("r8", "circle|blue", 1.0)], "last-cell evidence was lost or assigned to another zone"
+E       AssertionError: last-cell evidence was lost or assigned to another zone
+E       assert [('r0', 'circle|red', 0.0)] == [('r8', 'circle|blue', 1.0)]
+E         
+E         At index 0 diff: ('r0', 'circle|red', 0.0) != ('r8', 'circle|blue', 1.0)
+E         Use -v to get more diff
+
+test_spatial_detect_complete_partition.py:69: AssertionError
+__________ test_real_image_final_column_reaches_multimodal_check[16] __________
+
+cells_across = 16
+
+    @pytest.mark.parametrize("cells_across", [16,17,19,23])
+    def test_real_image_final_column_reaches_multimodal_check(cells_across):
+        image = np.zeros((48,48,3), dtype=np.uint8)
+        image[:, -1, 2] = 255
+        lattice, _ = image_to_grid(image, cells_across=cells_across)
+        net = _color_net()
+        lat = lattice[None] / 255
+        # Prove this source pixel is genuinely sampled into the final column.
+        assert lattice[..., 2].sum() > 0
+        assert np.count_nonzero(lattice[:, :-1, 2]) == 0
+        found = spatial_detect(net, lat)[0]
+>       assert {d["pos"] for d in found} == {"r2", "r5", "r8"}, "sampled final image column disappeared"
+E       AssertionError: sampled final image column disappeared
+E       assert {'r0'} == {'r2', 'r5', 'r8'}
+E         
+E         Extra items in the left set:
+E         'r0'
+E         Extra items in the right set:
+E         'r5'
+E         'r8'
+E         'r2'
+E         Use -v to get more diff
+
+test_spatial_detect_complete_partition.py:84: AssertionError
+__________ test_real_image_final_column_reaches_multimodal_check[17] __________
+
+cells_across = 17
+
+    @pytest.mark.parametrize("cells_across", [16,17,19,23])
+    def test_real_image_final_column_reaches_multimodal_check(cells_across):
+        image = np.zeros((48,48,3), dtype=np.uint8)
+        image[:, -1, 2] = 255
+        lattice, _ = image_to_grid(image, cells_across=cells_across)
+        net = _color_net()
+        lat = lattice[None] / 255
+        # Prove this source pixel is genuinely sampled into the final column.
+        assert lattice[..., 2].sum() > 0
+        assert np.count_nonzero(lattice[:, :-1, 2]) == 0
+        found = spatial_detect(net, lat)[0]
+>       assert {d["pos"] for d in found} == {"r2", "r5", "r8"}, "sampled final image column disappeared"
+E       AssertionError: sampled final image column disappeared
+E       assert {'r0'} == {'r2', 'r5', 'r8'}
+E         
+E         Extra items in the left set:
+E         'r0'
+E         Extra items in the right set:
+E         'r5'
+E         'r8'
+E         'r2'
+E         Use -v to get more diff
+
+test_spatial_detect_complete_partition.py:84: AssertionError
+__________ test_real_image_final_column_reaches_multimodal_check[19] __________
+
+cells_across = 19
+
+    @pytest.mark.parametrize("cells_across", [16,17,19,23])
+    def test_real_image_final_column_reaches_multimodal_check(cells_across):
+        image = np.zeros((48,48,3), dtype=np.uint8)
+        image[:, -1, 2] = 255
+        lattice, _ = image_to_grid(image, cells_across=cells_across)
+        net = _color_net()
+        lat = lattice[None] / 255
+        # Prove this source pixel is genuinely sampled into the final column.
+        assert lattice[..., 2].sum() > 0
+        assert np.count_nonzero(lattice[:, :-1, 2]) == 0
+        found = spatial_detect(net, lat)[0]
+>       assert {d["pos"] for d in found} == {"r2", "r5", "r8"}, "sampled final image column disappeared"
+E       AssertionError: sampled final image column disappeared
+E       assert {'r0'} == {'r2', 'r5', 'r8'}
+E         
+E         Extra items in the left set:
+E         'r0'
+E         Extra items in the right set:
+E         'r5'
+E         'r8'
+E         'r2'
+E         Use -v to get more diff
+
+test_spatial_detect_complete_partition.py:84: AssertionError
+__________ test_real_image_final_column_reaches_multimodal_check[23] __________
+
+cells_across = 23
+
+    @pytest.mark.parametrize("cells_across", [16,17,19,23])
+    def test_real_image_final_column_reaches_multimodal_check(cells_across):
+        image = np.zeros((48,48,3), dtype=np.uint8)
+        image[:, -1, 2] = 255
+        lattice, _ = image_to_grid(image, cells_across=cells_across)
+        net = _color_net()
+        lat = lattice[None] / 255
+        # Prove this source pixel is genuinely sampled into the final column.
+        assert lattice[..., 2].sum() > 0
+        assert np.count_nonzero(lattice[:, :-1, 2]) == 0
+        found = spatial_detect(net, lat)[0]
+>       assert {d["pos"] for d in found} == {"r2", "r5", "r8"}, "sampled final image column disappeared"
+E       AssertionError: sampled final image column disappeared
+E       assert {'r0'} == {'r2', 'r5', 'r8'}
+E         
+E         Extra items in the left set:
+E         'r0'
+E         Extra items in the right set:
+E         'r5'
+E         'r8'
+E         'r2'
+E         Use -v to get more diff
+
+test_spatial_detect_complete_partition.py:84: AssertionError
+__________ test_energy_and_classification_use_the_same_uneven_crops ___________
+
+    def test_energy_and_classification_use_the_same_uneven_crops():
+        net = CropRecorder()
+        lat = np.arange(1, 6*8+1, dtype=np.float64).reshape(1,6,8,1)
+        found = spatial_detect(net, lat, exist_mult=0)[0]
+        assert len(found) == len(net.crops) == 9
+        expected = {f"r{q}": round(float(p.sum()/lat.sum()), 3)
+                    for q, p in enumerate(net.crops)}
+>       assert {d["pos"]: d["share"] for d in found} == expected, (
+            "energy shares and classified crops use different partitions")
+E       AssertionError: energy shares and classified crops use different partitions
+E       assert {'r8': 0.196,...': 0.121, ...} == {'r0': 0.019,...': 0.073, ...}
+E         
+E         Differing items:
+E         {'r1': 0.035} != {'r1': 0.026}
+E         {'r3': 0.102} != {'r3': 0.073}
+E         {'r5': 0.121} != {'r5': 0.087}
+E         {'r0': 0.026} != {'r0': 0.019}
+E         {'r6': 0.177} != {'r6': 0.128}...
+E         
+E         ...Full output truncated, use '-vv' to show
+
+test_spatial_detect_complete_partition.py:97: AssertionError
+________________ test_batched_samples_partition_independently _________________
+
+    def test_batched_samples_partition_independently():
+        lat = np.zeros((2,4,5,3))
+        lat[0,-1,-1,2] = 1
+        lat[1,-1,-1,1] = 1
+        result = spatial_detect(_color_net(),lat)
+>       assert [[(d["pos"],d["obj"]) for d in sample] for sample in result] == [
+            [("r8","circle|blue")],[("r8","circle|green")]]
+E       AssertionError: assert [[('r0', 'cir...circle|red')]] == [[('r8', 'cir...rcle|green')]]
+E         
+E         At index 0 diff: [('r0', 'circle|red')] != [('r8', 'circle|blue')]
+E         Use -v to get more diff
+
+test_spatial_detect_complete_partition.py:116: AssertionError
+________ test_dark_tiny_lattice_does_not_classify_empty_quadrants[1-1] ________
+
+rows = 1, cols = 1
+
+    @pytest.mark.parametrize("rows,cols", [(1,1), (2,2), (1,5), (5,2)])
+    def test_dark_tiny_lattice_does_not_classify_empty_quadrants(rows, cols):
+        net = CropRecorder()
+>       assert spatial_detect(net,np.zeros((1,rows,cols,1))) == [[]]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_spatial_detect_complete_partition.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\work\lingshu-audit-core-20261120\lingshu\nn\hex_text.py:206: in spatial_detect
+    sf, cf = net.l2_features(sub)
+             ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <test_spatial_detect_complete_partition.CropRecorder object at 0x000001DCBBCEFEF0>
+lat = array([], shape=(1, 0, 0, 1), dtype=float64)
+
+    def l2_features(self, lat):
+>       assert lat.shape[1] > 0 and lat.shape[2] > 0, "classified an empty crop"
+E       AssertionError: classified an empty crop
+E       assert (0 > 0)
+
+test_spatial_detect_complete_partition.py:28: AssertionError
+________ test_dark_tiny_lattice_does_not_classify_empty_quadrants[2-2] ________
+
+rows = 2, cols = 2
+
+    @pytest.mark.parametrize("rows,cols", [(1,1), (2,2), (1,5), (5,2)])
+    def test_dark_tiny_lattice_does_not_classify_empty_quadrants(rows, cols):
+        net = CropRecorder()
+>       assert spatial_detect(net,np.zeros((1,rows,cols,1))) == [[]]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_spatial_detect_complete_partition.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\work\lingshu-audit-core-20261120\lingshu\nn\hex_text.py:206: in spatial_detect
+    sf, cf = net.l2_features(sub)
+             ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <test_spatial_detect_complete_partition.CropRecorder object at 0x000001DCBBCF9730>
+lat = array([], shape=(1, 0, 0, 1), dtype=float64)
+
+    def l2_features(self, lat):
+>       assert lat.shape[1] > 0 and lat.shape[2] > 0, "classified an empty crop"
+E       AssertionError: classified an empty crop
+E       assert (0 > 0)
+
+test_spatial_detect_complete_partition.py:28: AssertionError
+________ test_dark_tiny_lattice_does_not_classify_empty_quadrants[1-5] ________
+
+rows = 1, cols = 5
+
+    @pytest.mark.parametrize("rows,cols", [(1,1), (2,2), (1,5), (5,2)])
+    def test_dark_tiny_lattice_does_not_classify_empty_quadrants(rows, cols):
+        net = CropRecorder()
+>       assert spatial_detect(net,np.zeros((1,rows,cols,1))) == [[]]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_spatial_detect_complete_partition.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\work\lingshu-audit-core-20261120\lingshu\nn\hex_text.py:206: in spatial_detect
+    sf, cf = net.l2_features(sub)
+             ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <test_spatial_detect_complete_partition.CropRecorder object at 0x000001DCBBCEF1D0>
+lat = array([], shape=(1, 0, 1, 1), dtype=float64)
+
+    def l2_features(self, lat):
+>       assert lat.shape[1] > 0 and lat.shape[2] > 0, "classified an empty crop"
+E       AssertionError: classified an empty crop
+E       assert (0 > 0)
+
+test_spatial_detect_complete_partition.py:28: AssertionError
+________ test_dark_tiny_lattice_does_not_classify_empty_quadrants[5-2] ________
+
+rows = 5, cols = 2
+
+    @pytest.mark.parametrize("rows,cols", [(1,1), (2,2), (1,5), (5,2)])
+    def test_dark_tiny_lattice_does_not_classify_empty_quadrants(rows, cols):
+        net = CropRecorder()
+>       assert spatial_detect(net,np.zeros((1,rows,cols,1))) == [[]]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_spatial_detect_complete_partition.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\work\lingshu-audit-core-20261120\lingshu\nn\hex_text.py:206: in spatial_detect
+    sf, cf = net.l2_features(sub)
+             ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <test_spatial_detect_complete_partition.CropRecorder object at 0x000001DCBBCEC470>
+lat = array([], shape=(1, 1, 0, 1), dtype=float64)
+
+    def l2_features(self, lat):
+>       assert lat.shape[1] > 0 and lat.shape[2] > 0, "classified an empty crop"
+E       AssertionError: classified an empty crop
+E       assert (1 > 0 and 0 > 0)
+
+test_spatial_detect_complete_partition.py:28: AssertionError
+=========================== short test summary info ===========================
+FAILED test_spatial_detect_complete_partition.py::test_quadrant_crops_cover_each_cell_exactly_once
+FAILED test_spatial_detect_complete_partition.py::test_last_cell_energy_and_color_reach_bottom_right[4-4]
+FAILED test_spatial_detect_complete_partition.py::test_last_cell_energy_and_color_reach_bottom_right[6-7]
+FAILED test_spatial_detect_complete_partition.py::test_last_cell_energy_and_color_reach_bottom_right[7-6]
+FAILED test_spatial_detect_complete_partition.py::test_last_cell_energy_and_color_reach_bottom_right[18-16]
+FAILED test_spatial_detect_complete_partition.py::test_last_cell_energy_and_color_reach_bottom_right[19-17]
+FAILED test_spatial_detect_complete_partition.py::test_real_image_final_column_reaches_multimodal_check[16]
+FAILED test_spatial_detect_complete_partition.py::test_real_image_final_column_reaches_multimodal_check[17]
+FAILED test_spatial_detect_complete_partition.py::test_real_image_final_column_reaches_multimodal_check[19]
+FAILED test_spatial_detect_complete_partition.py::test_real_image_final_column_reaches_multimodal_check[23]
+FAILED test_spatial_detect_complete_partition.py::test_energy_and_classification_use_the_same_uneven_crops
+FAILED test_spatial_detect_complete_partition.py::test_batched_samples_partition_independently
+FAILED test_spatial_detect_complete_partition.py::test_dark_tiny_lattice_does_not_classify_empty_quadrants[1-1]
+FAILED test_spatial_detect_complete_partition.py::test_dark_tiny_lattice_does_not_classify_empty_quadrants[2-2]
+FAILED test_spatial_detect_complete_partition.py::test_dark_tiny_lattice_does_not_classify_empty_quadrants[1-5]
+FAILED test_spatial_detect_complete_partition.py::test_dark_tiny_lattice_does_not_classify_empty_quadrants[5-2]
+16 failed, 3 passed in 0.35s

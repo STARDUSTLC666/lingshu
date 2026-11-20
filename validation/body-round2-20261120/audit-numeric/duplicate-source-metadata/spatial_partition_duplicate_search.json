@@ -1,0 +1,105 @@
+{
+  "policy": "Only identifying metadata retained; bodies/comments omitted.",
+  "queries": [
+    {
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [
+        {
+          "title": "[nn/hex_text] 路线图 M5.5 感知-知识桥尚未落地（条件卡灌入、图文回写与白箱视觉问答）",
+          "state": "open",
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/1435",
+          "number": 1435
+        },
+        {
+          "title": "[nn/hex_text][P2 声明静默失效] `multimodal_check(..., n_expected=...)` 收下\"期望物体数\"却一次不读——声明期望 0 个物体的场景也照判 ACCEPT",
+          "state": "closed",
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/860",
+          "number": 860
+        },
+        {
+          "title": "[tests] `test_hex_text.py` 两项「已知红」是不可复算的阈值断言：跨两套 numpy（2.3.5/2.5.3）读数逐位相同，应改为存档基线或构造性判据",
+          "state": "closed",
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/24",
+          "number": 24
+        },
+        {
+          "title": "fix(nn): image_to_grid 晶格横向越出画幅 √3 倍——README 两项「已知红」的根因；修后 6/6、断言零改动",
+          "state": "closed",
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/116",
+          "number": 116
+        }
+      ],
+      "query": "repo:FuRongJun-1999/lingshu spatial_detect",
+      "total_count": 4,
+      "incomplete_results": false
+    },
+    {
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [],
+      "query": "repo:FuRongJun-1999/dsh-bounty spatial_detect",
+      "total_count": 0,
+      "incomplete_results": false
+    },
+    {
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [
+        {
+          "title": "fix(nn): image_to_grid 晶格横向越出画幅 √3 倍——README 两项「已知红」的根因；修后 6/6、断言零改动",
+          "state": "closed",
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/116",
+          "number": 116
+        }
+      ],
+      "query": "repo:FuRongJun-1999/lingshu \"hex_text\" \"裁剪\"",
+      "total_count": 1,
+      "incomplete_results": false
+    },
+    {
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [
+        {
+          "title": "[nn/hex_text][P2 声明静默失效] `multimodal_check(..., n_expected=...)` 收下\"期望物体数\"却一次不读——声明期望 0 个物体的场景也照判 ACCEPT",
+          "state": "closed",
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/860",
+          "number": 860
+        },
+        {
+          "title": "feat(core): 增加受保护结构写服务与版本历史",
+          "state": "closed",
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/429",
+          "number": 429
+        },
+        {
+          "title": "fix(nn): image_to_grid 晶格横向越出画幅 √3 倍——README 两项「已知红」的根因；修后 6/6、断言零改动",
+          "state": "closed",
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/116",
+          "number": 116
+        }
+      ],
+      "query": "repo:FuRongJun-1999/lingshu \"hex_text\" \"余数\"",
+      "total_count": 3,
+      "incomplete_results": false
+    },
+    {
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [],
+      "query": "repo:FuRongJun-1999/lingshu \"hex_text\" \"尾列\"",
+      "total_count": 0,
+      "incomplete_results": false
+    },
+    {
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [],
+      "query": "repo:FuRongJun-1999/lingshu \"hex_text\" \"divisible\"",
+      "total_count": 0,
+      "incomplete_results": false
+    },
+    {
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [],
+      "query": "repo:FuRongJun-1999/dsh-bounty \"hex_text\"",
+      "total_count": null,
+      "incomplete_results": null
+    }
+  ]
+}

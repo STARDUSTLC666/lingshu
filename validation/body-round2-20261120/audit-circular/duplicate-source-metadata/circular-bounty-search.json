@@ -1,0 +1,25 @@
+{
+  "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+  "records": [
+    {
+      "title": "[intake] 贡献申报（逐件）：lingshu #786——physics 真值三项（circular roundtrip / Reflector 负初速 / apex 世界高度）（PR #829 已合并）",
+      "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1376",
+      "number": 1376
+    },
+    {
+      "title": "`lingshu/world/physics.py`：`_sim_model_from_state` 的 docstring 写「**必须显式 `dt`**」而函数**一次不读 `dt`**（实测 `None`/`0`/`-1`/`\"abc\"` 全被接受）；同文件 `circular_truth(center, up)` 也收下几何参数却不读（连字符串都收）",
+      "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1278",
+      "number": 1278
+    },
+    {
+      "title": "【intake 输入】lingshu #673：fit_damped 的 v0 符号错误——与 predict_at(t_ref) 速度精确相反（六类唯一），damped_truth 的 p_inf 落到对侧",
+      "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/547",
+      "number": 547
+    },
+    {
+      "title": "[intake 输入] 【测评报告】Haystack Pipelines（haystack-ai 3.4.0）cross_eval 第 4 家（智能体工作流 · 方法试验）：五模式 sha 全一致，失败快照续跑只重跑 verify；快照对不可序列化输入整组省略致续跑报错误导",
+      "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1178",
+      "number": 1178
+    }
+  ]
+}

@@ -1,0 +1,1633 @@
+{
+  "files": [
+    {
+      "source": "audit-core/fresh-decay.db",
+      "reason": "database/binary/environment/non-evidence extension"
+    },
+    {
+      "source": "audit-core/parallel-edge-list-cycle.db",
+      "reason": "database/binary/environment/non-evidence extension"
+    },
+    {
+      "source": "audit-core/parallel-edge-list-single.db",
+      "reason": "database/binary/environment/non-evidence extension"
+    },
+    {
+      "source": "audit-core/parallel-scipy-cycle.db",
+      "reason": "database/binary/environment/non-evidence extension"
+    },
+    {
+      "source": "audit-core/parallel-scipy-single.db",
+      "reason": "database/binary/environment/non-evidence extension"
+    },
+    {
+      "source": "audit-world/bounty-all-issues.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/audit_combined_run.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/audit_remote_ci.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined/api/20261120T153733Z/jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined/api/20261120T153733Z/jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined/api/20261120T153733Z/run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined/api/20261120T153733Z/run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined/api/20261120T154033Z/jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined/api/20261120T154033Z/jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined/api/20261120T154033Z/run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined/api/20261120T154033Z/run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined/api/20261120T154333Z/jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined/api/20261120T154333Z/jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined/api/20261120T154333Z/run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined/api/20261120T154333Z/run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined/summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined/workflow.yml",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/combined-monitor.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/evidence-index.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/monitor.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761888700-attempt1/136376276312-summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761888700-attempt1/136376276312.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761888700-attempt1/136376276312.log.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761888700-attempt1/all-run-logs.zip",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761888700-attempt1/all-run-logs.zip.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761888700-attempt1/archive-index.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761889152-attempt1/136376277504-summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761889152-attempt1/136376277504.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761889152-attempt1/136376277504.log.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761889152-attempt1/136376277987-summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761889152-attempt1/136376277987.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761889152-attempt1/136376277987.log.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761889152-attempt1/136376277993-summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761889152-attempt1/136376277993.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761889152-attempt1/136376277993.log.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761889152-attempt1/all-run-logs.zip",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761889152-attempt1/all-run-logs.zip.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/44761889152-attempt1/archive-index.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153020Z/44761888700-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153020Z/44761888700-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153020Z/44761888700-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153020Z/44761888700-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153020Z/44761889152-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153020Z/44761889152-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153020Z/44761889152-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153020Z/44761889152-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153020Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153020Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153020Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153020Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153320Z/44761888700-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153320Z/44761888700-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153320Z/44761888700-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153320Z/44761888700-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153320Z/44761889152-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153320Z/44761889152-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153320Z/44761889152-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153320Z/44761889152-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153320Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153320Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153320Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153320Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153620Z/44761888700-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153620Z/44761888700-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153620Z/44761888700-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153620Z/44761888700-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153620Z/44761889152-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153620Z/44761889152-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153620Z/44761889152-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153620Z/44761889152-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153620Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153620Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153620Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153620Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153920Z/44761888700-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153920Z/44761888700-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153920Z/44761888700-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153920Z/44761888700-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153920Z/44761889152-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153920Z/44761889152-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153920Z/44761889152-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153920Z/44761889152-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153920Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153920Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153920Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T153920Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T154220Z/44761888700-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T154220Z/44761888700-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T154220Z/44761888700-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T154220Z/44761888700-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T154220Z/44761889152-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T154220Z/44761889152-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T154220Z/44761889152-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T154220Z/44761889152-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T154220Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T154220Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T154220Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/api/20261120T154220Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/changed-guard-evidence.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1477/workflow.yml",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844234-attempt1/136379585802-summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844234-attempt1/136379585802.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844234-attempt1/136379585802.log.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844234-attempt1/all-run-logs.zip",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844234-attempt1/all-run-logs.zip.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844234-attempt1/archive-index.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844376-attempt1/136379751127-summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844376-attempt1/136379751127.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844376-attempt1/136379751127.log.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844376-attempt1/136379751835-summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844376-attempt1/136379751835.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844376-attempt1/136379751835.log.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844376-attempt1/136379751853-summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844376-attempt1/136379751853.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844376-attempt1/136379751853.log.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844376-attempt1/all-run-logs.zip",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844376-attempt1/all-run-logs.zip.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/44762844376-attempt1/archive-index.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153020Z/44762844234-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153020Z/44762844234-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153020Z/44762844234-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153020Z/44762844234-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153020Z/44762844376-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153020Z/44762844376-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153020Z/44762844376-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153020Z/44762844376-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153020Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153020Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153020Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153020Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153320Z/44762844234-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153320Z/44762844234-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153320Z/44762844234-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153320Z/44762844234-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153320Z/44762844376-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153320Z/44762844376-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153320Z/44762844376-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153320Z/44762844376-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153320Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153320Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153320Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153320Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153620Z/44762844234-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153620Z/44762844234-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153620Z/44762844234-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153620Z/44762844234-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153620Z/44762844376-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153620Z/44762844376-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153620Z/44762844376-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153620Z/44762844376-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153620Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153620Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153620Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153620Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153920Z/44762844234-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153920Z/44762844234-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153920Z/44762844234-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153920Z/44762844234-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153920Z/44762844376-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153920Z/44762844376-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153920Z/44762844376-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153920Z/44762844376-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153920Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153920Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153920Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T153920Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T154220Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T154220Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/api/20261120T154220Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/changed-guard-evidence.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1478/workflow.yml",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763098857-attempt1/136380486612-summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763098857-attempt1/136380486612.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763098857-attempt1/136380486612.log.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763098857-attempt1/136380487147-summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763098857-attempt1/136380487147.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763098857-attempt1/136380487147.log.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763098857-attempt1/136380487206-summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763098857-attempt1/136380487206.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763098857-attempt1/136380487206.log.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763098857-attempt1/all-run-logs.zip",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763098857-attempt1/all-run-logs.zip.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763098857-attempt1/archive-index.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763099047-attempt1/136380486960-summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763099047-attempt1/136380486960.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763099047-attempt1/136380486960.log.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763099047-attempt1/all-run-logs.zip",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763099047-attempt1/all-run-logs.zip.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/44763099047-attempt1/archive-index.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153020Z/44763098857-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153020Z/44763098857-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153020Z/44763098857-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153020Z/44763098857-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153020Z/44763099047-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153020Z/44763099047-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153020Z/44763099047-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153020Z/44763099047-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153020Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153020Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153020Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153020Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153320Z/44763098857-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153320Z/44763098857-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153320Z/44763098857-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153320Z/44763098857-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153320Z/44763099047-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153320Z/44763099047-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153320Z/44763099047-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153320Z/44763099047-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153320Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153320Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153320Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153320Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153620Z/44763098857-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153620Z/44763098857-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153620Z/44763098857-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153620Z/44763098857-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153620Z/44763099047-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153620Z/44763099047-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153620Z/44763099047-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153620Z/44763099047-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153620Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153620Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153620Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153620Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153920Z/44763098857-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153920Z/44763098857-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153920Z/44763098857-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153920Z/44763098857-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153920Z/44763099047-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153920Z/44763099047-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153920Z/44763099047-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153920Z/44763099047-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153920Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153920Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153920Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T153920Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T154220Z/44763098857-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T154220Z/44763098857-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T154220Z/44763098857-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T154220Z/44763098857-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T154220Z/44763099047-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T154220Z/44763099047-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T154220Z/44763099047-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T154220Z/44763099047-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T154220Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T154220Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T154220Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/api/20261120T154220Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/changed-guard-evidence.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1479/workflow.yml",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/44764764805-attempt1/136386311988-summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/44764764805-attempt1/136386311988.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/44764764805-attempt1/136386311988.log.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/44764764805-attempt1/all-run-logs.zip",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/44764764805-attempt1/all-run-logs.zip.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/44764764805-attempt1/archive-index.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T153920Z/44764764765-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T153920Z/44764764765-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T153920Z/44764764765-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T153920Z/44764764765-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T153920Z/44764764805-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T153920Z/44764764805-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T153920Z/44764764805-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T153920Z/44764764805-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T153920Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T153920Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T153920Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T153920Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T154220Z/44764764765-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T154220Z/44764764765-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T154220Z/44764764765-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T154220Z/44764764765-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T154220Z/44764764805-jobs.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T154220Z/44764764805-jobs.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T154220Z/44764764805-run.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T154220Z/44764764805-run.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T154220Z/checks.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T154220Z/checks.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T154220Z/pull.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/api/20261120T154220Z/pull.json.stderr.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/changed-guard-evidence.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/pr1480/workflow.yml",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/report.md",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/summarize_round2.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/ci-round2/targets.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-world/lingshu-all-issues.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/audit-summary.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/audit.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/audit_twelve_integration.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/crossfix-probe.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/crossfix-probe.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/exact-pr-heads.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/new-four-165.log",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/new-four-165.xml",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pr-1469-production.patch",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pr-1470-production.patch",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pr-1471-production.patch",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pr-1472-production.patch",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pr-1473-production.patch",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pr-1474-production.patch",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pr-1475-production.patch",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pr-1476-production.patch",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pr-1477-production.patch",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pr-1478-production.patch",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pr-1479-production.patch",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pr-1480-production.patch",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/probe_crossfix.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_failure_rolls_back_row_va0/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_first_clock_tick_keeps_th0/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_first_clock_tick_keeps_th1/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_first_clock_tick_keeps_th2/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_newborn_protection_and_im0/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_newborn_uses_only_its_pos0/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_newborn_uses_only_its_pos1/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_newborn_uses_only_its_pos10/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_newborn_uses_only_its_pos11/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_newborn_uses_only_its_pos2/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_newborn_uses_only_its_pos3/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_newborn_uses_only_its_pos4/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_newborn_uses_only_its_pos5/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_newborn_uses_only_its_pos6/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_newborn_uses_only_its_pos7/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_newborn_uses_only_its_pos8/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_newborn_uses_only_its_pos9/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_no_clock_keeps_discrete_s0/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_no_clock_keeps_discrete_s1/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_no_clock_keeps_discrete_s2/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad0/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad1/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad10/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad11/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad12/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad13/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad14/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad2/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad3/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad4/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad5/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad6/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad7/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad8/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_noncomparable_birth_metad9/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_old_and_new_rows_have_ind0/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_old_and_new_rows_have_ind1/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_old_and_new_rows_have_ind2/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_public_creation_after_dow0/public.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_rollback_and_recovery_do_0/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_rollback_and_recovery_do_1/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_rollback_and_recovery_do_2/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_zero_age_and_repeated_now0/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_zero_age_and_repeated_now1/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_zero_age_and_repeated_now2/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_zero_age_and_repeated_now3/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_zero_age_and_repeated_now4/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/pytest-tmp/test_zero_age_and_repeated_now5/decay.db",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/0-base.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/0-current.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/0-expected.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/0-incoming.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/1-base.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/1-current.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/1-expected.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/1-incoming.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/2-base.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/2-current.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/2-expected.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/2-incoming.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/3-base.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/3-current.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/3-expected.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/3-incoming.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/4-base.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/4-current.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/4-expected.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/4-incoming.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/5-base.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/5-current.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/5-expected.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/5-incoming.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/6-base.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/6-current.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/6-expected.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/6-incoming.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/7-base.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/7-current.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/7-expected.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/7-incoming.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/8-base.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/8-current.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/8-expected.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/8-incoming.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/9-base.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/9-current.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/9-expected.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/three-way-reconstruction/9-incoming.py",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    },
+    {
+      "source": "audit-numeric/integration-review/time-core-lint.json",
+      "reason": "active CI capture deferred / aggregate all-issue dump excluded"
+    }
+  ],
+  "third_party_policy": "Body-file inputs are represented only by metadata projections, with original input hashes in the artifact manifest."
+}

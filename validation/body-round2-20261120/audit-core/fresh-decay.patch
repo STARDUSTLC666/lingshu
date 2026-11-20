@@ -1,0 +1,737 @@
+From bae2eaea9fb77e9e451f1b220d17f9096d06ee78 Mon Sep 17 00:00:00 2001
+From: STARDUSTLC666 <291677282+STARDUSTLC666@users.noreply.github.com>
+Date: Fri, 20 Nov 2026 23:17:53 +0800
+Subject: [PATCH] fix(core): limit newborn decay to comparable post-birth time
+
+---
+ bench/bench_fresh_row_decay.py                | 123 ++++++++++++
+ docs/testing/fresh-row-decay-20261120.md      | 103 ++++++++++
+ lingshu/core/core.py                          |  54 ++++-
+ tests/fixtures/fresh_row_decay_mutations.json | 162 +++++++++++++++
+ tests/test_fresh_row_decay.py                 | 187 ++++++++++++++++++
+ 5 files changed, 622 insertions(+), 7 deletions(-)
+ create mode 100644 bench/bench_fresh_row_decay.py
+ create mode 100644 docs/testing/fresh-row-decay-20261120.md
+ create mode 100644 tests/fixtures/fresh_row_decay_mutations.json
+ create mode 100644 tests/test_fresh_row_decay.py
+
+diff --git a/bench/bench_fresh_row_decay.py b/bench/bench_fresh_row_decay.py
+new file mode 100644
+index 0000000..ae32d1a
+--- /dev/null
++++ b/bench/bench_fresh_row_decay.py
+@@ -0,0 +1,123 @@
++"""Reproducible latency / Python traced-peak probes for fresh-row decay.
++
++Run this identical script in separate baseline and fixed interpreters, with
++--root selecting each source tree. Setup/reset, imports and oracle work are
++outside measurements. The output retains every sample; no pass/fail speed
++threshold is imposed on a shared host.
++"""
++from __future__ import annotations
++
++import argparse
++import gc
++import hashlib
++import json
++import os
++from pathlib import Path
++import platform
++import sqlite3
++import statistics
++import sys
++import time
++import tracemalloc
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
++    parser.add_argument("--output", type=Path, required=True)
++    parser.add_argument("--sizes", type=int, nargs="+", default=[0, 100, 1000, 5000])
++    args = parser.parse_args()
++    root = args.root.resolve()
++    sys.path.insert(0, str(root))
++    from lingshu.core.core import ConditionSpace, EdgeType, LayeredStore, MemoryLayer, STEdge, STNode
++
++    start, end, factor = 1_800_000_000.0, 1_800_000_060.0, 0.02
++    condition = ConditionSpace("fixture", "fixture", (0.0, 1.0), "fixture")
++    records = []
++    for size in args.sizes:
++        for mode in ("clock_old", "clock_mixed", "discrete_mixed"):
++            store = LayeredStore(":memory:")
++            node_rows, edge_rows, born_of = [], [], {}
++            for i in range(size):
++                born = start + 30.0 if "mixed" in mode and i % 2 else start - 1.0
++                layer = MemoryLayer.CONTEXT if i % 3 == 0 else MemoryLayer.KNOWLEDGE
++                node = STNode(f"n{i}", f"fixture {i}", "text", {}, born, condition,
++                              layer=layer, created_at=born, last_access=born)
++                node_rows.append(node.to_row())
++                born_of[node.id] = (born, layer.value)
++            for i in range(size // 2):
++                born = start + 30.0 if "mixed" in mode and i % 2 else start - 1.0
++                # Endpoints are knowledge nodes; no context deletion occurs at min_confidence=0.
++                a, b = (i * 2 + 1) % max(size, 1), (i * 2 + 2) % max(size, 1)
++                edge_rows.append(STEdge(f"e{i}", f"n{a}", f"n{b}", EdgeType.CAUSAL,
++                                        condition, created_at=born).to_row())
++                born_of[f"e{i}"] = (born, "edge")
++            with store._tx():
++                store.conn.executemany("INSERT INTO nodes VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", node_rows)
++                store.conn.executemany("INSERT INTO edges VALUES (?,?,?,?,?,?,?,?,?,?,?)", edge_rows)
++
++            def reset():
++                with store._tx():
++                    store.conn.execute("UPDATE nodes SET importance=0.5,confidence=0.5")
++                    store.conn.execute("UPDATE edges SET confidence=0.5")
++                    store.set_meta("_last_decay_at", str(start))
++
++            def cycle():
++                store.decay_cycle(factor=factor, min_confidence=0.0,
++                                  now=None if mode == "discrete_mixed" else end)
++
++            for _ in range(3):
++                reset()
++                cycle()
++            samples = []
++            for _ in range(9):
++                reset()
++                gc.collect()
++                t0 = time.perf_counter_ns()
++                cycle()
++                samples.append((time.perf_counter_ns() - t0) / 1e6)
++            peaks = []
++            for _ in range(3):
++                reset()
++                gc.collect()
++                tracemalloc.start()
++                cycle()
++                _, peak = tracemalloc.get_traced_memory()
++                tracemalloc.stop()
++                peaks.append(peak)
++
++            errors = []
++            for nid, importance, confidence in store.conn.execute("SELECT id,importance,confidence FROM nodes"):
++                born, layer = born_of[nid]
++                age = 60.0 if mode == "discrete_mixed" else end - max(start, born)
++                expected = 0.5 * (1.0 - factor) ** (age / 60.0)
++                actual = importance if layer == "context" else confidence
++                if abs(actual - expected) > 1e-12:
++                    errors.append({"id": nid, "actual": actual, "expected": expected})
++            for eid, confidence in store.conn.execute("SELECT id,confidence FROM edges"):
++                born, _ = born_of[eid]
++                age = 60.0 if mode == "discrete_mixed" else end - max(start, born)
++                expected = 0.5 * (1.0 - factor) ** (age / 60.0)
++                if abs(confidence - expected) > 1e-12:
++                    errors.append({"id": eid, "actual": confidence, "expected": expected})
++            record = {"nodes": size, "edges": len(edge_rows), "mode": mode,
++                      "warmups": 3, "latency_ms_samples": samples,
++                      "latency_ms_median": statistics.median(samples),
++                      "python_traced_peak_bytes_samples": peaks,
++                      "python_traced_peak_bytes_median": statistics.median(peaks),
++                      "oracle_checks": size + len(edge_rows), "oracle_failures": len(errors),
++                      "first_oracle_failures": errors[:3]}
++            records.append(record)
++            print(json.dumps(record), flush=True)
++            store.close()
++    output = {"source_root": str(root), "python": sys.version,
++              "platform": platform.platform(), "sqlite": sqlite3.sqlite_version,
++              "pid": os.getpid(), "timer": "perf_counter_ns", "memory": "tracemalloc Python allocations, not RSS",
++              "source_sha256": hashlib.sha256((root / "lingshu/core/core.py").read_bytes()).hexdigest(),
++              "records": records}
++    args.output.parent.mkdir(parents=True, exist_ok=True)
++    args.output.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/docs/testing/fresh-row-decay-20261120.md b/docs/testing/fresh-row-decay-20261120.md
+new file mode 100644
+index 0000000..2803445
+--- /dev/null
++++ b/docs/testing/fresh-row-decay-20261120.md
+@@ -0,0 +1,103 @@
++# Fresh rows in a time-based decay interval
++
++Baseline: `d74848fb33dbff1d719959df19d1266a1ac60f44`.
++
++The store's global `_last_decay_at` cursor can predate a newly created row.
++Before this fix, the next clock-mode decay applied that entire interval to
++every eligible context node, knowledge node and unverified edge. A context
++received milliseconds after a restart could consequently be hard-deleted by
++the catch-up decay for the preceding week. This is separate from #176's
++original call-count decay and its clock-rollback follow-up.
++
++## Public-API reproduction
++
++```python
++import time
++from lingshu.core.core import SpacetimeMemoryEngine, EdgeType
++
++engine = SpacetimeMemoryEngine(":memory:")
++engine.decay_cycle(now=time.time() - 7 * 86400)
++context = engine.add_context("just received live context", importance=0.5)
++a = engine.add_perception("live source event", skip_dedup=True)
++b = engine.add_perception("unrelated fresh observation", skip_dedup=True)
++edge = engine.add_edge(a.id, b.id, EdgeType.CAUSAL)
++now = time.time()
++engine.decay_cycle(now=now)
++print(engine.store.get_node(context.id))
++print(engine.store.get_node(a.id).confidence)
++print(engine.store.get_edge(edge.id))
++engine.close()
++```
++
++Measured on the baseline: a 2.999 ms-old context was deleted; a 2.001 ms-old
++knowledge node changed from `0.5` to `1.8105578254347584e-89`; a 0.499 ms-old
++edge was deleted. The independent post-birth formula gives approximately
++`0.4999994951`, `0.4999996632`, and `0.4999999159`, respectively. Millisecond
++values vary with scheduling; the week-versus-milliseconds mismatch does not.
++
++## Fix and clock boundary
++
++For a previously established, finite cursor, a finite creation timestamp in
++`(previous_tick, now]` establishes that the row was born during this interval.
++Use `min(global_dt, now - created_at)` for that row. Older rows retain the full
++interval. The same rule applies to all three decay legs; thresholds, protected
++rows, immutable endpoints, and OPPOSITE-edge exemptions are unchanged.
++
++An exactly zero interval is the identity, including `factor=1`: no elapsed
++time must not delete a row born exactly at `now`.
++
++This is deliberately a fix for **comparable birth timestamps**, not a new
++universal clock model. Existing APIs allow an injected decay clock while
++creation still uses `time.time()`; the original #176 guard explicitly uses
++an injected clock starting at `5000`. Missing, invalid, nonfinite or future
++creation timestamps do not establish a comparable birth and retain the
++existing global interval. The first clock tick retains its documented
++one-period bootstrap, and `now=None` retains discrete-step behavior. A clock
++on another epoch cannot reveal actual birth age from the current metadata.
++No clock settings, schema, or stored creation timestamps are rewritten.
++
++## Verification
++
++```sh
++python -X utf8 -B -m pytest tests/test_fresh_row_decay.py tests/test_issue176_time_based_decay_guard.py tests/test_issue176_clock_rollback_decay_guard.py -q
++python -X utf8 -B tools/testing/replay_transaction_guards.py --spec tests/fixtures/fresh_row_decay_mutations.json --baseline d74848fb33dbff1d719959df19d1266a1ac60f44 --mutate --output artifacts/fresh-row-decay
++python -X utf8 -B bench/bench_fresh_row_decay.py --root . --output artifacts/fresh-row-decay-benchmark.json
++```
++
++On Windows, Python 3.12.10 / SQLite 3.49.1:
++
++- New guard: **48 passed**. The identical guard on isolated baseline source:
++  **25 failed / 23 passed**, with no errors or skips.
++- Original time-based and clock-rollback guards: **11 passed** unchanged.
++- Nine named mutants: **9/9 killed**, each by the specified behavioral
++  assertion with one failed test, no errors and no skips. They cover missing
++  clipping; each individual decay leg; future-time misclassification;
++  freezing newborns; zero-age decay; changing bootstrap behavior; and
++  disabling old-row catch-up.
++- The benchmark's independent closed-form oracle checked **27,450 values**
++  per source across empty / 100 / 1,000 / 5,000-node workloads. Fixed source
++  has **0 failures**; baseline has **4,575 failures**, all from the mixed-birth
++  workloads. The setup and oracle are outside measured regions.
++
++## Cost measurements
++
++Each workload retains three warmups, nine latency samples and three separate
++Python-allocation peak probes. The largest workload has 5,000 nodes and 2,500
++edges. The measurements are from a shared Windows host, not a performance
++acceptance threshold:
++
++| Workload | Baseline median ms | Fixed median ms | Baseline traced peak bytes | Fixed traced peak bytes |
++| --- | ---: | ---: | ---: | ---: |
++| Clock, all old | 81.5249 | 89.5016 | 2,504,322 | 2,611,290 |
++| Clock, mixed births | 118.6533 | 103.8121 | 2,504,322 | 2,611,314 |
++| Discrete, mixed births | 115.8040 | 119.7324 | 2,503,524 | 2,610,335 |
++
++The fix adds one cursor read per clock-mode cycle, a constant-time age check
++per eligible row, and one creation-timestamp column to the two node reads.
++It retains the same asymptotic work and makes no per-node queries. Peak
++figures are `tracemalloc` Python allocations, **not process RSS**. The latency
++samples contain visible scheduler variation; neither the faster mixed
++median nor a hardware-independent slowdown is claimed as a conclusion.
++
++Full repository and cross-platform results are recorded separately by the
++delivery validation; the figures above describe the local scoped checks.
+diff --git a/lingshu/core/core.py b/lingshu/core/core.py
+index 7770614..ab95978 100644
+--- a/lingshu/core/core.py
++++ b/lingshu/core/core.py
+@@ -4123,12 +4123,34 @@ class LayeredStore:
+         if not math.isfinite(_f) or not (0.0 <= _f <= 1.0):
+             raise ValueError("decay factor 必须是 [0, 1] 内的有限值，收到 %r" % (factor,))
+         factor = _f
++        if dt == 0.0:
++            return x
+         ratio = 1.0 - factor
+         if ratio <= 0.0:
+             return 0.0
+         gamma = -math.log(ratio) / self._DECAY_PERIOD_SECONDS
+         return cred(x, 0.0, gamma, dt)
+ 
++    @staticmethod
++    def _row_decay_dt(created_at, interval_start, now, dt: float) -> float:
++        """Do not age a comparable newborn row before its creation.
++
++        An existing cursor and ``start < created_at <= now`` establish that the
++        row was born during this interval. A first clock tick retains #176's
++        one-period bootstrap. Missing/nonfinite/future timestamps retain the
++        existing interval: injected clocks need not share the creation clock's
++        epoch, so those timestamps do not establish a comparable birth time.
++        """
++        if interval_start is None:
++            return dt
++        try:
++            born = float(created_at)
++        except (TypeError, ValueError, OverflowError):
++            return dt
++        if math.isfinite(born) and interval_start < born <= now:
++            return min(dt, now - born)
++        return dt
++
+     @_transactional
+     def decay_cycle(self, factor: float = 0.02, min_confidence: float = 0.1, now=None):
+         """
+@@ -4206,6 +4228,21 @@ class LayeredStore:
+         if not math.isfinite(_mc) or not (0.0 <= _mc <= 1.0):
+             raise ValueError("min_confidence 必须是 [0, 1] 内的有限值，收到 %r" % (min_confidence,))
+         min_confidence = _mc
++        # A whole-store cursor predates rows written between ticks (including
++        # the first writes after downtime). Apply only their post-birth span,
++        # when created_at is comparable with this clock interval. Read before
++        # _decay_dt advances the cursor; the enclosing write transaction keeps
++        # these two reads on the same snapshot. No cursor / now=None preserve
++        # the bootstrap / discrete-step contracts respectively.
++        interval_start = None
++        if now is not None:
++            last = self.get_meta(self._LAST_DECAY_META_KEY).get(self._LAST_DECAY_META_KEY)
++            try:
++                candidate_start = float(last)
++            except (TypeError, ValueError, OverflowError):
++                candidate_start = None
++            if candidate_start is not None and math.isfinite(candidate_start):
++                interval_start = candidate_start
+         dt = self._decay_dt(now)
+         # #720：本轮逐行容错计数（写路径也刷新一次；语义＝「本次调用跳过的坏行 id」，
+         # 与装载面 `_tolerant_nodes` 的刷新口径同名同义）。下方情境段/知识段遇到
+@@ -4283,7 +4320,8 @@ class LayeredStore:
+                 if row[5] is None or not math.isfinite(conf):
+                     conf = 0.0
+                 # #176：连续核按流逝时间 dt 演化（dt=周期时 == 旧 cred_step）。
+-                new_conf = self._decay_value(conf, factor, dt)
++                row_dt = self._row_decay_dt(edge.created_at, interval_start, now, dt)
++                new_conf = self._decay_value(conf, factor, row_dt)
+                 if new_conf < min_confidence:
+                     # 低于最小置信度，删除边
+                     c.execute("DELETE FROM edges WHERE id=?", (edge.id,))
+@@ -4311,10 +4349,10 @@ class LayeredStore:
+             # 边界（削掉的判别力）：阈值本体**未改**（仍是 `min_confidence`）；
+             # 受保护件仍经 `_is_forget_protected` 跳过（#36 不变）。判别力变化只在
+             # 「≤ 阈值的低价值情境节点现在会进入遗忘面」——这正是本件要修的死区。
+-            c.execute("SELECT id, importance, tags FROM nodes WHERE layer='context'")
++            c.execute("SELECT id, importance, tags, created_at FROM nodes WHERE layer='context'")
+             # #720：本轮逐行容错跳过的坏行 id（两段共用，末尾一次性如实上报）。
+             _bad_rows: List[str] = []
+-            for nid, imp, _tags in c.fetchall():
++            for nid, imp, _tags, created_at in c.fetchall():
+                 # ★优化（本笔）：旧实现传 `self.get_node(nid)` —— 那是
+                 # `SELECT * FROM nodes WHERE id=?`（读**整行** + 建 `STNode`），
+                 # 每节点一次；而本谓词只用 `tags` 与 `id` 两字段。现由本查询带出
+@@ -4343,7 +4381,8 @@ class LayeredStore:
+                 if imp is None or not math.isfinite(imp):
+                     imp = 0.0
+                 # #176：连续核按流逝时间 dt 演化（dt=周期时 == 旧 cred_step）。
+-                new_imp = self._decay_value(imp, factor, dt)
++                row_dt = self._row_decay_dt(created_at, interval_start, now, dt)
++                new_imp = self._decay_value(imp, factor, row_dt)
+                 if new_imp < min_confidence:
+                     # #93：先删边再删节点（外键开启后顺序反了会 FK constraint failed）。
+                     # #168：删边经唯一真源（对不可变层对端的边先落审计）
+@@ -4365,10 +4404,10 @@ class LayeredStore:
+             # ③ 置信度已达上限（1.0）者视为已确证，不衰减；④ 只降 confidence，
+             # **不删节点**（知识层不适用情境层的自然遗忘删除）。
+             c.execute('''
+-                SELECT id, confidence, tags FROM nodes
++                SELECT id, confidence, tags, created_at FROM nodes
+                 WHERE layer='knowledge' AND confidence > ? AND confidence < 1.0
+             ''', (min_confidence,))
+-            for nid, conf, _tags in c.fetchall():
++            for nid, conf, _tags, created_at in c.fetchall():
+                 # ★优化（本笔）：与上一段同款——`tags` 由本查询带出，不再逐节点
+                 # `get_node`（读整行 + 建 STNode）。
+                 # #720：与情境段同款逐行容错——坏 `tags` 此前抛 `JSONDecodeError`
+@@ -4384,8 +4423,9 @@ class LayeredStore:
+                                              node_id=nid,
+                                              tags=_k_tags):
+                     continue
++                row_dt = self._row_decay_dt(created_at, interval_start, now, dt)
+                 c.execute("UPDATE nodes SET confidence=? WHERE id=?",
+-                          (self._decay_value(conf, factor, dt), nid))
++                          (self._decay_value(conf, factor, row_dt), nid))
+             if _bad_rows:
+                 # #720：与 `_strip_incident_edges` 本轮已记的坏 layer 行**合并**
+                 # （同一轮内删边助手也往 `last_skipped_rows` 记账）——不覆盖，避免漏报。
+diff --git a/tests/fixtures/fresh_row_decay_mutations.json b/tests/fixtures/fresh_row_decay_mutations.json
+new file mode 100644
+index 0000000..84407ca
+--- /dev/null
++++ b/tests/fixtures/fresh_row_decay_mutations.json
+@@ -0,0 +1,162 @@
++{
++  "guard": "tests/test_fresh_row_decay.py",
++  "total": 48,
++  "sources": [
++    "lingshu/core/core.py"
++  ],
++  "baseline_failures": [
++    "test_newborn_uses_only_its_post_birth_span[0.0-context]",
++    "test_newborn_uses_only_its_post_birth_span[0.0-edge]",
++    "test_newborn_uses_only_its_post_birth_span[0.0-knowledge]",
++    "test_newborn_uses_only_its_post_birth_span[1.0-context]",
++    "test_newborn_uses_only_its_post_birth_span[1.0-edge]",
++    "test_newborn_uses_only_its_post_birth_span[1.0-knowledge]",
++    "test_newborn_uses_only_its_post_birth_span[3600.0-context]",
++    "test_newborn_uses_only_its_post_birth_span[3600.0-edge]",
++    "test_newborn_uses_only_its_post_birth_span[3600.0-knowledge]",
++    "test_newborn_uses_only_its_post_birth_span[60.0-context]",
++    "test_newborn_uses_only_its_post_birth_span[60.0-edge]",
++    "test_newborn_uses_only_its_post_birth_span[60.0-knowledge]",
++    "test_old_and_new_rows_have_independent_ages_in_one_tick[context]",
++    "test_old_and_new_rows_have_independent_ages_in_one_tick[edge]",
++    "test_old_and_new_rows_have_independent_ages_in_one_tick[knowledge]",
++    "test_public_creation_after_downtime_survives_the_next_tick",
++    "test_rollback_and_recovery_do_not_double_age_newborn[context]",
++    "test_rollback_and_recovery_do_not_double_age_newborn[edge]",
++    "test_rollback_and_recovery_do_not_double_age_newborn[knowledge]",
++    "test_zero_age_and_repeated_now_do_not_decay[context-0.02]",
++    "test_zero_age_and_repeated_now_do_not_decay[context-1.0]",
++    "test_zero_age_and_repeated_now_do_not_decay[edge-0.02]",
++    "test_zero_age_and_repeated_now_do_not_decay[edge-1.0]",
++    "test_zero_age_and_repeated_now_do_not_decay[knowledge-0.02]",
++    "test_zero_age_and_repeated_now_do_not_decay[knowledge-1.0]"
++  ],
++  "mutations": [
++    {
++      "name": "omit_birth_clipping",
++      "test": "test_newborn_uses_only_its_post_birth_span[0.0-context]",
++      "assertion": "newborn was aged before its birth",
++      "changes": [
++        {
++          "file": "lingshu/core/core.py",
++          "class": "LayeredStore",
++          "method": "_row_decay_dt",
++          "old": "            return min(dt, now - born)\n",
++          "new": "            return dt\n"
++        }
++      ]
++    },
++    {
++      "name": "omit_context_leg",
++      "test": "test_newborn_uses_only_its_post_birth_span[1.0-context]",
++      "assertion": "newborn was aged before its birth",
++      "changes": [
++        {
++          "file": "lingshu/core/core.py",
++          "class": "LayeredStore",
++          "method": "decay_cycle",
++          "old": "                row_dt = self._row_decay_dt(created_at, interval_start, now, dt)\n                new_imp = self._decay_value(imp, factor, row_dt)\n",
++          "new": "                row_dt = dt\n                new_imp = self._decay_value(imp, factor, row_dt)\n"
++        }
++      ]
++    },
++    {
++      "name": "omit_knowledge_leg",
++      "test": "test_newborn_uses_only_its_post_birth_span[1.0-knowledge]",
++      "assertion": "newborn was aged before its birth",
++      "changes": [
++        {
++          "file": "lingshu/core/core.py",
++          "class": "LayeredStore",
++          "method": "decay_cycle",
++          "old": "                row_dt = self._row_decay_dt(created_at, interval_start, now, dt)\n                c.execute(\"UPDATE nodes SET confidence=? WHERE id=?\",\n",
++          "new": "                row_dt = dt\n                c.execute(\"UPDATE nodes SET confidence=? WHERE id=?\",\n"
++        }
++      ]
++    },
++    {
++      "name": "omit_edge_leg",
++      "test": "test_newborn_uses_only_its_post_birth_span[1.0-edge]",
++      "assertion": "newborn was aged before its birth",
++      "changes": [
++        {
++          "file": "lingshu/core/core.py",
++          "class": "LayeredStore",
++          "method": "decay_cycle",
++          "old": "                row_dt = self._row_decay_dt(edge.created_at, interval_start, now, dt)\n",
++          "new": "                row_dt = dt\n"
++        }
++      ]
++    },
++    {
++      "name": "accept_future_birth_as_comparable",
++      "test": "test_noncomparable_birth_metadata_preserves_existing_clock_semantics[context-1800604801.0]",
++      "assertion": "noncomparable creation metadata froze",
++      "changes": [
++        {
++          "file": "lingshu/core/core.py",
++          "class": "LayeredStore",
++          "method": "_row_decay_dt",
++          "old": "        if math.isfinite(born) and interval_start < born <= now:\n",
++          "new": "        if math.isfinite(born) and interval_start < born:\n"
++        }
++      ]
++    },
++    {
++      "name": "freeze_all_newborns",
++      "test": "test_newborn_uses_only_its_post_birth_span[60.0-context]",
++      "assertion": "newborn was aged before its birth",
++      "changes": [
++        {
++          "file": "lingshu/core/core.py",
++          "class": "LayeredStore",
++          "method": "_row_decay_dt",
++          "old": "            return min(dt, now - born)\n",
++          "new": "            return 0.0\n"
++        }
++      ]
++    },
++    {
++      "name": "decay_even_when_elapsed_is_zero",
++      "test": "test_zero_age_and_repeated_now_do_not_decay[context-1.0]",
++      "assertion": "zero elapsed time changed a row",
++      "changes": [
++        {
++          "file": "lingshu/core/core.py",
++          "class": "LayeredStore",
++          "method": "_decay_value",
++          "old": "        if dt == 0.0:\n            return x\n",
++          "new": ""
++        }
++      ]
++    },
++    {
++      "name": "clip_first_clock_tick",
++      "test": "test_first_clock_tick_keeps_the_existing_one_period_bootstrap[context]",
++      "assertion": "first clock tick lost its bootstrap decay",
++      "changes": [
++        {
++          "file": "lingshu/core/core.py",
++          "class": "LayeredStore",
++          "method": "decay_cycle",
++          "old": "        interval_start = None\n",
++          "new": "        interval_start = 0.0\n"
++        }
++      ]
++    },
++    {
++      "name": "disable_old_row_decay",
++      "test": "test_old_and_new_rows_have_independent_ages_in_one_tick[context]",
++      "assertion": "old row missed downtime decay",
++      "changes": [
++        {
++          "file": "lingshu/core/core.py",
++          "class": "LayeredStore",
++          "method": "_row_decay_dt",
++          "old": "        if math.isfinite(born) and interval_start < born <= now:\n            return min(dt, now - born)\n        return dt\n",
++          "new": "        if math.isfinite(born) and interval_start < born <= now:\n            return min(dt, now - born)\n        return 0.0\n"
++        }
++      ]
++    }
++  ]
++}
+diff --git a/tests/test_fresh_row_decay.py b/tests/test_fresh_row_decay.py
+new file mode 100644
+index 0000000..4d6cacb
+--- /dev/null
++++ b/tests/test_fresh_row_decay.py
+@@ -0,0 +1,187 @@
++"""A comparable row must not decay during the interval before it was born.
++
++The oracle is the independent closed form x * (1-factor)**(age / 60).
++Custom decay clocks can have a different epoch from created_at; only births
++inside an established (previous_tick, now] interval establish row age.
++"""
++import math
++import sqlite3
++import time
++
++import pytest
++
++from lingshu.core.core import (
++    ConditionSpace, EdgeType, LayeredStore, MemoryLayer, STEdge, STNode,
++    SpacetimeMemoryEngine,
++)
++
++
++pytestmark = pytest.mark.filterwarnings("ignore")
++START = 1_800_000_000.0
++SPAN = 7 * 86400.0
++END = START + SPAN
++CONDITION = ConditionSpace("fixture", "fixture", (0.0, 1.0), "fixture")
++
++
++@pytest.fixture
++def store(tmp_path):
++    value = LayeredStore(str(tmp_path / "decay.db"))
++    try:
++        yield value
++    finally:
++        value.close()
++
++
++def _node(store, nid, born, layer=MemoryLayer.KNOWLEDGE, tags=None):
++    node = STNode(nid, "fixture " + nid, "text", {}, born, CONDITION,
++                  importance=0.5, confidence=0.5, layer=layer,
++                  created_at=born, last_access=born, tags=tags or [])
++    store.add_node(node)
++    return node
++
++
++def _row(store, kind, nid, born):
++    if kind == "edge":
++        for suffix in ("source", "target"):
++            _node(store, nid + suffix, START - 100.0)
++        edge = STEdge(nid, nid + "source", nid + "target", EdgeType.CAUSAL,
++                      CONDITION, confidence=0.5, created_at=born)
++        store.add_edge(edge)
++        return edge
++    return _node(store, nid, born, MemoryLayer.CONTEXT if kind == "context"
++                 else MemoryLayer.KNOWLEDGE)
++
++
++def _value(store, kind, nid):
++    if kind == "edge":
++        edge = store.get_edge(nid)
++        return edge.confidence if edge is not None else None
++    node = store.get_node(nid)
++    return (node.importance if kind == "context" else node.confidence) if node else None
++
++
++def _oracle(value, factor, age):
++    return value * (1.0 - factor) ** (age / 60.0)
++
++
++@pytest.mark.parametrize("kind", ["context", "knowledge", "edge"])
++@pytest.mark.parametrize("age", [0.0, 1.0, 60.0, 3600.0])
++def test_newborn_uses_only_its_post_birth_span(store, kind, age):
++    store.decay_cycle(now=START)
++    _row(store, kind, "newborn", END - age)
++    store.decay_cycle(now=END, min_confidence=0.0)
++    assert _value(store, kind, "newborn") == pytest.approx(
++        _oracle(0.5, 0.02, age), rel=1e-12), "newborn was aged before its birth"
++
++
++@pytest.mark.parametrize("kind", ["context", "knowledge", "edge"])
++def test_old_and_new_rows_have_independent_ages_in_one_tick(store, kind):
++    store.decay_cycle(now=START)
++    _row(store, kind, "old", START - 1.0)
++    _row(store, kind, "new", END - 30.0)
++    store.decay_cycle(now=END)
++    expected_old = _oracle(0.5, 0.02, SPAN)
++    if kind == "knowledge":
++        assert _value(store, kind, "old") == pytest.approx(expected_old, rel=1e-12)
++    else:
++        assert _value(store, kind, "old") is None, "old row missed downtime decay"
++    assert _value(store, kind, "new") == pytest.approx(
++        _oracle(0.5, 0.02, 30.0), rel=1e-12), "fresh row was lost with old rows"
++
++
++def test_public_creation_after_downtime_survives_the_next_tick(tmp_path):
++    engine = SpacetimeMemoryEngine(str(tmp_path / "public.db"))
++    try:
++        engine.decay_cycle(now=time.time() - SPAN)
++        context = engine.add_context("fresh live context", importance=0.5)
++        a = engine.add_perception("first live observation", skip_dedup=True)
++        b = engine.add_perception("second live observation", skip_dedup=True)
++        edge = engine.add_edge(a.id, b.id)
++        now = max(context.created_at, a.created_at, b.created_at, edge.created_at) + 1.0
++        engine.decay_cycle(now=now)
++        for kind, row in (("context", context), ("knowledge", a), ("edge", edge)):
++            assert _value(engine.store, kind, row.id) == pytest.approx(
++                _oracle(0.5, 0.02, now - row.created_at), rel=1e-12), (
++                    "normal public creation was aged through pre-birth downtime")
++    finally:
++        engine.close()
++
++
++@pytest.mark.parametrize("factor", [0.02, 1.0])
++@pytest.mark.parametrize("kind", ["context", "knowledge", "edge"])
++def test_zero_age_and_repeated_now_do_not_decay(store, kind, factor):
++    store.decay_cycle(now=START)
++    _row(store, kind, "new", END)
++    for _ in range(2):
++        store.decay_cycle(now=END, factor=factor)
++        assert _value(store, kind, "new") == 0.5, "zero elapsed time changed a row"
++
++
++@pytest.mark.parametrize("kind", ["context", "knowledge", "edge"])
++def test_first_clock_tick_keeps_the_existing_one_period_bootstrap(store, kind):
++    _row(store, kind, "row", END - 1.0)
++    store.decay_cycle(now=END)
++    assert _value(store, kind, "row") == pytest.approx(0.49, rel=1e-12), (
++        "first clock tick lost its bootstrap decay")
++
++
++@pytest.mark.parametrize("kind", ["context", "knowledge", "edge"])
++def test_no_clock_keeps_discrete_step_semantics(store, kind):
++    store.decay_cycle(now=START)
++    _row(store, kind, "row", END)
++    store.decay_cycle()
++    assert _value(store, kind, "row") == pytest.approx(0.49, rel=1e-12)
++    assert store.get_meta("_last_decay_at")["_last_decay_at"] == str(START)
++
++
++@pytest.mark.parametrize("born", [END + 1.0, END + 10**8, None, "invalid", math.inf])
++@pytest.mark.parametrize("kind", ["context", "knowledge", "edge"])
++def test_noncomparable_birth_metadata_preserves_existing_clock_semantics(store, kind, born):
++    store.decay_cycle(now=START)
++    _row(store, kind, "row", START - 1.0)
++    table = "edges" if kind == "edge" else "nodes"
++    with store._tx():
++        store.conn.execute(f"UPDATE {table} SET created_at=? WHERE id='row'", (born,))
++    store.decay_cycle(now=START + 60.0)
++    assert _value(store, kind, "row") == pytest.approx(0.49, rel=1e-12), (
++        "noncomparable creation metadata froze an existing injected-clock row")
++
++
++@pytest.mark.parametrize("kind", ["context", "knowledge", "edge"])
++def test_rollback_and_recovery_do_not_double_age_newborn(store, kind):
++    store.decay_cycle(now=START)
++    _row(store, kind, "row", START + 30.0)
++    store.decay_cycle(now=START + 60.0)
++    store.decay_cycle(now=START - 1000.0)
++    store.decay_cycle(now=START + 120.0)
++    assert _value(store, kind, "row") == pytest.approx(
++        _oracle(0.5, 0.02, 90.0), rel=1e-12)
++
++
++def test_failure_rolls_back_row_values_and_the_clock_cursor(store):
++    store.decay_cycle(now=START)
++    _row(store, "context", "context", END - 30.0)
++    _row(store, "knowledge", "knowledge", END - 30.0)
++    store.conn.execute("CREATE TRIGGER reject_confidence BEFORE UPDATE OF confidence ON nodes "
++                       "BEGIN SELECT RAISE(ABORT, 'injected'); END")
++    store.conn.commit()
++    with pytest.raises(sqlite3.IntegrityError, match="injected"):
++        store.decay_cycle(now=END)
++    assert _value(store, "context", "context") == 0.5
++    assert _value(store, "knowledge", "knowledge") == 0.5
++    assert store.get_meta("_last_decay_at")["_last_decay_at"] == str(START)
++
++
++def test_newborn_protection_and_immutable_edge_rules_remain_in_force(store):
++    store.decay_cycle(now=START)
++    _node(store, "protected", END - 30, MemoryLayer.CONTEXT, ["no_forget"])
++    _node(store, "anchor", START, MemoryLayer.ANCHOR)
++    _node(store, "peer", START)
++    store.add_edge(STEdge("immutable", "anchor", "peer", EdgeType.CAUSAL,
++                          CONDITION, confidence=0.5, created_at=START))
++    store.add_edge(STEdge("opposite", "peer", "protected", EdgeType.OPPOSITE,
++                          CONDITION, confidence=0.3, created_at=START))
++    store.decay_cycle(now=END)
++    assert _value(store, "context", "protected") == 0.5
++    assert _value(store, "edge", "immutable") == 0.5
++    assert _value(store, "edge", "opposite") == 0.3
+-- 
+2.54.0.windows.1
+

@@ -1,0 +1,17 @@
+[
+  {
+    "repo": "lingshu-all-issues.json",
+    "number": 829,
+    "title": "fix(world): #786——physics 真值三项（circular roundtrip / Reflector 负初速 / apex 世界高度）＋守卫"
+  },
+  {
+    "repo": "lingshu-all-issues.json",
+    "number": 786,
+    "title": "[intake 输入][world/physics] 解析真值族独立审计：circular 预测约定错位（P1）＋ Reflector 负初速速度反号（P2）＋ apex_height 口径不符（P2）＋ P3×3 登记"
+  },
+  {
+    "repo": "lingshu-all-issues.json",
+    "number": 472,
+    "title": "feat(bridges): 新增 Blender 侧世界模型桥——独立逐 tick 真值源 + OBJ/SHA-256 几何供货"
+  }
+]

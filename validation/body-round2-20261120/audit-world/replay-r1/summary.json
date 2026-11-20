@@ -1,0 +1,198 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows",
+  "sqlite": "3.49.1",
+  "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "guard_sha256": "f1afd60e81b33b7623d0b512bf90026cf8c54dfa1f7605d80adfcc1bbfe5d211",
+  "records": [
+    {
+      "case": "fixed",
+      "ok": true,
+      "returncode": 0,
+      "passed": 36,
+      "failed_tests": [],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [],
+      "expected_assertion": "",
+      "pytest_summary": "36 passed in 0.21s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "ce19e696d6578d8789859e2cec30003058978e6558f3f9b67c90cd7d1df21d63"
+      }
+    },
+    {
+      "case": "baseline",
+      "ok": true,
+      "returncode": 1,
+      "passed": 5,
+      "failed_tests": [
+        "test_adding_a_distant_box_keeps_the_same_closed_form_trajectory[2]",
+        "test_colliding_pair_does_not_reseed_a_third_free_entity[False]",
+        "test_colliding_pair_does_not_reseed_a_third_free_entity[True]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.01-0]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.01-1]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.01-2]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.05-0]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.05-1]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.05-2]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.2-0]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.2-1]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.2-2]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.5-0]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.5-1]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.5-2]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.01-0]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.01-1]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.01-2]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.05-0]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.05-1]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.05-2]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.2-0]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.2-1]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.2-2]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.5-0]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.5-1]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.5-2]",
+        "test_noncontact_keeps_instantaneous_endpoint_velocity",
+        "test_noncontact_keeps_original_physics_state",
+        "test_noncontact_obb_keeps_endpoint_and_initial_state",
+        "test_physics_readout_matches_public_noncontact_endpoint"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.01-0]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.01-1]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.01-2]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.05-0]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.05-1]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.05-2]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.2-0]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.2-1]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.2-2]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.5-0]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.5-1]",
+        "test_freeflight_all_axes_and_step_sizes[0.5-0.5-2]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.01-0]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.01-1]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.01-2]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.05-0]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.05-1]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.05-2]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.2-0]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.2-1]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.2-2]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.5-0]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.5-1]",
+        "test_freeflight_all_axes_and_step_sizes[9.80665-0.5-2]",
+        "test_noncontact_keeps_instantaneous_endpoint_velocity",
+        "test_noncontact_keeps_original_physics_state",
+        "test_physics_readout_matches_public_noncontact_endpoint",
+        "test_adding_a_distant_box_keeps_the_same_closed_form_trajectory[2]",
+        "test_noncontact_obb_keeps_endpoint_and_initial_state",
+        "test_colliding_pair_does_not_reseed_a_third_free_entity[False]",
+        "test_colliding_pair_does_not_reseed_a_third_free_entity[True]"
+      ],
+      "expected_assertion": "",
+      "pytest_summary": "31 failed, 5 passed in 0.48s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151"
+      }
+    },
+    {
+      "case": "replace_endpoint_with_average_again",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_noncontact_keeps_instantaneous_endpoint_velocity"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_noncontact_keeps_instantaneous_endpoint_velocity"
+      ],
+      "expected_assertion": "SCENE_ENDPOINT_IS_NOT_MEAN",
+      "pytest_summary": "1 failed in 0.25s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "7c24a61da857d0df12d138e6ffddd9de7c04f58c7e299924b85024d1248ffcff"
+      }
+    },
+    {
+      "case": "reseed_unmodified_endpoint",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_noncontact_keeps_original_physics_state"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_noncontact_keeps_original_physics_state"
+      ],
+      "expected_assertion": "SCENE_NO_CONTACT_RESEEDED",
+      "pytest_summary": "1 failed in 0.23s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "0a53d90bc80bc183965693797cc80b61d2d26c62371bb242e5b40990a2da4291"
+      }
+    },
+    {
+      "case": "skip_reseed_for_real_contacts",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_real_collision_still_reseeds_at_the_correct_contact_surface"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_real_collision_still_reseeds_at_the_correct_contact_surface"
+      ],
+      "expected_assertion": "SCENE_CONTACT_WAS_NOT_RESEEDED",
+      "pytest_summary": "1 failed in 0.23s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "651b6f8430c43e89d6908424a658f7046b425040452198118c273363406d0b58"
+      }
+    },
+    {
+      "case": "drop_contact_reseed",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_real_collision_still_reseeds_at_the_correct_contact_surface"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_real_collision_still_reseeds_at_the_correct_contact_surface"
+      ],
+      "expected_assertion": "SCENE_CONTACT_WAS_NOT_RESEEDED",
+      "pytest_summary": "1 failed in 0.23s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "5afd9d7b0a54895bde09709babdf17c6bb890eb1e3d6b45f0ed7eba83a481973"
+      }
+    },
+    {
+      "case": "keep_precollision_kinematic_velocity",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_kinematic_velocity_still_records_collision_corrected_displacement"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_kinematic_velocity_still_records_collision_corrected_displacement"
+      ],
+      "expected_assertion": "SCENE_KINEMATIC_DISPLACEMENT_CHANGED",
+      "pytest_summary": "1 failed in 0.25s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "ba3b79644b9b366adf9c990a8409f1af3f87e64cfdc90688ae9597ca065a656a"
+      }
+    }
+  ]
+}

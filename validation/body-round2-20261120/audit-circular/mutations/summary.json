@@ -1,0 +1,167 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows",
+  "sqlite": "3.49.1",
+  "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "guard_sha256": "bed50c99ea22ab3d1e138f84267d89ec685f154a80d36a599663e8aa6a14301a",
+  "records": [
+    {
+      "case": "fixed",
+      "ok": true,
+      "returncode": 0,
+      "passed": 6,
+      "failed_tests": [],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [],
+      "expected_assertion": "",
+      "pytest_summary": "6 passed in 0.41s",
+      "source_sha256": {
+        "lingshu/world/physics.py": "61c497fe3e077c7c3bf4542e58e27f0811735d992e8ae9ba868e19ce1e2e7ff6"
+      }
+    },
+    {
+      "case": "baseline",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_classification_scores_vertical_mismatch_before_selecting_circular",
+        "test_epoch_angular_and_vertical_fits_remain_nonsingular",
+        "test_irregular_time_translation_preserves_parameters",
+        "test_planar_noise_uses_same_three_coordinate_rms",
+        "test_shifted_helix_is_anchored_at_first_sample",
+        "test_vertical_fit_residual_matches_centered_regression_oracle"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_shifted_helix_is_anchored_at_first_sample",
+        "test_epoch_angular_and_vertical_fits_remain_nonsingular",
+        "test_irregular_time_translation_preserves_parameters",
+        "test_vertical_fit_residual_matches_centered_regression_oracle",
+        "test_planar_noise_uses_same_three_coordinate_rms",
+        "test_classification_scores_vertical_mismatch_before_selecting_circular"
+      ],
+      "expected_assertion": "",
+      "pytest_summary": "6 failed in 0.42s",
+      "source_sha256": {
+        "lingshu/world/physics.py": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a"
+      }
+    },
+    {
+      "case": "absolute_angle_time",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_epoch_angular_and_vertical_fits_remain_nonsingular"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_epoch_angular_and_vertical_fits_remain_nonsingular"
+      ],
+      "expected_assertion": "epoch helix must remain nonsingular",
+      "pytest_summary": "1 failed in 0.25s",
+      "source_sha256": {
+        "lingshu/world/physics.py": "812ff718d65bdc63089f089dcb849819863cd4203866bd6fcaaa3c2ed9de8b19"
+      }
+    },
+    {
+      "case": "absolute_vertical_time",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_shifted_helix_is_anchored_at_first_sample"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_shifted_helix_is_anchored_at_first_sample"
+      ],
+      "expected_assertion": "helix center must be at t_ref",
+      "pytest_summary": "1 failed in 0.21s",
+      "source_sha256": {
+        "lingshu/world/physics.py": "9e54aae19c6fefebd0c47f68f064b44e5ad8c41b3bc09c3360ee39298f75617a"
+      }
+    },
+    {
+      "case": "omit_vertical_residual",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_vertical_fit_residual_matches_centered_regression_oracle"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_vertical_fit_residual_matches_centered_regression_oracle"
+      ],
+      "expected_assertion": "vertical residual must contribute to 3D coordinate RMS",
+      "pytest_summary": "1 failed in 0.21s",
+      "source_sha256": {
+        "lingshu/world/physics.py": "ed3adc2cd767172629425c88c76b480a7cfff4a4b11d72c7576edb123febb005"
+      }
+    },
+    {
+      "case": "horizontal_only_denominator",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_planar_noise_uses_same_three_coordinate_rms"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_planar_noise_uses_same_three_coordinate_rms"
+      ],
+      "expected_assertion": "all fits must use three-coordinate normalization",
+      "pytest_summary": "1 failed in 0.20s",
+      "source_sha256": {
+        "lingshu/world/physics.py": "0bf63e4548129fe393f9f700baabada196b8290441334ea4a8003401bbd94ac3"
+      }
+    },
+    {
+      "case": "lost_reference_time",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_epoch_angular_and_vertical_fits_remain_nonsingular"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_epoch_angular_and_vertical_fits_remain_nonsingular"
+      ],
+      "expected_assertion": "epoch helix position drifted",
+      "pytest_summary": "1 failed in 0.21s",
+      "source_sha256": {
+        "lingshu/world/physics.py": "69dad8c751813342306f746d1093285d618fb750caa1ef2445a5dd729daa9dbc"
+      }
+    },
+    {
+      "case": "prediction_uses_absolute_angle",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_planar_noise_uses_same_three_coordinate_rms"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_planar_noise_uses_same_three_coordinate_rms"
+      ],
+      "expected_assertion": "all fits must use three-coordinate normalization",
+      "pytest_summary": "1 failed in 0.23s",
+      "source_sha256": {
+        "lingshu/world/physics.py": "4df662724ec678b4027c77c03ab7c69582f6e622c53c92af248aa9836c5f262c"
+      }
+    }
+  ]
+}

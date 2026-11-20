@@ -1,0 +1,26 @@
+{
+  "files": [
+    {
+      "path": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "additions": 1,
+      "deletions": 1,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "lingshu/nn/hex_text.py",
+      "additions": 605,
+      "deletions": 0,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "tests/test_m55_perception_knowledge_bridge.py",
+      "additions": 416,
+      "deletions": 0,
+      "changeType": "ADDED"
+    }
+  ],
+  "headRefOid": "4bbc823fbed124b114035c819190cac1fe3b1e0a",
+  "number": 1439,
+  "state": "OPEN",
+  "title": "feat(nn): #172 M5.5 感知-知识桥（条件卡灌入、四态回写与白箱问答）"
+}

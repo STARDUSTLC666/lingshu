@@ -1,0 +1,26 @@
+{
+  "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+  "records": [
+    {
+      "title": "lingshu M5.5：感知-知识桥（条件卡灌入、图文四态回写与白箱问答 · PR #1439）",
+      "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2727",
+      "state": "closed",
+      "number": 2727
+    },
+    {
+      "title": "第三方独立复验：lingshu #24 维护者修复（hex_text 判据标定）——3×全绿+守卫4/4+二项地板独立复算吻合",
+      "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1824",
+      "state": "closed",
+      "number": 1824
+    },
+    {
+      "title": "【贡献申报】lingshu #429：受保护结构写服务与版本历史（PR 已 rebase 到当前 main；18 文件 +1792/−170，CI 四档全绿；未合并）",
+      "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/258",
+      "state": "closed",
+      "number": 258
+    }
+  ],
+  "total_count": 3,
+  "incomplete_results": false,
+  "search_type": "lexical"
+}

@@ -1,0 +1,1445 @@
+{
+  "warning": "Runs overlap and include baseline/mutant/history failures; do not sum as unique coverage.",
+  "runs": [
+    {
+      "artifact": "audit-core/fresh-initial-fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "59",
+          "time": "5.204",
+          "timestamp": "2026-11-20T23:11:31.877265+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/fresh-related-final.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "193",
+          "time": "54.361",
+          "timestamp": "2026-11-20T23:15:31.489614+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/fresh-related.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "0",
+          "time": "10.003",
+          "timestamp": "2026-11-20T23:13:54.429647+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final/accept_future_birth_as_comparable.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.456",
+          "timestamp": "2026-11-20T23:13:24.349911+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "25",
+          "skipped": "0",
+          "tests": "48",
+          "time": "1.321",
+          "timestamp": "2026-11-20T23:13:18.426317+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final/clip_first_clock_tick.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.447",
+          "timestamp": "2026-11-20T23:13:27.337013+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final/decay_even_when_elapsed_is_zero.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.462",
+          "timestamp": "2026-11-20T23:13:26.322579+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final/disable_old_row_decay.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.460",
+          "timestamp": "2026-11-20T23:13:28.335716+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "48",
+          "time": "1.045",
+          "timestamp": "2026-11-20T23:13:16.795293+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final/freeze_all_newborns.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.447",
+          "timestamp": "2026-11-20T23:13:25.340449+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final/omit_birth_clipping.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.456",
+          "timestamp": "2026-11-20T23:13:20.350866+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final/omit_context_leg.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.449",
+          "timestamp": "2026-11-20T23:13:21.350807+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final/omit_edge_leg.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.457",
+          "timestamp": "2026-11-20T23:13:23.327761+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final/omit_knowledge_leg.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.447",
+          "timestamp": "2026-11-20T23:13:22.343226+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final-v2/accept_future_birth_as_comparable.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.473",
+          "timestamp": "2026-11-20T23:17:04.026339+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final-v2/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "25",
+          "skipped": "0",
+          "tests": "48",
+          "time": "1.353",
+          "timestamp": "2026-11-20T23:16:58.047376+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final-v2/clip_first_clock_tick.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.447",
+          "timestamp": "2026-11-20T23:17:07.096976+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final-v2/decay_even_when_elapsed_is_zero.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.487",
+          "timestamp": "2026-11-20T23:17:06.058900+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final-v2/disable_old_row_decay.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.457",
+          "timestamp": "2026-11-20T23:17:08.133518+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final-v2/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "48",
+          "time": "1.073",
+          "timestamp": "2026-11-20T23:16:56.386076+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final-v2/freeze_all_newborns.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.494",
+          "timestamp": "2026-11-20T23:17:05.041400+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final-v2/omit_birth_clipping.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.481",
+          "timestamp": "2026-11-20T23:16:59.971586+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final-v2/omit_context_leg.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.454",
+          "timestamp": "2026-11-20T23:17:00.995533+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final-v2/omit_edge_leg.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.447",
+          "timestamp": "2026-11-20T23:17:03.032587+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-final-v2/omit_knowledge_leg.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.453",
+          "timestamp": "2026-11-20T23:17:02.037675+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-initial/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "25",
+          "skipped": "0",
+          "tests": "48",
+          "time": "1.403",
+          "timestamp": "2026-11-20T23:12:23.219928+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/replay-initial/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "48",
+          "time": "1.082",
+          "timestamp": "2026-11-20T23:12:21.550396+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-core/spatial-peer.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "19",
+          "time": "0.743",
+          "timestamp": "2026-11-20T23:19:46.622718+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-circular/mutations/absolute_angle_time.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.216",
+          "timestamp": "2026-11-20T23:13:09.900793+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-circular/mutations/absolute_vertical_time.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.175",
+          "timestamp": "2026-11-20T23:13:10.645552+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-circular/mutations/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "6",
+          "skipped": "0",
+          "tests": "6",
+          "time": "0.383",
+          "timestamp": "2026-11-20T23:13:09.007669+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-circular/mutations/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "6",
+          "time": "0.373",
+          "timestamp": "2026-11-20T23:13:08.119381+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-circular/mutations/horizontal_only_denominator.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.158",
+          "timestamp": "2026-11-20T23:13:12.080519+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-circular/mutations/lost_reference_time.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.176",
+          "timestamp": "2026-11-20T23:13:12.804032+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-circular/mutations/omit_vertical_residual.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.175",
+          "timestamp": "2026-11-20T23:13:11.382741+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-circular/mutations/prediction_uses_absolute_angle.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.181",
+          "timestamp": "2026-11-20T23:13:13.543088+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-circular/related.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "4",
+          "tests": "149",
+          "time": "12.244",
+          "timestamp": "2026-11-20T23:13:39.055710+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/fixed-guard.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "41",
+          "time": "0.624",
+          "timestamp": "2026-11-20T23:14:50.056241+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/neighbor-r2.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "243",
+          "time": "221.245",
+          "timestamp": "2026-11-20T23:15:53.993715+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r1/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "31",
+          "skipped": "0",
+          "tests": "36",
+          "time": "0.436",
+          "timestamp": "2026-11-20T23:11:56.057561+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r1/drop_contact_reseed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.188",
+          "timestamp": "2026-11-20T23:11:59.207699+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r1/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "36",
+          "time": "0.168",
+          "timestamp": "2026-11-20T23:11:55.367465+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r1/keep_precollision_kinematic_velocity.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.211",
+          "timestamp": "2026-11-20T23:11:59.964942+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r1/replace_endpoint_with_average_again.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.209",
+          "timestamp": "2026-11-20T23:11:57.041802+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r1/reseed_unmodified_endpoint.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.190",
+          "timestamp": "2026-11-20T23:11:57.765461+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r1/skip_reseed_for_real_contacts.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.193",
+          "timestamp": "2026-11-20T23:11:58.468069+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r2/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "32",
+          "skipped": "0",
+          "tests": "41",
+          "time": "0.523",
+          "timestamp": "2026-11-20T23:15:22.496484+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r2/drop_contact_reseed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.186",
+          "timestamp": "2026-11-20T23:15:25.691382+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r2/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "41",
+          "time": "0.169",
+          "timestamp": "2026-11-20T23:15:21.793675+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r2/keep_precollision_kinematic_velocity.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.187",
+          "timestamp": "2026-11-20T23:15:26.412204+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r2/replace_endpoint_with_average_again.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.186",
+          "timestamp": "2026-11-20T23:15:23.533294+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r2/reseed_unmodified_endpoint.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.188",
+          "timestamp": "2026-11-20T23:15:24.224712+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r2/skip_reseed_for_real_contacts.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.189",
+          "timestamp": "2026-11-20T23:15:24.939543+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/replay-r2/use_position_equality_instead_of_contact.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.187",
+          "timestamp": "2026-11-20T23:15:27.130780+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-world/root-review.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "41",
+          "time": "0.628",
+          "timestamp": "2026-11-20T23:24:37.669166+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/fresh-decay-independent-review.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "59",
+          "time": "5.669",
+          "timestamp": "2026-11-20T23:19:03.588464+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/mutation-classification_uses_truncated_partition.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.167",
+          "timestamp": "2026-11-20T23:15:14.264397+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/mutation-classify_empty_quadrants.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.170",
+          "timestamp": "2026-11-20T23:15:15.038805+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/mutation-drop_remainder_columns.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.178",
+          "timestamp": "2026-11-20T23:15:12.790169+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/mutation-drop_remainder_rows.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.154",
+          "timestamp": "2026-11-20T23:15:12.065047+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/mutation-energy_uses_truncated_partition.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.155",
+          "timestamp": "2026-11-20T23:15:13.555118+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/adjacent.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "116",
+          "time": "22.067",
+          "timestamp": "2026-11-20T23:25:25.610905+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "43",
+          "skipped": "0",
+          "tests": "70",
+          "time": "0.669",
+          "timestamp": "2026-11-20T23:24:07.498034+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/final-regression.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "143",
+          "time": "33.422",
+          "timestamp": "2026-11-20T23:29:01.953704+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "70",
+          "time": "0.826",
+          "timestamp": "2026-11-20T23:27:03.965917+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay/allow_empty_dominant_region.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.270",
+          "timestamp": "2026-11-20T23:24:50.764010+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "43",
+          "skipped": "0",
+          "tests": "70",
+          "time": "0.703",
+          "timestamp": "2026-11-20T23:24:46.167489+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay/classification_uses_truncated_partition.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.293",
+          "timestamp": "2026-11-20T23:24:49.910419+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay/drop_remainder_columns.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.283",
+          "timestamp": "2026-11-20T23:24:48.294219+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay/drop_remainder_rows.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.296",
+          "timestamp": "2026-11-20T23:24:47.443290+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay/energy_uses_truncated_partition.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.275",
+          "timestamp": "2026-11-20T23:24:49.104587+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "70",
+          "time": "0.407",
+          "timestamp": "2026-11-20T23:24:45.172027+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay/fixed_one_ninth_area_baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.279",
+          "timestamp": "2026-11-20T23:24:51.561346+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final/allow_empty_dominant_region.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.268",
+          "timestamp": "2026-11-20T23:27:59.893485+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "59",
+          "skipped": "0",
+          "tests": "70",
+          "time": "0.857",
+          "timestamp": "2026-11-20T23:27:55.133147+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final/classification_uses_truncated_partition.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.303",
+          "timestamp": "2026-11-20T23:27:59.016801+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final/drop_remainder_columns.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.289",
+          "timestamp": "2026-11-20T23:27:57.340948+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final/drop_remainder_rows.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.288",
+          "timestamp": "2026-11-20T23:27:56.528821+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final/energy_uses_truncated_partition.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.289",
+          "timestamp": "2026-11-20T23:27:58.164375+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "70",
+          "time": "0.389",
+          "timestamp": "2026-11-20T23:27:54.202454+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final/fixed_one_ninth_area_baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.304",
+          "timestamp": "2026-11-20T23:28:00.693638+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final-verified/allow_empty_dominant_region.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.276",
+          "timestamp": "2026-11-20T23:28:30.943707+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final-verified/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "59",
+          "skipped": "0",
+          "tests": "70",
+          "time": "0.912",
+          "timestamp": "2026-11-20T23:28:26.041408+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final-verified/classification_uses_truncated_partition.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.296",
+          "timestamp": "2026-11-20T23:28:30.088684+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final-verified/drop_remainder_columns.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.297",
+          "timestamp": "2026-11-20T23:28:28.410292+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final-verified/drop_remainder_rows.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.315",
+          "timestamp": "2026-11-20T23:28:27.515102+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final-verified/energy_uses_truncated_partition.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.299",
+          "timestamp": "2026-11-20T23:28:29.242347+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final-verified/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "70",
+          "time": "0.389",
+          "timestamp": "2026-11-20T23:28:25.062396+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/replay-final-verified/fixed_one_ninth_area_baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.307",
+          "timestamp": "2026-11-20T23:28:31.772249+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/r2/root-review.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "70",
+          "time": "0.861",
+          "timestamp": "2026-11-20T23:32:04.519641+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/spatial-adjacent.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "65",
+          "time": "22.096",
+          "timestamp": "2026-11-20T23:12:20.408981+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/spatial-baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "16",
+          "skipped": "0",
+          "tests": "19",
+          "time": "0.306",
+          "timestamp": "2026-11-20T23:15:10.501486+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/spatial-fixed-isolated.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "19",
+          "time": "0.161",
+          "timestamp": "2026-11-20T23:15:11.361402+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/spatial-fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "19",
+          "time": "0.674",
+          "timestamp": "2026-11-20T23:19:31.160783+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/spatial-gate-guards.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "128",
+          "time": "276.325",
+          "timestamp": "2026-11-20T23:14:09.373264+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "audit-numeric/spatial-r2-fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "70",
+          "time": "0.772",
+          "timestamp": "2026-11-20T23:22:40.111026+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    }
+  ]
+}

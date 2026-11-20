@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.193" timestamp="2026-11-20T23:11:58.468069+08:00" hostname="STARDUST"><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_real_collision_still_reseeds_at_the_correct_contact_surface" time="0.031"><failure message="AssertionError: SCENE_CONTACT_WAS_NOT_RESEEDED&#10;assert ((10.0, 10.0, 10.0) == (11.5, 10.0, 10.0)&#10;  &#10;  At index 0 diff: 10.0 != 11.5&#10;  Use -v to get more diff)">tests\test_scene_collision_freeflight_velocity.py:130: in test_real_collision_still_reseeds_at_the_correct_contact_surface
+    assert st["p0"] == e.pos and st["v0"] == e.velocity, "SCENE_CONTACT_WAS_NOT_RESEEDED"
+E   AssertionError: SCENE_CONTACT_WAS_NOT_RESEEDED
+E   assert ((10.0, 10.0, 10.0) == (11.5, 10.0, 10.0)
+E     
+E     At index 0 diff: 10.0 != 11.5
+E     Use -v to get more diff)</failure></testcase></testsuite></testsuites>

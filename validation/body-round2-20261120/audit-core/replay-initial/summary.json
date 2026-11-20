@@ -1,0 +1,65 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows",
+  "sqlite": "3.49.1",
+  "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "guard_sha256": "70fd78c793187a4bde395a9db66a1fdd691aa09fd605ddf892aeb402386e02c2",
+  "records": [
+    {
+      "case": "fixed",
+      "ok": true,
+      "returncode": 0,
+      "passed": 48,
+      "failed_tests": [],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [],
+      "expected_assertion": "",
+      "pytest_summary": "48 passed in 1.14s",
+      "source_sha256": {
+        "lingshu/core/core.py": "da1d0ddf76f5037f0cb1542241d9d3aceb64d5cf8391f807dbdd369154f4ce01"
+      }
+    },
+    {
+      "case": "baseline",
+      "ok": false,
+      "returncode": 1,
+      "passed": 23,
+      "failed_tests": [
+        "test_newborn_uses_only_its_post_birth_span[0.0-context]",
+        "test_newborn_uses_only_its_post_birth_span[0.0-edge]",
+        "test_newborn_uses_only_its_post_birth_span[0.0-knowledge]",
+        "test_newborn_uses_only_its_post_birth_span[1.0-context]",
+        "test_newborn_uses_only_its_post_birth_span[1.0-edge]",
+        "test_newborn_uses_only_its_post_birth_span[1.0-knowledge]",
+        "test_newborn_uses_only_its_post_birth_span[3600.0-context]",
+        "test_newborn_uses_only_its_post_birth_span[3600.0-edge]",
+        "test_newborn_uses_only_its_post_birth_span[3600.0-knowledge]",
+        "test_newborn_uses_only_its_post_birth_span[60.0-context]",
+        "test_newborn_uses_only_its_post_birth_span[60.0-edge]",
+        "test_newborn_uses_only_its_post_birth_span[60.0-knowledge]",
+        "test_old_and_new_rows_have_independent_ages_in_one_tick[context]",
+        "test_old_and_new_rows_have_independent_ages_in_one_tick[edge]",
+        "test_old_and_new_rows_have_independent_ages_in_one_tick[knowledge]",
+        "test_public_creation_after_downtime_survives_the_next_tick",
+        "test_rollback_and_recovery_do_not_double_age_newborn[context]",
+        "test_rollback_and_recovery_do_not_double_age_newborn[edge]",
+        "test_rollback_and_recovery_do_not_double_age_newborn[knowledge]",
+        "test_zero_age_and_repeated_now_do_not_decay[context-0.02]",
+        "test_zero_age_and_repeated_now_do_not_decay[context-1.0]",
+        "test_zero_age_and_repeated_now_do_not_decay[edge-0.02]",
+        "test_zero_age_and_repeated_now_do_not_decay[edge-1.0]",
+        "test_zero_age_and_repeated_now_do_not_decay[knowledge-0.02]",
+        "test_zero_age_and_repeated_now_do_not_decay[knowledge-1.0]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [],
+      "expected_assertion": "",
+      "pytest_summary": "25 failed, 23 passed in 1.45s",
+      "source_sha256": {
+        "lingshu/core/core.py": "4b67f6109ebf62eb74a921fd0a5d4e810e846e05643332ceaa1fb1a8739fe771"
+      }
+    }
+  ]
+}

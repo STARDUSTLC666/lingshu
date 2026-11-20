@@ -1,0 +1,698 @@
+{
+  "baseline": [
+    {
+      "case": "touch_approach",
+      "pos": [
+        10.0,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          10.0,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "t_ref": 0.25
+      },
+      "readout_vel": [
+        10.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": true,
+          "toi": 0.0,
+          "depth": 0.0,
+          "depth_at_dt": 0.0,
+          "axis": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ]
+    },
+    {
+      "case": "full_overlap",
+      "pos": [
+        9.0,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        -4.0,
+        0.0,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          9.0,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          -4.0,
+          0.0,
+          0.0
+        ],
+        "t_ref": 0.25
+      },
+      "readout_vel": [
+        0.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": true,
+          "toi": 0.0,
+          "depth": 1.0,
+          "depth_at_dt": 1.0,
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "case": "full_overlap_all_static",
+      "pos": [
+        10.0,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          10.0,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          0.0,
+          0.0625,
+          0.0
+        ],
+        "t_ref": 0.0
+      },
+      "readout_vel": [
+        0.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": true,
+          "toi": 0.0,
+          "depth": 1.0,
+          "depth_at_dt": 1.0,
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "case": "end_touch",
+      "pos": [
+        12.5,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        10.0,
+        0.0,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          12.5,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          10.0,
+          0.0,
+          0.0
+        ],
+        "t_ref": 0.25
+      },
+      "readout_vel": [
+        10.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": false,
+          "toi": null,
+          "depth": 0.0,
+          "depth_at_dt": 0.0,
+          "axis": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ]
+    },
+    {
+      "case": "overlap_away_same_endpoint",
+      "pos": [
+        9.25,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        -3.0,
+        0.0,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          9.25,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          -3.0,
+          0.0,
+          0.0
+        ],
+        "t_ref": 0.25
+      },
+      "readout_vel": [
+        -3.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": true,
+          "toi": 0.0,
+          "depth": 0.75,
+          "depth_at_dt": 0.0,
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": true
+        }
+      ]
+    }
+  ],
+  "fixed_r1": [
+    {
+      "case": "touch_approach",
+      "pos": [
+        10.0,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          10.0,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "t_ref": 0.25
+      },
+      "readout_vel": [
+        10.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": true,
+          "toi": 0.0,
+          "depth": 0.0,
+          "depth_at_dt": 0.0,
+          "axis": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ]
+    },
+    {
+      "case": "full_overlap",
+      "pos": [
+        9.0,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        -4.0,
+        0.0,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          9.0,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          -4.0,
+          0.0,
+          0.0
+        ],
+        "t_ref": 0.25
+      },
+      "readout_vel": [
+        0.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": true,
+          "toi": 0.0,
+          "depth": 1.0,
+          "depth_at_dt": 1.0,
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "case": "full_overlap_all_static",
+      "pos": [
+        10.0,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        0.0,
+        -0.0625,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          10.0,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          0.0,
+          0.0625,
+          0.0
+        ],
+        "t_ref": 0.0
+      },
+      "readout_vel": [
+        0.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": true,
+          "toi": 0.0,
+          "depth": 1.0,
+          "depth_at_dt": 1.0,
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "case": "end_touch",
+      "pos": [
+        12.5,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        10.0,
+        -0.0625,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          10.0,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          10.0,
+          0.0625,
+          0.0
+        ],
+        "t_ref": 0.0
+      },
+      "readout_vel": [
+        10.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": false,
+          "toi": null,
+          "depth": 0.0,
+          "depth_at_dt": 0.0,
+          "axis": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ]
+    },
+    {
+      "case": "overlap_away_same_endpoint",
+      "pos": [
+        9.25,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        -3.0,
+        -0.0625,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          10.0,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          -3.0,
+          0.0625,
+          0.0
+        ],
+        "t_ref": 0.0
+      },
+      "readout_vel": [
+        -3.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": true,
+          "toi": 0.0,
+          "depth": 0.75,
+          "depth_at_dt": 0.0,
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": true
+        }
+      ]
+    }
+  ],
+  "current": [
+    {
+      "case": "touch_approach",
+      "pos": [
+        10.0,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          10.0,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "t_ref": 0.25
+      },
+      "readout_vel": [
+        10.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": true,
+          "toi": 0.0,
+          "depth": 0.0,
+          "depth_at_dt": 0.0,
+          "axis": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ]
+    },
+    {
+      "case": "full_overlap",
+      "pos": [
+        9.0,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        -4.0,
+        0.0,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          9.0,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          -4.0,
+          0.0,
+          0.0
+        ],
+        "t_ref": 0.25
+      },
+      "readout_vel": [
+        0.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": true,
+          "toi": 0.0,
+          "depth": 1.0,
+          "depth_at_dt": 1.0,
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "case": "full_overlap_all_static",
+      "pos": [
+        10.0,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          10.0,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          0.0,
+          0.0625,
+          0.0
+        ],
+        "t_ref": 0.0
+      },
+      "readout_vel": [
+        0.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": true,
+          "toi": 0.0,
+          "depth": 1.0,
+          "depth_at_dt": 1.0,
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "case": "end_touch",
+      "pos": [
+        12.5,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        10.0,
+        -0.0625,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          10.0,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          10.0,
+          0.0625,
+          0.0
+        ],
+        "t_ref": 0.0
+      },
+      "readout_vel": [
+        10.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": false,
+          "toi": null,
+          "depth": 0.0,
+          "depth_at_dt": 0.0,
+          "axis": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": false
+        }
+      ]
+    },
+    {
+      "case": "overlap_away_same_endpoint",
+      "pos": [
+        9.25,
+        1000.0,
+        10.0
+      ],
+      "velocity": [
+        -3.0,
+        0.0,
+        0.0
+      ],
+      "state": {
+        "p0": [
+          9.25,
+          1000.0,
+          10.0
+        ],
+        "v0": [
+          -3.0,
+          0.0,
+          0.0
+        ],
+        "t_ref": 0.25
+      },
+      "readout_vel": [
+        -3.0,
+        -0.0625,
+        0.0
+      ],
+      "contacts": [
+        {
+          "hit": true,
+          "toi": 0.0,
+          "depth": 0.75,
+          "depth_at_dt": 0.0,
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "conservative": false,
+          "resolved": true
+        }
+      ]
+    }
+  ]
+}

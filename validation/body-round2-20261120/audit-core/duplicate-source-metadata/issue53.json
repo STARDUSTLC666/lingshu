@@ -1,0 +1,12 @@
+{
+  "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+  "records": [
+    {
+      "title": "core/activation: 条件衰减的 cond_match 项从未接线（全仓 0 调用 + 空循环），且 :18 声明 max、:238 实现为 Σ——公式与实现不一致",
+      "url": "https://github.com/FuRongJun-1999/lingshu/issues/53",
+      "state": "CLOSED",
+      "number": 53,
+      "comment_count": 3
+    }
+  ]
+}

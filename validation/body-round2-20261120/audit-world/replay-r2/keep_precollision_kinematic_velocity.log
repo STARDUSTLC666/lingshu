@@ -1,0 +1,13 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___ test_kinematic_velocity_still_records_collision_corrected_displacement ____
+tests\test_scene_collision_freeflight_velocity.py:172: in test_kinematic_velocity_still_records_collision_corrected_displacement
+    assert s.entities[a].velocity == (2., 0., 0.), "SCENE_KINEMATIC_DISPLACEMENT_CHANGED"
+E   AssertionError: SCENE_KINEMATIC_DISPLACEMENT_CHANGED
+E   assert (4.0, 0.0, 0.0) == (2.0, 0.0, 0.0)
+E     
+E     At index 0 diff: 4.0 != 2.0
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED tests/test_scene_collision_freeflight_velocity.py::test_kinematic_velocity_still_records_collision_corrected_displacement
+1 failed in 0.23s

@@ -1,0 +1,12 @@
+{
+  "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+  "records": [
+    {
+      "title": "[core/activation][记忆可信性][P0边界] #229 新增的抑制通路按冲突边方向单向、满额执行：未复核的 OPPOSITE 边（confidence 0.3、verified=0）让「后写入」的一方把先写入的真命题直接压出工作态；写入先后决定真假",
+      "url": "https://github.com/FuRongJun-1999/lingshu/issues/521",
+      "state": "CLOSED",
+      "number": 521,
+      "comment_count": 1
+    }
+  ]
+}

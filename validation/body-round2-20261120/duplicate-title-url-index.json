@@ -1,0 +1,307 @@
+{
+  "policy": "Identifying metadata only; no third-party body/comment text.",
+  "sources": [
+    {
+      "source": "audit-core/issue176.json",
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [
+        {
+          "title": "[core/time_core] 时间核章程未兑现：连续核 cred(dt) 全仓零调用，记忆遗忘按「调用次数」而非流逝时间——interval 改 60 倍遗忘就差 60 倍、停机一周零遗忘；time_core 自身有两份副本",
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/176",
+          "state": "CLOSED",
+          "number": 176,
+          "comment_count": 6
+        }
+      ]
+    },
+    {
+      "source": "audit-core/issue280.json",
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [
+        {
+          "title": "[core/activation] 自条件 × Σ 扩散跨轮指数发散：6 条普通相似记忆每轮激活 ×7，第 46 轮 float32 溢出为 inf——工作态被旧话题永久锁死，换任何查询 top 都是旧节点（inf），新话题节点只有 1.0，且随激活表跨进程持久化",
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/280",
+          "state": "CLOSED",
+          "number": 280,
+          "comment_count": 5
+        }
+      ]
+    },
+    {
+      "source": "audit-core/issue327.json",
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [
+        {
+          "title": "[core/因果推理][资源耗尽] add_edge 不合并平行边 × reason_causal / infer_causal_paths 无上限枚举：同一因果事实记录 k 次 → 6 节点无环链返回 k⁵ 条路径（k=12 即 24.9 万条 / 669 MB，k=16 约 105 万条 / 1.3 GB）",
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/327",
+          "state": "CLOSED",
+          "number": 327,
+          "comment_count": 5
+        }
+      ]
+    },
+    {
+      "source": "audit-core/issue521.json",
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [
+        {
+          "title": "[core/activation][记忆可信性][P0边界] #229 新增的抑制通路按冲突边方向单向、满额执行：未复核的 OPPOSITE 边（confidence 0.3、verified=0）让「后写入」的一方把先写入的真命题直接压出工作态；写入先后决定真假",
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/521",
+          "state": "CLOSED",
+          "number": 521,
+          "comment_count": 1
+        }
+      ]
+    },
+    {
+      "source": "audit-core/issue53.json",
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [
+        {
+          "title": "core/activation: 条件衰减的 cond_match 项从未接线（全仓 0 调用 + 空循环），且 :18 声明 max、:238 实现为 Σ——公式与实现不一致",
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/53",
+          "state": "CLOSED",
+          "number": 53,
+          "comment_count": 3
+        }
+      ]
+    },
+    {
+      "source": "audit-core/issue801.json",
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [
+        {
+          "title": "[core/add_edge][P2·数据质量] 同一节点对可无限重复添加边——5 次 add_edge 产出 5 条独立边记录，图算法（find_cycles/shortest_path）被平行边污染",
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/801",
+          "state": "CLOSED",
+          "number": 801,
+          "comment_count": 0
+        }
+      ]
+    },
+    {
+      "source": "audit-core/pr830.json",
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [
+        {
+          "title": "fix(core): OPPOSITE 抑制按边置信缩放并双向——写序不再决定真命题去留",
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/830",
+          "state": "MERGED",
+          "number": 830,
+          "comment_count": 1
+        }
+      ]
+    },
+    {
+      "source": "audit-circular/circular-bounty-search.json",
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [
+        {
+          "title": "[intake] 贡献申报（逐件）：lingshu #786——physics 真值三项（circular roundtrip / Reflector 负初速 / apex 世界高度）（PR #829 已合并）",
+          "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1376",
+          "number": 1376
+        },
+        {
+          "title": "`lingshu/world/physics.py`：`_sim_model_from_state` 的 docstring 写「**必须显式 `dt`**」而函数**一次不读 `dt`**（实测 `None`/`0`/`-1`/`\"abc\"` 全被接受）；同文件 `circular_truth(center, up)` 也收下几何参数却不读（连字符串都收）",
+          "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1278",
+          "number": 1278
+        },
+        {
+          "title": "【intake 输入】lingshu #673：fit_damped 的 v0 符号错误——与 predict_at(t_ref) 速度精确相反（六类唯一），damped_truth 的 p_inf 落到对侧",
+          "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/547",
+          "number": 547
+        },
+        {
+          "title": "[intake 输入] 【测评报告】Haystack Pipelines（haystack-ai 3.4.0）cross_eval 第 4 家（智能体工作流 · 方法试验）：五模式 sha 全一致，失败快照续跑只重跑 verify；快照对不可序列化输入整组省略致续跑报错误导",
+          "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1178",
+          "number": 1178
+        }
+      ]
+    },
+    {
+      "source": "audit-circular/circular-pr-search.json",
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [
+        {
+          "title": "fix(world): #786——physics 真值三项（circular roundtrip / Reflector 负初速 / apex 世界高度）＋守卫",
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/829",
+          "number": 829
+        },
+        {
+          "title": "fix(nn): query_match 报告排名字典自引用——非空查询结果可 JSON 序列化（#46）",
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/63",
+          "number": 63
+        },
+        {
+          "title": "fix(world): #673——fit_damped 的 v0 去掉多余负号，六类 v0==predict_at(t_ref) 不变量恢复＋守卫",
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/685",
+          "number": 685
+        },
+        {
+          "title": "feat(world): 世界模型自己长出三项能力——多面数自生成建模/物理运动预测/多面数呈现",
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/560",
+          "number": 560
+        },
+        {
+          "title": "feat(bridges): 新增 Blender 侧世界模型桥——独立逐 tick 真值源 + OBJ/SHA-256 几何供货",
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/472",
+          "number": 472
+        },
+        {
+          "title": "feat(world): 自生成多面数建模 + 物理运动预测 + 多面数呈现（rebase 拆分版）",
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/584",
+          "number": 584
+        },
+        {
+          "title": "feat(world): 自生成多面数建模 + 物理运动预测 + 多面数呈现（rebase 拆分版）",
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/583",
+          "number": 583
+        }
+      ]
+    },
+    {
+      "source": "audit-circular/issue786-full.json",
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [
+        {
+          "title": "[intake 输入][world/physics] 解析真值族独立审计：circular 预测约定错位（P1）＋ Reflector 负初速速度反号（P2）＋ apex_height 口径不符（P2）＋ P3×3 登记",
+          "number": 786,
+          "comment_count": 0
+        }
+      ]
+    },
+    {
+      "source": "audit-numeric/spatial-bounty-hex_text-search.json",
+      "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+      "records": [
+        {
+          "title": "lingshu M5.5：感知-知识桥（条件卡灌入、图文四态回写与白箱问答 · PR #1439）",
+          "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2727",
+          "state": "closed",
+          "number": 2727
+        },
+        {
+          "title": "第三方独立复验：lingshu #24 维护者修复（hex_text 判据标定）——3×全绿+守卫4/4+二项地板独立复算吻合",
+          "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1824",
+          "state": "closed",
+          "number": 1824
+        },
+        {
+          "title": "【贡献申报】lingshu #429：受保护结构写服务与版本历史（PR 已 rebase 到当前 main；18 文件 +1792/−170，CI 四档全绿；未合并）",
+          "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/258",
+          "state": "closed",
+          "number": 258
+        }
+      ],
+      "total_count": 3,
+      "incomplete_results": false,
+      "search_type": "lexical"
+    },
+    {
+      "source": "audit-numeric/spatial_partition_duplicate_search.json",
+      "policy": "Only identifying metadata retained; bodies/comments omitted.",
+      "queries": [
+        {
+          "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+          "records": [
+            {
+              "title": "[nn/hex_text] 路线图 M5.5 感知-知识桥尚未落地（条件卡灌入、图文回写与白箱视觉问答）",
+              "state": "open",
+              "url": "https://github.com/FuRongJun-1999/lingshu/issues/1435",
+              "number": 1435
+            },
+            {
+              "title": "[nn/hex_text][P2 声明静默失效] `multimodal_check(..., n_expected=...)` 收下\"期望物体数\"却一次不读——声明期望 0 个物体的场景也照判 ACCEPT",
+              "state": "closed",
+              "url": "https://github.com/FuRongJun-1999/lingshu/issues/860",
+              "number": 860
+            },
+            {
+              "title": "[tests] `test_hex_text.py` 两项「已知红」是不可复算的阈值断言：跨两套 numpy（2.3.5/2.5.3）读数逐位相同，应改为存档基线或构造性判据",
+              "state": "closed",
+              "url": "https://github.com/FuRongJun-1999/lingshu/issues/24",
+              "number": 24
+            },
+            {
+              "title": "fix(nn): image_to_grid 晶格横向越出画幅 √3 倍——README 两项「已知红」的根因；修后 6/6、断言零改动",
+              "state": "closed",
+              "url": "https://github.com/FuRongJun-1999/lingshu/pull/116",
+              "number": 116
+            }
+          ],
+          "query": "repo:FuRongJun-1999/lingshu spatial_detect",
+          "total_count": 4,
+          "incomplete_results": false
+        },
+        {
+          "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+          "records": [],
+          "query": "repo:FuRongJun-1999/dsh-bounty spatial_detect",
+          "total_count": 0,
+          "incomplete_results": false
+        },
+        {
+          "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+          "records": [
+            {
+              "title": "fix(nn): image_to_grid 晶格横向越出画幅 √3 倍——README 两项「已知红」的根因；修后 6/6、断言零改动",
+              "state": "closed",
+              "url": "https://github.com/FuRongJun-1999/lingshu/pull/116",
+              "number": 116
+            }
+          ],
+          "query": "repo:FuRongJun-1999/lingshu \"hex_text\" \"裁剪\"",
+          "total_count": 1,
+          "incomplete_results": false
+        },
+        {
+          "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+          "records": [
+            {
+              "title": "[nn/hex_text][P2 声明静默失效] `multimodal_check(..., n_expected=...)` 收下\"期望物体数\"却一次不读——声明期望 0 个物体的场景也照判 ACCEPT",
+              "state": "closed",
+              "url": "https://github.com/FuRongJun-1999/lingshu/issues/860",
+              "number": 860
+            },
+            {
+              "title": "feat(core): 增加受保护结构写服务与版本历史",
+              "state": "closed",
+              "url": "https://github.com/FuRongJun-1999/lingshu/pull/429",
+              "number": 429
+            },
+            {
+              "title": "fix(nn): image_to_grid 晶格横向越出画幅 √3 倍——README 两项「已知红」的根因；修后 6/6、断言零改动",
+              "state": "closed",
+              "url": "https://github.com/FuRongJun-1999/lingshu/pull/116",
+              "number": 116
+            }
+          ],
+          "query": "repo:FuRongJun-1999/lingshu \"hex_text\" \"余数\"",
+          "total_count": 3,
+          "incomplete_results": false
+        },
+        {
+          "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+          "records": [],
+          "query": "repo:FuRongJun-1999/lingshu \"hex_text\" \"尾列\"",
+          "total_count": 0,
+          "incomplete_results": false
+        },
+        {
+          "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+          "records": [],
+          "query": "repo:FuRongJun-1999/lingshu \"hex_text\" \"divisible\"",
+          "total_count": 0,
+          "incomplete_results": false
+        },
+        {
+          "policy": "Only identifying title/URL/state metadata retained; third-party bodies/comments omitted.",
+          "records": [],
+          "query": "repo:FuRongJun-1999/dsh-bounty \"hex_text\"",
+          "total_count": null,
+          "incomplete_results": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+______ test_old_and_new_rows_have_independent_ages_in_one_tick[context] _______
+tests\test_fresh_row_decay.py:87: in test_old_and_new_rows_have_independent_ages_in_one_tick
+    assert _value(store, kind, "old") is None, "old row missed downtime decay"
+E   AssertionError: old row missed downtime decay
+E   assert 0.5 is None
+E    +  where 0.5 = _value(<lingshu.core.core.LayeredStore object at 0x000001F6AA0FA450>, 'context', 'old')
+=========================== short test summary info ===========================
+FAILED tests/test_fresh_row_decay.py::test_old_and_new_rows_have_independent_ages_in_one_tick[context]
+1 failed in 0.50s

@@ -1,0 +1,192 @@
+{
+  "head": "e821bbb1fac57fa638640e3caf153caf7f1b1973",
+  "physics_sha256_lf": "61c497fe3e077c7c3bf4542e58e27f0811735d992e8ae9ba868e19ce1e2e7ff6",
+  "scenes": 729,
+  "noisy_rms_cases": 90,
+  "classifications": [
+    {
+      "up": 0,
+      "acceleration": -20.0,
+      "noise": 0.0,
+      "kind": "accelerated"
+    },
+    {
+      "up": 0,
+      "acceleration": -20.0,
+      "noise": 0.015,
+      "kind": "accelerated"
+    },
+    {
+      "up": 0,
+      "acceleration": -2.0,
+      "noise": 0.0,
+      "kind": "accelerated"
+    },
+    {
+      "up": 0,
+      "acceleration": -2.0,
+      "noise": 0.015,
+      "kind": "accelerated"
+    },
+    {
+      "up": 0,
+      "acceleration": 0.0,
+      "noise": 0.0,
+      "kind": "circular"
+    },
+    {
+      "up": 0,
+      "acceleration": 0.0,
+      "noise": 0.015,
+      "kind": "circular"
+    },
+    {
+      "up": 0,
+      "acceleration": 2.0,
+      "noise": 0.0,
+      "kind": "accelerated"
+    },
+    {
+      "up": 0,
+      "acceleration": 2.0,
+      "noise": 0.015,
+      "kind": "accelerated"
+    },
+    {
+      "up": 0,
+      "acceleration": 20.0,
+      "noise": 0.0,
+      "kind": "accelerated"
+    },
+    {
+      "up": 0,
+      "acceleration": 20.0,
+      "noise": 0.015,
+      "kind": "accelerated"
+    },
+    {
+      "up": 1,
+      "acceleration": -20.0,
+      "noise": 0.0,
+      "kind": "accelerated"
+    },
+    {
+      "up": 1,
+      "acceleration": -20.0,
+      "noise": 0.015,
+      "kind": "accelerated"
+    },
+    {
+      "up": 1,
+      "acceleration": -2.0,
+      "noise": 0.0,
+      "kind": "accelerated"
+    },
+    {
+      "up": 1,
+      "acceleration": -2.0,
+      "noise": 0.015,
+      "kind": "accelerated"
+    },
+    {
+      "up": 1,
+      "acceleration": 0.0,
+      "noise": 0.0,
+      "kind": "circular"
+    },
+    {
+      "up": 1,
+      "acceleration": 0.0,
+      "noise": 0.015,
+      "kind": "circular"
+    },
+    {
+      "up": 1,
+      "acceleration": 2.0,
+      "noise": 0.0,
+      "kind": "accelerated"
+    },
+    {
+      "up": 1,
+      "acceleration": 2.0,
+      "noise": 0.015,
+      "kind": "accelerated"
+    },
+    {
+      "up": 1,
+      "acceleration": 20.0,
+      "noise": 0.0,
+      "kind": "accelerated"
+    },
+    {
+      "up": 1,
+      "acceleration": 20.0,
+      "noise": 0.015,
+      "kind": "accelerated"
+    },
+    {
+      "up": 2,
+      "acceleration": -20.0,
+      "noise": 0.0,
+      "kind": "accelerated"
+    },
+    {
+      "up": 2,
+      "acceleration": -20.0,
+      "noise": 0.015,
+      "kind": "accelerated"
+    },
+    {
+      "up": 2,
+      "acceleration": -2.0,
+      "noise": 0.0,
+      "kind": "accelerated"
+    },
+    {
+      "up": 2,
+      "acceleration": -2.0,
+      "noise": 0.015,
+      "kind": "accelerated"
+    },
+    {
+      "up": 2,
+      "acceleration": 0.0,
+      "noise": 0.0,
+      "kind": "circular"
+    },
+    {
+      "up": 2,
+      "acceleration": 0.0,
+      "noise": 0.015,
+      "kind": "circular"
+    },
+    {
+      "up": 2,
+      "acceleration": 2.0,
+      "noise": 0.0,
+      "kind": "accelerated"
+    },
+    {
+      "up": 2,
+      "acceleration": 2.0,
+      "noise": 0.015,
+      "kind": "accelerated"
+    },
+    {
+      "up": 2,
+      "acceleration": 20.0,
+      "noise": 0.0,
+      "kind": "accelerated"
+    },
+    {
+      "up": 2,
+      "acceleration": 20.0,
+      "noise": 0.015,
+      "kind": "accelerated"
+    }
+  ],
+  "assertions": 4494,
+  "failures": [],
+  "max_component_error": 2.0541970902065998e-12,
+  "scope": "irregular binary-exact times; all up axes; radius/phase/direction/drift/time-origin sweeps; no position noise or turn aliasing"
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "script": "tests/test_core_export_all.py",
+    "exit": 0
+  },
+  {
+    "script": "tests/test_core_nplus1_getstats_forgetadvisor.py",
+    "exit": 0
+  },
+  {
+    "script": "tests/test_issue_auto_decay_interval_guard.py",
+    "exit": 0
+  },
+  {
+    "script": "tests/test_issue_decay_factor_range_guard.py",
+    "exit": 0
+  },
+  {
+    "pytest": [
+      "tests/test_core_consolidate_rehearsal.py",
+      "tests/test_core_dangling_metric_parity.py",
+      "tests/test_core_foreign_key_enforcement.py",
+      "tests/test_core_legacy_schema_migration.py",
+      "tests/test_core_local_visual_buffer.py",
+      "tests/test_core_search_discrimination.py",
+      "tests/test_core_thread_safety.py",
+      "tests/test_extension_transaction_ownership.py",
+      "tests/test_fresh_row_decay.py",
+      "tests/test_issue115_conflict_edge_lifecycle_guard.py",
+      "tests/test_issue176_clock_rollback_decay_guard.py",
+      "tests/test_issue176_time_based_decay_guard.py",
+      "tests/test_issue205_decay_immutable_edge_guard.py",
+      "tests/test_issue207_context_decay_deadzone_guard.py",
+      "tests/test_issue257_decay_protection_cliff_guard.py",
+      "tests/test_issue265_decay_thread_lifecycle_guard.py",
+      "tests/test_issue36_forget_protection_guard.py",
+      "tests/test_issue37_close_joins_decay_thread_guard.py",
+      "tests/test_issue720_get_node_tolerance_guard.py",
+      "tests/test_issue778_781_forget_protection_guard.py"
+    ],
+    "exit": 0
+  }
+]

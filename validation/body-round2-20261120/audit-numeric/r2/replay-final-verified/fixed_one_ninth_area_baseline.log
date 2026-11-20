@@ -1,0 +1,11 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-1.0-5-5] _
+tests\test_spatial_detect_complete_partition.py:150: in test_uniform_real_network_does_not_mistake_area_for_extra_evidence
+    assert len(result) == 1, "uniform field produced extra detections from unequal quadrant areas"
+E   AssertionError: uniform field produced extra detections from unequal quadrant areas
+E   assert 4 == 1
+E    +  where 4 = len([{'pos': 'r4', 'obj': 'circle|red', 'conf': 1.0, 'share': 0.16}, {'pos': 'r5', 'obj': 'circle|red', 'conf': 1.0, 'shar...'r7', 'obj': 'circle|red', 'conf': 1.0, 'share': 0.16}, {'pos': 'r8', 'obj': 'circle|red', 'conf': 1.0, 'share': 0.16}])
+=========================== short test summary info ===========================
+FAILED tests/test_spatial_detect_complete_partition.py::test_uniform_real_network_does_not_mistake_area_for_extra_evidence[transparent-1.0-5-5]
+1 failed in 0.36s

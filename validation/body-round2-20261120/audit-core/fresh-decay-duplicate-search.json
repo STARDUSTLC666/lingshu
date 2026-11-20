@@ -1,0 +1,142 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "label": "lingshu-new-decay",
+      "repo": "FuRongJun-1999/lingshu",
+      "query": "新节点 衰减",
+      "exit": 0,
+      "output": "[]\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "label": "lingshu-fresh-decay",
+      "repo": "FuRongJun-1999/lingshu",
+      "query": "新写入 衰减",
+      "exit": 0,
+      "output": "[]\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "label": "lingshu-decay-created",
+      "repo": "FuRongJun-1999/lingshu",
+      "query": "created_at decay",
+      "exit": 0,
+      "output": "[]\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "label": "lingshu-decaydt",
+      "repo": "FuRongJun-1999/lingshu",
+      "query": "_decay_dt",
+      "exit": 0,
+      "output": "[{\"number\":176,\"state\":\"closed\",\"title\":\"[core/time_core] 时间核章程未兑现：连续核 cred(dt) 全仓零调用，记忆遗忘按「调用次数」而非流逝时间——interval 改 60 倍遗忘就差 60 倍、停机一周零遗忘；time_core 自身有两份副本\",\"url\":\"https://github.com/FuRongJun-1999/lingshu/issues/176\"}]\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "label": "bounty-new-decay",
+      "repo": "FuRongJun-1999/dsh-bounty",
+      "query": "新节点 衰减",
+      "exit": 0,
+      "output": "[]\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "label": "bounty-fresh-decay",
+      "repo": "FuRongJun-1999/dsh-bounty",
+      "query": "新写入 衰减",
+      "exit": 0,
+      "output": "[]\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "label": "ls-newborn",
+      "repo": "FuRongJun-1999/lingshu",
+      "query": "新建 衰减",
+      "exit": 0,
+      "output": "[]\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "label": "ls-newwrite",
+      "repo": "FuRongJun-1999/lingshu",
+      "query": "刚写 衰减",
+      "exit": 0,
+      "output": "[]\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "label": "ls-fresh",
+      "repo": "FuRongJun-1999/lingshu",
+      "query": "fresh decay",
+      "exit": 0,
+      "output": "[]\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "label": "ls-born",
+      "repo": "FuRongJun-1999/lingshu",
+      "query": "created decay",
+      "exit": 0,
+      "output": "[]\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "label": "ls-last",
+      "repo": "FuRongJun-1999/lingshu",
+      "query": "_last_decay_at",
+      "exit": 0,
+      "output": "[{\"number\":176,\"state\":\"closed\",\"title\":\"[core/time_core] 时间核章程未兑现：连续核 cred(dt) 全仓零调用，记忆遗忘按「调用次数」而非流逝时间——interval 改 60 倍遗忘就差 60 倍、停机一周零遗忘；time_core 自身有两份副本\",\"url\":\"https://github.com/FuRongJun-1999/lingshu/issues/176\"},{\"number\":671,\"state\":\"closed\",\"title\":\"[core/M13][安全][P1] #479 新增的 engine_meta 密钥闸只列了 self_model_snapshot：verifier_config 仍可无密钥 import_all 覆盖，重启后 dedup_static 原样生效（连 #118 的 [0.5,0.95] 钳制一并绕过）\",\"url\":\"https://github.com/FuRongJun-1999/lingshu/issues/671\"},{\"number\":479,\"state\":\"closed\",\"title\":\"[core/M13][自我层][P0] import_all 无密钥导入 engine_meta：伪造 self_model_snapshot 即可在下次启动时改写 identity/values/trust_state（绕过 #125 SELF 闸与 #182 白名单），#125 的「只追加」审计行也可被原地覆盖\",\"url\":\"https://github.com/FuRongJun-1999/lingshu/issues/479\"}]\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "label": "b-newborn",
+      "repo": "FuRongJun-1999/dsh-bounty",
+      "query": "新建 衰减",
+      "exit": 0,
+      "output": "[]\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "label": "b-last",
+      "repo": "FuRongJun-1999/dsh-bounty",
+      "query": "_last_decay_at",
+      "exit": 0,
+      "output": "[{\"number\":684,\"state\":\"closed\",\"title\":\"[贡献验收申请][easy] LarryE135：lingshu #139 / #176 修复残余 2 条 ＋ dsh-memory 安全修复守卫撤不住回退 1 条（P2×3），请纳入结算表\",\"url\":\"https://github.com/FuRongJun-1999/dsh-bounty/issues/684\"}]\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "label": "ls-overdecay",
+      "repo": "FuRongJun-1999/lingshu",
+      "query": "过度 衰减",
+      "exit": 0,
+      "output": "[]\n"
+    }
+  }
+]

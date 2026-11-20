@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.187" timestamp="2026-11-20T23:15:27.130780+08:00" hostname="STARDUST"><testcase classname="tests.test_scene_collision_freeflight_velocity" name="test_fully_overlapping_static_boxes_keep_existing_contact_velocity" time="0.029"><failure message="AssertionError: SCENE_STATIC_CONTACT_VELOCITY_CHANGED&#10;assert (0.0, -0.0625, 0.0) == (0.0, 0.0, 0.0)&#10;  &#10;  At index 1 diff: -0.0625 != 0.0&#10;  Use -v to get more diff">tests\test_scene_collision_freeflight_velocity.py:209: in test_fully_overlapping_static_boxes_keep_existing_contact_velocity
+    assert e.velocity == (0., 0., 0.), "SCENE_STATIC_CONTACT_VELOCITY_CHANGED"
+E   AssertionError: SCENE_STATIC_CONTACT_VELOCITY_CHANGED
+E   assert (0.0, -0.0625, 0.0) == (0.0, 0.0, 0.0)
+E     
+E     At index 1 diff: -0.0625 != 0.0
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

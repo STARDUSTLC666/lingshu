@@ -1,0 +1,71 @@
+{'name': 'mutation-drop_remainder_rows', 'returncode': 1, 'tests': 1, 'failures': 1, 'errors': 0, 'skipped': 0, 'killed': True}
+{'name': 'mutation-drop_remainder_columns', 'returncode': 1, 'tests': 1, 'failures': 1, 'errors': 0, 'skipped': 0, 'killed': True}
+{'name': 'mutation-energy_uses_truncated_partition', 'returncode': 1, 'tests': 1, 'failures': 1, 'errors': 0, 'skipped': 0, 'killed': True}
+{'name': 'mutation-classification_uses_truncated_partition', 'returncode': 1, 'tests': 1, 'failures': 1, 'errors': 0, 'skipped': 0, 'killed': True}
+{'name': 'mutation-classify_empty_quadrants', 'returncode': 1, 'tests': 1, 'failures': 1, 'errors': 0, 'skipped': 0, 'killed': True}
+{
+  "baseline": {
+    "name": "spatial-baseline",
+    "returncode": 1,
+    "tests": 19,
+    "failures": 16,
+    "errors": 0,
+    "skipped": 0
+  },
+  "fixed": {
+    "name": "spatial-fixed-isolated",
+    "returncode": 0,
+    "tests": 19,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "mutations": [
+    {
+      "name": "mutation-drop_remainder_rows",
+      "returncode": 1,
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "killed": true
+    },
+    {
+      "name": "mutation-drop_remainder_columns",
+      "returncode": 1,
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "killed": true
+    },
+    {
+      "name": "mutation-energy_uses_truncated_partition",
+      "returncode": 1,
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "killed": true
+    },
+    {
+      "name": "mutation-classification_uses_truncated_partition",
+      "returncode": 1,
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "killed": true
+    },
+    {
+      "name": "mutation-classify_empty_quadrants",
+      "returncode": 1,
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "killed": true
+    }
+  ],
+  "verdict": true
+}

@@ -1,0 +1,611 @@
+{
+  "method": "adjacent randomized pair seed424242; same process and shared unchanged dependencies; setup excluded; 1 warmup +11 timed pairs; GC disabled equally",
+  "source_sha256_lf": {
+    "baseline": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+    "fixed": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8"
+  },
+  "cases": [
+    {
+      "case": "kinematic_default",
+      "seconds": {
+        "baseline": [
+          0.0030499,
+          0.0031439,
+          0.0030707,
+          0.0031051,
+          0.0030205,
+          0.0029963,
+          0.0030509,
+          0.0030537,
+          0.0030359,
+          0.0030836,
+          0.0030486
+        ],
+        "fixed": [
+          0.0030724,
+          0.0030132,
+          0.0030594,
+          0.0030202,
+          0.0030559,
+          0.0032107,
+          0.0030335,
+          0.003018,
+          0.0030284,
+          0.0030294,
+          0.0030371
+        ]
+      },
+      "medians": {
+        "baseline": 0.0030509,
+        "fixed": 0.0030335
+      },
+      "fixed_over_baseline": 0.9942967648890492,
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ]
+      ]
+    },
+    {
+      "case": "kinematic_boxes_8",
+      "seconds": {
+        "baseline": [
+          0.0870562,
+          0.0877428,
+          0.0875232,
+          0.1028592,
+          0.1005014,
+          0.0982189,
+          0.0981326,
+          0.0980416,
+          0.0989156,
+          0.0981484,
+          0.0976447
+        ],
+        "fixed": [
+          0.0887516,
+          0.0893969,
+          0.0884806,
+          0.1005672,
+          0.0974309,
+          0.1003106,
+          0.1009906,
+          0.0987074,
+          0.0985328,
+          0.098009,
+          0.097762
+        ]
+      },
+      "medians": {
+        "baseline": 0.0981326,
+        "fixed": 0.098009
+      },
+      "fixed_over_baseline": 0.9987404797182587,
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "case": "dynamic_default_8",
+      "seconds": {
+        "baseline": [
+          0.0110121,
+          0.0105778,
+          0.0106908,
+          0.0110988,
+          0.0107204,
+          0.010761,
+          0.0111825,
+          0.0107407,
+          0.0106877,
+          0.0108662,
+          0.0108495
+        ],
+        "fixed": [
+          0.0107936,
+          0.0110661,
+          0.0107084,
+          0.0105736,
+          0.010797,
+          0.0105894,
+          0.010749,
+          0.010793,
+          0.0107916,
+          0.0106981,
+          0.0107925
+        ]
+      },
+      "medians": {
+        "baseline": 0.010761,
+        "fixed": 0.0107916
+      },
+      "fixed_over_baseline": 1.0028436018957347,
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "case": "dynamic_one_box",
+      "seconds": {
+        "baseline": [
+          0.0174158,
+          0.0185254,
+          0.018005,
+          0.01779,
+          0.018052,
+          0.0179041,
+          0.0143226,
+          0.0116518,
+          0.0200159,
+          0.0199551,
+          0.0198403
+        ],
+        "fixed": [
+          0.0181182,
+          0.0171812,
+          0.0177698,
+          0.0178837,
+          0.0167908,
+          0.0178208,
+          0.0154754,
+          0.0104564,
+          0.0111929,
+          0.0202243,
+          0.0224927
+        ]
+      },
+      "medians": {
+        "baseline": 0.018005,
+        "fixed": 0.0177698
+      },
+      "fixed_over_baseline": 0.9869369619550125,
+      "order": [
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ]
+      ]
+    },
+    {
+      "case": "dynamic_boxes_8",
+      "seconds": {
+        "baseline": [
+          0.1668665,
+          0.1641635,
+          0.1688781,
+          0.1686428,
+          0.1671111,
+          0.1644606,
+          0.1481816,
+          0.1507925,
+          0.1450989,
+          0.1227369,
+          0.1132989
+        ],
+        "fixed": [
+          0.1635145,
+          0.1659922,
+          0.1655691,
+          0.1450465,
+          0.1632727,
+          0.1626351,
+          0.1449151,
+          0.1617044,
+          0.1493472,
+          0.1102311,
+          0.1161456
+        ]
+      },
+      "medians": {
+        "baseline": 0.1641635,
+        "fixed": 0.1617044
+      },
+      "fixed_over_baseline": 0.9850204217137184,
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ]
+      ]
+    },
+    {
+      "case": "dynamic_boxes_24",
+      "seconds": {
+        "baseline": [
+          1.118923,
+          1.2999506,
+          1.1365815,
+          0.9530187,
+          1.4239603,
+          1.4479158,
+          0.9314989,
+          0.9652198,
+          1.3935766,
+          1.4599427,
+          1.134713
+        ],
+        "fixed": [
+          1.4550916,
+          1.3578076,
+          1.4565323,
+          1.1123504,
+          1.3188898,
+          1.4146015,
+          1.4363968,
+          0.9803996,
+          1.2418796,
+          1.1331871,
+          1.0511046
+        ]
+      },
+      "medians": {
+        "baseline": 1.1365815,
+        "fixed": 1.3188898
+      },
+      "fixed_over_baseline": 1.1604005520061695,
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "case": "mixed_contact",
+      "seconds": {
+        "baseline": [
+          0.0156618,
+          0.0164937,
+          0.0176188,
+          0.0165421,
+          0.0147908,
+          0.0146206,
+          0.0162353,
+          0.016638,
+          0.0154395,
+          0.0154368,
+          0.0159752
+        ],
+        "fixed": [
+          0.0162347,
+          0.0165216,
+          0.0151182,
+          0.0163472,
+          0.0160925,
+          0.0148562,
+          0.0204105,
+          0.0180262,
+          0.0162009,
+          0.0172641,
+          0.0147364
+        ]
+      },
+      "medians": {
+        "baseline": 0.0159752,
+        "fixed": 0.0162347
+      },
+      "fixed_over_baseline": 1.0162439280885374,
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ]
+      ]
+    }
+  ]
+}
