@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - validation/body-round2-evidence-20261120
+    paths:
+      - validation/body-round2-20261120/tools/run_round2_linux_benchmarks.py
 
 permissions:
   contents: read

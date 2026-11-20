@@ -42,6 +42,30 @@ def load(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def write_artifact_index(out):
+    """Index completed outputs after the validation summary is final.
+
+    The caller's tee can still append to driver.log when main prints its
+    result. Exclude that live stream and the index itself; listed files must
+    not be written after this function returns.
+    """
+    allowed = {".json", ".xml", ".log", ".txt", ".py", ".md"}
+    inventory = []
+    for path in sorted(out.rglob("*")):
+        relative = path.relative_to(out)
+        if (not path.is_file() or path.suffix not in allowed
+                or relative.as_posix() in {"artifact-index.json", "driver.log"}
+                or any(part in {"tmp", "sandbox", "__pycache__"}
+                       or part.startswith("guard-") for part in relative.parts)):
+            continue
+        payload = path.read_bytes()
+        inventory.append({"path": relative.as_posix(), "bytes": len(payload), "sha256": digest(payload)})
+    result = {"files": inventory, "excludes": ["artifact-index.json (self)", "driver.log (live tee)",
+              "tmp", "sandbox", "guard-*", "__pycache__", "databases"]}
+    write_json(out / "artifact-index.json", result)
+    return result
+
+
 def validate_reports(out, source):
     checks = []
     provenance = load(out / "provenance.json")
@@ -186,21 +210,13 @@ def main():
     after = {p: digest((source / p).read_bytes()) for p in tracked}
     if before != after:
         errors.append("source tracked-file hashes changed during validation")
-    allowed = {".json", ".xml", ".log", ".txt", ".py", ".md"}
-    inventory = []
-    for p in sorted(out.rglob("*")):
-        relative = p.relative_to(out)
-        if not p.is_file() or p.suffix not in allowed or any(
-                part in {"tmp", "sandbox", "__pycache__"} or part.startswith("guard-") for part in relative.parts):
-            continue
-        inventory.append({"path": relative.as_posix(), "bytes": p.stat().st_size, "sha256": digest(p.read_bytes())})
-    write_json(out / "artifact-index.json", {"files": inventory, "excludes": ["tmp", "sandbox", "guard-*", "__pycache__", "databases"]})
     result = {"source_sha": actual, "baseline_sha": args.baseline_sha, "checks": checks,
               "errors": errors, "commands": len(commands), "named_mutations_expected": 27,
               "all_command_exit_codes_zero": all(row["exit_code"] == 0 for row in commands),
               "source_unchanged": before == after, "ok": not errors,
               "scope": "four benchmark workloads and mutation replays; complete repository/brain gate runs separately"}
     write_json(out / "validation-summary.json", result)
+    write_artifact_index(out)
     print(json.dumps(result, indent=2), flush=True)
     return 0 if result["ok"] else 1
 
