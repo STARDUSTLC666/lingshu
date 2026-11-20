@@ -1,0 +1,118 @@
+{
+  "suite": "motion_groups",
+  "variant": "fixed",
+  "commit": "cc68a82baace16e92ff6ce770330b65102a530a5",
+  "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cc68a82baace",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "cpu_count": 32,
+    "numpy": "2.5.5",
+    "pillow": "12.3.0",
+    "sqlite": "3.49.1",
+    "pythonhashseed": "20261120",
+    "seed": 20261120,
+    "perf_counter": {
+      "implementation": "QueryPerformanceCounter()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "process_clock": {
+      "implementation": "GetProcessTimes()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "cpu_affinity": "uncontrolled",
+    "power_plan": "uncontrolled",
+    "wall_clock_utc": "2026-11-20T13:18:14Z"
+  },
+  "repetitions": [
+    [
+      {
+        "label": "detect_8_frames_96_entities",
+        "python_current_delta_bytes": 187651,
+        "python_peak_new_bytes": 574668,
+        "process_before": {
+          "working_set_bytes": 40706048,
+          "process_peak_working_set_bytes": 41431040,
+          "private_commit_bytes": 799850496,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "process_after": {
+          "working_set_bytes": 41951232,
+          "process_peak_working_set_bytes": 41951232,
+          "private_commit_bytes": 800636928,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "result_type": "dict"
+      }
+    ],
+    [
+      {
+        "label": "detect_8_frames_96_entities",
+        "python_current_delta_bytes": 187955,
+        "python_peak_new_bytes": 574964,
+        "process_before": {
+          "working_set_bytes": 41046016,
+          "process_peak_working_set_bytes": 41955328,
+          "private_commit_bytes": 799993856,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "process_after": {
+          "working_set_bytes": 42029056,
+          "process_peak_working_set_bytes": 42029056,
+          "private_commit_bytes": 800903168,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "result_type": "dict"
+      }
+    ],
+    [
+      {
+        "label": "detect_8_frames_96_entities",
+        "python_current_delta_bytes": 187955,
+        "python_peak_new_bytes": 574956,
+        "process_before": {
+          "working_set_bytes": 41062400,
+          "process_peak_working_set_bytes": 42029056,
+          "private_commit_bytes": 800018432,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "process_after": {
+          "working_set_bytes": 41943040,
+          "process_peak_working_set_bytes": 42029056,
+          "private_commit_bytes": 800903168,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "result_type": "dict"
+      }
+    ]
+  ],
+  "summary": [
+    {
+      "label": "detect_8_frames_96_entities",
+      "python_peak_new_bytes_samples": [
+        574668,
+        574964,
+        574956
+      ],
+      "python_peak_new_bytes_median": 574956,
+      "python_current_delta_bytes_samples": [
+        187651,
+        187955,
+        187955
+      ],
+      "working_set_after_bytes_samples": [
+        41951232,
+        42029056,
+        41943040
+      ]
+    }
+  ],
+  "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cc68a82baace\\lingshu\\world\\motion_groups.py",
+  "source_lf_sha256": "261f48459c03bdd297d923581ed01efed12d6293aaaffe3319fd321772eacaeb"
+}

@@ -1,0 +1,264 @@
+{
+  "suite": "novelty_cache",
+  "variant": "baseline",
+  "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "cpu_count": 32,
+    "numpy": "2.5.5",
+    "pillow": "12.3.0",
+    "sqlite": "3.49.1",
+    "pythonhashseed": "20261120",
+    "seed": 20261120,
+    "perf_counter": {
+      "implementation": "QueryPerformanceCounter()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "process_clock": {
+      "implementation": "GetProcessTimes()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "cpu_affinity": "uncontrolled",
+    "power_plan": "uncontrolled",
+    "wall_clock_utc": "2026-11-20T13:18:19Z"
+  },
+  "repetitions": [
+    [
+      {
+        "label": "snapshot_cold_5000_nodes",
+        "python_current_delta_bytes": 9695841,
+        "python_peak_new_bytes": 11561297,
+        "process_before": {
+          "working_set_bytes": 52916224,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 813469696,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "process_after": {
+          "working_set_bytes": 71843840,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 830894080,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "result_type": "tuple"
+      },
+      {
+        "label": "snapshot_warm_5000_nodes",
+        "python_current_delta_bytes": 952,
+        "python_peak_new_bytes": 906876,
+        "process_before": {
+          "working_set_bytes": 60051456,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 818724864,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "process_after": {
+          "working_set_bytes": 61190144,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 819785728,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "result_type": "tuple"
+      },
+      {
+        "label": "snapshot_after_mixed_5000_nodes",
+        "python_current_delta_bytes": 3432,
+        "python_peak_new_bytes": 1043015,
+        "process_before": {
+          "working_set_bytes": 60067840,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 818429952,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "process_after": {
+          "working_set_bytes": 61448192,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 819822592,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "result_type": "tuple"
+      }
+    ],
+    [
+      {
+        "label": "snapshot_cold_5000_nodes",
+        "python_current_delta_bytes": 9692720,
+        "python_peak_new_bytes": 11556216,
+        "process_before": {
+          "working_set_bytes": 52760576,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 811470848,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "process_after": {
+          "working_set_bytes": 71438336,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 830607360,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "result_type": "tuple"
+      },
+      {
+        "label": "snapshot_warm_5000_nodes",
+        "python_current_delta_bytes": 952,
+        "python_peak_new_bytes": 906876,
+        "process_before": {
+          "working_set_bytes": 59744256,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 818884608,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "process_after": {
+          "working_set_bytes": 61079552,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 820277248,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "result_type": "tuple"
+      },
+      {
+        "label": "snapshot_after_mixed_5000_nodes",
+        "python_current_delta_bytes": 3432,
+        "python_peak_new_bytes": 1043015,
+        "process_before": {
+          "working_set_bytes": 59662336,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 818032640,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "process_after": {
+          "working_set_bytes": 61038592,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 819249152,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "result_type": "tuple"
+      }
+    ],
+    [
+      {
+        "label": "snapshot_cold_5000_nodes",
+        "python_current_delta_bytes": 9692720,
+        "python_peak_new_bytes": 11556216,
+        "process_before": {
+          "working_set_bytes": 53018624,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 811679744,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "process_after": {
+          "working_set_bytes": 71909376,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 831307776,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "result_type": "tuple"
+      },
+      {
+        "label": "snapshot_warm_5000_nodes",
+        "python_current_delta_bytes": 952,
+        "python_peak_new_bytes": 906876,
+        "process_before": {
+          "working_set_bytes": 59932672,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 818429952,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "process_after": {
+          "working_set_bytes": 61087744,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 819564544,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "result_type": "tuple"
+      },
+      {
+        "label": "snapshot_after_mixed_5000_nodes",
+        "python_current_delta_bytes": 3432,
+        "python_peak_new_bytes": 1043015,
+        "process_before": {
+          "working_set_bytes": 59924480,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 818384896,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "process_after": {
+          "working_set_bytes": 61366272,
+          "process_peak_working_set_bytes": 81506304,
+          "private_commit_bytes": 819826688,
+          "source": "Windows GetProcessMemoryInfo"
+        },
+        "result_type": "tuple"
+      }
+    ]
+  ],
+  "summary": [
+    {
+      "label": "snapshot_cold_5000_nodes",
+      "python_peak_new_bytes_samples": [
+        11561297,
+        11556216,
+        11556216
+      ],
+      "python_peak_new_bytes_median": 11556216,
+      "python_current_delta_bytes_samples": [
+        9695841,
+        9692720,
+        9692720
+      ],
+      "working_set_after_bytes_samples": [
+        71843840,
+        71438336,
+        71909376
+      ]
+    },
+    {
+      "label": "snapshot_warm_5000_nodes",
+      "python_peak_new_bytes_samples": [
+        906876,
+        906876,
+        906876
+      ],
+      "python_peak_new_bytes_median": 906876,
+      "python_current_delta_bytes_samples": [
+        952,
+        952,
+        952
+      ],
+      "working_set_after_bytes_samples": [
+        61190144,
+        61079552,
+        61087744
+      ]
+    },
+    {
+      "label": "snapshot_after_mixed_5000_nodes",
+      "python_peak_new_bytes_samples": [
+        1043015,
+        1043015,
+        1043015
+      ],
+      "python_peak_new_bytes_median": 1043015,
+      "python_current_delta_bytes_samples": [
+        3432,
+        3432,
+        3432
+      ],
+      "working_set_after_bytes_samples": [
+        61448192,
+        61038592,
+        61366272
+      ]
+    }
+  ],
+  "actual_source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\core\\longterm_gate.py",
+  "source_lf_sha256": "68e10ba7f880f9ae89c343b60e5c012bc7509157511e897e2f9dc2a90bd739cc"
+}

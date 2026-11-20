@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="6" time="0.353" timestamp="2026-11-20T21:10:57.514835+08:00" hostname="STARDUST"><testcase classname="tests.test_pendulum_release_solution" name="test_release_solution_matches_independent_rk4" time="0.001"><failure message="lingshu.world.physics.PhysicsError: pendulum_exact_angle：|θ0|=179.90° 超出已实测有效域 5.0°。实测偏差 vs RK4：5°→3.7e-05 rad、30°→7.0e-03、60°→5.8e-02、120°→5.3e-01 —— 大振幅下 jacobi_cn 的 Landen 递推不达标，按 fail-closed 拒绝（不把近似当精确）。该振幅请用 decay_envelope 的小角/阻尼解析解，或先用 RK4 参考。">tests\test_pendulum_release_solution.py:43: in test_release_solution_matches_independent_rk4
+    actual = P.pendulum_exact_angle(theta0, omega, elapsed / omega)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lingshu\world\physics.py:2639: in pendulum_exact_angle
+    raise PhysicsError(
+E   lingshu.world.physics.PhysicsError: pendulum_exact_angle：|θ0|=179.90° 超出已实测有效域 5.0°。实测偏差 vs RK4：5°→3.7e-05 rad、30°→7.0e-03、60°→5.8e-02、120°→5.3e-01 —— 大振幅下 jacobi_cn 的 Landen 递推不达标，按 fail-closed 拒绝（不把近似当精确）。该振幅请用 decay_envelope 的小角/阻尼解析解，或先用 RK4 参考。</failure></testcase><testcase classname="tests.test_pendulum_release_solution" name="test_explicit_large_domain_uses_the_correct_release_formula" time="0.004"><failure message="AssertionError: release formula must include the dn factor&#10;assert 0.5072889683888773 &lt; 1e-11&#10; +  where 0.5072889683888773 = abs((1.1387045287626738 - 1.645993497151551))">tests\test_pendulum_release_solution.py:51: in test_explicit_large_domain_uses_the_correct_release_formula
+    assert abs(actual - expected) &lt; 1e-11, "release formula must include the dn factor"
+E   AssertionError: release formula must include the dn factor
+E   assert 0.5072889683888773 &lt; 1e-11
+E    +  where 0.5072889683888773 = abs((1.1387045287626738 - 1.645993497151551))</failure></testcase><testcase classname="tests.test_pendulum_release_solution" name="test_release_initial_symmetry_and_near_separatrix_quarter_periods" time="0.001"><failure message="lingshu.world.physics.PhysicsError: pendulum_exact_angle：|θ0|=179.90° 超出已实测有效域 5.0°。实测偏差 vs RK4：5°→3.7e-05 rad、30°→7.0e-03、60°→5.8e-02、120°→5.3e-01 —— 大振幅下 jacobi_cn 的 Landen 递推不达标，按 fail-closed 拒绝（不把近似当精确）。该振幅请用 decay_envelope 的小角/阻尼解析解，或先用 RK4 参考。">tests\test_pendulum_release_solution.py:59: in test_release_initial_symmetry_and_near_separatrix_quarter_periods
+    assert P.pendulum_exact_angle(initial, 1.0, 0.0) == initial
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lingshu\world\physics.py:2639: in pendulum_exact_angle
+    raise PhysicsError(
+E   lingshu.world.physics.PhysicsError: pendulum_exact_angle：|θ0|=179.90° 超出已实测有效域 5.0°。实测偏差 vs RK4：5°→3.7e-05 rad、30°→7.0e-03、60°→5.8e-02、120°→5.3e-01 —— 大振幅下 jacobi_cn 的 Landen 递推不达标，按 fail-closed 拒绝（不把近似当精确）。该振幅请用 decay_envelope 的小角/阻尼解析解，或先用 RK4 参考。</failure></testcase><testcase classname="tests.test_pendulum_release_solution" name="test_near_separatrix_matches_frozen_80_digit_reference" time="0.001"><failure message="lingshu.world.physics.PhysicsError: pendulum_exact_angle：|sin(θ0/2)| 须 &lt; 1（θ0 不能恰好 ±180°）">tests\test_pendulum_release_solution.py:79: in test_near_separatrix_matches_frozen_80_digit_reference
+    actual = P.pendulum_exact_angle(sign * initial, 1.0, elapsed)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lingshu\world\physics.py:2637: in pendulum_exact_angle
+    raise PhysicsError("pendulum_exact_angle：|sin(θ0/2)| 须 &lt; 1（θ0 不能恰好 ±180°）")
+E   lingshu.world.physics.PhysicsError: pendulum_exact_angle：|sin(θ0/2)| 须 &lt; 1（θ0 不能恰好 ±180°）</failure></testcase><testcase classname="tests.test_pendulum_release_solution" name="test_truth_period_retains_near_separatrix_complementary_modulus" time="0.001"><failure message="AssertionError: truth period must preserve complementary modulus&#10;assert 0.008693642492588083 &lt; 1e-12&#10; +  where 0.008693642492588083 = abs((35.28988158674083 - (2 * 17.640593972124123)))">tests\test_pendulum_release_solution.py:88: in test_truth_period_retains_near_separatrix_complementary_modulus
+    assert abs(truth["period_exact_elliptic"] - 2 * quarter) &lt; 1e-12, "truth period must preserve complementary modulus"
+E   AssertionError: truth period must preserve complementary modulus
+E   assert 0.008693642492588083 &lt; 1e-12
+E    +  where 0.008693642492588083 = abs((35.28988158674083 - (2 * 17.640593972124123)))</failure></testcase><testcase classname="tests.test_pendulum_release_solution" name="test_nonfinite_and_out_of_domain_arguments_fail_explicitly" time="0.001"><failure message="Failed: DID NOT RAISE PhysicsError">tests\test_pendulum_release_solution.py:96: in test_nonfinite_and_out_of_domain_arguments_fail_explicitly
+    with pytest.raises(P.PhysicsError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE PhysicsError</failure></testcase></testsuite></testsuites>

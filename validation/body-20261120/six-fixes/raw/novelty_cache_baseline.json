@@ -1,0 +1,703 @@
+{
+  "suite": "novelty_cache",
+  "variant": "baseline",
+  "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "cpu_count": 32,
+    "numpy": "2.5.5",
+    "pillow": "12.3.0",
+    "sqlite": "3.49.1",
+    "pythonhashseed": "20261120",
+    "seed": 20261120,
+    "perf_counter": {
+      "implementation": "QueryPerformanceCounter()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "process_clock": {
+      "implementation": "GetProcessTimes()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "cpu_affinity": "uncontrolled",
+    "power_plan": "uncontrolled",
+    "wall_clock_utc": "2026-11-20T13:17:32Z"
+  },
+  "correctness": {
+    "assertions": 798,
+    "checks": {
+      "update_preserves_rowid": 9,
+      "mixed_update_append_union": 9,
+      "mixed_update_append_counts": 9,
+      "mixed_update_append_per_node": 9,
+      "mixed_update_append_signature": 9,
+      "novelty_matches_fresh_old": 9,
+      "novelty_matches_fresh_new": 9,
+      "novelty_matches_fresh_appended": 9,
+      "append_reuses_union": 3,
+      "append_parses_only_new_row": 3,
+      "stateful_sequence_union": 120,
+      "stateful_sequence_counts": 120,
+      "stateful_sequence_per_node": 120,
+      "stateful_sequence_signature": 120,
+      "stateful_sequence_novelty": 120,
+      "stateful_sequence_warm_identity": 120
+    },
+    "failed_assertions": 116,
+    "failures": {
+      "mixed_update_append_union": {
+        "count": 9,
+        "examples": [
+          {
+            "count": 1,
+            "mode": "equal_length"
+          },
+          {
+            "count": 1,
+            "mode": "longer"
+          },
+          {
+            "count": 1,
+            "mode": "shorter"
+          },
+          {
+            "count": 10,
+            "mode": "equal_length"
+          },
+          {
+            "count": 10,
+            "mode": "longer"
+          },
+          {
+            "count": 10,
+            "mode": "shorter"
+          },
+          {
+            "count": 100,
+            "mode": "equal_length"
+          },
+          {
+            "count": 100,
+            "mode": "longer"
+          }
+        ]
+      },
+      "mixed_update_append_counts": {
+        "count": 9,
+        "examples": [
+          {
+            "count": 1,
+            "mode": "equal_length"
+          },
+          {
+            "count": 1,
+            "mode": "longer"
+          },
+          {
+            "count": 1,
+            "mode": "shorter"
+          },
+          {
+            "count": 10,
+            "mode": "equal_length"
+          },
+          {
+            "count": 10,
+            "mode": "longer"
+          },
+          {
+            "count": 10,
+            "mode": "shorter"
+          },
+          {
+            "count": 100,
+            "mode": "equal_length"
+          },
+          {
+            "count": 100,
+            "mode": "longer"
+          }
+        ]
+      },
+      "mixed_update_append_per_node": {
+        "count": 9,
+        "examples": [
+          {
+            "count": 1,
+            "mode": "equal_length"
+          },
+          {
+            "count": 1,
+            "mode": "longer"
+          },
+          {
+            "count": 1,
+            "mode": "shorter"
+          },
+          {
+            "count": 10,
+            "mode": "equal_length"
+          },
+          {
+            "count": 10,
+            "mode": "longer"
+          },
+          {
+            "count": 10,
+            "mode": "shorter"
+          },
+          {
+            "count": 100,
+            "mode": "equal_length"
+          },
+          {
+            "count": 100,
+            "mode": "longer"
+          }
+        ]
+      },
+      "novelty_matches_fresh_old": {
+        "count": 9,
+        "examples": [
+          {
+            "count": 1,
+            "mode": "equal_length"
+          },
+          {
+            "count": 1,
+            "mode": "longer"
+          },
+          {
+            "count": 1,
+            "mode": "shorter"
+          },
+          {
+            "count": 10,
+            "mode": "equal_length"
+          },
+          {
+            "count": 10,
+            "mode": "longer"
+          },
+          {
+            "count": 10,
+            "mode": "shorter"
+          },
+          {
+            "count": 100,
+            "mode": "equal_length"
+          },
+          {
+            "count": 100,
+            "mode": "longer"
+          }
+        ]
+      },
+      "novelty_matches_fresh_new": {
+        "count": 9,
+        "examples": [
+          {
+            "count": 1,
+            "mode": "equal_length"
+          },
+          {
+            "count": 1,
+            "mode": "longer"
+          },
+          {
+            "count": 1,
+            "mode": "shorter"
+          },
+          {
+            "count": 10,
+            "mode": "equal_length"
+          },
+          {
+            "count": 10,
+            "mode": "longer"
+          },
+          {
+            "count": 10,
+            "mode": "shorter"
+          },
+          {
+            "count": 100,
+            "mode": "equal_length"
+          },
+          {
+            "count": 100,
+            "mode": "longer"
+          }
+        ]
+      },
+      "stateful_sequence_union": {
+        "count": 21,
+        "examples": [
+          {
+            "step": 1,
+            "action": "mixed",
+            "nodes": 20
+          },
+          {
+            "step": 10,
+            "action": "mixed",
+            "nodes": 21
+          },
+          {
+            "step": 11,
+            "action": "append",
+            "nodes": 22
+          },
+          {
+            "step": 19,
+            "action": "mixed",
+            "nodes": 24
+          },
+          {
+            "step": 26,
+            "action": "mixed",
+            "nodes": 25
+          },
+          {
+            "step": 31,
+            "action": "mixed",
+            "nodes": 24
+          },
+          {
+            "step": 32,
+            "action": "append",
+            "nodes": 25
+          },
+          {
+            "step": 33,
+            "action": "mixed",
+            "nodes": 26
+          }
+        ]
+      },
+      "stateful_sequence_counts": {
+        "count": 25,
+        "examples": [
+          {
+            "step": 1,
+            "action": "mixed",
+            "nodes": 20
+          },
+          {
+            "step": 10,
+            "action": "mixed",
+            "nodes": 21
+          },
+          {
+            "step": 11,
+            "action": "append",
+            "nodes": 22
+          },
+          {
+            "step": 19,
+            "action": "mixed",
+            "nodes": 24
+          },
+          {
+            "step": 25,
+            "action": "mixed",
+            "nodes": 24
+          },
+          {
+            "step": 26,
+            "action": "mixed",
+            "nodes": 25
+          },
+          {
+            "step": 31,
+            "action": "mixed",
+            "nodes": 24
+          },
+          {
+            "step": 32,
+            "action": "append",
+            "nodes": 25
+          }
+        ]
+      },
+      "stateful_sequence_per_node": {
+        "count": 25,
+        "examples": [
+          {
+            "step": 1,
+            "action": "mixed",
+            "nodes": 20
+          },
+          {
+            "step": 10,
+            "action": "mixed",
+            "nodes": 21
+          },
+          {
+            "step": 11,
+            "action": "append",
+            "nodes": 22
+          },
+          {
+            "step": 19,
+            "action": "mixed",
+            "nodes": 24
+          },
+          {
+            "step": 25,
+            "action": "mixed",
+            "nodes": 24
+          },
+          {
+            "step": 26,
+            "action": "mixed",
+            "nodes": 25
+          },
+          {
+            "step": 31,
+            "action": "mixed",
+            "nodes": 24
+          },
+          {
+            "step": 32,
+            "action": "append",
+            "nodes": 25
+          }
+        ]
+      }
+    }
+  },
+  "performance": [
+    {
+      "label": "snapshot_warm_100_nodes",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 5,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        0.24436,
+        0.24776,
+        0.29406,
+        0.2461,
+        0.24764,
+        0.24492,
+        0.24612,
+        0.24984,
+        0.24548
+      ],
+      "cpu_ms_samples": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.125,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "median_ms": 0.24612,
+      "min_ms": 0.24436,
+      "max_ms": 0.29406,
+      "p10_ms": 0.24436,
+      "p90_ms": 0.29406,
+      "stdev_ms": 0.015932507998149912
+    },
+    {
+      "label": "snapshot_append_100_nodes",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 5,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        0.41046,
+        0.40964,
+        0.41528,
+        0.40972,
+        0.41208,
+        0.40466,
+        0.40806,
+        0.41834,
+        0.40456
+      ],
+      "cpu_ms_samples": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "median_ms": 0.40972,
+      "min_ms": 0.40456,
+      "max_ms": 0.41834,
+      "p10_ms": 0.40456,
+      "p90_ms": 0.41834,
+      "stdev_ms": 0.004516382524887711
+    },
+    {
+      "label": "snapshot_mixed_100_nodes",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 3,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        0.4645,
+        0.4967333333333333,
+        0.4665,
+        0.4703333333333333,
+        0.48843333333333333,
+        0.4615666666666667,
+        0.46526666666666666,
+        0.4569,
+        0.4687
+      ],
+      "cpu_ms_samples": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.208333333333333,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "median_ms": 0.4665,
+      "min_ms": 0.4569,
+      "max_ms": 0.4967333333333333,
+      "p10_ms": 0.4569,
+      "p90_ms": 0.4967333333333333,
+      "stdev_ms": 0.013014551447618771
+    },
+    {
+      "label": "snapshot_warm_1000_nodes",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 5,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        2.36284,
+        2.37988,
+        2.38074,
+        2.37238,
+        2.39016,
+        2.40834,
+        2.41014,
+        2.38542,
+        2.3739
+      ],
+      "cpu_ms_samples": [
+        0.0,
+        3.125,
+        3.125,
+        0.0,
+        3.125,
+        3.125,
+        3.125,
+        3.125,
+        3.125
+      ],
+      "median_ms": 2.38074,
+      "min_ms": 2.36284,
+      "max_ms": 2.41014,
+      "p10_ms": 2.36284,
+      "p90_ms": 2.41014,
+      "stdev_ms": 0.015895436452013557
+    },
+    {
+      "label": "snapshot_append_1000_nodes",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 5,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        2.62398,
+        2.61698,
+        2.90238,
+        2.64462,
+        2.63936,
+        2.59376,
+        2.64116,
+        2.65372,
+        2.58088
+      ],
+      "cpu_ms_samples": [
+        3.125,
+        3.125,
+        3.125,
+        3.125,
+        0.0,
+        3.125,
+        3.125,
+        0.0,
+        3.125
+      ],
+      "median_ms": 2.63936,
+      "min_ms": 2.58088,
+      "max_ms": 2.90238,
+      "p10_ms": 2.58088,
+      "p90_ms": 2.90238,
+      "stdev_ms": 0.09578223936501888
+    },
+    {
+      "label": "snapshot_mixed_1000_nodes",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 3,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        2.7018666666666666,
+        3.5632666666666664,
+        3.1466666666666665,
+        3.1232,
+        3.3429666666666664,
+        2.9669333333333334,
+        2.6755666666666666,
+        2.967,
+        3.0141666666666667
+      ],
+      "cpu_ms_samples": [
+        5.208333333333333,
+        5.208333333333333,
+        5.208333333333333,
+        0.0,
+        5.208333333333333,
+        0.0,
+        5.208333333333333,
+        0.0,
+        5.208333333333333
+      ],
+      "median_ms": 3.0141666666666667,
+      "min_ms": 2.6755666666666666,
+      "max_ms": 3.5632666666666664,
+      "p10_ms": 2.6755666666666666,
+      "p90_ms": 3.5632666666666664,
+      "stdev_ms": 0.28287559959402464
+    },
+    {
+      "label": "snapshot_warm_5000_nodes",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 5,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        13.86462,
+        13.24676,
+        14.31432,
+        16.18976,
+        13.79874,
+        12.88108,
+        12.49326,
+        14.59584,
+        14.86146
+      ],
+      "cpu_ms_samples": [
+        12.5,
+        15.625,
+        0.0,
+        3.125,
+        9.375,
+        15.625,
+        12.5,
+        0.0,
+        3.125
+      ],
+      "median_ms": 13.86462,
+      "min_ms": 12.49326,
+      "max_ms": 16.18976,
+      "p10_ms": 12.49326,
+      "p90_ms": 16.18976,
+      "stdev_ms": 1.12542883630098
+    },
+    {
+      "label": "snapshot_append_5000_nodes",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 5,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        13.8366,
+        13.66048,
+        13.83226,
+        13.85982,
+        15.50674,
+        13.2824,
+        15.33422,
+        15.00198,
+        14.68494
+      ],
+      "cpu_ms_samples": [
+        12.5,
+        12.5,
+        12.5,
+        12.5,
+        15.625,
+        12.5,
+        15.625,
+        3.125,
+        12.5
+      ],
+      "median_ms": 13.85982,
+      "min_ms": 13.2824,
+      "max_ms": 15.50674,
+      "p10_ms": 13.2824,
+      "p90_ms": 15.50674,
+      "stdev_ms": 0.8084397588015517
+    },
+    {
+      "label": "snapshot_mixed_5000_nodes",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 3,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        14.4608,
+        14.443533333333335,
+        14.154333333333334,
+        14.569,
+        13.912266666666666,
+        13.729,
+        13.7855,
+        14.247466666666666,
+        15.492266666666666
+      ],
+      "cpu_ms_samples": [
+        15.625,
+        15.625,
+        5.208333333333333,
+        10.416666666666666,
+        15.625,
+        10.416666666666666,
+        15.625,
+        15.625,
+        15.625
+      ],
+      "median_ms": 14.247466666666666,
+      "min_ms": 13.729,
+      "max_ms": 15.492266666666666,
+      "p10_ms": 13.729,
+      "p90_ms": 15.492266666666666,
+      "stdev_ms": 0.5367030040608132
+    }
+  ],
+  "details": {
+    "source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\core\\longterm_gate.py",
+    "seed": 20261120,
+    "store": "SQLite :memory:",
+    "mutations": "public append plus explicit same-rowid SQL update; fresh Gate oracle"
+  },
+  "status": "completed",
+  "source_lf_sha256": "68e10ba7f880f9ae89c343b60e5c012bc7509157511e897e2f9dc2a90bd739cc",
+  "elapsed_seconds": 14.433825599990087
+}

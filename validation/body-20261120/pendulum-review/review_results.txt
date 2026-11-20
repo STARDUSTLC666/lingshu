@@ -1,0 +1,22 @@
+Independent pendulum review
+UTC: 2026-11-20T13:29:03.642261+00:00
+Git HEAD: aa18885c933dfd49d8c23a288726158de1bc7c03
+Baseline: d74848fb33dbff1d719959df19d1266a1ac60f44
+Reviewed physics.py LF SHA256: 271d2bb9d24452e3724e3ee0375b2d4fd9e04e85bbc4b62fd5afbd39b925f904
+Script LF SHA256: bac245c0e7e910e3575701ccf667b06367444b5cc2c5ddc4da0880421ea5cf72
+Seeds: cn=113; RK4=9712
+
+public_jacobi_cn_bitwise_compatibility: PASS (3000 cases)
+  maximum absolute error = 0
+signed_omega_and_time_symmetry: PASS (270 cases)
+  maximum absolute error = 0
+quarter_period_and_turning_point_truth: PASS (697 cases)
+  maximum absolute error = 8.5265128291212048e-14
+independent_random_rk4: PASS (36 cases)
+  maximum absolute error = 1.2068679389187764e-12
+invalid_and_absolute_physical_domain: PASS (20 cases)
+reviewed_source_did_not_change_during_review: PASS (1 cases)
+
+Overall: PASS
+Sampled and analytic-phase checks, not a uniform error guarantee for arbitrarily large floating times.
+Raw case inputs, outputs, errors, exceptions and metadata: review_results.json

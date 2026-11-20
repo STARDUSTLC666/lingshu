@@ -1,0 +1,455 @@
+{
+  "suite": "lineart_alpha",
+  "variant": "baseline",
+  "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "cpu_count": 32,
+    "numpy": "2.5.5",
+    "pillow": "12.3.0",
+    "sqlite": "3.49.1",
+    "pythonhashseed": "20261120",
+    "seed": 20261120,
+    "perf_counter": {
+      "implementation": "QueryPerformanceCounter()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "process_clock": {
+      "implementation": "GetProcessTimes()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "cpu_affinity": "uncontrolled",
+    "power_plan": "uncontrolled",
+    "wall_clock_utc": "2026-11-20T13:16:58Z"
+  },
+  "correctness": {
+    "assertions": 69,
+    "checks": {
+      "alpha_matches_independent_white_composite": 8,
+      "inversion_preserved": 8,
+      "linework_rgb_consistent": 8,
+      "input_unchanged": 8,
+      "hidden_rgb_invariance": 4,
+      "premultiplied_conversion_supported": 8,
+      "premultiplied_matches_direct_white_composite": 4,
+      "premultiplied_inversion_preserved": 4,
+      "premultiplied_linework_rgb_consistent": 4,
+      "premultiplied_input_unchanged": 4,
+      "palette_transparency_visible_line": 1,
+      "PA_conversion_supported": 1,
+      "PA_matches_independent_palette_alpha_composite": 1,
+      "PA_inversion_preserved": 1,
+      "PA_linework_rgb_consistent": 1,
+      "PA_input_unchanged": 1,
+      "opaque_uniform_no_edges": 3
+    },
+    "failed_assertions": 22,
+    "failures": {
+      "alpha_matches_independent_white_composite": {
+        "count": 8,
+        "examples": [
+          {
+            "size": [
+              8,
+              9
+            ],
+            "mode": "RGBA",
+            "different_pixels": 10
+          },
+          {
+            "size": [
+              8,
+              9
+            ],
+            "mode": "LA",
+            "different_pixels": 8
+          },
+          {
+            "size": [
+              32,
+              32
+            ],
+            "mode": "RGBA",
+            "different_pixels": 123
+          },
+          {
+            "size": [
+              32,
+              32
+            ],
+            "mode": "LA",
+            "different_pixels": 140
+          },
+          {
+            "size": [
+              61,
+              47
+            ],
+            "mode": "RGBA",
+            "different_pixels": 349
+          },
+          {
+            "size": [
+              61,
+              47
+            ],
+            "mode": "LA",
+            "different_pixels": 361
+          },
+          {
+            "size": [
+              128,
+              96
+            ],
+            "mode": "RGBA",
+            "different_pixels": 1648
+          },
+          {
+            "size": [
+              128,
+              96
+            ],
+            "mode": "LA",
+            "different_pixels": 1507
+          }
+        ]
+      },
+      "hidden_rgb_invariance": {
+        "count": 4,
+        "examples": [
+          [
+            8,
+            9
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            61,
+            47
+          ],
+          [
+            128,
+            96
+          ]
+        ]
+      },
+      "premultiplied_matches_direct_white_composite": {
+        "count": 4,
+        "examples": [
+          {
+            "size": [
+              8,
+              9
+            ],
+            "mode": "RGBa",
+            "different_pixels": 10
+          },
+          {
+            "size": [
+              32,
+              32
+            ],
+            "mode": "RGBa",
+            "different_pixels": 157
+          },
+          {
+            "size": [
+              61,
+              47
+            ],
+            "mode": "RGBa",
+            "different_pixels": 418
+          },
+          {
+            "size": [
+              128,
+              96
+            ],
+            "mode": "RGBa",
+            "different_pixels": 1784
+          }
+        ]
+      },
+      "premultiplied_conversion_supported": {
+        "count": 4,
+        "examples": [
+          {
+            "size": [
+              8,
+              9
+            ],
+            "mode": "La",
+            "error": "ValueError('conversion from La to L not supported')"
+          },
+          {
+            "size": [
+              32,
+              32
+            ],
+            "mode": "La",
+            "error": "ValueError('conversion from La to L not supported')"
+          },
+          {
+            "size": [
+              61,
+              47
+            ],
+            "mode": "La",
+            "error": "ValueError('conversion from La to L not supported')"
+          },
+          {
+            "size": [
+              128,
+              96
+            ],
+            "mode": "La",
+            "error": "ValueError('conversion from La to L not supported')"
+          }
+        ]
+      },
+      "palette_transparency_visible_line": {
+        "count": 1,
+        "examples": [
+          null
+        ]
+      },
+      "PA_matches_independent_palette_alpha_composite": {
+        "count": 1,
+        "examples": [
+          {
+            "different_pixels": 110
+          }
+        ]
+      }
+    }
+  },
+  "performance": [
+    {
+      "label": "darkline_RGB_128x128",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        0.3968,
+        0.38,
+        0.4429,
+        0.394,
+        0.3775,
+        0.3587,
+        0.3716,
+        0.3734,
+        0.4012
+      ],
+      "cpu_ms_samples": [
+        0.0,
+        0.0,
+        15.625,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "median_ms": 0.38,
+      "min_ms": 0.3587,
+      "max_ms": 0.4429,
+      "p10_ms": 0.3587,
+      "p90_ms": 0.4429,
+      "stdev_ms": 0.02453233127482543
+    },
+    {
+      "label": "darkline_RGBA_128x128",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        0.5368,
+        0.4989,
+        0.462,
+        0.4306,
+        0.4281,
+        0.3855,
+        0.3844,
+        0.4453,
+        0.3934
+      ],
+      "cpu_ms_samples": [
+        0.0,
+        15.625,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "median_ms": 0.4306,
+      "min_ms": 0.3844,
+      "max_ms": 0.5368,
+      "p10_ms": 0.3844,
+      "p90_ms": 0.5368,
+      "stdev_ms": 0.05221578092662963
+    },
+    {
+      "label": "darkline_RGB_512x512",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        12.2524,
+        12.5341,
+        13.8964,
+        13.423,
+        12.0886,
+        11.6662,
+        11.7861,
+        11.6864,
+        11.5191
+      ],
+      "cpu_ms_samples": [
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625
+      ],
+      "median_ms": 12.0886,
+      "min_ms": 11.5191,
+      "max_ms": 13.8964,
+      "p10_ms": 11.5191,
+      "p90_ms": 13.8964,
+      "stdev_ms": 0.8337347191669808
+    },
+    {
+      "label": "darkline_RGBA_512x512",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        11.8684,
+        11.4637,
+        12.0581,
+        12.2012,
+        12.0135,
+        12.0811,
+        13.3702,
+        12.9524,
+        12.455
+      ],
+      "cpu_ms_samples": [
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        0.0
+      ],
+      "median_ms": 12.0811,
+      "min_ms": 11.4637,
+      "max_ms": 13.3702,
+      "p10_ms": 11.4637,
+      "p90_ms": 13.3702,
+      "stdev_ms": 0.5780054195247658
+    },
+    {
+      "label": "darkline_RGB_1536x1536",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        111.6482,
+        104.7701,
+        113.1542,
+        105.5401,
+        97.7973,
+        95.8092,
+        96.4857,
+        97.6182,
+        98.2597
+      ],
+      "cpu_ms_samples": [
+        109.375,
+        109.375,
+        125.0,
+        109.375,
+        109.375,
+        93.75,
+        93.75,
+        93.75,
+        93.75
+      ],
+      "median_ms": 98.2597,
+      "min_ms": 95.8092,
+      "max_ms": 113.1542,
+      "p10_ms": 95.8092,
+      "p90_ms": 113.1542,
+      "stdev_ms": 6.673080448671697
+    },
+    {
+      "label": "darkline_RGBA_1536x1536",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        101.0903,
+        100.1726,
+        98.2799,
+        98.7625,
+        104.3285,
+        119.9532,
+        110.4758,
+        140.573,
+        142.6722
+      ],
+      "cpu_ms_samples": [
+        109.375,
+        93.75,
+        93.75,
+        93.75,
+        93.75,
+        93.75,
+        93.75,
+        140.625,
+        140.625
+      ],
+      "median_ms": 104.3285,
+      "min_ms": 98.2799,
+      "max_ms": 142.6722,
+      "p10_ms": 98.2799,
+      "p90_ms": 142.6722,
+      "stdev_ms": 17.664728125451326
+    }
+  ],
+  "details": {
+    "source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\vision\\lineart.py",
+    "seed": 20261120
+  },
+  "status": "completed",
+  "source_lf_sha256": "b33bdfcca84be434ff49efb1003c23dfcbe75a56d15713d178301ecf39536418",
+  "elapsed_seconds": 3.280925200000638
+}

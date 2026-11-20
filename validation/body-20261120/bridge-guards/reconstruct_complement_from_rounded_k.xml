@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.125" timestamp="2026-11-20T21:19:11.662913+08:00" hostname="STARDUST"><testcase classname="tests.test_bridge_pendulum_release_solution" name="test_near_separatrix_motion_validates_and_keeps_quarter_phase" time="0.001"><failure message="AssertionError: bridge complementary modulus must retain quarter phase&#10;assert 1.1930007990800323e-11 &lt; 1e-11&#10; +  where 1.1930007990800323e-11 = abs((-1.1930007990800323e-11 - 0.0))">tests\test_bridge_pendulum_release_solution.py:86: in test_near_separatrix_motion_validates_and_keeps_quarter_phase
+    assert abs(actual - expected) &lt; 1e-11, "bridge complementary modulus must retain quarter phase"
+E   AssertionError: bridge complementary modulus must retain quarter phase
+E   assert 1.1930007990800323e-11 &lt; 1e-11
+E    +  where 1.1930007990800323e-11 = abs((-1.1930007990800323e-11 - 0.0))</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,226 @@
+{
+  "suite": "motion_groups",
+  "variant": "baseline",
+  "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "cpu_count": 32,
+    "numpy": "2.5.5",
+    "pillow": "12.3.0",
+    "sqlite": "3.49.1",
+    "pythonhashseed": "20261120",
+    "seed": 20261120,
+    "perf_counter": {
+      "implementation": "QueryPerformanceCounter()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "process_clock": {
+      "implementation": "GetProcessTimes()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "cpu_affinity": "uncontrolled",
+    "power_plan": "uncontrolled",
+    "wall_clock_utc": "2026-11-20T13:16:51Z"
+  },
+  "correctness": {
+    "assertions": 165,
+    "checks": {
+      "distinct_delimiter_groups": 80,
+      "input_order_invariance": 80,
+      "legacy_plain_ids_preserved": 4,
+      "structured_identifier_partitions": 1
+    },
+    "failed_assertions": 81,
+    "failures": {
+      "distinct_delimiter_groups": {
+        "count": 80,
+        "examples": [
+          {
+            "case": 0,
+            "ids": [
+              "mg_ddc2fde87b8f",
+              "mg_ddc2fde87b8f"
+            ]
+          },
+          {
+            "case": 1,
+            "ids": [
+              "mg_7d0966a13cc9",
+              "mg_7d0966a13cc9"
+            ]
+          },
+          {
+            "case": 2,
+            "ids": [
+              "mg_3e08ab842ba3",
+              "mg_3e08ab842ba3"
+            ]
+          },
+          {
+            "case": 3,
+            "ids": [
+              "mg_f3ae065c169c",
+              "mg_f3ae065c169c"
+            ]
+          },
+          {
+            "case": 4,
+            "ids": [
+              "mg_d8db56b9a599",
+              "mg_d8db56b9a599"
+            ]
+          },
+          {
+            "case": 5,
+            "ids": [
+              "mg_c8f42325096b",
+              "mg_c8f42325096b"
+            ]
+          },
+          {
+            "case": 6,
+            "ids": [
+              "mg_62329e90de60",
+              "mg_62329e90de60"
+            ]
+          },
+          {
+            "case": 7,
+            "ids": [
+              "mg_feab3826ab51",
+              "mg_feab3826ab51"
+            ]
+          }
+        ]
+      },
+      "structured_identifier_partitions": {
+        "count": 1,
+        "examples": [
+          null
+        ]
+      }
+    }
+  },
+  "performance": [
+    {
+      "label": "detect_8_frames_8_entities",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 3,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        0.20376666666666665,
+        0.2049,
+        0.20453333333333334,
+        0.20723333333333335,
+        0.203,
+        0.20346666666666666,
+        0.20593333333333333,
+        0.20413333333333333,
+        0.20306666666666665
+      ],
+      "cpu_ms_samples": [
+        0.0,
+        5.208333333333333,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "median_ms": 0.20413333333333333,
+      "min_ms": 0.203,
+      "max_ms": 0.20723333333333335,
+      "p10_ms": 0.203,
+      "p90_ms": 0.20723333333333335,
+      "stdev_ms": 0.0014012009839886937
+    },
+    {
+      "label": "detect_8_frames_32_entities",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 3,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        2.2072333333333334,
+        2.1876,
+        2.1255333333333333,
+        2.1438666666666664,
+        2.1275,
+        2.1175666666666664,
+        2.1238666666666663,
+        2.1237,
+        2.1349666666666667
+      ],
+      "cpu_ms_samples": [
+        5.208333333333333,
+        0.0,
+        5.208333333333333,
+        0.0,
+        0.0,
+        5.208333333333333,
+        0.0,
+        5.208333333333333,
+        0.0
+      ],
+      "median_ms": 2.1275,
+      "min_ms": 2.1175666666666664,
+      "max_ms": 2.2072333333333334,
+      "p10_ms": 2.1175666666666664,
+      "p90_ms": 2.2072333333333334,
+      "stdev_ms": 0.031836563729829015
+    },
+    {
+      "label": "detect_8_frames_96_entities",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 3,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        18.264766666666667,
+        18.062,
+        17.849866666666667,
+        17.6981,
+        17.653266666666667,
+        17.67866666666667,
+        17.65526666666667,
+        17.674733333333332,
+        17.676
+      ],
+      "cpu_ms_samples": [
+        20.833333333333332,
+        20.833333333333332,
+        15.625,
+        20.833333333333332,
+        15.625,
+        20.833333333333332,
+        20.833333333333332,
+        15.625,
+        20.833333333333332
+      ],
+      "median_ms": 17.67866666666667,
+      "min_ms": 17.653266666666667,
+      "max_ms": 18.264766666666667,
+      "p10_ms": 17.653266666666667,
+      "p90_ms": 18.264766666666667,
+      "stdev_ms": 0.21959407043817217
+    }
+  ],
+  "details": {
+    "source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\world\\motion_groups.py",
+    "seed": 20261120
+  },
+  "status": "completed",
+  "source_lf_sha256": "fa755466da9a4babb31d5b7fc07c9c447becdd5d5df31066e34a554d0b02a254",
+  "elapsed_seconds": 0.8514532999834046
+}

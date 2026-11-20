@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.151" timestamp="2026-11-20T21:11:01.122572+08:00" hostname="STARDUST"><testcase classname="tests.test_pendulum_release_solution" name="test_nonfinite_and_out_of_domain_arguments_fail_explicitly" time="0.001"><failure message="Failed: DID NOT RAISE PhysicsError">tests\test_pendulum_release_solution.py:99: in test_nonfinite_and_out_of_domain_arguments_fail_explicitly
+    with pytest.raises(P.PhysicsError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE PhysicsError</failure></testcase></testsuite></testsuites>

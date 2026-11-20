@@ -1,0 +1,185 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows",
+  "sqlite": "3.49.1",
+  "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "guard_sha256": "1ce1e5bd7a31ba2825fd9eafa8690bce7ee408c577dd6e1821275ef088384292",
+  "records": [
+    {
+      "case": "fixed",
+      "ok": true,
+      "returncode": 0,
+      "passed": 8,
+      "failed_tests": [],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [],
+      "expected_assertion": "",
+      "pytest_summary": "8 passed in 0.62s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "f2b24ec11fbdef01d56c7d354ef247fc1bfdda9dfc14588f8830a3cf62b01aad",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810"
+      }
+    },
+    {
+      "case": "baseline",
+      "ok": true,
+      "returncode": 1,
+      "passed": 1,
+      "failed_tests": [
+        "test_bridge_exact_motion_imports_without_optional_dependencies",
+        "test_exact_motion_eval_matches_independent_rk4",
+        "test_exact_motion_input_errors_remain_anim_errors",
+        "test_exact_motion_preserves_input_offset_and_length_path",
+        "test_near_separatrix_motion_matches_frozen_80_digit_reference",
+        "test_near_separatrix_motion_validates_and_keeps_quarter_phase",
+        "test_small_amplitude_exact_motion_uses_release_formula"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_exact_motion_eval_matches_independent_rk4",
+        "test_small_amplitude_exact_motion_uses_release_formula",
+        "test_near_separatrix_motion_validates_and_keeps_quarter_phase",
+        "test_near_separatrix_motion_matches_frozen_80_digit_reference",
+        "test_exact_motion_input_errors_remain_anim_errors",
+        "test_exact_motion_preserves_input_offset_and_length_path",
+        "test_bridge_exact_motion_imports_without_optional_dependencies"
+      ],
+      "expected_assertion": "",
+      "pytest_summary": "7 failed, 1 passed in 0.40s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "cc1a58e6665099ba43d406c709323227f7c0162b85fb7b1652b4fa9ee304644c",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810"
+      }
+    },
+    {
+      "case": "drop_release_dn_factor",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_small_amplitude_exact_motion_uses_release_formula"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_small_amplitude_exact_motion_uses_release_formula"
+      ],
+      "expected_assertion": "bridge release formula must include the dn factor",
+      "pytest_summary": "1 failed in 0.16s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "c000f3f6683ee8bf78a217e7b9d00bce35cbf447451465582b9d5f74178a32e6",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810"
+      }
+    },
+    {
+      "case": "restore_five_degree_gate",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_near_separatrix_motion_validates_and_keeps_quarter_phase"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_near_separatrix_motion_validates_and_keeps_quarter_phase"
+      ],
+      "expected_assertion": "bridge near-separatrix motion must validate",
+      "pytest_summary": "1 failed in 0.16s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "07ab6952c7f22b14c4277cc5b7fbfba927812c85a4f71828c85dce32271485e7",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810"
+      }
+    },
+    {
+      "case": "reconstruct_complement_from_rounded_k",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_near_separatrix_motion_validates_and_keeps_quarter_phase"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_near_separatrix_motion_validates_and_keeps_quarter_phase"
+      ],
+      "expected_assertion": "bridge complementary modulus must retain quarter phase",
+      "pytest_summary": "1 failed in 0.16s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "a46b314f9df5134066a884601865f19255c6f7fe66a9b125abb58ce966ce73bb",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810"
+      }
+    },
+    {
+      "case": "unstable_amplitude_descent",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_near_separatrix_motion_matches_frozen_80_digit_reference"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_near_separatrix_motion_matches_frozen_80_digit_reference"
+      ],
+      "expected_assertion": "bridge stable descent must match high-precision reference",
+      "pytest_summary": "1 failed in 0.17s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "f31807f35630035e85895f7917e81f84f8c803dba4895f13e4dedc2d377faa37",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810"
+      }
+    },
+    {
+      "case": "rounded_k_truth_period",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_near_separatrix_motion_validates_and_keeps_quarter_phase"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_near_separatrix_motion_validates_and_keeps_quarter_phase"
+      ],
+      "expected_assertion": "bridge near-separatrix motion must validate",
+      "pytest_summary": "1 failed in 0.16s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "1cd3131897f2c0276c4fd687486a9accf66b5ef950836bb12c1ce0f2543f795d",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810"
+      }
+    },
+    {
+      "case": "accept_damped_exact_motion",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_exact_motion_still_rejects_damping"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_exact_motion_still_rejects_damping"
+      ],
+      "expected_assertion": "DID NOT RAISE",
+      "pytest_summary": "1 failed in 0.17s",
+      "source_sha256": {
+        "bridges/blender/wm_bridge/__init__.py": "a13659932d11869af064c66c840053c1f40f84785c614086e2f0c3cd7a00016c",
+        "bridges/blender/wm_bridge/factory/anim/eval.py": "506540bb03ec21bd5723b016246b4569f8ee424022669b007db36b700adfba3b",
+        "bridges/blender/wm_bridge/factory/geo/spec.py": "69f749fb3fa4d01e66161865b95a319c00514c4c58100eb0e43ed2c0ab403810"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.778" timestamp="2026-11-20T20:59:09.702917+08:00" hostname="STARDUST"><testcase classname="tests.test_issue498_atomic_write_perm_symlink_guard" name="test_p1_符号链接量具能力探测" time="0.003"><failure message="AssertionError: P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核&#10;assert False">def test_p1_符号链接量具能力探测():
+        """P1：证明 SKIP_LINK 是平台限制而非量具失效——symlink 要么成功要么以特权错失败。"""
+        td = tempfile.mkdtemp(prefix="b498_p1_")
+        real = _sentinel(os.path.join(td, "real.txt"))
+        link = os.path.join(td, "link.txt")
+        try:
+            os.symlink(real, link)
+        except OSError as e:
+            assert not POSIX, "P1 posix 上 symlink 竟失败：%r" % (e,)
+            assert getattr(e, "winerror", None) in (1314, None), (
+                "P1 本机 symlink 失败的成因不是「缺特权」，SKIP_LINK 的理由需重核：%r" % (e,))
+            assert "特权" in str(e) or "privilege" in str(e).lower() or e.errno == 22, (
+                "P1 symlink 失败成因不明（errno=%r winerror=%r）：%r"
+                % (e.errno, getattr(e, "winerror", None), e))
+        else:
+            assert os.path.islink(link), "P1 symlink 建了却不是链接——量具失效"
+&gt;           assert POSIX, "P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核"
+E           AssertionError: P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核
+E           assert False
+
+tests\test_issue498_atomic_write_perm_symlink_guard.py:202: AssertionError</failure></testcase></testsuite></testsuites>

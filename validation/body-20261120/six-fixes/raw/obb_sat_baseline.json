@@ -1,0 +1,217 @@
+{
+  "suite": "obb_sat",
+  "variant": "baseline",
+  "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "cpu_count": 32,
+    "numpy": "2.5.5",
+    "pillow": "12.3.0",
+    "sqlite": "3.49.1",
+    "pythonhashseed": "20261120",
+    "seed": 20261120,
+    "perf_counter": {
+      "implementation": "QueryPerformanceCounter()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "process_clock": {
+      "implementation": "GetProcessTimes()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "cpu_affinity": "uncontrolled",
+    "power_plan": "uncontrolled",
+    "wall_clock_utc": "2026-11-20T13:17:01Z"
+  },
+  "correctness": {
+    "assertions": 2113,
+    "checks": {
+      "overlap_matches_independent_corner_sat": 601,
+      "overlap_symmetric": 601,
+      "mtv_none_iff_no_overlap": 601,
+      "mtv_depth_symmetric": 103,
+      "mtv_separates_in_independent_oracle": 103,
+      "resolve_separates_oracle": 103,
+      "singular_basis_rejected": 1
+    },
+    "failed_assertions": 8,
+    "failures": {
+      "overlap_matches_independent_corner_sat": {
+        "count": 7,
+        "examples": [
+          {
+            "case": 0,
+            "expected": false,
+            "actual": true,
+            "gap": 0.03214809930113167
+          },
+          {
+            "case": 210,
+            "expected": false,
+            "actual": true,
+            "gap": 0.10930510941541222
+          },
+          {
+            "case": 230,
+            "expected": false,
+            "actual": true,
+            "gap": 0.019167548444656957
+          },
+          {
+            "case": 347,
+            "expected": false,
+            "actual": true,
+            "gap": 0.002487170116896087
+          },
+          {
+            "case": 356,
+            "expected": false,
+            "actual": true,
+            "gap": 0.11809483089905548
+          },
+          {
+            "case": 488,
+            "expected": false,
+            "actual": true,
+            "gap": 0.008403903911046062
+          },
+          {
+            "case": 528,
+            "expected": false,
+            "actual": true,
+            "gap": 0.020990689281206065
+          }
+        ]
+      },
+      "singular_basis_rejected": {
+        "count": 1,
+        "examples": [
+          null
+        ]
+      }
+    }
+  },
+  "performance": [
+    {
+      "label": "overlap_32_pairs",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        1.246,
+        1.2622,
+        1.2709,
+        1.2323,
+        1.2723,
+        1.3177,
+        1.3073,
+        1.3127,
+        1.3178
+      ],
+      "cpu_ms_samples": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "median_ms": 1.2723,
+      "min_ms": 1.2323,
+      "max_ms": 1.3178,
+      "p10_ms": 1.2323,
+      "p90_ms": 1.3178,
+      "stdev_ms": 0.032622806439667355
+    },
+    {
+      "label": "overlap_128_pairs",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        4.7226,
+        4.6286,
+        4.8344,
+        4.6924,
+        4.6943,
+        4.6725,
+        4.8409,
+        4.7342,
+        4.6462
+      ],
+      "cpu_ms_samples": [
+        0.0,
+        0.0,
+        15.625,
+        0.0,
+        15.625,
+        0.0,
+        15.625,
+        0.0,
+        0.0
+      ],
+      "median_ms": 4.6943,
+      "min_ms": 4.6286,
+      "max_ms": 4.8409,
+      "p10_ms": 4.6286,
+      "p90_ms": 4.8409,
+      "stdev_ms": 0.075307703973616
+    },
+    {
+      "label": "overlap_512_pairs",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        18.7642,
+        18.768,
+        18.7804,
+        18.7192,
+        18.8267,
+        18.7488,
+        17.5396,
+        17.1675,
+        17.1042
+      ],
+      "cpu_ms_samples": [
+        15.625,
+        31.25,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625
+      ],
+      "median_ms": 18.7488,
+      "min_ms": 17.1042,
+      "max_ms": 18.8267,
+      "p10_ms": 17.1042,
+      "p90_ms": 18.8267,
+      "stdev_ms": 0.7584322959236375
+    }
+  ],
+  "details": {
+    "source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\world\\physics.py",
+    "seed": 20261120,
+    "overlapping_pairs": 103,
+    "pair_count": 601
+  },
+  "status": "completed",
+  "source_lf_sha256": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a",
+  "elapsed_seconds": 0.9211915000050794
+}

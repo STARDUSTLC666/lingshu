@@ -1,0 +1,160 @@
+{
+  "suite": "hexgrid_nearest",
+  "variant": "fixed",
+  "commit": "cff189b3438623feaebdf1a874fafdd03080acb1",
+  "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cff189b34386",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "cpu_count": 32,
+    "numpy": "2.5.5",
+    "pillow": "12.3.0",
+    "sqlite": "3.49.1",
+    "pythonhashseed": "20261120",
+    "seed": 20261120,
+    "perf_counter": {
+      "implementation": "QueryPerformanceCounter()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "process_clock": {
+      "implementation": "GetProcessTimes()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "cpu_affinity": "uncontrolled",
+    "power_plan": "uncontrolled",
+    "wall_clock_utc": "2026-11-20T13:17:52Z"
+  },
+  "correctness": {
+    "assertions": 12205,
+    "checks": {
+      "center_roundtrip_odd_r_offset": 1764,
+      "euclidean_nearest_odd_r_offset": 8000,
+      "center_roundtrip_axial": 441,
+      "euclidean_nearest_axial": 2000
+    },
+    "failed_assertions": 0,
+    "failures": {}
+  },
+  "performance": [
+    {
+      "label": "nearest_odd_r_1000_points",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        6.1528,
+        5.7352,
+        5.6224,
+        5.7591,
+        5.604,
+        5.7277,
+        5.6754,
+        5.8778,
+        5.7065
+      ],
+      "cpu_ms_samples": [
+        15.625,
+        0.0,
+        15.625,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        15.625,
+        0.0
+      ],
+      "median_ms": 5.7277,
+      "min_ms": 5.604,
+      "max_ms": 6.1528,
+      "p10_ms": 5.604,
+      "p90_ms": 6.1528,
+      "stdev_ms": 0.16698370263125814
+    },
+    {
+      "label": "nearest_odd_r_10000_points",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        56.5921,
+        56.8201,
+        56.3036,
+        56.6494,
+        56.8441,
+        56.8552,
+        56.5846,
+        57.488,
+        56.799
+      ],
+      "cpu_ms_samples": [
+        46.875,
+        62.5,
+        62.5,
+        62.5,
+        62.5,
+        46.875,
+        46.875,
+        46.875,
+        62.5
+      ],
+      "median_ms": 56.799,
+      "min_ms": 56.3036,
+      "max_ms": 57.488,
+      "p10_ms": 56.3036,
+      "p90_ms": 57.488,
+      "stdev_ms": 0.3220472821565862
+    },
+    {
+      "label": "nearest_odd_r_50000_points",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        283.4532,
+        331.1284,
+        307.6695,
+        312.295,
+        296.8052,
+        299.44,
+        290.9922,
+        293.9782,
+        297.3018
+      ],
+      "cpu_ms_samples": [
+        281.25,
+        328.125,
+        312.5,
+        265.625,
+        296.875,
+        281.25,
+        281.25,
+        265.625,
+        296.875
+      ],
+      "median_ms": 297.3018,
+      "min_ms": 283.4532,
+      "max_ms": 331.1284,
+      "p10_ms": 283.4532,
+      "p90_ms": 331.1284,
+      "stdev_ms": 14.00447976613198
+    }
+  ],
+  "details": {
+    "source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\cff189b34386\\lingshu\\nn\\hex_cnn.py",
+    "seed": 20261120,
+    "random_point_count": 10000,
+    "oracle": "Euclidean distance over 63 nearby centers; no boundary clipping requested"
+  },
+  "status": "completed",
+  "source_lf_sha256": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081",
+  "elapsed_seconds": 5.172422100004042
+}

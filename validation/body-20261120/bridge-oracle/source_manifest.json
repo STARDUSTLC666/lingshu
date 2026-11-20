@@ -1,0 +1,26 @@
+{
+  "repo": "<workspace>\\lingshu\\work\\lingshu-body-pendulum-20261120",
+  "baseline": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "head": "aa18885c933dfd49d8c23a288726158de1bc7c03",
+  "working_eval": "<workspace>\\lingshu\\work\\lingshu-body-pendulum-20261120\\bridges\\blender\\wm_bridge\\factory\\anim\\eval.py",
+  "fixed_eval_lf_sha256": "f2b24ec11fbdef01d56c7d354ef247fc1bfdda9dfc14588f8830a3cf62b01aad",
+  "runner_lf_sha256": "ead9ef68e153fe5f2229c2c8fbdaca29db7d0ef0289c5cf3ef7ce564ccca8d9b",
+  "snapshots": {
+    "baseline": {
+      "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+      "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\pendulum-bridge-oracle\\evidence\\snapshots\\baseline",
+      "archive_sha256": "07962132c77676b3049cc9d57654a1960fd9a77028a1c42917c73a51fe92fae2",
+      "archive_bytes": 577386,
+      "eval_lf_sha256": "cc1a58e6665099ba43d406c709323227f7c0162b85fb7b1652b4fa9ee304644c",
+      "working_eval_overlay": false
+    },
+    "fixed": {
+      "commit": "aa18885c933dfd49d8c23a288726158de1bc7c03",
+      "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\pendulum-bridge-oracle\\evidence\\snapshots\\fixed",
+      "archive_sha256": "8c4e6604619cc2ccdabd4d1b5d4ec59fa2615f6e0c36eb77611b91afa6031173",
+      "archive_bytes": 577687,
+      "eval_lf_sha256": "f2b24ec11fbdef01d56c7d354ef247fc1bfdda9dfc14588f8830a3cf62b01aad",
+      "working_eval_overlay": true
+    }
+  }
+}

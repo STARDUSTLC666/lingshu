@@ -1,0 +1,163 @@
+{
+  "suite": "obb_sat",
+  "variant": "fixed",
+  "commit": "39d379552f34026ef46ad0515831319b1494a5d3",
+  "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\39d379552f34",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "cpu_count": 32,
+    "numpy": "2.5.5",
+    "pillow": "12.3.0",
+    "sqlite": "3.49.1",
+    "pythonhashseed": "20261120",
+    "seed": 20261120,
+    "perf_counter": {
+      "implementation": "QueryPerformanceCounter()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "process_clock": {
+      "implementation": "GetProcessTimes()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "cpu_affinity": "uncontrolled",
+    "power_plan": "uncontrolled",
+    "wall_clock_utc": "2026-11-20T13:17:03Z"
+  },
+  "correctness": {
+    "assertions": 2092,
+    "checks": {
+      "overlap_matches_independent_corner_sat": 601,
+      "overlap_symmetric": 601,
+      "mtv_none_iff_no_overlap": 601,
+      "mtv_depth_symmetric": 96,
+      "mtv_separates_in_independent_oracle": 96,
+      "resolve_separates_oracle": 96,
+      "singular_basis_rejected": 1
+    },
+    "failed_assertions": 0,
+    "failures": {}
+  },
+  "performance": [
+    {
+      "label": "overlap_32_pairs",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        1.1918,
+        1.1801,
+        1.1704,
+        1.1905,
+        1.1297,
+        1.1218,
+        1.1119,
+        1.2537,
+        1.1406
+      ],
+      "cpu_ms_samples": [
+        0.0,
+        15.625,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "median_ms": 1.1704,
+      "min_ms": 1.1119,
+      "max_ms": 1.2537,
+      "p10_ms": 1.1119,
+      "p90_ms": 1.2537,
+      "stdev_ms": 0.04474551498319257
+    },
+    {
+      "label": "overlap_128_pairs",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        4.7351,
+        4.7131,
+        4.6284,
+        4.6028,
+        4.6175,
+        4.7261,
+        4.6148,
+        4.688,
+        4.6683
+      ],
+      "cpu_ms_samples": [
+        0.0,
+        0.0,
+        15.625,
+        0.0,
+        15.625,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "median_ms": 4.6683,
+      "min_ms": 4.6028,
+      "max_ms": 4.7351,
+      "p10_ms": 4.6028,
+      "p90_ms": 4.7351,
+      "stdev_ms": 0.051812412712699527
+    },
+    {
+      "label": "overlap_512_pairs",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        18.5084,
+        18.7032,
+        18.4956,
+        18.5574,
+        17.9732,
+        18.274,
+        18.44,
+        18.5,
+        18.6619
+      ],
+      "cpu_ms_samples": [
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625,
+        15.625
+      ],
+      "median_ms": 18.5,
+      "min_ms": 17.9732,
+      "max_ms": 18.7032,
+      "p10_ms": 17.9732,
+      "p90_ms": 18.7032,
+      "stdev_ms": 0.219801022391718
+    }
+  ],
+  "details": {
+    "source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\39d379552f34\\lingshu\\world\\physics.py",
+    "seed": 20261120,
+    "overlapping_pairs": 96,
+    "pair_count": 601
+  },
+  "status": "completed",
+  "source_lf_sha256": "188cfa80a69c58fc855c98a5fd4b30ad0c367067332cb2813551fbeb2216d03f",
+  "elapsed_seconds": 0.8587026000022888
+}

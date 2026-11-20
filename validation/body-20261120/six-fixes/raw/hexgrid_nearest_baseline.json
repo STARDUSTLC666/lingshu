@@ -1,0 +1,334 @@
+{
+  "suite": "hexgrid_nearest",
+  "variant": "baseline",
+  "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "snapshot": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "<workspace>\\lingshu\\work\\lingshu-body-20261120-venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "cpu_count": 32,
+    "numpy": "2.5.5",
+    "pillow": "12.3.0",
+    "sqlite": "3.49.1",
+    "pythonhashseed": "20261120",
+    "seed": 20261120,
+    "perf_counter": {
+      "implementation": "QueryPerformanceCounter()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "process_clock": {
+      "implementation": "GetProcessTimes()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "cpu_affinity": "uncontrolled",
+    "power_plan": "uncontrolled",
+    "wall_clock_utc": "2026-11-20T13:17:47Z"
+  },
+  "correctness": {
+    "assertions": 12205,
+    "checks": {
+      "center_roundtrip_odd_r_offset": 1764,
+      "euclidean_nearest_odd_r_offset": 8000,
+      "center_roundtrip_axial": 441,
+      "euclidean_nearest_axial": 2000
+    },
+    "failed_assertions": 632,
+    "failures": {
+      "euclidean_nearest_odd_r_offset": {
+        "count": 632,
+        "examples": [
+          {
+            "mode": "odd_r_offset",
+            "size": 0.125,
+            "origin": [
+              0.0,
+              0.0
+            ],
+            "point": [
+              2.500716630161418,
+              0.6757063070745799
+            ],
+            "actual": [
+              12,
+              4
+            ],
+            "best": [
+              11,
+              3
+            ],
+            "distance_sq_excess": 0.002064102500531885
+          },
+          {
+            "mode": "odd_r_offset",
+            "size": 0.125,
+            "origin": [
+              0.0,
+              0.0
+            ],
+            "point": [
+              2.689785219411303,
+              -2.170116059558401
+            ],
+            "actual": [
+              12,
+              -12
+            ],
+            "best": [
+              12,
+              -11
+            ],
+            "distance_sq_excess": 0.0029370603491217454
+          },
+          {
+            "mode": "odd_r_offset",
+            "size": 0.125,
+            "origin": [
+              0.0,
+              0.0
+            ],
+            "point": [
+              1.207849135547126,
+              1.798140427685273
+            ],
+            "actual": [
+              6,
+              10
+            ],
+            "best": [
+              5,
+              9
+            ],
+            "distance_sq_excess": 0.0016903307873013893
+          },
+          {
+            "mode": "odd_r_offset",
+            "size": 0.125,
+            "origin": [
+              0.0,
+              0.0
+            ],
+            "point": [
+              0.17652603849716053,
+              1.027688477990261
+            ],
+            "actual": [
+              0,
+              5
+            ],
+            "best": [
+              1,
+              6
+            ],
+            "distance_sq_excess": 0.00172718768834061
+          },
+          {
+            "mode": "odd_r_offset",
+            "size": 0.125,
+            "origin": [
+              0.0,
+              0.0
+            ],
+            "point": [
+              0.6586629745450274,
+              -0.8624813596482013
+            ],
+            "actual": [
+              3,
+              -5
+            ],
+            "best": [
+              3,
+              -4
+            ],
+            "distance_sq_excess": 0.00271477300987032
+          },
+          {
+            "mode": "odd_r_offset",
+            "size": 0.125,
+            "origin": [
+              0.0,
+              0.0
+            ],
+            "point": [
+              1.6156544214065613,
+              3.0811612165154543
+            ],
+            "actual": [
+              7,
+              16
+            ],
+            "best": [
+              7,
+              17
+            ],
+            "distance_sq_excess": 0.005234899361978082
+          },
+          {
+            "mode": "odd_r_offset",
+            "size": 0.125,
+            "origin": [
+              0.0,
+              0.0
+            ],
+            "point": [
+              -3.4482834895804864,
+              -0.8527209758139271
+            ],
+            "actual": [
+              -16,
+              -5
+            ],
+            "best": [
+              -16,
+              -4
+            ],
+            "distance_sq_excess": 0.004929909426565798
+          },
+          {
+            "mode": "odd_r_offset",
+            "size": 0.125,
+            "origin": [
+              0.0,
+              0.0
+            ],
+            "point": [
+              -3.4611394624988003,
+              -1.0052836020034706
+            ],
+            "actual": [
+              -16,
+              -5
+            ],
+            "best": [
+              -16,
+              -6
+            ],
+            "distance_sq_excess": 0.0013400258924960978
+          }
+        ]
+      }
+    }
+  },
+  "performance": [
+    {
+      "label": "nearest_odd_r_1000_points",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        5.2317,
+        5.3096,
+        5.1523,
+        5.1344,
+        5.2513,
+        5.0492,
+        5.1856,
+        5.0443,
+        5.129
+      ],
+      "cpu_ms_samples": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "median_ms": 5.1523,
+      "min_ms": 5.0443,
+      "max_ms": 5.3096,
+      "p10_ms": 5.0443,
+      "p90_ms": 5.3096,
+      "stdev_ms": 0.08916364169323722
+    },
+    {
+      "label": "nearest_odd_r_10000_points",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        50.9247,
+        50.808,
+        50.8063,
+        50.5645,
+        52.0638,
+        50.7001,
+        50.608,
+        51.1125,
+        50.8544
+      ],
+      "cpu_ms_samples": [
+        62.5,
+        46.875,
+        62.5,
+        46.875,
+        62.5,
+        46.875,
+        62.5,
+        46.875,
+        62.5
+      ],
+      "median_ms": 50.808,
+      "min_ms": 50.5645,
+      "max_ms": 52.0638,
+      "p10_ms": 50.5645,
+      "p90_ms": 52.0638,
+      "stdev_ms": 0.45336040850519815
+    },
+    {
+      "label": "nearest_odd_r_50000_points",
+      "unit": "ms per timed operation",
+      "calls_per_sample": 1,
+      "warmup_samples": 3,
+      "repeated_samples": 9,
+      "wall_ms_samples": [
+        254.7364,
+        255.8678,
+        269.864,
+        267.9657,
+        250.8669,
+        277.5265,
+        282.6912,
+        276.2718,
+        251.0295
+      ],
+      "cpu_ms_samples": [
+        265.625,
+        250.0,
+        281.25,
+        265.625,
+        250.0,
+        281.25,
+        281.25,
+        265.625,
+        265.625
+      ],
+      "median_ms": 267.9657,
+      "min_ms": 250.8669,
+      "max_ms": 282.6912,
+      "p10_ms": 250.8669,
+      "p90_ms": 282.6912,
+      "stdev_ms": 12.312032181569373
+    }
+  ],
+  "details": {
+    "source": "<workspace>\\lingshu\\outputs\\body-validation-20261120\\benchmarks\\portable-full\\snapshots\\d74848fb33db\\lingshu\\nn\\hex_cnn.py",
+    "seed": 20261120,
+    "random_point_count": 10000,
+    "oracle": "Euclidean distance over 63 nearby centers; no boundary clipping requested"
+  },
+  "status": "completed",
+  "source_lf_sha256": "8a4a5e501a92a4b17024eb9dee36f8da004e9d036d9eb766212ac30303b7aac5",
+  "elapsed_seconds": 4.630689999990864
+}
