@@ -1,0 +1,2658 @@
+diff --git a/bench/repro/pendulum_release_accuracy.py b/bench/repro/pendulum_release_accuracy.py
+new file mode 100644
+index 0000000..8cf672b
+--- /dev/null
++++ b/bench/repro/pendulum_release_accuracy.py
+@@ -0,0 +1,261 @@
++#!/usr/bin/env python3
++"""Reproduce pendulum release accuracy, RK4, compatibility and timing evidence.
++
++Requires Python 3.12+ and mpmath (validated with 1.4.1). From the repository root,
++after installing mpmath in a separate environment, run:
++
++    python bench/repro/pendulum_release_accuracy.py --output ./pendulum-evidence
++
++Use --repo PATH when invoked elsewhere, --baseline REF to change the comparison
++commit (default d74848f), and optionally --expected-fixed-sha HEX to require an
++exact LF-normalized SHA-256 for lingshu/world/physics.py. The current working
++source and baseline are frozen under the requested output directory. Production
++sources are only read; no package installation or Git checkout is performed.
++
++Independent oracle: 80-digit sn(K-u, m), with m=k*k and k=sin(theta0/2). The
++pendulum convention is DLMF 22.19.2 (K+u is equivalent by time symmetry):
++https://dlmf.nist.gov/22.19.E2 . AGM/Landen recurrences are DLMF 22.20.1 and
++22.20.4: https://dlmf.nist.gov/22.20.E1 and https://dlmf.nist.gov/22.20.E4 .
++The stable descent identity a_n**2-c_n**2=b_n**2 is derived directly from
++22.20.1; atan2(c*sin(phi), hypot(b,c*cos(phi))) is an algebraic reformulation
++of the principal asin in 22.20.4, not an additional formula quoted from DLMF.
++
++JSON retains every input, oracle value, error, phase decomposition, RK4 sample,
++timing sample, environment and source hash. report.md is a readable summary.
++Timing is descriptive on a shared host, not a hardware-independent guarantee.
++"""
++from __future__ import annotations
++import argparse,gc,hashlib,importlib.util,json,math,os,platform,random,statistics,subprocess,sys,time
++from pathlib import Path
++import mpmath as mp
++ROOT=None
++REPO=None
++FIXED_SOURCE=None
++BASE="d74848f"
++EXPECTED=None
++DPS=80
++
++def write_json(path,obj):
++ path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(obj,ensure_ascii=False,indent=2,allow_nan=False)+"\n",encoding="utf-8",newline="\n")
++def sha(data):return hashlib.sha256(data).hexdigest()
++def lfsha(data):return sha(data.replace(b"\r\n",b"\n"))
++
++def load_source(name,path):
++ spec=importlib.util.spec_from_file_location(name,path);module=importlib.util.module_from_spec(spec);sys.modules[name]=module;spec.loader.exec_module(module);return module
++
++def capture_sources(expected):
++ baseline=subprocess.run(["git","-C",str(REPO),"show",BASE+":lingshu/world/physics.py"],check=True,stdout=subprocess.PIPE).stdout
++ fixed=FIXED_SOURCE.read_bytes()
++ if expected is not None and lfsha(fixed)!=expected:raise RuntimeError("Fixed production source drifted: expected "+expected+", got "+lfsha(fixed))
++ if expected is None:expected=lfsha(fixed)
++ directory=ROOT/"sources";directory.mkdir(exist_ok=True);bp=directory/("physics_baseline_"+BASE[:12]+".py");fp=directory/("physics_fixed_"+expected[:12]+".py");bp.write_bytes(baseline);fp.write_bytes(fixed)
++ meta={"baseline":{"commit":BASE,"snapshot":str(bp),"sha256":sha(baseline),"lf_sha256":lfsha(baseline)},"fixed":{"working_source":str(FIXED_SOURCE),"snapshot":str(fp),"sha256":sha(fixed),"lf_sha256":lfsha(fixed),"expected_lf_sha256":expected},"runner_lf_sha256":lfsha(Path(__file__).read_bytes())}
++ meta["repository"]=str(REPO);meta["git_head"]=subprocess.run(["git","-C",str(REPO),"rev-parse","HEAD"],check=True,stdout=subprocess.PIPE,text=True,encoding="utf-8",errors="replace").stdout.strip()
++ meta["fixed_source_git_status"]=subprocess.run(["git","-C",str(REPO),"status","--porcelain","--","lingshu/world/physics.py"],check=True,stdout=subprocess.PIPE,text=True,encoding="utf-8",errors="replace").stdout.strip()
++ write_json(ROOT/"source_manifest.json",meta);return load_source("pendulum_baseline_frozen",bp),load_source("pendulum_fixed_frozen",fp),meta
++
++def period(theta):
++ theta=mp.mpf(theta);k=mp.sin(theta/2);return 4*mp.ellipk(k*k)
++def reference(theta,omega,t):
++ # Convert each incoming binary64 value exactly before multiplying. Do not feed
++ # the production rounded modulus or production rounded omega*t to the oracle.
++ theta,w,tt=mp.mpf(theta),mp.mpf(omega),mp.mpf(t);k=mp.sin(theta/2);m=k*k;quarter=mp.ellipk(m);u=w*tt
++ if theta==0 or u==0:return theta,quarter,u,k
++ value=2*mp.asin(k*mp.ellipfun("sn",quarter-u,m))
++ if isinstance(value,mp.mpc):
++  if abs(value.imag)>mp.mpf("1e-60"):raise RuntimeError("Unexpected non-real oracle")
++  value=value.real
++ return value,quarter,u,k
++
++def invoke(module,theta,omega,t,explicit=True):
++ try:
++  v=module.pendulum_exact_angle(theta,omega,t,tol_deg=180.) if explicit else module.pendulum_exact_angle(theta,omega,t)
++  return {"value":v,"finite":math.isfinite(v)}
++ except Exception as e:return {"error_type":type(e).__name__,"error":str(e)}
++
++def phase_metrics(module,theta,omega,t,quarter,u,k,expected,actual):
++ complementary=math.cos(.5*theta);qf=math.pi/(2*module.agm(1.,complementary));uf=omega*t;reduced=math.remainder(uf,4*qf);p=4*quarter
++ difference=mp.mpf(reduced)-u;wrapped=difference-p*mp.floor(difference/p+mp.mpf("0.5"));phase_error=abs(wrapped)
++ value_at_reduced=2*mp.asin(k*mp.ellipfun("sn",quarter-mp.mpf(reduced),k*k));value_at_reduced=mp.re(value_at_reduced)
++ intrinsic=abs(mp.mpf(actual)-value_at_reduced);bound=2*abs(k)*phase_error+mp.mpf("5e-12")
++ return {"implemented_quarter_u":qf,"reference_quarter_u":mp.nstr(quarter,85),"quarter_error_u":float(abs(mp.mpf(qf)-quarter)),"product_rounding_error_u":float(abs(mp.mpf(uf)-u)),"implemented_remainder_u":reduced,"circular_phase_error_u":float(phase_error),"intrinsic_error_at_implemented_phase_rad":float(intrinsic),"phase_lipschitz_plus_5e_12_bound_rad":float(bound),"within_phase_bound":abs(mp.mpf(actual)-expected)<=bound}
++
++def accuracy(base,fixed):
++ rows=[];violations=[];amplitudes=[("zero",0.),("tiny",1e-12),("0.001deg",math.radians(.001)),("1deg",math.radians(1)),("5deg",math.radians(5)),("15deg",math.radians(15)),("30deg",math.radians(30)),("60deg",math.radians(60)),("90deg",math.radians(90)),("120deg",math.radians(120)),("170deg",math.radians(170)),("179deg",math.radians(179)),("179.999deg",math.radians(179.999)),("179.99999999deg",math.radians(179.99999999)),("pi_minus_1e-12",math.pi-1e-12),("nextafter_pi",math.nextafter(math.pi,0.))]
++ factors=[0.,.125,.25,.5,.75,1.,1.125,3.375,10.1,100.3]
++ for label,positive in amplitudes:
++  for sign in ((1.,) if positive==0 else (1.,-1.)):
++   theta=sign*positive;full=period(theta)
++   for omega in (.25,-1.,3.13):
++    for factor in factors:
++     # Construct a representable time from high-precision target periods. The
++     # oracle is subsequently evaluated at that actual binary64 time, not target.
++     t=float(mp.mpf(factor)*full/mp.mpf(abs(omega)))
++     expected,quarter,u,k=reference(theta,omega,t);b=invoke(base,theta,omega,t);f=invoke(fixed,theta,omega,t)
++     row={"amplitude":label,"theta0_rad":theta,"omega0":omega,"t":t,"target_period_fraction":factor,"reference_rad":mp.nstr(expected,85),"baseline":b,"fixed":f}
++     for variant,result in (("baseline",b),("fixed",f)):
++      if "value" in result:result["abs_error_rad"]=float(abs(mp.mpf(result["value"])-expected))
++     if "value" not in f:violations.append({"reason":"fixed_exception","case":len(rows),"row":row})
++     else:
++      v=f["value"];f["phase"]=phase_metrics(fixed,theta,omega,t,quarter,u,k,expected,v)
++      checks={"finite":f["finite"],"amplitude_bound":abs(v)<=abs(theta)+1e-13,"time_even":invoke(fixed,theta,omega,-t).get("value")==v,"omega_even":invoke(fixed,theta,-omega,t).get("value")==v,"theta_odd":abs(invoke(fixed,-theta,omega,t).get("value",math.inf)+v)<1e-13,"phase_error_bound":f["phase"]["within_phase_bound"],"short_horizon_abs_error":factor>3.375 or f["abs_error_rad"]<=1e-11}
++      row["checks"]=checks
++      for name,ok in checks.items():
++       if not ok:violations.append({"reason":name,"case":len(rows),"amplitude":label,"theta":theta,"omega":omega,"t":t,"factor":factor,"error_rad":f["abs_error_rad"],"phase":f["phase"]})
++     rows.append(row)
++  print("accuracy "+label,flush=True)
++ # Long horizons characterize float input/product/period-reduction limits.
++ long=[]
++ for label,theta in [(x,y) for x,y in amplitudes if x in ("5deg","120deg","179.999deg","nextafter_pi")]:
++  full=period(theta)
++  for cycles in (1e3,1e6,1e9,1e12,1e15):
++   for omega in (1.,-3.13):
++    t=float((mp.mpf(cycles)+mp.mpf("0.127"))*full/mp.mpf(abs(omega)));expected,quarter,u,k=reference(theta,omega,t);f=invoke(fixed,theta,omega,t);b=invoke(base,theta,omega,t)
++    row={"amplitude":label,"theta0_rad":theta,"omega0":omega,"t":t,"target_cycles":cycles,"reference_rad":mp.nstr(expected,85),"baseline":b,"fixed":f}
++    for result in (f,b):
++     if "value" in result:result["abs_error_rad"]=float(abs(mp.mpf(result["value"])-expected))
++    if "value" in f:
++     f["phase"]=phase_metrics(fixed,theta,omega,t,quarter,u,k,expected,f["value"])
++     if not f["phase"]["within_phase_bound"]:violations.append({"reason":"long_horizon_phase_bound","row":row})
++    else:violations.append({"reason":"long_horizon_exception","row":row})
++    long.append(row)
++ summary={"short_cases":len(rows),"long_cases":len(long),"fixed_checks":sum(len(r.get("checks",{})) for r in rows)+len(long),"fixed_violations":len(violations),"violations":violations,"short_max_abs_error_rad":max(r["fixed"].get("abs_error_rad",0.) for r in rows),"short_3_375_period_max_abs_error_rad":max(r["fixed"].get("abs_error_rad",0.) for r in rows if r["target_period_fraction"]<=3.375),"baseline_numeric_cases":sum("value" in r["baseline"] for r in rows),"baseline_exceptions":sum("error_type" in r["baseline"] for r in rows),"baseline_max_abs_error_rad":max(r["baseline"].get("abs_error_rad",0.) for r in rows)}
++ write_json(ROOT/"accuracy_raw.json",{"precision_decimal_digits":DPS,"summary":summary,"grid":rows,"long_horizons":long});return summary,rows,long
++
++def rk4(theta,u,max_step):
++ steps=max(1,math.ceil(abs(u)/max_step));h=u/steps;position=theta;velocity=0.
++ for _ in range(steps):
++  a1=velocity;b1=-math.sin(position)
++  a2=velocity+.5*h*b1;b2=-math.sin(position+.5*h*a1)
++  a3=velocity+.5*h*b2;b3=-math.sin(position+.5*h*a2)
++  a4=velocity+h*b3;b4=-math.sin(position+h*a3)
++  position+=(h/6.)*(a1+2*a2+2*a3+a4);velocity+=(h/6.)*(b1+2*b2+2*b3+b4)
++ return position,velocity,steps
++
++def rk4_checks(fixed):
++ rows=[]
++ for degrees in (1.,5.,30.,90.,120.,170.,179.):
++  theta=math.radians(degrees);full=period(theta)
++  for sign in (1.,-1.):
++   for fraction in (.125,.25,.625,1.125,3.375):
++    u=float(sign*mp.mpf(fraction)*full);expected,_,_,_=reference(theta,1.,u);coarse=rk4(theta,u,1/512);fine=rk4(theta,u,1/4096);f=invoke(fixed,theta,1.,u)
++    energy=.5*fine[1]**2+(1-math.cos(fine[0]));initial=1-math.cos(theta)
++    row={"degrees":degrees,"u":u,"period_fraction":fraction,"coarse_step_max":1/512,"fine_step_max":1/4096,"coarse_steps":coarse[2],"fine_steps":fine[2],"coarse_abs_error_rad":float(abs(mp.mpf(coarse[0])-expected)),"fine_abs_error_rad":float(abs(mp.mpf(fine[0])-expected)),"fine_energy_error":abs(energy-initial),"fixed_abs_error_rad":float(abs(mp.mpf(f["value"])-expected)),"fixed_vs_fine_rad":abs(f["value"]-fine[0]),"fine_within_1e_8":abs(mp.mpf(fine[0])-expected)<mp.mpf("1e-8")}
++    rows.append(row)
++ # The nextafter(pi,0) double RK4 case demonstrates why a binary64 numerical
++ # integrator cannot serve as the near-separatrix oracle: sub-ulp increments.
++ theta=math.nextafter(math.pi,0.);u=float(period(theta)/4);r=rk4(theta,u,1/4096);expected,_,_,_=reference(theta,1.,u)
++ extreme={"theta0_rad":theta,"u":u,"rk4_theta":r[0],"reference_rad":mp.nstr(expected,85),"rk4_error_rad":float(abs(mp.mpf(r[0])-expected)),"note":"Characterization only: binary64 RK4 can stall near the turning point; the 80-digit elliptic oracle remains the accuracy reference."}
++ result={"cases":len(rows),"fine_max_abs_error_rad":max(x["fine_abs_error_rad"] for x in rows),"fixed_max_abs_error_rad":max(x["fixed_abs_error_rad"] for x in rows),"fine_over_1e_8":sum(not r["fine_within_1e_8"] for r in rows),"rows":rows,"near_separatrix_characterization":extreme}
++ write_json(ROOT/"rk4_raw.json",result);return result
++
++def timing(label,fn,calls=256,repeats=21,warmups=5):
++ wall=[];cpu=[]
++ for i in range(warmups+repeats):
++  gc.collect();on=gc.isenabled();gc.disable()
++  try:
++   t0,c0=time.perf_counter_ns(),time.process_time_ns()
++   for _ in range(calls):fn()
++   dt,dc=time.perf_counter_ns()-t0,time.process_time_ns()-c0
++  finally:
++   if on:gc.enable()
++  if i>=warmups:wall.append(dt/calls/1e3);cpu.append(dc/calls/1e3)
++ values=sorted(wall);median=statistics.median(wall)
++ return {"label":label,"unit":"microseconds per call","calls_per_sample":calls,"warmups":warmups,"repeats":repeats,"wall_us_samples":wall,"cpu_us_samples":cpu,"median_us":median,"p95_us":values[math.ceil(.95*len(values))-1],"min_us":min(wall),"max_us":max(wall),"spread_max_minus_min_us":max(wall)-min(wall),"stdev_us":statistics.stdev(wall)}
++
++def performance(base,fixed):
++ rows=[]
++ for degrees,explicit in ((1.,False),(5.,False),(30.,True),(90.,True),(120.,True),(170.,True),(179.999,True)):
++  theta=math.radians(degrees);times=[float((mp.mpf(i)+mp.mpf("0.37"))*period(theta)/16) for i in range(16)];pair={"degrees":degrees,"explicit_tol_180":explicit}
++  for name,module in (("baseline",base),("fixed",fixed)):
++   def call(module=module):
++    return [module.pendulum_exact_angle(theta,1.,t,tol_deg=180.) if explicit else module.pendulum_exact_angle(theta,1.,t) for t in times]
++   probe=invoke(module,theta,1.,times[0],explicit)
++   if "error" in probe:pair[name]=probe;continue
++   result=timing("%s_%gdeg_%s"%(name,degrees,"tol180" if explicit else "default"),call,calls=128);result["unit"]="microseconds per 16-angle batch";result["median_us_per_angle"]=result["median_us"]/16;pair[name]=result
++  if "median_us" in pair.get("baseline",{}) and "median_us" in pair.get("fixed",{}):pair["fixed_over_baseline"]=pair["fixed"]["median_us"]/pair["baseline"]["median_us"]
++  rows.append(pair)
++ # Fixed-only coverage where baseline rounds sin(theta/2) to one and rejects.
++ theta=math.nextafter(math.pi,0.);u=float(period(theta)*mp.mpf("0.127"));rows.append({"degrees":"nextafter_pi","fixed":timing("fixed_nextafter_pi",lambda:fixed.pendulum_exact_angle(theta,1.,u),calls=1024),"baseline":invoke(base,theta,1.,u)})
++ rk=[]
++ for degrees in (5.,120.,170.):
++  theta=math.radians(degrees);u=float(period(theta)/4);rk.append(timing("rk4_%gdeg_quarter_period_step_1_4096"%degrees,lambda:rk4(theta,u,1/4096),calls=1,repeats=11,warmups=3))
++ write_json(ROOT/"performance_raw.json",{"workloads":rows,"rk4":rk,"limitations":["Wall timings are descriptive on a shared host; no CPU pinning/power control.","No high-precision oracle calls, imports or source capture occur inside timed blocks.","The 16-angle batch includes Python list construction and public API validation.","RK4 costs correspond to the stated numerical step, not equal-cost/equal-error alternatives."]});return rows,rk
++
++def domains(fixed):
++ checks=[]
++ for name,args in [("theta_pi",(math.pi,1.,1.)),("theta_minus_pi",(-math.pi,1.,1.)),("theta_nan",(math.nan,1.,1.)),("omega_inf",(.1,math.inf,1.)),("time_nan",(.1,1.,math.nan)),("product_overflow",(.1,1e308,1e308))]:
++  result=invoke(fixed,*args);checks.append({"name":name,"passed":"error" in result,"result":result})
++ for omega in (0.,-0.):
++  result=invoke(fixed,math.nextafter(math.pi,0.),omega,-100.);checks.append({"name":"zero_omega_%r"%omega,"passed":result.get("value")==math.nextafter(math.pi,0.),"result":result})
++ return checks
++
++def period_truth_checks(base,fixed):
++ """Compare public truth periods against 80-digit K at declared binary64 theta.
++
++  The API first converts its binary64 degree input with math.radians. Record
++  that conversion's separate effect near the separatrix; do not mistake it
++  for an error of the subsequent AGM period computation.
++ """
++ amplitudes=[1.,5.,120.,170.,179.999,179.99999999,math.degrees(math.pi-1e-12),math.degrees(math.nextafter(math.pi,0.))];configs=[]
++ for degrees in amplitudes:
++  for sign in (1.,-1.):
++   for w in (.25,1.,3.13):configs.append({"theta0_deg":sign*degrees,"omega0":w})
++ for w in (.25,1.,3.13):configs.append({"theta0_deg":0.,"omega0":w})
++ for degrees in amplitudes[-3:]:
++  for sign in (1.,-1.):
++   for length in (.125,1.,10.):configs.append({"theta0_deg":sign*degrees,"length_m":length,"g_m_s2":9.81})
++ rows=[]
++ for config in configs:
++  theta=math.radians(float(config["theta0_deg"]));w=math.sqrt(config["g_m_s2"]/config["length_m"]) if "length_m" in config else config["omega0"]
++  k=mp.sin(mp.mpf(theta)/2);expected=4*mp.ellipk(k*k)/mp.mpf(w);exact_degree_theta=mp.mpf(config["theta0_deg"])*mp.pi/180;degree_k=mp.sin(exact_degree_theta/2);degree_reference=4*mp.ellipk(degree_k*degree_k)/mp.mpf(w)
++  row={"declaration":config,"declared_theta0_rad_binary64":theta,"reference_period_s_85_digits":mp.nstr(expected,85),"degree_to_radian_conversion_abs_error_rad":float(abs(mp.mpf(theta)-exact_degree_theta)),"period_relative_difference_from_exact_degree_conversion":float(abs(expected-degree_reference)/degree_reference)}
++  for name,module in (("baseline",base),("fixed",fixed)):
++   try:
++    value=module.pendulum_truth(config);actual=value.get("period_exact_elliptic",value["period_small_angle"]);error=abs(mp.mpf(actual)-expected);row[name]={"period_s":actual,"abs_error_s":float(error),"relative_error":float(error/expected),"theta0_rad":value["theta0_rad"],"omega0":value["omega0"]}
++   except Exception as e:row[name]={"error_type":type(e).__name__,"error":str(e)}
++  result=row["fixed"];row["passed"]="period_s" in result and result["relative_error"]<=1e-14 and result["theta0_rad"]==theta and result["omega0"]==w;rows.append(row)
++ out={"cases":len(rows),"failed_cases":sum(not row["passed"] for row in rows),"fixed_max_relative_error":max(row["fixed"].get("relative_error",0.) for row in rows),"fixed_max_abs_error_s":max(row["fixed"].get("abs_error_s",0.) for row in rows),"baseline_exceptions":sum("error" in row["baseline"] for row in rows),"reference_convention":"80-digit elliptic K evaluated at the public declaration's math.radians binary64 theta; the distinct exact-real degree conversion effect is recorded, not silently attributed to AGM.","rows":rows}
++ write_json(ROOT/"period_truth_raw.json",out);return out
++
++def public_cn_compatibility(base,fixed):
++ """This fix promises to retain the existing public cn numerical behavior."""
++ rng=random.Random(20261120);cases=[]
++ for k in (0.,.01,-.01,.5,-.5,.95,-.95,.999999,-.999999,math.nextafter(1.,0.),-math.nextafter(1.,0.)):
++  for u in (0.,.001,-.001,.125,-.125,1.,-1.,2.,-2.,10.,-10.,100.,-100.,1000.,-1000.):cases.append((u,k))
++ cases.extend((rng.uniform(-1000,1000),rng.uniform(-.999,.999)) for _ in range(2000));mismatches=[]
++ for i,(u,k) in enumerate(cases):
++  old,new=base.jacobi_cn(u,k),fixed.jacobi_cn(u,k)
++  if old.hex()!=new.hex():mismatches.append({"index":i,"u":u,"k":k,"baseline_hex":old.hex(),"fixed_hex":new.hex()})
++ out={"seed":20261120,"cases":len(cases),"bitwise_mismatches":len(mismatches),"mismatches":mismatches}
++ write_json(ROOT/"public_cn_compatibility.json",out);return out
++
++def main():
++ global ROOT,REPO,FIXED_SOURCE,BASE
++ p=argparse.ArgumentParser(description=__doc__,formatter_class=argparse.RawDescriptionHelpFormatter)
++ p.add_argument("--repo",type=Path,default=Path(__file__).resolve().parents[2],help="Repository root (default: this script's repository root)")
++ p.add_argument("--output",type=Path,required=True,help="Directory for JSON, frozen source copies and report.md")
++ p.add_argument("--baseline",default=BASE,help="Git baseline ref (default: d74848f)")
++ p.add_argument("--expected-fixed-sha",default=EXPECTED,help="Optional required LF-normalized fixed-source SHA-256")
++ args=p.parse_args();REPO=args.repo.resolve();ROOT=args.output.resolve();FIXED_SOURCE=REPO/"lingshu/world/physics.py"
++ if not FIXED_SOURCE.is_file():p.error("--repo does not contain lingshu/world/physics.py")
++ BASE=subprocess.run(["git","-C",str(REPO),"rev-parse",args.baseline],check=True,stdout=subprocess.PIPE,text=True,encoding="utf-8",errors="replace").stdout.strip()
++ mp.mp.dps=DPS;ROOT.mkdir(parents=True,exist_ok=True)
++ base,fixed,source=capture_sources(args.expected_fixed_sha);environment={"python":sys.version,"executable":sys.executable,"platform":platform.platform(),"processor":platform.processor(),"cpu_count":os.cpu_count(),"mpmath":mp.__version__,"mpmath_dps":mp.mp.dps,"pythonhashseed":os.environ.get("PYTHONHASHSEED"),"wall_clock_utc":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime()),"perf_counter":vars(time.get_clock_info("perf_counter")),"process_time":vars(time.get_clock_info("process_time"))};write_json(ROOT/"environment.json",environment)
++ summary,grid,long=accuracy(base,fixed);rk=rk4_checks(fixed);perf,rkperf=performance(base,fixed);dc=domains(fixed);compat=public_cn_compatibility(base,fixed);periods=period_truth_checks(base,fixed);combined={"period_truth_summary":{k:v for k,v in periods.items() if k!="rows"},"public_jacobi_cn_compatibility":compat,"environment":environment,"sources":source,"accuracy_summary":summary,"domain_checks":dc,"rk4_summary":{k:v for k,v in rk.items() if k not in ("rows",)},"performance":perf,"rk4_performance":rkperf};write_json(ROOT/"comparison.json",combined)
++ lines=["# Pendulum independent validation","","Fixed LF-normalized source SHA-256: "+source["fixed"]["lf_sha256"],"","Baseline: "+BASE,"","Reference: mpmath %s at %d decimal digits, theta=2 asin(k sn(K-u,m)), m=k², k=sin(theta0/2), K=ellipk(m). Each binary64 input is promoted exactly before the high-precision product. This does not reuse production AGM/Landen code."%(mp.__version__,DPS),"","Accuracy summary:",""]+["- %s: %s"%(k,v) for k,v in summary.items() if k!="violations"]
++ lines += ["","| Amplitude | Through 100.3 periods: max error rad | Through 3.375 periods: max error rad |","|---|---:|---:|"]
++ for label in dict.fromkeys(r["amplitude"] for r in grid):
++  selected=[r for r in grid if r["amplitude"]==label];lines.append("| %s | %.6g | %.6g |"%(label,max(r["fixed"].get("abs_error_rad",0.) for r in selected),max(r["fixed"].get("abs_error_rad",0.) for r in selected if r["target_period_fraction"]<=3.375)))
++ lines += ["","Long horizons: input product rounding and approximate-period reduction limit phase accuracy. The analytical speed bound |dtheta/du|<=2|k| yields |angle error|<=2|k| times circular phase error plus the sampled evaluation allowance 5e-12 rad. This is a checked sample decomposition, not a global floating-point proof.","","| Target cycles | Max angle error rad | Max circular phase error u | Max intrinsic error at implemented phase rad |","|---:|---:|---:|---:|"]
++ for cycles in (1e3,1e6,1e9,1e12,1e15):
++  selected=[r for r in long if r["target_cycles"]==cycles];lines.append("| %.0e | %.6g | %.6g | %.6g |"%(cycles,max(r["fixed"].get("abs_error_rad",0.) for r in selected),max(r["fixed"].get("phase",{}).get("circular_phase_error_u",0.) for r in selected),max(r["fixed"].get("phase",{}).get("intrinsic_error_at_implemented_phase_rad",0.) for r in selected)))
++ lines += ["","RK4: %d signed-time cases, fine max error %.6g rad; fixed max error %.6g rad; fine errors >1e-8: %d. Energy and coarse/fine samples are retained in rk4_raw.json."%(rk["cases"],rk["fine_max_abs_error_rad"],rk["fixed_max_abs_error_rad"],rk["fine_over_1e_8"]),"","Binary64 RK4 near nextafter(pi,0): "+json.dumps(rk["near_separatrix_characterization"],ensure_ascii=False),"","Timing (microseconds per 16-angle batch; 5 warmups, 21 retained samples, 128 batches/sample):","","| Degrees / domain | Baseline median | Fixed median | Fixed p95 | Fixed / baseline |","|---|---:|---:|---:|---:|"]
++ for row in perf:
++  if "fixed_over_baseline" in row:lines.append("| %s / %s | %.3f | %.3f | %.3f | %.3fx |"%(row["degrees"],"tol180" if row["explicit_tol_180"] else "default",row["baseline"]["median_us"],row["fixed"]["median_us"],row["fixed"]["p95_us"],row["fixed_over_baseline"]))
++ lines += ["","Limitations:","","- Shared host, uncontrolled CPU affinity/power plan; descriptive medians/p95/spreads, no significance claim.","- Long-time phase errors are characterized, not hidden behind the short-horizon regression threshold.","- High-precision elliptic and RK4 checks are independent of production descent. Double RK4 cannot be the oracle at the nextafter-pi separatrix limit.","- No production source changes or database/network calls. Frozen source copies and exact hashes accompany every result.","- No dedicated memory claim: this scalar routine allocates short AGM lists, and latency/accuracy dominate this comparison."]
++ if summary["violations"]:lines += ["","Unexpected fixed violations:",""]+["- "+json.dumps(x,ensure_ascii=False) for x in summary["violations"][:10]]
++ lines += ["", "Public jacobi_cn compatibility: %d deterministic inputs, %d bitwise differences versus baseline."%(compat["cases"],compat["bitwise_mismatches"]), "", "Public pendulum_truth period: %d independent high-precision comparisons, %d failed; max relative error %.6g and max absolute error %.6g s. The reference uses the declared binary64 theta0_rad; exact-real degree conversion differences near the separatrix are separately retained in period_truth_raw.json."%(periods["cases"],periods["failed_cases"],periods["fixed_max_relative_error"],periods["fixed_max_abs_error_s"])]
++ (ROOT/"report.md").write_text("\n".join(lines)+"\n",encoding="utf-8",newline="\n");print(json.dumps({"accuracy_summary":{k:v for k,v in summary.items() if k!="violations"},"period_truth_summary":{k:v for k,v in periods.items() if k not in ("rows","reference_convention")},"public_cn_bitwise_mismatches":compat["bitwise_mismatches"],"rk4_fine_max_error":rk["fine_max_abs_error_rad"],"domain_failures":sum(not x["passed"] for x in dc),"report":str(ROOT/"report.md")},ensure_ascii=False),flush=True)
++ return int(bool(summary["fixed_violations"] or any(not x["passed"] for x in dc) or compat["bitwise_mismatches"] or periods["failed_cases"]))
++if __name__=="__main__":raise SystemExit(main())
+diff --git a/bridges/blender/wm_bridge/factory/anim/_det/gate_physics.py b/bridges/blender/wm_bridge/factory/anim/_det/gate_physics.py
+index a48d7a4..63313ce 100644
+--- a/bridges/blender/wm_bridge/factory/anim/_det/gate_physics.py
++++ b/bridges/blender/wm_bridge/factory/anim/_det/gate_physics.py
+@@ -50,7 +50,8 @@ def _samples(fn, n, dt, t0=0.0):
+ def rk4_pendulum(theta0, omega0, t_end, dt=1.0 / 4096):
+     """独立参考：`θ'' = -ω0² sin θ` 的 RK4（**只在门里用**，不在产品路径上）。"""
+     th, om = float(theta0), 0.0
+-    n = max(1, int(round(t_end / dt)))
++    n = max(1, int(math.ceil(abs(t_end) / dt)))
++    dt = t_end / n
+     for _ in range(n):
+         def f(t_, o_):
+             return -omega0 * omega0 * math.sin(t_)
+@@ -150,7 +151,7 @@ def main():
+           "弹簧：4 支 ζ∈{0,0.25,1,2.5} 全部满足 env(0)=1 且 env'(0)=0（最大偏差 %.2e）；"
+           "ζ=0.25 的过零点间距核验阻尼周期差 %.2e s" % (worst_ic, d_period))
+ 
+-    # ---------------- P4 单摆：小角 vs 精确椭圆周期 + 椭圆波形的实测有效域
++    # ---------------- P4 单摆：小角 vs 精确椭圆周期 + 释放初速为零的精确波形
+     rows4 = []
+     worst_rk4 = 0.0
+     worst_period = 0.0
+@@ -184,17 +185,23 @@ def main():
+         rows4.append(row)
+     gated = [r for r in rows4 if r["theta0_deg"] > P.PENDULUM_EXACT_MAX_DEG]
+     ok_gate = all(r["exact_raised"] for r in gated)
+-    ok_domain = worst_rk4 < 1e-4
++    for th0 in (-math.pi, math.pi):
++        try:
++            P.pendulum_exact_angle(th0, 2.0, 1.0)
++            ok_gate = False
++        except P.PhysicsError:
++            pass
++    ok_domain = worst_rk4 < P.PENDULUM_EXACT_MAX_ERR
+     raw["P4"] = {"rows": rows4, "worst_rk4_rad": worst_rk4, "worst_period": worst_period,
+                  "exact_max_deg": P.PENDULUM_EXACT_MAX_DEG,
+                  "exact_max_err_rad": P.PENDULUM_EXACT_MAX_ERR,
+                  "gate_enforced": ok_gate,
+-                 "known_defect": ("jacobi_cn(Landen) 在 θ0>5° 与 RK4 偏离：30°→7.0e-03、"
+-                                  "60°→5.8e-02、120°→5.3e-01 rad —— 已按 fail-closed 拒绝该路径")}
++                 "release_formula": "2*asin(k*cn(u,k)/dn(u,k)); u=omega0*t",
++                 "reference": "RK4 ends at each exact requested t; threshold covers these samples only"}
+     check("P4", ok_domain and worst_period < 1e-12 and ok_gate,
+           "单摆：精确**周期**（AGM 椭圆）与闭式复算差 %.2e（小角近似在 60° 时低估 %.2f%%）；"
+           "椭圆**波形**在有效域 |θ0|<=%.0f° 内与独立 RK4(1/8192s) 最大偏差 %.2e rad，"
+-          "超出即显式 raise（%d/%d 条已拒）—— 已知缺陷，见 raw.P4.known_defect"
++          "物理边界 ±π 显式拒绝；调用者仍可用 tol_deg 收紧域（%d/%d 条域外样本已拒）"
+           % (worst_period, [r for r in rows4 if r["theta0_deg"] == 60][0]["small_angle_error_pct"],
+              P.PENDULUM_EXACT_MAX_DEG, worst_rk4,
+              sum(1 for r in gated if r["exact_raised"]), len(gated)))
+diff --git a/bridges/blender/wm_bridge/factory/anim/eval.py b/bridges/blender/wm_bridge/factory/anim/eval.py
+index 319eb91..15281cd 100644
+--- a/bridges/blender/wm_bridge/factory/anim/eval.py
++++ b/bridges/blender/wm_bridge/factory/anim/eval.py
+@@ -32,9 +32,8 @@
+    —— 用户要的"物理运动预测动画"。**为什么走旁路而不是改 spec.py**：
+       `spec.py` 是冻结契约（四条产线共用），加一个 `kind` 必须由 Lead 改；
+       本产线先用 `motions=` 把能力做出来，并把"要给 spec 加的字段"结论回报给 Lead。
+-      （`motions` 也可以直接写在 spec 顶层的 `"motions"` 键里：`spec.py` 的
+-        `normalize_spec` 只挑它认识的键，会把 `motions` **静默丢掉** ——
+-        所以本模块在 normalize **之前**先把它取出来，这一点在返回值与报告里都写明了。）
++      （`motions` 也可以直接写在 spec 顶层的 `"motions"` 键里；本模块先读取该扩展，
++        再从副本中摘出它，将其余字段交给冻结的 `spec.py` 严格校验。）
+ 
+ ✅ 解析真值对照：`projectile_truth()` / `spring_truth()` / `pendulum_truth()`
+    给闭式量（顶点高度 / 落点 / 飞行时间 / 阻尼周期 / 精确椭圆周期），
+@@ -163,7 +162,10 @@ def normalize(spec):
+     故这里先把 tuple 深转回 list 再交给 `normalize_spec`；校验完整性一点没少
+     （`normalize_spec` 仍然从头校验每个字段）。
+     """
+-    return _spec.normalize_spec(_tuples_to_lists(spec), _copy=True)
++    geometry_spec = _tuples_to_lists(spec)
++    if isinstance(geometry_spec, dict):
++        geometry_spec.pop("motions", None)
++    return _spec.normalize_spec(geometry_spec, _copy=True)
+ 
+ 
+ # --------------------------------------------------------------------- 四元数
+@@ -398,17 +400,10 @@ def elliptic_k(k):
+     return math.pi / (2.0 * _agm(1.0, math.sqrt(1.0 - k * k)))
+ 
+ 
+-def _jacobi_cn(u, k, iters=24):
+-    """Jacobi `cn(u, k)`（AGM/Landen 降变换，A&S 16.4）。
+-
+-    ⚠ **已知缺陷**：振幅一大就散（θ0=30°→7.0e-03 rad、60°→5.8e-02、120°→5.3e-01
+-    vs 独立 RK4）。故 `pendulum(exact=True)` 被限制在 |θ0| <= 5°（见 `pendulum_exact_angle`）。
+-    """
+-    k = float(k)
+-    if abs(k) >= 1.0:
+-        raise AnimError("jacobi_cn：|k| 须 < 1，得到 %r" % (k,))
++def _jacobi_amplitude(u, k, complementary_modulus, iters=24, stable=False):
++    """AGM amplitude; the exact release path retains the complementary modulus."""
+     a = [1.0]
+-    b = [math.sqrt(1.0 - k * k)]
++    b = [complementary_modulus]
+     c = [k]
+     n = 0
+     while abs(c[n]) > 1e-15 and n < iters:
+@@ -418,36 +413,58 @@ def _jacobi_cn(u, k, iters=24):
+         n += 1
+     phi = (2.0 ** n) * a[n] * float(u)
+     for i in range(n - 1, -1, -1):
+-        sig = c[i + 1] / a[i + 1] * math.sin(phi)
+-        sig = 1.0 if sig > 1.0 else (-1.0 if sig < -1.0 else sig)
+-        phi = 0.5 * (phi + math.asin(sig))
+-    return math.cos(phi)
++        if stable:
++            # a²-c²=b² avoids asin precision loss when c/a rounds to one.
++            correction = math.atan2(c[i + 1] * math.sin(phi),
++                                    math.hypot(b[i + 1], c[i + 1] * math.cos(phi)))
++        else:
++            sig = c[i + 1] / a[i + 1] * math.sin(phi)
++            sig = 1.0 if sig > 1.0 else (-1.0 if sig < -1.0 else sig)
++            correction = math.asin(sig)
++        phi = 0.5 * (phi + correction)
++    return phi
+ 
+ 
+-#: `pendulum_exact_angle` 的**已实测有效域**（度）。超出即 `AnimError`，不给"近似当精确"。
+-PENDULUM_EXACT_MAX_DEG = 5.0
+-#: 有效域内实测最大偏差（rad，vs 独立 RK4 @dt=1/8192s）—— 原始读数见 `_det/gate_anim.py`
+-PENDULUM_EXACT_MAX_ERR = 4.0e-05
++def _jacobi_cn(u, k, iters=24):
++    """Jacobi `cn(u, k)`（AGM/Landen 降变换，A&S 16.4）。"""
++    k = float(k)
++    if abs(k) >= 1.0:
++        raise AnimError("jacobi_cn：|k| 须 < 1，得到 %r" % (k,))
++    return math.cos(_jacobi_amplitude(u, k, math.sqrt(1.0 - k * k), iters))
++
++
++#: 单摆振幅物理域上界（度）；±180° 分离点单独拒绝。
++PENDULUM_EXACT_MAX_DEG = 180.0
++#: 多振幅独立 RK4 回归样本误差门槛（rad），不是全域浮点误差上界。
++PENDULUM_EXACT_MAX_ERR = 1e-11
+ 
+ 
+ def pendulum_exact_angle(theta0_rad, omega0, t):
+-    """椭圆函数解 `θ(t) = 2·asin(k·cn(ω0 t, k))`，`k = sin(θ0/2)`。
++    """释放初速为零的精确解 `θ(t) = 2·asin(k·sn(K−ω0 t,k))`。
+ 
+-    ⚠ **实测有效域 |θ0| <= 5°**：域内与独立 RK4 一致到 4.0e-05 rad；域外偏差迅速变大
+-    （30°→7.0e-03、60°→5.8e-02、120°→5.3e-01 rad）。按 fail-closed：超出即 raise，
+-    **不把近似当精确**。权威实现在 `lingshu.world.physics`（此处为桥侧最小副本，公式一字不差）。
++    保留 `k'=cos(θ0/2)`；稳定 AGM 降变换及 atan2 回读避免临近 ±π 的精度损失。
++    与上游 physics 同式但保持桥侧纯标准库；大时间仍受浮点相位约减精度限制。
+     """
+-    k = math.sin(0.5 * float(theta0_rad))
+-    if abs(k) >= 1.0:
+-        raise AnimError("pendulum_exact_angle：|sin(θ0/2)| 须 < 1（θ0 不能恰好 ±180°）")
+-    if math.degrees(abs(float(theta0_rad))) > PENDULUM_EXACT_MAX_DEG:
+-        raise AnimError(
+-            "pendulum_exact_angle：|θ0|=%.2f° 超出已实测有效域 %.1f°（域内 vs RK4 最大偏差 %.1e rad；"
+-            "30°/60°/120° 实测 7.0e-03/5.8e-02/5.3e-01）—— 按 fail-closed 拒绝，不把近似当精确"
+-            % (math.degrees(abs(float(theta0_rad))), PENDULUM_EXACT_MAX_DEG, PENDULUM_EXACT_MAX_ERR))
+-    if k == 0.0:
+-        return 0.0
+-    return 2.0 * math.asin(k * _jacobi_cn(float(omega0) * float(t), k))
++    for name, value in (("theta0_rad", theta0_rad), ("omega0", omega0), ("t", t)):
++        if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(float(value)):
++            raise AnimError("pendulum_exact_angle：%s 须为有限数，得到 %r" % (name, value))
++    theta0, omega0, t = float(theta0_rad), float(omega0), float(t)
++    if abs(theta0) >= math.pi:
++        raise AnimError("pendulum_exact_angle：|theta0_rad| 须 < π")
++    u = omega0 * t
++    if not math.isfinite(u):
++        raise AnimError("pendulum_exact_angle：omega0*t 须为有限数")
++    if theta0 == 0.0 or u == 0.0:
++        return theta0
++    k = math.sin(0.5 * theta0)
++    complementary = math.cos(0.5 * theta0)
++    quarter = math.pi / (2.0 * _agm(1.0, complementary))
++    phase = abs(math.remainder(u, 4.0 * quarter))
++    direction = 1.0 if phase <= quarter else -1.0
++    shifted_u = abs(quarter - phase)
++    phi = _jacobi_amplitude(shifted_u, k, complementary, stable=True)
++    sn, cn = math.sin(phi), math.cos(phi)
++    return direction * 2.0 * math.atan2(k * sn, math.hypot(complementary, k * cn))
+ 
+ 
+ def _projectile_state(m, t, where="motion"):
+@@ -581,7 +598,10 @@ def pendulum_truth(m, where="motion"):
+     out = {"omega0": w, "theta0_rad": theta0, "zeta": z,
+            "period_small_angle": small, "k": k}
+     if k > 0.0:
+-        exact = 4.0 * elliptic_k(k) / w
++        if abs(theta0) < math.pi:
++            exact = 2.0 * math.pi / (_agm(1.0, math.cos(0.5 * theta0)) * w)
++        else:
++            exact = 4.0 * elliptic_k(k) / w
+         out["period_exact_elliptic"] = exact
+         out["small_angle_error_pct"] = (small - exact) / exact * 100.0
+     return out
+@@ -751,7 +771,7 @@ def eval_at(spec, frame, motions=None):
+ 
+     纯函数：同一 (spec, frame) 恒得同一结果；不依赖 Blender / numpy / 时钟 / 文件系统。
+     `motions` 给物理运动声明（`projectile` / `spring` / `pendulum`）；不给则读 spec 顶层的
+-    `"motions"` 键（该键不在冻结契约里，`normalize_spec` 会静默丢掉，故在此**先取后规范化**）。
++    `"motions"` 键（该键由动画层从副本摘出，冻结的规格校验仍严格拒绝其他未知字段）。
+     """
+     mm = _motions_by_link(spec, motions)
+     nspec = normalize(spec)
+diff --git a/docs/intake/body-export-v0.1/_export_manifest.json b/docs/intake/body-export-v0.1/_export_manifest.json
+index ee42e31..1002f43 100644
+--- a/docs/intake/body-export-v0.1/_export_manifest.json
++++ b/docs/intake/body-export-v0.1/_export_manifest.json
+@@ -1278,7 +1278,7 @@
+ 
+ 
+ 
+-     "sha256": "fa755466da9a4bab"
++     "sha256": "261f48459c03bdd2"
+ 
+ 
+ 
+@@ -5294,7 +5294,7 @@
+ 
+ 
+ 
+-     "sha256": "4b67f6109ebf62eb",
++     "sha256": "07ed97c044399d6d",
+ 
+ 
+ 
+@@ -5790,7 +5790,7 @@
+ 
+ 
+ 
+-     "sha256": "68e10ba7f880f9ae",
++     "sha256": "88d7df98aeace5d7",
+ 
+ 
+ 
+@@ -6574,7 +6574,7 @@
+ 
+ 
+ 
+-     "sha256": "8a4a5e501a92a4b1",
++     "sha256": "e1b21e3b7e74cbdd",
+ 
+ 
+ 
+diff --git a/lingshu/core/core.py b/lingshu/core/core.py
+index 7770614..e939d46 100644
+--- a/lingshu/core/core.py
++++ b/lingshu/core/core.py
+@@ -5298,6 +5298,8 @@ class LayeredStore:
+         # 不指参数名。同文件 `search_content` 早有 `"search_content 的 query 必须是
+         # 字符串"` 闸（#1396 类型闸族同款纪律），本方法零闸属同族漏网。修法同款
+         # fail-loud；空串/纯空白保持既有「列出前 100 张」语义（不改为报错）。
++        # #658 / #1795：与其它检索切片入口一致，None/负数表示全量，0 表示空。
++        limit = _normalize_limit(limit)
+         if not isinstance(query, str):
+             raise TypeError("search_skills 的 query 必须是字符串，收到 %r"
+                             % (type(query).__name__,))
+diff --git a/lingshu/core/longterm_gate.py b/lingshu/core/longterm_gate.py
+index 846a160..f60ebad 100644
+--- a/lingshu/core/longterm_gate.py
++++ b/lingshu/core/longterm_gate.py
+@@ -51,6 +51,8 @@ class LongTermMemoryGate:
+         # 全库核心词表缓存（lingshu #389）：按 (节点数, max rowid) 签名失效。
+         self._known_cache = None
+         self._known_sig = None
++        # 追加增量判定：旧 rowid 的正文摘要；用于识别「原地改写 + 同期追加」。
++        self._known_row_digests = None
+         # #770②：正文总长另存一份——签名第三项已改为**内容指纹**，而增量分支的
+         # 第三条门槛仍是「正文总长增加」（口径同改前的 `SUM(LENGTH(content))`，
+         # 只对 str 正文计数），故长度单独保留。
+@@ -217,9 +219,9 @@ class LongTermMemoryGate:
+         """按库签名缓存全库核心词表，返回 (union, counts, per_node, sig)。
+ 
+         签名 = (节点数, max(rowid), 正文内容指纹)。签名未变 → 直接复用；
+-        **仅追加**（旧行逐行摘要逐位不变、且新增行 rowid 全大于旧 max）→ 只切
+-        新增行并增量并入（#389 的实际工作负载是「每条外部输入都写一个节点」，
+-        全量重建会让缓存形同虚设）；其余情形（删除/改写/清空）→ 全量重建。
++        **仅追加**（旧 rowid 的摘要逐位不变、新增行 rowid 全大于旧 max，且计数/旧 id
++        证明成立）→ 只切新增行并增量并入（#389 的实际工作负载是「每条外部输入都写
++        一个节点」，全量重建会让缓存形同虚设）；其余情形（删除/改写/清空）→ 全量重建。
+ 
+         #770②：签名第三项由 `SUM(LENGTH(content))` 改为**正文内容指纹**
+         （逐行 `(rowid, 摘要)` 折叠成 8 字节整数）——长度对**等长原地改写**不
+@@ -228,23 +230,19 @@ class LongTermMemoryGate:
+         `(int, int, int)` 三元组（调用方与既有测试按三元组解包，形制不变）。
+         #770② 把「签名相等」的有效性判据换成了内容指纹；增量分支的三条「更多」
+         门槛（节点数增 ∧ max(rowid) 增 ∧ 正文总长增，总长另存于
+-        `_known_total_len`）逐字保留。
++        `_known_total_len`）逐字保留。另比对缓存的旧 rowid 摘要；有任一变化即完整重建，
++        不会在旧行原地改写后又追加节点时复用陈旧 gram。
+ 
+         #462（增量分支补「无删除」证明）：三条门槛只证明总量变大，**不证明没有
+         删除**——删 1 增 2 时三项全增，旧实现直接增量并入，被删节点的 core grams
+         永远留在参考集 ⇒ 被遗忘内容再出现时 `_novelty` 算 1.0→0.0、`evaluate`
+-        从 knowledge 掉到 context。现要求两道证明同时成立才增量：
++        从 knowledge 掉到 context。现要求三道证明同时成立才增量：
+           ① 计数平衡：`old_cnt + len(rowid > old_max 的行) == 现节点数`。同 id
+              覆盖写（INSERT OR REPLACE 换 rowid）也会使该式不成立 ⇒ 全量重建；
+           ② 旧 id 一个不少：`per_node` 的键集合 ⊆ 本次扫描的存活 id 集合。删除
+              最大 rowid 的行后 SQLite 会复用该 rowid，①可被误判通过，②兜住。
++          ③ 旧 rowid 的摘要逐位不变。原地改写虽保留 rowid，但摘要变化会阻止增量复用。
+         任一不成立 ⇒ 落到下方全量重建（缓存被整条替换，不留陈旧 gram）。
+-
+-        已知残留（如实标注 · 未覆盖面）：**等长/变长的原地新增式改写 ∧ 同期追加
+-        节点**（`UPDATE nodes SET content=...` 保持同 rowid，同时插入新行把三项
+-        门槛抬高）——①计数平衡与②id 存在性都成立，仍会走增量、复用被改写行的
+-        陈旧 gram。检测它需要逐行比对旧行摘要（旧缓存未存每行摘要），属另一次
+-        改动面；本件不夹带。
+         代价（如实标注）：判缓存有效性需逐行读 `rowid, id, content`（游标**惰性
+         迭代**，不 fetchall）并逐行取摘要 —— 相比旧实现的一条聚合 SQL，每次
+         调用多一趟 O(全库正文) 顺序读 + 摘要；省下的是 `_core_grams` 的正则切分
+@@ -259,6 +257,7 @@ class LongTermMemoryGate:
+         # #462：同趟顺带收集存活 id 集合——增量分支用它证明「旧节点一个没少」
+         # （见下方 ②）。不额外扫表，不改变签名口径。
+         live_ids = set()
++        row_digests = {}
+         for rid, nid, content in self.engine.store.conn.execute(
+                 "SELECT rowid, id, content FROM nodes ORDER BY rowid"):
+             rid = int(rid)
+@@ -266,7 +265,9 @@ class LongTermMemoryGate:
+             max_rid = rid
+             live_ids.add(str(nid))
+             total_len += len(content) if isinstance(content, str) else 0
+-            h.update(b"%d:%d;" % (rid, self._row_digest(content)))
++            digest = self._row_digest(content)
++            row_digests[rid] = digest
++            h.update(b"%d:%d;" % (rid, digest))
+         sig = (cnt, max_rid, int.from_bytes(h.digest(), "big"))
+         cache = self._known_cache
+         if cache is not None and self._known_sig == sig:
+@@ -277,18 +278,26 @@ class LongTermMemoryGate:
+             old_cnt, old_max = self._known_sig[0], self._known_sig[1]
+             old_len = self._known_total_len
+             if sig[0] > old_cnt and sig[1] > old_max and total_len > old_len:
++                old_row_digests = self._known_row_digests or {}
++                unchanged_old_rows = all(
++                    row_digests.get(rid) == digest
++                    for rid, digest in old_row_digests.items()
++                )
+                 rows = self.engine.store.conn.execute(
+                     "SELECT id, content FROM nodes WHERE rowid > ?", (old_max,)
+                 ).fetchall()
+                 # #462：三项「更多」只证明总量变大，**不证明没有删除**——删 1 增 ≥2
+                 # 时节点数照样增加，被删节点不在 `rowid > old_max` 的新行里，增量
+                 # 并入会把它的核心词永久留在参考集（新奇度算 0，写入层级掉档）。
+-                # 两道证明都通过才允许增量：
++                # 三道证明都通过才允许增量：
+                 #   ① 计数平衡：旧节点数 + 新增行数 == 现节点数。同 id 覆盖写
+                 #      （INSERT OR REPLACE 换 rowid）会使该式不成立 ⇒ 全量重建；
+                 #   ② 旧 id 一个不少：`per_node` 的键集合 ⊆ 现存 id。删除最大
+                 #      rowid 的行后，SQLite 会复用该 rowid，①会误判通过，②兜住。
+-                if (old_cnt + len(rows) == sig[0]
++                #   ③ 每个旧 rowid 的摘要逐位不变；否则「原地改写 + 同期追加」会把
++                #      改写前的 gram 留在缓存、漏掉改写后的 gram（#770 残留形态）。
++                if (unchanged_old_rows
++                        and old_cnt + len(rows) == sig[0]
+                         and set(cache["per_node"]) <= live_ids):
+                     union, counts, per_node = (cache["union"], cache["counts"],
+                                                cache["per_node"])
+@@ -300,6 +309,7 @@ class LongTermMemoryGate:
+                             counts[g] = counts.get(g, 0) + 1
+                     self._known_sig = sig
+                     self._known_total_len = total_len
++                    self._known_row_digests = row_digests
+                     return union, counts, per_node, sig
+         rows = self.engine.store.conn.execute(
+             "SELECT id, content FROM nodes").fetchall()
+@@ -313,6 +323,7 @@ class LongTermMemoryGate:
+         self._known_cache = {"union": union, "counts": counts, "per_node": per_node}
+         self._known_sig = sig
+         self._known_total_len = total_len
++        self._known_row_digests = row_digests
+         return union, counts, per_node, sig
+ 
+     @staticmethod
+diff --git a/lingshu/nn/hex_cnn.py b/lingshu/nn/hex_cnn.py
+index 6d93122..86e0d16 100644
+--- a/lingshu/nn/hex_cnn.py
++++ b/lingshu/nn/hex_cnn.py
+@@ -70,16 +70,25 @@ class HexGrid:
+         return (x, y)
+ 
+     def pixel_to_cell(self, x: float, y: float) -> Tuple[int, int]:
+-        """像素 → 最近 cell（axial round：立方坐标四舍五入）。"""
++        """像素 → 最近 cell（axial 用立方坐标舍入；odd-r 比较相邻两行的中心距离）。"""
+         ox, oy = self.origin
+         x_ = x - ox
+         y_ = y - oy
+         if self.mode == "odd_r_offset":
+-            # 奇偶错行逆变换：先定行 r（y 与 q 无关），再按该行错位回解 q
++            # y 最近行未必是离点最近的格心：相邻错行的水平偏移能抵消一部分
++            # 竖直距离。只需比较 y 对应的下/上相邻行，并在每行取最近的 q。
+             rf = (2.0 / 3.0 * y_) / self.size
+-            r = int(round(rf))
+-            qf = (x_ / (self.size * math.sqrt(3))) - 0.5 * (r % 2)
+-            return self._axial_round(qf, float(r))
++            row_lo = math.floor(rf)
++            row_hi = math.ceil(rf)
++            candidates = []
++            for r in sorted({row_lo, row_hi}):
++                qf = (x_ / (self.size * math.sqrt(3))) - 0.5 * (r % 2)
++                q = int(round(qf))
++                cx, cy = self.center_px(q, r)
++                dist2 = (cx - x) ** 2 + (cy - y) ** 2
++                candidates.append((dist2, r, q))
++            _, r, q = min(candidates)
++            return (q, r)
+         # 逆变换到轴向浮点
+         qf = (math.sqrt(3) / 3 * x_ - y_ / 3.0) / self.size
+         rf = (2.0 / 3.0 * y_) / self.size
+diff --git a/lingshu/vision/lineart.py b/lingshu/vision/lineart.py
+index c658a1f..96dd0f9 100644
+--- a/lingshu/vision/lineart.py
++++ b/lingshu/vision/lineart.py
+@@ -12,9 +12,8 @@
+ 画面一换（线条密度变）就失真。mean + std 只跟响应的统计量走，细线也能留下来
+ ——这是本模块选它的唯一原因。
+ 
+-输出口径
+---------
+-灰度 L 图：背景 255（白）、线条 0（黑）。white_bg=False 时反相。
++输入透明度在白底上合成后再检测；输出灰度 L 图：背景 255（白）、线条 0（黑）。
++white_bg=False 时反相。
+ 
+ 对外接口
+ --------
+@@ -34,7 +33,7 @@ _THR_FLOOR = 40.0
+ 
+ 
+ def _luma(arr: np.ndarray) -> np.ndarray:
+-    """RGB(A) → 亮度；已是二维灰度则原样返回。"""
++    """RGB → 亮度；已是二维灰度则原样返回。"""
+     if arr.ndim == 2:
+         return arr.astype(np.float64)
+     rgb = arr[..., :3].astype(np.float64)
+@@ -51,7 +50,14 @@ def darkline(img: Image.Image, thr_mult: float = 1.5, white_bg: bool = True) ->
+     · 阈值随图走：thr = max(_THR_FLOOR, mag.mean() + mag.std()*thr_mult)。
+     · 纯二值输出：像素只可能是 0 或 255——线稿要能直接描摹。
+     """
+-    a = np.asarray(img.convert("RGB"))
++    if img.mode in ("RGBA", "RGBa", "LA", "La", "PA") or "transparency" in img.info:
++        source = img.convert("LA") if img.mode == "La" else img
++        rgba = source.convert("RGBA")
++        white = Image.new("RGBA", img.size, (255, 255, 255, 255))
++        visible = Image.alpha_composite(white, rgba).convert("RGB")
++    else:
++        visible = img.convert("RGB")
++    a = np.asarray(visible)
+     gray = _luma(a)
+     h, w = gray.shape
+ 
+diff --git a/lingshu/world/motion_groups.py b/lingshu/world/motion_groups.py
+index 89e6fe6..5eef920 100644
+--- a/lingshu/world/motion_groups.py
++++ b/lingshu/world/motion_groups.py
+@@ -39,6 +39,7 @@ actual 恒为 False，不写回观测历史。高度取已观测锚点的 y 加
+ from __future__ import annotations
+ 
+ import hashlib
++import json
+ import math
+ 
+ 
+@@ -74,9 +75,20 @@ def _frames(records) -> dict:
+ 
+ 
+ def _group_id(members: list) -> str:
+-    """组标识只由成员集合决定，与观测顺序、窗口无关。"""
+-    digest = hashlib.sha1("|".join(members).encode("utf-8")).hexdigest()
+-    return "mg_" + digest[:12]
++    """组标识只由成员集合决定，与观测顺序、窗口无关。
++
++    普通名称保留已有标识；名称含分隔符时用 JSON 数组编码与独立 v2 前缀，
++    避免不同成员划分或旧格式名称恰好拼成 JSON 时产生确定性别名。
++    这不是鉴权标识，也不承诺截断哈希不存在一般碰撞。
++    """
++    if any("|" in eid for eid in members):
++        encoded = json.dumps(members, ensure_ascii=True, separators=(",", ":"))
++        prefix = "mg_v2_"
++    else:
++        encoded = "|".join(members)
++        prefix = "mg_"
++    digest = hashlib.sha1(encoded.encode("utf-8")).hexdigest()
++    return prefix + digest[:12]
+ 
+ 
+ def _pair_evidence(frames, ticks, a, b, tol_pos, min_samples, min_speed):
+diff --git a/lingshu/world/physics.py b/lingshu/world/physics.py
+index 30bd4df..79e4d80 100644
+--- a/lingshu/world/physics.py
++++ b/lingshu/world/physics.py
+@@ -1690,6 +1690,9 @@ def _box_frame(box):
+         if n <= _EPS:
+             raise PhysicsError("box['rot'] 出现零行（不是基），得到 %r" % (r,))
+         axes.append(vscale(v, 1.0 / n))          # 归一化后再投影（对非正交矩阵也自洽）
++    volume = abs(vdot(axes[0], vcross(axes[1], axes[2])))
++    if volume <= _SAT_DEGENERATE:
++        raise PhysicsError("box['rot'] 三行须线性无关，组成三维箱体基")
+     return center, half, tuple(axes)
+ 
+ 
+@@ -1792,7 +1795,7 @@ def obb_of(points=None, *, aabb=None, rot=None):
+     """点集（或已有 AABB）+ 旋转 ⇒ OBB `{"center","half","rot"}`。
+ 
+     `rot=None` ⇒ 轴对齐（等价 AABB）。`rot` 为 3x3 行主序矩阵（行 = 箱体局部轴）。
+-    ⚠ 边界：SAT 对**凸**体成立；行不要求严格正交，但会**归一化**后使用（见 `_box_frame`）。
++    ⚠ 边界：SAT 对**凸**体成立；行不要求严格正交，但须线性无关、张成三维，再归一化使用。
+     """
+     if aabb is None:
+         if points is None:
+@@ -1813,12 +1816,16 @@ def obb_of(points=None, *, aabb=None, rot=None):
+ 
+ 
+ def _sat_axes(A, B):
+-    """SAT 候选轴：A 的 3 轴 + B 的 3 轴 + 9 条叉积轴（退化轴跳过），全部单位化。"""
++    """SAT 候选轴：两箱各 3 个面法线 + 9 条边叉积轴，全部单位化。"""
+     _ca, _ha, ax = A
+     _cb, _hb, bx = B
+     out = []
+-    for v in list(ax) + list(bx):
+-        out.append(v)                                   # 已是单位轴
++    for edges in (ax, bx):
++        for i, j in ((1, 2), (2, 0), (0, 1)):
++            normal = vcross(edges[i], edges[j])
++            length = vlen(normal)
++            if length > _SAT_DEGENERATE:
++                out.append(vscale(normal, 1.0 / length))
+     for u in ax:
+         for v in bx:
+             c = vcross(u, v)
+@@ -1853,7 +1860,7 @@ def _sat_report(a, b):
+ 
+ 
+ def obb_overlap(a, b):
+-    """OBB 相交判定：**SAT 15 轴**（A 的 3 / B 的 3 / 9 条叉积轴；叉积退化跳过）。
++    """凸平行六面体相交判定：**SAT 15 轴**（每箱 3 个面法线 + 9 条边叉积轴）。
+ 
+     ⚠ 凸体才有分离轴定理；OBB 是凸的 ⇒ 成立。**贴着不算重叠**（`sep >= 0` ⇒ 不相交）。
+     """
+@@ -2591,13 +2598,10 @@ def elliptic_k(k):
+     return math.pi / (2.0 * agm(1.0, math.sqrt(1.0 - k * k)))
+ 
+ 
+-def jacobi_cn(u, k, iters=24):
+-    """Jacobi `cn(u, k)`（AGM / Landen 降变换，A&S 16.4）—— 大角摆精确解要用它。"""
+-    k = float(k)
+-    if abs(k) >= 1.0:
+-        raise PhysicsError("jacobi_cn：|k| 须 < 1，得到 %r" % (k,))
++def _jacobi_amplitude(u, k, complementary_modulus, iters=24, stable=False):
++    """AGM amplitude with an explicit complementary modulus (DLMF 22.20.1–4)."""
+     a = [1.0]
+-    b = [math.sqrt(1.0 - k * k)]
++    b = [complementary_modulus]
+     c = [k]
+     n = 0
+     while abs(c[n]) > 1e-15 and n < iters:
+@@ -2607,44 +2611,67 @@ def jacobi_cn(u, k, iters=24):
+         n += 1
+     phi = (2.0 ** n) * a[n] * float(u)
+     for i in range(n - 1, -1, -1):
+-        s = c[i + 1] / a[i + 1] * math.sin(phi)
+-        s = 1.0 if s > 1.0 else (-1.0 if s < -1.0 else s)
+-        phi = 0.5 * (phi + math.asin(s))
+-    return math.cos(phi)
++        if stable:
++            # a²-c²=b²: atan2 avoids asin losing precision when c/a rounds to 1.
++            correction = math.atan2(c[i + 1] * math.sin(phi),
++                                    math.hypot(b[i + 1], c[i + 1] * math.cos(phi)))
++        else:
++            s = c[i + 1] / a[i + 1] * math.sin(phi)
++            s = 1.0 if s > 1.0 else (-1.0 if s < -1.0 else s)
++            correction = math.asin(s)
++        phi = 0.5 * (phi + correction)
++    return phi
+ 
+ 
+-#: `pendulum_exact_angle` 的**已实测有效域**（度）。超出即 `PhysicsError`，不给"近似当精确"。
+-PENDULUM_EXACT_MAX_DEG = 5.0
+-#: 该有效域内的实测最大偏差（rad，vs 独立 RK4 @dt=1/16384s）—— 见 `_det/gate_physics.py` P4
+-PENDULUM_EXACT_MAX_ERR = 3.7e-05
++def jacobi_cn(u, k, iters=24):
++    """Jacobi `cn(u, k)`（AGM / Landen 降变换，A&S 16.4）。"""
++    k = float(k)
++    if abs(k) >= 1.0:
++        raise PhysicsError("jacobi_cn：|k| 须 < 1，得到 %r" % (k,))
++    return math.cos(_jacobi_amplitude(u, k, math.sqrt(1.0 - k * k), iters))
++
++
++#: `pendulum_exact_angle` 的默认振幅上界（度）；180° 处 k=1 的奇点单独拒绝。
++PENDULUM_EXACT_MAX_DEG = 180.0
++#: 多振幅独立 RK4 回归样本的绝对误差门槛（rad），不是全域浮点误差上界。
++PENDULUM_EXACT_MAX_ERR = 1e-11
+ 
+ 
+ def pendulum_exact_angle(theta0_rad, omega0, t, tol_deg=PENDULUM_EXACT_MAX_DEG):
+-    """**大角单摆的椭圆函数解**：`θ(t) = 2·asin(k·cn(ω0·t, k))`，`k = sin(θ0/2)`。
+-
+-    ⚠ **实测诚实边界（本函数最要紧的一行）**：我实现的 `jacobi_cn`（AGM/Landen 降变换）
+-    在 θ0 ≤ 5° 时与独立 RK4 一致到 **3.7e-05 rad**；但**振幅一大就散**：
+-        θ0 = 30° → 7.0e-03 rad；60° → 5.8e-02 rad；120° → **5.3e-01 rad**
+-    （原始读数在 `_evidence/factory/raw/gate-physics.json` 的 P4）。
+-    按本桥 fail-closed 纪律：**不把"近似"当"精确"用** —— 超过 `tol_deg` 直接 `PhysicsError`，
+-    而不是悄悄返回一个错的波形。要更大振幅的精确波形，得先修 `jacobi_cn`（Landen 递推的
+-    索引/初值仍需打磨），**这是已知缺陷，不是已知特性**。
+-    精确**周期**（`pendulum_truth` 的椭圆积分闭式）不受影响：它只用到 `elliptic_k`，
+-    与闭式复算差异 0.0e+00，且与周期定义自洽。
++    """**单摆精确椭圆函数解**：`θ(t) = 2·asin(k·cn(u,k)/dn(u,k))`，
++    其中 `k = sin(θ0/2)`、`u = ω0·t`。
++
++    释放初速为零；`tol_deg` 可显式收紧振幅上界，物理域始终为 |θ0|<π。
++    使用等价的 `sn(K-u,k)` 形式，且直接保留 `k'=cos(θ0/2)`，避免临近分离点时
++    从 `sqrt(1-k²)` 重建互补模而丢精度。以 atan2 回读角度，避免 asin 在 ±1 附近放大舍入。
++    参考：DLMF 22.19.2、22.4.3 与 22.20.1–4。`PENDULUM_EXACT_MAX_ERR` 只描述回归样本门槛；
++    大时间的周期约减仍受输入浮点相位精度限制。
+     """
+-    k = math.sin(0.5 * float(theta0_rad))
+-    if abs(k) >= 1.0:
+-        raise PhysicsError("pendulum_exact_angle：|sin(θ0/2)| 须 < 1（θ0 不能恰好 ±180°）")
+-    if math.degrees(abs(float(theta0_rad))) > float(tol_deg):
++    theta0 = _finite_num(theta0_rad, "theta0_rad")
++    omega0 = _finite_num(omega0, "omega0")
++    t = _finite_num(t, "t")
++    tol_deg = _finite_num(tol_deg, "tol_deg")
++    if abs(theta0) >= math.pi:
++        raise PhysicsError("pendulum_exact_angle：|theta0_rad| 须 < π")
++    if not 0.0 <= tol_deg <= 180.0:
++        raise PhysicsError("pendulum_exact_angle：tol_deg 须在 [0,180] 内")
++    if math.degrees(abs(theta0)) > tol_deg:
+         raise PhysicsError(
+-            "pendulum_exact_angle：|θ0|=%.2f° 超出已实测有效域 %.1f°。"
+-            "实测偏差 vs RK4：5°→3.7e-05 rad、30°→7.0e-03、60°→5.8e-02、120°→5.3e-01 —— "
+-            "大振幅下 jacobi_cn 的 Landen 递推不达标，按 fail-closed 拒绝（不把近似当精确）。"
+-            "该振幅请用 decay_envelope 的小角/阻尼解析解，或先用 RK4 参考。"
+-            % (math.degrees(abs(float(theta0_rad))), float(tol_deg)))
+-    if k == 0.0:
+-        return 0.0
+-    return 2.0 * math.asin(k * jacobi_cn(float(omega0) * float(t), k))
++            "pendulum_exact_angle：|θ0|=%.2f° 超出调用者设置的有效域 %.1f°。"
++            "请显式选择 tol_deg 以限制调用振幅。"
++            % (math.degrees(abs(theta0)), tol_deg))
++    u = _finite_num(omega0 * t, "omega0*t")
++    if theta0 == 0.0 or u == 0.0:
++        return theta0
++    k = math.sin(0.5 * theta0)
++    complementary = math.cos(0.5 * theta0)
++    quarter = math.pi / (2.0 * agm(1.0, complementary))
++    phase = abs(math.remainder(u, 4.0 * quarter))
++    direction = 1.0 if phase <= quarter else -1.0
++    shifted_u = abs(quarter - phase)
++    phi = _jacobi_amplitude(shifted_u, k, complementary, stable=True)
++    sn, cn = math.sin(phi), math.cos(phi)
++    return direction * 2.0 * math.atan2(k * sn, math.hypot(complementary, k * cn))
+ 
+ 
+ def pendulum_truth(decl, where="motion"):
+@@ -2666,7 +2693,10 @@ def pendulum_truth(decl, where="motion"):
+     out = {"omega0": w, "theta0_rad": theta0, "zeta": z,
+            "period_small_angle": small, "k": k}
+     if k > 0.0:
+-        exact = 4.0 * elliptic_k(k) / w
++        if abs(theta0) < math.pi:
++            exact = 2.0 * math.pi / (w * agm(1.0, math.cos(0.5 * theta0)))
++        else:
++            exact = 4.0 * elliptic_k(k) / w
+         out["period_exact_elliptic"] = exact
+         out["small_angle_error_pct"] = (small - exact) / exact * 100.0
+     if z > 0.0:
+diff --git a/tests/fixtures/bridge_pendulum_release_mutations.json b/tests/fixtures/bridge_pendulum_release_mutations.json
+new file mode 100644
+index 0000000..e20ca1b
+--- /dev/null
++++ b/tests/fixtures/bridge_pendulum_release_mutations.json
+@@ -0,0 +1,98 @@
++{
++  "guard": "tests/test_bridge_pendulum_release_solution.py",
++  "total": 8,
++  "sources": [
++    "bridges/blender/wm_bridge/__init__.py",
++    "bridges/blender/wm_bridge/factory/anim/eval.py",
++    "bridges/blender/wm_bridge/factory/geo/spec.py"
++  ],
++  "baseline_failures": [
++    "test_exact_motion_eval_matches_independent_rk4",
++    "test_small_amplitude_exact_motion_uses_release_formula",
++    "test_near_separatrix_motion_validates_and_keeps_quarter_phase",
++    "test_near_separatrix_motion_matches_frozen_80_digit_reference",
++    "test_exact_motion_input_errors_remain_anim_errors",
++    "test_exact_motion_preserves_input_offset_and_length_path",
++    "test_bridge_exact_motion_imports_without_optional_dependencies"
++  ],
++  "mutations": [
++    {
++      "name": "drop_release_dn_factor",
++      "test": "test_small_amplitude_exact_motion_uses_release_formula",
++      "assertion": "bridge release formula must include the dn factor",
++      "changes": [
++        {
++          "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
++          "method": "pendulum_exact_angle",
++          "old": "return direction * 2.0 * math.atan2(k * sn, math.hypot(complementary, k * cn))",
++          "new": "return 2.0 * math.asin(k * _jacobi_cn(u, k))"
++        }
++      ]
++    },
++    {
++      "name": "restore_five_degree_gate",
++      "test": "test_near_separatrix_motion_validates_and_keeps_quarter_phase",
++      "assertion": "bridge near-separatrix motion must validate",
++      "changes": [
++        {
++          "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
++          "method": "pendulum_exact_angle",
++          "old": "if abs(theta0) >= math.pi:",
++          "new": "if abs(theta0) > math.radians(5.0):"
++        }
++      ]
++    },
++    {
++      "name": "reconstruct_complement_from_rounded_k",
++      "test": "test_near_separatrix_motion_validates_and_keeps_quarter_phase",
++      "assertion": "bridge complementary modulus must retain quarter phase",
++      "changes": [
++        {
++          "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
++          "method": "pendulum_exact_angle",
++          "old": "complementary = math.cos(0.5 * theta0)",
++          "new": "complementary = math.sqrt(max(0.0, 1.0 - k * k))"
++        }
++      ]
++    },
++    {
++      "name": "unstable_amplitude_descent",
++      "test": "test_near_separatrix_motion_matches_frozen_80_digit_reference",
++      "assertion": "bridge stable descent must match high-precision reference",
++      "changes": [
++        {
++          "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
++          "method": "pendulum_exact_angle",
++          "old": "stable=True",
++          "new": "stable=False"
++        }
++      ]
++    },
++    {
++      "name": "rounded_k_truth_period",
++      "test": "test_near_separatrix_motion_validates_and_keeps_quarter_phase",
++      "assertion": "bridge near-separatrix motion must validate",
++      "changes": [
++        {
++          "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
++          "method": "pendulum_truth",
++          "old": "if abs(theta0) < math.pi:",
++          "new": "if False:"
++        }
++      ]
++    },
++    {
++      "name": "accept_damped_exact_motion",
++      "test": "test_exact_motion_still_rejects_damping",
++      "assertion": "DID NOT RAISE",
++      "changes": [
++        {
++          "file": "bridges/blender/wm_bridge/factory/anim/eval.py",
++          "method": "_scalar_of",
++          "old": "if z != 0.0:",
++          "new": "if False:"
++        }
++      ]
++    }
++  ]
++}
+diff --git a/tests/fixtures/bridge_top_level_motions_mutations.json b/tests/fixtures/bridge_top_level_motions_mutations.json
+new file mode 100644
+index 0000000..a7f8cf5
+--- /dev/null
++++ b/tests/fixtures/bridge_top_level_motions_mutations.json
+@@ -0,0 +1,83 @@
++{
++  "guard": "tests/test_bridge_top_level_motions.py",
++  "total": 30,
++  "sources": [
++    "bridges/blender/wm_bridge/__init__.py",
++    "bridges/blender/wm_bridge/factory/anim/eval.py",
++    "bridges/blender/wm_bridge/factory/geo/spec.py",
++    "bridges/blender/wm_bridge/geom.py",
++    "bridges/blender/wm_bridge/oracle.py",
++    "bridges/blender/wm_bridge/contract.py"
++  ],
++  "baseline_failures": [
++    "test_top_level_motions_match_explicit_public_path[eval_at-spring]",
++    "test_top_level_motions_match_explicit_public_path[eval_at-pendulum]",
++    "test_top_level_motions_match_explicit_public_path[eval_at-projectile]",
++    "test_top_level_motions_match_explicit_public_path[eval_link-spring]",
++    "test_top_level_motions_match_explicit_public_path[eval_link-pendulum]",
++    "test_top_level_motions_match_explicit_public_path[eval_link-projectile]",
++    "test_top_level_motions_match_explicit_public_path[eval_frames-spring]",
++    "test_top_level_motions_match_explicit_public_path[eval_frames-pendulum]",
++    "test_top_level_motions_match_explicit_public_path[eval_frames-projectile]",
++    "test_top_level_motions_match_explicit_public_path[to_oracle_records-spring]",
++    "test_top_level_motions_match_explicit_public_path[to_oracle_records-pendulum]",
++    "test_top_level_motions_match_explicit_public_path[to_oracle_records-projectile]",
++    "test_top_level_motions_match_explicit_public_path[tracks_to_oracle_doc-spring]",
++    "test_top_level_motions_match_explicit_public_path[tracks_to_oracle_doc-pendulum]",
++    "test_top_level_motions_match_explicit_public_path[tracks_to_oracle_doc-projectile]",
++    "test_normalize_removes_only_animation_extension",
++    "test_normalize_does_not_modify_caller_input",
++    "test_explicit_motions_override_top_level_declarations",
++    "test_explicit_empty_motions_disable_top_level_motion",
++    "test_optional_empty_top_level_motion_keeps_static_behavior[none]",
++    "test_optional_empty_top_level_motion_keeps_static_behavior[empty]",
++    "test_explicit_parameter_can_override_invalid_top_level_motion",
++    "test_normalized_tuple_ease_keys_remain_accepted"
++  ],
++  "mutations": [
++    {
++      "name": "keep_extension_in_geometry_spec",
++      "test": "test_top_level_motions_match_explicit_public_path[eval_at-spring]",
++      "assertion": "top-level motions must reach animation evaluation",
++      "changes": [{"file": "bridges/blender/wm_bridge/factory/anim/eval.py", "method": "normalize",
++                   "old": "geometry_spec.pop(\"motions\", None)", "new": "geometry_spec.get(\"motions\", None)"}]
++    },
++    {
++      "name": "remove_extension_from_caller_input",
++      "test": "test_normalize_does_not_modify_caller_input",
++      "assertion": "normalization must not remove motions from caller input",
++      "changes": [{"file": "bridges/blender/wm_bridge/factory/anim/eval.py", "method": "normalize",
++                   "old": "geometry_spec = _tuples_to_lists(spec)", "new": "geometry_spec = spec"}]
++    },
++    {
++      "name": "silently_drop_all_unknown_root_keys",
++      "test": "test_other_unknown_keys_remain_rejected[root]",
++      "assertion": "DID NOT RAISE",
++      "changes": [{"file": "bridges/blender/wm_bridge/factory/anim/eval.py", "method": "normalize",
++                   "old": "geometry_spec.pop(\"motions\", None)",
++                   "new": "geometry_spec = {k: v for k, v in geometry_spec.items() if k in _spec._KEYS_SPEC}"}]
++    },
++    {
++      "name": "top_level_overrides_explicit_parameter",
++      "test": "test_explicit_motions_override_top_level_declarations",
++      "assertion": "explicit motions must take precedence over top-level declarations",
++      "changes": [{"file": "bridges/blender/wm_bridge/factory/anim/eval.py", "method": "_motions_by_link",
++                   "old": "if motions is None and isinstance(spec_raw, dict):", "new": "if isinstance(spec_raw, dict):"}]
++    },
++    {
++      "name": "empty_parameter_falls_back_to_top_level",
++      "test": "test_explicit_empty_motions_disable_top_level_motion",
++      "assertion": "explicit empty motions must disable top-level fallback",
++      "changes": [{"file": "bridges/blender/wm_bridge/factory/anim/eval.py", "method": "_motions_by_link",
++                   "old": "if motions is None and isinstance(spec_raw, dict):", "new": "if not motions and isinstance(spec_raw, dict):"}]
++    },
++    {
++      "name": "strip_nested_motions_keys",
++      "test": "test_other_unknown_keys_remain_rejected[scene]",
++      "assertion": "DID NOT RAISE",
++      "changes": [{"file": "bridges/blender/wm_bridge/factory/anim/eval.py", "method": "_tuples_to_lists",
++                   "old": "return {k: _tuples_to_lists(v) for k, v in obj.items()}",
++                   "new": "return {k: _tuples_to_lists(v) for k, v in obj.items() if k != \"motions\"}"}]
++    }
++  ]
++}
+diff --git a/tests/fixtures/hexgrid_odd_r_nearest_cell_mutations.json b/tests/fixtures/hexgrid_odd_r_nearest_cell_mutations.json
+new file mode 100644
+index 0000000..0b27122
+--- /dev/null
++++ b/tests/fixtures/hexgrid_odd_r_nearest_cell_mutations.json
+@@ -0,0 +1,29 @@
++{
++  "guard": "tests/test_hexgrid_odd_r_nearest_cell.py",
++  "total": 4,
++  "sources": [
++    "lingshu/nn/hex_cnn.py"
++  ],
++  "baseline_failures": [
++    "test_odd_r_checks_both_neighbor_rows_for_nearest_center",
++    "test_odd_r_pixel_lookup_matches_brute_force_nearby_centers[0.5-origin0]",
++    "test_odd_r_pixel_lookup_matches_brute_force_nearby_centers[1.0-origin1]",
++    "test_odd_r_pixel_lookup_matches_brute_force_nearby_centers[2.75-origin2]"
++  ],
++  "mutations": [
++    {
++      "name": "round_y_to_one_row_only",
++      "test": "test_odd_r_checks_both_neighbor_rows_for_nearest_center",
++      "assertion": "nearest odd-r center is in the adjacent staggered row",
++      "changes": [
++        {
++          "file": "lingshu/nn/hex_cnn.py",
++          "class": "HexGrid",
++          "method": "pixel_to_cell",
++          "old": "for r in sorted({row_lo, row_hi}):",
++          "new": "for r in (int(round(rf)),):"
++        }
++      ]
++    }
++  ]
++}
+diff --git a/tests/fixtures/longterm_gate_mixed_in_place_update_mutations.json b/tests/fixtures/longterm_gate_mixed_in_place_update_mutations.json
+new file mode 100644
+index 0000000..d26e0f4
+--- /dev/null
++++ b/tests/fixtures/longterm_gate_mixed_in_place_update_mutations.json
+@@ -0,0 +1,20 @@
++{
++  "guard": "tests/test_longterm_gate_mixed_in_place_update.py",
++  "total": 1,
++  "sources": ["lingshu/core/longterm_gate.py"],
++  "baseline_failures": ["test_same_row_rewrite_plus_append_rebuilds_mixed_cache"],
++  "mutations": [
++    {
++      "name": "skip_old_row_digest_check",
++      "test": "test_same_row_rewrite_plus_append_rebuilds_mixed_cache",
++      "assertion": "changed old content must force a full gram rebuild",
++      "changes": [{
++        "file": "lingshu/core/longterm_gate.py",
++        "class": "LongTermMemoryGate",
++        "method": "_known_snapshot",
++        "old": "if (unchanged_old_rows",
++        "new": "if (True"
++      }]
++    }
++  ]
++}
+diff --git a/tests/fixtures/motion_group_identifier_encoding_mutations.json b/tests/fixtures/motion_group_identifier_encoding_mutations.json
+new file mode 100644
+index 0000000..bbcc71c
+--- /dev/null
++++ b/tests/fixtures/motion_group_identifier_encoding_mutations.json
+@@ -0,0 +1,10 @@
++{
++  "guard": "tests/test_motion_group_identifier_encoding.py",
++  "total": 9,
++  "sources": ["lingshu/world/motion_groups.py"],
++  "baseline_failures": ["test_disjoint_groups_have_distinct_identifiers", "test_core_predictions_keep_group_lineage_distinct", "test_delimiter_partitions_do_not_alias[partition]", "test_delimiter_partitions_do_not_alias[empty_component]", "test_delimiter_partitions_do_not_alias[repeated_separator]"],
++  "mutations": [
++    {"name": "reuse_ambiguous_delimiter_join", "test": "test_disjoint_groups_have_distinct_identifiers", "assertion": "distinct member sets need distinct group IDs", "changes": [{"file": "lingshu/world/motion_groups.py", "method": "_group_id", "old": "if any(\"|\" in eid for eid in members):", "new": "if False:"}]},
++    {"name": "share_legacy_hash_namespace", "test": "test_structured_ids_cannot_alias_a_legacy_join", "assertion": "v2 encoding needs a separate namespace", "changes": [{"file": "lingshu/world/motion_groups.py", "method": "_group_id", "old": "prefix = \"mg_v2_\"", "new": "prefix = \"mg_\""}]}
++  ]
++}
+diff --git a/tests/fixtures/obb_nonorthogonal_sat_mutations.json b/tests/fixtures/obb_nonorthogonal_sat_mutations.json
+new file mode 100644
+index 0000000..8d0f040
+--- /dev/null
++++ b/tests/fixtures/obb_nonorthogonal_sat_mutations.json
+@@ -0,0 +1,33 @@
++{
++  "guard": "tests/test_obb_nonorthogonal_sat.py",
++  "total": 2,
++  "sources": ["lingshu/world/physics.py"],
++  "baseline_failures": [
++    "test_supported_skew_boxes_use_face_normal_separating_axis",
++    "test_non_spanning_rot_rows_are_rejected"
++  ],
++  "mutations": [
++    {
++      "name": "omit_skew_face_normals",
++      "test": "test_supported_skew_boxes_use_face_normal_separating_axis",
++      "assertion": "SAT must test each parallelepiped face normal",
++      "changes": [{
++        "file": "lingshu/world/physics.py",
++        "method": "_sat_axes",
++        "old": "for i, j in ((1, 2), (2, 0), (0, 1)):",
++        "new": "for i, j in ():"
++      }]
++    },
++    {
++      "name": "allow_degenerate_rot_basis",
++      "test": "test_non_spanning_rot_rows_are_rejected",
++      "assertion": "线性无关",
++      "changes": [{
++        "file": "lingshu/world/physics.py",
++        "method": "_box_frame",
++        "old": "if volume <= _SAT_DEGENERATE:",
++        "new": "if False:"
++      }]
++    }
++  ]
++}
+diff --git a/tests/fixtures/pendulum_elliptic_angle_mutations.json b/tests/fixtures/pendulum_elliptic_angle_mutations.json
+new file mode 100644
+index 0000000..911c076
+--- /dev/null
++++ b/tests/fixtures/pendulum_elliptic_angle_mutations.json
+@@ -0,0 +1,82 @@
++{
++  "guard": "tests/test_pendulum_release_solution.py",
++  "total": 6,
++  "sources": [
++    "lingshu/world/physics.py"
++  ],
++  "baseline_failures": [
++    "test_release_solution_matches_independent_rk4",
++    "test_explicit_large_domain_uses_the_correct_release_formula",
++    "test_release_initial_symmetry_and_near_separatrix_quarter_periods",
++    "test_near_separatrix_matches_frozen_80_digit_reference",
++    "test_truth_period_retains_near_separatrix_complementary_modulus",
++    "test_nonfinite_and_out_of_domain_arguments_fail_explicitly"
++  ],
++  "mutations": [
++    {
++      "name": "restore_rounded_modulus_truth_period",
++      "test": "test_truth_period_retains_near_separatrix_complementary_modulus",
++      "assertion": "truth period must preserve complementary modulus",
++      "changes": [
++        {
++          "file": "lingshu/world/physics.py",
++          "method": "pendulum_truth",
++          "old": "exact = 2.0 * math.pi / (w * agm(1.0, math.cos(0.5 * theta0)))",
++          "new": "exact = 4.0 * elliptic_k(k) / w"
++        }
++      ]
++    },
++    {
++      "name": "restore_unstable_asin_descent",
++      "test": "test_near_separatrix_matches_frozen_80_digit_reference",
++      "assertion": "stable descent must match high-precision reference",
++      "changes": [
++        {
++          "file": "lingshu/world/physics.py",
++          "method": "pendulum_exact_angle",
++          "old": "phi = _jacobi_amplitude(shifted_u, k, complementary, stable=True)",
++          "new": "phi = _jacobi_amplitude(shifted_u, k, complementary, stable=False)"
++        }
++      ]
++    },
++    {
++      "name": "restore_unshifted_cn_release",
++      "test": "test_explicit_large_domain_uses_the_correct_release_formula",
++      "assertion": "release formula must include the dn factor",
++      "changes": [
++        {
++          "file": "lingshu/world/physics.py",
++          "method": "pendulum_exact_angle",
++          "old": "return direction * 2.0 * math.atan2(k * sn, math.hypot(complementary, k * cn))",
++          "new": "return 2.0 * math.asin(k * jacobi_cn(u, k))"
++        }
++      ]
++    },
++    {
++      "name": "reconstruct_complement_from_rounded_k",
++      "test": "test_release_initial_symmetry_and_near_separatrix_quarter_periods",
++      "assertion": "complementary modulus must retain near-separatrix precision",
++      "changes": [
++        {
++          "file": "lingshu/world/physics.py",
++          "method": "pendulum_exact_angle",
++          "old": "complementary = math.cos(0.5 * theta0)",
++          "new": "complementary = math.sqrt(max(0.0, 1.0 - k * k))"
++        }
++      ]
++    },
++    {
++      "name": "skip_absolute_physical_domain",
++      "test": "test_nonfinite_and_out_of_domain_arguments_fail_explicitly",
++      "assertion": "DID NOT RAISE",
++      "changes": [
++        {
++          "file": "lingshu/world/physics.py",
++          "method": "pendulum_exact_angle",
++          "old": "if abs(theta0) >= math.pi:",
++          "new": "if False:"
++        }
++      ]
++    }
++  ]
++}
+diff --git a/tests/fixtures/search_skills_limit_semantics_mutations.json b/tests/fixtures/search_skills_limit_semantics_mutations.json
+new file mode 100644
+index 0000000..19ff858
+--- /dev/null
++++ b/tests/fixtures/search_skills_limit_semantics_mutations.json
+@@ -0,0 +1,26 @@
++{
++  "guard": "tests/test_search_skills_limit_semantics.py",
++  "total": 1,
++  "sources": [
++    "lingshu/core/core.py"
++  ],
++  "baseline_failures": [
++    "test_search_and_recall_skill_normalize_negative_limits"
++  ],
++  "mutations": [
++    {
++      "name": "restore_negative_slice",
++      "test": "test_search_and_recall_skill_normalize_negative_limits",
++      "assertion": "negative limit must mean all hits",
++      "changes": [
++        {
++          "file": "lingshu/core/core.py",
++          "class": "LayeredStore",
++          "method": "search_skills",
++          "old": "limit = _normalize_limit(limit)",
++          "new": "limit = limit"
++        }
++      ]
++    }
++  ]
++}
+diff --git a/tests/fixtures/vision_lineart_alpha_mutations.json b/tests/fixtures/vision_lineart_alpha_mutations.json
+new file mode 100644
+index 0000000..ab7a698
+--- /dev/null
++++ b/tests/fixtures/vision_lineart_alpha_mutations.json
+@@ -0,0 +1,147 @@
++{
++  "guard": "tests/test_vision_lineart_alpha.py",
++  "total": 25,
++  "sources": [
++    "lingshu/vision/lineart.py"
++  ],
++  "baseline_failures": [
++    "test_transparent_pixels_are_composited_over_white[premultiplied_rgba]",
++    "test_transparent_pixels_are_composited_over_white[premultiplied_la]",
++    "test_opaque_alpha_keeps_rgb_results[premultiplied_la]",
++    "test_partial_alpha_is_composited_over_white[premultiplied_rgba]",
++    "test_partial_alpha_is_composited_over_white[premultiplied_la]",
++    "test_alpha_input_is_not_modified[premultiplied_la]"
++  ],
++  "mutations": [
++    {
++      "name": "skip_alpha_inputs",
++      "test": "test_transparent_pixels_are_composited_over_white[rgba]",
++      "assertion": "alpha input must be composited over white",
++      "changes": [
++        {
++          "file": "lingshu/vision/lineart.py",
++          "method": "darkline",
++          "old": "if img.mode in (\"RGBA\", \"RGBa\", \"LA\", \"La\", \"PA\") or \"transparency\" in img.info:",
++          "new": "if False:"
++        }
++      ]
++    },
++    {
++      "name": "skip_white_matte",
++      "test": "test_transparent_pixels_are_composited_over_white[rgba]",
++      "assertion": "alpha input must be composited over white",
++      "changes": [
++        {
++          "file": "lingshu/vision/lineart.py",
++          "method": "darkline",
++          "old": "Image.alpha_composite(white, rgba)",
++          "new": "rgba"
++        }
++      ]
++    },
++    {
++      "name": "ignore_palette_transparency",
++      "test": "test_transparent_pixels_are_composited_over_white[palette]",
++      "assertion": "alpha input must be composited over white",
++      "changes": [
++        {
++          "file": "lingshu/vision/lineart.py",
++          "method": "darkline",
++          "old": "or \"transparency\" in img.info:",
++          "new": "or False:"
++        }
++      ]
++    },
++    {
++      "name": "ignore_premultiplied_rgba",
++      "test": "test_transparent_pixels_are_composited_over_white[premultiplied_rgba]",
++      "assertion": "alpha input must be composited over white",
++      "changes": [
++        {
++          "file": "lingshu/vision/lineart.py",
++          "method": "darkline",
++          "old": "\"RGBA\", \"RGBa\",",
++          "new": "\"RGBA\","
++        }
++      ]
++    },
++    {
++      "name": "ignore_premultiplied_la",
++      "test": "test_transparent_pixels_are_composited_over_white[premultiplied_la]",
++      "assertion": "conversion from La to L not supported",
++      "changes": [
++        {
++          "file": "lingshu/vision/lineart.py",
++          "method": "darkline",
++          "old": "\"LA\", \"La\", \"PA\"",
++          "new": "\"LA\", \"PA\""
++        }
++      ]
++    },
++    {
++      "name": "skip_premultiplied_la_normalization",
++      "test": "test_transparent_pixels_are_composited_over_white[premultiplied_la]",
++      "assertion": "conversion from La to L not supported",
++      "changes": [
++        {
++          "file": "lingshu/vision/lineart.py",
++          "method": "darkline",
++          "old": "img.convert(\"LA\") if img.mode == \"La\" else img",
++          "new": "img"
++        }
++      ]
++    },
++    {
++      "name": "ignore_straight_la",
++      "test": "test_transparent_pixels_are_composited_over_white[la]",
++      "assertion": "alpha input must be composited over white",
++      "changes": [
++        {
++          "file": "lingshu/vision/lineart.py",
++          "method": "darkline",
++          "old": "\"RGBa\", \"LA\", \"La\"",
++          "new": "\"RGBa\", \"La\""
++        }
++      ]
++    },
++    {
++      "name": "ignore_palette_alpha",
++      "test": "test_transparent_pixels_are_composited_over_white[pa]",
++      "assertion": "alpha input must be composited over white",
++      "changes": [
++        {
++          "file": "lingshu/vision/lineart.py",
++          "method": "darkline",
++          "old": "\"La\", \"PA\")",
++          "new": "\"La\")"
++        }
++      ]
++    },
++    {
++      "name": "ignore_palette_transparency_index",
++      "test": "test_palette_transparency_index_is_composited_over_white",
++      "assertion": "palette transparency index must be composited over white",
++      "changes": [
++        {
++          "file": "lingshu/vision/lineart.py",
++          "method": "darkline",
++          "old": "\"transparency\" in img.info",
++          "new": "isinstance(img.info.get(\"transparency\"), bytes)"
++        }
++      ]
++    },
++    {
++      "name": "clear_input_metadata",
++      "test": "test_alpha_input_is_not_modified[rgba]",
++      "assertion": "alpha input must remain unchanged",
++      "changes": [
++        {
++          "file": "lingshu/vision/lineart.py",
++          "method": "darkline",
++          "old": "rgba = source.convert(\"RGBA\")",
++          "new": "img.info.clear()\n        rgba = source.convert(\"RGBA\")"
++        }
++      ]
++    }
++  ]
++}
+diff --git a/tests/test_bridge_pendulum_release_solution.py b/tests/test_bridge_pendulum_release_solution.py
+new file mode 100644
+index 0000000..96a3780
+--- /dev/null
++++ b/tests/test_bridge_pendulum_release_solution.py
+@@ -0,0 +1,170 @@
++"""Standalone bridge exact-motion guards; no Blender or lingshu imports."""
++import copy
++import math
++from pathlib import Path
++import subprocess
++import sys
++
++import pytest
++
++ROOT = Path(__file__).resolve().parents[1]
++BRIDGE = ROOT / "bridges" / "blender"
++sys.path.insert(0, str(BRIDGE))
++from wm_bridge.factory.anim import eval as E
++
++
++def _motion(initial=math.radians(60), **updates):
++    motion = {"link": "bob", "kind": "pendulum", "axis": "y", "exact": True,
++              "theta0_deg": math.degrees(initial), "omega0": 1.0, "zeta": 0.0}
++    motion.update(updates)
++    return motion
++
++
++def _spec(fps=120.0):
++    return {"schema": "wmfactory.spec/1", "name": "pendulum_guard", "scene": {"fps": fps},
++            "links": [{"name": "bob", "anchor": [0, 0, 0], "parts": []}], "joints": []}
++
++
++def _eval_angle(motion, elapsed):
++    spec = _spec(1.0 / abs(elapsed) if elapsed else 120.0)
++    frame = (1 if elapsed > 0 else -1) if elapsed else 0
++    pose = E.eval_at(spec, frame, motions=[motion])["bob"]
++    assert pose["pos"] == (0.0, 0.0, 0.0)
++    quat = pose["quat"]
++    return 2.0 * math.atan2(quat[2], quat[0])
++
++
++def _rk4_release(initial, elapsed, dt=1.0 / 4096):
++    theta, velocity = initial, 0.0
++    steps = max(1, math.ceil(abs(elapsed) / dt))
++    step = elapsed / steps
++    for _ in range(steps):
++        a1, b1 = velocity, -math.sin(theta)
++        a2, b2 = velocity + step * b1 / 2, -math.sin(theta + step * a1 / 2)
++        a3, b3 = velocity + step * b2 / 2, -math.sin(theta + step * a2 / 2)
++        a4, b4 = velocity + step * b3, -math.sin(theta + step * a3)
++        theta += step * (a1 + 2 * a2 + 2 * a3 + a4) / 6
++        velocity += step * (b1 + 2 * b2 + 2 * b3 + b4) / 6
++    return theta
++
++
++def _quarter_period(initial):
++    a, b = 1.0, math.cos(initial / 2)
++    for _ in range(32):
++        a, b = (a + b) / 2, math.sqrt(a * b)
++    return math.pi / (2 * a)
++
++
++def test_exact_motion_eval_matches_independent_rk4():
++    for degrees in (-179.9, -120, -60, -5, 0, 5, 30, 60, 120, 170, 179.9):
++        initial = math.radians(degrees)
++        for elapsed in (0.25, 1.0, 4.0, 8.0):
++            expected = _rk4_release(initial, elapsed)
++            for omega in (0.25, 2.0, 10.0):
++                motion = _motion(initial, omega0=omega)
++                actual = _eval_angle(motion, elapsed / omega)
++                assert abs(actual - expected) < 1e-10, "bridge exact motion must match independent RK4"
++
++
++def test_small_amplitude_exact_motion_uses_release_formula():
++    initial = math.radians(5)
++    actual = _eval_angle(_motion(initial), 1.0)
++    assert abs(actual - _rk4_release(initial, 1.0)) < 1e-11, \
++        "bridge release formula must include the dn factor"
++
++
++def test_near_separatrix_motion_validates_and_keeps_quarter_phase():
++    for initial in (math.radians(179.9), math.radians(179.99999), math.nextafter(math.pi, 0.0)):
++        quarter = _quarter_period(initial)
++        for sign in (-1.0, 1.0):
++            motion = _motion(sign * initial)
++            ok, reason = E.validate_motion(motion)
++            assert ok, "bridge near-separatrix motion must validate: " + reason
++            for multiple, expected in ((0, sign * initial), (1, 0.0), (2, -sign * initial),
++                                       (3, 0.0), (4, sign * initial)):
++                actual = _eval_angle(motion, multiple * quarter)
++                assert abs(actual - expected) < 1e-11, "bridge complementary modulus must retain quarter phase"
++
++
++def test_near_separatrix_motion_matches_frozen_80_digit_reference():
++    # Binary64 inputs promoted exactly to mpmath (80 dps), then evaluated as
++    # 2*asin(sin(theta0/2)*sn(ellipk(m)-t,m)), m=sin(theta0/2)**2.
++    cases = (
++        (math.nextafter(math.pi, 0.0), 18.59320050603265, 3.14159261992812691711730431078527),
++        (math.pi - 1e-12, 14.85512565734031, 3.14159123922678095171381163396301),
++        (math.nextafter(math.pi, 0.0), 35.25, 2.56865494480586864516584127039092),
++    )
++    for initial, elapsed, expected in cases:
++        for sign in (-1.0, 1.0):
++            actual = _eval_angle(_motion(sign * initial), elapsed)
++            assert abs(actual - sign * expected) < 1e-12, \
++                "bridge stable descent must match high-precision reference"
++
++
++def test_exact_motion_still_rejects_damping():
++    for damping in (-0.1, 0.1, float("nan"), float("inf")):
++        motion = _motion(zeta=damping)
++        assert not E.validate_motion(motion)[0]
++        with pytest.raises(E.AnimError):
++            _eval_angle(motion, 0.5)
++
++
++def test_exact_motion_input_errors_remain_anim_errors():
++    for index in range(3):
++        for value in (float("nan"), float("inf"), -float("inf"), True):
++            arguments = [0.5, 1.0, 0.25]
++            arguments[index] = value
++            with pytest.raises(E.AnimError):
++                E.pendulum_exact_angle(*arguments)
++    for initial in (-2 * math.pi, -math.pi, math.pi, 2 * math.pi):
++        motion = _motion(initial)
++        assert not E.validate_motion(motion)[0]
++        with pytest.raises(E.AnimError):
++            _eval_angle(motion, 0.5)
++    for initial in (float("nan"), float("inf"), -float("inf")):
++        motion = _motion(theta0_deg=initial)
++        assert not E.validate_motion(motion)[0]
++        with pytest.raises(E.AnimError):
++            _eval_angle(motion, 0.5)
++    with pytest.raises(E.AnimError):
++        E.pendulum_exact_angle(0.5, 1e308, 1e308)
++
++
++def test_exact_motion_preserves_input_offset_and_length_path():
++    motion = _motion(math.radians(-60), length_m=9.80665, offset_deg=5)
++    before = copy.deepcopy(motion)
++    expected = _rk4_release(math.radians(-60), 1.0) + math.radians(5)
++    assert abs(_eval_angle(motion, 1.0) - expected) < 1e-11
++    assert motion == before
++    assert E.validate_motion(motion)[0]
++    assert motion == before
++    spec = _spec()
++    spec_before = copy.deepcopy(spec)
++    E.eval_at(spec, 120, motions=[motion])
++    assert spec == spec_before and motion == before
++
++
++def test_bridge_exact_motion_imports_without_optional_dependencies():
++    code = """
++import importlib.abc
++import math
++import sys
++class BlockOptional(importlib.abc.MetaPathFinder):
++    def find_spec(self, fullname, path=None, target=None):
++        if fullname.split('.')[0] in {'lingshu', 'bpy', 'numpy'}:
++            raise RuntimeError('forbidden bridge dependency: ' + fullname)
++sys.meta_path.insert(0, BlockOptional())
++sys.path.insert(0, sys.argv[1])
++from wm_bridge.factory.anim import eval as E
++motion = {'link':'bob', 'kind':'pendulum', 'axis':'y', 'exact':True,
++          'theta0_deg':120.0, 'omega0':2.0, 'zeta':0.0}
++spec = {'schema':'wmfactory.spec/1', 'name':'stdlib', 'scene':{'fps':24},
++        'links':[{'name':'bob', 'anchor':[0,0,0], 'parts':[]}], 'joints':[]}
++assert E.validate_motion(motion)[0]
++assert all(math.isfinite(v) for v in E.eval_at(spec, 12, [motion])['bob']['quat'])
++print('standalone bridge exact motion PASS')
++"""
++    result = subprocess.run([sys.executable, "-B", "-S", "-X", "utf8", "-c", code, str(BRIDGE)],
++                            capture_output=True, text=True, encoding="utf-8", errors="replace", check=False)
++    assert result.returncode == 0, "bridge exact motion must remain stdlib-only: " + result.stderr
++    assert "standalone bridge exact motion PASS" in result.stdout
+diff --git a/tests/test_bridge_top_level_motions.py b/tests/test_bridge_top_level_motions.py
+new file mode 100644
+index 0000000..8e02123
+--- /dev/null
++++ b/tests/test_bridge_top_level_motions.py
+@@ -0,0 +1,136 @@
++"""The animation extension must coexist with the frozen geometry spec contract."""
++import copy
++from pathlib import Path
++import sys
++
++import pytest
++
++ROOT = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(ROOT / "bridges" / "blender"))
++from wm_bridge.factory.anim import eval as E
++from wm_bridge.factory.geo import spec as S
++
++
++def _spec():
++    return {"schema": "wmfactory.spec/1", "name": "motion_extension", "scene": {"fps": 24},
++            "links": [{"name": "bob", "anchor": [0, 0, 0], "parts": []}], "joints": []}
++
++
++def _motion(kind="spring"):
++    base = {"link": "bob", "kind": kind, "axis": "y"}
++    if kind == "spring":
++        return dict(base, omega0=2.0, zeta=0.15, amp=30.0, unit="deg")
++    if kind == "pendulum":
++        return dict(base, omega0=2.0, zeta=0.1, theta0_deg=4.0)
++    return dict(base, p0=[1, -2, 3], v0=[0.25, 0, 1], g=[0, 0, -9.80665])
++
++
++def _invoke(entry, spec, motions=None):
++    if entry == "eval_link":
++        return E.eval_link(spec, 12, "bob", motions=motions)
++    if entry == "eval_frames":
++        return E.eval_frames(spec, [0, 6, 12], motions=motions)
++    if entry == "to_oracle_records":
++        return E.to_oracle_records(spec, 12, motions=motions)
++    if entry == "tracks_to_oracle_doc":
++        return E.tracks_to_oracle_doc(spec, [0, 6, 12], motions=motions)
++    return E.eval_at(spec, 12, motions=motions)
++
++
++@pytest.mark.parametrize("kind", ["spring", "pendulum", "projectile"])
++@pytest.mark.parametrize("entry", ["eval_at", "eval_link", "eval_frames",
++                                  "to_oracle_records", "tracks_to_oracle_doc"])
++def test_top_level_motions_match_explicit_public_path(kind, entry):
++    spec, motions = _spec(), [_motion(kind)]
++    expected = _invoke(entry, spec, motions)
++    bundled = dict(spec, motions=copy.deepcopy(motions))
++    before = copy.deepcopy(bundled)
++    try:
++        actual = _invoke(entry, bundled)
++    except S.SpecError as exc:
++        pytest.fail("top-level motions must reach animation evaluation: " + str(exc))
++    assert actual == expected, "top-level motion must preserve the explicit path's pose"
++    assert bundled == before, "animation must not mutate the caller's spec or motions"
++
++
++def test_normalize_removes_only_animation_extension():
++    spec = _spec()
++    expected = S.normalize_spec(spec)
++    spec["motions"] = [_motion()]
++    actual = E.normalize(spec)
++    assert actual == expected, "normalization must pass geometry fields to the frozen validator"
++    assert "motions" not in actual
++    with pytest.raises(S.SpecError):
++        S.normalize_spec(spec)
++
++
++def test_normalize_does_not_modify_caller_input():
++    spec = dict(_spec(), motions=[_motion()])
++    before = copy.deepcopy(spec)
++    E.normalize(spec)
++    assert spec == before, "normalization must not remove motions from caller input"
++
++
++def test_explicit_motions_override_top_level_declarations():
++    spec = dict(_spec(), motions=[_motion("projectile")])
++    explicit = [_motion("spring")]
++    expected = E.eval_at(_spec(), 12, motions=explicit)
++    actual = E.eval_at(spec, 12, motions=explicit)
++    assert actual == expected, "explicit motions must take precedence over top-level declarations"
++
++
++def test_explicit_empty_motions_disable_top_level_motion():
++    spec = dict(_spec(), motions=[_motion()])
++    actual = E.eval_at(spec, 12, motions=[])
++    assert actual == E.eval_at(_spec(), 12), "explicit empty motions must disable top-level fallback"
++
++
++@pytest.mark.parametrize("value", [None, []], ids=["none", "empty"])
++def test_optional_empty_top_level_motion_keeps_static_behavior(value):
++    assert E.eval_at(dict(_spec(), motions=value), 12) == E.eval_at(_spec(), 12)
++
++
++@pytest.mark.parametrize("location", ["root", "scene", "link"])
++def test_other_unknown_keys_remain_rejected(location):
++    spec = dict(_spec(), motions=[_motion()])
++    if location == "root":
++        spec["motinos"] = []
++    elif location == "scene":
++        spec["scene"]["motions"] = []
++    else:
++        spec["links"][0]["motions"] = []
++    with pytest.raises(S.SpecError):
++        E.eval_at(spec, 12)
++
++
++@pytest.mark.parametrize("motions", [[1], [{"link": "bob", "kind": "unknown"}],
++                                     [_motion(), _motion()]],
++                         ids=["non_object", "unknown_kind", "duplicate_link"])
++def test_malformed_top_level_motion_still_raises_anim_error(motions):
++    with pytest.raises(E.AnimError):
++        E.eval_at(dict(_spec(), motions=motions), 12)
++
++
++def test_explicit_parameter_can_override_invalid_top_level_motion():
++    spec = dict(_spec(), motions=[{"link": "bob", "kind": "unknown"}])
++    explicit = [_motion()]
++    assert E.eval_at(spec, 12, motions=explicit) == E.eval_at(_spec(), 12, motions=explicit)
++
++
++def test_normalized_tuple_ease_keys_remain_accepted():
++    plain = _spec()
++    plain["joints"] = [{"link": "bob", "kind": "ease", "axis": "y", "unit": "deg",
++                        "keys": [[0.0, 0.0], [1.0, 45.0]]}]
++    normalized = S.normalize_spec(plain)
++    assert isinstance(normalized["joints"][0]["keys"], tuple)
++    bundled = dict(normalized, motions=[_motion()])
++    before = copy.deepcopy(bundled)
++    expected = E.eval_at(normalized, 12, motions=[_motion()])
++    assert E.eval_at(bundled, 12) == expected
++    assert bundled == before
++
++
++def test_geometry_only_control_keeps_normalized_result():
++    spec = _spec()
++    assert E.normalize(spec) == S.normalize_spec(spec)
++    assert E.eval_at(spec, 0) == E.eval_at(spec, 12)
+diff --git a/tests/test_hexgrid_odd_r_nearest_cell.py b/tests/test_hexgrid_odd_r_nearest_cell.py
+new file mode 100644
+index 0000000..6046cbf
+--- /dev/null
++++ b/tests/test_hexgrid_odd_r_nearest_cell.py
+@@ -0,0 +1,51 @@
++"""odd_r_offset pixel lookup must return the nearest cell center."""
++import math
++import sys
++from pathlib import Path
++
++import pytest
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++from lingshu.nn.hex_cnn import HexGrid
++
++
++def _distance2(grid, point, cell):
++    center = grid.center_px(*cell)
++    return (center[0] - point[0]) ** 2 + (center[1] - point[1]) ** 2
++
++
++def test_odd_r_checks_both_neighbor_rows_for_nearest_center():
++    grid = HexGrid(5, 5, 1.0, mode="odd_r_offset")
++    point = (math.sqrt(3.0) / 2.0, 0.74)
++    expected = (0, 1)
++    actual = grid.pixel_to_cell(*point)
++    assert actual == expected, "nearest odd-r center is in the adjacent staggered row"
++    assert math.sqrt(_distance2(grid, point, actual)) == pytest.approx(0.76)
++
++
++@pytest.mark.parametrize("size,origin", [
++    (0.5, (0.0, 0.0)),
++    (1.0, (2.25, -0.75)),
++    (2.75, (-4.0, 3.5)),
++])
++def test_odd_r_pixel_lookup_matches_brute_force_nearby_centers(size, origin):
++    grid = HexGrid(8, 7, size, mode="odd_r_offset", origin=origin)
++    spacing_x = math.sqrt(3.0) * size
++    spacing_y = 1.5 * size
++    ox, oy = origin
++    for iy in range(-8, 25):
++        y = oy + iy * size * 0.23
++        rf = (2.0 / 3.0 * (y - oy)) / size
++        row0 = math.floor(rf)
++        for ix in range(-12, 28):
++            x = ox + ix * size * 0.19
++            qf = (x - ox) / spacing_x
++            q0 = math.floor(qf)
++            candidates = [
++                (q, r)
++                for r in range(row0 - 2, row0 + 4)
++                for q in range(q0 - 3, q0 + 4)
++            ]
++            expected = min(_distance2(grid, (x, y), cell) for cell in candidates)
++            actual = _distance2(grid, (x, y), grid.pixel_to_cell(x, y))
++            assert actual == pytest.approx(expected, abs=1e-12), (x, y, actual, expected)
+diff --git a/tests/test_issue770_snapshot_atomicity_and_signature_guard.py b/tests/test_issue770_snapshot_atomicity_and_signature_guard.py
+index 4014d74..01aa2bc 100644
+--- a/tests/test_issue770_snapshot_atomicity_and_signature_guard.py
++++ b/tests/test_issue770_snapshot_atomicity_and_signature_guard.py
+@@ -72,8 +72,8 @@
+ `lingshu/core/core.py` 一个文件**，`longterm_gate.py` 不在其扫描面内 ⇒ 本件不扩该
+ 扫描面（扩面会让全包 20 个未挂装饰器的方法当场转红，属另一笔）。`promote_from_context`
+ 的同类读改写**不在本件范围**。`_known_snapshot` 的删除误判（#462）已由后续修复
+-处理（见 G3 反转）；剩余未覆盖面＝「同 rowid 原地 UPDATE ∧ 同期追加节点」的混合
+-形态（旧缓存未存逐行摘要，检测它属另一次改动面，见该函数 docstring 的已知残留）。
++处理（见 G3 反转）。同 rowid 原地更新后再追加节点的混合形态另由
++`tests/test_longterm_gate_mixed_in_place_update.py` 守卫覆盖，确认旧行摘要变化会触发完整重建。
+ 
+ 运行（仓根）：python -X utf8 -m pytest tests/test_issue770_snapshot_atomicity_and_signature_guard.py -q --no-header
+ """
+diff --git a/tests/test_longterm_gate_mixed_in_place_update.py b/tests/test_longterm_gate_mixed_in_place_update.py
+new file mode 100644
+index 0000000..da41632
+--- /dev/null
++++ b/tests/test_longterm_gate_mixed_in_place_update.py
+@@ -0,0 +1,80 @@
++"""An in-place rewrite followed by append must invalidate stale core grams."""
++import time
++import sys
++from pathlib import Path
++
++import pytest
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++from lingshu.core.core import ConditionSpace, MemoryLayer, STNode, SpacetimeMemoryEngine
++from lingshu.core.longterm_gate import LongTermMemoryGate
++
++
++OLD_CONTENT = "硫化钼热电极化系数长期稳定测量"
++UPDATED_CONTENT = "碳纳米管在低温环境下表现出异常的热电响应和载流子迁移规律"
++APPENDED_CONTENT = "第二篇独立的材料学实验记录补充更多全新词项"
++
++
++def _add_node(engine, node_id, content):
++    now = time.time()
++    engine.store.add_node(STNode(
++        id=node_id,
++        content=content,
++        modality="text",
++        spatial_coordinates={},
++        temporal_coordinate=now,
++        condition_space=ConditionSpace("test", "synthetic", (now, now + 1), "test"),
++        importance=0.5,
++        confidence=0.5,
++        layer=MemoryLayer.CONTEXT,
++        access_count=0,
++        last_access=now,
++        created_at=now,
++        tags=[],
++    ))
++
++
++def _rewrite_same_rowid(engine, node_id, content):
++    before = engine.store.conn.execute(
++        "SELECT rowid FROM nodes WHERE id=?", (node_id,)
++    ).fetchone()[0]
++    engine.store.conn.execute("UPDATE nodes SET content=? WHERE id=?", (content, node_id))
++    engine.store.conn.commit()
++    after = engine.store.conn.execute(
++        "SELECT rowid FROM nodes WHERE id=?", (node_id,)
++    ).fetchone()[0]
++    assert after == before
++
++
++def test_same_row_rewrite_plus_append_rebuilds_mixed_cache():
++    engine = SpacetimeMemoryEngine(":memory:")
++    try:
++        _add_node(engine, "mixed-update-target", OLD_CONTENT)
++        gate = LongTermMemoryGate(engine)
++        old_union, _, old_per_node, old_sig = gate._known_snapshot()
++        old_grams = gate._core_grams(OLD_CONTENT)
++        updated_grams = gate._core_grams(UPDATED_CONTENT)
++        appended_grams = gate._core_grams(APPENDED_CONTENT)
++        assert old_grams and updated_grams and appended_grams
++        assert old_grams <= old_union
++
++        _rewrite_same_rowid(engine, "mixed-update-target", UPDATED_CONTENT)
++        _add_node(engine, "mixed-update-appended", APPENDED_CONTENT)
++
++        union, _, per_node, signature = gate._known_snapshot()
++        assert signature != old_sig
++        assert union is not old_union, "changed old content must force a full gram rebuild"
++        assert not (old_grams & union), "grams from the overwritten row must be evicted"
++        assert updated_grams <= union, "grams from the rewritten row must be indexed"
++        assert appended_grams <= union, "the appended row must remain indexed"
++        assert set(per_node) == {"mixed-update-target", "mixed-update-appended"}
++        assert len(old_per_node) == 1
++
++        # A warm cache and a fresh cache must interpret the same database identically.
++        fresh_gate = LongTermMemoryGate(engine)
++        for content in (OLD_CONTENT, UPDATED_CONTENT, APPENDED_CONTENT):
++            assert gate._novelty(content) == fresh_gate._novelty(content)
++        assert gate._novelty(OLD_CONTENT) == pytest.approx(1.0)
++        assert gate._novelty(UPDATED_CONTENT) == pytest.approx(0.0)
++    finally:
++        engine.close()
+diff --git a/tests/test_motion_group_identifier_encoding.py b/tests/test_motion_group_identifier_encoding.py
+new file mode 100644
+index 0000000..303a252
+--- /dev/null
++++ b/tests/test_motion_group_identifier_encoding.py
+@@ -0,0 +1,90 @@
++"""Different member partitions must keep different group identities and lineage."""
++import copy
++import hashlib
++from pathlib import Path
++import sys
++
++import pytest
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++from lingshu.world import motion_groups as MG, register_world_process
++from lingshu.core.core import SpacetimeMemoryEngine
++
++
++def disjoint_history():
++    return [{'tick': t, 'entities': {'a|b': [t, 1, 0], 'c': [t+2, 1, 0],
++                                   'a': [20-t, 1, 10], 'b|c': [22-t, 1, 10]}}
++            for t in range(1, 5)]
++
++
++def history(members, translation=0):
++    return [{'tick': t, 'entities': {eid: [translation+t+2*i, 1, 0]
++                                     for i, eid in enumerate(members)}}
++            for t in range(1, 6)]
++
++
++def identifier(members):
++    groups = MG.detect_motion_groups(history(members))['groups']
++    assert len(groups) == 1 and set(groups[0]['members']) == set(members)
++    return groups[0]['group_id']
++
++
++def test_disjoint_groups_have_distinct_identifiers():
++    hist = disjoint_history()
++    saved = copy.deepcopy(hist)
++    model = MG.detect_motion_groups(hist)
++    assert len(model['groups']) == 2
++    ids = {g['group_id'] for g in model['groups']}
++    assert len(ids) == 2, 'distinct member sets need distinct group IDs'
++    assert len({g['group_id']: g for g in model['groups']}) == 2
++    assert hist == saved and model == MG.detect_motion_groups(hist)
++
++
++def test_core_predictions_keep_group_lineage_distinct(tmp_path):
++    engine = SpacetimeMemoryEngine(db_path=str(tmp_path / 'group_ids.db'))
++    try:
++        register_world_process(engine)
++        result = engine.world_process('predict_groups',
++            {'history': disjoint_history(), 'observed': {'a|b': [5, 1, 0], 'a': [15, 1, 10]}, 'tick': 5})
++        assert result['status'] == 'ok'
++        assert len(set(result['group_ids'])) == 2, 'core must preserve two group identities'
++        predictions = result['predictions']
++        assert predictions['c']['pos'] == [7.0, 1.0, 0.0]
++        assert predictions['b|c']['pos'] == [17.0, 1.0, 10.0]
++        assert predictions['c']['group_id'] != predictions['b|c']['group_id']
++        assert all(p['source'] == 'motion_group' and p['actual'] is False for p in predictions.values())
++    finally:
++        engine.close()
++
++
++@pytest.mark.parametrize('first,second', [
++    (['a|b', 'c'], ['a', 'b|c']),
++    (['a|', 'b'], ['a', '|b']),
++    (['a||b', 'c'], ['a', '|b|c']),
++], ids=['partition', 'empty_component', 'repeated_separator'])
++def test_delimiter_partitions_do_not_alias(first, second):
++    assert identifier(first) != identifier(second)
++
++
++def test_plain_member_ids_keep_their_existing_identifier():
++    members = ['left', 'right']
++    expected = 'mg_' + hashlib.sha1('left|right'.encode('utf-8')).hexdigest()[:12]
++    assert identifier(members) == expected
++
++
++def test_insert_order_does_not_change_identifier():
++    hist = history(['甲|乙', '丙'])
++    reversed_insertion = [{'tick': r['tick'], 'entities': dict(reversed(list(r['entities'].items())))} for r in hist]
++    assert MG.detect_motion_groups(hist) == MG.detect_motion_groups(reversed_insertion)
++
++
++def test_structured_ids_cannot_alias_a_legacy_join():
++    # These ordinary names join to the exact JSON encoding of ['a|b', 'c'].
++    legacy_names = ['["a', 'b","c"]']
++    assert identifier(['a|b', 'c']) != identifier(legacy_names), 'v2 encoding needs a separate namespace'
++
++
++def test_translation_and_window_do_not_change_identifier():
++    first = MG.detect_motion_groups(history(['a|b', 'c']), window=3)['groups'][0]
++    moved = MG.detect_motion_groups(history(['a|b', 'c'], 100), window=5)['groups'][0]
++    assert first['group_id'] == moved['group_id']
+diff --git a/tests/test_obb_nonorthogonal_sat.py b/tests/test_obb_nonorthogonal_sat.py
+new file mode 100644
+index 0000000..877ccb2
+--- /dev/null
++++ b/tests/test_obb_nonorthogonal_sat.py
+@@ -0,0 +1,75 @@
++"""SAT must use face normals for the supported non-orthogonal box frames."""
++import sys
++from pathlib import Path
++
++import pytest
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++from lingshu.world import physics as P
++
++
++def _separated_skew_boxes():
++    a = {
++        "center": (0.5, 0.5, 0.5),
++        "half": (0.5, 0.5, 0.5),
++        "rot": (
++            (-0.554749, 0.360100, -0.750054),
++            (-0.407590, -0.897262, 0.169682),
++            (-0.506776, 0.320162, 0.800422),
++        ),
++    }
++    b = {
++        "center": (-0.861919, 0.556873, -0.312856),
++        "half": (0.5, 0.5, 0.5),
++        "rot": (
++            (-0.515958, -0.760046, -0.395117),
++            (-0.261757, 0.593418, -0.761143),
++            (-0.994881, 0.072175, -0.070733),
++        ),
++    }
++    return a, b
++
++
++def _dot(a, b):
++    return sum(x * y for x, y in zip(a, b))
++
++
++def _unit(vector):
++    length = sum(x * x for x in vector) ** 0.5
++    return tuple(x / length for x in vector)
++
++
++def _cross(a, b):
++    return (a[1] * b[2] - a[2] * b[1],
++            a[2] * b[0] - a[0] * b[2],
++            a[0] * b[1] - a[1] * b[0])
++
++
++def _projection_radius(box, axis):
++    edges = tuple(_unit(row) for row in box["rot"])
++    return sum(half * abs(_dot(edge, axis))
++               for half, edge in zip(box["half"], edges))
++
++
++def test_supported_skew_boxes_use_face_normal_separating_axis():
++    a, b = _separated_skew_boxes()
++    face_normal = _unit(_cross(a["rot"][1], a["rot"][2]))
++    delta = tuple(b["center"][i] - a["center"][i] for i in range(3))
++    gap = (abs(_dot(delta, face_normal))
++           - _projection_radius(a, face_normal)
++           - _projection_radius(b, face_normal))
++    assert gap == pytest.approx(0.0321480993, abs=1e-9)
++
++    assert P.obb_overlap(a, b) is False, "SAT must test each parallelepiped face normal"
++    assert P.obb_mtv(a, b) is None
++
++
++def test_non_spanning_rot_rows_are_rejected():
++    singular = {
++        "center": (0.0, 0.0, 0.0),
++        "half": (1.0, 1.0, 1.0),
++        "rot": ((1.0, 0.0, 0.0), (0.0, 1.0, 0.0), (1.0, 1.0, 0.0)),
++    }
++    with pytest.raises(P.PhysicsError, match="线性无关"):
++        P.obb_of(aabb={"center": singular["center"], "half": singular["half"]},
++                 rot=singular["rot"])
+diff --git a/tests/test_pendulum_release_solution.py b/tests/test_pendulum_release_solution.py
+new file mode 100644
+index 0000000..d548239
+--- /dev/null
++++ b/tests/test_pendulum_release_solution.py
+@@ -0,0 +1,106 @@
++"""Release-from-rest pendulum truth, boundary and invalid-input regression guards."""
++import math
++from pathlib import Path
++import sys
++
++import pytest
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++from lingshu.world import physics as P
++
++
++def _rk4_release(theta0, elapsed, dt=1.0 / 4096):
++    """Integrate theta''=-sin(theta), independent of the elliptic implementation."""
++    theta, velocity = theta0, 0.0
++    steps = max(1, math.ceil(abs(elapsed) / dt))
++    step = elapsed / steps
++    for _ in range(steps):
++        a1, b1 = velocity, -math.sin(theta)
++        a2 = velocity + step * b1 / 2
++        b2 = -math.sin(theta + step * a1 / 2)
++        a3 = velocity + step * b2 / 2
++        b3 = -math.sin(theta + step * a2 / 2)
++        a4 = velocity + step * b3
++        b4 = -math.sin(theta + step * a3)
++        theta += step * (a1 + 2 * a2 + 2 * a3 + a4) / 6
++        velocity += step * (b1 + 2 * b2 + 2 * b3 + b4) / 6
++    return theta
++
++
++def _quarter_period(theta0):
++    a, b = 1.0, math.cos(theta0 / 2)
++    for _ in range(32):
++        a, b = (a + b) / 2, math.sqrt(a * b)
++    return math.pi / (2 * a)
++
++
++def test_release_solution_matches_independent_rk4():
++    for degrees in (-179.9, -120.0, -60.0, -5.0, 0.0, 5.0, 30.0, 60.0, 120.0, 170.0, 179.9):
++        theta0 = math.radians(degrees)
++        for elapsed in (0.25, 1.0, 4.0, 8.0):
++            expected = _rk4_release(theta0, elapsed)
++            for omega in (0.25, 2.0, 10.0):
++                actual = P.pendulum_exact_angle(theta0, omega, elapsed / omega)
++                assert abs(actual - expected) < 1e-10, "release solution must match independent RK4"
++
++
++def test_explicit_large_domain_uses_the_correct_release_formula():
++    theta0 = math.radians(120)
++    actual = P.pendulum_exact_angle(theta0, 1.0, 1.0, tol_deg=180.0)
++    expected = _rk4_release(theta0, 1.0)
++    assert abs(actual - expected) < 1e-11, "release formula must include the dn factor"
++
++
++def test_release_initial_symmetry_and_near_separatrix_quarter_periods():
++    for theta0 in (math.radians(179.9), math.radians(179.99999), math.nextafter(math.pi, 0.0)):
++        quarter = _quarter_period(theta0)
++        for sign in (-1.0, 1.0):
++            initial = sign * theta0
++            assert P.pendulum_exact_angle(initial, 1.0, 0.0) == initial
++            for multiple, expected in ((1, 0.0), (2, -initial), (3, 0.0), (4, initial)):
++                actual = P.pendulum_exact_angle(initial, 1.0, multiple * quarter)
++                assert abs(actual - expected) < 1e-11, "complementary modulus must retain near-separatrix precision"
++            for elapsed in (0.25, 1.0):
++                assert P.pendulum_exact_angle(initial, 1.0, elapsed) == P.pendulum_exact_angle(initial, 1.0, -elapsed)
++
++
++def test_near_separatrix_matches_frozen_80_digit_reference():
++    # mpmath at 80 dps: promote each binary64 input exactly, then evaluate
++    # 2*asin(sin(theta0/2)*sn(ellipk(m)-t,m)), m=sin(theta0/2)**2.
++    # Fixed constants keep this guard stdlib-only; these non-quarter phases
++    # expose the asin descent's loss of precision when c/a rounds to one.
++    cases = (
++        (math.nextafter(math.pi, 0.0), 18.59320050603265, 3.14159261992812691711730431078527),
++        (math.pi - 1e-12, 14.85512565734031, 3.14159123922678095171381163396301),
++        (math.nextafter(math.pi, 0.0), 35.25, 2.56865494480586864516584127039092),
++    )
++    for initial, elapsed, expected in cases:
++        for sign in (-1.0, 1.0):
++            actual = P.pendulum_exact_angle(sign * initial, 1.0, elapsed)
++            assert abs(actual - sign * expected) < 1e-12, "stable descent must match high-precision reference"
++
++
++def test_truth_period_retains_near_separatrix_complementary_modulus():
++    for degrees in (179.99999, math.nextafter(180.0, 0.0)):
++        for sign in (-1.0, 1.0):
++            truth = P.pendulum_truth({"theta0_deg": sign * degrees, "omega0": 2.0})
++            quarter = _quarter_period(truth["theta0_rad"])
++            assert abs(truth["period_exact_elliptic"] - 2 * quarter) < 1e-12, "truth period must preserve complementary modulus"
++
++
++def test_nonfinite_and_out_of_domain_arguments_fail_explicitly():
++    for index in range(4):
++        for value in (float("nan"), float("inf"), -float("inf"), True):
++            args = [0.5, 1.0, 0.25, 180.0]
++            args[index] = value
++            with pytest.raises(P.PhysicsError):
++                P.pendulum_exact_angle(*args)
++    for initial in (-2 * math.pi, -math.pi, math.pi, 2 * math.pi):
++        with pytest.raises(P.PhysicsError):
++            P.pendulum_exact_angle(initial, 1.0, 1.0)
++    with pytest.raises(P.PhysicsError):
++        P.pendulum_exact_angle(0.5, 1.0, 1.0, tol_deg=720.0)
++    with pytest.raises(P.PhysicsError):
++        P.pendulum_exact_angle(0.5, 1e308, 1e308)
++    with pytest.raises(P.PhysicsError):
++        P.pendulum_exact_angle(math.radians(30), 1.0, 1.0, tol_deg=5.0)
+diff --git a/tests/test_physics_predict.py b/tests/test_physics_predict.py
+index c1eb6fa..f82d0d6 100644
+--- a/tests/test_physics_predict.py
++++ b/tests/test_physics_predict.py
+@@ -24,10 +24,9 @@
+     · 缺陷1（已修）：`fit_circular` 相位基准丢了初相（unwrap 起点 ang[0]≡0）⇒ 半径/ω 都对、
+       残差却是 2r·sin(Δθ/2)（实测 rms 0.42）。修法：把首个样本的真实极角加回来。判据来源：
+       A5 的 rms < 1e-6（修前 4.2e-01）。
+-    · 缺陷2（已修）：`jacobi_cn` 的 Landen 递推索引用 `c_i/a_i`，应为 `c_{i+1}/a_{i+1}`；
+-      修后 5° 的偏差从 1.5e-03 降到 4.0e-05 rad。**大振幅仍是已知缺陷**：
+-      30°/60°/120° 实测 7.0e-03/5.8e-02/5.3e-01 rad ⇒ `pendulum_exact_angle` 按 fail-closed
+-      限制在 |θ0| <= 5°，超出显式 raise（A6 断言这个拒绝行为）。
++    · 缺陷2：`jacobi_cn` 的 Landen 递推现用 `c_{i+1}/a_{i+1}`；剩余大角偏差源于摆角闭式
++      漏掉 `dn` 分母。修复后 `theta=2 asin(k*cn/dn)` 在 5°/30°/60°/120° 的多相位点
++      与独立 RK4 一致，最大误差低于 1e-11 rad（A6 覆盖）；可选 tol_deg 仍可显式收紧域。
+     · 缺陷3（已修）：`Reflector.apply` 循环里残留 `del tau` ⇒ UnboundLocalError。
+ """
+ from __future__ import annotations
+@@ -115,14 +114,24 @@ def test_A5_circular_fit_phase_and_radius():
+     assert f["residual_rms"] < 1e-6
+ 
+ 
+-def test_A6_pendulum_exact_gated_domain():
+-    # 域内：与独立 RK4 一致
+-    th0, w = math.radians(5.0), 2.0
+-    ref = _rk4(th0, w, 0.5)
+-    assert abs(P.pendulum_exact_angle(th0, w, 0.5) - ref) < 1e-4
+-    # 域外：必须显式 raise（不把近似当精确）
++def test_A6_pendulum_exact_matches_rk4_across_amplitudes():
++    w = 2.0
++    for degrees in (-179.9, -179.0, -120.0, -60.0, 5.0, 30.0, 60.0, 120.0, 150.0, 170.0, 179.0, 179.9):
++        th0 = math.radians(degrees)
++        assert P.pendulum_exact_angle(th0, w, 0.0) == pytest.approx(th0, abs=1e-12)
++        for t in (0.25, 0.5, 1.0, 2.0):
++            ref = _rk4(th0, w, t)
++            got = P.pendulum_exact_angle(th0, w, t)
++            assert abs(got - ref) < P.PENDULUM_EXACT_MAX_ERR, (
++                "elliptic pendulum mismatch: theta0=%s°, t=%s, got=%r, RK4=%r"
++                % (degrees, t, got, ref))
++
++    # Callers may still deliberately impose a narrower validated amplitude.
++    with pytest.raises(P.PhysicsError):
++        P.pendulum_exact_angle(math.radians(30.0), w, 0.5, tol_deg=5.0)
++    # The separatrix (k=1) is singular and must remain rejected.
+     with pytest.raises(P.PhysicsError):
+-        P.pendulum_exact_angle(math.radians(30.0), w, 0.5)
++        P.pendulum_exact_angle(math.pi, w, 0.5)
+ 
+ 
+ def _rk4(th0, w, t_end, dt=1.0 / 16384.0):
+diff --git a/tests/test_search_skills_limit_semantics.py b/tests/test_search_skills_limit_semantics.py
+new file mode 100644
+index 0000000..9a39873
+--- /dev/null
++++ b/tests/test_search_skills_limit_semantics.py
+@@ -0,0 +1,27 @@
++"""Skill retrieval must use the shared full-results sentinel semantics."""
++from pathlib import Path
++import sys
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++from lingshu.core.core import SpacetimeMemoryEngine
++
++
++def test_search_and_recall_skill_normalize_negative_limits():
++    engine = SpacetimeMemoryEngine(":memory:")
++    try:
++        for i in range(5):
++            engine.store_skill(
++                "needle skill %d" % i,
++                "needle matching description %d" % i,
++                "procedure token %d" % i,
++            )
++
++        assert len(engine.store.search_skills("needle", limit=1000)) == 5
++        assert len(engine.store.search_skills("needle", limit=None)) == 5
++        assert engine.store.search_skills("needle", limit=0) == []
++        assert len(engine.store.search_skills("needle", limit=2)) == 2
++        assert len(engine.store.search_skills("needle", limit=-1)) == 5, \
++            "negative limit must mean all hits"
++        assert len(engine.recall_skill("needle", limit=-6)) == 5
++    finally:
++        engine.close()
+diff --git a/tests/test_vision_lineart_alpha.py b/tests/test_vision_lineart_alpha.py
+new file mode 100644
+index 0000000..2c39fc3
+--- /dev/null
++++ b/tests/test_vision_lineart_alpha.py
+@@ -0,0 +1,94 @@
++"""Transparent input pixels must use the line-art API's white background."""
++import sys
++from pathlib import Path
++
++import numpy as np
++from PIL import Image, ImageDraw
++import pytest
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++from lingshu.vision import darkline, linework
++
++
++ALPHA_MODES = ["RGBA", "RGBa", "LA", "La", "PA", "P"]
++ALPHA_IDS = ["rgba", "premultiplied_rgba", "la", "premultiplied_la", "pa", "palette"]
++
++
++def _alpha_line(mode, alpha=255, opaque=False):
++    if mode == "P":
++        image = Image.new("P", (32, 32), 0)
++        background = [255, 255, 255] if opaque else [0, 0, 0]
++        image.putpalette(background + [0, 0, 0] * 255)
++        image.info["transparency"] = bytes([255 if opaque else 0, alpha] + [255] * 254)
++        ImageDraw.Draw(image).line((8, 16, 23, 16), fill=1, width=1)
++        return image
++    background = (255, 255, 255, 255) if opaque else (0, 0, 0, 0)
++    image = Image.new("RGBA", (32, 32), background)
++    ImageDraw.Draw(image).line((8, 16, 23, 16), fill=(0, 0, 0, alpha), width=1)
++    if mode == "La":
++        return image.convert("LA").convert("La")
++    return image.convert(mode)
++
++
++def _white_composite(image):
++    # Pillow cannot convert premultiplied luminance directly to RGBA.
++    straight = image.convert("LA") if image.mode == "La" else image
++    rgba = straight.convert("RGBA")
++    background = Image.new("RGBA", rgba.size, (255, 255, 255, 255))
++    return Image.alpha_composite(background, rgba).convert("RGB")
++
++
++def _snapshot(image):
++    return image.mode, image.size, image.tobytes(), image.info.copy(), image.getpalette()
++
++
++@pytest.mark.parametrize("mode", ALPHA_MODES, ids=ALPHA_IDS)
++def test_transparent_pixels_are_composited_over_white(mode):
++    image = _alpha_line(mode)
++    assert int(np.count_nonzero(np.asarray(_white_composite(image)) < 255)) == 48
++
++    expected = darkline(_white_composite(image))
++    actual = darkline(image)
++    assert np.array_equal(np.asarray(actual), np.asarray(expected)), \
++        "alpha input must be composited over white"
++    assert int(np.count_nonzero(np.asarray(actual) == 0)) == 36
++    assert np.array_equal(np.asarray(linework(image)), np.asarray(expected.convert("RGB")))
++
++
++def test_palette_transparency_index_is_composited_over_white():
++    image = _alpha_line("P")
++    image.info["transparency"] = 0
++    actual = darkline(image)
++    expected = darkline(_white_composite(image))
++    assert np.array_equal(np.asarray(actual), np.asarray(expected)), \
++        "palette transparency index must be composited over white"
++
++
++@pytest.mark.parametrize("mode", ALPHA_MODES, ids=ALPHA_IDS)
++def test_opaque_alpha_keeps_rgb_results(mode):
++    rgb = Image.new("RGB", (32, 32), "white")
++    ImageDraw.Draw(rgb).line((8, 16, 23, 16), fill="black", width=1)
++    image = _alpha_line(mode, opaque=True)
++    assert np.array_equal(np.asarray(darkline(rgb)), np.asarray(darkline(image))), \
++        "opaque alpha input must preserve RGB results"
++
++
++@pytest.mark.parametrize("mode", ALPHA_MODES, ids=ALPHA_IDS)
++def test_partial_alpha_is_composited_over_white(mode):
++    image = _alpha_line(mode, alpha=128)
++    actual = darkline(image)
++    expected = darkline(_white_composite(image))
++    assert np.array_equal(np.asarray(actual), np.asarray(expected)), \
++        "partial alpha input must be composited over white"
++    assert (np.asarray(actual) == 0).any()
++    assert np.array_equal(np.asarray(darkline(image, white_bg=False)), 255 - np.asarray(expected))
++
++
++@pytest.mark.parametrize("mode", ALPHA_MODES, ids=ALPHA_IDS)
++def test_alpha_input_is_not_modified(mode):
++    image = _alpha_line(mode, alpha=128)
++    image.info["lineart_test"] = "preserve metadata"
++    before = _snapshot(image)
++    darkline(image)
++    linework(image)
++    assert _snapshot(image) == before, "alpha input must remain unchanged"
+diff --git a/tools/testing/bench_bridge_motions.py b/tools/testing/bench_bridge_motions.py
+new file mode 100644
+index 0000000..c87b925
+--- /dev/null
++++ b/tools/testing/bench_bridge_motions.py
+@@ -0,0 +1,137 @@
++"""Reproduce successful-path timing and allocation probes for embedded motions.
++
++Run from any directory with --repo and --output. Baseline sources are copied to
++a temporary directory under the output directory; the checkout is never edited.
++Timing samples describe this machine and workload, not a performance guarantee.
++"""
++from __future__ import annotations
++
++import argparse
++import gc
++import hashlib
++import json
++from pathlib import Path
++import platform
++import statistics
++import subprocess
++import sys
++import tempfile
++import time
++import tracemalloc
++
++SOURCES = ["bridges/blender/wm_bridge/__init__.py",
++           "bridges/blender/wm_bridge/factory/anim/eval.py",
++           "bridges/blender/wm_bridge/factory/geo/spec.py"]
++
++
++def payload(count):
++    spec = {"schema": "wmfactory.spec/1", "name": "motion_benchmark",
++            "scene": {"fps": 24}, "links": [], "joints": []}
++    motions = []
++    for index in range(count):
++        name = "bob_%d" % index
++        spec["links"].append({"name": name, "anchor": [index, 0, 0], "parts": []})
++        motions.append({"link": name, "kind": "spring", "axis": "y", "unit": "deg",
++                        "omega0": 2.0, "zeta": 0.15, "amp": 5.0})
++    return spec, motions
++
++
++def worker(repo, variant):
++    sys.path.insert(0, str(repo / "bridges/blender"))
++    from wm_bridge.factory.anim import eval as E
++
++    rows = []
++    for count in (1, 16, 64):
++        spec, motions = payload(count)
++        if variant == "fixed_top_level":
++            spec["motions"] = motions
++            invoke = lambda: E.eval_at(spec, 12)
++        else:
++            invoke = lambda: E.eval_at(spec, 12, motions=motions)
++        result = invoke()
++        fingerprint = hashlib.sha256(json.dumps(result, sort_keys=True).encode()).hexdigest()
++        for _ in range(50):
++            invoke()
++        samples = []
++        for _ in range(7):
++            started = time.perf_counter_ns()
++            for _ in range(200):
++                invoke()
++            samples.append((time.perf_counter_ns() - started) / 200)
++        rows.append({"links_and_motions": count, "calls_per_trial": 200,
++                     "trials_ns_per_call": samples,
++                     "median_ns_per_call": statistics.median(samples),
++                     "pose_sha256": fingerprint})
++    gc.collect()
++    tracemalloc.start()
++    start_current, _ = tracemalloc.get_traced_memory()
++    retained = []
++    for iteration in range(1, 1001):
++        invoke()
++        if iteration in (100, 1000):
++            gc.collect()
++            current, peak = tracemalloc.get_traced_memory()
++            retained.append({"calls": iteration, "current_bytes": current,
++                             "retained_delta_bytes": current - start_current,
++                             "peak_bytes": peak})
++    tracemalloc.stop()
++    spec, motions = payload(1)
++    spec["motions"] = motions
++    try:
++        E.eval_at(spec, 12)
++        top_level_probe = {"ok": True}
++    except Exception as exc:
++        top_level_probe = {"ok": False, "exception_type": type(exc).__name__, "message": str(exc)}
++    return {"variant": variant, "python": sys.version, "platform": platform.platform(),
++            "source_sha256": {p: hashlib.sha256((repo / p).read_bytes().replace(b"\r\n", b"\n")).hexdigest()
++                              for p in SOURCES}, "timing": rows,
++            "memory_64_links": retained, "top_level_probe": top_level_probe}
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--repo", required=True, type=Path)
++    parser.add_argument("--output", required=True, type=Path)
++    parser.add_argument("--baseline", default="d74848fb33dbff1d719959df19d1266a1ac60f44")
++    parser.add_argument("--worker", choices=["baseline_parameter", "fixed_parameter", "fixed_top_level"])
++    args = parser.parse_args()
++    repo, output = args.repo.resolve(), args.output.resolve()
++    if args.worker:
++        print(json.dumps(worker(repo, args.worker), ensure_ascii=False))
++        return 0
++    output.mkdir(parents=True, exist_ok=True)
++    records = []
++
++    def run(root, variant):
++        command = [sys.executable, "-B", "-S", "-X", "utf8", str(Path(__file__).resolve()),
++                   "--repo", str(root), "--output", str(output), "--worker", variant]
++        result = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", check=True)
++        (output / (variant + ".json")).write_text(result.stdout, encoding="utf-8", newline="\n")
++        records.append(json.loads(result.stdout))
++
++    with tempfile.TemporaryDirectory(prefix="motions-baseline-", dir=output) as temporary:
++        baseline = Path(temporary)
++        for relative in SOURCES:
++            content = subprocess.check_output(["git", "show", f"{args.baseline}:{relative}"], cwd=repo)
++            target = baseline / relative
++            target.parent.mkdir(parents=True, exist_ok=True)
++            target.write_bytes(content)
++        run(baseline, "baseline_parameter")
++    run(repo, "fixed_parameter")
++    run(repo, "fixed_top_level")
++    fingerprints_equal = all(len({record["timing"][index]["pose_sha256"] for record in records}) == 1
++                             for index in range(3))
++    summary = {"baseline": args.baseline, "correctness_fingerprints_equal": fingerprints_equal,
++               "timing_scope": "Seven trials after warmup; successful eval_at paths only; no speed threshold.",
++               "memory_scope": "tracemalloc current/peak after gc at 100 and 1000 calls, 64 links/motions.",
++               "records": records}
++    (output / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n",
++                                         encoding="utf-8", newline="\n")
++    print(json.dumps({"correctness_fingerprints_equal": fingerprints_equal,
++                      "results": [{"variant": r["variant"], "timing": r["timing"],
++                                   "memory_64_links": r["memory_64_links"]} for r in records]}, indent=2))
++    return 0 if fingerprints_equal else 1
++
++
++if __name__ == "__main__":
++    raise SystemExit(main())
+diff --git a/tools/testing/replay_save_guards.py b/tools/testing/replay_save_guards.py
+index f729097..764b84b 100644
+--- a/tools/testing/replay_save_guards.py
++++ b/tools/testing/replay_save_guards.py
+@@ -86,7 +86,9 @@ def main():
+             shutil.copytree(ROOT / "lingshu", sandbox / "lingshu",
+                             ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
+             for path, text in candidate.items():
+-                under(sandbox, path).write_text(text, encoding="utf-8", newline="\n")
++                source_target = under(sandbox, path)
++                source_target.parent.mkdir(parents=True, exist_ok=True)
++                source_target.write_text(text, encoding="utf-8", newline="\n")
+             target = under(sandbox, guard)
+             target.parent.mkdir(parents=True, exist_ok=True)
+             shutil.copy2(under(ROOT, guard), target)
+diff --git a/tools/time_core_lint_baseline.txt b/tools/time_core_lint_baseline.txt
+index bde4e24..f5df17e 100644
+--- a/tools/time_core_lint_baseline.txt
++++ b/tools/time_core_lint_baseline.txt
+@@ -8,6 +8,14 @@
+ # 格式：<仓内相对路径>:<行号>:<规则id>    （R1=exp_decay / R2=keep_rate / R3=ema）
+ # `#` 起为注释；本文件由人工复核，--update-baseline 只做机械重写。
+ # 规则表 / 豁免表 / 退出码 / 已知局限见 tools/time_core_lint.py 头部。
++# ── 2026-11-20 OBB/SAT 修复后重测 ──
++# physics.py 碰撞轴实现前增加，已登记物理闭式/运动学形态行号整体后移 7 行；
++# --update-baseline 仅同步既有 6 条物理条目，条目总数守恒 23 → 23，无新豁免。
++# #607 形态锚仍为 physics R3=11 / R1=9（test_issue607_time_core_shapes_guard.py::test_g4）。
++# ── 2026-11-20 单摆闭式解行号同步 ──
++# physics.py 单摆闭式解修复使后续两条已登记形态仅行号后移：2681/2723 → 2704/2746（+23）。
++# 其余 21 条不变；条目总数保持 23 → 23，没有新增或删除 lint 豁免。
++# #607 形态守卫仍保持 physics R3=11 / R1=9。
+ 
+ lingshu/core/activation.py:355:R3    # 既有：由 --update-baseline 机械登记，性质待人工复核
+ lingshu/world/physics.py:379:R1    # 既有：由 --update-baseline 机械登记，性质待人工复核
+@@ -24,11 +32,11 @@ lingshu/world/physics.py:599:R3    # 既有：由 --update-baseline 机械登记
+ lingshu/world/physics.py:600:R3    # 既有：由 --update-baseline 机械登记，性质待人工复核
+ lingshu/world/physics.py:602:R3    # 既有：由 --update-baseline 机械登记，性质待人工复核
+ lingshu/world/physics.py:1011:R1    # 既有：由 --update-baseline 机械登记，性质待人工复核
+-lingshu/world/physics.py:2554:R1    # 既有：由 --update-baseline 机械登记，性质待人工复核
+-lingshu/world/physics.py:2557:R1    # 既有：由 --update-baseline 机械登记，性质待人工复核
+-lingshu/world/physics.py:2559:R1    # 既有：由 --update-baseline 机械登记，性质待人工复核
+-lingshu/world/physics.py:2575:R1    # 既有：由 --update-baseline 机械登记，性质待人工复核
+-lingshu/world/physics.py:2674:R1    # 既有：由 --update-baseline 机械登记，性质待人工复核
+-lingshu/world/physics.py:2716:R3    # 既有：由 --update-baseline 机械登记，性质待人工复核
++lingshu/world/physics.py:2561:R1    # 既有：由 --update-baseline 机械登记，性质待人工复核
++lingshu/world/physics.py:2564:R1    # 既有：由 --update-baseline 机械登记，性质待人工复核
++lingshu/world/physics.py:2566:R1    # 既有：由 --update-baseline 机械登记，性质待人工复核
++lingshu/world/physics.py:2582:R1    # 既有：由 --update-baseline 机械登记，性质待人工复核
++lingshu/world/physics.py:2704:R1    # 既有：由 --update-baseline 机械登记，性质待人工复核
++lingshu/world/physics.py:2746:R3    # 既有：由 --update-baseline 机械登记，性质待人工复核
+ lingshu/world/shade_paint.py:215:R1    # 既有：由 --update-baseline 机械登记，性质待人工复核
+ lingshu/world/stable_lease.py:302:R1    # 既有：由 --update-baseline 机械登记，性质待人工复核

@@ -1,0 +1,17 @@
+{
+  "base_commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+  "target_commit": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+  "target_tree_sha": "94c97c2e4e65d6e454416b126388eb11f02ee4f9",
+  "patch_file": "combined-fixes.patch",
+  "patch_sha256": "1a72746fa61f9a1babc370c80320d92bfd9b0724e66b04d6731b17f9170ddd38",
+  "patch_bytes": 135257,
+  "changed_file_count": 33,
+  "command": [
+    "git",
+    "diff",
+    "--binary",
+    "d74848fb33dbff1d719959df19d1266a1ac60f44",
+    "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0"
+  ],
+  "driver_sha256": "d76b23c179e4940b0798101ef196b8d6405692cf6fca6e43c4815b1fc78bec45"
+}

@@ -1,0 +1,17 @@
+{
+  "commit": "433befa7b356eebecbc457ecd8f8a123ec1540cc",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "pillow": "12.3.0",
+  "numpy": "2.5.5",
+  "pytest": "9.2.0",
+  "sources": {
+    "lingshu/vision/lineart.py": "01d203a87a95021c99080f583e79868feafbf22251d3497b4e4765543cddca9c",
+    "tests/test_vision_lineart_alpha.py": "4b37db0c8a3dd406e2566067c59c60824e6e0bbe3c33b059c714b5be9a1960b4",
+    "tests/fixtures/vision_lineart_alpha_mutations.json": "c3356c80aa30e7895dd78ec18f0bfc67a73ef6e3c972d4cd1b146760e70f03fb"
+  },
+  "replay_checks": {
+    "replay-expanded-baseline": true,
+    "replay-original-baseline": true
+  }
+}

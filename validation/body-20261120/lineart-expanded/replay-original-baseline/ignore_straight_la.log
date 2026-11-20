@@ -1,0 +1,16 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+____________ test_transparent_pixels_are_composited_over_white[la] ____________
+tests\test_vision_lineart_alpha.py:52: in test_transparent_pixels_are_composited_over_white
+    assert np.array_equal(np.asarray(actual), np.asarray(expected)), \
+E   AssertionError: alpha input must be composited over white
+E   assert False
+E    +  where False = <function array_equal at 0x000002697E250FF0>(array([[255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 25...,\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255]], shape=(32, 32), dtype=uint8), array([[255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 25...,\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255]], shape=(32, 32), dtype=uint8))
+E    +    where <function array_equal at 0x000002697E250FF0> = np.array_equal
+E    +    and   array([[255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 25...,\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255]], shape=(32, 32), dtype=uint8) = <built-in function asarray>(<PIL.Image.Image image mode=L size=32x32 at 0x2697E473B90>)
+E    +      where <built-in function asarray> = np.asarray
+E    +    and   array([[255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 25...,\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255]], shape=(32, 32), dtype=uint8) = <built-in function asarray>(<PIL.Image.Image image mode=L size=32x32 at 0x2697E473B30>)
+E    +      where <built-in function asarray> = np.asarray
+=========================== short test summary info ===========================
+FAILED tests/test_vision_lineart_alpha.py::test_transparent_pixels_are_composited_over_white[la]
+1 failed in 0.30s

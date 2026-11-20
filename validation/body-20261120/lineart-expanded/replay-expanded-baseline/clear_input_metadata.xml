@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.278" timestamp="2026-11-20T21:02:27.597553+08:00" hostname="STARDUST"><testcase classname="tests.test_vision_lineart_alpha" name="test_alpha_input_is_not_modified[rgba]" time="0.003"><failure message="AssertionError: alpha input must remain unchanged&#10;assert ('RGBA', (32,...00', {}, None) == ('RGBA', (32,...adata'}, None)&#10;  &#10;  At index 3 diff: {} != {'lineart_test': 'preserve metadata'}&#10;  Use -v to get more diff">tests\test_vision_lineart_alpha.py:94: in test_alpha_input_is_not_modified
+    assert _snapshot(image) == before, "alpha input must remain unchanged"
+E   AssertionError: alpha input must remain unchanged
+E   assert ('RGBA', (32,...00', {}, None) == ('RGBA', (32,...adata'}, None)
+E     
+E     At index 3 diff: {} != {'lineart_test': 'preserve metadata'}
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,13 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___________________ test_alpha_input_is_not_modified[rgba] ____________________
+tests\test_vision_lineart_alpha.py:94: in test_alpha_input_is_not_modified
+    assert _snapshot(image) == before, "alpha input must remain unchanged"
+E   AssertionError: alpha input must remain unchanged
+E   assert ('RGBA', (32,...00', {}, None) == ('RGBA', (32,...adata'}, None)
+E     
+E     At index 3 diff: {} != {'lineart_test': 'preserve metadata'}
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED tests/test_vision_lineart_alpha.py::test_alpha_input_is_not_modified[rgba]
+1 failed in 0.31s

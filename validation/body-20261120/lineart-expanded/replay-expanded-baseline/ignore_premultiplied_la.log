@@ -1,0 +1,22 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_____ test_transparent_pixels_are_composited_over_white[premultiplied_la] _____
+[workspace]\lingshu\work\lingshu-body-20261120-venv\Lib\site-packages\PIL\Image.py:1234: in convert
+    im = self.im.convert(mode, dither)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ValueError: conversion from La to RGB not supported
+
+During handling of the above exception, another exception occurred:
+tests\test_vision_lineart_alpha.py:51: in test_transparent_pixels_are_composited_over_white
+    actual = darkline(image)
+             ^^^^^^^^^^^^^^^
+lingshu\vision\lineart.py:59: in darkline
+    visible = img.convert("RGB")
+              ^^^^^^^^^^^^^^^^^^
+[workspace]\lingshu\work\lingshu-body-20261120-venv\Lib\site-packages\PIL\Image.py:1241: in convert
+    im = self.im.convert(modebase)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ValueError: conversion from La to L not supported
+=========================== short test summary info ===========================
+FAILED tests/test_vision_lineart_alpha.py::test_transparent_pixels_are_composited_over_white[premultiplied_la]
+1 failed in 0.36s

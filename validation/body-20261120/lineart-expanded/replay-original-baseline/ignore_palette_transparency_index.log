@@ -1,0 +1,16 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+__________ test_palette_transparency_index_is_composited_over_white ___________
+tests\test_vision_lineart_alpha.py:63: in test_palette_transparency_index_is_composited_over_white
+    assert np.array_equal(np.asarray(actual), np.asarray(expected)), \
+E   AssertionError: palette transparency index must be composited over white
+E   assert False
+E    +  where False = <function array_equal at 0x0000020B68491030>(array([[255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 25...,\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255]], shape=(32, 32), dtype=uint8), array([[255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 25...,\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255]], shape=(32, 32), dtype=uint8))
+E    +    where <function array_equal at 0x0000020B68491030> = np.array_equal
+E    +    and   array([[255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 25...,\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255]], shape=(32, 32), dtype=uint8) = <built-in function asarray>(<PIL.Image.Image image mode=L size=32x32 at 0x20B686B3E90>)
+E    +      where <built-in function asarray> = np.asarray
+E    +    and   array([[255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 25...,\n       [255, 255, 255, ..., 255, 255, 255],\n       [255, 255, 255, ..., 255, 255, 255]], shape=(32, 32), dtype=uint8) = <built-in function asarray>(<PIL.Image.Image image mode=L size=32x32 at 0x20B686B3E00>)
+E    +      where <built-in function asarray> = np.asarray
+=========================== short test summary info ===========================
+FAILED tests/test_vision_lineart_alpha.py::test_palette_transparency_index_is_composited_over_white
+1 failed in 0.30s

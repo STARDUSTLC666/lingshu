@@ -1,0 +1,601 @@
+{
+  "baseline": {
+    "variant": "baseline",
+    "case_count": 784,
+    "routes": {
+      "top_level": {
+        "supported": 0,
+        "unsupported": 784,
+        "max_angle_error_rad": 0.0,
+        "max_quaternion_component_error": 0.0,
+        "numeric_failures": 0
+      },
+      "explicit_parameter": {
+        "supported": 180,
+        "unsupported": 604,
+        "max_angle_error_rad": 2.9384197216283657e-05,
+        "max_quaternion_component_error": 1.4685108461677357e-05,
+        "numeric_failures": 96
+      }
+    },
+    "correctness": {
+      "assertions": 3072,
+      "failed_assertions": 1580,
+      "checks": {
+        "top_level_supported": 784,
+        "explicit_parameter_supported": 784,
+        "explicit_parameter_angle_1e_11": 180,
+        "explicit_parameter_quaternion_5e_12": 180,
+        "explicit_parameter_unit": 180,
+        "explicit_parameter_origin": 180,
+        "inputs_unchanged": 784
+      },
+      "failures": {
+        "top_level_supported": {
+          "count": 784,
+          "examples": [
+            {
+              "case": 0,
+              "error": "SpecError"
+            },
+            {
+              "case": 1,
+              "error": "SpecError"
+            },
+            {
+              "case": 2,
+              "error": "SpecError"
+            },
+            {
+              "case": 3,
+              "error": "SpecError"
+            },
+            {
+              "case": 4,
+              "error": "SpecError"
+            },
+            {
+              "case": 5,
+              "error": "SpecError"
+            },
+            {
+              "case": 6,
+              "error": "SpecError"
+            },
+            {
+              "case": 7,
+              "error": "SpecError"
+            }
+          ]
+        },
+        "explicit_parameter_angle_1e_11": {
+          "count": 96,
+          "examples": [
+            {
+              "case": 3,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 4,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 5,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 6,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 7,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 8,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 15,
+              "error": 2.9384197216283657e-05
+            },
+            {
+              "case": 16,
+              "error": 2.9384197216283657e-05
+            }
+          ]
+        },
+        "explicit_parameter_quaternion_5e_12": {
+          "count": 96,
+          "examples": [
+            {
+              "case": 3,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 4,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 5,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 6,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 7,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 8,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 15,
+              "error": 1.4685108461677357e-05
+            },
+            {
+              "case": 16,
+              "error": 1.4685108461677357e-05
+            }
+          ]
+        },
+        "explicit_parameter_supported": {
+          "count": 604,
+          "examples": [
+            {
+              "case": 180,
+              "error": "AnimError"
+            },
+            {
+              "case": 181,
+              "error": "AnimError"
+            },
+            {
+              "case": 182,
+              "error": "AnimError"
+            },
+            {
+              "case": 183,
+              "error": "AnimError"
+            },
+            {
+              "case": 184,
+              "error": "AnimError"
+            },
+            {
+              "case": 185,
+              "error": "AnimError"
+            },
+            {
+              "case": 186,
+              "error": "AnimError"
+            },
+            {
+              "case": 187,
+              "error": "AnimError"
+            }
+          ]
+        }
+      }
+    },
+    "eval_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-crossfix-oracle\\evidence\\snapshots\\baseline\\bridges\\blender\\wm_bridge\\factory\\anim\\eval.py",
+    "eval_lf_sha256": "cc1a58e6665099ba43d406c709323227f7c0162b85fb7b1652b4fa9ee304644c"
+  },
+  "math_only": {
+    "variant": "math_only",
+    "case_count": 784,
+    "routes": {
+      "top_level": {
+        "supported": 0,
+        "unsupported": 784,
+        "max_angle_error_rad": 0.0,
+        "max_quaternion_component_error": 0.0,
+        "numeric_failures": 0
+      },
+      "explicit_parameter": {
+        "supported": 784,
+        "unsupported": 0,
+        "max_angle_error_rad": 4.171278257284197e-13,
+        "max_quaternion_component_error": 2.036977218152234e-13,
+        "numeric_failures": 0
+      }
+    },
+    "correctness": {
+      "assertions": 5488,
+      "failed_assertions": 784,
+      "checks": {
+        "top_level_supported": 784,
+        "explicit_parameter_supported": 784,
+        "explicit_parameter_angle_1e_11": 784,
+        "explicit_parameter_quaternion_5e_12": 784,
+        "explicit_parameter_unit": 784,
+        "explicit_parameter_origin": 784,
+        "inputs_unchanged": 784
+      },
+      "failures": {
+        "top_level_supported": {
+          "count": 784,
+          "examples": [
+            {
+              "case": 0,
+              "error": "SpecError"
+            },
+            {
+              "case": 1,
+              "error": "SpecError"
+            },
+            {
+              "case": 2,
+              "error": "SpecError"
+            },
+            {
+              "case": 3,
+              "error": "SpecError"
+            },
+            {
+              "case": 4,
+              "error": "SpecError"
+            },
+            {
+              "case": 5,
+              "error": "SpecError"
+            },
+            {
+              "case": 6,
+              "error": "SpecError"
+            },
+            {
+              "case": 7,
+              "error": "SpecError"
+            }
+          ]
+        }
+      }
+    },
+    "eval_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-crossfix-oracle\\evidence\\snapshots\\math_only\\bridges\\blender\\wm_bridge\\factory\\anim\\eval.py",
+    "eval_lf_sha256": "f2b24ec11fbdef01d56c7d354ef247fc1bfdda9dfc14588f8830a3cf62b01aad"
+  },
+  "top_level_only": {
+    "variant": "top_level_only",
+    "case_count": 784,
+    "routes": {
+      "top_level": {
+        "supported": 180,
+        "unsupported": 604,
+        "max_angle_error_rad": 2.9384197216283657e-05,
+        "max_quaternion_component_error": 1.4685108461677357e-05,
+        "numeric_failures": 96
+      },
+      "explicit_parameter": {
+        "supported": 180,
+        "unsupported": 604,
+        "max_angle_error_rad": 2.9384197216283657e-05,
+        "max_quaternion_component_error": 1.4685108461677357e-05,
+        "numeric_failures": 96
+      }
+    },
+    "correctness": {
+      "assertions": 4332,
+      "failed_assertions": 1592,
+      "checks": {
+        "top_level_supported": 784,
+        "top_level_angle_1e_11": 180,
+        "top_level_quaternion_5e_12": 180,
+        "top_level_unit": 180,
+        "top_level_origin": 180,
+        "explicit_parameter_supported": 784,
+        "explicit_parameter_angle_1e_11": 180,
+        "explicit_parameter_quaternion_5e_12": 180,
+        "explicit_parameter_unit": 180,
+        "explicit_parameter_origin": 180,
+        "top_level_repeat_pure": 180,
+        "top_level_time_even": 180,
+        "top_level_equals_explicit": 180,
+        "inputs_unchanged": 784
+      },
+      "failures": {
+        "top_level_angle_1e_11": {
+          "count": 96,
+          "examples": [
+            {
+              "case": 3,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 4,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 5,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 6,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 7,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 8,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 15,
+              "error": 2.9384197216283657e-05
+            },
+            {
+              "case": 16,
+              "error": 2.9384197216283657e-05
+            }
+          ]
+        },
+        "top_level_quaternion_5e_12": {
+          "count": 96,
+          "examples": [
+            {
+              "case": 3,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 4,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 5,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 6,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 7,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 8,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 15,
+              "error": 1.4685108461677357e-05
+            },
+            {
+              "case": 16,
+              "error": 1.4685108461677357e-05
+            }
+          ]
+        },
+        "explicit_parameter_angle_1e_11": {
+          "count": 96,
+          "examples": [
+            {
+              "case": 3,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 4,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 5,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 6,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 7,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 8,
+              "error": 2.9384197216280638e-05
+            },
+            {
+              "case": 15,
+              "error": 2.9384197216283657e-05
+            },
+            {
+              "case": 16,
+              "error": 2.9384197216283657e-05
+            }
+          ]
+        },
+        "explicit_parameter_quaternion_5e_12": {
+          "count": 96,
+          "examples": [
+            {
+              "case": 3,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 4,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 5,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 6,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 7,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 8,
+              "error": 1.4685108461675848e-05
+            },
+            {
+              "case": 15,
+              "error": 1.4685108461677357e-05
+            },
+            {
+              "case": 16,
+              "error": 1.4685108461677357e-05
+            }
+          ]
+        },
+        "top_level_supported": {
+          "count": 604,
+          "examples": [
+            {
+              "case": 180,
+              "error": "AnimError"
+            },
+            {
+              "case": 181,
+              "error": "AnimError"
+            },
+            {
+              "case": 182,
+              "error": "AnimError"
+            },
+            {
+              "case": 183,
+              "error": "AnimError"
+            },
+            {
+              "case": 184,
+              "error": "AnimError"
+            },
+            {
+              "case": 185,
+              "error": "AnimError"
+            },
+            {
+              "case": 186,
+              "error": "AnimError"
+            },
+            {
+              "case": 187,
+              "error": "AnimError"
+            }
+          ]
+        },
+        "explicit_parameter_supported": {
+          "count": 604,
+          "examples": [
+            {
+              "case": 180,
+              "error": "AnimError"
+            },
+            {
+              "case": 181,
+              "error": "AnimError"
+            },
+            {
+              "case": 182,
+              "error": "AnimError"
+            },
+            {
+              "case": 183,
+              "error": "AnimError"
+            },
+            {
+              "case": 184,
+              "error": "AnimError"
+            },
+            {
+              "case": 185,
+              "error": "AnimError"
+            },
+            {
+              "case": 186,
+              "error": "AnimError"
+            },
+            {
+              "case": 187,
+              "error": "AnimError"
+            }
+          ]
+        }
+      }
+    },
+    "eval_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-crossfix-oracle\\evidence\\snapshots\\top_level_only\\bridges\\blender\\wm_bridge\\factory\\anim\\eval.py",
+    "eval_lf_sha256": "1574bfb6555bf396da3aefb7c5de150e29c76adbcd1580e3c939d7f9117482b9"
+  },
+  "combined": {
+    "variant": "combined",
+    "case_count": 784,
+    "routes": {
+      "top_level": {
+        "supported": 784,
+        "unsupported": 0,
+        "max_angle_error_rad": 4.171278257284197e-13,
+        "max_quaternion_component_error": 2.036977218152234e-13,
+        "numeric_failures": 0
+      },
+      "explicit_parameter": {
+        "supported": 784,
+        "unsupported": 0,
+        "max_angle_error_rad": 4.171278257284197e-13,
+        "max_quaternion_component_error": 2.036977218152234e-13,
+        "numeric_failures": 0
+      }
+    },
+    "correctness": {
+      "assertions": 10976,
+      "failed_assertions": 0,
+      "checks": {
+        "top_level_supported": 784,
+        "top_level_angle_1e_11": 784,
+        "top_level_quaternion_5e_12": 784,
+        "top_level_unit": 784,
+        "top_level_origin": 784,
+        "explicit_parameter_supported": 784,
+        "explicit_parameter_angle_1e_11": 784,
+        "explicit_parameter_quaternion_5e_12": 784,
+        "explicit_parameter_unit": 784,
+        "explicit_parameter_origin": 784,
+        "top_level_repeat_pure": 784,
+        "top_level_time_even": 784,
+        "top_level_equals_explicit": 784,
+        "inputs_unchanged": 784
+      },
+      "failures": {}
+    },
+    "eval_source": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-crossfix-oracle\\evidence\\snapshots\\combined\\bridges\\blender\\wm_bridge\\factory\\anim\\eval.py",
+    "eval_lf_sha256": "8c973edbf7768dcb891546ba24422b020a85ad4b2a987a64c0581e846773f4f8"
+  },
+  "sources": {
+    "repository": "[workspace]\\lingshu\\work\\lingshu-body-integration-20261120",
+    "head": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+    "runner_lf_sha256": "2d37f6df657c2aaf674fcd68b16aec84cb276e1a52b4d78cb18e533c61c90299",
+    "variants": {
+      "baseline": {
+        "commit": "d74848fb33dbff1d719959df19d1266a1ac60f44",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-crossfix-oracle\\evidence\\snapshots\\baseline",
+        "archive_sha256": "07962132c77676b3049cc9d57654a1960fd9a77028a1c42917c73a51fe92fae2",
+        "eval_lf_sha256": "cc1a58e6665099ba43d406c709323227f7c0162b85fb7b1652b4fa9ee304644c"
+      },
+      "math_only": {
+        "commit": "e0771a810b8846676f3545542b2e70d5e0011467",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-crossfix-oracle\\evidence\\snapshots\\math_only",
+        "archive_sha256": "3db3219dc3429140895e9dab26c8e73d0bcf9142ab1633dc8502cb6d0ad4ed38",
+        "eval_lf_sha256": "f2b24ec11fbdef01d56c7d354ef247fc1bfdda9dfc14588f8830a3cf62b01aad"
+      },
+      "top_level_only": {
+        "commit": "1ab5cc7f295ed5748b50c7ffde26cf2a34663204",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-crossfix-oracle\\evidence\\snapshots\\top_level_only",
+        "archive_sha256": "b645f82b44b825f751222e4b0c734fda8d3f34683014db552599f722d16581d6",
+        "eval_lf_sha256": "1574bfb6555bf396da3aefb7c5de150e29c76adbcd1580e3c939d7f9117482b9"
+      },
+      "combined": {
+        "commit": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+        "snapshot": "[workspace]\\lingshu\\outputs\\body-validation-20261120\\integration-crossfix-oracle\\evidence\\snapshots\\combined",
+        "archive_sha256": "96bd2cca6f0547c0fc28c7c86c5b44d2dc7a2cb772827cefcdfcfebf8f227961",
+        "eval_lf_sha256": "8c973edbf7768dcb891546ba24422b020a85ad4b2a987a64c0581e846773f4f8"
+      }
+    }
+  }
+}

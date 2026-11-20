@@ -1,6 +1,7 @@
 # Top-level animation motions repair
 
 PR: https://github.com/FuRongJun-1999/lingshu/pull/1476
+Bounty intake: https://github.com/FuRongJun-1999/dsh-bounty/issues/2790
 Head: `1ab5cc7f295ed5748b50c7ffde26cf2a34663204`.
 Baseline: `d74848fb33dbff1d719959df19d1266a1ac60f44` (latest fetched origin/main).
 Checkout: `[workspace]\lingshu\work\lingshu-body-top-level-motions-20261120`.
@@ -28,7 +29,17 @@ Its directory preparation matches the parallel pendulum PR byte for byte.
 - Related tests in fresh per-file processes: 194 passed / 4 skipped; one CI-style script succeeded.
 - Strict manifest: 64/64 match. Time-core lint: 23 existing / 0 new violations.
 - Source compilation and diff whitespace check passed.
-- CI state and eventual bounty intake are recorded separately as they complete.
+- Three complete CI gates plus the title check passed on the exact head above.
+  Each Python leg reports 5,606 passed / 40 skipped, plus 98 subtests passed.
+  Complete job logs and extracted terminal summaries are preserved as ci-*.log
+  and ci-test-summaries.json. The skips are explicit; they are not counted as passed.
+- Intake 2790 was created only after all three gates passed. Its intake:v1 PR
+  link and the fixed public evidence link were read back and verified. No bounty
+  label, claim or settlement was self-issued.
+
+Fixed public evidence snapshot (source/bench/regression/replay evidence):
+https://github.com/STARDUSTLC666/lingshu/tree/7bf90b7d0dcdc61140e4000eccd5a159da3f39e1/validation/body-20261120/top-level-motions
+Both the PR and intake link this snapshot and the exact remote CI jobs.
 
 `related-suite.log/xml` preserve an initial custom aggregated subset with 20
 old bridge-family import failures caused by lingshu._pathguard refusing the
