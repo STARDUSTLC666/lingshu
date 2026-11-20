@@ -5,7 +5,7 @@
   "inspection_ref": "ce40e464d256f1a53b4fb6bd4b7012cf6c4a942d",
   "head": "ce40e464d256f1a53b4fb6bd4b7012cf6c4a942d",
   "scope": "validation/body-20261120/",
-  "excluded_new_scope": "integration-final/",
+  "excluded_new_scope": null,
   "index_listing_sha256_start": "59b4bb5a312a207a15874e3e65bc13dac77617b1e3f25350ec1f1e709681b336",
   "index_listing_sha256_end": "59b4bb5a312a207a15874e3e65bc13dac77617b1e3f25350ec1f1e709681b336",
   "index_stable_during_audit": true,
@@ -10934,5 +10934,1086 @@
   ],
   "audit_runner_sha256": "b30f62afb8d19c904dd7bc6c5d249e60faa8e3fe4fc30e358022e63355e0568f",
   "error_count": 0,
-  "pass": true
+  "pass": true,
+  "final_scope_checks": [
+    {
+      "check": "windows_primary_footer_5673_1_28_98",
+      "pass": true,
+      "details": "1 failed, 5673 passed, 28 skipped, 10446 warnings, 98 subtests passed in 1383.07s (0:23:03)"
+    },
+    {
+      "check": "windows_102_script_success",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "windows_source_and_brain_frozen",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "windows_only_preserved_known_failure",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "windows_junit_matches_footer_including_subtests",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "windows_real_brain_23_of_23",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "controlled_timing_four_pass_zero_skip",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "strict_manifest_64_of_64",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "time_lint_23_existing_no_new_or_stale",
+      "pass": true,
+      "details": {
+        "stale_baseline_entries": []
+      }
+    },
+    {
+      "check": "windows_scipy_dependency_measured",
+      "pass": true,
+      "details": {
+        "numpy": "2.5.5",
+        "Pillow": "12.3.0",
+        "scipy": "1.18.1",
+        "pytest": "9.2.0",
+        "pytest-xdist": "3.8.0",
+        "PyYAML": "6.0.3",
+        "markdown-it-py": "4.3.0"
+      }
+    },
+    {
+      "check": "authentic_historical_baseline_ref",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "frozen_supplement_43_pass_zero_skip",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "symlink_original_bodies_three_pass",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "unmodified_baseline_retains_same_symlink_failure",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "main_counts_not_inflated_by_supplements",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "all_83_authentic_exported_python_sources_match_Git",
+      "pass": true,
+      "details": {
+        "files": 83,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "linux_exact_completed_successful_run",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "linux_136338819053_counts_and_actual_source",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "linux_136338819053_original_raw_log_hash_and_text",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "linux_136338819053_actual_dependencies",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "linux_136338819496_counts_and_actual_source",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "linux_136338819496_original_raw_log_hash_and_text",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "linux_136338819496_actual_dependencies",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "linux_136338819513_counts_and_actual_source",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "linux_136338819513_original_raw_log_hash_and_text",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "linux_136338819513_actual_dependencies",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "three_POSIX_permission_guards_really_PASSED_in_all_three_Linux_logs",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "all_seventeen_original_asset_cases_explicitly_SKIPPED_in_all_three_Linux_logs",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "SAT_domain_margin_matches_actual_source",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "random_oracle_domain_stated_without_near_singular_extrapolation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "finite_guard_scope_is_intentionally_exact_angle_only",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "publication_snapshot_fourteen_verified_records",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "publication_README_scoped_to_original_seven_pairs",
+      "pass": true,
+      "details": null
+    }
+  ],
+  "final_scope_failed_checks": 0,
+  "final_windows_primary_footer": "1 failed, 5673 passed, 28 skipped, 10446 warnings, 98 subtests passed in 1383.07s (0:23:03)",
+  "final_linux_matrix": [
+    {
+      "job_id": 136338819053,
+      "name": "gate (py3.12)",
+      "url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44751075692/job/136338819053",
+      "runtime_headers": [
+        "platform linux -- Python 3.12.16, pytest-9.2.0, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.12.16/x64/bin/python"
+      ],
+      "numpy": "2.5.5",
+      "pytest_summary": "= 5662 passed, 40 skipped, 10450 warnings, 98 subtests passed in 550.36s (0:09:10) ="
+    },
+    {
+      "job_id": 136338819496,
+      "name": "gate (py3.13)",
+      "url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44751075692/job/136338819496",
+      "runtime_headers": [
+        "platform linux -- Python 3.13.18, pytest-9.2.0, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.13.18/x64/bin/python"
+      ],
+      "numpy": "2.5.5",
+      "pytest_summary": "= 5662 passed, 40 skipped, 10459 warnings, 98 subtests passed in 633.06s (0:10:33) ="
+    },
+    {
+      "job_id": 136338819513,
+      "name": "gate (py3.12 · 依赖下界)",
+      "url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44751075692/job/136338819513",
+      "runtime_headers": [
+        "platform linux -- Python 3.12.16, pytest-9.2.0, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.12.16/x64/bin/python"
+      ],
+      "numpy": "2.3.5",
+      "pytest_summary": "= 5662 passed, 40 skipped, 10455 warnings, 98 subtests passed in 719.79s (0:11:59) ="
+    }
+  ],
+  "cross_platform_skip_scope": {
+    "audited_public_commit": "ce40e464d256f1a53b4fb6bd4b7012cf6c4a942d",
+    "source_head": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+    "windows_remaining_count": 20,
+    "windows_permission_count": 3,
+    "windows_asset_count": 17,
+    "all_three_permission_guards_explicitly_passed_in_all_three_linux_jobs": true,
+    "all_seventeen_asset_cases_explicitly_skipped_in_all_three_linux_jobs": true,
+    "source_guard_lf_sha256": "a6d11458ce8a27d8dab0f9ed489adf8ddca21b943241d12b713e64fcf9d1631a",
+    "scope_conclusion": "20 remain unexecuted in the Windows run; the 3 POSIX chmod guards were explicitly PASSED in all three Linux legs. The remaining 17 original-asset cases are the shared unexecuted scope in these Windows/Linux records. Supplemental passes are not added to main-suite counts.",
+    "jobs": [
+      {
+        "job_id": 136338819053,
+        "job_name": "gate (py3.12)",
+        "url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44751075692/job/136338819053",
+        "head_sha": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+        "original_log_sha256": "115b5a0bd6c3fce1975359e21e8166629601e9652e0740aa2c83ec8b1e7b4110",
+        "cases": [
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_b2_网格场景两次导出逐字节相同_真模型",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_b2_网格场景两次导出逐字节相同_真模型",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7255,
+                "text": "2026-11-20T14:18:43.7227580Z tests/test_mesh_svg_layered_guard.py::test_b2_网格场景两次导出逐字节相同_真模型 SKIPPED [ 76%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_e3_未登记的Pillow主版本命中skip分支而不是红",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_e3_未登记的Pillow主版本命中skip分支而不是红",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7266,
+                "text": "2026-11-20T14:18:43.7299269Z tests/test_mesh_svg_layered_guard.py::test_e3_未登记的Pillow主版本命中skip分支而不是红 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_e1_图元场景render_svg与冻结sha256相同",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_e1_图元场景render_svg与冻结sha256相同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7267,
+                "text": "2026-11-20T14:18:43.7303733Z tests/test_mesh_svg_layered_guard.py::test_e1_图元场景render_svg与冻结sha256相同 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_e2_图元场景位图逐字节不变_按Pillow主版本分档",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_e2_图元场景位图逐字节不变_按Pillow主版本分档",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7268,
+                "text": "2026-11-20T14:18:43.7308981Z tests/test_mesh_svg_layered_guard.py::test_e2_图元场景位图逐字节不变_按Pillow主版本分档 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_f1_与render_svg的多边形序列逐点相同",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_f1_与render_svg的多边形序列逐点相同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7269,
+                "text": "2026-11-20T14:18:43.7313420Z tests/test_mesh_svg_layered_guard.py::test_f1_与render_svg的多边形序列逐点相同 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_i1_注入分层后端_几何与既有出口逐点相同",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_i1_注入分层后端_几何与既有出口逐点相同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7272,
+                "text": "2026-11-20T14:18:43.7327119Z tests/test_mesh_svg_layered_guard.py::test_i1_注入分层后端_几何与既有出口逐点相同 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_i2_注入后端与自带编排的几何一致",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_i2_注入后端与自带编排的几何一致",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7273,
+                "text": "2026-11-20T14:18:43.7331203Z tests/test_mesh_svg_layered_guard.py::test_i2_注入后端与自带编排的几何一致 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_g1_预设不改变几何与顺序",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_g1_预设不改变几何与顺序",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7274,
+                "text": "2026-11-20T14:18:43.7335214Z tests/test_mesh_svg_layered_guard.py::test_g1_预设不改变几何与顺序 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_h4_断开画家序_则F组红",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_h4_断开画家序_则F组红",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7279,
+                "text": "2026-11-20T14:18:43.7366399Z tests/test_mesh_svg_layered_guard.py::test_h4_断开画家序_则F组红 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue498_atomic_write_perm_symlink_guard::test_a5_posix_0600目标写后仍0600",
+            "linux_pytest_id": "tests/test_issue498_atomic_write_perm_symlink_guard.py::test_a5_posix_0600目标写后仍0600",
+            "category": "Windows cannot express POSIX chmod permissions",
+            "source_function": {
+              "line": 327,
+              "end_line": 339
+            },
+            "matches": [
+              {
+                "line_number": 5786,
+                "text": "2026-11-20T14:17:23.5169122Z tests/test_issue498_atomic_write_perm_symlink_guard.py::test_a5_posix_0600目标写后仍0600 PASSED [ 51%]",
+                "status": "PASSED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue498_atomic_write_perm_symlink_guard::test_b5_posix_0600目标写后仍0600",
+            "linux_pytest_id": "tests/test_issue498_atomic_write_perm_symlink_guard.py::test_b5_posix_0600目标写后仍0600",
+            "category": "Windows cannot express POSIX chmod permissions",
+            "source_function": {
+              "line": 454,
+              "end_line": 463
+            },
+            "matches": [
+              {
+                "line_number": 5793,
+                "text": "2026-11-20T14:17:23.6486843Z tests/test_issue498_atomic_write_perm_symlink_guard.py::test_b5_posix_0600目标写后仍0600 PASSED [ 51%]",
+                "status": "PASSED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue498_atomic_write_perm_symlink_guard::test_c5_posix_0600目标写后仍0600",
+            "linux_pytest_id": "tests/test_issue498_atomic_write_perm_symlink_guard.py::test_c5_posix_0600目标写后仍0600",
+            "category": "Windows cannot express POSIX chmod permissions",
+            "source_function": {
+              "line": 568,
+              "end_line": 577
+            },
+            "matches": [
+              {
+                "line_number": 5800,
+                "text": "2026-11-20T14:17:23.6546669Z tests/test_issue498_atomic_write_perm_symlink_guard.py::test_c5_posix_0600目标写后仍0600 PASSED [ 51%]",
+                "status": "PASSED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue427_shade_paint_guard::test_c1_studio在合成模型上_最暗前景与对比度值域三项全胜回退管线",
+            "linux_pytest_id": "tests/test_issue427_shade_paint_guard.py::test_c1_studio在合成模型上_最暗前景与对比度值域三项全胜回退管线",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 5551,
+                "text": "2026-11-20T14:17:07.3534698Z tests/test_issue427_shade_paint_guard.py::test_c1_studio在合成模型上_最暗前景与对比度值域三项全胜回退管线 SKIPPED [ 47%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue427_shade_paint_guard::test_c2_八角柱的面必须互相可区分",
+            "linux_pytest_id": "tests/test_issue427_shade_paint_guard.py::test_c2_八角柱的面必须互相可区分",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 5552,
+                "text": "2026-11-20T14:17:07.3609609Z tests/test_issue427_shade_paint_guard.py::test_c2_八角柱的面必须互相可区分 SKIPPED [ 47%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue427_shade_paint_guard::test_c3_toon模式下前景色阶数受控",
+            "linux_pytest_id": "tests/test_issue427_shade_paint_guard.py::test_c3_toon模式下前景色阶数受控",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 5553,
+                "text": "2026-11-20T14:17:07.3685948Z tests/test_issue427_shade_paint_guard.py::test_c3_toon模式下前景色阶数受控 SKIPPED [ 47%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue427_shade_paint_guard::test_d1_真实turret_同机位下studio越线而回退不越线_回退即红",
+            "linux_pytest_id": "tests/test_issue427_shade_paint_guard.py::test_d1_真实turret_同机位下studio越线而回退不越线_回退即红",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 5554,
+                "text": "2026-11-20T14:17:07.3689901Z tests/test_issue427_shade_paint_guard.py::test_d1_真实turret_同机位下studio越线而回退不越线_回退即红 SKIPPED [ 47%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh3d_zbuffer_guard::test_a2_zbuffer_与逐像素真值参考逐字节一致_12668面真模型",
+            "linux_pytest_id": "tests/test_mesh3d_zbuffer_guard.py::test_a2_zbuffer_与逐像素真值参考逐字节一致_12668面真模型",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7166,
+                "text": "2026-11-20T14:18:42.9773700Z tests/test_mesh3d_zbuffer_guard.py::test_a2_zbuffer_与逐像素真值参考逐字节一致_12668面真模型 SKIPPED [ 75%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh3d_zbuffer_guard::test_b1_画家序在真模型上确实穿模_且zbuffer与它可测地不同",
+            "linux_pytest_id": "tests/test_mesh3d_zbuffer_guard.py::test_b1_画家序在真模型上确实穿模_且zbuffer与它可测地不同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7167,
+                "text": "2026-11-20T14:18:42.9778136Z tests/test_mesh3d_zbuffer_guard.py::test_b1_画家序在真模型上确实穿模_且zbuffer与它可测地不同 SKIPPED [ 75%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh3d_zbuffer_guard::test_b3_面序反转渲染逐字节相同",
+            "linux_pytest_id": "tests/test_mesh3d_zbuffer_guard.py::test_b3_面序反转渲染逐字节相同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7169,
+                "text": "2026-11-20T14:18:43.0032094Z tests/test_mesh3d_zbuffer_guard.py::test_b3_面序反转渲染逐字节相同 SKIPPED [ 75%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh3d_obj_ngon_guard::test_g_真实模型逐面型读数与帧一致",
+            "linux_pytest_id": "tests/test_mesh3d_obj_ngon_guard.py::test_g_真实模型逐面型读数与帧一致",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7158,
+                "text": "2026-11-20T14:18:42.9391390Z tests/test_mesh3d_obj_ngon_guard.py::test_g_真实模型逐面型读数与帧一致 SKIPPED [ 75%]",
+                "status": "SKIPPED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "job_id": 136338819496,
+        "job_name": "gate (py3.13)",
+        "url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44751075692/job/136338819496",
+        "head_sha": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+        "original_log_sha256": "3bb1b7454d14871d3e7efea4ec9e59aad888738757d4e0e63a4c8f2adc233168",
+        "cases": [
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_b2_网格场景两次导出逐字节相同_真模型",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_b2_网格场景两次导出逐字节相同_真模型",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7256,
+                "text": "2026-11-20T14:20:05.6119470Z tests/test_mesh_svg_layered_guard.py::test_b2_网格场景两次导出逐字节相同_真模型 SKIPPED [ 76%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_e3_未登记的Pillow主版本命中skip分支而不是红",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_e3_未登记的Pillow主版本命中skip分支而不是红",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7267,
+                "text": "2026-11-20T14:20:05.6205821Z tests/test_mesh_svg_layered_guard.py::test_e3_未登记的Pillow主版本命中skip分支而不是红 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_e1_图元场景render_svg与冻结sha256相同",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_e1_图元场景render_svg与冻结sha256相同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7268,
+                "text": "2026-11-20T14:20:05.6211076Z tests/test_mesh_svg_layered_guard.py::test_e1_图元场景render_svg与冻结sha256相同 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_e2_图元场景位图逐字节不变_按Pillow主版本分档",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_e2_图元场景位图逐字节不变_按Pillow主版本分档",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7269,
+                "text": "2026-11-20T14:20:05.6215918Z tests/test_mesh_svg_layered_guard.py::test_e2_图元场景位图逐字节不变_按Pillow主版本分档 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_f1_与render_svg的多边形序列逐点相同",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_f1_与render_svg的多边形序列逐点相同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7270,
+                "text": "2026-11-20T14:20:05.6221415Z tests/test_mesh_svg_layered_guard.py::test_f1_与render_svg的多边形序列逐点相同 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_i1_注入分层后端_几何与既有出口逐点相同",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_i1_注入分层后端_几何与既有出口逐点相同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7273,
+                "text": "2026-11-20T14:20:05.6237533Z tests/test_mesh_svg_layered_guard.py::test_i1_注入分层后端_几何与既有出口逐点相同 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_i2_注入后端与自带编排的几何一致",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_i2_注入后端与自带编排的几何一致",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7274,
+                "text": "2026-11-20T14:20:05.6242823Z tests/test_mesh_svg_layered_guard.py::test_i2_注入后端与自带编排的几何一致 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_g1_预设不改变几何与顺序",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_g1_预设不改变几何与顺序",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7275,
+                "text": "2026-11-20T14:20:05.6247471Z tests/test_mesh_svg_layered_guard.py::test_g1_预设不改变几何与顺序 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_h4_断开画家序_则F组红",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_h4_断开画家序_则F组红",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7280,
+                "text": "2026-11-20T14:20:05.6282822Z tests/test_mesh_svg_layered_guard.py::test_h4_断开画家序_则F组红 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue498_atomic_write_perm_symlink_guard::test_a5_posix_0600目标写后仍0600",
+            "linux_pytest_id": "tests/test_issue498_atomic_write_perm_symlink_guard.py::test_a5_posix_0600目标写后仍0600",
+            "category": "Windows cannot express POSIX chmod permissions",
+            "source_function": {
+              "line": 327,
+              "end_line": 339
+            },
+            "matches": [
+              {
+                "line_number": 5787,
+                "text": "2026-11-20T14:19:03.3545732Z tests/test_issue498_atomic_write_perm_symlink_guard.py::test_a5_posix_0600目标写后仍0600 PASSED [ 51%]",
+                "status": "PASSED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue498_atomic_write_perm_symlink_guard::test_b5_posix_0600目标写后仍0600",
+            "linux_pytest_id": "tests/test_issue498_atomic_write_perm_symlink_guard.py::test_b5_posix_0600目标写后仍0600",
+            "category": "Windows cannot express POSIX chmod permissions",
+            "source_function": {
+              "line": 454,
+              "end_line": 463
+            },
+            "matches": [
+              {
+                "line_number": 5794,
+                "text": "2026-11-20T14:19:03.4210132Z tests/test_issue498_atomic_write_perm_symlink_guard.py::test_b5_posix_0600目标写后仍0600 PASSED [ 51%]",
+                "status": "PASSED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue498_atomic_write_perm_symlink_guard::test_c5_posix_0600目标写后仍0600",
+            "linux_pytest_id": "tests/test_issue498_atomic_write_perm_symlink_guard.py::test_c5_posix_0600目标写后仍0600",
+            "category": "Windows cannot express POSIX chmod permissions",
+            "source_function": {
+              "line": 568,
+              "end_line": 577
+            },
+            "matches": [
+              {
+                "line_number": 5801,
+                "text": "2026-11-20T14:19:03.4268932Z tests/test_issue498_atomic_write_perm_symlink_guard.py::test_c5_posix_0600目标写后仍0600 PASSED [ 51%]",
+                "status": "PASSED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue427_shade_paint_guard::test_c1_studio在合成模型上_最暗前景与对比度值域三项全胜回退管线",
+            "linux_pytest_id": "tests/test_issue427_shade_paint_guard.py::test_c1_studio在合成模型上_最暗前景与对比度值域三项全胜回退管线",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 5552,
+                "text": "2026-11-20T14:18:53.4937530Z tests/test_issue427_shade_paint_guard.py::test_c1_studio在合成模型上_最暗前景与对比度值域三项全胜回退管线 SKIPPED [ 47%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue427_shade_paint_guard::test_c2_八角柱的面必须互相可区分",
+            "linux_pytest_id": "tests/test_issue427_shade_paint_guard.py::test_c2_八角柱的面必须互相可区分",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 5553,
+                "text": "2026-11-20T14:18:53.4995326Z tests/test_issue427_shade_paint_guard.py::test_c2_八角柱的面必须互相可区分 SKIPPED [ 47%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue427_shade_paint_guard::test_c3_toon模式下前景色阶数受控",
+            "linux_pytest_id": "tests/test_issue427_shade_paint_guard.py::test_c3_toon模式下前景色阶数受控",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 5554,
+                "text": "2026-11-20T14:18:53.5056751Z tests/test_issue427_shade_paint_guard.py::test_c3_toon模式下前景色阶数受控 SKIPPED [ 47%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue427_shade_paint_guard::test_d1_真实turret_同机位下studio越线而回退不越线_回退即红",
+            "linux_pytest_id": "tests/test_issue427_shade_paint_guard.py::test_d1_真实turret_同机位下studio越线而回退不越线_回退即红",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 5555,
+                "text": "2026-11-20T14:18:53.5057904Z tests/test_issue427_shade_paint_guard.py::test_d1_真实turret_同机位下studio越线而回退不越线_回退即红 SKIPPED [ 47%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh3d_zbuffer_guard::test_a2_zbuffer_与逐像素真值参考逐字节一致_12668面真模型",
+            "linux_pytest_id": "tests/test_mesh3d_zbuffer_guard.py::test_a2_zbuffer_与逐像素真值参考逐字节一致_12668面真模型",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7167,
+                "text": "2026-11-20T14:20:04.8713119Z tests/test_mesh3d_zbuffer_guard.py::test_a2_zbuffer_与逐像素真值参考逐字节一致_12668面真模型 SKIPPED [ 75%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh3d_zbuffer_guard::test_b1_画家序在真模型上确实穿模_且zbuffer与它可测地不同",
+            "linux_pytest_id": "tests/test_mesh3d_zbuffer_guard.py::test_b1_画家序在真模型上确实穿模_且zbuffer与它可测地不同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7168,
+                "text": "2026-11-20T14:20:04.8717608Z tests/test_mesh3d_zbuffer_guard.py::test_b1_画家序在真模型上确实穿模_且zbuffer与它可测地不同 SKIPPED [ 75%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh3d_zbuffer_guard::test_b3_面序反转渲染逐字节相同",
+            "linux_pytest_id": "tests/test_mesh3d_zbuffer_guard.py::test_b3_面序反转渲染逐字节相同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7170,
+                "text": "2026-11-20T14:20:04.9028916Z tests/test_mesh3d_zbuffer_guard.py::test_b3_面序反转渲染逐字节相同 SKIPPED [ 75%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh3d_obj_ngon_guard::test_g_真实模型逐面型读数与帧一致",
+            "linux_pytest_id": "tests/test_mesh3d_obj_ngon_guard.py::test_g_真实模型逐面型读数与帧一致",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7159,
+                "text": "2026-11-20T14:20:04.8279675Z tests/test_mesh3d_obj_ngon_guard.py::test_g_真实模型逐面型读数与帧一致 SKIPPED [ 75%]",
+                "status": "SKIPPED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "job_id": 136338819513,
+        "job_name": "gate (py3.12 · 依赖下界)",
+        "url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44751075692/job/136338819513",
+        "head_sha": "231aa5334c0c0f2f01eccf6c547ebd97a478a8d0",
+        "original_log_sha256": "cd444766ee8b9d2fe7c699abefed979083c4f23e5f3bd53afe137ff16f1ea99b",
+        "cases": [
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_b2_网格场景两次导出逐字节相同_真模型",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_b2_网格场景两次导出逐字节相同_真模型",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7280,
+                "text": "2026-11-20T14:21:04.9115290Z tests/test_mesh_svg_layered_guard.py::test_b2_网格场景两次导出逐字节相同_真模型 SKIPPED [ 76%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_e3_未登记的Pillow主版本命中skip分支而不是红",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_e3_未登记的Pillow主版本命中skip分支而不是红",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7291,
+                "text": "2026-11-20T14:21:04.9210602Z tests/test_mesh_svg_layered_guard.py::test_e3_未登记的Pillow主版本命中skip分支而不是红 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_e1_图元场景render_svg与冻结sha256相同",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_e1_图元场景render_svg与冻结sha256相同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7292,
+                "text": "2026-11-20T14:21:04.9216398Z tests/test_mesh_svg_layered_guard.py::test_e1_图元场景render_svg与冻结sha256相同 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_e2_图元场景位图逐字节不变_按Pillow主版本分档",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_e2_图元场景位图逐字节不变_按Pillow主版本分档",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7293,
+                "text": "2026-11-20T14:21:04.9223795Z tests/test_mesh_svg_layered_guard.py::test_e2_图元场景位图逐字节不变_按Pillow主版本分档 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_f1_与render_svg的多边形序列逐点相同",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_f1_与render_svg的多边形序列逐点相同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7294,
+                "text": "2026-11-20T14:21:04.9229871Z tests/test_mesh_svg_layered_guard.py::test_f1_与render_svg的多边形序列逐点相同 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_i1_注入分层后端_几何与既有出口逐点相同",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_i1_注入分层后端_几何与既有出口逐点相同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7297,
+                "text": "2026-11-20T14:21:04.9247975Z tests/test_mesh_svg_layered_guard.py::test_i1_注入分层后端_几何与既有出口逐点相同 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_i2_注入后端与自带编排的几何一致",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_i2_注入后端与自带编排的几何一致",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7298,
+                "text": "2026-11-20T14:21:04.9253546Z tests/test_mesh_svg_layered_guard.py::test_i2_注入后端与自带编排的几何一致 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_g1_预设不改变几何与顺序",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_g1_预设不改变几何与顺序",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7299,
+                "text": "2026-11-20T14:21:04.9259209Z tests/test_mesh_svg_layered_guard.py::test_g1_预设不改变几何与顺序 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh_svg_layered_guard::test_h4_断开画家序_则F组红",
+            "linux_pytest_id": "tests/test_mesh_svg_layered_guard.py::test_h4_断开画家序_则F组红",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7304,
+                "text": "2026-11-20T14:21:04.9301320Z tests/test_mesh_svg_layered_guard.py::test_h4_断开画家序_则F组红 SKIPPED [ 77%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue498_atomic_write_perm_symlink_guard::test_a5_posix_0600目标写后仍0600",
+            "linux_pytest_id": "tests/test_issue498_atomic_write_perm_symlink_guard.py::test_a5_posix_0600目标写后仍0600",
+            "category": "Windows cannot express POSIX chmod permissions",
+            "source_function": {
+              "line": 327,
+              "end_line": 339
+            },
+            "matches": [
+              {
+                "line_number": 5811,
+                "text": "2026-11-20T14:19:48.6573298Z tests/test_issue498_atomic_write_perm_symlink_guard.py::test_a5_posix_0600目标写后仍0600 PASSED [ 51%]",
+                "status": "PASSED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue498_atomic_write_perm_symlink_guard::test_b5_posix_0600目标写后仍0600",
+            "linux_pytest_id": "tests/test_issue498_atomic_write_perm_symlink_guard.py::test_b5_posix_0600目标写后仍0600",
+            "category": "Windows cannot express POSIX chmod permissions",
+            "source_function": {
+              "line": 454,
+              "end_line": 463
+            },
+            "matches": [
+              {
+                "line_number": 5818,
+                "text": "2026-11-20T14:19:48.7512015Z tests/test_issue498_atomic_write_perm_symlink_guard.py::test_b5_posix_0600目标写后仍0600 PASSED [ 51%]",
+                "status": "PASSED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue498_atomic_write_perm_symlink_guard::test_c5_posix_0600目标写后仍0600",
+            "linux_pytest_id": "tests/test_issue498_atomic_write_perm_symlink_guard.py::test_c5_posix_0600目标写后仍0600",
+            "category": "Windows cannot express POSIX chmod permissions",
+            "source_function": {
+              "line": 568,
+              "end_line": 577
+            },
+            "matches": [
+              {
+                "line_number": 5825,
+                "text": "2026-11-20T14:19:48.7585056Z tests/test_issue498_atomic_write_perm_symlink_guard.py::test_c5_posix_0600目标写后仍0600 PASSED [ 51%]",
+                "status": "PASSED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue427_shade_paint_guard::test_c1_studio在合成模型上_最暗前景与对比度值域三项全胜回退管线",
+            "linux_pytest_id": "tests/test_issue427_shade_paint_guard.py::test_c1_studio在合成模型上_最暗前景与对比度值域三项全胜回退管线",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 5576,
+                "text": "2026-11-20T14:19:34.5994843Z tests/test_issue427_shade_paint_guard.py::test_c1_studio在合成模型上_最暗前景与对比度值域三项全胜回退管线 SKIPPED [ 47%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue427_shade_paint_guard::test_c2_八角柱的面必须互相可区分",
+            "linux_pytest_id": "tests/test_issue427_shade_paint_guard.py::test_c2_八角柱的面必须互相可区分",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 5577,
+                "text": "2026-11-20T14:19:34.6068900Z tests/test_issue427_shade_paint_guard.py::test_c2_八角柱的面必须互相可区分 SKIPPED [ 47%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue427_shade_paint_guard::test_c3_toon模式下前景色阶数受控",
+            "linux_pytest_id": "tests/test_issue427_shade_paint_guard.py::test_c3_toon模式下前景色阶数受控",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 5578,
+                "text": "2026-11-20T14:19:34.6142045Z tests/test_issue427_shade_paint_guard.py::test_c3_toon模式下前景色阶数受控 SKIPPED [ 47%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_issue427_shade_paint_guard::test_d1_真实turret_同机位下studio越线而回退不越线_回退即红",
+            "linux_pytest_id": "tests/test_issue427_shade_paint_guard.py::test_d1_真实turret_同机位下studio越线而回退不越线_回退即红",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 5579,
+                "text": "2026-11-20T14:19:34.6146972Z tests/test_issue427_shade_paint_guard.py::test_d1_真实turret_同机位下studio越线而回退不越线_回退即红 SKIPPED [ 47%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh3d_zbuffer_guard::test_a2_zbuffer_与逐像素真值参考逐字节一致_12668面真模型",
+            "linux_pytest_id": "tests/test_mesh3d_zbuffer_guard.py::test_a2_zbuffer_与逐像素真值参考逐字节一致_12668面真模型",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7191,
+                "text": "2026-11-20T14:21:03.9962222Z tests/test_mesh3d_zbuffer_guard.py::test_a2_zbuffer_与逐像素真值参考逐字节一致_12668面真模型 SKIPPED [ 75%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh3d_zbuffer_guard::test_b1_画家序在真模型上确实穿模_且zbuffer与它可测地不同",
+            "linux_pytest_id": "tests/test_mesh3d_zbuffer_guard.py::test_b1_画家序在真模型上确实穿模_且zbuffer与它可测地不同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7192,
+                "text": "2026-11-20T14:21:03.9968393Z tests/test_mesh3d_zbuffer_guard.py::test_b1_画家序在真模型上确实穿模_且zbuffer与它可测地不同 SKIPPED [ 75%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh3d_zbuffer_guard::test_b3_面序反转渲染逐字节相同",
+            "linux_pytest_id": "tests/test_mesh3d_zbuffer_guard.py::test_b3_面序反转渲染逐字节相同",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7194,
+                "text": "2026-11-20T14:21:04.0286758Z tests/test_mesh3d_zbuffer_guard.py::test_b3_面序反转渲染逐字节相同 SKIPPED [ 75%]",
+                "status": "SKIPPED"
+              }
+            ]
+          },
+          {
+            "windows_test_id": "tests.test_mesh3d_obj_ngon_guard::test_g_真实模型逐面型读数与帧一致",
+            "linux_pytest_id": "tests/test_mesh3d_obj_ngon_guard.py::test_g_真实模型逐面型读数与帧一致",
+            "category": "Missing original model or frozen pixel/metric artifact",
+            "source_function": null,
+            "matches": [
+              {
+                "line_number": 7183,
+                "text": "2026-11-20T14:21:03.9495742Z tests/test_mesh3d_obj_ngon_guard.py::test_g_真实模型逐面型读数与帧一致 SKIPPED [ 75%]",
+                "status": "SKIPPED"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "publication_originals_frozen": 110,
+    "publication_originals_all_match": true
+  },
+  "support_domain_evidence": {
+    "SAT_parameter_function": "_box_frame",
+    "SAT_normalized_determinant_rejection_lte": 1e-09,
+    "random_oracle_min_abs_det_strictly_greater_than": 0.15,
+    "exact_angle_accepted_scalar_types": "builtin int/float, bool excluded; no claim for old nonfinite/invalid/coercible-string inputs",
+    "exact_angle_physical_domain": "strictly (-pi, pi)",
+    "body_tol_deg_range": "[0, 180]",
+    "global_float_error_bound_claimed": false
+  },
+  "recognized_nonpersonal_system_installation_paths": [
+    {
+      "artifact": "integration-final-windows/summary.json",
+      "field": "openssl",
+      "value": "C:\\Program Files\\Git\\mingw64\\bin\\openssl.EXE",
+      "classification": "standard Program Files installation, not an operator home/workspace path"
+    }
+  ],
+  "audit_mode": "Read-only Git/object, log/JSON/XML comparison and AST inspection; no product suite or benchmark executed"
 }

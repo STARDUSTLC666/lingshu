@@ -9,3 +9,43 @@ Counts={"six_fixed_assertions": 15455, "six_fixed_failures": 0, "six_baseline_fa
 Issues:
 Warnings:
 {"artifact": "top-level-motions/bench_bridge_motions.py", "reason": "subprocess_text_codec_not_fully_explicit", "assessment": "Nonblocking when encoding is explicit: Python default strict errors is a valid deliberate decoder policy.", "line": 108, "method": "run", "encoding_explicit": true, "errors_explicit": false}
+
+FINAL SCOPE CHECKS
+PASS windows_primary_footer_5673_1_28_98
+PASS windows_102_script_success
+PASS windows_source_and_brain_frozen
+PASS windows_only_preserved_known_failure
+PASS windows_junit_matches_footer_including_subtests
+PASS windows_real_brain_23_of_23
+PASS controlled_timing_four_pass_zero_skip
+PASS strict_manifest_64_of_64
+PASS time_lint_23_existing_no_new_or_stale
+PASS windows_scipy_dependency_measured
+PASS authentic_historical_baseline_ref
+PASS frozen_supplement_43_pass_zero_skip
+PASS symlink_original_bodies_three_pass
+PASS unmodified_baseline_retains_same_symlink_failure
+PASS main_counts_not_inflated_by_supplements
+PASS all_83_authentic_exported_python_sources_match_Git
+PASS linux_exact_completed_successful_run
+PASS linux_136338819053_counts_and_actual_source
+PASS linux_136338819053_original_raw_log_hash_and_text
+PASS linux_136338819053_actual_dependencies
+PASS linux_136338819496_counts_and_actual_source
+PASS linux_136338819496_original_raw_log_hash_and_text
+PASS linux_136338819496_actual_dependencies
+PASS linux_136338819513_counts_and_actual_source
+PASS linux_136338819513_original_raw_log_hash_and_text
+PASS linux_136338819513_actual_dependencies
+PASS three_POSIX_permission_guards_really_PASSED_in_all_three_Linux_logs
+PASS all_seventeen_original_asset_cases_explicitly_SKIPPED_in_all_three_Linux_logs
+PASS SAT_domain_margin_matches_actual_source
+PASS random_oracle_domain_stated_without_near_singular_extrapolation
+PASS finite_guard_scope_is_intentionally_exact_angle_only
+PASS publication_snapshot_fourteen_verified_records
+PASS publication_README_scoped_to_original_seven_pairs
+
+CROSS-PLATFORM SCOPE
+20 remain unexecuted in the Windows run; the 3 POSIX chmod guards were explicitly PASSED in all three Linux legs. The remaining 17 original-asset cases are the shared unexecuted scope in these Windows/Linux records. Supplemental passes are not added to main-suite counts.
+
+No product test or benchmark was rerun.

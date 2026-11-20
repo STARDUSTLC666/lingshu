@@ -4595,17 +4595,17 @@
     },
     {
       "artifact": "audit/commit-ce40e46-final.json",
-      "original_sha256": "bfd8a6803e188d9a0155861858c12907f7b694e1f2d551b5896a930ca4153753",
-      "published_sha256": "61869d956238e785e82980ed4b663ddeb1b613ee0836e1034689cb7ea2dedd9a",
-      "original_bytes": 470534,
-      "published_bytes": 476447
+      "original_sha256": "bf03708e3e2f37197ce23d81cd2c9ce4b97471253f0155a4ea3d295a58a7c577",
+      "published_sha256": "d81fa815b4de7d109d6cddfd3a61630437e6bc0589fba191db1d3e8549dff706",
+      "original_bytes": 534564,
+      "published_bytes": 528458
     },
     {
       "artifact": "audit/commit-ce40e46-final.txt",
-      "original_sha256": "6a1f1d547358f0f745f9f1b2fa843ffaf56edbc2941080556734e8e70b6ccc3c",
-      "published_sha256": "6a1f1d547358f0f745f9f1b2fa843ffaf56edbc2941080556734e8e70b6ccc3c",
-      "original_bytes": 1991,
-      "published_bytes": 1991
+      "original_sha256": "6cb55b0581b38aa115344299b567e7865599544fb87a3dc34de5abee3b24110e",
+      "published_sha256": "502919780dd0f0e6786559c0ceca3709ae190efbd741376984825677281184de",
+      "original_bytes": 3986,
+      "published_bytes": 3935
     },
     {
       "artifact": "audit/commit-ce40e46-cross-platform-scope.json",
