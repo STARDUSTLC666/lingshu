@@ -1,0 +1,10 @@
+  PASS A01 factor<0 拒绝且零落库（旧实现把 0.8 抬到 1.2）
+  PASS A02 factor=NaN 拒绝（旧实现写 NULL）
+  PASS A03 factor=inf 拒绝（旧实现静默归 0）
+  PASS A04 factor>1 拒绝（旧实现静默清空全部置信度）
+  PASS A05 正对照：factor=0.02 正常衰减（0.8 -> 0.784）
+  PASS A06 合法边界：factor=0 不衰减、factor=1 归零
+  PASS A07 数值字符串按实数接受（0.8 -> 0.4）
+  PASS E01 钉子：可读拒绝文案
+  PASS E02 钉子：非有限与越界同闸
+通过 9 / 失败 0

@@ -1,0 +1,35 @@
+{
+  "sha": "bd208a379e44497e9f35fdc145838abb19e6d313",
+  "node_id": "C_kwDOU6uWo9oAKGJkMjA4YTM3OWU0NDQ5N2U5ZjM1ZmRjMTQ1ODM4YWJiMTllNmQzMTM",
+  "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/git/commits/bd208a379e44497e9f35fdc145838abb19e6d313",
+  "html_url": "https://github.com/FuRongJun-1999/lingshu/commit/bd208a379e44497e9f35fdc145838abb19e6d313",
+  "author": {
+    "name": "STARDUSTLC666",
+    "email": "291677282+STARDUSTLC666@users.noreply.github.com",
+    "date": "2026-11-20T17:49:03Z"
+  },
+  "committer": {
+    "name": "STARDUSTLC666",
+    "email": "291677282+STARDUSTLC666@users.noreply.github.com",
+    "date": "2026-11-20T17:49:03Z"
+  },
+  "tree": {
+    "sha": "f886f893d1a409a5e614cc3e379f39d81d5af0b5",
+    "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/git/trees/f886f893d1a409a5e614cc3e379f39d81d5af0b5"
+  },
+  "message": "docs(world): record command reanchor validation and boundaries",
+  "parents": [
+    {
+      "sha": "6d1048f6df5610de1e71c346e1f95182d1dfb84a",
+      "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/git/commits/6d1048f6df5610de1e71c346e1f95182d1dfb84a",
+      "html_url": "https://github.com/FuRongJun-1999/lingshu/commit/6d1048f6df5610de1e71c346e1f95182d1dfb84a"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

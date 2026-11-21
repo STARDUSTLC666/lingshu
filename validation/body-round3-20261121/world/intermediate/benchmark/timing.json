@@ -1,0 +1,754 @@
+{
+  "baseline": "04e0ecb6a3669c90efbb4a1583816a8f7ca26bc7",
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "timer": {
+    "implementation": "QueryPerformanceCounter()",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution": 1e-07
+  },
+  "source_sha256_lf": {
+    "baseline": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+    "fixed": "39eb113b7bdeb6fe321e006d699e4376fa18c48a38f0f5e65e6aa006043bf00a"
+  },
+  "benchmark_sha256_lf": "d23053faa99490e8c91677477f231f40be7c0ad6dc7250d34415c83653d98c01",
+  "unchanged_dependency_sha256_lf": {
+    "lingshu/world/physics.py": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a",
+    "lingshu/world/coord_contract.py": "2393d826d520f340be1e73b6f3ec0d85a7df4afff70460478663cd94a8dd1d29"
+  },
+  "method": "same process randomized adjacent pairs seed424242; one warmup per case+variant;11 measured pairs default; setup/import/hash excluded from timing; GC disabled equally for timing; independent separate tracemalloc includes scene setup,3 repeats per size; diagnostics then drained for retained-state reading; no timing pass threshold",
+  "ticks": 400,
+  "repeats": 11,
+  "mode": "timing",
+  "timing": [
+    {
+      "case": "kinematic_commands",
+      "entities": 64,
+      "ticks": 400,
+      "command_interval_ticks": 1,
+      "seconds": {
+        "baseline": [
+          0.1096689,
+          0.1062447,
+          0.1065326,
+          0.1064239,
+          0.1061153,
+          0.1063953,
+          0.1048917,
+          0.1071706,
+          0.1051797,
+          0.1063625,
+          0.1342131
+        ],
+        "fixed": [
+          0.1098954,
+          0.1095994,
+          0.1088739,
+          0.1073697,
+          0.1092315,
+          0.1099104,
+          0.1075261,
+          0.1075247,
+          0.1087159,
+          0.122513,
+          0.1494078
+        ]
+      },
+      "median_seconds": {
+        "baseline": 0.1063953,
+        "fixed": 0.1092315
+      },
+      "fixed_over_baseline": 1.0266571925639572,
+      "added_microseconds_per_entity_tick": 0.11078906249999988,
+      "result_sha256": {
+        "baseline": "143a3f729ebf038d8c74902bd22fb899478c8777b4de4e0f3d4a03d356339c41",
+        "fixed": "143a3f729ebf038d8c74902bd22fb899478c8777b4de4e0f3d4a03d356339c41"
+      },
+      "oracle": {
+        "fixed": {
+          "max_abs_error": 0.0,
+          "matches": true
+        },
+        "baseline": {
+          "max_abs_error": 0.0,
+          "matches": true
+        }
+      },
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ]
+      ]
+    },
+    {
+      "case": "dynamics_free",
+      "entities": 64,
+      "ticks": 400,
+      "command_interval_ticks": 0,
+      "seconds": {
+        "baseline": [
+          0.5210587,
+          0.4849611,
+          0.5433514,
+          0.5383152,
+          0.5148245,
+          0.6258031,
+          0.5306425,
+          0.4800798,
+          0.5264312,
+          0.5418816,
+          0.5699797
+        ],
+        "fixed": [
+          0.4958101,
+          0.5316356,
+          0.4960798,
+          0.5736887,
+          0.493937,
+          0.6502308,
+          0.5152831,
+          0.5395559,
+          0.5417511,
+          0.5318565,
+          0.5327832
+        ]
+      },
+      "median_seconds": {
+        "baseline": 0.5306425,
+        "fixed": 0.5318565
+      },
+      "fixed_over_baseline": 1.002287792628747,
+      "added_microseconds_per_entity_tick": 0.047421874999997546,
+      "result_sha256": {
+        "baseline": "d3496a4d16826520e983c3f2a85bf87e49cc395b614559733afe7c3a360fcbec",
+        "fixed": "d3496a4d16826520e983c3f2a85bf87e49cc395b614559733afe7c3a360fcbec"
+      },
+      "oracle": {
+        "fixed": {
+          "max_abs_error": 0.0,
+          "matches": true
+        },
+        "baseline": {
+          "max_abs_error": 0.0,
+          "matches": true
+        }
+      },
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "case": "dynamics_commands",
+      "entities": 64,
+      "ticks": 400,
+      "command_interval_ticks": 1,
+      "seconds": {
+        "baseline": [
+          0.1200293,
+          0.1204379,
+          0.1170462,
+          0.114361,
+          0.1099853,
+          0.1129145,
+          0.1365516,
+          0.1620531,
+          0.1436649,
+          0.1644373,
+          0.1439189
+        ],
+        "fixed": [
+          0.1780609,
+          0.179441,
+          0.1847891,
+          0.1734996,
+          0.1679401,
+          0.1638847,
+          0.1567788,
+          0.2289037,
+          0.226632,
+          0.2059755,
+          0.2103227
+        ]
+      },
+      "median_seconds": {
+        "baseline": 0.1204379,
+        "fixed": 0.179441
+      },
+      "fixed_over_baseline": 1.4899047558949465,
+      "added_microseconds_per_entity_tick": 2.30480859375,
+      "result_sha256": {
+        "baseline": "143a3f729ebf038d8c74902bd22fb899478c8777b4de4e0f3d4a03d356339c41",
+        "fixed": "143a3f729ebf038d8c74902bd22fb899478c8777b4de4e0f3d4a03d356339c41"
+      },
+      "oracle": {
+        "fixed": {
+          "max_abs_error": 0.0,
+          "matches": true
+        },
+        "baseline": {
+          "max_abs_error": 0.0,
+          "matches": true
+        }
+      },
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "case": "dynamics_resume_8",
+      "entities": 8,
+      "ticks": 400,
+      "command_interval_ticks": 2,
+      "seconds": {
+        "baseline": [
+          0.0422636,
+          0.0418077,
+          0.0395786,
+          0.0413003,
+          0.0333696,
+          0.0328873,
+          0.0368753,
+          0.0382002,
+          0.0501439,
+          0.0495775,
+          0.0353393
+        ],
+        "fixed": [
+          0.0483937,
+          0.0396171,
+          0.0461322,
+          0.0527577,
+          0.0384614,
+          0.040891,
+          0.0361687,
+          0.0509143,
+          0.0446421,
+          0.0501752,
+          0.0451004
+        ]
+      },
+      "median_seconds": {
+        "baseline": 0.0395786,
+        "fixed": 0.0451004
+      },
+      "fixed_over_baseline": 1.1395147882946846,
+      "added_microseconds_per_entity_tick": 1.7255625,
+      "result_sha256": {
+        "baseline": "be5cdae305626f7342be09ea857877662377873e8cfcc71cf86ae6c99aa58ee0",
+        "fixed": "bcf259ea38994e2998cd7e5d613b3871aa430171fd81fb93a0c445155f4af5b9"
+      },
+      "oracle": {
+        "baseline": {
+          "max_abs_error": 1997.5000000093132,
+          "matches": false
+        },
+        "fixed": {
+          "max_abs_error": 2.842170943040401e-14,
+          "matches": true
+        }
+      },
+      "order": [
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ]
+      ]
+    },
+    {
+      "case": "dynamics_resume_64",
+      "entities": 64,
+      "ticks": 400,
+      "command_interval_ticks": 2,
+      "seconds": {
+        "baseline": [
+          0.4051682,
+          0.3324459,
+          0.3744858,
+          0.3623408,
+          0.4008687,
+          0.3294368,
+          0.3148696,
+          0.285259,
+          0.3029964,
+          0.2892959,
+          0.3144472
+        ],
+        "fixed": [
+          0.4499786,
+          0.3582524,
+          0.3399722,
+          0.3785744,
+          0.3288773,
+          0.3457474,
+          0.3484356,
+          0.2938827,
+          0.3625064,
+          0.3353344,
+          0.3815748
+        ]
+      },
+      "median_seconds": {
+        "baseline": 0.3294368,
+        "fixed": 0.3484356
+      },
+      "fixed_over_baseline": 1.0576705456099624,
+      "added_microseconds_per_entity_tick": 0.7421406250000016,
+      "result_sha256": {
+        "baseline": "d3496a4d16826520e983c3f2a85bf87e49cc395b614559733afe7c3a360fcbec",
+        "fixed": "fb1c754c537e84930f74bb3e55203df4d89552f6b11941f27c265bf2a71f29c7"
+      },
+      "oracle": {
+        "fixed": {
+          "max_abs_error": 2.842170943040401e-14,
+          "matches": true
+        },
+        "baseline": {
+          "max_abs_error": 1997.5000000093132,
+          "matches": false
+        }
+      },
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ]
+      ]
+    },
+    {
+      "case": "dynamics_sparse",
+      "entities": 64,
+      "ticks": 400,
+      "command_interval_ticks": 20,
+      "seconds": {
+        "baseline": [
+          0.4682731,
+          0.4952343,
+          0.522442,
+          0.4595823,
+          0.4660016,
+          0.4495644,
+          0.4516926,
+          0.5561936,
+          0.4160266,
+          0.5069602,
+          0.4770653
+        ],
+        "fixed": [
+          0.4786817,
+          0.4975579,
+          0.5356295,
+          0.4689382,
+          0.5402986,
+          0.4649453,
+          0.4338717,
+          0.4926042,
+          0.4939147,
+          0.4443573,
+          0.4482864
+        ]
+      },
+      "median_seconds": {
+        "baseline": 0.4682731,
+        "fixed": 0.4786817
+      },
+      "fixed_over_baseline": 1.0222276274251072,
+      "added_microseconds_per_entity_tick": 0.4065859374999996,
+      "result_sha256": {
+        "baseline": "d3496a4d16826520e983c3f2a85bf87e49cc395b614559733afe7c3a360fcbec",
+        "fixed": "b658dbdb5d56c16758cc76f351aa6f6badfa68a66d253a8bcb9018b7a700d3e0"
+      },
+      "oracle": {
+        "fixed": {
+          "max_abs_error": 7.105427357601002e-15,
+          "matches": true
+        },
+        "baseline": {
+          "max_abs_error": 1909.7500000009313,
+          "matches": false
+        }
+      },
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "case": "dynamics_singlebox",
+      "entities": 1,
+      "ticks": 400,
+      "command_interval_ticks": 2,
+      "seconds": {
+        "baseline": [
+          0.0065637,
+          0.0070898,
+          0.0061518,
+          0.0054571,
+          0.0059173,
+          0.0053953,
+          0.0061575,
+          0.0060362,
+          0.006469,
+          0.0059209,
+          0.0075079
+        ],
+        "fixed": [
+          0.0103698,
+          0.0072708,
+          0.0060677,
+          0.0073492,
+          0.0059758,
+          0.0062785,
+          0.0062007,
+          0.0079759,
+          0.0081907,
+          0.0061957,
+          0.0063728
+        ]
+      },
+      "median_seconds": {
+        "baseline": 0.0061518,
+        "fixed": 0.0063728
+      },
+      "fixed_over_baseline": 1.035924444877922,
+      "added_microseconds_per_entity_tick": 0.5524999999999995,
+      "result_sha256": {
+        "baseline": "7bb078e3df41ee9a931a04b22abe5427457fe57faa9ded54937dc9f7a7751625",
+        "fixed": "982a09bb3ef50d068d80c2ff6e74a035d4a2933243a950106538f848b1b256f8"
+      },
+      "oracle": {
+        "fixed": {
+          "max_abs_error": 2.842170943040401e-14,
+          "matches": true
+        },
+        "baseline": {
+          "max_abs_error": 1997.5000000093132,
+          "matches": false
+        }
+      },
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ]
+      ]
+    }
+  ]
+}

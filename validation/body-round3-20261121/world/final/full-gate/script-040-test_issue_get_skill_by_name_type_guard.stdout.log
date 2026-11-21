@@ -1,0 +1,6 @@
+  PASS A01 int name -> 可读 TypeError（旧实现返回 None）
+  PASS A02 None -> 可读 TypeError
+  PASS A03 纯空白 -> TypeError
+  PASS A04 正对照：不存在的技能名仍返回 None（语义不变）
+  PASS E01 钉子：可读文案
+通过 5 / 失败 0

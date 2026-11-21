@@ -1,0 +1,7 @@
+  PASS A01 空理由拒绝且零登记
+  PASS A02 纯空白拒绝
+  PASS A03 None 拒绝
+  PASS A04 正对照：合法理由登记 + no_forget
+  PASS E01 钉子：可读拒绝文案
+  PASS E02 钉子：非 str 与纯空白同闸
+通过 6 / 失败 0

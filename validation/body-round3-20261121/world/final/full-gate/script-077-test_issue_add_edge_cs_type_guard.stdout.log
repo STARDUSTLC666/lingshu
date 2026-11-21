@@ -1,0 +1,7 @@
+  PASS A01 str condition_space -> 可读 TypeError 且零落库
+  PASS A02 dict condition_space -> 可读 TypeError
+  PASS A03 正对照：ConditionSpace 正常建边
+  PASS A04 None 仍用默认条件空间
+  PASS E01 钉子：可读文案
+  PASS E02 钉子：None 单独放行
+通过 6 / 失败 0

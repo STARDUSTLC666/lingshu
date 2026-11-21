@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.261" timestamp="2026-11-21T01:41:30.864985+08:00" hostname="STARDUST"><testcase classname="tests.test_dynamics_command_reanchor" name="test_command_reanchors_at_current_time_without_changing_public_velocity" time="0.032"><failure message="AssertionError: COMMAND_PHYSICS_TIME_ANCHOR_STALE&#10;assert 0.0 == 0.4">tests\test_dynamics_command_reanchor.py:87: in test_command_reanchors_at_current_time_without_changing_public_velocity
+    assert st["t_ref"] == .4, "COMMAND_PHYSICS_TIME_ANCHOR_STALE"
+E   AssertionError: COMMAND_PHYSICS_TIME_ANCHOR_STALE
+E   assert 0.0 == 0.4</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,6 @@
+  PASS A01 int content -> 可读 TypeError 且零写入
+  PASS A02 None content -> TypeError
+  PASS A03 纯空白 content -> TypeError
+  PASS A04 正对照：合法 content 正常落库
+  PASS E01 钉子：可读文案
+通过 5 / 失败 0

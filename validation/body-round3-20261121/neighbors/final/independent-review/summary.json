@@ -1,0 +1,28 @@
+{
+  "verdict": "PASS",
+  "independent_integer_parity_cases": 20050,
+  "rows_include": [
+    -1152921504606846976,
+    -1000,
+    -1,
+    0,
+    1,
+    1000,
+    1152921504606846977
+  ],
+  "modes": [
+    "axial",
+    "odd_r_offset"
+  ],
+  "benchmark_cases_checked": 12,
+  "replay_xmls_checked": 8,
+  "adjacent_pytest_cases": 47,
+  "source_sha256": "5671ae505f6dd026fc4fac7cb50ca02ca76ca972a51292f2dc50b5c7ae37efee",
+  "benchmark_sha256": "4a531767989e45c50e2d0ea0486a083e8c897826f14e16127109387fdf5ab113",
+  "notes": [
+    "No source edits or benchmark rerun.",
+    "Timing ratios are descriptive shared-host measurements; odd-r correction has measured cost.",
+    "tracemalloc is Python allocation peak, excludes native/RSS/input allocations.",
+    "Old CNN image segments4-6 remain SKIP because upstream image asset is absent."
+  ]
+}

@@ -1,0 +1,65 @@
+[workspace]/lingshu/work\lingshu-body-round3-integration-20261121\tests\test_coggraph_generic_tag.py:5: SyntaxWarning: invalid escape sequence '\d'
+  `GENERIC_TAG` 三个短前缀分支只锚定了开头（`^sha` / `^precise` / `^v\d`）⇒
+  [R5] 未提供 --bodies-root，跳过正文互引（不假装通过）
+  [R5] 未提供 --bodies-root，跳过正文互引（不假装通过）
+== A 组：阳性对照（结构性标签仍被剔除） ==
+  PASS A 结构性标签仍被剔除：doc
+  PASS A 结构性标签仍被剔除：md
+  PASS A 结构性标签仍被剔除：node
+  PASS A 结构性标签仍被剔除：unit
+  PASS A 结构性标签仍被剔除：skill
+  PASS A 结构性标签仍被剔除：case
+  PASS A 结构性标签仍被剔除：doc:spec
+  PASS A 结构性标签仍被剔除：level:2
+  PASS A 结构性标签仍被剔除：lang:zh
+  PASS A 结构性标签仍被剔除：sha
+  PASS A 结构性标签仍被剔除：sha256
+  PASS A 结构性标签仍被剔除：sha:abc123
+  PASS A 结构性标签仍被剔除：precise
+  PASS A 结构性标签仍被剔除：precise_pose
+  PASS A 结构性标签仍被剔除：v1
+  PASS A 结构性标签仍被剔除：v2
+  PASS A 结构性标签仍被剔除：v10
+  PASS A 结构性标签仍被剔除：v2.1
+== B 组：阴性对照（内容标签不再被误杀） ==
+  PASS B 内容标签不再被误杀：shape
+  PASS B 内容标签不再被误杀：shared
+  PASS B 内容标签不再被误杀：shadow
+  PASS B 内容标签不再被误杀：sharding
+  PASS B 内容标签不再被误杀：precisely
+  PASS B 内容标签不再被误杀：v2model
+  PASS B 内容标签不再被误杀：preciseness
+  PASS B 内容标签不再被误杀：v2abc
+  PASS B 内容标签不再被误杀：shampoo
+  PASS B 内容标签不再被误杀：circle
+  PASS B 内容标签不再被误杀：stripe
+  PASS B 内容标签不再被误杀：red
+  PASS B 内容标签不再被误杀：square
+  PASS B 内容标签不再被误杀：triangle
+== C 组：收紧边界恰好等于预期 ==
+  PASS C 新判据没有多杀任何标签（只收紧、不放开）
+  PASS C 放开清单恰好等于预期误杀清单
+  [读数] 样本 34 个：旧判据剔除 27 个 → 新判据剔除 18 个（放开 9 个）
+== D 组：content_tags 端到端 ==
+  PASS D content_tags 只剔除形态标签
+  PASS D norm_tag 的 strip+lower 仍生效
+  PASS D 空标签被跳过、不进入内容标签集
+== E 组：R3 共现边端到端（修复后成立） ==
+耗时 0.0s
+规则产出： {"R1_same_bucket": 0, "R2_same_source": 0, "R3_tag_jaccard": 1, "R4_same_day": 0, "R5_body_crossref": 0}
+推导边 1 / 枢纽 0 / 抽检 1 条 → [workspace]/lingshu/outputs\body-round3-20261121\integration-windows\tmp\coggraph_r3_do4fxy1a\new\out
+  PASS E/F main() 正常返回
+  PASS E 修复后 R3 共现边成立（shape/shadow/sharding 参与共现）
+  PASS E R3 边权重=Jaccard(4/6)
+  PASS E 纯形态标签节点 n3 不产生任何推导边
+== F 组：夹具自证（旧判据下边不成立） ==
+耗时 0.0s
+规则产出： {"R1_same_bucket": 0, "R2_same_source": 0, "R3_tag_jaccard": 0, "R4_same_day": 0, "R5_body_crossref": 0}
+推导边 0 / 枢纽 0 / 抽检 0 条 → [workspace]/lingshu/outputs\body-round3-20261121\integration-windows\tmp\coggraph_r3_old_dg4nyl6h\old\out
+  PASS E/F main() 正常返回
+  PASS F 旧判据下同一夹具不产生 R3 边（夹具具辨别力）
+  PASS F 旧判据下共享内容标签数 < min_shared(3)
+  PASS F 新判据下共享内容标签数 = 4
+
+===== SUMMARY 45/45 通过 =====
+VERDICT=PASS（issue #77 守卫：GENERIC_TAG 短前缀分支带非字母边界，只收紧误杀面、不放开既有口径）

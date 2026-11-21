@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "manifested_artifacts": 907,
+  "xml_runs": 149,
+  "canonical_hashes_verified": true,
+  "detached_metadata": [
+    "sanitization-manifest.json",
+    "seal-audit.json"
+  ],
+  "source_sha": "f81ee3a9939f3dad7c277145766508c113742ba0",
+  "included_ci": true,
+  "included_windows": true,
+  "included_benchmarks": true
+}

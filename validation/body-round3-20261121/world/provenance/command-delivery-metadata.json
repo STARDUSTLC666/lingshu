@@ -1,0 +1,176 @@
+{
+  "branch": "fix/dynamics-command-reanchor-20261121",
+  "head": "bd208a379e44497e9f35fdc145838abb19e6d313",
+  "base": "6b73082406d40a630a44cd68559c1f66b3652390",
+  "code_head": "6d1048f6df5610de1e71c346e1f95182d1dfb84a",
+  "baseline": "04e0ecb6a3669c90efbb4a1583816a8f7ca26bc7",
+  "worktree": "<repo>",
+  "production": "lingshu/world/scene_simulator.py",
+  "production_sha256_lf": "984d8abeaaa5a4b9d50e6d604758ac128d120f6b3bd56289b8b2a665a7bd1046",
+  "fixed_guards": 61,
+  "baseline_failed": 58,
+  "baseline_passed": 3,
+  "named_mutants": 16,
+  "independent_decimal_cases": 2000,
+  "adjacent_passed": 340,
+  "pinned_brain_passed": "23/23",
+  "gate_script_commands": "102/102 exit0",
+  "publication": "not published by this agent",
+  "tracked_status": "",
+  "pending": {
+    "windows_full_pytest": false,
+    "tracemalloc_memory": false
+  },
+  "evidence": {
+    "guard_replay": "<audit-evidence>\\command-final-mutations\\summary.json",
+    "guard_raw_logs_xml": "<audit-evidence>\\command-final-mutations",
+    "decimal_oracle": "<audit-evidence>\\command-benchmark-actual-endpoint\\oracle.json",
+    "decimal_raw_cases": "<audit-evidence>\\command-benchmark-actual-endpoint\\oracle-cases.jsonl",
+    "timings": "<audit-evidence>\\command-benchmark-actual-endpoint\\timing.json",
+    "memory": "<audit-evidence>\\command-benchmark-actual-endpoint\\memory.json",
+    "benchmark_sources_and_driver": "<audit-evidence>\\command-benchmark-actual-endpoint",
+    "adjacent_xml": "<audit-evidence>\\command-final-adjacent.xml",
+    "adjacent_log": "<audit-evidence>\\command-final-adjacent.log",
+    "full_gate_output": "<audit-evidence>\\command-full-gate",
+    "full_gate_driver_log": "<audit-evidence>\\command-full-gate-driver.log",
+    "full_gate_driver": "<audit-evidence>\\command_full_gate.py",
+    "source_freeze": "<audit-evidence>\\command-source-freeze.json",
+    "source_archive": "<audit-evidence>\\command-source-6d1048f6.zip",
+    "doc_only_provenance": "<audit-evidence>\\command-doc-only-provenance.json",
+    "intermediate_warning": "<audit-evidence>\\INTERMEDIATE_EVIDENCE.md",
+    "dedup": "<audit-evidence>\\dedup-state-anchor-report.json",
+    "full_gate_provenance": "<audit-evidence>\\command-full-gate-provenance.json",
+    "symlink_capability": "<audit-evidence>\\command-symlink-capability.json"
+  },
+  "memory_summary": [
+    {
+      "case": "kinematic_commands",
+      "ticks": 400,
+      "baseline_peak": 10823568,
+      "fixed_peak": 10823576,
+      "peak_delta": 8,
+      "baseline_retained": 54968,
+      "fixed_retained": 54976,
+      "retained_delta": 8,
+      "states": [
+        0
+      ]
+    },
+    {
+      "case": "kinematic_commands",
+      "ticks": 4000,
+      "baseline_peak": 49980832,
+      "fixed_peak": 49980840,
+      "peak_delta": 8,
+      "baseline_retained": 59584,
+      "fixed_retained": 59592,
+      "retained_delta": 8,
+      "states": [
+        0
+      ]
+    },
+    {
+      "case": "dynamics_commands",
+      "ticks": 400,
+      "baseline_peak": 10864928,
+      "fixed_peak": 10871672,
+      "peak_delta": 6744,
+      "baseline_retained": 92576,
+      "fixed_retained": 90024,
+      "retained_delta": -2552,
+      "states": [
+        64
+      ]
+    },
+    {
+      "case": "dynamics_commands",
+      "ticks": 4000,
+      "baseline_peak": 50018504,
+      "fixed_peak": 50016280,
+      "peak_delta": -2224,
+      "baseline_retained": 97256,
+      "fixed_retained": 94696,
+      "retained_delta": -2560,
+      "states": [
+        64
+      ]
+    },
+    {
+      "case": "dynamics_resume_64",
+      "ticks": 400,
+      "baseline_peak": 10332152,
+      "fixed_peak": 10329664,
+      "peak_delta": -2488,
+      "baseline_retained": 167240,
+      "fixed_retained": 173384,
+      "retained_delta": 6144,
+      "states": [
+        64
+      ]
+    },
+    {
+      "case": "dynamics_resume_64",
+      "ticks": 4000,
+      "baseline_peak": 51186296,
+      "fixed_peak": 51184520,
+      "peak_delta": -1776,
+      "baseline_retained": 171992,
+      "fixed_retained": 178136,
+      "retained_delta": 6144,
+      "states": [
+        64
+      ]
+    },
+    {
+      "case": "dynamics_sparse",
+      "ticks": 400,
+      "baseline_peak": 9594824,
+      "fixed_peak": 9592336,
+      "peak_delta": -2488,
+      "baseline_retained": 167240,
+      "fixed_retained": 173384,
+      "retained_delta": 6144,
+      "states": [
+        64
+      ]
+    },
+    {
+      "case": "dynamics_sparse",
+      "ticks": 4000,
+      "baseline_peak": 51956816,
+      "fixed_peak": 51954328,
+      "peak_delta": -2488,
+      "baseline_retained": 171992,
+      "fixed_retained": 178136,
+      "retained_delta": 6144,
+      "states": [
+        64
+      ]
+    }
+  ],
+  "memory_source_sha256_lf": {
+    "baseline": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+    "fixed": "984d8abeaaa5a4b9d50e6d604758ac128d120f6b3bd56289b8b2a665a7bd1046"
+  },
+  "memory_driver_sha256_lf": "1c4e039932777a8399c9d26dbec18503c8cc8f48fabe18a4091b4e7c8d41e303",
+  "windows_full_gate": {
+    "all_commands_exit_zero": false,
+    "scripts_passed": 102,
+    "pytest_passed": 5734,
+    "pytest_failed": 1,
+    "pytest_errors": 0,
+    "pytest_skipped": 26,
+    "subtests_passed": 98,
+    "original_summary": "1 failed, 5734 passed, 26 skipped, 10435 warnings, 98 subtests passed in 1268.33s (0:21:08)",
+    "failed_test": "tests/test_issue498_atomic_write_perm_symlink_guard.py::test_p1_符号链接量具能力探测",
+    "failure_classification": "one unchanged pre-existing Windows symlink-capability guard rejects a host that can create symlinks; independent capability probe retained; no production patch applied",
+    "original_result": "<audit-evidence>\\command-full-gate\\summary.json",
+    "source_drift_provenance": "<audit-evidence>\\command-full-gate-provenance.json"
+  },
+  "static_checks": {
+    "manifest_match": 64,
+    "manifest_entries": 64,
+    "time_new": 0,
+    "time_stale": 0
+  }
+}

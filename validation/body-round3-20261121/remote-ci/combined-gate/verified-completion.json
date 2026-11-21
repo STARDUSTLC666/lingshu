@@ -1,0 +1,99 @@
+{
+  "captured_utc": "2026-11-20T18:18:03.099478+00:00",
+  "key": "combined-gate",
+  "pr": null,
+  "head": "f81ee3a9939f3dad7c277145766508c113742ba0",
+  "all_verified_success": true,
+  "all_jobs_entire_tree_equal_to_head": true,
+  "actual_checkout_commits": [
+    "f81ee3a9939f3dad7c277145766508c113742ba0"
+  ],
+  "actual_checkout_trees": [
+    "5e6e6d45fdc9ef6ea885f4e4f38d56630089a751"
+  ],
+  "gate_legs": [
+    {
+      "name": "gate (py3.13)",
+      "job_id": 136467211659,
+      "pytest_counts": {
+        "passed": 5918,
+        "failed": 0,
+        "skipped": 40,
+        "errors": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "subtests_passed": 98
+      },
+      "scripts": 102,
+      "brain_real_23_of_23": true,
+      "log_sha256": "36e47088c5e994a53b7588c47f097ce631ba08426af258d117815be8bd4f9add"
+    },
+    {
+      "name": "gate (py3.12)",
+      "job_id": 136467212117,
+      "pytest_counts": {
+        "passed": 5918,
+        "failed": 0,
+        "skipped": 40,
+        "errors": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "subtests_passed": 98
+      },
+      "scripts": 102,
+      "brain_real_23_of_23": true,
+      "log_sha256": "03666374e21c2476087b0ae858699efedbf0bed4d1a2f8f58904c36a2fad3e13"
+    },
+    {
+      "name": "gate (py3.12 · 依赖下界)",
+      "job_id": 136467212188,
+      "pytest_counts": {
+        "passed": 5918,
+        "failed": 0,
+        "skipped": 40,
+        "errors": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "subtests_passed": 98
+      },
+      "scripts": 102,
+      "brain_real_23_of_23": true,
+      "log_sha256": "279c3a62b814c3c1a4ba75ef6df7587bed569c193a1608bef9a1da2216107aa3"
+    }
+  ],
+  "summary_file": "verified-summary.json",
+  "summary_sha256": "88dd0ce8f0a127b9664c2fad749613a1500ba8f2c4f766d5a7231bfc021331a7",
+  "api_snapshot_directory": "api/20261120T181738255423Z",
+  "api_snapshot_files": [
+    {
+      "path": "api/20261120T181738255423Z/44787808270-artifacts-page1.json",
+      "bytes": 32,
+      "sha256": "244563f989470892c537c9a4622920af0d228ee4528f7d00c64a06d6cd95856c"
+    },
+    {
+      "path": "api/20261120T181738255423Z/44787808270-artifacts-page1.json.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "api/20261120T181738255423Z/44787808270-jobs-page1.json",
+      "bytes": 10305,
+      "sha256": "1b1aa88792744a4687cf0803eec8370be20558a8b8f3fd737089816c46838404"
+    },
+    {
+      "path": "api/20261120T181738255423Z/44787808270-jobs-page1.json.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "api/20261120T181738255423Z/44787808270-run.json",
+      "bytes": 12566,
+      "sha256": "9b5aa2747ac768b5b9712d1bce9638b06f9cc06cb64ca650872bb04ce23fdfb8"
+    },
+    {
+      "path": "api/20261120T181738255423Z/44787808270-run.json.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

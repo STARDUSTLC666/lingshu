@@ -1,0 +1,92 @@
+[✓] A0 已定位 get_stats — [workspace]/lingshu/work\lingshu-body-round3-integration-20261121\lingshu\core\core.py
+— A 等价性（get_stats）—
+[✓] A 空库
+[✓] A 只有零节点层
+[✓] A 每层都有
+[✓] A 边：全 verified
+[✓] A 边：混合 + NULL
+[✓] A 边：全 NULL
+[✓] A 混入历史/未知层值
+— B 查询数（get_stats）—
+[✓] B 新实现 SQL 条数 == 2（与层数无关） — 实测 2 条
+[✓] B 旧实现 SQL 条数 == N+2
+— C 静态面（forget_advisor）—
+[✓] C0 已定位 forget_advisor
+[✓] C 循环体内无 get_node 调用（死变量 stale 已删）
+[✓] C 循环体内无逐节点 SELECT access_count
+[✓] C 首查不再多取未用的 content 列
+[✓] C 首查已带出 access_count
+[✓] D 归档「只降不升」仍在（min(imp_v, archived_imp)）
+[✓] D `no_forget`/`archived` 跳过仍在
+[✓] D `acc == 0` 访问信号仍在
+[✓] D `imp is None` 回默认 0.5（不用 or）仍在
+— E 静态面（recalc_structural_importance 的 structural_boost 不再逐节点回查）—
+[✓] E0 已定位 recalc_structural_importance
+[✓] E 循环体内无 `_read_state_attr` 逐节点回查
+[✓] E 主查询已带出 state_attributes — 主查询：['SELECT id, importance, state_attributes, layer, tags FROM nodes']
+[✓] E 主查询仍取 id/importance（读法未变）
+[✓] E 无遗留的 2 元解包（rows 已是 3 列） — 仍存在解包 [('int', 'float'), ('n', 'v'), ('node', 't'), ('s', 't'), ('str', 'float'), ('str', 'int'), ('str', 'list'), ('tuple', 'float')]
+— F 解析单点 —
+[✓] F `_state_attr_of` 单点存在
+[✓] F 单点保留窄口径 except (ValueError, TypeError)
+[✓] F 单点仍拒非 dict（isinstance(sa, dict)）
+[✓] F `_read_state_attr` 复用该单点（不复制解析体）
+— G 静态面（decay_cycle 的 `_is_forget_protected` 不再逐节点 `get_node`）—
+[✓] G0 已定位 decay_cycle
+[✓] G 循环体内无 `get_node`（受保护判据改走直传入口）
+[✓] G 两段主查询均已带出 tags — 命中 2 段：['SELECT id, importance, tags, created_at FROM nod', 'SELECT id, confidence, tags, created_at FROM nod']
+[✓] G 不再出现 `id, importance FROM nodes` 的两列旧查询
+[✓] G `_is_forget_protected` 存在
+[✓] G 谓词新增 node_id / tags 直传入口 — 形参 ['node', 'node_id', 'protected', 'self', 'tags']
+[✓] G 判定体仍是单点（no_forget ∈ tags ∪ id ∈ protected，各一次） — no_forget 判定 1 次 / in protected 1 次
+[✓] G 旧入口仍在（node 为 None 即 False）
+— H 静态面（_strip_incident_edges / _assert_edge_endpoints_role 只取 layer 列）—
+[✓] H0 已定位 _strip_incident_edges
+[✓] H _strip_incident_edges 循环体内无 get_node
+[✓] H _strip_incident_edges 改取 layer 列
+[✓] H _strip_incident_edges 用 MemoryLayer(...) 转换（与 from_row 同款）
+[✓] H0 已定位 _assert_edge_endpoints_role
+[✓] H _assert_edge_endpoints_role 循环体内无 get_node
+[✓] H _assert_edge_endpoints_role 改取 layer 列
+[✓] H _assert_edge_endpoints_role 用 MemoryLayer(...) 转换（与 from_row 同款）
+[✓] H0 已定位 _assert_edge_role（#674 边对象入口仍在）
+[✓] H _assert_edge_role 委托单一真源 _assert_edge_endpoints_role
+[✓] H _assert_edge_role 内不得另写端点层判据（无第二份实现）
+[✓] H 批量取层沿 `_SQL_IN_CHUNK` 分批（#417 的 IN 上限单点）
+[✓] H 边行先 fetchall 再迭代（游标可复用）
+— I 静态面（delete_node 清 conflict 标签只取 tags 列）—
+[✓] I0 已定位 delete_node
+[✓] I delete_node 循环体内无 get_node
+[✓] I 改取 tags 列
+[✓] I 标签裁剪仍走 `_dumps_tags`（写口径单点）
+[✓] I 「对端仍冲突则保留标签」的 continue 仍在
+— J 静态面（register_conflict / apply_shared_sync 只取所需列）—
+[✓] J0 已定位 register_conflict
+[✓] J register_conflict 循环体内无 get_node
+[✓] J register_conflict 用 MemoryLayer(...) 转换（与 from_row 同款）
+[✓] J0 已定位 apply_shared_sync
+[✓] J apply_shared_sync 循环体内无 get_node
+[✓] J apply_shared_sync 用 MemoryLayer(...) 转换（与 from_row 同款）
+[✓] J register_conflict 角色闸+存在性检查合并为一次取 layer
+[✓] J register_conflict 存在性用 `_lay[...] is None`（等价旧 `is None`）
+[✓] J register_conflict 标签裁剪仍走 `_dumps_tags`
+[✓] J apply_shared_sync 判同走声明字段面 helper（旧两列口径已退役）
+[✓] J apply_shared_sync 两个返回键名未变（existing_layer 仍为 str）
+[✓] J apply_shared_sync 的 identical/conflicts/overwrite 分支仍在
+— K 静态面（increment_access 收进批量单点，不再每节点新开连接）—
+[✓] K0 已定位 increment_access / increment_access_many
+[✓] K 单节点入口委派给批量单点（不复制实现）
+[✓] K 批量单点用 executemany（保住重复 id 各计一次）
+[✓] K 批量单点**没有**用 `WHERE id IN (...)`（那会把重复 id 只计一次） — obs.execute( 调用 1 次（应仅 PRAGMA 那一次）
+[✓] K 批量单点仍重设连接级 foreign_keys
+[✓] K 批量单点仍是「尽力而为」（OperationalError ⇒ pass）
+[✓] K 空输入早退（不发连接）
+[✓] K 全仓循环体内不再出现 increment_access
+[✓] K 批量单点有 ≥3 处调用（semantic_search / 检索结果 / 演练） — 实测 32 处
+[✓] K0 已定位 consolidate_cycle
+[✓] K 演练面仍只对 `importance >= rehearsal_threshold` 计数
+[✓] K 演练面四条过滤逐字未动
+[✓] K `new_count` 仍由快照 `n.access_count` 推出（不依赖 increment 返回值）
+[✓] K 降权/可压缩面仍在（`elif` 拆成显式 continue 后等价）
+
+=== N+1 优化守卫: 80/80 通过 ===

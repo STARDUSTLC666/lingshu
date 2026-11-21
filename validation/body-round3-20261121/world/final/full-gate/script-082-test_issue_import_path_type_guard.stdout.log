@@ -1,0 +1,6 @@
+  PASS A01 int 路径 -> 可读 TypeError（旧实现当 fd，OSError WinError 6）
+  PASS A02 None 路径 -> 可读 TypeError（消息含 input_path）
+  PASS A03 正对照：合法路径不被类型闸拦（走到真实逻辑）
+  PASS E01 钉子：可读文案
+  PASS E02 钉子：PathLike 放行
+通过 5 / 失败 0

@@ -1,0 +1,26 @@
+[
+  {
+    "script": "tests/test_hex_grid_extent.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.5129298999963794,
+    "tail": [
+      "  PASS D1 64x64/8：grid 同行间距 √3·s = W/(cells_across+0.5)",
+      "  PASS D1 32x32/16：grid 同行间距 √3·s = W/(cells_across+0.5)",
+      "",
+      "===== SUMMARY 23/23 通过 =====",
+      "VERDICT=PASS（晶格铺满画幅：无画外采样，9 宫格与 L4 质心位置对齐）"
+    ]
+  },
+  {
+    "script": "tests/test_hex_cnn.py",
+    "returncode": 0,
+    "elapsed_seconds": 0.32929399999557063,
+    "tail": [
+      "  [PASS] 可视化画布非空且亮度合理 (707, 982, 3) mean=19.8",
+      "",
+      "[4-6] SKIP：上游素材 data/img/0.png 未随导出（构造性段①②③照跑）",
+      "",
+      "13 passed, 0 failed"
+    ]
+  }
+]

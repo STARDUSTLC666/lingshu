@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.156" timestamp="2026-11-20T18:17:42.463377+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_dynamics_command_reanchor" name="test_command_reanchors_at_current_time_without_changing_public_velocity" time="0.031"><failure message="AssertionError: COMMAND_PHYSICS_POSITION_ANCHOR_STALE&#10;assert (64.0, 1000.0, 64.0) == (66.0, 999.55, 64.0)&#10;  &#10;  At index 0 diff: 64.0 != 66.0&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    (&#10;  -     66.0,&#10;  ?      ^&#10;  +     64.0,&#10;  ?      ^&#10;  -     999.55,&#10;  +     1000.0,&#10;        64.0,&#10;    )">tests/test_dynamics_command_reanchor.py:85: in test_command_reanchors_at_current_time_without_changing_public_velocity
+    assert st["p0"] == e.pos, "COMMAND_PHYSICS_POSITION_ANCHOR_STALE"
+E   AssertionError: COMMAND_PHYSICS_POSITION_ANCHOR_STALE
+E   assert (64.0, 1000.0, 64.0) == (66.0, 999.55, 64.0)
+E     
+E     At index 0 diff: 64.0 != 66.0
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       (
+E     -     66.0,
+E     ?      ^
+E     +     64.0,
+E     ?      ^
+E     -     999.55,
+E     +     1000.0,
+E           64.0,
+E       )</failure></testcase></testsuite></testsuites>

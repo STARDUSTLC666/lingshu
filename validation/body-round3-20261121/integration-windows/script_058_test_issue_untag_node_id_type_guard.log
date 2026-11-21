@@ -1,0 +1,24 @@
+[workspace]/lingshu/work\lingshu-body-round3-integration-20261121\lingshu\core\core.py:7671: ComponentDiscoveryWarning: [issue156] 组件 'entity_registry' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from entity_registry import EntityRegistry
+[workspace]/lingshu/work\lingshu-body-round3-integration-20261121\lingshu\core\core.py:7657: ComponentDiscoveryWarning: [issue156] 组件 'semantic_space' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from semantic_space import SemanticSpaceProvider
+[workspace]/lingshu/work\lingshu-body-round3-integration-20261121\lingshu\core\core.py:7647: ComponentDiscoveryWarning: [issue156] 组件 'attention_policy' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from attention_policy import AttentionPolicy
+[workspace]/lingshu/work\lingshu-body-round3-integration-20261121\lingshu\core\core.py:7622: ComponentDiscoveryWarning: [issue156] 组件 'prediction_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from prediction_engine import PredictionEngine
+[workspace]/lingshu/work\lingshu-body-round3-integration-20261121\lingshu\world\prediction.py:30: ComponentDiscoveryWarning: [issue156] 组件 'spacetime_memory_core' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from spacetime_memory_core import LayeredStore as _LayeredStore
+[workspace]/lingshu/work\lingshu-body-round3-integration-20261121\lingshu\core\core.py:7597: ComponentDiscoveryWarning: [issue156] 组件 'lifecycle_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from lifecycle_engine import LifecycleEngine
+[workspace]/lingshu/work\lingshu-body-round3-integration-20261121\lingshu\core\core.py:7565: ComponentDiscoveryWarning: [issue156] 组件 'flywheel_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from flywheel_engine import FlywheelEngine
+[workspace]/lingshu/work\lingshu-body-round3-integration-20261121\lingshu\core\core.py:7575: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from self_cognition_engine import SelfCognitionEngine
+[workspace]/lingshu/work\lingshu-body-round3-integration-20261121\lingshu\core\core.py:7554: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from body import build_default_registry
+  PASS A01 传 STNode 当 id -> 可读 TypeError（旧实现抛 ProgrammingError）
+  PASS A02 None -> 可读 TypeError
+  PASS A03 正对照：合法 id 正常移除标签
+  PASS A04 正对照：标签不存在返回 False
+  PASS E01 钉子：可读文案
+通过 5 / 失败 0

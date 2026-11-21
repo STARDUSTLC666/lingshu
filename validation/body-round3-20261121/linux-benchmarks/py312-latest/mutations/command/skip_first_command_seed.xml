@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.178" timestamp="2026-11-20T18:17:44.794399+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_dynamics_command_reanchor" name="test_first_command_initializes_a_physics_anchor_without_a_blank_resume_tick" time="0.038"><failure message="AssertionError: ('COMMAND_FIRST_RESUME_WAS_ONLY_A_SEED', (64.0, 1000.0, 63.25), (64.0, 999.8, 62.5))&#10;assert False&#10; +  where False = all(&lt;generator object close.&lt;locals&gt;.&lt;genexpr&gt; at 0x78f67f48f1f0&gt;)">tests/test_dynamics_command_reanchor.py:99: in test_first_command_initializes_a_physics_anchor_without_a_blank_resume_tick
+    close(e.pos, p, "COMMAND_FIRST_RESUME_WAS_ONLY_A_SEED")
+tests/test_dynamics_command_reanchor.py:43: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_FIRST_RESUME_WAS_ONLY_A_SEED', (64.0, 1000.0, 63.25), (64.0, 999.8, 62.5))
+E   assert False
+E    +  where False = all(&lt;generator object close.&lt;locals&gt;.&lt;genexpr&gt; at 0x78f67f48f1f0&gt;)</failure></testcase></testsuite></testsuites>

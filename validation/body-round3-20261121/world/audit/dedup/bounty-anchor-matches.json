@@ -1,0 +1,37 @@
+[
+  {
+    "number": 2793,
+    "title": "[intake 输入] lingshu PR #1479：无接触碰撞箱不再把瞬时末速度替换成平均速度（守卫/变异/基准）",
+    "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2793"
+  },
+  {
+    "number": 2006,
+    "title": "第三方独立复验：lingshu PR #1138（#1133 碰撞门+#1134 维度校验）——#1134 全修/#1133 现象一修（守卫4红→6绿）；现象二原主张未复现（三轮审核修订）",
+    "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2006"
+  },
+  {
+    "number": 2000,
+    "title": "第三方独立复验：lingshu PR #1143（#1135 三处读数失真+#1136 三处输入校验）——守卫双腿12红→19绿（经三轮子代理审核修订）",
+    "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2000"
+  },
+  {
+    "number": 1724,
+    "title": "[intake 输入] lingshu #906：W1 行动反馈资格与定向修订交付",
+    "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1724"
+  },
+  {
+    "number": 1467,
+    "title": "[intake 输入] 【测评报告】dsh-file-mentions 1.2.3 标准测评（配对 A/B · 五状态=还说不准）：后端三条路由从无到有（A 组 5/5 404、B 组 5/5 200），但打开失败仍回 200；前端点击链路未测",
+    "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1467"
+  },
+  {
+    "number": 628,
+    "title": "【intake 输入】lingshu：Environment(gravity=0) 零重力模式不可达（两层下界口径不一致）",
+    "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/628"
+  },
+  {
+    "number": 626,
+    "title": "【intake 输入】lingshu：sweep_aabb 相切相离误报 hit/toi=0 ⇒ 防穿模层把动力学实体冻在接触点（上游 #703）",
+    "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/626"
+  }
+]

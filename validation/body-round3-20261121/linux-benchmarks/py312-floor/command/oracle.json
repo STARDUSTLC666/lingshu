@@ -1,0 +1,42 @@
+{
+  "baseline": "6b73082406d40a630a44cd68559c1f66b3652390",
+  "python": "3.12.16",
+  "platform": "Linux-7.0.0-1020-azure-x86_64-with-glibc2.43",
+  "timer": {
+    "implementation": "clock_gettime(CLOCK_MONOTONIC)",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution": 1e-09
+  },
+  "source_sha256_lf": {
+    "baseline": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+    "fixed": "7f33caeaae450fe46cc7e8ae465e0302b0f2063e1d70788f41402d8d75e5350a"
+  },
+  "benchmark_sha256_lf": "1c4e039932777a8399c9d26dbec18503c8cc8f48fabe18a4091b4e7c8d41e303",
+  "unchanged_dependency_sha256_lf": {
+    "lingshu/world/physics.py": "bfb46c186fc51c92e8009d3a9de6ba5c07cdf082f4d509d6c6bf0c1c6721f6c6",
+    "lingshu/world/coord_contract.py": "2393d826d520f340be1e73b6f3ec0d85a7df4afff70460478663cd94a8dd1d29"
+  },
+  "method": "same process randomized adjacent pairs seed424242; one warmup per case+variant;11 measured pairs default; setup/import/hash excluded from timing; GC disabled equally for timing; independent separate tracemalloc includes scene setup,3 repeats per size; diagnostics then drained for retained-state reading; no timing pass threshold",
+  "ticks": 400,
+  "repeats": 11,
+  "mode": "oracle",
+  "oracle": {
+    "method": "independent Decimal precision60 endpoint differences + ballistic equations; never reads public velocity for truth; stay is explicit stop; seed20261121; 5actions,11dt,7step sizes,0..7pre/1..7resume ticks; continuous starting coordinates,clamping,quantization included",
+    "summary": {
+      "baseline": {
+        "cases": 2000,
+        "mismatches": 2000,
+        "max_position_error": 15948.696237381198,
+        "max_velocity_error": 1068485.4944406194
+      },
+      "fixed": {
+        "cases": 2000,
+        "mismatches": 0,
+        "max_position_error": 1.1641532182693481e-10,
+        "max_velocity_error": 1.1641532182693481e-10
+      }
+    },
+    "cases_sha256": "66b6ef09a6bde5da21706507a8bd79128dc686ed051fd73c119e876fd5524c0d"
+  }
+}

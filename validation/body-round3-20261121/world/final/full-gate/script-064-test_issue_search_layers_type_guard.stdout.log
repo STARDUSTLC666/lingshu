@@ -1,0 +1,7 @@
+  PASS A01 str layers -> 可读 TypeError
+  PASS A02 元素非 MemoryLayer -> 可读 TypeError
+  PASS A03 正对照：MemoryLayer 列表正常检索
+  PASS A04 None 仍查全层
+  PASS E01 钉子：容器文案
+  PASS E02 钉子：元素文案
+通过 6 / 失败 0

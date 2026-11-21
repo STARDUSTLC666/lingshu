@@ -1,0 +1,12 @@
+  PASS T1a 正常路径 ingest 无异常
+  PASS T1b 正常路径状态落账且重建为 shy
+  PASS T1c 正常路径不误报警告
+  PASS T2a 台账不可写时 ingest 仍不抛（向后兼容）
+  PASS T2b 台账不可写时发出 RuntimeWarning
+  PASS T2c 台账 0 行、重建回落 neutral（失败已可见）
+  PASS T2d 节点正文仍写 shy —— 正是需要被暴露的那处矛盾
+  PASS T3a 空状态不报警（无状态可写，非写失败）
+  PASS T3b 空状态重建 neutral
+
+===== SUMMARY 9/9 通过 =====
+VERDICT=PASS（状态写入失败可观测；正常/空状态不误报）

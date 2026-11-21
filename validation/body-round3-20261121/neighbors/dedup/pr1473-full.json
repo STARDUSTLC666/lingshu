@@ -1,0 +1,38 @@
+{
+  "body_sha256_utf8": "d202cd9431516ac6d98baac33753f2a7e22f9f26b033a6b5176f9c8f22e86b3e",
+  "body_utf8_bytes": 8084,
+  "comments": [],
+  "files": [
+    {
+      "path": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "additions": 1,
+      "deletions": 1,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "lingshu/nn/hex_cnn.py",
+      "additions": 14,
+      "deletions": 5,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "tests/fixtures/hexgrid_odd_r_nearest_cell_mutations.json",
+      "additions": 29,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "tests/test_hexgrid_odd_r_nearest_cell.py",
+      "additions": 51,
+      "deletions": 0,
+      "changeType": "ADDED"
+    }
+  ],
+  "headRefOid": "cff189b3438623feaebdf1a874fafdd03080acb1",
+  "mergeCommit": {
+    "oid": "607d07d483f8805dfd8f60dbd5eef102ee2bc98b"
+  },
+  "mergedAt": "2026-11-20T16:15:50Z",
+  "reviews": [],
+  "state": "MERGED"
+}

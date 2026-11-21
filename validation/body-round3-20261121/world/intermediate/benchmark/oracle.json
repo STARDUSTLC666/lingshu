@@ -1,0 +1,42 @@
+{
+  "baseline": "04e0ecb6a3669c90efbb4a1583816a8f7ca26bc7",
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "timer": {
+    "implementation": "QueryPerformanceCounter()",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution": 1e-07
+  },
+  "source_sha256_lf": {
+    "baseline": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+    "fixed": "39eb113b7bdeb6fe321e006d699e4376fa18c48a38f0f5e65e6aa006043bf00a"
+  },
+  "benchmark_sha256_lf": "e5f6a0228c53ef99e958734d343ee9fb25c819a02bae8a6be0cd2a0faf891571",
+  "unchanged_dependency_sha256_lf": {
+    "lingshu/world/physics.py": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a",
+    "lingshu/world/coord_contract.py": "2393d826d520f340be1e73b6f3ec0d85a7df4afff70460478663cd94a8dd1d29"
+  },
+  "method": "same process randomized adjacent pairs seed424242; one warmup per case+variant;11 measured pairs default; setup/import/hash excluded; GC disabled equally for timing; independent separate tracemalloc,3 repeats per size; no timing pass threshold",
+  "ticks": 400,
+  "repeats": 11,
+  "mode": "oracle",
+  "oracle": {
+    "method": "independent Decimal precision60 equations; seed20261121; 5actions,11dt,7step sizes,0..7pre/1..7resume ticks; world clamping and quantization included",
+    "summary": {
+      "baseline": {
+        "cases": 2000,
+        "mismatches": 2000,
+        "max_position_error": 15948.696237381198,
+        "max_velocity_error": 1068501.4946388355
+      },
+      "fixed": {
+        "cases": 2000,
+        "mismatches": 0,
+        "max_position_error": 1.1641532182693481e-10,
+        "max_velocity_error": 1.1641532182693481e-10
+      }
+    },
+    "cases_sha256": "5ab408a16f968fc5f967630b1b357a926bfce4ad67c060b9ea314f57c83fab20"
+  }
+}

@@ -1,0 +1,12 @@
+== A 组：写序与置信 ==
+  PASS A01 前提：M5 自动建 OPPOSITE 边（confidence 0.3、verified 0）
+  PASS A02 ★行：TRUE 先写、FALSE 后写——TRUE 仍在工作态
+  PASS A03 ★行：FALSE 先写、TRUE 后写——TRUE 仍在工作态
+  PASS A04 ★行：满额 1.0 时 TRUE 激活显著低于 0.3 边（证明缩放承重）
+  PASS A05 对照：只有 TRUE 时正常激活（抑制通路不误伤）
+== B 组：edge-list 降级 ==
+  PASS B01 ★行：edge-list 降级下两种写序 TRUE 都在（同口径）
+== E 组：源码钉子 ==
+  PASS E01 ★钉子：抑制幅度乘边置信
+  PASS E02 ★钉子：低置信边稀疏/边表两路径都双向
+通过 8 / 失败 0

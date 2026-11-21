@@ -1,0 +1,18 @@
+{
+  "total_count": 1,
+  "incomplete_results": false,
+  "items": [
+    {
+      "repository_url": "https://api.github.com/repos/FuRongJun-1999/dsh-bounty",
+      "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/628",
+      "number": 628,
+      "title": "【intake 输入】lingshu：Environment(gravity=0) 零重力模式不可达（两层下界口径不一致）",
+      "state": "closed",
+      "comments": 3,
+      "created_at": "2026-10-15T23:26:41Z",
+      "updated_at": "2026-10-16T01:37:39Z",
+      "closed_at": "2026-10-16T01:37:39Z"
+    }
+  ],
+  "search_type": "lexical"
+}

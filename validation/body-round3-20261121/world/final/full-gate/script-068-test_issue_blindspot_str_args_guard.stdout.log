@@ -1,0 +1,7 @@
+  PASS A01 int severity -> 可读 TypeError 且零写入
+  PASS A02 int category -> 可读 TypeError
+  PASS A03 纯空白 severity -> TypeError
+  PASS A04 正对照：合法值正常落库
+  PASS E01 钉子：severity 文案
+  PASS E02 钉子：category 文案
+通过 6 / 失败 0

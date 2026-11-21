@@ -1,0 +1,15 @@
+[✓] A0 已定位 ingest_scene — <repo>\lingshu\world\scene_model.py
+[✓] A 找到主循环（按行号最小）
+[✓] A 主循环体内不再逐实体 execute/commit
+[✓] B 循环后恰有一次 executemany — 实测 1 处 @L[481]
+[✓] B commit 总数从「每实体一次」降到「批量一次 + 回落路径」 — 实测 2 处 @L[485, 514]
+[✓] C 回落路径的逐条告警文案逐字保留
+[✓] C 仍是 RuntimeWarning（类别未变）
+[✓] C 仍有 `rollback()`（批量失败后丢掉隐式事务）
+[✓] C 回落路径是「逐条重试」的循环
+[✓] E `written.append(node.id)` 仍在主循环内
+[✓] E 仍 `return written`
+[✓] E 三条过滤/解析分支未动（格式解析与 skip_dedup 选择面）
+[✓] E 函数签名按本件声明（agent, scene_desc, store=None, tag="spatial", relations=None）
+
+=== ingest_scene 状态批量提交守卫: 13/13 通过 ===

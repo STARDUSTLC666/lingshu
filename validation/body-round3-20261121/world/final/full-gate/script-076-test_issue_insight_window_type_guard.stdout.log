@@ -1,0 +1,7 @@
+  PASS A01 str conditions -> 可读 TypeError
+  PASS A02 list conditions -> 可读 TypeError
+  PASS A03 None 等价未提供（窗口打开）
+  PASS A04 正对照：显式条件参与判定
+  PASS E01 钉子：可读文案
+  PASS E02 钉子：None 单独放行
+通过 6 / 失败 0

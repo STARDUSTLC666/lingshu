@@ -1,0 +1,26 @@
+{
+  "frozen_head": "f81ee3a9939f3dad7c277145766508c113742ba0",
+  "frozen_tree": "5e6e6d45fdc9ef6ea885f4e4f38d56630089a751",
+  "command": [
+    "[workspace]/lingshu/work\\lingshu-body-round3-integration-20261121-venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "[workspace]/lingshu/work\\lingshu-body-round2-evidence-final-20261121\\validation\\body-round2-20261120\\tools\\portable_final_gate.py",
+    "--repo",
+    "[workspace]/lingshu/work\\lingshu-body-round3-integration-20261121",
+    "--output",
+    "[workspace]/lingshu/outputs\\body-round3-20261121\\integration-windows",
+    "--brain-root",
+    "[workspace]/lingshu/outputs\\body-validation-20261120\\brain-pinned",
+    "--workers",
+    "4"
+  ],
+  "driver_sha256": "d76b23c179e4940b0798101ef196b8d6405692cf6fca6e43c4815b1fc78bec45",
+  "launcher_sha256": "43387f65482bc15c6f0928e568d1c51d98b77de8c9ed0c60f459f495fc418fd9",
+  "authentic_historical_physics_baseline": "124ea433fe9a2ad2fd66a7360df85f6d61bab793",
+  "historical_baseline_path": "[workspace]/lingshu/outputs\\body-round3-20261121\\audit-world\\frozen-baseline-124ea43",
+  "openssl_dir": "C:\\Program Files\\Git\\usr\\bin",
+  "environment_policy": "Dedicated venv; pinned dependencies cloned from prior complete run. Historical source enables original comparisons; no tests deselected beyond workflow script split.",
+  "exit_code": 1
+}

@@ -1,0 +1,1046 @@
+{
+  "protocol": "paired-retained-six-neighbor-queries-v1",
+  "seed": null,
+  "baseline_commit": "6b73082406d40a630a44cd68559c1f66b3652390",
+  "measured_checkout_head": "f81ee3a9939f3dad7c277145766508c113742ba0",
+  "measured_checkout_status": "",
+  "source": "lingshu/nn/hex_cnn.py",
+  "baseline_source_sha256": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081",
+  "fixed_source_sha256": "5671ae505f6dd026fc4fac7cb50ca02ca76ca972a51292f2dc50b5c7ae37efee",
+  "benchmark_sha256": "4a531767989e45c50e2d0ea0486a083e8c897826f14e16127109387fdf5ab113",
+  "python": "3.12.16",
+  "numpy": "2.3.5",
+  "platform": "Linux-7.0.0-1020-azure-x86_64-with-glibc2.43",
+  "processor": "",
+  "logical_cpu_count": 4,
+  "gc_enabled": true,
+  "warmups_per_version_case": 3,
+  "retained_timing_samples": 9,
+  "separate_memory_probes": 3,
+  "clock": "perf_counter_ns",
+  "memory_measure": "tracemalloc retained/peak Python bytes; excludes inputs and native/RSS",
+  "measurement": "same preallocated queries; all outputs retained until timing stops; imports, validation, hashes, GC collection and disposal outside timed region; alternating AB/BA samples; shared Windows host, descriptive only",
+  "elapsed_seconds": 32.125855234,
+  "cases": [
+    {
+      "mode": "axial",
+      "coordinate_sign": "positive",
+      "query_count": 1000,
+      "returned_cells_per_version": 6000,
+      "cell_size": 1.75,
+      "origin": [
+        0.0,
+        0.0
+      ],
+      "rows_have_both_parities": true,
+      "versions": {
+        "baseline": {
+          "correct_ordered_queries": 1000,
+          "output_sha256": "ac455827927c0747792290f408081d0054f25e82703eec8e2db4f5f1c18008a2",
+          "timing_ns": [
+            602760,
+            601356,
+            566705,
+            589407,
+            606190,
+            602024,
+            584362,
+            579819,
+            601398
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 559320,
+              "peak_bytes": 559462
+            },
+            {
+              "retained_bytes": 559320,
+              "peak_bytes": 559462
+            },
+            {
+              "retained_bytes": 559320,
+              "peak_bytes": 559462
+            }
+          ],
+          "median_ns": 601356,
+          "median_ns_per_query": 601.356,
+          "min_ns": 566705,
+          "max_ns": 606190,
+          "median_peak_bytes": 559462,
+          "median_peak_bytes_per_query": 559.462
+        },
+        "fixed": {
+          "correct_ordered_queries": 1000,
+          "output_sha256": "ac455827927c0747792290f408081d0054f25e82703eec8e2db4f5f1c18008a2",
+          "timing_ns": [
+            580612,
+            597833,
+            621634,
+            659609,
+            607857,
+            632952,
+            600158,
+            630602,
+            584743
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 559320,
+              "peak_bytes": 559462
+            },
+            {
+              "retained_bytes": 559320,
+              "peak_bytes": 559462
+            },
+            {
+              "retained_bytes": 559320,
+              "peak_bytes": 559462
+            }
+          ],
+          "median_ns": 607857,
+          "median_ns_per_query": 607.857,
+          "min_ns": 580612,
+          "max_ns": 659609,
+          "median_peak_bytes": 559462,
+          "median_peak_bytes_per_query": 559.462
+        }
+      },
+      "fixed_over_baseline_median_ratio": 1.0108105681160577
+    },
+    {
+      "mode": "axial",
+      "coordinate_sign": "positive",
+      "query_count": 10000,
+      "returned_cells_per_version": 60000,
+      "cell_size": 1.75,
+      "origin": [
+        0.0,
+        0.0
+      ],
+      "rows_have_both_parities": true,
+      "versions": {
+        "baseline": {
+          "correct_ordered_queries": 10000,
+          "output_sha256": "27e58c17a0fdf2edda3c7de5d26c45e7b015932ee3cd7adfef1aa53f19ae13f8",
+          "timing_ns": [
+            6477743,
+            6025795,
+            5977779,
+            5903865,
+            5890777,
+            6222139,
+            5891263,
+            5885217,
+            5931340
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 5619192,
+              "peak_bytes": 5619334
+            },
+            {
+              "retained_bytes": 5619192,
+              "peak_bytes": 5619334
+            },
+            {
+              "retained_bytes": 5619192,
+              "peak_bytes": 5619334
+            }
+          ],
+          "median_ns": 5931340,
+          "median_ns_per_query": 593.134,
+          "min_ns": 5885217,
+          "max_ns": 6477743,
+          "median_peak_bytes": 5619334,
+          "median_peak_bytes_per_query": 561.9334
+        },
+        "fixed": {
+          "correct_ordered_queries": 10000,
+          "output_sha256": "27e58c17a0fdf2edda3c7de5d26c45e7b015932ee3cd7adfef1aa53f19ae13f8",
+          "timing_ns": [
+            6463170,
+            6301181,
+            6099237,
+            6052412,
+            6131269,
+            6140960,
+            6149804,
+            6045812,
+            6126437
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 5619192,
+              "peak_bytes": 5619334
+            },
+            {
+              "retained_bytes": 5619192,
+              "peak_bytes": 5619334
+            },
+            {
+              "retained_bytes": 5619192,
+              "peak_bytes": 5619334
+            }
+          ],
+          "median_ns": 6131269,
+          "median_ns_per_query": 613.1269,
+          "min_ns": 6045812,
+          "max_ns": 6463170,
+          "median_peak_bytes": 5619334,
+          "median_peak_bytes_per_query": 561.9334
+        }
+      },
+      "fixed_over_baseline_median_ratio": 1.0337072229883972
+    },
+    {
+      "mode": "axial",
+      "coordinate_sign": "positive",
+      "query_count": 50000,
+      "returned_cells_per_version": 300000,
+      "cell_size": 1.75,
+      "origin": [
+        0.0,
+        0.0
+      ],
+      "rows_have_both_parities": true,
+      "versions": {
+        "baseline": {
+          "correct_ordered_queries": 50000,
+          "output_sha256": "6ce0eff6f6e17aeff70fa41152bf606919ce6efee483662f991d67c325720004",
+          "timing_ns": [
+            62309838,
+            61711000,
+            58548193,
+            60331485,
+            60437271,
+            57055757,
+            57465313,
+            54717781,
+            54703038
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 28162648,
+              "peak_bytes": 28162790
+            },
+            {
+              "retained_bytes": 28162648,
+              "peak_bytes": 28162790
+            },
+            {
+              "retained_bytes": 28162648,
+              "peak_bytes": 28162790
+            }
+          ],
+          "median_ns": 58548193,
+          "median_ns_per_query": 1170.96386,
+          "min_ns": 54703038,
+          "max_ns": 62309838,
+          "median_peak_bytes": 28162790,
+          "median_peak_bytes_per_query": 563.2558
+        },
+        "fixed": {
+          "correct_ordered_queries": 50000,
+          "output_sha256": "6ce0eff6f6e17aeff70fa41152bf606919ce6efee483662f991d67c325720004",
+          "timing_ns": [
+            61392923,
+            60804317,
+            61677298,
+            60860823,
+            57314002,
+            59517756,
+            57210161,
+            56912217,
+            55525423
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 28162648,
+              "peak_bytes": 28162790
+            },
+            {
+              "retained_bytes": 28162648,
+              "peak_bytes": 28162790
+            },
+            {
+              "retained_bytes": 28162648,
+              "peak_bytes": 28162790
+            }
+          ],
+          "median_ns": 59517756,
+          "median_ns_per_query": 1190.35512,
+          "min_ns": 55525423,
+          "max_ns": 61677298,
+          "median_peak_bytes": 28162790,
+          "median_peak_bytes_per_query": 563.2558
+        }
+      },
+      "fixed_over_baseline_median_ratio": 1.0165600841002898
+    },
+    {
+      "mode": "axial",
+      "coordinate_sign": "negative",
+      "query_count": 1000,
+      "returned_cells_per_version": 6000,
+      "cell_size": 1.75,
+      "origin": [
+        0.0,
+        0.0
+      ],
+      "rows_have_both_parities": true,
+      "versions": {
+        "baseline": {
+          "correct_ordered_queries": 1000,
+          "output_sha256": "21f527c3a334aff7067f4e63d9a90940d65119d5a6d5ec15b92a999da6c3a7f8",
+          "timing_ns": [
+            605471,
+            595258,
+            642711,
+            598827,
+            624799,
+            620902,
+            643311,
+            633907,
+            608844
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 655704,
+              "peak_bytes": 655846
+            },
+            {
+              "retained_bytes": 655704,
+              "peak_bytes": 655846
+            },
+            {
+              "retained_bytes": 655704,
+              "peak_bytes": 655846
+            }
+          ],
+          "median_ns": 620902,
+          "median_ns_per_query": 620.902,
+          "min_ns": 595258,
+          "max_ns": 643311,
+          "median_peak_bytes": 655846,
+          "median_peak_bytes_per_query": 655.846
+        },
+        "fixed": {
+          "correct_ordered_queries": 1000,
+          "output_sha256": "21f527c3a334aff7067f4e63d9a90940d65119d5a6d5ec15b92a999da6c3a7f8",
+          "timing_ns": [
+            614817,
+            640923,
+            638899,
+            605623,
+            631384,
+            662586,
+            624022,
+            633595,
+            612302
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 655704,
+              "peak_bytes": 655846
+            },
+            {
+              "retained_bytes": 655704,
+              "peak_bytes": 655846
+            },
+            {
+              "retained_bytes": 655704,
+              "peak_bytes": 655846
+            }
+          ],
+          "median_ns": 631384,
+          "median_ns_per_query": 631.384,
+          "min_ns": 605623,
+          "max_ns": 662586,
+          "median_peak_bytes": 655846,
+          "median_peak_bytes_per_query": 655.846
+        }
+      },
+      "fixed_over_baseline_median_ratio": 1.016881891184116
+    },
+    {
+      "mode": "axial",
+      "coordinate_sign": "negative",
+      "query_count": 10000,
+      "returned_cells_per_version": 60000,
+      "cell_size": 1.75,
+      "origin": [
+        0.0,
+        0.0
+      ],
+      "rows_have_both_parities": true,
+      "versions": {
+        "baseline": {
+          "correct_ordered_queries": 10000,
+          "output_sha256": "0c6c29757f4e8a66fb6975e96b8d67c8501e954068c9cac454bc4e882db5e611",
+          "timing_ns": [
+            6880626,
+            6742724,
+            6763416,
+            6831317,
+            6864545,
+            6676090,
+            6578449,
+            6844590,
+            6792561
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 7973496,
+              "peak_bytes": 7973638
+            },
+            {
+              "retained_bytes": 7973496,
+              "peak_bytes": 7973638
+            },
+            {
+              "retained_bytes": 7973496,
+              "peak_bytes": 7973638
+            }
+          ],
+          "median_ns": 6792561,
+          "median_ns_per_query": 679.2561,
+          "min_ns": 6578449,
+          "max_ns": 6880626,
+          "median_peak_bytes": 7973638,
+          "median_peak_bytes_per_query": 797.3638
+        },
+        "fixed": {
+          "correct_ordered_queries": 10000,
+          "output_sha256": "0c6c29757f4e8a66fb6975e96b8d67c8501e954068c9cac454bc4e882db5e611",
+          "timing_ns": [
+            7108381,
+            6885570,
+            6903588,
+            6861343,
+            6992307,
+            6839817,
+            6777497,
+            6832533,
+            7005494
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 7973496,
+              "peak_bytes": 7973638
+            },
+            {
+              "retained_bytes": 7973496,
+              "peak_bytes": 7973638
+            },
+            {
+              "retained_bytes": 7973496,
+              "peak_bytes": 7973638
+            }
+          ],
+          "median_ns": 6885570,
+          "median_ns_per_query": 688.557,
+          "min_ns": 6777497,
+          "max_ns": 7108381,
+          "median_peak_bytes": 7973638,
+          "median_peak_bytes_per_query": 797.3638
+        }
+      },
+      "fixed_over_baseline_median_ratio": 1.013692773609247
+    },
+    {
+      "mode": "axial",
+      "coordinate_sign": "negative",
+      "query_count": 50000,
+      "returned_cells_per_version": 300000,
+      "cell_size": 1.75,
+      "origin": [
+        0.0,
+        0.0
+      ],
+      "rows_have_both_parities": true,
+      "versions": {
+        "baseline": {
+          "correct_ordered_queries": 50000,
+          "output_sha256": "c2a3fcfc58dd791768edc56772880b2f47f8c5ab679ec69a828b65cad62339cd",
+          "timing_ns": [
+            65479753,
+            67099304,
+            66290995,
+            62733503,
+            61795583,
+            61630535,
+            61380302,
+            58891748,
+            64179400
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 41888920,
+              "peak_bytes": 41889062
+            },
+            {
+              "retained_bytes": 41888920,
+              "peak_bytes": 41889062
+            },
+            {
+              "retained_bytes": 41888920,
+              "peak_bytes": 41889062
+            }
+          ],
+          "median_ns": 62733503,
+          "median_ns_per_query": 1254.67006,
+          "min_ns": 58891748,
+          "max_ns": 67099304,
+          "median_peak_bytes": 41889062,
+          "median_peak_bytes_per_query": 837.78124
+        },
+        "fixed": {
+          "correct_ordered_queries": 50000,
+          "output_sha256": "c2a3fcfc58dd791768edc56772880b2f47f8c5ab679ec69a828b65cad62339cd",
+          "timing_ns": [
+            64817524,
+            65015575,
+            64528988,
+            65048025,
+            62002429,
+            65460193,
+            60288833,
+            61732904,
+            59337961
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 41888920,
+              "peak_bytes": 41889062
+            },
+            {
+              "retained_bytes": 41888920,
+              "peak_bytes": 41889062
+            },
+            {
+              "retained_bytes": 41888920,
+              "peak_bytes": 41889062
+            }
+          ],
+          "median_ns": 64528988,
+          "median_ns_per_query": 1290.57976,
+          "min_ns": 59337961,
+          "max_ns": 65460193,
+          "median_peak_bytes": 41889062,
+          "median_peak_bytes_per_query": 837.78124
+        }
+      },
+      "fixed_over_baseline_median_ratio": 1.0286208312008338
+    },
+    {
+      "mode": "odd_r_offset",
+      "coordinate_sign": "positive",
+      "query_count": 1000,
+      "returned_cells_per_version": 6000,
+      "cell_size": 1.75,
+      "origin": [
+        -91.5,
+        43.25
+      ],
+      "rows_have_both_parities": true,
+      "versions": {
+        "baseline": {
+          "correct_ordered_queries": 0,
+          "output_sha256": "ac455827927c0747792290f408081d0054f25e82703eec8e2db4f5f1c18008a2",
+          "timing_ns": [
+            595118,
+            660629,
+            577669,
+            613827,
+            598826,
+            603357,
+            602417,
+            592715,
+            567185
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 559320,
+              "peak_bytes": 559462
+            },
+            {
+              "retained_bytes": 559320,
+              "peak_bytes": 559462
+            },
+            {
+              "retained_bytes": 559320,
+              "peak_bytes": 559462
+            }
+          ],
+          "median_ns": 598826,
+          "median_ns_per_query": 598.826,
+          "min_ns": 567185,
+          "max_ns": 660629,
+          "median_peak_bytes": 559462,
+          "median_peak_bytes_per_query": 559.462
+        },
+        "fixed": {
+          "correct_ordered_queries": 1000,
+          "output_sha256": "f82161660002d32efa28cd099aab3dcadb74f0a1fac8f278b155a9073f01526a",
+          "timing_ns": [
+            856873,
+            865491,
+            855287,
+            955027,
+            958578,
+            851563,
+            862563,
+            853222,
+            853872
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 559320,
+              "peak_bytes": 559462
+            },
+            {
+              "retained_bytes": 559320,
+              "peak_bytes": 559462
+            },
+            {
+              "retained_bytes": 559320,
+              "peak_bytes": 559462
+            }
+          ],
+          "median_ns": 856873,
+          "median_ns_per_query": 856.873,
+          "min_ns": 851563,
+          "max_ns": 958578,
+          "median_peak_bytes": 559462,
+          "median_peak_bytes_per_query": 559.462
+        }
+      },
+      "fixed_over_baseline_median_ratio": 1.4309215030743487
+    },
+    {
+      "mode": "odd_r_offset",
+      "coordinate_sign": "positive",
+      "query_count": 10000,
+      "returned_cells_per_version": 60000,
+      "cell_size": 1.75,
+      "origin": [
+        -91.5,
+        43.25
+      ],
+      "rows_have_both_parities": true,
+      "versions": {
+        "baseline": {
+          "correct_ordered_queries": 0,
+          "output_sha256": "27e58c17a0fdf2edda3c7de5d26c45e7b015932ee3cd7adfef1aa53f19ae13f8",
+          "timing_ns": [
+            6261498,
+            6039043,
+            6404069,
+            6007343,
+            6046965,
+            6099923,
+            6092954,
+            6301087,
+            6110744
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 5619192,
+              "peak_bytes": 5619334
+            },
+            {
+              "retained_bytes": 5619192,
+              "peak_bytes": 5619334
+            },
+            {
+              "retained_bytes": 5619192,
+              "peak_bytes": 5619334
+            }
+          ],
+          "median_ns": 6099923,
+          "median_ns_per_query": 609.9923,
+          "min_ns": 6007343,
+          "max_ns": 6404069,
+          "median_peak_bytes": 5619334,
+          "median_peak_bytes_per_query": 561.9334
+        },
+        "fixed": {
+          "correct_ordered_queries": 10000,
+          "output_sha256": "89480b30b1a77ec8eb59cd49e6cc3d6c9d801a8af9dd6c7bf7041d06d68d4080",
+          "timing_ns": [
+            8827513,
+            8796572,
+            8904445,
+            8906626,
+            8954030,
+            9093247,
+            8921335,
+            8953314,
+            8770185
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 5619128,
+              "peak_bytes": 5619270
+            },
+            {
+              "retained_bytes": 5619128,
+              "peak_bytes": 5619270
+            },
+            {
+              "retained_bytes": 5619128,
+              "peak_bytes": 5619270
+            }
+          ],
+          "median_ns": 8906626,
+          "median_ns_per_query": 890.6626,
+          "min_ns": 8770185,
+          "max_ns": 9093247,
+          "median_peak_bytes": 5619270,
+          "median_peak_bytes_per_query": 561.927
+        }
+      },
+      "fixed_over_baseline_median_ratio": 1.4601210539870748
+    },
+    {
+      "mode": "odd_r_offset",
+      "coordinate_sign": "positive",
+      "query_count": 50000,
+      "returned_cells_per_version": 300000,
+      "cell_size": 1.75,
+      "origin": [
+        -91.5,
+        43.25
+      ],
+      "rows_have_both_parities": true,
+      "versions": {
+        "baseline": {
+          "correct_ordered_queries": 0,
+          "output_sha256": "6ce0eff6f6e17aeff70fa41152bf606919ce6efee483662f991d67c325720004",
+          "timing_ns": [
+            56721910,
+            55079981,
+            56128452,
+            60825937,
+            60201755,
+            57405150,
+            58006180,
+            55692907,
+            53446653
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 28162648,
+              "peak_bytes": 28162790
+            },
+            {
+              "retained_bytes": 28162648,
+              "peak_bytes": 28162790
+            },
+            {
+              "retained_bytes": 28162648,
+              "peak_bytes": 28162790
+            }
+          ],
+          "median_ns": 56721910,
+          "median_ns_per_query": 1134.4382,
+          "min_ns": 53446653,
+          "max_ns": 60825937,
+          "median_peak_bytes": 28162790,
+          "median_peak_bytes_per_query": 563.2558
+        },
+        "fixed": {
+          "correct_ordered_queries": 50000,
+          "output_sha256": "0706109533b27b21f43dfb3abcd0ee6bf1f841f6f970a7f8a2171ca603436c02",
+          "timing_ns": [
+            71318189,
+            70645857,
+            69065078,
+            72237544,
+            72006289,
+            73624302,
+            71742459,
+            71925598,
+            71143737
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 28162648,
+              "peak_bytes": 28162790
+            },
+            {
+              "retained_bytes": 28162648,
+              "peak_bytes": 28162790
+            },
+            {
+              "retained_bytes": 28162648,
+              "peak_bytes": 28162790
+            }
+          ],
+          "median_ns": 71742459,
+          "median_ns_per_query": 1434.84918,
+          "min_ns": 69065078,
+          "max_ns": 73624302,
+          "median_peak_bytes": 28162790,
+          "median_peak_bytes_per_query": 563.2558
+        }
+      },
+      "fixed_over_baseline_median_ratio": 1.2648103528248609
+    },
+    {
+      "mode": "odd_r_offset",
+      "coordinate_sign": "negative",
+      "query_count": 1000,
+      "returned_cells_per_version": 6000,
+      "cell_size": 1.75,
+      "origin": [
+        -91.5,
+        43.25
+      ],
+      "rows_have_both_parities": true,
+      "versions": {
+        "baseline": {
+          "correct_ordered_queries": 0,
+          "output_sha256": "21f527c3a334aff7067f4e63d9a90940d65119d5a6d5ec15b92a999da6c3a7f8",
+          "timing_ns": [
+            631910,
+            615166,
+            594085,
+            632750,
+            632853,
+            638301,
+            596658,
+            609621,
+            640221
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 655704,
+              "peak_bytes": 655846
+            },
+            {
+              "retained_bytes": 655704,
+              "peak_bytes": 655846
+            },
+            {
+              "retained_bytes": 655704,
+              "peak_bytes": 655846
+            }
+          ],
+          "median_ns": 631910,
+          "median_ns_per_query": 631.91,
+          "min_ns": 594085,
+          "max_ns": 640221,
+          "median_peak_bytes": 655846,
+          "median_peak_bytes_per_query": 655.846
+        },
+        "fixed": {
+          "correct_ordered_queries": 1000,
+          "output_sha256": "1272105bee28790e9a869d3a365f39fdd9c19f2100f0759391a2a135a8fcc8d9",
+          "timing_ns": [
+            936590,
+            941173,
+            963685,
+            940985,
+            943389,
+            943569,
+            944450,
+            948405,
+            952932
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 655704,
+              "peak_bytes": 655846
+            },
+            {
+              "retained_bytes": 655704,
+              "peak_bytes": 655846
+            },
+            {
+              "retained_bytes": 655704,
+              "peak_bytes": 655846
+            }
+          ],
+          "median_ns": 943569,
+          "median_ns_per_query": 943.569,
+          "min_ns": 936590,
+          "max_ns": 963685,
+          "median_peak_bytes": 655846,
+          "median_peak_bytes_per_query": 655.846
+        }
+      },
+      "fixed_over_baseline_median_ratio": 1.4932015635137916
+    },
+    {
+      "mode": "odd_r_offset",
+      "coordinate_sign": "negative",
+      "query_count": 10000,
+      "returned_cells_per_version": 60000,
+      "cell_size": 1.75,
+      "origin": [
+        -91.5,
+        43.25
+      ],
+      "rows_have_both_parities": true,
+      "versions": {
+        "baseline": {
+          "correct_ordered_queries": 0,
+          "output_sha256": "0c6c29757f4e8a66fb6975e96b8d67c8501e954068c9cac454bc4e882db5e611",
+          "timing_ns": [
+            6912745,
+            6807419,
+            6699222,
+            6698006,
+            7321712,
+            7005266,
+            7057531,
+            6886941,
+            6720004
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 7973496,
+              "peak_bytes": 7973638
+            },
+            {
+              "retained_bytes": 7973496,
+              "peak_bytes": 7973638
+            },
+            {
+              "retained_bytes": 7973496,
+              "peak_bytes": 7973638
+            }
+          ],
+          "median_ns": 6886941,
+          "median_ns_per_query": 688.6941,
+          "min_ns": 6698006,
+          "max_ns": 7321712,
+          "median_peak_bytes": 7973638,
+          "median_peak_bytes_per_query": 797.3638
+        },
+        "fixed": {
+          "correct_ordered_queries": 10000,
+          "output_sha256": "9484f011ee7158319ba81269eab1fb4792077e2aa64ad229536ed46792e7bb0d",
+          "timing_ns": [
+            11236490,
+            11291122,
+            11247974,
+            11198430,
+            11233934,
+            11231901,
+            11403402,
+            11212447,
+            11011930
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 7973496,
+              "peak_bytes": 7973670
+            },
+            {
+              "retained_bytes": 7973496,
+              "peak_bytes": 7973670
+            },
+            {
+              "retained_bytes": 7973496,
+              "peak_bytes": 7973670
+            }
+          ],
+          "median_ns": 11233934,
+          "median_ns_per_query": 1123.3934,
+          "min_ns": 11011930,
+          "max_ns": 11403402,
+          "median_peak_bytes": 7973670,
+          "median_peak_bytes_per_query": 797.367
+        }
+      },
+      "fixed_over_baseline_median_ratio": 1.6311935879804982
+    },
+    {
+      "mode": "odd_r_offset",
+      "coordinate_sign": "negative",
+      "query_count": 50000,
+      "returned_cells_per_version": 300000,
+      "cell_size": 1.75,
+      "origin": [
+        -91.5,
+        43.25
+      ],
+      "rows_have_both_parities": true,
+      "versions": {
+        "baseline": {
+          "correct_ordered_queries": 0,
+          "output_sha256": "c2a3fcfc58dd791768edc56772880b2f47f8c5ab679ec69a828b65cad62339cd",
+          "timing_ns": [
+            58143827,
+            59440019,
+            63946541,
+            59214885,
+            58646205,
+            56791977,
+            61384906,
+            60309404,
+            61431523
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 41888920,
+              "peak_bytes": 41889062
+            },
+            {
+              "retained_bytes": 41888920,
+              "peak_bytes": 41889062
+            },
+            {
+              "retained_bytes": 41888920,
+              "peak_bytes": 41889062
+            }
+          ],
+          "median_ns": 59440019,
+          "median_ns_per_query": 1188.80038,
+          "min_ns": 56791977,
+          "max_ns": 63946541,
+          "median_peak_bytes": 41889062,
+          "median_peak_bytes_per_query": 837.78124
+        },
+        "fixed": {
+          "correct_ordered_queries": 50000,
+          "output_sha256": "fc3a397a384e9b602a71661c44399829df35bf5c01be5d9b9d074e160afd6fa6",
+          "timing_ns": [
+            84547109,
+            86282927,
+            84310121,
+            83091584,
+            82251927,
+            82153450,
+            82788100,
+            84702096,
+            87399585
+          ],
+          "memory_probes": [
+            {
+              "retained_bytes": 41888920,
+              "peak_bytes": 41889094
+            },
+            {
+              "retained_bytes": 41888920,
+              "peak_bytes": 41889094
+            },
+            {
+              "retained_bytes": 41888920,
+              "peak_bytes": 41889094
+            }
+          ],
+          "median_ns": 84310121,
+          "median_ns_per_query": 1686.20242,
+          "min_ns": 82153450,
+          "max_ns": 87399585,
+          "median_peak_bytes": 41889094,
+          "median_peak_bytes_per_query": 837.78188
+        }
+      },
+      "fixed_over_baseline_median_ratio": 1.4184066966734987
+    }
+  ]
+}

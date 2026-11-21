@@ -1,0 +1,6 @@
+  PASS A01 int skill_id -> 可读 TypeError（旧实现静默 None）
+  PASS A02 str delta -> 可读 TypeError
+  PASS A03 NaN delta -> TypeError
+  PASS A04 正对照：合法参数不抛异常
+  PASS E01 钉子：可读文案
+通过 5 / 失败 0

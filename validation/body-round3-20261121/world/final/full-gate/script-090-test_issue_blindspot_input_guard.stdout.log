@@ -1,0 +1,7 @@
+  PASS A01 空 code 拒绝且零登记
+  PASS A02 纯空白 description 拒绝
+  PASS A03 纯空白 code 拒绝
+  PASS A04 正对照：合法输入登记成功
+  PASS E01 钉子：code 文案
+  PASS E02 钉子：description 文案
+通过 6 / 失败 0

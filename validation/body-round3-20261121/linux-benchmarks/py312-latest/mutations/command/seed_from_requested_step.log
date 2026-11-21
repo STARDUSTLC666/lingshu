@@ -1,0 +1,31 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_______ test_clamping_uses_actual_displacement_for_the_physics_velocity ________
+tests/test_dynamics_command_reanchor.py:141: in test_clamping_uses_actual_displacement_for_the_physics_velocity
+    assert e.attrs["physics_state"]["v0"] == (2.5, 0., 0.), "COMMAND_REQUESTED_STEP_REPLACED_ACTUAL_MOTION"
+E   AssertionError: COMMAND_REQUESTED_STEP_REPLACED_ACTUAL_MOTION
+E   assert (50.0, 0.0, 0.0) == (2.5, 0.0, 0.0)
+E     
+E     At index 0 diff: 50.0 != 2.5
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       (
+E     -     2.5,
+E     +     50.0,
+E           0.0,
+E           0.0,
+E       )
+=========================== short test summary info ============================
+FAILED tests/test_dynamics_command_reanchor.py::test_clamping_uses_actual_displacement_for_the_physics_velocity - AssertionError: COMMAND_REQUESTED_STEP_REPLACED_ACTUAL_MOTION
+assert (50.0, 0.0, 0.0) == (2.5, 0.0, 0.0)
+  
+  At index 0 diff: 50.0 != 2.5
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    (
+  -     2.5,
+  +     50.0,
+        0.0,
+        0.0,
+    )
+1 failed in 0.15s

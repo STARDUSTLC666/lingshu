@@ -1,0 +1,11 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___ test_command_reanchors_at_current_time_without_changing_public_velocity ____
+tests/test_dynamics_command_reanchor.py:87: in test_command_reanchors_at_current_time_without_changing_public_velocity
+    assert st["t_ref"] == .4, "COMMAND_PHYSICS_TIME_ANCHOR_STALE"
+E   AssertionError: COMMAND_PHYSICS_TIME_ANCHOR_STALE
+E   assert 0.0 == 0.4
+=========================== short test summary info ============================
+FAILED tests/test_dynamics_command_reanchor.py::test_command_reanchors_at_current_time_without_changing_public_velocity - AssertionError: COMMAND_PHYSICS_TIME_ANCHOR_STALE
+assert 0.0 == 0.4
+1 failed in 0.13s

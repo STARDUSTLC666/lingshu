@@ -1,0 +1,10 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_command_preserves_custom_metadata_without_mutating_the_previous_state __
+tests\test_dynamics_command_reanchor.py:236: in test_command_preserves_custom_metadata_without_mutating_the_previous_state
+    assert current is not previous and previous == original, "COMMAND_MUTATED_OLD_STATE"
+E   AssertionError: COMMAND_MUTATED_OLD_STATE
+E   assert ({'p0': (66.0, 1000.0, 64.0), 'v0': (20.0, 0.0, 0.0), 't_ref': 0.1, 'beta': 0.4, ...} is not {'p0': (66.0, 1000.0, 64.0), 'v0': (20.0, 0.0, 0.0), 't_ref': 0.1, 'beta': 0.4, ...})
+=========================== short test summary info ===========================
+FAILED tests/test_dynamics_command_reanchor.py::test_command_preserves_custom_metadata_without_mutating_the_previous_state
+1 failed in 0.28s

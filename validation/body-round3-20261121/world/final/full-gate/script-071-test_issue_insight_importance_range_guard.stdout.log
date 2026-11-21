@@ -1,0 +1,7 @@
+  PASS A01 str importance -> 可读 TypeError 且零写入
+  PASS A02 越界 importance -> ValueError
+  PASS A03 NaN importance -> ValueError
+  PASS A04 正对照：返回值与落库一致（0.6/0.6）
+  PASS E01 钉子：类型文案
+  PASS E02 钉子：值域文案
+通过 6 / 失败 0

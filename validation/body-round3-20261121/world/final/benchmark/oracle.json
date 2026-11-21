@@ -1,0 +1,42 @@
+{
+  "baseline": "04e0ecb6a3669c90efbb4a1583816a8f7ca26bc7",
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "timer": {
+    "implementation": "QueryPerformanceCounter()",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution": 1e-07
+  },
+  "source_sha256_lf": {
+    "baseline": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+    "fixed": "984d8abeaaa5a4b9d50e6d604758ac128d120f6b3bd56289b8b2a665a7bd1046"
+  },
+  "benchmark_sha256_lf": "1c4e039932777a8399c9d26dbec18503c8cc8f48fabe18a4091b4e7c8d41e303",
+  "unchanged_dependency_sha256_lf": {
+    "lingshu/world/physics.py": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a",
+    "lingshu/world/coord_contract.py": "2393d826d520f340be1e73b6f3ec0d85a7df4afff70460478663cd94a8dd1d29"
+  },
+  "method": "same process randomized adjacent pairs seed424242; one warmup per case+variant;11 measured pairs default; setup/import/hash excluded from timing; GC disabled equally for timing; independent separate tracemalloc includes scene setup,3 repeats per size; diagnostics then drained for retained-state reading; no timing pass threshold",
+  "ticks": 400,
+  "repeats": 11,
+  "mode": "oracle",
+  "oracle": {
+    "method": "independent Decimal precision60 endpoint differences + ballistic equations; never reads public velocity for truth; stay is explicit stop; seed20261121; 5actions,11dt,7step sizes,0..7pre/1..7resume ticks; continuous starting coordinates,clamping,quantization included",
+    "summary": {
+      "baseline": {
+        "cases": 2000,
+        "mismatches": 2000,
+        "max_position_error": 15948.696237381198,
+        "max_velocity_error": 1068485.4944406194
+      },
+      "fixed": {
+        "cases": 2000,
+        "mismatches": 0,
+        "max_position_error": 1.1641532182693481e-10,
+        "max_velocity_error": 1.1641532182693481e-10
+      }
+    },
+    "cases_sha256": "66b6ef09a6bde5da21706507a8bd79128dc686ed051fd73c119e876fd5524c0d"
+  }
+}

@@ -1,0 +1,10 @@
+["git", "init", "-q", "<audit-evidence>\\pinned-brain-98d6b899"]
+
+["git", "-C", "<audit-evidence>\\pinned-brain-98d6b899", "remote", "add", "origin", "https://github.com/FuRongJun-1999/dsh-memory.git"]
+
+["git", "-C", "<audit-evidence>\\pinned-brain-98d6b899", "fetch", "--depth", "1", "origin", "98d6b899533a82fb1047f952987229c62a9929fb"]
+From https://github.com/FuRongJun-1999/dsh-memory
+ * branch            98d6b899533a82fb1047f952987229c62a9929fb -> FETCH_HEAD
+
+["git", "-C", "<audit-evidence>\\pinned-brain-98d6b899", "checkout", "-q", "FETCH_HEAD"]
+

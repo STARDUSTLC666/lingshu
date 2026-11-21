@@ -1,0 +1,1469 @@
+FFFFFFFF....FFFF....FFFF.FFF..                                           [100%]
+=================================== FAILURES ===================================
+_______________ test_odd_r_neighbors_keep_direction_order[even] ________________
+tests/test_hexgrid_odd_r_neighbors.py:49: in test_odd_r_neighbors_keep_direction_order
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+E   assert [(4, 2), (4, ...2, 3), (3, 3)] == [(4, 2), (3, ...2, 3), (3, 3)]
+E     
+E     At index 1 diff: (4, 1) != (3, 1)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               4,
+E               2,
+E           ),
+E           (
+E     -         3,
+E     ?         ^
+E     +         4,
+E     ?         ^
+E               1,
+E           ),
+E           (
+E     -         2,
+E     ?         ^
+E     +         3,
+E     ?         ^
+E               1,
+E           ),
+E           (
+E               2,
+E               2,
+E           ),
+E           (
+E               2,
+E               3,
+E           ),
+E           (
+E               3,
+E               3,
+E           ),
+E       ]
+________________ test_odd_r_neighbors_keep_direction_order[odd] ________________
+tests/test_hexgrid_odd_r_neighbors.py:49: in test_odd_r_neighbors_keep_direction_order
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+E   assert [(4, 3), (4, ...2, 4), (3, 4)] == [(4, 3), (4, ...3, 4), (4, 4)]
+E     
+E     At index 4 diff: (2, 4) != (3, 4)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               4,
+E               3,
+E           ),
+E           (
+E               4,
+E               2,
+E           ),
+E           (
+E               3,
+E               2,
+E           ),
+E           (
+E               2,
+E               3,
+E           ),
+E           (
+E     +         2,
+E     +         4,
+E     +     ),
+E     +     (
+E               3,
+E               4,
+E           ),
+E     -     (
+E     -         4,
+E     -         4,
+E     -     ),
+E       ]
+_________ test_odd_r_neighbors_keep_direction_order[negative_col_even] _________
+tests/test_hexgrid_odd_r_neighbors.py:49: in test_odd_r_neighbors_keep_direction_order
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+E   assert [(-2, 2), (-2..., 3), (-3, 3)] == [(-2, 2), (-3..., 3), (-3, 3)]
+E     
+E     At index 1 diff: (-2, 1) != (-3, 1)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               -2,
+E               2,
+E           ),
+E           (
+E     -         -3,
+E     ?          ^
+E     +         -2,
+E     ?          ^
+E               1,
+E           ),
+E           (
+E     -         -4,
+E     ?          ^
+E     +         -3,
+E     ?          ^
+E               1,
+E           ),
+E           (
+E               -4,
+E               2,
+E           ),
+E           (
+E               -4,
+E               3,
+E           ),
+E           (
+E               -3,
+E               3,
+E           ),
+E       ]
+_________ test_odd_r_neighbors_keep_direction_order[negative_col_odd] __________
+tests/test_hexgrid_odd_r_neighbors.py:49: in test_odd_r_neighbors_keep_direction_order
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+E   assert [(-2, 3), (-2..., 4), (-3, 4)] == [(-2, 3), (-2..., 4), (-2, 4)]
+E     
+E     At index 4 diff: (-4, 4) != (-3, 4)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               -2,
+E               3,
+E           ),
+E           (
+E               -2,
+E               2,
+E           ),
+E           (
+E               -3,
+E               2,
+E           ),
+E           (
+E               -4,
+E               3,
+E           ),
+E           (
+E     +         -4,
+E     +         4,
+E     +     ),
+E     +     (
+E               -3,
+E               4,
+E           ),
+E     -     (
+E     -         -2,
+E     -         4,
+E     -     ),
+E       ]
+___________ test_odd_r_neighbors_keep_direction_order[negative_even] ___________
+tests/test_hexgrid_odd_r_neighbors.py:49: in test_odd_r_neighbors_keep_direction_order
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+E   assert [(4, -2), (4,... -1), (3, -1)] == [(4, -2), (3,... -1), (3, -1)]
+E     
+E     At index 1 diff: (4, -3) != (3, -3)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               4,
+E               -2,
+E           ),
+E           (
+E     -         3,
+E     ?         ^
+E     +         4,
+E     ?         ^
+E               -3,
+E           ),
+E           (
+E     -         2,
+E     ?         ^
+E     +         3,
+E     ?         ^
+E               -3,
+E           ),
+E           (
+E               2,
+E               -2,
+E           ),
+E           (
+E               2,
+E               -1,
+E           ),
+E           (
+E               3,
+E               -1,
+E           ),
+E       ]
+___________ test_odd_r_neighbors_keep_direction_order[negative_odd] ____________
+tests/test_hexgrid_odd_r_neighbors.py:49: in test_odd_r_neighbors_keep_direction_order
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+E   assert [(4, -1), (4,...2, 0), (3, 0)] == [(4, -1), (4,...3, 0), (4, 0)]
+E     
+E     At index 4 diff: (2, 0) != (3, 0)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               4,
+E               -1,
+E           ),
+E           (
+E               4,
+E               -2,
+E           ),
+E           (
+E               3,
+E               -2,
+E           ),
+E           (
+E               2,
+E               -1,
+E           ),
+E           (
+E     +         2,
+E     +         0,
+E     +     ),
+E     +     (
+E               3,
+E               0,
+E           ),
+E     -     (
+E     -         4,
+E     -         0,
+E     -     ),
+E       ]
+________ test_odd_r_neighbors_keep_direction_order[both_negative_even] _________
+tests/test_hexgrid_odd_r_neighbors.py:49: in test_odd_r_neighbors_keep_direction_order
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+E   assert [(-2, -2), (-...-1), (-3, -1)] == [(-2, -2), (-...-1), (-3, -1)]
+E     
+E     At index 1 diff: (-2, -3) != (-3, -3)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               -2,
+E               -2,
+E           ),
+E           (
+E     -         -3,
+E     ?          ^
+E     +         -2,
+E     ?          ^
+E               -3,
+E           ),
+E           (
+E     -         -4,
+E     ?          ^
+E     +         -3,
+E     ?          ^
+E               -3,
+E           ),
+E           (
+E               -4,
+E               -2,
+E           ),
+E           (
+E               -4,
+E               -1,
+E           ),
+E           (
+E               -3,
+E               -1,
+E           ),
+E       ]
+_________ test_odd_r_neighbors_keep_direction_order[both_negative_odd] _________
+tests/test_hexgrid_odd_r_neighbors.py:49: in test_odd_r_neighbors_keep_direction_order
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+E   assert [(-2, -3), (-...-2), (-3, -2)] == [(-2, -3), (-...-2), (-2, -2)]
+E     
+E     At index 4 diff: (-4, -2) != (-3, -2)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               -2,
+E               -3,
+E           ),
+E           (
+E               -2,
+E               -4,
+E           ),
+E           (
+E               -3,
+E               -4,
+E           ),
+E           (
+E               -4,
+E               -3,
+E           ),
+E           (
+E     +         -4,
+E     +         -2,
+E     +     ),
+E     +     (
+E               -3,
+E               -2,
+E           ),
+E     -     (
+E     -         -2,
+E     -         -2,
+E     -     ),
+E       ]
+____ test_neighbors_match_independent_cartesian_oracle[odd_r_offset-small] _____
+tests/test_hexgrid_odd_r_neighbors.py:64: in test_neighbors_match_independent_cartesian_oracle
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: ('six ordered neighbors must be the six nearest Cartesian centers', 'odd_r_offset', 0.25, (0.0, 0.0), -4, -4)
+E   assert [(-3, -4), (-...-3), (-4, -3)] == [(-3, -4), (-...-3), (-4, -3)]
+E     
+E     At index 1 diff: (-3, -5) != (-4, -5)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               -3,
+E               -4,
+E           ),
+E           (
+E     -         -4,
+E     ?          ^
+E     +         -3,
+E     ?          ^
+E               -5,
+E           ),
+E           (
+E     -         -5,
+E     ?          ^
+E     +         -4,
+E     ?          ^
+E               -5,
+E           ),
+E           (
+E               -5,
+E               -4,
+E           ),
+E           (
+E               -5,
+E               -3,
+E           ),
+E           (
+E               -4,
+E               -3,
+E           ),
+E       ]
+__ test_neighbors_match_independent_cartesian_oracle[odd_r_offset-translated] __
+tests/test_hexgrid_odd_r_neighbors.py:64: in test_neighbors_match_independent_cartesian_oracle
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: ('six ordered neighbors must be the six nearest Cartesian centers', 'odd_r_offset', 1.0, (-9.3, 13.75), -4, -4)
+E   assert [(-3, -4), (-...-3), (-4, -3)] == [(-3, -4), (-...-3), (-4, -3)]
+E     
+E     At index 1 diff: (-3, -5) != (-4, -5)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               -3,
+E               -4,
+E           ),
+E           (
+E     -         -4,
+E     ?          ^
+E     +         -3,
+E     ?          ^
+E               -5,
+E           ),
+E           (
+E     -         -5,
+E     ?          ^
+E     +         -4,
+E     ?          ^
+E               -5,
+E           ),
+E           (
+E               -5,
+E               -4,
+E           ),
+E           (
+E               -5,
+E               -3,
+E           ),
+E           (
+E               -4,
+E               -3,
+E           ),
+E       ]
+_ test_neighbors_match_independent_cartesian_oracle[odd_r_offset-large_origin] _
+tests/test_hexgrid_odd_r_neighbors.py:64: in test_neighbors_match_independent_cartesian_oracle
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: ('six ordered neighbors must be the six nearest Cartesian centers', 'odd_r_offset', 2.5, (1024.0, -2048.0), -4, -4)
+E   assert [(-3, -4), (-...-3), (-4, -3)] == [(-3, -4), (-...-3), (-4, -3)]
+E     
+E     At index 1 diff: (-3, -5) != (-4, -5)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               -3,
+E               -4,
+E           ),
+E           (
+E     -         -4,
+E     ?          ^
+E     +         -3,
+E     ?          ^
+E               -5,
+E           ),
+E           (
+E     -         -5,
+E     ?          ^
+E     +         -4,
+E     ?          ^
+E               -5,
+E           ),
+E           (
+E               -5,
+E               -4,
+E           ),
+E           (
+E               -5,
+E               -3,
+E           ),
+E           (
+E               -4,
+E               -3,
+E           ),
+E       ]
+__ test_neighbors_match_independent_cartesian_oracle[odd_r_offset-large_size] __
+tests/test_hexgrid_odd_r_neighbors.py:64: in test_neighbors_match_independent_cartesian_oracle
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: ('six ordered neighbors must be the six nearest Cartesian centers', 'odd_r_offset', 10.0, (-17.0, 31.0), -4, -4)
+E   assert [(-3, -4), (-...-3), (-4, -3)] == [(-3, -4), (-...-3), (-4, -3)]
+E     
+E     At index 1 diff: (-3, -5) != (-4, -5)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               -3,
+E               -4,
+E           ),
+E           (
+E     -         -4,
+E     ?          ^
+E     +         -3,
+E     ?          ^
+E               -5,
+E           ),
+E           (
+E     -         -5,
+E     ?          ^
+E     +         -4,
+E     ?          ^
+E               -5,
+E           ),
+E           (
+E               -5,
+E               -4,
+E           ),
+E           (
+E               -5,
+E               -3,
+E           ),
+E           (
+E               -4,
+E               -3,
+E           ),
+E       ]
+___ test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-single] ___
+tests/test_hexgrid_odd_r_neighbors.py:78: in test_neighbors_remain_unclipped_at_shape_boundaries
+    assert actual == _nearest_six(grid, q, r)
+E   assert [(1, 0), (1, ...1, 1), (0, 1)] == [(1, 0), (0, ...1, 1), (0, 1)]
+E     
+E     At index 1 diff: (1, -1) != (0, -1)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               1,
+E               0,
+E           ),
+E           (
+E     -         0,
+E     ?         ^
+E     +         1,
+E     ?         ^
+E               -1,
+E           ),
+E           (
+E     -         -1,
+E     ?         ^^
+E     +         0,
+E     ?         ^
+E               -1,
+E           ),
+E           (
+E               -1,
+E               0,
+E           ),
+E           (
+E               -1,
+E               1,
+E           ),
+E           (
+E               0,
+E               1,
+E           ),
+E       ]
+__ test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-one_row] ___
+tests/test_hexgrid_odd_r_neighbors.py:78: in test_neighbors_remain_unclipped_at_shape_boundaries
+    assert actual == _nearest_six(grid, q, r)
+E   assert [(1, 0), (1, ...1, 1), (0, 1)] == [(1, 0), (0, ...1, 1), (0, 1)]
+E     
+E     At index 1 diff: (1, -1) != (0, -1)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               1,
+E               0,
+E           ),
+E           (
+E     -         0,
+E     ?         ^
+E     +         1,
+E     ?         ^
+E               -1,
+E           ),
+E           (
+E     -         -1,
+E     ?         ^^
+E     +         0,
+E     ?         ^
+E               -1,
+E           ),
+E           (
+E               -1,
+E               0,
+E           ),
+E           (
+E               -1,
+E               1,
+E           ),
+E           (
+E               0,
+E               1,
+E           ),
+E       ]
+_ test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-one_column] _
+tests/test_hexgrid_odd_r_neighbors.py:78: in test_neighbors_remain_unclipped_at_shape_boundaries
+    assert actual == _nearest_six(grid, q, r)
+E   assert [(1, 0), (1, ...1, 1), (0, 1)] == [(1, 0), (0, ...1, 1), (0, 1)]
+E     
+E     At index 1 diff: (1, -1) != (0, -1)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               1,
+E               0,
+E           ),
+E           (
+E     -         0,
+E     ?         ^
+E     +         1,
+E     ?         ^
+E               -1,
+E           ),
+E           (
+E     -         -1,
+E     ?         ^^
+E     +         0,
+E     ?         ^
+E               -1,
+E           ),
+E           (
+E               -1,
+E               0,
+E           ),
+E           (
+E               -1,
+E               1,
+E           ),
+E           (
+E               0,
+E               1,
+E           ),
+E       ]
+_ test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-rectangle] __
+tests/test_hexgrid_odd_r_neighbors.py:78: in test_neighbors_remain_unclipped_at_shape_boundaries
+    assert actual == _nearest_six(grid, q, r)
+E   assert [(1, 0), (1, ...1, 1), (0, 1)] == [(1, 0), (0, ...1, 1), (0, 1)]
+E     
+E     At index 1 diff: (1, -1) != (0, -1)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               1,
+E               0,
+E           ),
+E           (
+E     -         0,
+E     ?         ^
+E     +         1,
+E     ?         ^
+E               -1,
+E           ),
+E           (
+E     -         -1,
+E     ?         ^^
+E     +         0,
+E     ?         ^
+E               -1,
+E           ),
+E           (
+E               -1,
+E               0,
+E           ),
+E           (
+E               -1,
+E               1,
+E           ),
+E           (
+E               0,
+E               1,
+E           ),
+E       ]
+__________ test_image_to_grid_exposes_correct_odd_r_neighbors[square] __________
+tests/test_hexgrid_odd_r_neighbors.py:102: in test_image_to_grid_exposes_correct_odd_r_neighbors
+    assert grid.neighbors(q, r) == expected, (
+E   AssertionError: image_to_grid's returned grid must expose its nearest six centers
+E   assert [(2, 1), (2, ...0, 2), (1, 2)] == [(2, 1), (2, ...1, 2), (2, 2)]
+E     
+E     At index 4 diff: (0, 2) != (1, 2)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               2,
+E               1,
+E           ),
+E           (
+E               2,
+E               0,
+E           ),
+E           (
+E               1,
+E               0,
+E           ),
+E           (
+E               0,
+E               1,
+E           ),
+E           (
+E     +         0,
+E     +         2,
+E     +     ),
+E     +     (
+E               1,
+E               2,
+E           ),
+E     -     (
+E     -         2,
+E     -         2,
+E     -     ),
+E       ]
+________ test_image_to_grid_exposes_correct_odd_r_neighbors[landscape] _________
+tests/test_hexgrid_odd_r_neighbors.py:102: in test_image_to_grid_exposes_correct_odd_r_neighbors
+    assert grid.neighbors(q, r) == expected, (
+E   AssertionError: image_to_grid's returned grid must expose its nearest six centers
+E   assert [(2, 1), (2, ...0, 2), (1, 2)] == [(2, 1), (2, ...1, 2), (2, 2)]
+E     
+E     At index 4 diff: (0, 2) != (1, 2)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               2,
+E               1,
+E           ),
+E           (
+E               2,
+E               0,
+E           ),
+E           (
+E               1,
+E               0,
+E           ),
+E           (
+E               0,
+E               1,
+E           ),
+E           (
+E     +         0,
+E     +         2,
+E     +     ),
+E     +     (
+E               1,
+E               2,
+E           ),
+E     -     (
+E     -         2,
+E     -         2,
+E     -     ),
+E       ]
+_________ test_image_to_grid_exposes_correct_odd_r_neighbors[portrait] _________
+tests/test_hexgrid_odd_r_neighbors.py:102: in test_image_to_grid_exposes_correct_odd_r_neighbors
+    assert grid.neighbors(q, r) == expected, (
+E   AssertionError: image_to_grid's returned grid must expose its nearest six centers
+E   assert [(2, 1), (2, ...0, 2), (1, 2)] == [(2, 1), (2, ...1, 2), (2, 2)]
+E     
+E     At index 4 diff: (0, 2) != (1, 2)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               2,
+E               1,
+E           ),
+E           (
+E               2,
+E               0,
+E           ),
+E           (
+E               1,
+E               0,
+E           ),
+E           (
+E               0,
+E               1,
+E           ),
+E           (
+E     +         0,
+E     +         2,
+E     +     ),
+E     +     (
+E               1,
+E               2,
+E           ),
+E     -     (
+E     -         2,
+E     -         2,
+E     -     ),
+E       ]
+=========================== short test summary info ============================
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_odd_r_neighbors_keep_direction_order[even] - AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+assert [(4, 2), (4, ...2, 3), (3, 3)] == [(4, 2), (3, ...2, 3), (3, 3)]
+  
+  At index 1 diff: (4, 1) != (3, 1)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            4,
+            2,
+        ),
+        (
+  -         3,
+  ?         ^
+  +         4,
+  ?         ^
+            1,
+        ),
+        (
+  -         2,
+  ?         ^
+  +         3,
+  ?         ^
+            1,
+        ),
+        (
+            2,
+            2,
+        ),
+        (
+            2,
+            3,
+        ),
+        (
+            3,
+            3,
+        ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_odd_r_neighbors_keep_direction_order[odd] - AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+assert [(4, 3), (4, ...2, 4), (3, 4)] == [(4, 3), (4, ...3, 4), (4, 4)]
+  
+  At index 4 diff: (2, 4) != (3, 4)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            4,
+            3,
+        ),
+        (
+            4,
+            2,
+        ),
+        (
+            3,
+            2,
+        ),
+        (
+            2,
+            3,
+        ),
+        (
+  +         2,
+  +         4,
+  +     ),
+  +     (
+            3,
+            4,
+        ),
+  -     (
+  -         4,
+  -         4,
+  -     ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_odd_r_neighbors_keep_direction_order[negative_col_even] - AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+assert [(-2, 2), (-2..., 3), (-3, 3)] == [(-2, 2), (-3..., 3), (-3, 3)]
+  
+  At index 1 diff: (-2, 1) != (-3, 1)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            -2,
+            2,
+        ),
+        (
+  -         -3,
+  ?          ^
+  +         -2,
+  ?          ^
+            1,
+        ),
+        (
+  -         -4,
+  ?          ^
+  +         -3,
+  ?          ^
+            1,
+        ),
+        (
+            -4,
+            2,
+        ),
+        (
+            -4,
+            3,
+        ),
+        (
+            -3,
+            3,
+        ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_odd_r_neighbors_keep_direction_order[negative_col_odd] - AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+assert [(-2, 3), (-2..., 4), (-3, 4)] == [(-2, 3), (-2..., 4), (-2, 4)]
+  
+  At index 4 diff: (-4, 4) != (-3, 4)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            -2,
+            3,
+        ),
+        (
+            -2,
+            2,
+        ),
+        (
+            -3,
+            2,
+        ),
+        (
+            -4,
+            3,
+        ),
+        (
+  +         -4,
+  +         4,
+  +     ),
+  +     (
+            -3,
+            4,
+        ),
+  -     (
+  -         -2,
+  -         4,
+  -     ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_odd_r_neighbors_keep_direction_order[negative_even] - AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+assert [(4, -2), (4,... -1), (3, -1)] == [(4, -2), (3,... -1), (3, -1)]
+  
+  At index 1 diff: (4, -3) != (3, -3)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            4,
+            -2,
+        ),
+        (
+  -         3,
+  ?         ^
+  +         4,
+  ?         ^
+            -3,
+        ),
+        (
+  -         2,
+  ?         ^
+  +         3,
+  ?         ^
+            -3,
+        ),
+        (
+            2,
+            -2,
+        ),
+        (
+            2,
+            -1,
+        ),
+        (
+            3,
+            -1,
+        ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_odd_r_neighbors_keep_direction_order[negative_odd] - AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+assert [(4, -1), (4,...2, 0), (3, 0)] == [(4, -1), (4,...3, 0), (4, 0)]
+  
+  At index 4 diff: (2, 0) != (3, 0)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            4,
+            -1,
+        ),
+        (
+            4,
+            -2,
+        ),
+        (
+            3,
+            -2,
+        ),
+        (
+            2,
+            -1,
+        ),
+        (
+  +         2,
+  +         0,
+  +     ),
+  +     (
+            3,
+            0,
+        ),
+  -     (
+  -         4,
+  -         0,
+  -     ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_odd_r_neighbors_keep_direction_order[both_negative_even] - AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+assert [(-2, -2), (-...-1), (-3, -1)] == [(-2, -2), (-...-1), (-3, -1)]
+  
+  At index 1 diff: (-2, -3) != (-3, -3)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            -2,
+            -2,
+        ),
+        (
+  -         -3,
+  ?          ^
+  +         -2,
+  ?          ^
+            -3,
+        ),
+        (
+  -         -4,
+  ?          ^
+  +         -3,
+  ?          ^
+            -3,
+        ),
+        (
+            -4,
+            -2,
+        ),
+        (
+            -4,
+            -1,
+        ),
+        (
+            -3,
+            -1,
+        ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_odd_r_neighbors_keep_direction_order[both_negative_odd] - AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+assert [(-2, -3), (-...-2), (-3, -2)] == [(-2, -3), (-...-2), (-2, -2)]
+  
+  At index 4 diff: (-4, -2) != (-3, -2)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            -2,
+            -3,
+        ),
+        (
+            -2,
+            -4,
+        ),
+        (
+            -3,
+            -4,
+        ),
+        (
+            -4,
+            -3,
+        ),
+        (
+  +         -4,
+  +         -2,
+  +     ),
+  +     (
+            -3,
+            -2,
+        ),
+  -     (
+  -         -2,
+  -         -2,
+  -     ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_neighbors_match_independent_cartesian_oracle[odd_r_offset-small] - AssertionError: ('six ordered neighbors must be the six nearest Cartesian centers', 'odd_r_offset', 0.25, (0.0, 0.0), -4, -4)
+assert [(-3, -4), (-...-3), (-4, -3)] == [(-3, -4), (-...-3), (-4, -3)]
+  
+  At index 1 diff: (-3, -5) != (-4, -5)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            -3,
+            -4,
+        ),
+        (
+  -         -4,
+  ?          ^
+  +         -3,
+  ?          ^
+            -5,
+        ),
+        (
+  -         -5,
+  ?          ^
+  +         -4,
+  ?          ^
+            -5,
+        ),
+        (
+            -5,
+            -4,
+        ),
+        (
+            -5,
+            -3,
+        ),
+        (
+            -4,
+            -3,
+        ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_neighbors_match_independent_cartesian_oracle[odd_r_offset-translated] - AssertionError: ('six ordered neighbors must be the six nearest Cartesian centers', 'odd_r_offset', 1.0, (-9.3, 13.75), -4, -4)
+assert [(-3, -4), (-...-3), (-4, -3)] == [(-3, -4), (-...-3), (-4, -3)]
+  
+  At index 1 diff: (-3, -5) != (-4, -5)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            -3,
+            -4,
+        ),
+        (
+  -         -4,
+  ?          ^
+  +         -3,
+  ?          ^
+            -5,
+        ),
+        (
+  -         -5,
+  ?          ^
+  +         -4,
+  ?          ^
+            -5,
+        ),
+        (
+            -5,
+            -4,
+        ),
+        (
+            -5,
+            -3,
+        ),
+        (
+            -4,
+            -3,
+        ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_neighbors_match_independent_cartesian_oracle[odd_r_offset-large_origin] - AssertionError: ('six ordered neighbors must be the six nearest Cartesian centers', 'odd_r_offset', 2.5, (1024.0, -2048.0), -4, -4)
+assert [(-3, -4), (-...-3), (-4, -3)] == [(-3, -4), (-...-3), (-4, -3)]
+  
+  At index 1 diff: (-3, -5) != (-4, -5)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            -3,
+            -4,
+        ),
+        (
+  -         -4,
+  ?          ^
+  +         -3,
+  ?          ^
+            -5,
+        ),
+        (
+  -         -5,
+  ?          ^
+  +         -4,
+  ?          ^
+            -5,
+        ),
+        (
+            -5,
+            -4,
+        ),
+        (
+            -5,
+            -3,
+        ),
+        (
+            -4,
+            -3,
+        ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_neighbors_match_independent_cartesian_oracle[odd_r_offset-large_size] - AssertionError: ('six ordered neighbors must be the six nearest Cartesian centers', 'odd_r_offset', 10.0, (-17.0, 31.0), -4, -4)
+assert [(-3, -4), (-...-3), (-4, -3)] == [(-3, -4), (-...-3), (-4, -3)]
+  
+  At index 1 diff: (-3, -5) != (-4, -5)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            -3,
+            -4,
+        ),
+        (
+  -         -4,
+  ?          ^
+  +         -3,
+  ?          ^
+            -5,
+        ),
+        (
+  -         -5,
+  ?          ^
+  +         -4,
+  ?          ^
+            -5,
+        ),
+        (
+            -5,
+            -4,
+        ),
+        (
+            -5,
+            -3,
+        ),
+        (
+            -4,
+            -3,
+        ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-single] - assert [(1, 0), (1, ...1, 1), (0, 1)] == [(1, 0), (0, ...1, 1), (0, 1)]
+  
+  At index 1 diff: (1, -1) != (0, -1)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            1,
+            0,
+        ),
+        (
+  -         0,
+  ?         ^
+  +         1,
+  ?         ^
+            -1,
+        ),
+        (
+  -         -1,
+  ?         ^^
+  +         0,
+  ?         ^
+            -1,
+        ),
+        (
+            -1,
+            0,
+        ),
+        (
+            -1,
+            1,
+        ),
+        (
+            0,
+            1,
+        ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-one_row] - assert [(1, 0), (1, ...1, 1), (0, 1)] == [(1, 0), (0, ...1, 1), (0, 1)]
+  
+  At index 1 diff: (1, -1) != (0, -1)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            1,
+            0,
+        ),
+        (
+  -         0,
+  ?         ^
+  +         1,
+  ?         ^
+            -1,
+        ),
+        (
+  -         -1,
+  ?         ^^
+  +         0,
+  ?         ^
+            -1,
+        ),
+        (
+            -1,
+            0,
+        ),
+        (
+            -1,
+            1,
+        ),
+        (
+            0,
+            1,
+        ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-one_column] - assert [(1, 0), (1, ...1, 1), (0, 1)] == [(1, 0), (0, ...1, 1), (0, 1)]
+  
+  At index 1 diff: (1, -1) != (0, -1)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            1,
+            0,
+        ),
+        (
+  -         0,
+  ?         ^
+  +         1,
+  ?         ^
+            -1,
+        ),
+        (
+  -         -1,
+  ?         ^^
+  +         0,
+  ?         ^
+            -1,
+        ),
+        (
+            -1,
+            0,
+        ),
+        (
+            -1,
+            1,
+        ),
+        (
+            0,
+            1,
+        ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-rectangle] - assert [(1, 0), (1, ...1, 1), (0, 1)] == [(1, 0), (0, ...1, 1), (0, 1)]
+  
+  At index 1 diff: (1, -1) != (0, -1)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            1,
+            0,
+        ),
+        (
+  -         0,
+  ?         ^
+  +         1,
+  ?         ^
+            -1,
+        ),
+        (
+  -         -1,
+  ?         ^^
+  +         0,
+  ?         ^
+            -1,
+        ),
+        (
+            -1,
+            0,
+        ),
+        (
+            -1,
+            1,
+        ),
+        (
+            0,
+            1,
+        ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_image_to_grid_exposes_correct_odd_r_neighbors[square] - AssertionError: image_to_grid's returned grid must expose its nearest six centers
+assert [(2, 1), (2, ...0, 2), (1, 2)] == [(2, 1), (2, ...1, 2), (2, 2)]
+  
+  At index 4 diff: (0, 2) != (1, 2)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            2,
+            1,
+        ),
+        (
+            2,
+            0,
+        ),
+        (
+            1,
+            0,
+        ),
+        (
+            0,
+            1,
+        ),
+        (
+  +         0,
+  +         2,
+  +     ),
+  +     (
+            1,
+            2,
+        ),
+  -     (
+  -         2,
+  -         2,
+  -     ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_image_to_grid_exposes_correct_odd_r_neighbors[landscape] - AssertionError: image_to_grid's returned grid must expose its nearest six centers
+assert [(2, 1), (2, ...0, 2), (1, 2)] == [(2, 1), (2, ...1, 2), (2, 2)]
+  
+  At index 4 diff: (0, 2) != (1, 2)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            2,
+            1,
+        ),
+        (
+            2,
+            0,
+        ),
+        (
+            1,
+            0,
+        ),
+        (
+            0,
+            1,
+        ),
+        (
+  +         0,
+  +         2,
+  +     ),
+  +     (
+            1,
+            2,
+        ),
+  -     (
+  -         2,
+  -         2,
+  -     ),
+    ]
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_image_to_grid_exposes_correct_odd_r_neighbors[portrait] - AssertionError: image_to_grid's returned grid must expose its nearest six centers
+assert [(2, 1), (2, ...0, 2), (1, 2)] == [(2, 1), (2, ...1, 2), (2, 2)]
+  
+  At index 4 diff: (0, 2) != (1, 2)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            2,
+            1,
+        ),
+        (
+            2,
+            0,
+        ),
+        (
+            1,
+            0,
+        ),
+        (
+            0,
+            1,
+        ),
+        (
+  +         0,
+  +         2,
+  +     ),
+  +     (
+            1,
+            2,
+        ),
+  -     (
+  -         2,
+  -         2,
+  -     ),
+    ]
+19 failed, 11 passed in 0.21s

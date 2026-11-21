@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.270" timestamp="2026-11-21T01:36:34.872730+08:00" hostname="STARDUST"><testcase classname="tests.test_hexgrid_odd_r_neighbors" name="test_axial_neighbor_list_and_order_are_unchanged[default]" time="0.001"><failure message="AssertionError: axial neighbor list and direction order must remain unchanged&#10;assert [(4, 2), (3, ...2, 3), (3, 3)] == [(4, 2), (4, ...2, 3), (3, 3)]&#10;  &#10;  At index 1 diff: (3, 1) != (4, 1)&#10;  Use -v to get more diff">tests\test_hexgrid_odd_r_neighbors.py:112: in test_axial_neighbor_list_and_order_are_unchanged
+    assert grid.neighbors(q, r) == [
+E   AssertionError: axial neighbor list and direction order must remain unchanged
+E   assert [(4, 2), (3, ...2, 3), (3, 3)] == [(4, 2), (4, ...2, 3), (3, 3)]
+E     
+E     At index 1 diff: (3, 1) != (4, 1)
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

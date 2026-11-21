@@ -1,0 +1,18 @@
+{
+  "total_count": 1,
+  "incomplete_results": false,
+  "items": [
+    {
+      "repository_url": "https://api.github.com/repos/FuRongJun-1999/lingshu",
+      "html_url": "https://github.com/FuRongJun-1999/lingshu/pull/905",
+      "number": 905,
+      "title": "feat(world): 保守身份关联隔离未决观测并贯穿恢复",
+      "state": "closed",
+      "comments": 0,
+      "created_at": "2026-10-24T02:30:58Z",
+      "updated_at": "2026-10-25T15:06:32Z",
+      "closed_at": "2026-10-25T15:06:32Z"
+    }
+  ],
+  "search_type": "lexical"
+}

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.239" timestamp="2026-11-21T01:36:33.277390+08:00" hostname="STARDUST"><testcase classname="tests.test_dynamics_command_reanchor" name="test_command_preserves_custom_metadata_without_mutating_the_previous_state" time="0.030"><failure message="AssertionError: COMMAND_DROPPED_PHYSICAL_PARAMETERS&#10;assert (None, None, None) == (0.4, 0.3, 2.5)&#10;  &#10;  At index 0 diff: None != 0.4&#10;  Use -v to get more diff">tests\test_dynamics_command_reanchor.py:238: in test_command_preserves_custom_metadata_without_mutating_the_previous_state
+    assert tuple(current.get(k) for k in ("beta", "radius", "mass")) == (.4, .3, 2.5), "COMMAND_DROPPED_PHYSICAL_PARAMETERS"
+E   AssertionError: COMMAND_DROPPED_PHYSICAL_PARAMETERS
+E   assert (None, None, None) == (0.4, 0.3, 2.5)
+E     
+E     At index 0 diff: None != 0.4
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

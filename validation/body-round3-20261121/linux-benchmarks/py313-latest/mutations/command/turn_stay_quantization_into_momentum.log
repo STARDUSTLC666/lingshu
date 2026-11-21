@@ -1,0 +1,33 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____ test_stay_quantizes_continuous_position_without_creating_new_momentum _____
+tests/test_dynamics_command_reanchor.py:367: in test_stay_quantizes_continuous_position_without_creating_new_momentum
+    assert e.attrs["physics_state"]["v0"] == (0., 0., 0.), "COMMAND_STAY_QUANTIZATION_CREATED_MOMENTUM"
+E   AssertionError: COMMAND_STAY_QUANTIZATION_CREATED_MOMENTUM
+E   assert (-0.030000000...0000000001137) == (0.0, 0.0, 0.0)
+E     
+E     At index 0 diff: -0.030000000000001137 != 0.0
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       (
+E     +     -0.030000000000001137,
+E           0.0,
+E     +     0.030000000000001137,
+E     -     0.0,
+E     -     0.0,
+E       )
+=========================== short test summary info ============================
+FAILED tests/test_dynamics_command_reanchor.py::test_stay_quantizes_continuous_position_without_creating_new_momentum - AssertionError: COMMAND_STAY_QUANTIZATION_CREATED_MOMENTUM
+assert (-0.030000000...0000000001137) == (0.0, 0.0, 0.0)
+  
+  At index 0 diff: -0.030000000000001137 != 0.0
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    (
+  +     -0.030000000000001137,
+        0.0,
+  +     0.030000000000001137,
+  -     0.0,
+  -     0.0,
+    )
+1 failed in 0.16s

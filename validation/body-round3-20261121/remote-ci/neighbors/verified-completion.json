@@ -1,0 +1,69 @@
+{
+  "captured_utc": "2026-11-20T18:02:49.731980+00:00",
+  "pr": 1481,
+  "head": "4a352249ef6db7975353b84bc640712d46f7181b",
+  "all_verified_success": true,
+  "all_jobs_entire_tree_equal_to_head": true,
+  "actual_checkout_commits": [
+    "e736c05fc25d801b0a451eee8102fa744be5881c"
+  ],
+  "actual_checkout_trees": [
+    "082e19adf43e58a456112a07a890f8616a743cc0"
+  ],
+  "gate_legs": [
+    {
+      "name": "gate (py3.13)",
+      "job_id": 136462265918,
+      "pytest_counts": {
+        "passed": 5690,
+        "failed": 0,
+        "skipped": 40,
+        "errors": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "subtests_passed": 98
+      },
+      "scripts": 102,
+      "brain_real_23_of_23": true,
+      "log_sha256": "90c81510dfc52a24d5cd1ec730e83c05b8629ac87c014f3a7bec0fd619646893"
+    },
+    {
+      "name": "gate (py3.12 · 依赖下界)",
+      "job_id": 136462266166,
+      "pytest_counts": {
+        "passed": 5690,
+        "failed": 0,
+        "skipped": 40,
+        "errors": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "subtests_passed": 98
+      },
+      "scripts": 102,
+      "brain_real_23_of_23": true,
+      "log_sha256": "5e89e44aff9ff0388885ea64af8d5e2447ba6fe16533ac516a2aa148c883b3ed"
+    },
+    {
+      "name": "gate (py3.12)",
+      "job_id": 136462266204,
+      "pytest_counts": {
+        "passed": 5690,
+        "failed": 0,
+        "skipped": 40,
+        "errors": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "subtests_passed": 98
+      },
+      "scripts": 102,
+      "brain_real_23_of_23": true,
+      "log_sha256": "231f77fcc16086aeebb5ec3d4b9958add57f0631238cbd8ee5a2687c6272dc04"
+    }
+  ],
+  "summary_sha256": "10ba0a9ebeb648586cc4d3f00396720b1ac1fab13167ca25f9481ab0b9ef6f8e",
+  "raw_run_archives": [
+    "neighbors\\44786392186-attempt1\\all-run-logs.zip",
+    "neighbors\\44786392229-attempt1\\all-run-logs.zip"
+  ],
+  "summary_file": "verified-summary.json"
+}

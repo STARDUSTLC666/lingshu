@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.231" timestamp="2026-11-21T01:41:30.061146+08:00" hostname="STARDUST"><testcase classname="tests.test_dynamics_command_reanchor" name="test_command_reanchors_at_current_time_without_changing_public_velocity" time="0.028"><failure message="AssertionError: COMMAND_PHYSICS_VELOCITY_NOT_PER_SECOND&#10;assert (2.0, 0.0, 0.0) == (20.0, 0.0, 0.0)&#10;  &#10;  At index 0 diff: 2.0 != 20.0&#10;  Use -v to get more diff">tests\test_dynamics_command_reanchor.py:86: in test_command_reanchors_at_current_time_without_changing_public_velocity
+    assert st["v0"] == (20., 0., 0.), "COMMAND_PHYSICS_VELOCITY_NOT_PER_SECOND"
+E   AssertionError: COMMAND_PHYSICS_VELOCITY_NOT_PER_SECOND
+E   assert (2.0, 0.0, 0.0) == (20.0, 0.0, 0.0)
+E     
+E     At index 0 diff: 2.0 != 20.0
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,51 @@
+{
+  "head": "98d6b899533a82fb1047f952987229c62a9929fb",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "init",
+        "-q",
+        "<audit-evidence>\\pinned-brain-98d6b899"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<audit-evidence>\\pinned-brain-98d6b899",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/FuRongJun-1999/dsh-memory.git"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<audit-evidence>\\pinned-brain-98d6b899",
+        "fetch",
+        "--depth",
+        "1",
+        "origin",
+        "98d6b899533a82fb1047f952987229c62a9929fb"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "<audit-evidence>\\pinned-brain-98d6b899",
+        "checkout",
+        "-q",
+        "FETCH_HEAD"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "path": "<audit-evidence>\\pinned-brain-98d6b899"
+}

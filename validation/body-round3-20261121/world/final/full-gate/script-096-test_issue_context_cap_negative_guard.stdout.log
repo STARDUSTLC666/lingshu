@@ -1,0 +1,11 @@
+  PASS A01 负上限拒绝且零删除（旧实现清空全部情境节点）
+  PASS A02 0 = 清空（既有语义不变）
+  PASS A03 正数照旧：保留最新 2 条
+  PASS A04 上限大于现有条数时不动
+  PASS A05 对照：set_context_cap(0) 仍夹到 ≥1（不回归）
+  PASS E01 钉子：非整数 TypeError 文案
+  PASS E02 钉子：负值 ValueError 文案
+  PASS E03 运行级钉：非整数上限 '10' ⇒ TypeError（#2290 补钉）
+  PASS E03 运行级钉：非整数上限 2.9 ⇒ TypeError（#2290 补钉）
+  PASS E03 运行级钉：非整数上限 True ⇒ TypeError（#2290 补钉）
+通过 10 / 失败 0

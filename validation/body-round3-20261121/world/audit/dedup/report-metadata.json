@@ -1,0 +1,262 @@
+{
+  "searches": [
+    {
+      "repository": "FuRongJun-1999/lingshu",
+      "query": "\"set_command\"",
+      "total": 0,
+      "incomplete": false,
+      "hits": []
+    },
+    {
+      "repository": "FuRongJun-1999/lingshu",
+      "query": "\"set_environment\" \"physics\"",
+      "total": 2,
+      "incomplete": false,
+      "hits": [
+        {
+          "number": 1143,
+          "title": "fix(world): scene_simulator 三处读数失真与三处输入校验收口（lingshu #1135/#1136）",
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/1143"
+        },
+        {
+          "number": 704,
+          "title": "Environment(gravity=0) 的零重力模式不可达：本层文档写“0 = 失重”并收下，内核 make_environment 要求 gravity 须 > 0",
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/704"
+        }
+      ]
+    },
+    {
+      "repository": "FuRongJun-1999/lingshu",
+      "query": "\"physics_state\" \"command\"",
+      "total": 0,
+      "incomplete": false,
+      "hits": []
+    },
+    {
+      "repository": "FuRongJun-1999/lingshu",
+      "query": "动力学 回跳",
+      "total": 1,
+      "incomplete": false,
+      "hits": [
+        {
+          "number": 703,
+          "title": "[world/physics] sweep_aabb 在「仅 t=0 相切且随后相离」时误报 hit/toi=0，scene_simulator 据此把动力学实体冻在接触点（两条通路，200 tick 不恢复）",
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/703"
+        }
+      ]
+    },
+    {
+      "repository": "FuRongJun-1999/lingshu",
+      "query": "动力学 受控",
+      "total": 2,
+      "incomplete": false,
+      "hits": [
+        {
+          "number": 704,
+          "title": "Environment(gravity=0) 的零重力模式不可达：本层文档写“0 = 失重”并收下，内核 make_environment 要求 gravity 须 > 0",
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/704"
+        },
+        {
+          "number": 464,
+          "title": "[Bug][P2] [world/wm_simloop] #248 的 WAL 续号在「末行写了一半」或「末条 >64KB」时回落 seq=0，同一文件内 seq 照样重复；残行后直接追加还会把新记录粘坏，末行是 JSON 数组时构造直接抛 AttributeError",
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/464"
+        }
+      ]
+    },
+    {
+      "repository": "FuRongJun-1999/lingshu",
+      "query": "重力 切换",
+      "total": 1,
+      "incomplete": false,
+      "hits": [
+        {
+          "number": 905,
+          "title": "feat(world): 保守身份关联隔离未决观测并贯穿恢复",
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/905"
+        }
+      ]
+    },
+    {
+      "repository": "FuRongJun-1999/dsh-bounty",
+      "query": "\"set_command\"",
+      "total": 2,
+      "incomplete": false,
+      "hits": [
+        {
+          "number": 2000,
+          "title": "第三方独立复验：lingshu PR #1143（#1135 三处读数失真+#1136 三处输入校验）——守卫双腿12红→19绿（经三轮子代理审核修订）",
+          "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2000"
+        },
+        {
+          "number": 2006,
+          "title": "第三方独立复验：lingshu PR #1138（#1133 碰撞门+#1134 维度校验）——#1134 全修/#1133 现象一修（守卫4红→6绿）；现象二原主张未复现（三轮审核修订）",
+          "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2006"
+        }
+      ]
+    },
+    {
+      "repository": "FuRongJun-1999/dsh-bounty",
+      "query": "\"set_environment\" \"physics\"",
+      "total": 1,
+      "incomplete": false,
+      "hits": [
+        {
+          "number": 628,
+          "title": "【intake 输入】lingshu：Environment(gravity=0) 零重力模式不可达（两层下界口径不一致）",
+          "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/628"
+        }
+      ]
+    },
+    {
+      "repository": "FuRongJun-1999/dsh-bounty",
+      "query": "\"physics_state\" \"command\"",
+      "total": 0,
+      "incomplete": false,
+      "hits": []
+    },
+    {
+      "repository": "FuRongJun-1999/dsh-bounty",
+      "query": "动力学 回跳",
+      "total": 0,
+      "incomplete": false,
+      "hits": []
+    },
+    {
+      "repository": "FuRongJun-1999/dsh-bounty",
+      "query": "动力学 受控",
+      "total": 0,
+      "incomplete": false,
+      "hits": []
+    },
+    {
+      "repository": "FuRongJun-1999/dsh-bounty",
+      "query": "重力 切换",
+      "total": 2,
+      "incomplete": false,
+      "hits": [
+        {
+          "number": 1211,
+          "title": "深度审计：dsh-evolve-in-git 0.6.3（L3 · A 路径）",
+          "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1211"
+        },
+        {
+          "number": 1700,
+          "title": "[intake 输入] lingshu #905：W2 保守身份关联第一增量交付",
+          "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1700"
+        }
+      ]
+    }
+  ],
+  "closest_comments": [
+    {
+      "repository": "FuRongJun-1999/lingshu",
+      "number": 697,
+      "comments": 2,
+      "relevant": [
+        {
+          "url": "https://github.com/FuRongJun-1999/lingshu/pull/697#issuecomment-6201748607",
+          "body_sha256_utf8": "fae0aaf744b504b719c2c93a9bb011e3598000dcb5b99f9214ad34ab1aeb8ab2"
+        }
+      ]
+    },
+    {
+      "repository": "FuRongJun-1999/lingshu",
+      "number": 703,
+      "comments": 3,
+      "relevant": [
+        {
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/703#issuecomment-6203655748",
+          "body_sha256_utf8": "ba8f641b63feb8f2459c99e257c3307e2e716a8c27db6061615e89b25245c6d8"
+        }
+      ]
+    },
+    {
+      "repository": "FuRongJun-1999/lingshu",
+      "number": 704,
+      "comments": 5,
+      "relevant": [
+        {
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/704#issuecomment-6204693331",
+          "body_sha256_utf8": "732a42578d937303965e65cb5a43cc93fd7a48721fc9b5bac43ecb9d1102010c"
+        },
+        {
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/704#issuecomment-6204794886",
+          "body_sha256_utf8": "1020a55faf5da66fdd9e4fd423d77f3428939f3055696a3749cb5f05f2041346"
+        },
+        {
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/704#issuecomment-6205148793",
+          "body_sha256_utf8": "ac585ee9327d27bb48829b1308315f9e01541735bbe6f2738c139462591f1523"
+        },
+        {
+          "url": "https://github.com/FuRongJun-1999/lingshu/issues/704#issuecomment-6205521588",
+          "body_sha256_utf8": "f0817a3f12ca00af653d9ac0165c93d254f353a9db17cbaff18c475cb4bba222"
+        }
+      ]
+    },
+    {
+      "repository": "FuRongJun-1999/lingshu",
+      "number": 906,
+      "comments": 0,
+      "relevant": []
+    },
+    {
+      "repository": "FuRongJun-1999/lingshu",
+      "number": 1143,
+      "comments": 0,
+      "relevant": []
+    },
+    {
+      "repository": "FuRongJun-1999/lingshu",
+      "number": 1162,
+      "comments": 0,
+      "relevant": []
+    },
+    {
+      "repository": "FuRongJun-1999/lingshu",
+      "number": 1479,
+      "comments": 0,
+      "relevant": []
+    },
+    {
+      "repository": "FuRongJun-1999/dsh-bounty",
+      "number": 626,
+      "comments": 3,
+      "relevant": []
+    },
+    {
+      "repository": "FuRongJun-1999/dsh-bounty",
+      "number": 628,
+      "comments": 3,
+      "relevant": [
+        {
+          "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/628#issuecomment-6205149603",
+          "body_sha256_utf8": "f3b366a63b45f4ddb44c492569c756b4874c66f0258b27c65e338103e60f54de"
+        }
+      ]
+    },
+    {
+      "repository": "FuRongJun-1999/dsh-bounty",
+      "number": 1724,
+      "comments": 1,
+      "relevant": []
+    },
+    {
+      "repository": "FuRongJun-1999/dsh-bounty",
+      "number": 2000,
+      "comments": 1,
+      "relevant": []
+    },
+    {
+      "repository": "FuRongJun-1999/dsh-bounty",
+      "number": 2006,
+      "comments": 2,
+      "relevant": []
+    },
+    {
+      "repository": "FuRongJun-1999/dsh-bounty",
+      "number": 2793,
+      "comments": 0,
+      "relevant": []
+    }
+  ]
+}

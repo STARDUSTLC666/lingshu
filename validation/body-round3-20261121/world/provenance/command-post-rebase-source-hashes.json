@@ -1,0 +1,15 @@
+{
+  "identical": true,
+  "before": {
+    "lingshu/world/scene_simulator.py": "984d8abeaaa5a4b9d50e6d604758ac128d120f6b3bd56289b8b2a665a7bd1046",
+    "lingshu/world/physics.py": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a",
+    "lingshu/world/coord_contract.py": "2393d826d520f340be1e73b6f3ec0d85a7df4afff70460478663cd94a8dd1d29",
+    "bench/bench_dynamics_command_reanchor.py": "1c4e039932777a8399c9d26dbec18503c8cc8f48fabe18a4091b4e7c8d41e303"
+  },
+  "after": {
+    "lingshu/world/scene_simulator.py": "984d8abeaaa5a4b9d50e6d604758ac128d120f6b3bd56289b8b2a665a7bd1046",
+    "lingshu/world/physics.py": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a",
+    "lingshu/world/coord_contract.py": "2393d826d520f340be1e73b6f3ec0d85a7df4afff70460478663cd94a8dd1d29",
+    "bench/bench_dynamics_command_reanchor.py": "1c4e039932777a8399c9d26dbec18503c8cc8f48fabe18a4091b4e7c8d41e303"
+  }
+}

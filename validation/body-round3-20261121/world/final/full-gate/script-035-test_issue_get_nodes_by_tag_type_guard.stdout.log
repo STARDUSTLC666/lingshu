@@ -1,0 +1,6 @@
+  PASS A01 int tag -> 可读 TypeError（旧实现恒返回 []）
+  PASS A02 纯空白 tag -> TypeError
+  PASS A03 正对照：合法 tag 命中 1 条
+  PASS A04 正对照：无匹配 tag 返回 []
+  PASS E01 钉子：可读文案
+通过 5 / 失败 0

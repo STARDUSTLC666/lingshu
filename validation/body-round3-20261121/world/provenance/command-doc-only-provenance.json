@@ -1,0 +1,10 @@
+{
+  "code_head": "6d1048f6df5610de1e71c346e1f95182d1dfb84a",
+  "documentation_head": "bd208a379e44497e9f35fdc145838abb19e6d313",
+  "all_preexisting_tracked_files_unchanged": true,
+  "only_added_docs": [
+    "docs/testing/dynamics-command-reanchor-20261121/README.md",
+    "docs/testing/dynamics-command-reanchor-20261121/validation-summary.json"
+  ],
+  "source_freeze_archive_sha256": "402daab9979d06af41414c40a6189cf7038e22c9b273844985fc07bd9d3bbcb1"
+}

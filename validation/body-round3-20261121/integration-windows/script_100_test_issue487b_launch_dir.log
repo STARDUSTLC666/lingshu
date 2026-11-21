@@ -1,0 +1,11 @@
+== A 组：脚本形态（python app/main.py）==
+  PASS A01 前提：不 insert 时 main==app、脚本目录不在受控面、无毒执行
+  PASS A02 ★行：insert vendor 后 main 仍是 app、脚本目录不在受控面、无毒执行
+  PASS A03 ★对照：显式 LINGSHU_COMPONENT_ROOT=app 时毒组件可达（非一刀切）
+== B 组：-m 形态 ==
+  PASS B01 ★行：-m app.mod 下不把模块目录当启动面、无毒执行
+  PASS B02 ★行：-m app（__main__.py）下不把包目录当启动面、无毒执行
+== E 组：源码钉子 ==
+  PASS E01 ★钉子：argv[0] 脚本目录优先
+  PASS E02 ★钉子：argv[0] 目录必须在 sys.path + __main__.py 跳过
+通过 7 / 失败 0

@@ -1,0 +1,32 @@
+[
+  {
+    "number": 1479,
+    "title": "fix(world): preserve free-flight velocity without collision contact",
+    "html_url": "https://github.com/FuRongJun-1999/lingshu/pull/1479"
+  },
+  {
+    "number": 1162,
+    "title": "fix(world): _reseed_physics 保留 beta/radius/mass 并跳过 static（lingshu bounty #1959，镜像 #1125 净增量）",
+    "html_url": "https://github.com/FuRongJun-1999/lingshu/pull/1162"
+  },
+  {
+    "number": 1143,
+    "title": "fix(world): scene_simulator 三处读数失真与三处输入校验收口（lingshu #1135/#1136）",
+    "html_url": "https://github.com/FuRongJun-1999/lingshu/pull/1143"
+  },
+  {
+    "number": 906,
+    "title": "feat(world): 行动反馈按证据资格诊断并定向修订目标偏移",
+    "html_url": "https://github.com/FuRongJun-1999/lingshu/pull/906"
+  },
+  {
+    "number": 704,
+    "title": "Environment(gravity=0) 的零重力模式不可达：本层文档写“0 = 失重”并收下，内核 make_environment 要求 gravity 须 > 0",
+    "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/704"
+  },
+  {
+    "number": 703,
+    "title": "[world/physics] sweep_aabb 在「仅 t=0 相切且随后相离」时误报 hit/toi=0，scene_simulator 据此把动力学实体冻在接触点（两条通路，200 tick 不恢复）",
+    "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/703"
+  }
+]

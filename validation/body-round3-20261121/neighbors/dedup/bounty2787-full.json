@@ -1,0 +1,7 @@
+{
+  "body_sha256_utf8": "37225a24c9ea32842868d95adc9ba51197885b8eb9502c043ea385332baf3a5e",
+  "body_utf8_bytes": 7544,
+  "comments": [],
+  "state": "OPEN",
+  "title": "lingshu 身体模块：修复 odd-r 蜂窝网最近格误判（PR #1473）"
+}

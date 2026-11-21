@@ -1,0 +1,6 @@
+  PASS A01 传 STNode 当 id -> 可读 TypeError（旧实现抛 ProgrammingError）
+  PASS A02 None -> 可读 TypeError
+  PASS A03 正对照：合法 id 正常移除标签
+  PASS A04 正对照：标签不存在返回 False
+  PASS E01 钉子：可读文案
+通过 5 / 失败 0

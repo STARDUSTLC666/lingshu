@@ -1,0 +1,9 @@
+  PASS A01 interval=0 拒绝且零线程（旧实现忙循环）
+  PASS A02 interval<0 拒绝
+  PASS A03 interval=NaN 拒绝（旧实现异常落在 daemon 线程内）
+  PASS A04 interval=inf 拒绝
+  PASS A05 正对照：合法周期起线程且 stop 后回收
+  PASS A06 数值字符串按实数接受
+  PASS E01 钉子：可读拒绝文案
+  PASS E02 钉子：非有限与 ≤0 同闸
+通过 8 / 失败 0

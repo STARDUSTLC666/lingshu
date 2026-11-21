@@ -1,0 +1,5 @@
+  PASS A01 int root_id -> 可读 TypeError（旧实现返回伪子图）
+  PASS A02 None -> 可读 TypeError
+  PASS A03 正对照：合法 root 正常返回子图
+  PASS E01 钉子：可读文案
+通过 4 / 失败 0

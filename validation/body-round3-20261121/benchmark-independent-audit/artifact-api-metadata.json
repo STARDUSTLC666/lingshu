@@ -1,0 +1,35 @@
+{
+  "run_id": 44790156130,
+  "artifacts": [
+    {
+      "environment": "py312-floor",
+      "artifact_id": 14657340040,
+      "artifact_name": "body-round3-py312-floor-44790156130-1",
+      "api_zip_sha256": "cceda0a0f4b091bcc9db3221b82ccaaf4d091280fbb7c7b17c39afed85b185c8",
+      "api_zip_bytes": 901498,
+      "indexed_files": 84,
+      "zip_entries": 86,
+      "driver_log_excluded_from_inner_index": true
+    },
+    {
+      "environment": "py312-latest",
+      "artifact_id": 14656347957,
+      "artifact_name": "body-round3-py312-latest-44790156130-1",
+      "api_zip_sha256": "7ca584cf85adf2739bdef348b00d9bbf346480540aff75ccb8a2e52231dfd041",
+      "api_zip_bytes": 901031,
+      "indexed_files": 83,
+      "zip_entries": 85,
+      "driver_log_excluded_from_inner_index": true
+    },
+    {
+      "environment": "py313-latest",
+      "artifact_id": 14656278047,
+      "artifact_name": "body-round3-py313-latest-44790156130-1",
+      "api_zip_sha256": "02b929f60ab6c04eee0d807e499e3e2dd7c933afa70085986b16034c99709f57",
+      "api_zip_bytes": 901026,
+      "indexed_files": 83,
+      "zip_entries": 85,
+      "driver_log_excluded_from_inner_index": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "command": [
+    "<validation-venv>\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "tests/test_import_direction_lint.py",
+    "tests/test_silent_except_lint.py",
+    "tests/test_docstring_surrogate_compile_guard.py",
+    "tests/test_issue10_intake_registration_guard.py",
+    "tests/test_gate_coverage.py",
+    "tests/test_coverage_map_lint.py",
+    "-q",
+    "--disable-warnings",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=<audit-evidence>\\neighbors-lint.xml"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 65.86751339997863,
+  "prior_setup_attempt": "Corrected nonexistent test_gate_coverage_map_lint.py to tracked test_coverage_map_lint.py before running tests."
+}

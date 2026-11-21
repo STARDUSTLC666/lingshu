@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.156" timestamp="2026-11-20T18:17:49.003460+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_dynamics_command_reanchor" name="test_continuous_position_uses_unrounded_actual_endpoint_displacement[east-2.0-64.003-66.0-19.97]" time="0.031"><failure message="AssertionError: COMMAND_REROUNDED_CONTINUOUS_DISPLACEMENT&#10;assert 20.0 == 19.97 ± 1.0e-12&#10;  &#10;  comparison failed&#10;  Obtained: 20.0&#10;  Expected: 19.97 ± 1.0e-12">tests/test_dynamics_command_reanchor.py:332: in test_continuous_position_uses_unrounded_actual_endpoint_displacement
+    assert e.attrs["physics_state"]["v0"][0] == pytest.approx(expected_vx, abs=1e-12), "COMMAND_REROUNDED_CONTINUOUS_DISPLACEMENT"
+E   AssertionError: COMMAND_REROUNDED_CONTINUOUS_DISPLACEMENT
+E   assert 20.0 == 19.97 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 20.0
+E     Expected: 19.97 ± 1.0e-12</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,13 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_________ test_kinematic_commands_keep_their_existing_state_and_units __________
+tests/test_dynamics_command_reanchor.py:203: in test_kinematic_commands_keep_their_existing_state_and_units
+    assert "physics_state" not in s.entities[a].attrs, "COMMAND_CHANGED_KINEMATIC_STATE"
+E   AssertionError: COMMAND_CHANGED_KINEMATIC_STATE
+E   assert 'physics_state' not in {'physics_state': {'p0': (66.0, 1000.0, 64.0), 'v0': (20.0, 0.0, 0.0), 't_ref': 0.1}}
+E    +  where {'physics_state': {'p0': (66.0, 1000.0, 64.0), 'v0': (20.0, 0.0, 0.0), 't_ref': 0.1}} = SceneEntity(category='actor', pos=(66.0, 1000.0, 64.0), velocity=(2.0, 0.0, 0.0), behavior='wander', goal='', speed=0.0, id='scene_dc6b3d09', attrs={'physics_state': {'p0': (66.0, 1000.0, 64.0), 'v0': (20.0, 0.0, 0.0), 't_ref': 0.1}}).attrs
+=========================== short test summary info ============================
+FAILED tests/test_dynamics_command_reanchor.py::test_kinematic_commands_keep_their_existing_state_and_units - AssertionError: COMMAND_CHANGED_KINEMATIC_STATE
+assert 'physics_state' not in {'physics_state': {'p0': (66.0, 1000.0, 64.0), 'v0': (20.0, 0.0, 0.0), 't_ref': 0.1}}
+ +  where {'physics_state': {'p0': (66.0, 1000.0, 64.0), 'v0': (20.0, 0.0, 0.0), 't_ref': 0.1}} = SceneEntity(category='actor', pos=(66.0, 1000.0, 64.0), velocity=(2.0, 0.0, 0.0), behavior='wander', goal='', speed=0.0, id='scene_dc6b3d09', attrs={'physics_state': {'p0': (66.0, 1000.0, 64.0), 'v0': (20.0, 0.0, 0.0), 't_ref': 0.1}}).attrs
+1 failed in 0.15s

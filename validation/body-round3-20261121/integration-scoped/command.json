@@ -1,0 +1,21 @@
+{
+  "command": [
+    "[workspace]/lingshu/work\\lingshu-body-round3-integration-20261121-venv\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests/test_circular_time_residual_guard.py",
+    "tests/test_fresh_row_decay.py",
+    "tests/test_scene_collision_freeflight_velocity.py",
+    "tests/test_spatial_detect_complete_partition.py",
+    "tests/test_hexgrid_odd_r_neighbors.py",
+    "tests/test_dynamics_command_reanchor.py",
+    "--junitxml=[workspace]/lingshu/outputs\\body-round3-20261121\\integration-scoped\\guards.xml"
+  ],
+  "exit_code": 0
+}

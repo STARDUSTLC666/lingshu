@@ -1,0 +1,7 @@
+  PASS A01 query=None -> 可读 TypeError
+  PASS A02 query=123 -> 可读 TypeError
+  PASS A03 正对照：正常查询命中
+  PASS A04 空串语义不变（空列表）
+  PASS E01 钉子：可读文案
+  PASS E02 钉子：非字符串闸
+通过 6 / 失败 0

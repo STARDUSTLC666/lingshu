@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.234" timestamp="2026-11-21T01:36:29.260586+08:00" hostname="STARDUST"><testcase classname="tests.test_dynamics_command_reanchor" name="test_stay_stops_prior_velocity_including_the_vertical_component" time="0.029"><failure message="AssertionError: ('COMMAND_STAY_DID_NOT_STOP_PRIOR_MOMENTUM', (64.8, 1000.6999999999999, 64.39999999999999), (64.6, 1000.4, 64.3))&#10;assert False&#10; +  where False = all(&lt;generator object close.&lt;locals&gt;.&lt;genexpr&gt; at 0x00000247835B6110&gt;)">tests\test_dynamics_command_reanchor.py:126: in test_stay_stops_prior_velocity_including_the_vertical_component
+    close(s.entities[a].pos, p, "COMMAND_STAY_DID_NOT_STOP_PRIOR_MOMENTUM")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_STAY_DID_NOT_STOP_PRIOR_MOMENTUM', (64.8, 1000.6999999999999, 64.39999999999999), (64.6, 1000.4, 64.3))
+E   assert False
+E    +  where False = all(&lt;generator object close.&lt;locals&gt;.&lt;genexpr&gt; at 0x00000247835B6110&gt;)</failure></testcase></testsuite></testsuites>

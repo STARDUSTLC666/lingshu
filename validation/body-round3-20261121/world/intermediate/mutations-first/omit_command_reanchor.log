@@ -1,0 +1,13 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___ test_command_reanchors_at_current_time_without_changing_public_velocity ___
+tests\test_dynamics_command_reanchor.py:83: in test_command_reanchors_at_current_time_without_changing_public_velocity
+    assert st["p0"] == e.pos, "COMMAND_PHYSICS_POSITION_ANCHOR_STALE"
+E   AssertionError: COMMAND_PHYSICS_POSITION_ANCHOR_STALE
+E   assert (64.0, 1000.0, 64.0) == (66.0, 999.55, 64.0)
+E     
+E     At index 0 diff: 64.0 != 66.0
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED tests/test_dynamics_command_reanchor.py::test_command_reanchors_at_current_time_without_changing_public_velocity
+1 failed in 0.28s

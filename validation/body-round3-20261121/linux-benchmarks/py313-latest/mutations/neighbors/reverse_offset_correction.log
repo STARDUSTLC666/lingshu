@@ -1,0 +1,83 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_______________ test_odd_r_neighbors_keep_direction_order[even] ________________
+tests/test_hexgrid_odd_r_neighbors.py:49: in test_odd_r_neighbors_keep_direction_order
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+E   assert [(4, 2), (5, ...2, 3), (3, 3)] == [(4, 2), (3, ...2, 3), (3, 3)]
+E     
+E     At index 1 diff: (5, 1) != (3, 1)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               4,
+E               2,
+E           ),
+E           (
+E     -         3,
+E     ?         ^
+E     +         5,
+E     ?         ^
+E               1,
+E           ),
+E           (
+E     -         2,
+E     ?         ^
+E     +         4,
+E     ?         ^
+E               1,
+E           ),
+E           (
+E               2,
+E               2,
+E           ),
+E           (
+E               2,
+E               3,
+E           ),
+E           (
+E               3,
+E               3,
+E           ),
+E       ]
+=========================== short test summary info ============================
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_odd_r_neighbors_keep_direction_order[even] - AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+assert [(4, 2), (5, ...2, 3), (3, 3)] == [(4, 2), (3, ...2, 3), (3, 3)]
+  
+  At index 1 diff: (5, 1) != (3, 1)
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    [
+        (
+            4,
+            2,
+        ),
+        (
+  -         3,
+  ?         ^
+  +         5,
+  ?         ^
+            1,
+        ),
+        (
+  -         2,
+  ?         ^
+  +         4,
+  ?         ^
+            1,
+        ),
+        (
+            2,
+            2,
+        ),
+        (
+            2,
+            3,
+        ),
+        (
+            3,
+            3,
+        ),
+    ]
+1 failed in 0.11s

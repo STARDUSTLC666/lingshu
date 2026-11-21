@@ -1,0 +1,158 @@
+{
+  "status": "ENABLED_FOR_EXACT_SOURCE_EXECUTION",
+  "source_sha": "f81ee3a9939f3dad7c277145766508c113742ba0",
+  "baseline_sha": "6b73082406d40a630a44cd68559c1f66b3652390",
+  "named_mutations_expected": 22,
+  "cases": {
+    "neighbors": {
+      "binding_status": "reviewed_and_integration_assets_bound",
+      "reviewed_commit": "4a352249ef6db7975353b84bc640712d46f7181b",
+      "baseline_sha": "6b73082406d40a630a44cd68559c1f66b3652390",
+      "source_files_lf_sha256": {
+        "lingshu/nn/hex_cnn.py": "5671ae505f6dd026fc4fac7cb50ca02ca76ca972a51292f2dc50b5c7ae37efee",
+        "tests/test_hexgrid_odd_r_neighbors.py": "51be981c9caf48c96703089d7cf5919614c443bd553c7842976082b91b4a655a",
+        "tests/fixtures/hexgrid_odd_r_neighbors_mutations.json": "b6ec69fc786445421c12b5550798ce00e576447ffa8e031aed506e6cd6ded535",
+        "bench/bench_hexgrid_neighbors.py": "4a531767989e45c50e2d0ea0486a083e8c897826f14e16127109387fdf5ab113",
+        "tools/testing/replay_save_guards.py": "af47c847469b43788c85c1982f4f5903a80b95b2e5d2aa97368a12aed5722cae"
+      },
+      "runner": "tools/testing/replay_save_guards.py",
+      "spec": "tests/fixtures/hexgrid_odd_r_neighbors_mutations.json",
+      "guard": "tests/test_hexgrid_odd_r_neighbors.py",
+      "guard_total": 30,
+      "named_mutations": 6,
+      "benchmark": {
+        "path": "bench/bench_hexgrid_neighbors.py",
+        "output": "neighbors/paired.json",
+        "reports": [
+          "neighbors/paired.json"
+        ],
+        "validator": "neighbors_v1",
+        "invocations": [
+          {
+            "label": "paired",
+            "argv": [
+              "--baseline",
+              "{baseline_sha}",
+              "--output",
+              "{benchmark_output}"
+            ]
+          }
+        ]
+      },
+      "reviewed_files_lf_sha256": {
+        "lingshu/nn/hex_cnn.py": "5671ae505f6dd026fc4fac7cb50ca02ca76ca972a51292f2dc50b5c7ae37efee",
+        "tests/test_hexgrid_odd_r_neighbors.py": "51be981c9caf48c96703089d7cf5919614c443bd553c7842976082b91b4a655a",
+        "tests/fixtures/hexgrid_odd_r_neighbors_mutations.json": "b6ec69fc786445421c12b5550798ce00e576447ffa8e031aed506e6cd6ded535",
+        "bench/bench_hexgrid_neighbors.py": "4a531767989e45c50e2d0ea0486a083e8c897826f14e16127109387fdf5ab113",
+        "tools/testing/replay_save_guards.py": "f0a9aa2c18c94f4287c28c1b288b34494b48a4bab1ba702d880cf8307e6891bf"
+      },
+      "historical_windows_baseline_sha": "6b73082406d40a630a44cd68559c1f66b3652390",
+      "historical_windows_benchmark_measured_head": "df0838c2181abf5fb1dc8e1e4b0dfcb66c19a232",
+      "integration_differing_paths": [
+        "tools/testing/replay_save_guards.py"
+      ]
+    },
+    "command": {
+      "binding_status": "reviewed_and_integration_assets_bound",
+      "reviewed_commit": "bd208a379e44497e9f35fdc145838abb19e6d313",
+      "baseline_sha": "6b73082406d40a630a44cd68559c1f66b3652390",
+      "historical_windows_baseline_sha": "04e0ecb6a3669c90efbb4a1583816a8f7ca26bc7",
+      "code_freeze_commit": "6d1048f6df5610de1e71c346e1f95182d1dfb84a",
+      "historical_windows_benchmark_measured_head": null,
+      "historical_identity_limit": "actual benchmark reports record source/driver/dependency hashes but no measured Git HEAD; code_freeze is separate metadata",
+      "reviewed_files_lf_sha256": {
+        "lingshu/world/scene_simulator.py": "984d8abeaaa5a4b9d50e6d604758ac128d120f6b3bd56289b8b2a665a7bd1046",
+        "lingshu/world/physics.py": "8a94b03642c3f7a7cd011f05f809b5ce4290234f307d4c7aa1935244d61bc59a",
+        "lingshu/world/coord_contract.py": "2393d826d520f340be1e73b6f3ec0d85a7df4afff70460478663cd94a8dd1d29",
+        "tests/test_dynamics_command_reanchor.py": "77c43293f245db4a38ef4d7b5b275df998dc17adef9aa66b67be4b0ab4ec5933",
+        "tests/fixtures/dynamics_command_reanchor_mutations.json": "a67780d6c6c76e7bbcd52c4887844b9d15e4d4a0e1fd29879d934a75b1f8a3cb",
+        "bench/bench_dynamics_command_reanchor.py": "1c4e039932777a8399c9d26dbec18503c8cc8f48fabe18a4091b4e7c8d41e303",
+        "tools/testing/replay_save_guards.py": "f0a9aa2c18c94f4287c28c1b288b34494b48a4bab1ba702d880cf8307e6891bf"
+      },
+      "source_files_lf_sha256": {
+        "lingshu/world/scene_simulator.py": "7f33caeaae450fe46cc7e8ae465e0302b0f2063e1d70788f41402d8d75e5350a",
+        "lingshu/world/physics.py": "bfb46c186fc51c92e8009d3a9de6ba5c07cdf082f4d509d6c6bf0c1c6721f6c6",
+        "lingshu/world/coord_contract.py": "2393d826d520f340be1e73b6f3ec0d85a7df4afff70460478663cd94a8dd1d29",
+        "tests/test_dynamics_command_reanchor.py": "77c43293f245db4a38ef4d7b5b275df998dc17adef9aa66b67be4b0ab4ec5933",
+        "tests/fixtures/dynamics_command_reanchor_mutations.json": "a67780d6c6c76e7bbcd52c4887844b9d15e4d4a0e1fd29879d934a75b1f8a3cb",
+        "bench/bench_dynamics_command_reanchor.py": "1c4e039932777a8399c9d26dbec18503c8cc8f48fabe18a4091b4e7c8d41e303",
+        "tools/testing/replay_save_guards.py": "af47c847469b43788c85c1982f4f5903a80b95b2e5d2aa97368a12aed5722cae"
+      },
+      "runner": "tools/testing/replay_save_guards.py",
+      "spec": "tests/fixtures/dynamics_command_reanchor_mutations.json",
+      "guard": "tests/test_dynamics_command_reanchor.py",
+      "guard_total": 61,
+      "named_mutations": 16,
+      "benchmark": {
+        "path": "bench/bench_dynamics_command_reanchor.py",
+        "output": "command",
+        "reports": [
+          "command/oracle.json",
+          "command/timing.json",
+          "command/memory.json"
+        ],
+        "validator": "command_v1",
+        "invocations": [
+          {
+            "label": "oracle",
+            "argv": [
+              "--baseline",
+              "{baseline_sha}",
+              "--mode",
+              "oracle",
+              "--repeats",
+              "11",
+              "--ticks",
+              "400",
+              "--oracle-cases",
+              "2000",
+              "--output",
+              "{benchmark_output}"
+            ]
+          },
+          {
+            "label": "timing",
+            "argv": [
+              "--baseline",
+              "{baseline_sha}",
+              "--mode",
+              "timing",
+              "--repeats",
+              "11",
+              "--ticks",
+              "400",
+              "--oracle-cases",
+              "2000",
+              "--output",
+              "{benchmark_output}"
+            ]
+          },
+          {
+            "label": "memory",
+            "argv": [
+              "--baseline",
+              "{baseline_sha}",
+              "--mode",
+              "memory",
+              "--repeats",
+              "11",
+              "--ticks",
+              "400",
+              "--oracle-cases",
+              "2000",
+              "--output",
+              "{benchmark_output}"
+            ]
+          }
+        ]
+      },
+      "integration_differing_paths": [
+        "lingshu/world/scene_simulator.py",
+        "lingshu/world/physics.py",
+        "tools/testing/replay_save_guards.py"
+      ]
+    }
+  },
+  "execution_enabled": true,
+  "source_tree": "5e6e6d45fdc9ef6ea885f4e4f38d56630089a751"
+}

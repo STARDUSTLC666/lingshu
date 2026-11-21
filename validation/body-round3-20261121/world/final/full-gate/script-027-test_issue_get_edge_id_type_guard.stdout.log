@@ -1,0 +1,5 @@
+  PASS A01 int edge_id -> 可读 TypeError（旧实现 None）
+  PASS A02 None -> 可读 TypeError
+  PASS A03 正对照：不存在的合法 edge id 仍返回 None
+  PASS E01 钉子：可读文案
+通过 4 / 失败 0

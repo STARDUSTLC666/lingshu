@@ -1,0 +1,4 @@
+<repo>\tests\test_coggraph_generic_tag.py:5: SyntaxWarning: invalid escape sequence '\d'
+  `GENERIC_TAG` 三个短前缀分支只锚定了开头（`^sha` / `^precise` / `^v\d`）⇒
+  [R5] 未提供 --bodies-root，跳过正文互引（不假装通过）
+  [R5] 未提供 --bodies-root，跳过正文互引（不假装通过）

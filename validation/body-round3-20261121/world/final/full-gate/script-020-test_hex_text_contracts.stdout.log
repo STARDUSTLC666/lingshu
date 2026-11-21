@@ -1,0 +1,19 @@
+== A 组：fuse_consistency 判分口径（1 全符 / 0.5 半符 / 0 冲突） ==
+  PASS A1 「右下有红色圆形」→ 1.0 ACCEPT（全符）
+  PASS A2 「右下有红色三角形」→ 0.5 DEFER（半符）
+  PASS A3 「右下有绿色三角形」→ 0.0 REJECT（冲突（位置对、形状颜色全错））
+  PASS A4 「右下有东西」→ 0.5 DEFER（未陈述形状颜色：判定不变）
+  PASS A5 「右下有红色」→ 0.75 DEFER（只陈述颜色且相符：判定不变）
+  PASS A6 「右下有绿色」→ 0.25 REJECT（只陈述颜色且冲突）
+  PASS A7 「左上有红色圆形」→ 0.4 DEFER（位置异但物体同：判定不变）
+  PASS A8 「左上有东西」→ 0.0 REJECT（缺词子句且位置不中：不崩）
+  PASS A9 「左上有红色」→ 0.0 REJECT（只陈述颜色且位置不中：不崩）
+  PASS A10 双路无证据 → BLINDSPOT（不变）
+== B 组：corrupt_description 不级联 ==
+  PASS B1 rate=1.0：形状与颜色都被改掉（180/180）
+  PASS B2 rate=1.0：改后仍解析为同一位置的单个完整子句（180/180）
+  PASS B3 rate=0：恒等
+  PASS B4 rate=0.5：每属性改写频率 ≈ 0.5（360 次）
+
+===== SUMMARY 14/14 通过 =====
+VERDICT=PASS（冲突子句可被 REJECT；噪声描述真改原义且不级联）

@@ -1,0 +1,40 @@
+{
+  "sha": "24818d6cdec18cbdbb8796ce16a1922f09e2ede4",
+  "node_id": "C_kwDOU6uWo9oAKDI0ODE4ZDZjZGVjMThjYmRiYjg3OTZjZTE2YTE5MjJmMDllMmVkZTQ",
+  "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/git/commits/24818d6cdec18cbdbb8796ce16a1922f09e2ede4",
+  "html_url": "https://github.com/FuRongJun-1999/lingshu/commit/24818d6cdec18cbdbb8796ce16a1922f09e2ede4",
+  "author": {
+    "name": "STARDUST",
+    "email": "liuzhoucxk@gmail.com",
+    "date": "2026-11-20T17:51:46Z"
+  },
+  "committer": {
+    "name": "GitHub",
+    "email": "noreply@github.com",
+    "date": "2026-11-20T17:51:46Z"
+  },
+  "tree": {
+    "sha": "f886f893d1a409a5e614cc3e379f39d81d5af0b5",
+    "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/git/trees/f886f893d1a409a5e614cc3e379f39d81d5af0b5"
+  },
+  "message": "Merge bd208a379e44497e9f35fdc145838abb19e6d313 into 6b73082406d40a630a44cd68559c1f66b3652390",
+  "parents": [
+    {
+      "sha": "6b73082406d40a630a44cd68559c1f66b3652390",
+      "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/git/commits/6b73082406d40a630a44cd68559c1f66b3652390",
+      "html_url": "https://github.com/FuRongJun-1999/lingshu/commit/6b73082406d40a630a44cd68559c1f66b3652390"
+    },
+    {
+      "sha": "bd208a379e44497e9f35fdc145838abb19e6d313",
+      "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/git/commits/bd208a379e44497e9f35fdc145838abb19e6d313",
+      "html_url": "https://github.com/FuRongJun-1999/lingshu/commit/bd208a379e44497e9f35fdc145838abb19e6d313"
+    }
+  ],
+  "verification": {
+    "verified": true,
+    "reason": "valid",
+    "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJrAIiyCRC1aQ7uu5UhlAAAzD0QACefTsxRgoWOSkL+QdenwgQX\ntOFpXeBYCROtzM14d/Bz9/VoihXnlcoin99xSCU1dzDtuki2tpml+4Q15wfHzqeg\n0Olr5If41U9I4v1BfOUtMFXVl6ME8OHkRKbaAHfQvqamOTS4AvgTTd3+k3knxaCf\nUtgZBW/T5GNMmzfIidHu87bia4Gr6LxBBg9lg9l/rMLoMnCR2wrBW/quLCrH/Xhx\n/QsIw3XT32ecYFA/kPGDW39Px+DH+MNo2fh27aIL3OiaFxpPs204LRgQXmJjWq70\njv7SyJHJehbtWwp4pvhGAmf6yCxGmzw2Qn1neuWZRf1zC5Lx4txiC5YE3G79XIV1\n5jAuOqeaO5t3PWG+DS1o7wDlox10G0EWEXs4QemjCQpiXTxR5pFp4eS02flfXDoC\neuaDS0HKOUHSafvUpSA1mapa7S4UXcXj07K/GgRocdBZJG6HD33jctjllGn3gnIq\nnoIlFsVMyx0+phydJvGpsnfB/u1Uq3t44sgx57N9X0xbMjX0a5l7Y0JOE5FvoseX\n0ACgnGPNvD+RpQN6Evl2jV2Rg+AUehDVROj4abJRy75csb2UWsQBJ1ioJoGJxr0Z\nnTftghvZNWXJqw22MHubhCqoQgFN+6HOV8Pk2c8ipM1Yqyb2QsPoRUfk3ryFk6+Y\nTsp6znvA/NlrZ65gwX7A\n=Rb+W\n-----END PGP SIGNATURE-----\n",
+    "payload": "tree f886f893d1a409a5e614cc3e379f39d81d5af0b5\nparent 6b73082406d40a630a44cd68559c1f66b3652390\nparent bd208a379e44497e9f35fdc145838abb19e6d313\nauthor STARDUST <liuzhoucxk@gmail.com> 1795197106 +0800\ncommitter GitHub <noreply@github.com> 1795197106 +0800\n\nMerge bd208a379e44497e9f35fdc145838abb19e6d313 into 6b73082406d40a630a44cd68559c1f66b3652390\n",
+    "verified_at": "2026-11-20T17:51:46Z"
+  }
+}

@@ -1,0 +1,15 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+__ test_command_preserves_custom_metadata_without_mutating_the_previous_state __
+tests/test_dynamics_command_reanchor.py:242: in test_command_preserves_custom_metadata_without_mutating_the_previous_state
+    assert current.get("audit_marker") == original["audit_marker"], "COMMAND_DROPPED_STATE_METADATA"
+E   AssertionError: COMMAND_DROPPED_STATE_METADATA
+E   assert None == {'source': 'external', 'sequence': [1, 2]}
+E    +  where None = <built-in method get of dict object at 0x7f22ec902280>('audit_marker')
+E    +    where <built-in method get of dict object at 0x7f22ec902280> = {'p0': (66.0, 1000.0, 64.0), 'v0': (20.0, 0.0, 0.0), 't_ref': 0.1}.get
+=========================== short test summary info ============================
+FAILED tests/test_dynamics_command_reanchor.py::test_command_preserves_custom_metadata_without_mutating_the_previous_state - AssertionError: COMMAND_DROPPED_STATE_METADATA
+assert None == {'source': 'external', 'sequence': [1, 2]}
+ +  where None = <built-in method get of dict object at 0x7f22ec902280>('audit_marker')
+ +    where <built-in method get of dict object at 0x7f22ec902280> = {'p0': (66.0, 1000.0, 64.0), 'v0': (20.0, 0.0, 0.0), 't_ref': 0.1}.get
+1 failed in 0.15s

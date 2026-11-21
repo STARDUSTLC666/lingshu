@@ -1,0 +1,284 @@
+name: gate
+
+# 身体侧聚合仓（lingshu）CI 门禁 · 「A 档＝CI 加固」的落地件。
+#
+# 本件**已随仓落仓**（`d7c6b33`「ci: 三条工作流落仓」；其后 `c526d15`／`2bb8291` 两次修订）。
+#    （起草期的本地验证记录不随仓发布——下文「见报告」均指该记录，回溯请按 git 历史查本件引入提交。）
+#
+# 触发：push/PR 到 main · 手动 workflow_dispatch · 每日 cron 兜底。
+# 运行器：**GitHub 托管**（ubuntu-latest）——公开仓免费；**绝不用自托管 runner**
+#   （fork PR 可在自托管 runner 上执行任意代码 ⇒ 等于把内网/凭据暴露给任何提 PR 的人）。
+# 权限：最小化 contents: read（本 workflow 只读仓、不回写）。
+# 编码：PYTHONUTF8=1（对齐仓工作纪律「统一 UTF-8」——命令执行统一 UTF-8，规避 GBK）。
+#
+# 测试面实况（2026-10-08 本机实测，证据见报告）：
+#   · **脚本式**（PASS/FAIL + 退出码）：test_brain_store / test_wm_verify_unobserved /
+#     test_hex_cnn / test_hex_composite / test_hex_gen / test_core_export_all /
+#     test_scene_follow_patrol / test_issue145_causal_depth_cycles —— 逐件单跑，失败即红。
+#     ★ 脚本式件（无 `test_*` 函数，pytest 收集 0 件、rc=5）**必须**列入下方
+#       SCRIPT_TESTS：不列入则本门禁**根本看不见它**——同族盲区已出现三次
+#       （#69 / #26 / #145）。新增脚本式件时，SCRIPT_TESTS 与本节同补。
+#   · **pytest 式**：自动收集 tests/，排除 SCRIPT_TESTS；新增回归测试自动进入门禁。
+#     （曾 deselect 两条 known-fail，已随 `9bc4985` 转绿而摘除——见下「pytest 式测试」步。）
+#   · 脚本式测试必须在 pytest 收集前排除：`tests/test_hex_cnn.py` 无 `__main__`
+#     守卫，模块级即 `sys.exit()`，故保留两式分开跑。
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # 每日兜底（UTC 03:23，避开整点拥塞）——抓「无 push 但环境/上游漂移」造成的红。
+    - cron: '23 3 * * *'
+
+concurrency:
+  group: gate-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  PYTHONUTF8: "1"
+  PYTHONIOENCODING: "utf-8"
+  # 脚本式测试件（逐件单跑；YAML 折叠标量 ⇒ 换行折叠为空格，可被 shell 分词遍历）
+  # ★ 脚本式件（模块级即执行、无 `test_*` 函数）**必须列入本清单**：否则
+  #   `pytest --collect-only` 收 0 件（rc=5），本门禁**看不见**它——同族盲区今晚
+  #   已出现三次（#69 / #26 / #145）。新增脚本式件时**同时**加到这里。
+  SCRIPT_TESTS: >-
+    tests/test_brain_store.py
+    tests/test_wm_verify_unobserved.py
+    tests/test_hex_cnn.py
+    tests/test_hex_composite.py
+    tests/test_hex_gen.py
+    tests/test_core_export_all.py
+    tests/test_scene_follow_patrol.py
+    tests/test_issue145_causal_depth_cycles.py
+    tests/test_causal_end_id_truncation.py
+    tests/test_coggraph_r4_and_viewer.py
+    tests/test_coggraph_generic_tag.py
+    tests/test_hexgen_multi_seed_metric.py
+    tests/test_longterm_gate_novelty.py
+    tests/test_state_write_observable.py
+    tests/test_coggraph_naming_report.py
+    tests/test_issue606_naming_r5in_phantom_guard.py
+    tests/test_skeleton_fk_order_guard.py
+    tests/test_expression_render_guard.py
+    tests/test_hex_grid_extent.py
+    tests/test_hex_text_contracts.py
+    tests/test_issue_ingest_scene_state_batch.py
+    tests/test_core_nplus1_getstats_forgetadvisor.py
+    tests/test_traverse_frontier_batch.py
+    tests/test_prediction_path_nodes_single_fetch.py
+    tests/test_coggraph_utf8_bom.py
+    tests/test_issue454_unpack_out_guard.py
+    tests/test_issue_get_edge_id_type_guard.py
+    tests/test_issue_increment_access_id_type_guard.py
+    tests/test_issue_traverse_start_id_type_guard.py
+    tests/test_issue_prune_action_logs_type_guard.py
+    tests/test_issue_get-incoming-edges_id_type_guard.py
+    tests/test_issue_get-outgoing-edges_id_type_guard.py
+    tests/test_issue_escalation_code_type_guard.py
+    tests/test_issue_prune_self_keep_type_guard.py
+    tests/test_issue_get_nodes_by_tag_type_guard.py
+    tests/test_issue_get_nodes_by_tag_limit_type_guard.py
+    tests/test_issue_increment_many_type_guard.py
+    tests/test_issue_update_importance_type_guard.py
+    tests/test_issue_update_confidence_type_guard.py
+    tests/test_issue_get_skill_by_name_type_guard.py
+    tests/test_issue_search_skills_query_type_guard.py
+    tests/test_issue_recent_context_limit_type_guard.py
+    tests/test_issue_update_skill_confidence_type_guard.py
+    tests/test_issue_append_skill_procedure_type_guard.py
+    tests/test_issue_jaccard_arg_type_guard.py
+    tests/test_issue_expand_terms_query_type_guard.py
+    tests/test_issue_range_time_layer_type_guard.py
+    tests/test_issue_by_time_type_guard.py
+    tests/test_issue_subgraph_root_type_guard.py
+    tests/test_issue_find_cycles_depth_type_guard.py
+    tests/test_issue_spatiotemporal_center_type_guard.py
+    tests/test_issue_insight_content_type_guard.py
+    tests/test_issue_count_layer_type_guard.py
+    tests/test_issue_get_meta_key_type_guard.py
+    tests/test_issue_tag_node_missing_guard.py
+    tests/test_issue_verify_edge_id_type_guard.py
+    tests/test_issue_scene_pos_readable_guard.py
+    tests/test_issue_scene_path_points_readable_guard.py
+    tests/test_issue_untag_node_id_type_guard.py
+    tests/test_issue_query_layer_type_guard.py
+    tests/test_issue_scene_step_int_guard.py
+    tests/test_issue_rejected_path_type_guard.py
+    tests/test_issue_scene_trees_range_guard.py
+    tests/test_issue_search_layers_type_guard.py
+    tests/test_issue_insight_evidence_str_guard.py
+    tests/test_issue_scene_goal_str_guard.py
+    tests/test_issue_scene_water_bool_guard.py
+    tests/test_issue_blindspot_str_args_guard.py
+    tests/test_issue_scene_behavior_str_guard.py
+    tests/test_issue_add_path_id_str_guard.py
+    tests/test_issue_insight_importance_range_guard.py
+    tests/test_issue_auto_decay_interval_guard.py
+    tests/test_issue_conflict_self_guard.py
+    tests/test_issue_insight_conditions_type_guard.py
+    tests/test_issue_dedup_config_args_guard.py
+    tests/test_issue_insight_window_type_guard.py
+    tests/test_issue_add_edge_cs_type_guard.py
+    tests/test_issue_register_conflict_cs_type_guard.py
+    tests/test_issue_spatial_coords_type_guard.py
+    tests/test_issue_search_content_query_type_guard.py
+    tests/test_issue_export_path_type_guard.py
+    tests/test_issue_import_path_type_guard.py
+    tests/test_issue_set_meta_key_type_guard.py
+    tests/test_issue_decay_factor_range_guard.py
+    tests/test_issue_min_confidence_range_guard.py
+    tests/test_issue_scene_speed_negative_guard.py
+    tests/test_issue_time_core_arg_types_guard.py
+    tests/test_issue_gap_dual_arg_types_guard.py
+    tests/test_issue_protect_reason_empty_guard.py
+    tests/test_issue_blindspot_input_guard.py
+    tests/test_issue_hex_extract_args_guard.py
+    tests/test_issue_insight_level_type_guard.py
+    tests/test_issue_add_edge_missing_endpoint_guard.py
+    tests/test_issue_condition_normalize_nondict_guard.py
+    tests/test_issue281_insight_report_conditions_guard.py
+    tests/test_issue_context_cap_negative_guard.py
+    tests/test_issue_verdict_input_guard.py
+    tests/test_issue274_structural_influence_guard.py
+    tests/test_issue521_activation_conflict_veto.py
+    tests/test_issue481_snapshot_divergence.py
+    tests/test_issue487b_launch_dir.py
+    tests/test_issue825_text_gates.py
+
+jobs:
+  gate:
+    name: gate (py${{ matrix.python-version }}${{ matrix.deps_label }})
+    runs-on: ubuntu-latest
+    # pytest 腿偏重：本机（Windows/3.12）实测 `tests/test_hex_hier.py` **单件**即 >7 分钟
+    # （420s 超时前只跑完 4/7，均 PASSED），合跑需充足余量 ⇒ 45 分钟。
+    # 若 CI 上仍逼近上限，再把 pytest 腿按文件拆成多 step（可见性也更好）。见报告「未验证项」。
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # 3.12 = README「代码主体」节声明的**已测版本矩阵**
+          #        （numpy 2.3.5/2.4.2/2.5.3 · Pillow 12.3.0）——阻断主门禁。
+          - python-version: "3.12"
+            experimental: false
+            deps_label: ""
+            pinned_deps: ""
+          # 3.12 · **依赖下界档**（#209）：钉死 extras 下界（numpy==2.3.5 / Pillow==12.3.0）——
+          #        默认装的是区间内**最新**，下界从未被覆盖；下界装不上/跑不通即本档红。
+          #        与 3.13 同按**未测档** advisory（本机未跑该组合）。
+          - python-version: "3.12"
+            experimental: true
+            deps_label: " · 依赖下界"
+            pinned_deps: "numpy==2.3.5 Pillow==12.3.0"
+          # 3.13 = **未测档**（README 未覆盖 ⇒ 如实标注降级）：
+          #        advisory，失败/装不上依赖不阻断主门禁；实测全绿后再置 experimental: false。
+          - python-version: "3.13"
+            experimental: true
+            deps_label: ""
+            pinned_deps: ""
+    continue-on-error: ${{ matrix.experimental }}
+    steps:
+      # 第三方 Action 一律钉到提交 SHA（#251：`@v4`/`@v5` 是可移动标签，上游可改写指向）；
+      # 尾注为钉定时该 SHA 对应的标签，升级时同步改 SHA 与尾注。
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # actions/checkout@v4
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: 安装依赖（pip install -e ".[full,dev]"）
+        # full = numpy>=2.3.5,<2.6 + Pillow>=12.3,<13（README 已测区间，pyproject 已声明）；
+        # dev  = pytest + PyYAML>=6.0,<7（pyproject [project.optional-dependencies] 已声明）。
+        #        PyYAML 是**测试件的运行依赖**：tests/test_coggraph_public_paths.py 子进程调用
+        #        tools/coggraph/export_coggraph.py，后者模块级 `import yaml`（#163）。只写散文
+        #        不装 ⇒ 本机装了 PyYAML 而绿、CI 红（回归已随 52310cd 后在 main 复现过一次）。
+        # 即 `.[full]` 的超集：装本体 + 全量运行依赖 + 测试面依赖（运行器 + 测试件所需）。
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[full,dev]"
+
+      - name: 钉死依赖下界（仅「依赖下界」档；#209）
+        # 默认装的是 extras 区间内**最新**（如 numpy 2.5.x）——下界从未被覆盖。本步把
+        # numpy/Pillow 钉到 pyproject 声明区间的**下界**，验证「下界组合真能装上且跑通」。
+        if: matrix.pinned_deps != ''
+        run: python -m pip install ${{ matrix.pinned_deps }}
+
+      - name: Clone 脑端公开仓（dsh-memory）供 MDCG_BRAIN_PYTHONPATH
+        id: brain
+        # 失败**不**红（continue-on-error）；但下一步会**显式**标注 SKIP 原因，绝不静默通过。
+        # 脑端公开仓 md_cg 零第三方依赖（D-005）⇒ clone 后仅需 PYTHONPATH，无需 pip 装脑。
+        # #251：不再 clone 可移动的 HEAD，改为按**固定提交 SHA** 取（深度 1）。上游漂移
+        #   不再静默改变被测脑核；升级时改下面 DSH_MEMORY_SHA 并重跑门禁。
+        continue-on-error: true
+        env:
+          DSH_MEMORY_SHA: 98d6b899533a82fb1047f952987229c62a9929fb
+        run: |
+          git init -q "$RUNNER_TEMP/dsh-memory"
+          git -C "$RUNNER_TEMP/dsh-memory" remote add origin https://github.com/FuRongJun-1999/dsh-memory.git
+          git -C "$RUNNER_TEMP/dsh-memory" fetch --depth 1 origin "$DSH_MEMORY_SHA"
+          git -C "$RUNNER_TEMP/dsh-memory" checkout -q FETCH_HEAD
+
+      - name: 决定 test_brain_store 前置（脑端可达则真跑；否则显式 SKIP）
+        run: |
+          if [ -f "$RUNNER_TEMP/dsh-memory/md_cg/mcp_server.py" ]; then
+            echo "MDCG_BRAIN_PYTHONPATH=$RUNNER_TEMP/dsh-memory" >> "$GITHUB_ENV"
+            echo "脑端 clone 成功 → test_brain_store 真跑（MDCG_BRAIN_PYTHONPATH=$RUNNER_TEMP/dsh-memory）"
+          else
+            echo "::warning::脑端公开仓不可达（clone 失败或缺 md_cg/mcp_server.py）——test_brain_store 将显式 SKIP（退出码 0，不计红）；原因见上一步日志。"
+          fi
+
+      - name: 脚本式测试（逐件单跑，任一失败即红）
+        run: |
+          set -euo pipefail
+          for t in $SCRIPT_TESTS; do
+            echo "::group::script test: $t"
+            rc=0
+            python -X utf8 "$t" || rc=$?
+            echo "::endgroup::"
+            if [ "$rc" -ne 0 ]; then
+              echo "::error::脚本式测试失败：$t（退出码 $rc）"
+              exit "$rc"
+            fi
+          done
+          echo "脚本式测试全部通过：$SCRIPT_TESTS"
+
+      - name: pytest 式测试（tests/ 自动收集）
+        # 曾 deselect 的两条 known-fail（README「代码主体」节 / issue #4）**已转绿并摘除 deselect**：
+        #   · tests/test_hex_text.py::test_spatial_detect_finds_single_object
+        #   · tests/test_hex_text.py::test_multimodal_check_clean_vs_corrupt
+        # 根因修复（均在 main）：`9bc4985`——image_to_grid 晶格横向越出画幅 √3 倍（采纳自 PR #116），
+        #   下游「按晶格三等分/质心取位置」的位置检测系统性错位由此消除；`54cb5cb`——hex_hier
+        #   形状辅助损失改按 OBJ 布局连续分组。
+        # 本机实测（2026-10-11 · py3.12 · numpy 2.5.3 · Pillow 12.3.0）：
+        #   `python -X utf8 -m pytest tests/test_hex_text.py -q` = 6 passed（两条各单跑亦 passed）。
+        # 两条现**随 tests/ 自动收集真跑**（不再 deselect）。判据来源＝经验标定（上述实跑读数）。
+        # 守卫 `tests/test_gate_deselect_justified.py` 断言「凡被 deselect 的用例必须真红」——
+        #   再想 deselect 一条已转绿的用例会当场判红（静默关掉回归保护即本件要防的缺陷）。
+        run: |
+          set -euo pipefail
+          pytest_args=(tests/ -v)
+          for t in $SCRIPT_TESTS; do
+            pytest_args+=(--ignore="$t")
+          done
+          python -X utf8 -m pytest "${pytest_args[@]}"
+
+      - name: 汇总（写入 Step Summary）
+        if: always()
+        run: |
+          {
+            echo "### gate · py${{ matrix.python-version }}${{ matrix.deps_label }}"
+            echo ""
+            echo "- 脚本式（逐件）：\`$SCRIPT_TESTS\`"
+            echo "- pytest 式：tests/ 自动收集（排除上述脚本式测试；无 deselect——曾登记的两条 known-fail 已转绿）"
+            echo "- 脑端 clone（MDCG_BRAIN_PYTHONPATH 前置）：**${{ steps.brain.outcome }}**"
+            echo "  - 非 success 时 test_brain_store 显式 SKIP——不是假绿，理由见上一步日志。"
+            echo "- 非阻断档（未测 Python 版本 / 未测依赖下界）：\`${{ matrix.experimental }}\`；钉死依赖：\`${{ matrix.pinned_deps }}\`"
+          } >> "$GITHUB_STEP_SUMMARY"

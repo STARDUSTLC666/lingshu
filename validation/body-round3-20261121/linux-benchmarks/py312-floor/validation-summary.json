@@ -1,0 +1,23 @@
+{
+  "source_sha": "f81ee3a9939f3dad7c277145766508c113742ba0",
+  "baseline_sha": "6b73082406d40a630a44cd68559c1f66b3652390",
+  "checks": [
+    "neighbors: 12 paired cases; raw timing/memory, hashes, correctness and axial controls",
+    "command: source/dependency snapshots; 2000 raw oracle cases; 7 timing and 8 memory/scaling cases"
+  ],
+  "errors": [],
+  "commands": 6,
+  "named_mutations_expected": 22,
+  "all_command_exit_codes_zero": true,
+  "named_mutations_validated": 22,
+  "source_unchanged": true,
+  "source_tracked_hashes_unchanged": true,
+  "source_identity_after": {
+    "head": "f81ee3a9939f3dad7c277145766508c113742ba0",
+    "tree": "5e6e6d45fdc9ef6ea885f4e4f38d56630089a751",
+    "status_porcelain_all": ""
+  },
+  "baseline_archive_unchanged": true,
+  "ok": true,
+  "scope": "two benchmarks and 22 mutations; full repository/brain gate separate"
+}

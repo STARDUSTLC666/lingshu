@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.133" timestamp="2026-11-20T18:16:45.379692+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_dynamics_command_reanchor" name="test_unrepresentable_physical_command_velocity_does_not_poison_the_entity" time="0.026"><failure message="Failed: DID NOT RAISE ValueError">tests/test_dynamics_command_reanchor.py:211: in test_unrepresentable_physical_command_velocity_does_not_poison_the_entity
+    with pytest.raises(ValueError, match="受控动力学初值"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError</failure></testcase></testsuite></testsuites>

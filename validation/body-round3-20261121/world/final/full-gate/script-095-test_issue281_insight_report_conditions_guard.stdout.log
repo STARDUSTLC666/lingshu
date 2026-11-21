@@ -1,0 +1,10 @@
+  PASS A01 分类条件按取值分组：pressure=low 出统计且判「确认」
+  PASS A02 refuted 单独计数，pending 不再混入被证伪样本
+  PASS A03 REFUTED 后 importance 回落到记录时初始值 0.7
+  PASS A04 回落目标取该洞见自己的初始值（0.5，不是硬编码 0.7）
+  PASS A05 布尔条件仍按真值分组（对照，不误改）
+  PASS A06 未显式提供的条件不进入统计（默认值不算 present）
+  PASS E01 钉子：分类条件集合
+  PASS E02 钉子：refuted 计数
+  PASS E03 钉子：记录初始重要度
+通过 9 / 失败 0

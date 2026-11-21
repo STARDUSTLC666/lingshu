@@ -1,0 +1,50 @@
+{
+  "body_sha256_utf8": "1e4ae30570cdaefc18bf5c5870b065a66ceabd17e52ae0ce79653cc854f7a834",
+  "body_utf8_bytes": 4391,
+  "comments": [
+    {
+      "id": "IC_kwDOU6uWo88AAAABaT9E7Q",
+      "body_sha256_utf8": "b14c958f286038c5e683a20b3eb27ceec3c6bed9e4c89331f44abc12a358d33f",
+      "body_utf8_bytes": 988,
+      "createdAt": "2026-10-08T13:16:45Z",
+      "url": "https://github.com/FuRongJun-1999/lingshu/issues/6#issuecomment-6060721389"
+    },
+    {
+      "id": "IC_kwDOU6uWo88AAAABaVqUfA",
+      "body_sha256_utf8": "79f432c51a5454e5c46cc6e6f8308872c310622b7a0657c86ec780ded9ad2e12",
+      "body_utf8_bytes": 3186,
+      "createdAt": "2026-10-08T14:50:18Z",
+      "url": "https://github.com/FuRongJun-1999/lingshu/issues/6#issuecomment-6062511228"
+    },
+    {
+      "id": "IC_kwDOU6uWo88AAAABarnSyw",
+      "body_sha256_utf8": "d9a12da57593ab9d0efc7a42c5298ed9ef86149c7898c90cc84840da5b1648d4",
+      "body_utf8_bytes": 765,
+      "createdAt": "2026-10-09T17:03:57Z",
+      "url": "https://github.com/FuRongJun-1999/lingshu/issues/6#issuecomment-6085530315"
+    },
+    {
+      "id": "IC_kwDOU6uWo88AAAABb6BB1A",
+      "body_sha256_utf8": "922c99391c86c700ea095862facdae0fff4b8a51f56d53632823e8dce05f035e",
+      "body_utf8_bytes": 5669,
+      "createdAt": "2026-10-14T11:54:21Z",
+      "url": "https://github.com/FuRongJun-1999/lingshu/issues/6#issuecomment-6167740884"
+    },
+    {
+      "id": "IC_kwDOU6uWo88AAAABcvPdMQ",
+      "body_sha256_utf8": "227ec77810c403a9848d4549ea446cc27e6025498c19bc25d45a9d35d658a3b3",
+      "body_utf8_bytes": 4762,
+      "createdAt": "2026-10-16T19:55:48Z",
+      "url": "https://github.com/FuRongJun-1999/lingshu/issues/6#issuecomment-6223551793"
+    },
+    {
+      "id": "IC_kwDOU6uWo88AAAABjEPakQ",
+      "body_sha256_utf8": "ec9af6f1aa8172afda3f4b10450495070edea9bd5cc1ba6c0aeedeaf15ba5f07",
+      "body_utf8_bytes": 1472,
+      "createdAt": "2026-11-05T02:42:00Z",
+      "url": "https://github.com/FuRongJun-1999/lingshu/issues/6#issuecomment-6648224401"
+    }
+  ],
+  "number": 6,
+  "title": "[nn/hex_cnn] image_to_grid 返回的 HexGrid 与实际采样坐标不是同一套（往返 0/40）；蜂窝性的证据不在特征链路上"
+}

@@ -1,0 +1,6 @@
+  PASS A01 非数值时间 -> 可读 TypeError（旧实现静默 []）
+  PASS A02 NaN 时间 -> TypeError
+  PASS A03 str layer -> 可读 TypeError（旧实现 AttributeError）
+  PASS A04 正对照：合法参数正常检索
+  PASS E01 钉子：可读文案
+通过 5 / 失败 0

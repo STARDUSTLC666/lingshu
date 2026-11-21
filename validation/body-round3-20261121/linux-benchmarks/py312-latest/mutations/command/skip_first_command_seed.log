@@ -1,0 +1,15 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_ test_first_command_initializes_a_physics_anchor_without_a_blank_resume_tick __
+tests/test_dynamics_command_reanchor.py:99: in test_first_command_initializes_a_physics_anchor_without_a_blank_resume_tick
+    close(e.pos, p, "COMMAND_FIRST_RESUME_WAS_ONLY_A_SEED")
+tests/test_dynamics_command_reanchor.py:43: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_FIRST_RESUME_WAS_ONLY_A_SEED', (64.0, 1000.0, 63.25), (64.0, 999.8, 62.5))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x78f67f48f1f0>)
+=========================== short test summary info ============================
+FAILED tests/test_dynamics_command_reanchor.py::test_first_command_initializes_a_physics_anchor_without_a_blank_resume_tick - AssertionError: ('COMMAND_FIRST_RESUME_WAS_ONLY_A_SEED', (64.0, 1000.0, 63.25), (64.0, 999.8, 62.5))
+assert False
+ +  where False = all(<generator object close.<locals>.<genexpr> at 0x78f67f48f1f0>)
+1 failed in 0.17s

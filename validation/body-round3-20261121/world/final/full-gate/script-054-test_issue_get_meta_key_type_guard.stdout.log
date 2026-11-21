@@ -1,0 +1,6 @@
+  PASS A01 int key -> 可读 TypeError（旧实现返回 {}）
+  PASS A02 空串 key -> TypeError
+  PASS A03 正对照：指定 key 正常读
+  PASS A04 正对照：None 读全部含 k1
+  PASS E01 钉子：可读文案
+通过 5 / 失败 0

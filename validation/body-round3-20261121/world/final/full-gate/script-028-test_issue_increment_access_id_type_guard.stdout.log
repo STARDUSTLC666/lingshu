@@ -1,0 +1,5 @@
+  PASS A01 int node_id -> 可读 TypeError（旧实现静默 None）
+  PASS A02 None -> 可读 TypeError
+  PASS A03 正对照：合法 id 不抛异常
+  PASS E01 钉子：可读文案
+通过 4 / 失败 0

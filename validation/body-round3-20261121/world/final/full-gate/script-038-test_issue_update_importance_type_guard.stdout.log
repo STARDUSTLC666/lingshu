@@ -1,0 +1,6 @@
+  PASS A01 str delta -> 可读 TypeError
+  PASS A02 None -> 可读 TypeError
+  PASS A03 NaN -> TypeError
+  PASS A04 正对照：合法 delta 不抛异常
+  PASS E01 钉子：可读文案
+通过 5 / 失败 0

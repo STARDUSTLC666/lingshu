@@ -1,0 +1,181 @@
+{
+  "scope": "two new contributions; previous twelve preserved; continuous goal active",
+  "frozen_source": "f81ee3a9939f3dad7c277145766508c113742ba0",
+  "pr_heads": {
+    "1481": "4a352249ef6db7975353b84bc640712d46f7181b",
+    "1482": "bd208a379e44497e9f35fdc145838abb19e6d313"
+  },
+  "new_guards": 91,
+  "named_mutants": 22,
+  "combined_scoped_guards": 256,
+  "exact_pr_ci": {
+    "1481": {
+      "head": "4a352249ef6db7975353b84bc640712d46f7181b",
+      "gate_counts": [
+        {
+          "passed": 5690,
+          "failed": 0,
+          "skipped": 40,
+          "errors": 0,
+          "xfailed": 0,
+          "xpassed": 0,
+          "subtests_passed": 98
+        },
+        {
+          "passed": 5690,
+          "failed": 0,
+          "skipped": 40,
+          "errors": 0,
+          "xfailed": 0,
+          "xpassed": 0,
+          "subtests_passed": 98
+        },
+        {
+          "passed": 5690,
+          "failed": 0,
+          "skipped": 40,
+          "errors": 0,
+          "xfailed": 0,
+          "xpassed": 0,
+          "subtests_passed": 98
+        }
+      ],
+      "all_verified_success": true
+    },
+    "1482": {
+      "head": "bd208a379e44497e9f35fdc145838abb19e6d313",
+      "gate_counts": [
+        {
+          "passed": 5721,
+          "failed": 0,
+          "skipped": 40,
+          "errors": 0,
+          "xfailed": 0,
+          "xpassed": 0,
+          "subtests_passed": 98
+        },
+        {
+          "passed": 5721,
+          "failed": 0,
+          "skipped": 40,
+          "errors": 0,
+          "xfailed": 0,
+          "xpassed": 0,
+          "subtests_passed": 98
+        },
+        {
+          "passed": 5721,
+          "failed": 0,
+          "skipped": 40,
+          "errors": 0,
+          "xfailed": 0,
+          "xpassed": 0,
+          "subtests_passed": 98
+        }
+      ],
+      "all_verified_success": true
+    },
+    "combined": {
+      "head": "f81ee3a9939f3dad7c277145766508c113742ba0",
+      "gate_counts": [
+        {
+          "passed": 5918,
+          "failed": 0,
+          "skipped": 40,
+          "errors": 0,
+          "xfailed": 0,
+          "xpassed": 0,
+          "subtests_passed": 98
+        },
+        {
+          "passed": 5918,
+          "failed": 0,
+          "skipped": 40,
+          "errors": 0,
+          "xfailed": 0,
+          "xpassed": 0,
+          "subtests_passed": 98
+        },
+        {
+          "passed": 5918,
+          "failed": 0,
+          "skipped": 40,
+          "errors": 0,
+          "xfailed": 0,
+          "xpassed": 0,
+          "subtests_passed": 98
+        }
+      ],
+      "all_verified_success": true
+    }
+  },
+  "windows_complete_gate": {
+    "status": "complete",
+    "frozen_source": "f81ee3a9939f3dad7c277145766508c113742ba0",
+    "gate_ok": false,
+    "pytest_exit_code": 1,
+    "failed_tests": [
+      {
+        "test": "tests.test_issue498_atomic_write_perm_symlink_guard::test_p1_符号链接量具能力探测",
+        "kind": "failure",
+        "message": "AssertionError: P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核",
+        "detail": "tests\\test_issue498_atomic_write_perm_symlink_guard.py:202: in test_p1_符号链接量具能力探测\n    assert POSIX, \"P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核\"\n           ^^^^^\nE   AssertionError: P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核"
+      }
+    ],
+    "junit_totals": [
+      {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "1",
+        "skipped": "24",
+        "tests": "6056",
+        "time": "1231.628",
+        "timestamp": "2026-11-21T02:00:01.126144+08:00",
+        "hostname": "STARDUST"
+      }
+    ],
+    "scripts": 102
+  },
+  "linux_benchmark": {
+    "status": "complete and independently content-audited",
+    "run_id": 44790156130,
+    "metadata_head": "7d898378c84bdd125ed510cc749bef119880f3a8",
+    "source_head": "f81ee3a9939f3dad7c277145766508c113742ba0",
+    "source_tree": "5e6e6d45fdc9ef6ea885f4e4f38d56630089a751",
+    "artifact_contents_validated": true,
+    "three_environments": [
+      {
+        "environment": "py312-floor",
+        "artifact_id": 14657340040,
+        "artifact_name": "body-round3-py312-floor-44790156130-1",
+        "api_zip_sha256": "cceda0a0f4b091bcc9db3221b82ccaaf4d091280fbb7c7b17c39afed85b185c8",
+        "api_zip_bytes": 901498,
+        "indexed_files": 84,
+        "zip_entries": 86,
+        "driver_log_excluded_from_inner_index": true
+      },
+      {
+        "environment": "py312-latest",
+        "artifact_id": 14656347957,
+        "artifact_name": "body-round3-py312-latest-44790156130-1",
+        "api_zip_sha256": "7ca584cf85adf2739bdef348b00d9bbf346480540aff75ccb8a2e52231dfd041",
+        "api_zip_bytes": 901031,
+        "indexed_files": 83,
+        "zip_entries": 85,
+        "driver_log_excluded_from_inner_index": true
+      },
+      {
+        "environment": "py313-latest",
+        "artifact_id": 14656278047,
+        "artifact_name": "body-round3-py313-latest-44790156130-1",
+        "api_zip_sha256": "02b929f60ab6c04eee0d807e499e3e2dd7c933afa70085986b16034c99709f57",
+        "api_zip_bytes": 901026,
+        "indexed_files": 83,
+        "zip_entries": 85,
+        "driver_log_excluded_from_inner_index": true
+      }
+    ],
+    "independent_report": "benchmark-independent-audit/REPORT.md"
+  },
+  "intake_publication": "original intake receipts appended separately; no self-grading or settlement"
+}

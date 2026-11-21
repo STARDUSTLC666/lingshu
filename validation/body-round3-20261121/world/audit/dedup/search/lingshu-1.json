@@ -1,0 +1,29 @@
+{
+  "total_count": 2,
+  "incomplete_results": false,
+  "items": [
+    {
+      "repository_url": "https://api.github.com/repos/FuRongJun-1999/lingshu",
+      "html_url": "https://github.com/FuRongJun-1999/lingshu/pull/1143",
+      "number": 1143,
+      "title": "fix(world): scene_simulator 三处读数失真与三处输入校验收口（lingshu #1135/#1136）",
+      "state": "closed",
+      "comments": 0,
+      "created_at": "2026-10-29T13:13:43Z",
+      "updated_at": "2026-10-29T14:16:17Z",
+      "closed_at": "2026-10-29T14:16:16Z"
+    },
+    {
+      "repository_url": "https://api.github.com/repos/FuRongJun-1999/lingshu",
+      "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/704",
+      "number": 704,
+      "title": "Environment(gravity=0) 的零重力模式不可达：本层文档写“0 = 失重”并收下，内核 make_environment 要求 gravity 须 > 0",
+      "state": "closed",
+      "comments": 5,
+      "created_at": "2026-10-15T23:25:54Z",
+      "updated_at": "2026-10-16T00:53:39Z",
+      "closed_at": "2026-10-15T23:58:45Z"
+    }
+  ],
+  "search_type": "lexical"
+}

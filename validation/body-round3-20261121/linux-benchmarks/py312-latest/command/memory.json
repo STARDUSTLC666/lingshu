@@ -1,0 +1,706 @@
+{
+  "baseline": "6b73082406d40a630a44cd68559c1f66b3652390",
+  "python": "3.12.16",
+  "platform": "Linux-7.0.0-1020-azure-x86_64-with-glibc2.43",
+  "timer": {
+    "implementation": "clock_gettime(CLOCK_MONOTONIC)",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution": 1e-09
+  },
+  "source_sha256_lf": {
+    "baseline": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151",
+    "fixed": "7f33caeaae450fe46cc7e8ae465e0302b0f2063e1d70788f41402d8d75e5350a"
+  },
+  "benchmark_sha256_lf": "1c4e039932777a8399c9d26dbec18503c8cc8f48fabe18a4091b4e7c8d41e303",
+  "unchanged_dependency_sha256_lf": {
+    "lingshu/world/physics.py": "bfb46c186fc51c92e8009d3a9de6ba5c07cdf082f4d509d6c6bf0c1c6721f6c6",
+    "lingshu/world/coord_contract.py": "2393d826d520f340be1e73b6f3ec0d85a7df4afff70460478663cd94a8dd1d29"
+  },
+  "method": "same process randomized adjacent pairs seed424242; one warmup per case+variant;11 measured pairs default; setup/import/hash excluded from timing; GC disabled equally for timing; independent separate tracemalloc includes scene setup,3 repeats per size; diagnostics then drained for retained-state reading; no timing pass threshold",
+  "ticks": 400,
+  "repeats": 11,
+  "mode": "memory",
+  "memory": [
+    {
+      "case": "kinematic_commands",
+      "entities": 64,
+      "ticks": 400,
+      "readings": {
+        "baseline": [
+          {
+            "current_bytes": 10792136,
+            "peak_bytes": 10823632,
+            "after_drain_bytes": 55024,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 0
+          },
+          {
+            "current_bytes": 10792088,
+            "peak_bytes": 10823584,
+            "after_drain_bytes": 54976,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 0
+          },
+          {
+            "current_bytes": 10792032,
+            "peak_bytes": 10823528,
+            "after_drain_bytes": 54920,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 0
+          }
+        ],
+        "fixed": [
+          {
+            "current_bytes": 10792128,
+            "peak_bytes": 10823624,
+            "after_drain_bytes": 55016,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 0
+          },
+          {
+            "current_bytes": 10792096,
+            "peak_bytes": 10823592,
+            "after_drain_bytes": 54984,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 0
+          },
+          {
+            "current_bytes": 10792048,
+            "peak_bytes": 10823544,
+            "after_drain_bytes": 54936,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 0
+          }
+        ]
+      },
+      "order": [
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ]
+      ],
+      "median_current_bytes": {
+        "baseline": 10792088,
+        "fixed": 10792096
+      },
+      "median_peak_bytes": {
+        "baseline": 10823584,
+        "fixed": 10823592
+      },
+      "median_after_drain_bytes": {
+        "baseline": 54976,
+        "fixed": 54984
+      }
+    },
+    {
+      "case": "kinematic_commands",
+      "entities": 64,
+      "ticks": 4000,
+      "readings": {
+        "baseline": [
+          {
+            "current_bytes": 49944856,
+            "peak_bytes": 49980888,
+            "after_drain_bytes": 59632,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 0
+          },
+          {
+            "current_bytes": 49944816,
+            "peak_bytes": 49980848,
+            "after_drain_bytes": 59592,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 0
+          },
+          {
+            "current_bytes": 49944776,
+            "peak_bytes": 49980808,
+            "after_drain_bytes": 59552,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 0
+          }
+        ],
+        "fixed": [
+          {
+            "current_bytes": 49944864,
+            "peak_bytes": 49980896,
+            "after_drain_bytes": 59640,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 0
+          },
+          {
+            "current_bytes": 49944824,
+            "peak_bytes": 49980856,
+            "after_drain_bytes": 59600,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 0
+          },
+          {
+            "current_bytes": 49944784,
+            "peak_bytes": 49980816,
+            "after_drain_bytes": 59560,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 0
+          }
+        ]
+      },
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ]
+      ],
+      "median_current_bytes": {
+        "baseline": 49944816,
+        "fixed": 49944824
+      },
+      "median_peak_bytes": {
+        "baseline": 49980848,
+        "fixed": 49980856
+      },
+      "median_after_drain_bytes": {
+        "baseline": 59592,
+        "fixed": 59600
+      }
+    },
+    {
+      "case": "dynamics_commands",
+      "entities": 64,
+      "ticks": 400,
+      "readings": {
+        "baseline": [
+          {
+            "current_bytes": 10829752,
+            "peak_bytes": 10865000,
+            "after_drain_bytes": 92640,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 10829696,
+            "peak_bytes": 10864944,
+            "after_drain_bytes": 92584,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 10829656,
+            "peak_bytes": 10864904,
+            "after_drain_bytes": 92544,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          }
+        ],
+        "fixed": [
+          {
+            "current_bytes": 10827176,
+            "peak_bytes": 10871720,
+            "after_drain_bytes": 90064,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 10827144,
+            "peak_bytes": 10871688,
+            "after_drain_bytes": 90032,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 10827104,
+            "peak_bytes": 10871648,
+            "after_drain_bytes": 89992,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          }
+        ]
+      },
+      "order": [
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ]
+      ],
+      "median_current_bytes": {
+        "baseline": 10829696,
+        "fixed": 10827144
+      },
+      "median_peak_bytes": {
+        "baseline": 10864944,
+        "fixed": 10871688
+      },
+      "median_after_drain_bytes": {
+        "baseline": 92584,
+        "fixed": 90032
+      }
+    },
+    {
+      "case": "dynamics_commands",
+      "entities": 64,
+      "ticks": 4000,
+      "readings": {
+        "baseline": [
+          {
+            "current_bytes": 49982504,
+            "peak_bytes": 50018536,
+            "after_drain_bytes": 97280,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 49982488,
+            "peak_bytes": 50018520,
+            "after_drain_bytes": 97264,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 49982480,
+            "peak_bytes": 50018512,
+            "after_drain_bytes": 97256,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          }
+        ],
+        "fixed": [
+          {
+            "current_bytes": 49979936,
+            "peak_bytes": 50016304,
+            "after_drain_bytes": 94712,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 49979928,
+            "peak_bytes": 50016296,
+            "after_drain_bytes": 94704,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 49979920,
+            "peak_bytes": 50016288,
+            "after_drain_bytes": 94696,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          }
+        ]
+      },
+      "order": [
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ]
+      ],
+      "median_current_bytes": {
+        "baseline": 49982488,
+        "fixed": 49979928
+      },
+      "median_peak_bytes": {
+        "baseline": 50018520,
+        "fixed": 50016296
+      },
+      "median_after_drain_bytes": {
+        "baseline": 97264,
+        "fixed": 94704
+      }
+    },
+    {
+      "case": "dynamics_resume_64",
+      "entities": 64,
+      "ticks": 400,
+      "readings": {
+        "baseline": [
+          {
+            "current_bytes": 10083624,
+            "peak_bytes": 10332168,
+            "after_drain_bytes": 167248,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 10083624,
+            "peak_bytes": 10332168,
+            "after_drain_bytes": 167248,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 10083624,
+            "peak_bytes": 10332168,
+            "after_drain_bytes": 167248,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          }
+        ],
+        "fixed": [
+          {
+            "current_bytes": 10081064,
+            "peak_bytes": 10329680,
+            "after_drain_bytes": 173392,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 10081064,
+            "peak_bytes": 10329680,
+            "after_drain_bytes": 173392,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 10081064,
+            "peak_bytes": 10329680,
+            "after_drain_bytes": 173392,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          }
+        ]
+      },
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ]
+      ],
+      "median_current_bytes": {
+        "baseline": 10083624,
+        "fixed": 10081064
+      },
+      "median_peak_bytes": {
+        "baseline": 10332168,
+        "fixed": 10329680
+      },
+      "median_after_drain_bytes": {
+        "baseline": 167248,
+        "fixed": 173392
+      }
+    },
+    {
+      "case": "dynamics_resume_64",
+      "entities": 64,
+      "ticks": 4000,
+      "readings": {
+        "baseline": [
+          {
+            "current_bytes": 50925576,
+            "peak_bytes": 51186312,
+            "after_drain_bytes": 172000,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 50925576,
+            "peak_bytes": 51186312,
+            "after_drain_bytes": 172000,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 50925576,
+            "peak_bytes": 51186312,
+            "after_drain_bytes": 172000,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          }
+        ],
+        "fixed": [
+          {
+            "current_bytes": 50923016,
+            "peak_bytes": 51184536,
+            "after_drain_bytes": 178144,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 50923016,
+            "peak_bytes": 51184536,
+            "after_drain_bytes": 178144,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 50923016,
+            "peak_bytes": 51184536,
+            "after_drain_bytes": 178144,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          }
+        ]
+      },
+      "order": [
+        [
+          "fixed",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ]
+      ],
+      "median_current_bytes": {
+        "baseline": 50925576,
+        "fixed": 50923016
+      },
+      "median_peak_bytes": {
+        "baseline": 51186312,
+        "fixed": 51184536
+      },
+      "median_after_drain_bytes": {
+        "baseline": 172000,
+        "fixed": 178144
+      }
+    },
+    {
+      "case": "dynamics_sparse",
+      "entities": 64,
+      "ticks": 400,
+      "readings": {
+        "baseline": [
+          {
+            "current_bytes": 9346344,
+            "peak_bytes": 9594840,
+            "after_drain_bytes": 167248,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 9346344,
+            "peak_bytes": 9594840,
+            "after_drain_bytes": 167248,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 9346344,
+            "peak_bytes": 9594840,
+            "after_drain_bytes": 167248,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          }
+        ],
+        "fixed": [
+          {
+            "current_bytes": 9343784,
+            "peak_bytes": 9592352,
+            "after_drain_bytes": 173392,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 9343784,
+            "peak_bytes": 9592352,
+            "after_drain_bytes": 173392,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 9343784,
+            "peak_bytes": 9592352,
+            "after_drain_bytes": 173392,
+            "history_length": 400,
+            "behavior_log_length": 25600,
+            "physics_states": 64
+          }
+        ]
+      },
+      "order": [
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ]
+      ],
+      "median_current_bytes": {
+        "baseline": 9346344,
+        "fixed": 9343784
+      },
+      "median_peak_bytes": {
+        "baseline": 9594840,
+        "fixed": 9592352
+      },
+      "median_after_drain_bytes": {
+        "baseline": 167248,
+        "fixed": 173392
+      }
+    },
+    {
+      "case": "dynamics_sparse",
+      "entities": 64,
+      "ticks": 4000,
+      "readings": {
+        "baseline": [
+          {
+            "current_bytes": 51712136,
+            "peak_bytes": 51956832,
+            "after_drain_bytes": 172000,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 51712136,
+            "peak_bytes": 51956832,
+            "after_drain_bytes": 172000,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 51712136,
+            "peak_bytes": 51956832,
+            "after_drain_bytes": 172000,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          }
+        ],
+        "fixed": [
+          {
+            "current_bytes": 51709576,
+            "peak_bytes": 51954344,
+            "after_drain_bytes": 178144,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 51709576,
+            "peak_bytes": 51954344,
+            "after_drain_bytes": 178144,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          },
+          {
+            "current_bytes": 51709576,
+            "peak_bytes": 51954344,
+            "after_drain_bytes": 178144,
+            "history_length": 4000,
+            "behavior_log_length": 50000,
+            "physics_states": 64
+          }
+        ]
+      },
+      "order": [
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "baseline",
+          "fixed"
+        ],
+        [
+          "fixed",
+          "baseline"
+        ]
+      ],
+      "median_current_bytes": {
+        "baseline": 51712136,
+        "fixed": 51709576
+      },
+      "median_peak_bytes": {
+        "baseline": 51956832,
+        "fixed": 51954344
+      },
+      "median_after_drain_bytes": {
+        "baseline": 172000,
+        "fixed": 178144
+      }
+    }
+  ]
+}

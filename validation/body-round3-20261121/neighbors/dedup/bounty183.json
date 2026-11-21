@@ -1,0 +1,22 @@
+{
+  "body_sha256_utf8": "b9545f7d5196cbf143f8df091c8e4c3499d73a1c4acc17e0c7e52fef49e5335d",
+  "body_utf8_bytes": 15242,
+  "comments": [
+    {
+      "id": "IC_kwDOVDPPg88AAAABb-HFdw",
+      "body_sha256_utf8": "1f481fdd6725f72d78c152a78507f71f69d67e8b3ac46177410fc29574e6f98f",
+      "body_utf8_bytes": 3690,
+      "createdAt": "2026-10-14T15:33:28Z",
+      "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/183#issuecomment-6172034423"
+    },
+    {
+      "id": "IC_kwDOVDPPg88AAAABb-vx8Q",
+      "body_sha256_utf8": "51fd73e4cb08c67e158df8bff518e8d15e4448e02e09260ea2355d5edb6a6faa",
+      "body_utf8_bytes": 1930,
+      "createdAt": "2026-10-14T16:06:15Z",
+      "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/183#issuecomment-6172701169"
+    }
+  ],
+  "number": 183,
+  "title": "【贡献申报】lingshu 7 条已判定「成立」的缺陷报告（nn/core/world/intake）—— 附 cb3a6ea 复跑状态"
+}

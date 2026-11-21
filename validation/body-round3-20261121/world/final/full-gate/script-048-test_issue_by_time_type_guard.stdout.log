@@ -1,0 +1,5 @@
+  PASS A01 非数值时间 -> 可读 TypeError（旧实现静默 []）
+  PASS A02 str limit -> 可读 TypeError（旧实现 IntegrityError）
+  PASS A03 正对照：None 边界正常全量
+  PASS E01 钉子：可读文案
+通过 4 / 失败 0

@@ -1,0 +1,18 @@
+{
+  "total_count": 1,
+  "incomplete_results": false,
+  "items": [
+    {
+      "repository_url": "https://api.github.com/repos/FuRongJun-1999/lingshu",
+      "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/703",
+      "number": 703,
+      "title": "[world/physics] sweep_aabb 在「仅 t=0 相切且随后相离」时误报 hit/toi=0，scene_simulator 据此把动力学实体冻在接触点（两条通路，200 tick 不恢复）",
+      "state": "closed",
+      "comments": 3,
+      "created_at": "2026-10-15T21:28:22Z",
+      "updated_at": "2026-10-15T23:18:59Z",
+      "closed_at": "2026-10-15T22:24:25Z"
+    }
+  ],
+  "search_type": "lexical"
+}

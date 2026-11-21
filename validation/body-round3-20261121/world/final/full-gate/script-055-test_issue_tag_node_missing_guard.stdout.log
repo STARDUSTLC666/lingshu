@@ -1,0 +1,5 @@
+  PASS A01 不存在的节点 -> 可读 LookupError（旧实现静默 None）
+  PASS A02 非 str node_id -> 可读 TypeError
+  PASS A03 正对照：合法节点正常打标签
+  PASS E01 钉子：可读文案
+通过 4 / 失败 0

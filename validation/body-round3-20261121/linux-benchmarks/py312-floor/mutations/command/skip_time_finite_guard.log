@@ -1,0 +1,10 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____ test_unrepresentable_command_reference_time_does_not_poison_the_entity ____
+tests/test_dynamics_command_reanchor.py:253: in test_unrepresentable_command_reference_time_does_not_poison_the_entity
+    with pytest.raises(ValueError, match="受控动力学初值"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+=========================== short test summary info ============================
+FAILED tests/test_dynamics_command_reanchor.py::test_unrepresentable_command_reference_time_does_not_poison_the_entity - Failed: DID NOT RAISE ValueError
+1 failed in 0.13s

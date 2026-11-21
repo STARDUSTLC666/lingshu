@@ -1,0 +1,193 @@
+{
+  "python": "3.12.16",
+  "platform": "Linux",
+  "sqlite": "3.46.1",
+  "baseline": "6b73082406d40a630a44cd68559c1f66b3652390",
+  "guard_sha256": "51be981c9caf48c96703089d7cf5919614c443bd553c7842976082b91b4a655a",
+  "records": [
+    {
+      "case": "fixed",
+      "ok": true,
+      "returncode": 0,
+      "passed": 30,
+      "failed_tests": [],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [],
+      "expected_assertion": "",
+      "pytest_summary": "30 passed in 0.16s",
+      "source_sha256": {
+        "lingshu/nn/hex_cnn.py": "5671ae505f6dd026fc4fac7cb50ca02ca76ca972a51292f2dc50b5c7ae37efee"
+      }
+    },
+    {
+      "case": "baseline",
+      "ok": true,
+      "returncode": 1,
+      "passed": 11,
+      "failed_tests": [
+        "test_image_to_grid_exposes_correct_odd_r_neighbors[landscape]",
+        "test_image_to_grid_exposes_correct_odd_r_neighbors[portrait]",
+        "test_image_to_grid_exposes_correct_odd_r_neighbors[square]",
+        "test_neighbors_match_independent_cartesian_oracle[odd_r_offset-large_origin]",
+        "test_neighbors_match_independent_cartesian_oracle[odd_r_offset-large_size]",
+        "test_neighbors_match_independent_cartesian_oracle[odd_r_offset-small]",
+        "test_neighbors_match_independent_cartesian_oracle[odd_r_offset-translated]",
+        "test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-one_column]",
+        "test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-one_row]",
+        "test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-rectangle]",
+        "test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-single]",
+        "test_odd_r_neighbors_keep_direction_order[both_negative_even]",
+        "test_odd_r_neighbors_keep_direction_order[both_negative_odd]",
+        "test_odd_r_neighbors_keep_direction_order[even]",
+        "test_odd_r_neighbors_keep_direction_order[negative_col_even]",
+        "test_odd_r_neighbors_keep_direction_order[negative_col_odd]",
+        "test_odd_r_neighbors_keep_direction_order[negative_even]",
+        "test_odd_r_neighbors_keep_direction_order[negative_odd]",
+        "test_odd_r_neighbors_keep_direction_order[odd]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_odd_r_neighbors_keep_direction_order[even]",
+        "test_odd_r_neighbors_keep_direction_order[odd]",
+        "test_odd_r_neighbors_keep_direction_order[negative_col_even]",
+        "test_odd_r_neighbors_keep_direction_order[negative_col_odd]",
+        "test_odd_r_neighbors_keep_direction_order[negative_even]",
+        "test_odd_r_neighbors_keep_direction_order[negative_odd]",
+        "test_odd_r_neighbors_keep_direction_order[both_negative_even]",
+        "test_odd_r_neighbors_keep_direction_order[both_negative_odd]",
+        "test_neighbors_match_independent_cartesian_oracle[odd_r_offset-small]",
+        "test_neighbors_match_independent_cartesian_oracle[odd_r_offset-translated]",
+        "test_neighbors_match_independent_cartesian_oracle[odd_r_offset-large_origin]",
+        "test_neighbors_match_independent_cartesian_oracle[odd_r_offset-large_size]",
+        "test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-single]",
+        "test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-one_row]",
+        "test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-one_column]",
+        "test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-rectangle]",
+        "test_image_to_grid_exposes_correct_odd_r_neighbors[square]",
+        "test_image_to_grid_exposes_correct_odd_r_neighbors[landscape]",
+        "test_image_to_grid_exposes_correct_odd_r_neighbors[portrait]"
+      ],
+      "expected_assertion": "",
+      "pytest_summary": "19 failed, 11 passed in 0.21s",
+      "source_sha256": {
+        "lingshu/nn/hex_cnn.py": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081"
+      }
+    },
+    {
+      "case": "ignore_offset_mode",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_odd_r_neighbors_keep_direction_order[even]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_odd_r_neighbors_keep_direction_order[even]"
+      ],
+      "expected_assertion": "odd-r neighbors must follow E, NE, NW, W, SW, SE",
+      "pytest_summary": "1 failed in 0.10s",
+      "source_sha256": {
+        "lingshu/nn/hex_cnn.py": "2ed0e61a77b0030e337aedcb74897dbbaacbddc636b19a8a4fdc31fdaadeeabb"
+      }
+    },
+    {
+      "case": "reverse_offset_correction",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_odd_r_neighbors_keep_direction_order[even]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_odd_r_neighbors_keep_direction_order[even]"
+      ],
+      "expected_assertion": "odd-r neighbors must follow E, NE, NW, W, SW, SE",
+      "pytest_summary": "1 failed in 0.10s",
+      "source_sha256": {
+        "lingshu/nn/hex_cnn.py": "f2cbeae39ab58ee363b7d7a75316d44eb96315595a8cbbb98b4544f4ae7630d7"
+      }
+    },
+    {
+      "case": "truncate_negative_rows",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_odd_r_neighbors_keep_direction_order[negative_even]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_odd_r_neighbors_keep_direction_order[negative_even]"
+      ],
+      "expected_assertion": "odd-r neighbors must follow E, NE, NW, W, SW, SE",
+      "pytest_summary": "1 failed in 0.10s",
+      "source_sha256": {
+        "lingshu/nn/hex_cnn.py": "6af0d30337869b74a9a6adcc2a4438a09a2342268148b21d5d7ed48cb1a4cb64"
+      }
+    },
+    {
+      "case": "reverse_direction_order",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_odd_r_neighbors_keep_direction_order[odd]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_odd_r_neighbors_keep_direction_order[odd]"
+      ],
+      "expected_assertion": "odd-r neighbors must follow E, NE, NW, W, SW, SE",
+      "pytest_summary": "1 failed in 0.10s",
+      "source_sha256": {
+        "lingshu/nn/hex_cnn.py": "63d1695c4c25b5df024105df2fa2e1d485bf5bd78b5c9b7cd22be1614b3d2967"
+      }
+    },
+    {
+      "case": "clip_offset_neighbors_to_shape",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-single]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-single]"
+      ],
+      "expected_assertion": "neighbors must return six cells before in_bounds filtering",
+      "pytest_summary": "1 failed in 0.10s",
+      "source_sha256": {
+        "lingshu/nn/hex_cnn.py": "9045ccf7194aca5f04c2c9a0b9c59548cd0bcbef107579e41604f26f8b74610c"
+      }
+    },
+    {
+      "case": "apply_offset_correction_to_axial",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_axial_neighbor_list_and_order_are_unchanged[default]"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_axial_neighbor_list_and_order_are_unchanged[default]"
+      ],
+      "expected_assertion": "axial neighbor list and direction order must remain unchanged",
+      "pytest_summary": "1 failed in 0.10s",
+      "source_sha256": {
+        "lingshu/nn/hex_cnn.py": "7a7c8e39d797b42967aedf93f37f3d6c7d630077eaa55521ce003c3d3604f812"
+      }
+    }
+  ]
+}

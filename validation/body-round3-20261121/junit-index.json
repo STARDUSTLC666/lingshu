@@ -1,0 +1,2240 @@
+{
+  "policy": "Overlapping fixed/baseline/mutant/CI/supplementary runs are not additive.",
+  "runs": [
+    {
+      "artifact": "integration-independent/root-command-guards.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "61",
+          "time": "0.675",
+          "timestamp": "2026-11-21T01:50:10.090535+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "integration-scoped/guards.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "256",
+          "time": "8.289",
+          "timestamp": "2026-11-21T02:00:17.243273+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "integration-windows/controlled_timing.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "4",
+          "time": "0.781",
+          "timestamp": "2026-11-21T02:20:33.665376+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "integration-windows/pytest.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "24",
+          "tests": "6056",
+          "time": "1231.628",
+          "timestamp": "2026-11-21T02:00:01.126144+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "58",
+          "skipped": "0",
+          "tests": "61",
+          "time": "0.696",
+          "timestamp": "2026-11-20T18:16:40.770588+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/drop_known_parameters.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.134",
+          "timestamp": "2026-11-20T18:16:46.175315+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/drop_physics_parameters.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.135",
+          "timestamp": "2026-11-20T18:16:44.577567+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/expose_physical_velocity_on_command_tick.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.136",
+          "timestamp": "2026-11-20T18:16:46.573286+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "61",
+          "time": "0.172",
+          "timestamp": "2026-11-20T18:16:40.320423+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/forget_physical_velocity_units.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.138",
+          "timestamp": "2026-11-20T18:16:42.554534+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/keep_old_momentum_on_stay.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.135",
+          "timestamp": "2026-11-20T18:16:44.175802+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/keep_old_position_anchor.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.135",
+          "timestamp": "2026-11-20T18:16:42.148732+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/keep_old_reference_time.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.134",
+          "timestamp": "2026-11-20T18:16:42.959193+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/mutate_previous_state.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.134",
+          "timestamp": "2026-11-20T18:16:44.981423+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/omit_command_reanchor.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.134",
+          "timestamp": "2026-11-20T18:16:41.743147+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/reanchor_kinematic_commands.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.133",
+          "timestamp": "2026-11-20T18:16:46.974936+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/round_endpoint_displacement_again.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.134",
+          "timestamp": "2026-11-20T18:16:47.374517+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/seed_from_requested_step.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.136",
+          "timestamp": "2026-11-20T18:16:43.363813+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/skip_first_command_seed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.136",
+          "timestamp": "2026-11-20T18:16:43.772183+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/skip_time_finite_guard.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.132",
+          "timestamp": "2026-11-20T18:16:45.777509+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/skip_velocity_finite_guard.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.133",
+          "timestamp": "2026-11-20T18:16:45.379692+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/command/turn_stay_quantization_into_momentum.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.133",
+          "timestamp": "2026-11-20T18:16:47.774622+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/neighbors/apply_offset_correction_to_axial.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.104",
+          "timestamp": "2026-11-20T18:10:48.842372+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/neighbors/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "19",
+          "skipped": "0",
+          "tests": "30",
+          "time": "0.214",
+          "timestamp": "2026-11-20T18:10:46.470386+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/neighbors/clip_offset_neighbors_to_shape.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.105",
+          "timestamp": "2026-11-20T18:10:48.465373+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/neighbors/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "30",
+          "time": "0.163",
+          "timestamp": "2026-11-20T18:10:46.036052+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/neighbors/ignore_offset_mode.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.104",
+          "timestamp": "2026-11-20T18:10:46.962623+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/neighbors/reverse_direction_order.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.107",
+          "timestamp": "2026-11-20T18:10:48.088581+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/neighbors/reverse_offset_correction.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.103",
+          "timestamp": "2026-11-20T18:10:47.337560+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-floor/mutations/neighbors/truncate_negative_rows.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.103",
+          "timestamp": "2026-11-20T18:10:47.712533+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "58",
+          "skipped": "0",
+          "tests": "61",
+          "time": "0.777",
+          "timestamp": "2026-11-20T18:17:41.380343+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/drop_known_parameters.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.156",
+          "timestamp": "2026-11-20T18:17:47.630059+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/drop_physics_parameters.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.157",
+          "timestamp": "2026-11-20T18:17:45.767783+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/expose_physical_velocity_on_command_tick.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.159",
+          "timestamp": "2026-11-20T18:17:48.084717+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "61",
+          "time": "0.210",
+          "timestamp": "2026-11-20T18:17:40.863717+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/forget_physical_velocity_units.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.157",
+          "timestamp": "2026-11-20T18:17:43.405664+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/keep_old_momentum_on_stay.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.164",
+          "timestamp": "2026-11-20T18:17:45.288186+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/keep_old_position_anchor.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.171",
+          "timestamp": "2026-11-20T18:17:42.920870+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/keep_old_reference_time.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.156",
+          "timestamp": "2026-11-20T18:17:43.860982+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/mutate_previous_state.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.157",
+          "timestamp": "2026-11-20T18:17:46.226426+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/omit_command_reanchor.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.156",
+          "timestamp": "2026-11-20T18:17:42.463377+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/reanchor_kinematic_commands.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.158",
+          "timestamp": "2026-11-20T18:17:48.545985+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/round_endpoint_displacement_again.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.156",
+          "timestamp": "2026-11-20T18:17:49.003460+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/seed_from_requested_step.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.162",
+          "timestamp": "2026-11-20T18:17:44.327075+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/skip_first_command_seed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.178",
+          "timestamp": "2026-11-20T18:17:44.794399+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/skip_time_finite_guard.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.166",
+          "timestamp": "2026-11-20T18:17:47.159884+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/skip_velocity_finite_guard.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.156",
+          "timestamp": "2026-11-20T18:17:46.681576+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/command/turn_stay_quantization_into_momentum.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.155",
+          "timestamp": "2026-11-20T18:17:49.459178+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/neighbors/apply_offset_correction_to_axial.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.119",
+          "timestamp": "2026-11-20T18:10:50.434420+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/neighbors/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "19",
+          "skipped": "0",
+          "tests": "30",
+          "time": "0.249",
+          "timestamp": "2026-11-20T18:10:47.750030+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/neighbors/clip_offset_neighbors_to_shape.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.121",
+          "timestamp": "2026-11-20T18:10:50.001179+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/neighbors/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "30",
+          "time": "0.181",
+          "timestamp": "2026-11-20T18:10:47.266701+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/neighbors/ignore_offset_mode.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.120",
+          "timestamp": "2026-11-20T18:10:48.305734+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/neighbors/reverse_direction_order.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.119",
+          "timestamp": "2026-11-20T18:10:49.581504+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/neighbors/reverse_offset_correction.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.120",
+          "timestamp": "2026-11-20T18:10:48.741363+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py312-latest/mutations/neighbors/truncate_negative_rows.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.120",
+          "timestamp": "2026-11-20T18:10:49.162211+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "58",
+          "skipped": "0",
+          "tests": "61",
+          "time": "0.817",
+          "timestamp": "2026-11-20T18:17:47.974918+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/drop_known_parameters.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.162",
+          "timestamp": "2026-11-20T18:17:54.357008+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/drop_physics_parameters.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.163",
+          "timestamp": "2026-11-20T18:17:52.452119+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/expose_physical_velocity_on_command_tick.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.165",
+          "timestamp": "2026-11-20T18:17:54.842461+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "61",
+          "time": "0.207",
+          "timestamp": "2026-11-20T18:17:47.456499+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/forget_physical_velocity_units.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.160",
+          "timestamp": "2026-11-20T18:17:50.064500+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/keep_old_momentum_on_stay.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.167",
+          "timestamp": "2026-11-20T18:17:51.966787+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/keep_old_position_anchor.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.168",
+          "timestamp": "2026-11-20T18:17:49.587212+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/keep_old_reference_time.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.159",
+          "timestamp": "2026-11-20T18:17:50.528805+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/mutate_previous_state.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.163",
+          "timestamp": "2026-11-20T18:17:52.925053+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/omit_command_reanchor.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.162",
+          "timestamp": "2026-11-20T18:17:49.111813+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/reanchor_kinematic_commands.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.166",
+          "timestamp": "2026-11-20T18:17:55.329964+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/round_endpoint_displacement_again.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.166",
+          "timestamp": "2026-11-20T18:17:55.810751+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/seed_from_requested_step.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.170",
+          "timestamp": "2026-11-20T18:17:50.994870+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/skip_first_command_seed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.165",
+          "timestamp": "2026-11-20T18:17:51.476438+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/skip_time_finite_guard.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.170",
+          "timestamp": "2026-11-20T18:17:53.882491+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/skip_velocity_finite_guard.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.160",
+          "timestamp": "2026-11-20T18:17:53.408806+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/command/turn_stay_quantization_into_momentum.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.163",
+          "timestamp": "2026-11-20T18:17:56.300397+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/neighbors/apply_offset_correction_to_axial.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.115",
+          "timestamp": "2026-11-20T18:10:57.045190+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/neighbors/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "19",
+          "skipped": "0",
+          "tests": "30",
+          "time": "0.260",
+          "timestamp": "2026-11-20T18:10:54.089960+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/neighbors/clip_offset_neighbors_to_shape.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.116",
+          "timestamp": "2026-11-20T18:10:56.595123+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/neighbors/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "30",
+          "time": "0.228",
+          "timestamp": "2026-11-20T18:10:53.514912+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/neighbors/ignore_offset_mode.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.119",
+          "timestamp": "2026-11-20T18:10:54.707132+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/neighbors/reverse_direction_order.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.121",
+          "timestamp": "2026-11-20T18:10:56.137046+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/neighbors/reverse_offset_correction.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.121",
+          "timestamp": "2026-11-20T18:10:55.184411+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "linux-benchmarks/py313-latest/mutations/neighbors/truncate_negative_rows.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.122",
+          "timestamp": "2026-11-20T18:10:55.654731+00:00",
+          "hostname": "runnervm0hi8g"
+        }
+      ]
+    },
+    {
+      "artifact": "neighbors/final/neighbors-adjacent.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "47",
+          "time": "6.209",
+          "timestamp": "2026-11-21T01:36:28.536410+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "neighbors/final/neighbors-lint.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "63",
+          "time": "65.406",
+          "timestamp": "2026-11-21T01:41:15.588401+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "neighbors/final/neighbors-replay/apply_offset_correction_to_axial.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.270",
+          "timestamp": "2026-11-21T01:36:34.872730+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "neighbors/final/neighbors-replay/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "19",
+          "skipped": "0",
+          "tests": "30",
+          "time": "0.418",
+          "timestamp": "2026-11-21T01:36:29.618726+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "neighbors/final/neighbors-replay/clip_offset_neighbors_to_shape.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.254",
+          "timestamp": "2026-11-21T01:36:34.031635+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "neighbors/final/neighbors-replay/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "30",
+          "time": "0.237",
+          "timestamp": "2026-11-21T01:36:28.828156+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "neighbors/final/neighbors-replay/ignore_offset_mode.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.266",
+          "timestamp": "2026-11-21T01:36:30.622113+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "neighbors/final/neighbors-replay/reverse_direction_order.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.263",
+          "timestamp": "2026-11-21T01:36:33.197456+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "neighbors/final/neighbors-replay/reverse_offset_correction.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.288",
+          "timestamp": "2026-11-21T01:36:31.441447+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "neighbors/final/neighbors-replay/truncate_negative_rows.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.259",
+          "timestamp": "2026-11-21T01:36:32.303483+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "neighbors/original04-guard-replay/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "19",
+          "skipped": "0",
+          "tests": "30",
+          "time": "0.413",
+          "timestamp": "2026-11-21T02:16:15.625772+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "neighbors/original04-guard-replay/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "30",
+          "time": "0.224",
+          "timestamp": "2026-11-21T02:16:14.813063+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/audit/neighbor-action-contract.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "88",
+          "time": "2.466",
+          "timestamp": "2026-11-21T01:20:06.931520+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/command-final-adjacent.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "340",
+          "time": "23.445",
+          "timestamp": "2026-11-21T01:43:58.239472+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/command-fixed-actual-endpoint.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "61",
+          "time": "0.709",
+          "timestamp": "2026-11-21T01:40:06.585613+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/full-gate/pytest.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "26",
+          "tests": "5859",
+          "time": "1268.206",
+          "timestamp": "2026-11-21T01:46:48.821166+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "58",
+          "skipped": "0",
+          "tests": "61",
+          "time": "1.069",
+          "timestamp": "2026-11-21T01:41:26.916957+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/drop_known_parameters.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.256",
+          "timestamp": "2026-11-21T01:41:37.309356+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/drop_physics_parameters.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.260",
+          "timestamp": "2026-11-21T01:41:34.082465+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/expose_physical_velocity_on_command_tick.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.260",
+          "timestamp": "2026-11-21T01:41:38.126399+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "61",
+          "time": "0.243",
+          "timestamp": "2026-11-21T01:41:26.114787+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/forget_physical_velocity_units.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.231",
+          "timestamp": "2026-11-21T01:41:30.061146+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/keep_old_momentum_on_stay.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.259",
+          "timestamp": "2026-11-21T01:41:33.271986+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/keep_old_position_anchor.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.232",
+          "timestamp": "2026-11-21T01:41:29.317614+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/keep_old_reference_time.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.261",
+          "timestamp": "2026-11-21T01:41:30.864985+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/mutate_previous_state.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.255",
+          "timestamp": "2026-11-21T01:41:34.902293+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/omit_command_reanchor.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.249",
+          "timestamp": "2026-11-21T01:41:28.536053+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/reanchor_kinematic_commands.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.267",
+          "timestamp": "2026-11-21T01:41:38.958706+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/round_endpoint_displacement_again.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.265",
+          "timestamp": "2026-11-21T01:41:39.797158+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/seed_from_requested_step.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.239",
+          "timestamp": "2026-11-21T01:41:31.691036+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/skip_first_command_seed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.251",
+          "timestamp": "2026-11-21T01:41:32.472058+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/skip_time_finite_guard.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.261",
+          "timestamp": "2026-11-21T01:41:36.474561+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/skip_velocity_finite_guard.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.243",
+          "timestamp": "2026-11-21T01:41:35.685782+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/final/mutations/turn_stay_quantization_into_momentum.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.233",
+          "timestamp": "2026-11-21T01:41:40.617245+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/command-adjacent.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "230",
+          "time": "12.503",
+          "timestamp": "2026-11-21T01:32:06.855224+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/command-baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "38",
+          "skipped": "0",
+          "tests": "41",
+          "time": "0.998",
+          "timestamp": "2026-11-21T01:24:37.835293+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/command-fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "51",
+          "time": "0.687",
+          "timestamp": "2026-11-21T01:28:54.871661+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/command-physics-broad.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "4",
+          "tests": "100",
+          "time": "6.861",
+          "timestamp": "2026-11-21T01:36:46.175207+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-first/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "48",
+          "skipped": "0",
+          "tests": "51",
+          "time": "0.858",
+          "timestamp": "2026-11-21T01:30:00.640955+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-first/drop_physics_parameters.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.225",
+          "timestamp": "2026-11-21T01:30:07.809172+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-first/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "51",
+          "time": "0.202",
+          "timestamp": "2026-11-21T01:29:59.828518+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-first/forget_physical_velocity_units.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.227",
+          "timestamp": "2026-11-21T01:30:03.683773+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-first/keep_old_momentum_on_stay.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.234",
+          "timestamp": "2026-11-21T01:30:07.003341+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-first/keep_old_position_anchor.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.227",
+          "timestamp": "2026-11-21T01:30:02.888472+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-first/keep_old_reference_time.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.238",
+          "timestamp": "2026-11-21T01:30:04.478651+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-first/mutate_previous_state.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.227",
+          "timestamp": "2026-11-21T01:30:08.609830+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-first/omit_command_reanchor.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.239",
+          "timestamp": "2026-11-21T01:30:02.074259+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-first/seed_from_requested_step.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.239",
+          "timestamp": "2026-11-21T01:30:05.287381+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-first/skip_first_command_seed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.278",
+          "timestamp": "2026-11-21T01:30:06.073447+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-first/skip_time_finite_guard.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.236",
+          "timestamp": "2026-11-21T01:30:10.171826+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-first/skip_velocity_finite_guard.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.234",
+          "timestamp": "2026-11-21T01:30:09.385556+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/baseline.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "48",
+          "skipped": "0",
+          "tests": "51",
+          "time": "0.857",
+          "timestamp": "2026-11-21T01:36:22.906796+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/drop_known_parameters.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.239",
+          "timestamp": "2026-11-21T01:36:33.277390+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/drop_physics_parameters.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.231",
+          "timestamp": "2026-11-21T01:36:30.052485+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/expose_physical_velocity_on_command_tick.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.235",
+          "timestamp": "2026-11-21T01:36:34.066694+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/fixed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "51",
+          "time": "0.205",
+          "timestamp": "2026-11-21T01:36:22.053741+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/forget_physical_velocity_units.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.263",
+          "timestamp": "2026-11-21T01:36:26.031811+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/keep_old_momentum_on_stay.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.234",
+          "timestamp": "2026-11-21T01:36:29.260586+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/keep_old_position_anchor.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.263",
+          "timestamp": "2026-11-21T01:36:25.182518+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/keep_old_reference_time.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.260",
+          "timestamp": "2026-11-21T01:36:26.883093+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/mutate_previous_state.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.237",
+          "timestamp": "2026-11-21T01:36:30.855733+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/omit_command_reanchor.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.265",
+          "timestamp": "2026-11-21T01:36:24.332852+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/reanchor_kinematic_commands.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.239",
+          "timestamp": "2026-11-21T01:36:34.871731+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/seed_from_requested_step.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.237",
+          "timestamp": "2026-11-21T01:36:27.673766+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/skip_first_command_seed.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.231",
+          "timestamp": "2026-11-21T01:36:28.470172+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/skip_time_finite_guard.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.240",
+          "timestamp": "2026-11-21T01:36:32.426202+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    },
+    {
+      "artifact": "world/intermediate/mutations-second/skip_velocity_finite_guard.xml",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "1",
+          "time": "0.230",
+          "timestamp": "2026-11-21T01:36:31.643104+08:00",
+          "hostname": "STARDUST"
+        }
+      ]
+    }
+  ]
+}

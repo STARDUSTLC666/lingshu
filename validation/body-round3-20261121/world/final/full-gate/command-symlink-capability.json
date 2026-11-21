@@ -1,0 +1,13 @@
+{
+  "os_name": "nt",
+  "platform": "Windows",
+  "baseline": "6b73082406d40a630a44cd68559c1f66b3652390",
+  "test_source_identical_to_base": true,
+  "test_sha256_lf": "a6d11458ce8a27d8dab0f9ed489adf8ddca21b943241d12b713e64fcf9d1631a",
+  "failed_assertion": "P1 非 posix 上 symlink 竟成功（开发者模式？）——SKIP_LINK 可重核",
+  "scope": "capability-only probe; no production code invoked or modified",
+  "symlink_created": true,
+  "is_link": true,
+  "contents_match": true,
+  "preexisting_test_assumption_conflicts_with_observed_capability": true
+}

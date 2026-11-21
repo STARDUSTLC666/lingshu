@@ -1,0 +1,29 @@
+{
+  "body_sha256_utf8": "b479f31de3d41f1a87a1c24f163f62b2ebae0440ee74fd548e36d6f7ffe5323e",
+  "body_utf8_bytes": 24839,
+  "comments": [
+    {
+      "id": "IC_kwDOU6uWo88AAAABaT_kwQ",
+      "body_sha256_utf8": "b14c958f286038c5e683a20b3eb27ceec3c6bed9e4c89331f44abc12a358d33f",
+      "body_utf8_bytes": 988,
+      "createdAt": "2026-10-08T13:19:03Z",
+      "url": "https://github.com/FuRongJun-1999/lingshu/issues/43#issuecomment-6060762305"
+    },
+    {
+      "id": "IC_kwDOU6uWo88AAAABasEvzg",
+      "body_sha256_utf8": "d4298bb120adede30264767231ddc0c0e76215eb090a82603aeeacfa82f617d8",
+      "body_utf8_bytes": 525,
+      "createdAt": "2026-10-09T17:35:05Z",
+      "url": "https://github.com/FuRongJun-1999/lingshu/issues/43#issuecomment-6086012878"
+    },
+    {
+      "id": "IC_kwDOU6uWo88AAAABjJvcIg",
+      "body_sha256_utf8": "0cc3586122324624c5a513d986784ae2208423a3c2563d92ee27de2118e172a8",
+      "body_utf8_bytes": 1645,
+      "createdAt": "2026-11-05T09:03:13Z",
+      "url": "https://github.com/FuRongJun-1999/lingshu/issues/43#issuecomment-6653991970"
+    }
+  ],
+  "state": "CLOSED",
+  "title": "外部复核报告：当前架构、Issues/PR 状态核对与结论更正（基线 421deb4）"
+}

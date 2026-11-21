@@ -1,0 +1,6 @@
+  PASS A01 str limit -> 可读 TypeError（旧实现 IntegrityError）
+  PASS A02 float limit -> 可读 TypeError
+  PASS A03 limit=-1 ⇒ 全量（#658 G2 口径：-1 与 None 同全量，不拦）
+  PASS A04 正对照：合法 limit 命中 1 条
+  PASS E01 钉子：可读文案
+通过 5 / 失败 0

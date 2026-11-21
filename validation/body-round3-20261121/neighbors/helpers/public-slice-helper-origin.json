@@ -1,0 +1,8 @@
+{
+  "origin": "read-only copy of audit-world/prepare_public_world_slice.py reusable functions before main",
+  "original_helper_raw_sha256": "61ad66cff96d036813edc8eef4d048a5f81f8df999cd01a4d13b380d53ec7c94",
+  "original_helper_raw_bytes": 21554,
+  "copied_core_sha256": "5dab8bbe910ce208dc8ec13f05998efcc52197c1bcceee7bf9fdcb16fe6bdf85",
+  "world_source_modified": false,
+  "world_public_slice_modified": false
+}

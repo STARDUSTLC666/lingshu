@@ -1,0 +1,29 @@
+{
+  "total_count": 2,
+  "incomplete_results": false,
+  "items": [
+    {
+      "repository_url": "https://api.github.com/repos/FuRongJun-1999/dsh-bounty",
+      "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1211",
+      "number": 1211,
+      "title": "深度审计：dsh-evolve-in-git 0.6.3（L3 · A 路径）",
+      "state": "closed",
+      "comments": 2,
+      "created_at": "2026-10-20T03:56:40Z",
+      "updated_at": "2026-10-20T04:47:24Z",
+      "closed_at": "2026-10-20T04:47:24Z"
+    },
+    {
+      "repository_url": "https://api.github.com/repos/FuRongJun-1999/dsh-bounty",
+      "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1700",
+      "number": 1700,
+      "title": "[intake 输入] lingshu #905：W2 保守身份关联第一增量交付",
+      "state": "closed",
+      "comments": 1,
+      "created_at": "2026-10-24T03:02:16Z",
+      "updated_at": "2026-10-24T07:33:51Z",
+      "closed_at": "2026-10-24T05:44:17Z"
+    }
+  ],
+  "search_type": "lexical"
+}

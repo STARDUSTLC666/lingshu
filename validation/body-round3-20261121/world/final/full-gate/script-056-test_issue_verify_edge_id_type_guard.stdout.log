@@ -1,0 +1,5 @@
+  PASS A01 None -> 可读 TypeError（旧实现静默 None）
+  PASS A02 int -> 可读 TypeError
+  PASS A03 正对照：不存在的边 id 仍返回 None（语义不变）
+  PASS E01 钉子：可读文案
+通过 4 / 失败 0

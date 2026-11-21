@@ -1,0 +1,29 @@
+{
+  "total_count": 2,
+  "incomplete_results": false,
+  "items": [
+    {
+      "repository_url": "https://api.github.com/repos/FuRongJun-1999/dsh-bounty",
+      "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2000",
+      "number": 2000,
+      "title": "第三方独立复验：lingshu PR #1143（#1135 三处读数失真+#1136 三处输入校验）——守卫双腿12红→19绿（经三轮子代理审核修订）",
+      "state": "closed",
+      "comments": 1,
+      "created_at": "2026-10-29T16:43:13Z",
+      "updated_at": "2026-10-30T05:57:15Z",
+      "closed_at": "2026-10-30T05:57:15Z"
+    },
+    {
+      "repository_url": "https://api.github.com/repos/FuRongJun-1999/dsh-bounty",
+      "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2006",
+      "number": 2006,
+      "title": "第三方独立复验：lingshu PR #1138（#1133 碰撞门+#1134 维度校验）——#1134 全修/#1133 现象一修（守卫4红→6绿）；现象二原主张未复现（三轮审核修订）",
+      "state": "closed",
+      "comments": 2,
+      "created_at": "2026-10-29T17:10:31Z",
+      "updated_at": "2026-10-30T05:57:34Z",
+      "closed_at": "2026-10-30T05:57:34Z"
+    }
+  ],
+  "search_type": "lexical"
+}

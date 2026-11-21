@@ -1,0 +1,217 @@
+{
+  "status": "locally_committed_not_published",
+  "head": "4a352249ef6db7975353b84bc640712d46f7181b",
+  "measured_head": "df0838c2181abf5fb1dc8e1e4b0dfcb66c19a232",
+  "baseline": "6b73082406d40a630a44cd68559c1f66b3652390",
+  "branch": "fix/hexgrid-odd-r-neighbors-20261121",
+  "worktree": "<repo>",
+  "commits": [
+    "b0c892ddac6b8da38c4b60fb93fb1de94c7634e8",
+    "df0838c2181abf5fb1dc8e1e4b0dfcb66c19a232",
+    "4a352249ef6db7975353b84bc640712d46f7181b"
+  ],
+  "source_sha256": "5671ae505f6dd026fc4fac7cb50ca02ca76ca972a51292f2dc50b5c7ae37efee",
+  "benchmark_sha256": "4a531767989e45c50e2d0ea0486a083e8c897826f14e16127109387fdf5ab113",
+  "guard_sha256": "51be981c9caf48c96703089d7cf5919614c443bd553c7842976082b91b4a655a",
+  "checks": {
+    "adjacent": {
+      "passed": 47,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "lint": {
+      "passed": 63,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "new_guard": {
+    "fixed_passed": 30,
+    "baseline_passed": 11,
+    "baseline_behavior_failures": 19,
+    "named_mutants_killed": 6,
+    "errors": 0,
+    "skipped": 0
+  },
+  "independent_cartesian": {
+    "axial": 324,
+    "odd_r_offset": 972,
+    "public_image_interior": 400,
+    "failures": 0
+  },
+  "independent_integer_parity": 20050,
+  "native_scripts": {
+    "extent_passed": 23,
+    "hex_cnn_passed": 13,
+    "failed": 0,
+    "legacy_image_segments": "4-6 skipped (missing upstream data/img/0.png)"
+  },
+  "benchmark": {
+    "cases": 12,
+    "warmups_per_version_case": 3,
+    "timing_samples_per_version_case": 9,
+    "memory_probes_per_version_case": 3,
+    "odd_r_median_time_ratio_range": [
+      1.3017064735342014,
+      1.6367819103211705
+    ],
+    "memory_type": "traced Python allocations; not RSS/native",
+    "shared_host_descriptive_only": true
+  },
+  "full_repo_gate_rerun": false,
+  "publication": "No PR, issue or bounty intake created by this subtask. Parent handles publication.",
+  "evidence_artifacts": [
+    {
+      "file": "hexgrid-neighbor-oracle-fixed.json",
+      "bytes": 9995,
+      "sha256": "d85a4c3f172e21c6d1f873d658de3570a83b75360b9d02c151eebde2c5ce6982"
+    },
+    {
+      "file": "hexgrid-neighbor-oracle-fixed.log",
+      "bytes": 9388,
+      "sha256": "51316eee15db49d9fb288d7a200158aaa4c485facb4f4fe3010b20c9c6f557dc"
+    },
+    {
+      "file": "independent-review/parity_probe.py",
+      "bytes": 1146,
+      "sha256": "0da289620469bb42216365ad8af343d137cd1193e34f8c69eff2e0650f26faa9"
+    },
+    {
+      "file": "independent-review/summary.json",
+      "bytes": 834,
+      "sha256": "eaa4625b08935b0ddb6904f001a77fb0a994de4ff64f30615166f9fe1b0a047b"
+    },
+    {
+      "file": "neighbors-adjacent.xml",
+      "bytes": 6757,
+      "sha256": "391c9fe238a638ebbbc620d32da59c68b392714b170f7c5737033282a0a79dcc"
+    },
+    {
+      "file": "neighbors-benchmark.json",
+      "bytes": 29029,
+      "sha256": "85cd4898e8314780fe3c7d15c249acbca8fb20606d3f5aaecf2868d02a30a332"
+    },
+    {
+      "file": "neighbors-lint-command.json",
+      "bytes": 800,
+      "sha256": "839137f5017e4835c30074b9642d36f983c65dedb304f73455fc80764a26c9a8"
+    },
+    {
+      "file": "neighbors-lint.log",
+      "bytes": 110,
+      "sha256": "01425bb9d0e652e792e2d9993242985190bed641c870d2c690c22fe2722390bc"
+    },
+    {
+      "file": "neighbors-lint.xml",
+      "bytes": 7577,
+      "sha256": "10b70dec85bb89272461224c3eb65d8b2c57f120df8cc63047e5014a835d5cc3"
+    },
+    {
+      "file": "neighbors-native-scripts.json",
+      "bytes": 806,
+      "sha256": "42e2f1e1d91e38f994e42122ac26f9bfbed374fd5306f5e44d7703e5f0a1abd4"
+    },
+    {
+      "file": "neighbors-replay/apply_offset_correction_to_axial.log",
+      "bytes": 809,
+      "sha256": "1bc5e93aa05d1d1c83d790017744944a167f243e4dccb711fd7c065a816f4351"
+    },
+    {
+      "file": "neighbors-replay/apply_offset_correction_to_axial.xml",
+      "bytes": 1022,
+      "sha256": "a11099bd195ad158d9517d9238e32df55dc2940fcce27fe822b9b80fe144e6af"
+    },
+    {
+      "file": "neighbors-replay/baseline.log",
+      "bytes": 11019,
+      "sha256": "1251da3bb0fbd65d4d48ef2b9b30ca6733c25045acbf93fa34c396a672c11175"
+    },
+    {
+      "file": "neighbors-replay/baseline.xml",
+      "bytes": 16686,
+      "sha256": "66ee53f797acf1f6082f52bd853ea7428e83a8dc2e833d2bab4567754f3f53fe"
+    },
+    {
+      "file": "neighbors-replay/clip_offset_neighbors_to_shape.log",
+      "bytes": 767,
+      "sha256": "d885342ed26d3dd4579e9e4cbefd7b292eebb3beacc430bdc9bc35693858e31a"
+    },
+    {
+      "file": "neighbors-replay/clip_offset_neighbors_to_shape.xml",
+      "bytes": 866,
+      "sha256": "b21b0ed83b002aaa6d9bcb381eff7dab68dbef4789ce7264f36c57ea7d808748"
+    },
+    {
+      "file": "neighbors-replay/fixed.log",
+      "bytes": 99,
+      "sha256": "175e2c7f25a2b6732e49828c2a65ec9075e250319e34201a8ccec41eb57c55d8"
+    },
+    {
+      "file": "neighbors-replay/fixed.xml",
+      "bytes": 4540,
+      "sha256": "6fe20ab8bc91be10fc4babf99ac1042a6ad8687da40efbc9a446a5347d8ed567"
+    },
+    {
+      "file": "neighbors-replay/ignore_offset_mode.log",
+      "bytes": 804,
+      "sha256": "10d034c91d083ff2040f1a401efffe738ff1b4e78ae8bca84eed4bfc978891aa"
+    },
+    {
+      "file": "neighbors-replay/ignore_offset_mode.xml",
+      "bytes": 1004,
+      "sha256": "f2334cc4f2148a72ffb37beaf10f39cd25ad98fb22500757b11126cad5beb913"
+    },
+    {
+      "file": "neighbors-replay/reverse_direction_order.log",
+      "bytes": 803,
+      "sha256": "321952ebb4522dd14bfce0e2b99c29dd223f9b9493307a058e416a604b134859"
+    },
+    {
+      "file": "neighbors-replay/reverse_direction_order.xml",
+      "bytes": 1003,
+      "sha256": "5dd21e253cf5e55e33d8eb6cec5d37c149e2736c8f028389de1e2a1b0920ea7c"
+    },
+    {
+      "file": "neighbors-replay/reverse_offset_correction.log",
+      "bytes": 804,
+      "sha256": "ee52c8b18ce05cfde3685fff648d955f2153568099a40a298e16ab82e5745dac"
+    },
+    {
+      "file": "neighbors-replay/reverse_offset_correction.xml",
+      "bytes": 1004,
+      "sha256": "333cb5239fddb121fa4494c1d7fe1dfe9f0931b2b2f05cb4d3204d9894f7bb66"
+    },
+    {
+      "file": "neighbors-replay/summary.json",
+      "bytes": 7658,
+      "sha256": "01a65c3e9429070d56fbd1f64b3cb520a6cdadb0f241b2654540066b03368e21"
+    },
+    {
+      "file": "neighbors-replay/truncate_negative_rows.log",
+      "bytes": 815,
+      "sha256": "51b70d03e3d49412be51d12f39ee566b9df3bcce27da7691d63b293f09d742cb"
+    },
+    {
+      "file": "neighbors-replay/truncate_negative_rows.xml",
+      "bytes": 1017,
+      "sha256": "b90879597a351ed987d9fee57fd48f53402934af3eaffcb808e91f8e08a704e3"
+    },
+    {
+      "file": "probe_hexgrid_neighbors_fixed.py",
+      "bytes": 4833,
+      "sha256": "fc6edbc93b12e2e89d9e48df5f8b43472dbf96e36d6f452cd2efd441984d28b1"
+    },
+    {
+      "file": "test_hex_cnn.log",
+      "bytes": 852,
+      "sha256": "065cba306df969d8732749734872dd6eefc11cb0834cc66ed2336aca00e53f62"
+    },
+    {
+      "file": "test_hex_grid_extent.log",
+      "bytes": 2090,
+      "sha256": "b0bdfb59d882398973757d4a29f4000133d15f3674cc331a72b00005488fc06a"
+    }
+  ]
+}

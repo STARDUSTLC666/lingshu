@@ -1,0 +1,892 @@
+{
+  "method": "combine only authorized _resolve_collisions method from no-contact fix with final command source;2noncontacting boxes; independent endpoint+ballistic equations;80cases x3resumed ticks",
+  "command_source_sha256_lf": "984d8abeaaa5a4b9d50e6d604758ac128d120f6b3bd56289b8b2a665a7bd1046",
+  "no_contact_source_sha256_lf": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+  "combined_scene_sha256_lf": "7f33caeaae450fe46cc7e8ae465e0302b0f2063e1d70788f41402d8d75e5350a",
+  "cases": 80,
+  "resumed_states": 240,
+  "max_abs_error": 8.881784197001252e-16,
+  "passed": true,
+  "raw_cases": [
+    {
+      "dt": 0.05,
+      "action": "east",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        1.1102230246251565e-16,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "east",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        2.220446049250313e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "east",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        1.1102230246251565e-16,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "east",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        2.220446049250313e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "west",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        1.1102230246251565e-16,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "west",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        2.220446049250313e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "west",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        1.1102230246251565e-16,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "west",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        2.220446049250313e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "north",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        1.1102230246251565e-16,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "north",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        2.220446049250313e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "north",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        1.1102230246251565e-16,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "north",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        2.220446049250313e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "south",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        1.1102230246251565e-16,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "south",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        2.220446049250313e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "south",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        1.1102230246251565e-16,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "south",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        2.220446049250313e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "stay",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        1.1102230246251565e-16,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "stay",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        2.220446049250313e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "stay",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        1.1102230246251565e-16,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.05,
+      "action": "stay",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        2.220446049250313e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "east",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        2.220446049250313e-16,
+        8.881784197001252e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "east",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "east",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        2.220446049250313e-16,
+        8.881784197001252e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "east",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "west",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        2.220446049250313e-16,
+        8.881784197001252e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "west",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "west",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        2.220446049250313e-16,
+        8.881784197001252e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "west",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "north",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        2.220446049250313e-16,
+        8.881784197001252e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "north",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "north",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        2.220446049250313e-16,
+        8.881784197001252e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "north",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "south",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        2.220446049250313e-16,
+        8.881784197001252e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "south",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "south",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        2.220446049250313e-16,
+        8.881784197001252e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "south",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "stay",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        2.220446049250313e-16,
+        8.881784197001252e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "stay",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "stay",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        2.220446049250313e-16,
+        8.881784197001252e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.1,
+      "action": "stay",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "east",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "east",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "east",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "east",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "west",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "west",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "west",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "west",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "north",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "north",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "north",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "north",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "south",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "south",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "south",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "south",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "stay",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "stay",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "stay",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 0.25,
+      "action": "stay",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "east",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "east",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "east",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "east",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "west",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "west",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "west",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "west",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "north",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "north",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "north",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "north",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "south",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "south",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "south",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "south",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "stay",
+      "initial_x": 64.0,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "stay",
+      "initial_x": 64.0,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "stay",
+      "initial_x": 64.003,
+      "first_command": false,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "dt": 1.0,
+      "action": "stay",
+      "initial_x": 64.003,
+      "first_command": true,
+      "max_errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

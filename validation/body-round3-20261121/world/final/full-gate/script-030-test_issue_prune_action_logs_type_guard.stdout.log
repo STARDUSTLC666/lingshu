@@ -1,0 +1,5 @@
+  PASS A01 str keep_rows -> 可读 TypeError
+  PASS A02 float keep_rows -> 可读 TypeError
+  PASS A03 正对照：合法整数不抛异常
+  PASS E01 钉子：可读文案
+通过 4 / 失败 0

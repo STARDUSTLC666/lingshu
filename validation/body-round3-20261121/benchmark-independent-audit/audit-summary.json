@@ -1,0 +1,367 @@
+{
+  "ok": true,
+  "run_id": 44790156130,
+  "metadata_head": "7d898378c84bdd125ed510cc749bef119880f3a8",
+  "source_head": "f81ee3a9939f3dad7c277145766508c113742ba0",
+  "source_tree": "5e6e6d45fdc9ef6ea885f4e4f38d56630089a751",
+  "baseline": "6b73082406d40a630a44cd68559c1f66b3652390",
+  "artifact_inventory": {
+    "py312-floor": {
+      "api_zip_sha256": "cceda0a0f4b091bcc9db3221b82ccaaf4d091280fbb7c7b17c39afed85b185c8",
+      "api_zip_bytes": 901498,
+      "zip_entries": 86,
+      "indexed_files": 84,
+      "extracted_files": 86,
+      "driver_log_excluded": true,
+      "self_index_excluded": true,
+      "all_index_records_match": true
+    },
+    "py312-latest": {
+      "api_zip_sha256": "7ca584cf85adf2739bdef348b00d9bbf346480540aff75ccb8a2e52231dfd041",
+      "api_zip_bytes": 901031,
+      "zip_entries": 85,
+      "indexed_files": 83,
+      "extracted_files": 85,
+      "driver_log_excluded": true,
+      "self_index_excluded": true,
+      "all_index_records_match": true
+    },
+    "py313-latest": {
+      "api_zip_sha256": "02b929f60ab6c04eee0d807e499e3e2dd7c933afa70085986b16034c99709f57",
+      "api_zip_bytes": 901026,
+      "zip_entries": 85,
+      "indexed_files": 83,
+      "extracted_files": 85,
+      "driver_log_excluded": true,
+      "self_index_excluded": true,
+      "all_index_records_match": true
+    }
+  },
+  "all_provenance_and_baseline_tree_hashes_independently_checked": true,
+  "mutant_reconstruction_results": [
+    {
+      "environment": "py312-floor",
+      "artifact": "body-round3-py312-floor-44790156130-1",
+      "source_tracked_files": 1643,
+      "baseline_archive_files": 1609,
+      "six_command_streams_verified": true,
+      "neighbors": {
+        "cases": [
+          {
+            "mode": "axial",
+            "sign": "positive",
+            "count": 1000,
+            "fixed_correct": 1000,
+            "baseline_correct": 1000
+          },
+          {
+            "mode": "axial",
+            "sign": "positive",
+            "count": 10000,
+            "fixed_correct": 10000,
+            "baseline_correct": 10000
+          },
+          {
+            "mode": "axial",
+            "sign": "positive",
+            "count": 50000,
+            "fixed_correct": 50000,
+            "baseline_correct": 50000
+          },
+          {
+            "mode": "axial",
+            "sign": "negative",
+            "count": 1000,
+            "fixed_correct": 1000,
+            "baseline_correct": 1000
+          },
+          {
+            "mode": "axial",
+            "sign": "negative",
+            "count": 10000,
+            "fixed_correct": 10000,
+            "baseline_correct": 10000
+          },
+          {
+            "mode": "axial",
+            "sign": "negative",
+            "count": 50000,
+            "fixed_correct": 50000,
+            "baseline_correct": 50000
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "positive",
+            "count": 1000,
+            "fixed_correct": 1000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "positive",
+            "count": 10000,
+            "fixed_correct": 10000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "positive",
+            "count": 50000,
+            "fixed_correct": 50000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "negative",
+            "count": 1000,
+            "fixed_correct": 1000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "negative",
+            "count": 10000,
+            "fixed_correct": 10000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "negative",
+            "count": 50000,
+            "fixed_correct": 50000,
+            "baseline_correct": 0
+          }
+        ],
+        "source_and_script_hashes": true
+      },
+      "mutation_replays": {
+        "neighbors": 8,
+        "command": 18,
+        "named_mutants": 22
+      },
+      "independent_command_oracle_rows": 2000,
+      "oracle_fixed_mismatches": 0,
+      "oracle_baseline_mismatches": 2000,
+      "timing_workloads": 7,
+      "memory_scenarios": 8
+    },
+    {
+      "environment": "py312-latest",
+      "artifact": "body-round3-py312-latest-44790156130-1",
+      "source_tracked_files": 1643,
+      "baseline_archive_files": 1609,
+      "six_command_streams_verified": true,
+      "neighbors": {
+        "cases": [
+          {
+            "mode": "axial",
+            "sign": "positive",
+            "count": 1000,
+            "fixed_correct": 1000,
+            "baseline_correct": 1000
+          },
+          {
+            "mode": "axial",
+            "sign": "positive",
+            "count": 10000,
+            "fixed_correct": 10000,
+            "baseline_correct": 10000
+          },
+          {
+            "mode": "axial",
+            "sign": "positive",
+            "count": 50000,
+            "fixed_correct": 50000,
+            "baseline_correct": 50000
+          },
+          {
+            "mode": "axial",
+            "sign": "negative",
+            "count": 1000,
+            "fixed_correct": 1000,
+            "baseline_correct": 1000
+          },
+          {
+            "mode": "axial",
+            "sign": "negative",
+            "count": 10000,
+            "fixed_correct": 10000,
+            "baseline_correct": 10000
+          },
+          {
+            "mode": "axial",
+            "sign": "negative",
+            "count": 50000,
+            "fixed_correct": 50000,
+            "baseline_correct": 50000
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "positive",
+            "count": 1000,
+            "fixed_correct": 1000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "positive",
+            "count": 10000,
+            "fixed_correct": 10000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "positive",
+            "count": 50000,
+            "fixed_correct": 50000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "negative",
+            "count": 1000,
+            "fixed_correct": 1000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "negative",
+            "count": 10000,
+            "fixed_correct": 10000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "negative",
+            "count": 50000,
+            "fixed_correct": 50000,
+            "baseline_correct": 0
+          }
+        ],
+        "source_and_script_hashes": true
+      },
+      "mutation_replays": {
+        "neighbors": 8,
+        "command": 18,
+        "named_mutants": 22
+      },
+      "independent_command_oracle_rows": 2000,
+      "oracle_fixed_mismatches": 0,
+      "oracle_baseline_mismatches": 2000,
+      "timing_workloads": 7,
+      "memory_scenarios": 8
+    },
+    {
+      "environment": "py313-latest",
+      "artifact": "body-round3-py313-latest-44790156130-1",
+      "source_tracked_files": 1643,
+      "baseline_archive_files": 1609,
+      "six_command_streams_verified": true,
+      "neighbors": {
+        "cases": [
+          {
+            "mode": "axial",
+            "sign": "positive",
+            "count": 1000,
+            "fixed_correct": 1000,
+            "baseline_correct": 1000
+          },
+          {
+            "mode": "axial",
+            "sign": "positive",
+            "count": 10000,
+            "fixed_correct": 10000,
+            "baseline_correct": 10000
+          },
+          {
+            "mode": "axial",
+            "sign": "positive",
+            "count": 50000,
+            "fixed_correct": 50000,
+            "baseline_correct": 50000
+          },
+          {
+            "mode": "axial",
+            "sign": "negative",
+            "count": 1000,
+            "fixed_correct": 1000,
+            "baseline_correct": 1000
+          },
+          {
+            "mode": "axial",
+            "sign": "negative",
+            "count": 10000,
+            "fixed_correct": 10000,
+            "baseline_correct": 10000
+          },
+          {
+            "mode": "axial",
+            "sign": "negative",
+            "count": 50000,
+            "fixed_correct": 50000,
+            "baseline_correct": 50000
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "positive",
+            "count": 1000,
+            "fixed_correct": 1000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "positive",
+            "count": 10000,
+            "fixed_correct": 10000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "positive",
+            "count": 50000,
+            "fixed_correct": 50000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "negative",
+            "count": 1000,
+            "fixed_correct": 1000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "negative",
+            "count": 10000,
+            "fixed_correct": 10000,
+            "baseline_correct": 0
+          },
+          {
+            "mode": "odd_r_offset",
+            "sign": "negative",
+            "count": 50000,
+            "fixed_correct": 50000,
+            "baseline_correct": 0
+          }
+        ],
+        "source_and_script_hashes": true
+      },
+      "mutation_replays": {
+        "neighbors": 8,
+        "command": 18,
+        "named_mutants": 22
+      },
+      "independent_command_oracle_rows": 2000,
+      "oracle_fixed_mismatches": 0,
+      "oracle_baseline_mismatches": 2000,
+      "timing_workloads": 7,
+      "memory_scenarios": 8
+    }
+  ],
+  "limits": [
+    "Timing and tracemalloc samples were structurally and arithmetically checked; no statistical-significance claim.",
+    "tracemalloc is Python allocation data, not RSS/native memory.",
+    "Execution/log identity collector and artifact-content audit are separate checks.",
+    "The retained live driver.log is excluded from the immutable inner artifact index."
+  ]
+}

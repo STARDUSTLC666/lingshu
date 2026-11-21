@@ -1,0 +1,340 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF.F..F                                [100%]
+================================== FAILURES ===================================
+____ test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-east] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 999.6875, 64.0), (68.0, 999.875, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D10966B0>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-west] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 999.6875, 64.0), (60.0, 999.875, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D1097D30>)
+___ test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-north] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 999.6875, 64.0), (64.0, 999.875, 60.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11F84F0>)
+___ test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-south] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 999.6875, 64.0), (64.0, 999.875, 68.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11F8E50>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-stay] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 999.6875, 64.0), (64.0, 999.875, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11F98A0>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-east] _____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 998.75, 64.0), (68.0, 999.5, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11FA020>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-west] _____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 998.75, 64.0), (60.0, 999.5, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D1097C40>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-north] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 998.75, 64.0), (64.0, 999.5, 60.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D10966B0>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-south] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 998.75, 64.0), (64.0, 999.5, 68.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11FA2F0>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-stay] _____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 998.75, 64.0), (64.0, 999.5, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11F95D0>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-east] _____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 875.0, 64.0), (68.0, 950.0, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11F89A0>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-west] _____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 875.0, 64.0), (60.0, 950.0, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11F85E0>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-north] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 875.0, 64.0), (64.0, 950.0, 60.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11FA980>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-south] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 875.0, 64.0), (64.0, 950.0, 68.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11FB010>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-stay] _____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 875.0, 64.0), (64.0, 950.0, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11FB6A0>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-east] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 999.6875, 64.0), (68.0, 999.875, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11FBD30>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-west] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 999.6875, 64.0), (60.0, 999.875, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D113C310>)
+___ test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-north] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 999.6875, 64.0), (64.0, 999.875, 60.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D113C8B0>)
+___ test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-south] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 999.6875, 64.0), (64.0, 999.875, 68.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11FBE20>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-stay] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 999.6875, 64.0), (64.0, 999.875, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11FB880>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-east] _____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 998.75, 64.0), (68.0, 999.5, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11FAE30>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-west] _____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 998.75, 64.0), (60.0, 999.5, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11FA7A0>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-north] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 998.75, 64.0), (64.0, 999.5, 60.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11F8E50>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-south] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 998.75, 64.0), (64.0, 999.5, 68.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11F86D0>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-stay] _____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 998.75, 64.0), (64.0, 999.5, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11F9210>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-east] _____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 875.0, 64.0), (68.0, 950.0, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11FA3E0>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-west] _____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 875.0, 64.0), (60.0, 950.0, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D1097D30>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-north] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 875.0, 64.0), (64.0, 950.0, 60.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D1097E20>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-south] ____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 875.0, 64.0), (64.0, 950.0, 68.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D113C040>)
+____ test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-stay] _____
+tests\test_dynamics_command_reanchor.py:71: in test_command_then_resume_uses_real_endpoint_and_velocity
+    close(e.pos, p, "COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_TRANSLATION_WAS_REPLAYED_FROM_OLD_ANCHOR', (64.0, 875.0, 64.0), (64.0, 950.0, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D113CE50>)
+___ test_command_reanchors_at_current_time_without_changing_public_velocity ___
+tests\test_dynamics_command_reanchor.py:83: in test_command_reanchors_at_current_time_without_changing_public_velocity
+    assert st["p0"] == e.pos, "COMMAND_PHYSICS_POSITION_ANCHOR_STALE"
+E   AssertionError: COMMAND_PHYSICS_POSITION_ANCHOR_STALE
+E   assert (64.0, 1000.0, 64.0) == (66.0, 999.55, 64.0)
+E     
+E     At index 0 diff: 64.0 != 66.0
+E     Use -v to get more diff
+_ test_first_command_initializes_a_physics_anchor_without_a_blank_resume_tick _
+tests\test_dynamics_command_reanchor.py:97: in test_first_command_initializes_a_physics_anchor_without_a_blank_resume_tick
+    close(e.pos, p, "COMMAND_FIRST_RESUME_WAS_ONLY_A_SEED")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_FIRST_RESUME_WAS_ONLY_A_SEED', (64.0, 1000.0, 63.25), (64.0, 999.8, 62.5))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D10953F0>)
+__________ test_multiple_translation_direction_changes_and_stay_stop __________
+tests\test_dynamics_command_reanchor.py:113: in test_multiple_translation_direction_changes_and_stay_stop
+    close(e.pos, p, "COMMAND_SEQUENCE_RESUME_IGNORED_LATEST_ACTION")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_SEQUENCE_RESUME_IGNORED_LATEST_ACTION', (64.0, 999.2, 64.0), (68.0, 999.75, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D05D65C0>)
+_______ test_stay_stops_prior_velocity_including_the_vertical_component _______
+tests\test_dynamics_command_reanchor.py:126: in test_stay_stops_prior_velocity_including_the_vertical_component
+    close(s.entities[a].pos, p, "COMMAND_STAY_DID_NOT_STOP_PRIOR_MOMENTUM")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_STAY_DID_NOT_STOP_PRIOR_MOMENTUM', (65.0, 1000.25, 64.5), (64.6, 1000.4, 64.3))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11F9B70>)
+_______ test_clamping_uses_actual_displacement_for_the_physics_velocity _______
+tests\test_dynamics_command_reanchor.py:136: in test_clamping_uses_actual_displacement_for_the_physics_velocity
+    assert e.attrs["physics_state"]["v0"] == (2.5, 0., 0.), "COMMAND_REQUESTED_STEP_REPLACED_ACTUAL_MOTION"
+E   AssertionError: COMMAND_REQUESTED_STEP_REPLACED_ACTUAL_MOTION
+E   assert (0.0, 0.0, 0.0) == (2.5, 0.0, 0.0)
+E     
+E     At index 0 diff: 0.0 != 2.5
+E     Use -v to get more diff
+_____ test_quantized_zero_move_stops_instead_of_using_the_requested_step ______
+tests\test_dynamics_command_reanchor.py:148: in test_quantized_zero_move_stops_instead_of_using_the_requested_step
+    close(s.entities[a].pos, p, "COMMAND_QUANTIZED_ZERO_DID_NOT_STOP")
+tests\test_dynamics_command_reanchor.py:42: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_QUANTIZED_ZERO_DID_NOT_STOP', (64.4, 1000.0, 64.0), (64.2, 1000.15, 64.0))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x00000221D11F9300>)
+______ test_real_seven_layer_actuator_then_clear_does_not_undo_execution ______
+tests\test_dynamics_command_reanchor.py:178: in test_real_seven_layer_actuator_then_clear_does_not_undo_execution
+    assert s.entities[a].pos[0] == old[0] + 4., "SEVEN_LAYER_CLEAR_UNDID_REAL_EXECUTION"
+E   AssertionError: SEVEN_LAYER_CLEAR_UNDID_REAL_EXECUTION
+E   assert 64.0 == (64.0 + 4.0)
+__ test_unrepresentable_physical_command_velocity_does_not_poison_the_entity __
+tests\test_dynamics_command_reanchor.py:206: in test_unrepresentable_physical_command_velocity_does_not_poison_the_entity
+    with pytest.raises(ValueError, match="受控动力学初值"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ValueError
+=========================== short test summary info ===========================
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-east]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-west]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-north]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-south]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-stay]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-east]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-west]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-north]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-south]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-stay]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-east]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-west]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-north]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-south]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-stay]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-east]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-west]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-north]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-south]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-stay]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-east]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-west]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-north]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-south]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-stay]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-east]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-west]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-north]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-south]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-stay]
+FAILED tests/test_dynamics_command_reanchor.py::test_command_reanchors_at_current_time_without_changing_public_velocity
+FAILED tests/test_dynamics_command_reanchor.py::test_first_command_initializes_a_physics_anchor_without_a_blank_resume_tick
+FAILED tests/test_dynamics_command_reanchor.py::test_multiple_translation_direction_changes_and_stay_stop
+FAILED tests/test_dynamics_command_reanchor.py::test_stay_stops_prior_velocity_including_the_vertical_component
+FAILED tests/test_dynamics_command_reanchor.py::test_clamping_uses_actual_displacement_for_the_physics_velocity
+FAILED tests/test_dynamics_command_reanchor.py::test_quantized_zero_move_stops_instead_of_using_the_requested_step
+FAILED tests/test_dynamics_command_reanchor.py::test_real_seven_layer_actuator_then_clear_does_not_undo_execution
+FAILED tests/test_dynamics_command_reanchor.py::test_unrepresentable_physical_command_velocity_does_not_poison_the_entity
+38 failed, 3 passed in 1.11s

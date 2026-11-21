@@ -1,0 +1,13 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_______ test_stay_stops_prior_velocity_including_the_vertical_component _______
+tests\test_dynamics_command_reanchor.py:131: in test_stay_stops_prior_velocity_including_the_vertical_component
+    close(s.entities[a].pos, p, "COMMAND_STAY_DID_NOT_STOP_PRIOR_MOMENTUM")
+tests\test_dynamics_command_reanchor.py:43: in close
+    assert all(math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-9)
+E   AssertionError: ('COMMAND_STAY_DID_NOT_STOP_PRIOR_MOMENTUM', (64.8, 1000.6999999999999, 64.39999999999999), (64.6, 1000.4, 64.3))
+E   assert False
+E    +  where False = all(<generator object close.<locals>.<genexpr> at 0x000001E9AD0F2110>)
+=========================== short test summary info ===========================
+FAILED tests/test_dynamics_command_reanchor.py::test_stay_stops_prior_velocity_including_the_vertical_component
+1 failed in 0.30s

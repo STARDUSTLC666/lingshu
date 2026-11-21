@@ -1,0 +1,401 @@
+{
+  "total_count": 3,
+  "jobs": [
+    {
+      "id": 136467211659,
+      "run_id": 44787808270,
+      "workflow_name": "gate",
+      "head_branch": "validation/body-fourteen-integration-20261121",
+      "run_url": "https://api.github.com/repos/STARDUSTLC666/lingshu/actions/runs/44787808270",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVAwwkc8AAAAfxhRliw",
+      "head_sha": "f81ee3a9939f3dad7c277145766508c113742ba0",
+      "url": "https://api.github.com/repos/STARDUSTLC666/lingshu/actions/jobs/136467211659",
+      "html_url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44787808270/job/136467211659",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-20T17:54:58Z",
+      "started_at": "2026-11-20T17:55:00Z",
+      "completed_at": "2026-11-20T18:10:22Z",
+      "name": "gate (py3.13)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-20T17:55:01Z",
+          "completed_at": "2026-11-20T17:55:02Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-20T17:55:02Z",
+          "completed_at": "2026-11-20T17:55:03Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-20T17:55:03Z",
+          "completed_at": "2026-11-20T17:55:07Z"
+        },
+        {
+          "name": "安装依赖（pip install -e \".[full,dev]\"）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-20T17:55:07Z",
+          "completed_at": "2026-11-20T17:55:15Z"
+        },
+        {
+          "name": "钉死依赖下界（仅「依赖下界」档；#209）",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-11-20T17:55:15Z",
+          "completed_at": "2026-11-20T17:55:15Z"
+        },
+        {
+          "name": "Clone 脑端公开仓（dsh-memory）供 MDCG_BRAIN_PYTHONPATH",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-20T17:55:15Z",
+          "completed_at": "2026-11-20T17:55:17Z"
+        },
+        {
+          "name": "决定 test_brain_store 前置（脑端可达则真跑；否则显式 SKIP）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-20T17:55:17Z",
+          "completed_at": "2026-11-20T17:55:17Z"
+        },
+        {
+          "name": "脚本式测试（逐件单跑，任一失败即红）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-20T17:55:17Z",
+          "completed_at": "2026-11-20T17:55:48Z"
+        },
+        {
+          "name": "pytest 式测试（tests/ 自动收集）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-20T17:55:48Z",
+          "completed_at": "2026-11-20T18:10:17Z"
+        },
+        {
+          "name": "汇总（写入 Step Summary）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-20T18:10:17Z",
+          "completed_at": "2026-11-20T18:10:17Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-11-20T18:10:17Z",
+          "completed_at": "2026-11-20T18:10:18Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-11-20T18:10:18Z",
+          "completed_at": "2026-11-20T18:10:18Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-11-20T18:10:18Z",
+          "completed_at": "2026-11-20T18:10:18Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/STARDUSTLC666/lingshu/check-runs/136467211659",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000006649,
+      "runner_name": "GitHub Actions 1000006649",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 136467212117,
+      "run_id": 44787808270,
+      "workflow_name": "gate",
+      "head_branch": "validation/body-fourteen-integration-20261121",
+      "run_url": "https://api.github.com/repos/STARDUSTLC666/lingshu/actions/runs/44787808270",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVAwwkc8AAAAfxhRnVQ",
+      "head_sha": "f81ee3a9939f3dad7c277145766508c113742ba0",
+      "url": "https://api.github.com/repos/STARDUSTLC666/lingshu/actions/jobs/136467212117",
+      "html_url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44787808270/job/136467212117",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-20T17:54:58Z",
+      "started_at": "2026-11-20T17:55:00Z",
+      "completed_at": "2026-11-20T18:10:55Z",
+      "name": "gate (py3.12)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-20T17:55:01Z",
+          "completed_at": "2026-11-20T17:55:02Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-20T17:55:02Z",
+          "completed_at": "2026-11-20T17:55:04Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-20T17:55:04Z",
+          "completed_at": "2026-11-20T17:55:14Z"
+        },
+        {
+          "name": "安装依赖（pip install -e \".[full,dev]\"）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-20T17:55:14Z",
+          "completed_at": "2026-11-20T17:55:22Z"
+        },
+        {
+          "name": "钉死依赖下界（仅「依赖下界」档；#209）",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-11-20T17:55:22Z",
+          "completed_at": "2026-11-20T17:55:22Z"
+        },
+        {
+          "name": "Clone 脑端公开仓（dsh-memory）供 MDCG_BRAIN_PYTHONPATH",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-20T17:55:22Z",
+          "completed_at": "2026-11-20T17:55:26Z"
+        },
+        {
+          "name": "决定 test_brain_store 前置（脑端可达则真跑；否则显式 SKIP）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-20T17:55:26Z",
+          "completed_at": "2026-11-20T17:55:26Z"
+        },
+        {
+          "name": "脚本式测试（逐件单跑，任一失败即红）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-20T17:55:26Z",
+          "completed_at": "2026-11-20T17:55:54Z"
+        },
+        {
+          "name": "pytest 式测试（tests/ 自动收集）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-20T17:55:54Z",
+          "completed_at": "2026-11-20T18:10:50Z"
+        },
+        {
+          "name": "汇总（写入 Step Summary）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-20T18:10:50Z",
+          "completed_at": "2026-11-20T18:10:50Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-11-20T18:10:50Z",
+          "completed_at": "2026-11-20T18:10:50Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-11-20T18:10:50Z",
+          "completed_at": "2026-11-20T18:10:50Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-11-20T18:10:50Z",
+          "completed_at": "2026-11-20T18:10:50Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/STARDUSTLC666/lingshu/check-runs/136467212117",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000006650,
+      "runner_name": "GitHub Actions 1000006650",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 136467212188,
+      "run_id": 44787808270,
+      "workflow_name": "gate",
+      "head_branch": "validation/body-fourteen-integration-20261121",
+      "run_url": "https://api.github.com/repos/STARDUSTLC666/lingshu/actions/runs/44787808270",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVAwwkc8AAAAfxhRnnA",
+      "head_sha": "f81ee3a9939f3dad7c277145766508c113742ba0",
+      "url": "https://api.github.com/repos/STARDUSTLC666/lingshu/actions/jobs/136467212188",
+      "html_url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44787808270/job/136467212188",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-20T17:54:58Z",
+      "started_at": "2026-11-20T17:55:00Z",
+      "completed_at": "2026-11-20T18:09:50Z",
+      "name": "gate (py3.12 · 依赖下界)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-20T17:55:01Z",
+          "completed_at": "2026-11-20T17:55:02Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-20T17:55:02Z",
+          "completed_at": "2026-11-20T17:55:03Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-20T17:55:03Z",
+          "completed_at": "2026-11-20T17:55:07Z"
+        },
+        {
+          "name": "安装依赖（pip install -e \".[full,dev]\"）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-20T17:55:07Z",
+          "completed_at": "2026-11-20T17:55:14Z"
+        },
+        {
+          "name": "钉死依赖下界（仅「依赖下界」档；#209）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-20T17:55:14Z",
+          "completed_at": "2026-11-20T17:55:17Z"
+        },
+        {
+          "name": "Clone 脑端公开仓（dsh-memory）供 MDCG_BRAIN_PYTHONPATH",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-20T17:55:17Z",
+          "completed_at": "2026-11-20T17:55:19Z"
+        },
+        {
+          "name": "决定 test_brain_store 前置（脑端可达则真跑；否则显式 SKIP）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-20T17:55:19Z",
+          "completed_at": "2026-11-20T17:55:19Z"
+        },
+        {
+          "name": "脚本式测试（逐件单跑，任一失败即红）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-20T17:55:19Z",
+          "completed_at": "2026-11-20T17:55:45Z"
+        },
+        {
+          "name": "pytest 式测试（tests/ 自动收集）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-20T17:55:45Z",
+          "completed_at": "2026-11-20T18:09:46Z"
+        },
+        {
+          "name": "汇总（写入 Step Summary）",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-20T18:09:46Z",
+          "completed_at": "2026-11-20T18:09:46Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-11-20T18:09:46Z",
+          "completed_at": "2026-11-20T18:09:46Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-11-20T18:09:46Z",
+          "completed_at": "2026-11-20T18:09:46Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-11-20T18:09:46Z",
+          "completed_at": "2026-11-20T18:09:46Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/STARDUSTLC666/lingshu/check-runs/136467212188",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000006651,
+      "runner_name": "GitHub Actions 1000006651",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

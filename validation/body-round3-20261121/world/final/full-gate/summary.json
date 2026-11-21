@@ -1,0 +1,2435 @@
+{
+  "head": "bd208a379e44497e9f35fdc145838abb19e6d313",
+  "source_sha256_lf": "984d8abeaaa5a4b9d50e6d604758ac128d120f6b3bd56289b8b2a665a7bd1046",
+  "pinned_brain_head": "98d6b899533a82fb1047f952987229c62a9929fb",
+  "frozen_physics_baseline": "124ea433fe9a2ad2fd66a7360df85f6d61bab793",
+  "scripts": 102,
+  "all_commands_exit_zero": false,
+  "records": [
+    {
+      "name": "script-001-test_brain_store",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_brain_store.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.178238000022247,
+      "stdout_sha256": "50548ec0123b38699c7abee4e2c9faa8db5494474bf5e991e7cb31bee4d406a9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 1588,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS S13c 同实体名·节点 id B 的状态＝自己记的 s13_b（不被 A 覆盖）",
+        "",
+        "===== SUMMARY 23/23 通过 =====",
+        "VERDICT=PASS（M1 读向 + M2 写向 最小闭环全过；隔离库）"
+      ]
+    },
+    {
+      "name": "script-002-test_wm_verify_unobserved",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_wm_verify_unobserved.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.4592201999912504,
+      "stdout_sha256": "abca8a796a0c07a522993421adddbe0f665635d27a230b123547f57caf847c70",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 1483,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS D3 空观测轮：全部 pending、total=0、快照在场（不标 no_observation）",
+        "",
+        "===== SUMMARY 17/17 通过 =====",
+        "VERDICT=PASS（issue #1 守卫：未观测预测不计分；假设/陈旧记忆留图）"
+      ]
+    },
+    {
+      "name": "script-003-test_hex_cnn",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_hex_cnn.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.3177754000062123,
+      "stdout_sha256": "50f182ab13ae62db937d77c2ad9e6a64563a526e3267eb6346c18c03911c2944",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 875,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "",
+        "[4-6] SKIP：上游素材 data/img/0.png 未随导出（构造性段①②③照跑）",
+        "",
+        "13 passed, 0 failed"
+      ]
+    },
+    {
+      "name": "script-004-test_hex_composite",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_hex_composite.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.2943980999989435,
+      "stdout_sha256": "ef81cc0896b18e99903c52bc9c94f64849842ee602e15c29d8f68720eeb35a89",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 869,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS 密度门 DEFER(配方不完整优先)",
+        "  PASS 无匹配 DEFER",
+        "",
+        "===== HEX-COMPOSITE v2 回归: 24/24 通过 ====="
+      ]
+    },
+    {
+      "name": "script-005-test_hex_gen",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_hex_gen.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.44082080002408475,
+      "stdout_sha256": "4f9cebc5e1e9f89106ebbb1aee040476ced6389434f73f0f2781fcaf7ed7b651",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 2000,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS 平移后构造性兑现率 ≥95%",
+        "    [数字] 平移（入界部件）兑现率 = 100.0%；出界落账 21 条",
+        "",
+        "===== HEX-GEN P1 回归: 30/30 通过 ====="
+      ]
+    },
+    {
+      "name": "script-006-test_core_export_all",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_core_export_all.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.6989516999747138,
+      "stdout_sha256": "d524d2d93e3fc2aa6633c2f46f8dabf0df67e8174e246f50cbb252d2034589fc",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 1870,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-007-test_scene_follow_patrol",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_scene_follow_patrol.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.2124255999806337,
+      "stdout_sha256": "b83ac074dccc92388a677e8f856f1a942788aeec5fc6e1ef292959594cc65536",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 1585,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "",
+        "========================================================================",
+        "FOLLOW_PATROL 15/15 通过",
+        "全部通过"
+      ]
+    },
+    {
+      "name": "script-008-test_issue145_causal_depth_cycles",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue145_causal_depth_cycles.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.0621500000124797,
+      "stdout_sha256": "dd21028e162dce9917f726c5df4f51045b76008a715891d0fb3a22d9198fa971",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 2266,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-009-test_causal_end_id_truncation",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_causal_end_id_truncation.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.9435233999975026,
+      "stdout_sha256": "50e61422bfdd1d79bedda077a72015f3cb1c9af0306a86ecbf97b1a28782b3fc",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 2938,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-010-test_coggraph_r4_and_viewer",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_coggraph_r4_and_viewer.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5619740999827627,
+      "stdout_sha256": "5e934891986d04bac50dfb588c71b92bf5d15e3be92545a2493d3f326ad0068a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 50,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "",
+        "===== SUMMARY 24/24 通过 =====",
+        "VERDICT=PASS"
+      ]
+    },
+    {
+      "name": "script-011-test_coggraph_generic_tag",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_coggraph_generic_tag.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.13469419998000376,
+      "stdout_sha256": "1af9c0224aae62416bdbd96a33b971b08f9313ed22372171ed52477819f368c0",
+      "stderr_sha256": "1d449602be9915b88df088a007a5b8eb57d8e01c7a347367a0c0cb608d79702a",
+      "stdout_bytes": 3259,
+      "stderr_bytes": 377,
+      "last_lines": [
+        "<repo>\\tests\\test_coggraph_generic_tag.py:5: SyntaxWarning: invalid escape sequence '\\d'",
+        "  `GENERIC_TAG` 三个短前缀分支只锚定了开头（`^sha` / `^precise` / `^v\\d`）⇒",
+        "  [R5] 未提供 --bodies-root，跳过正文互引（不假装通过）",
+        "  [R5] 未提供 --bodies-root，跳过正文互引（不假装通过）"
+      ]
+    },
+    {
+      "name": "script-012-test_hexgen_multi_seed_metric",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_hexgen_multi_seed_metric.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.34322000000975095,
+      "stdout_sha256": "59654c7de5d5e3818113973d2d7707156f1777ad1cfd84303b07ff5b67a66681",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 2437,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS G 组·比值有定义且非 0  0.072",
+        "",
+        "===== SUMMARY 29/29 通过 =====",
+        "VERDICT=PASS（issue #58 守卫：③ 号尺子的分子是同 prompt 内散布；不可分维点名且比值 None）"
+      ]
+    },
+    {
+      "name": "script-013-test_longterm_gate_novelty",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_longterm_gate_novelty.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.9458526999806054,
+      "stdout_sha256": "7c26c664a214314f0155276f623644f3a982b3928e147245b5e6ef496683674a",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 1078,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-014-test_state_write_observable",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_state_write_observable.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 9.91327600000659,
+      "stdout_sha256": "b100ccc3f7389ad4da33448276c0e88650392dbe8cab10c42c95253cbacb2b21",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 613,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS T3b 空状态重建 neutral",
+        "",
+        "===== SUMMARY 9/9 通过 =====",
+        "VERDICT=PASS（状态写入失败可观测；正常/空状态不误报）"
+      ]
+    },
+    {
+      "name": "script-015-test_coggraph_naming_report",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_coggraph_naming_report.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.4222832999948878,
+      "stdout_sha256": "7e0e1fd957bcf03cc711aafe07bc812ffd0eb47aa9757d9b572cf42a151cd48a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 50,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "",
+        "===== SUMMARY 38/38 通过 =====",
+        "VERDICT=PASS"
+      ]
+    },
+    {
+      "name": "script-016-test_issue606_naming_r5in_phantom_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue606_naming_r5in_phantom_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.9950338000198826,
+      "stdout_sha256": "ac058db1dcf1c388d3d7da91bec21c78d1ed9bfc7cec4377aadd825e7b0f295f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 50,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "",
+        "===== SUMMARY 32/32 通过 =====",
+        "VERDICT=PASS"
+      ]
+    },
+    {
+      "name": "script-017-test_skeleton_fk_order_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_skeleton_fk_order_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.20242239997605793,
+      "stdout_sha256": "9574a0fd9ba9dce1d7c6eb83d10e58fa36a4387b1dd6ea082847903bbe710f7c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 392,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "repo = <repo>",
+        "======================================================================",
+        "===== SUMMARY 12/12 通过 =====",
+        "VERDICT=PASS"
+      ]
+    },
+    {
+      "name": "script-018-test_expression_render_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_expression_render_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5094818000216037,
+      "stdout_sha256": "c9984b3d5b3020fff6edac2a80860508bebb15dc09fb4a72c2de3e52a7e42f0a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 454,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  [D] 幂等断言 5 条，失败 0 条",
+        "",
+        "===== SUMMARY 121/121 通过 =====",
+        "VERDICT=PASS"
+      ]
+    },
+    {
+      "name": "script-019-test_hex_grid_extent",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_hex_grid_extent.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5430029999988619,
+      "stdout_sha256": "c987449b726726480525dd85aaaca9f8d529c2af38a8e59e64c5f8b55a765ed8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 2120,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS D1 32x32/16：grid 同行间距 √3·s = W/(cells_across+0.5)",
+        "",
+        "===== SUMMARY 23/23 通过 =====",
+        "VERDICT=PASS（晶格铺满画幅：无画外采样，9 宫格与 L4 质心位置对齐）"
+      ]
+    },
+    {
+      "name": "script-020-test_hex_text_contracts",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_hex_text_contracts.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.2929691999743227,
+      "stdout_sha256": "91c603a8366420ec795dc8b44b3fd6848372712fa00a83e04c7e860652219349",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 1313,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS B4 rate=0.5：每属性改写频率 ≈ 0.5（360 次）",
+        "",
+        "===== SUMMARY 14/14 通过 =====",
+        "VERDICT=PASS（冲突子句可被 REJECT；噪声描述真改原义且不级联）"
+      ]
+    },
+    {
+      "name": "script-021-test_issue_ingest_scene_state_batch",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_ingest_scene_state_batch.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.0910202999948524,
+      "stdout_sha256": "41afc7541c64a9dfb6afafae7840666638bd29a5efc46062d3de3358b4da6256",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 960,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "[✓] E 三条过滤/解析分支未动（格式解析与 skip_dedup 选择面）",
+        "[✓] E 函数签名按本件声明（agent, scene_desc, store=None, tag=\"spatial\", relations=None）",
+        "",
+        "=== ingest_scene 状态批量提交守卫: 13/13 通过 ==="
+      ]
+    },
+    {
+      "name": "script-022-test_core_nplus1_getstats_forgetadvisor",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_core_nplus1_getstats_forgetadvisor.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.3294203999976162,
+      "stdout_sha256": "b5c14aa17a01a70ae24cbf9c3a6fa86dfccfe45ab322fcbda3403c3597477b62",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 5857,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "[✓] K `new_count` 仍由快照 `n.access_count` 推出（不依赖 increment 返回值）",
+        "[✓] K 降权/可压缩面仍在（`elif` 拆成显式 continue 后等价）",
+        "",
+        "=== N+1 优化守卫: 80/80 通过 ==="
+      ]
+    },
+    {
+      "name": "script-023-test_traverse_frontier_batch",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_traverse_frontier_batch.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5260501999873668,
+      "stdout_sha256": "1978275f1d65be29bcb65d33f9f0678f6d20a3d2d0b8a1a4407d4e2b54c7858d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 1375,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "[✓] C `rel_clause` / `params` 原样沿用（类型过滤语义未变）",
+        "[✓] C importance 补全仍按 `_SQL_IN_CHUNK` 分批（#417 未回退）",
+        "",
+        "=== traverse 整层批量守卫: 21/21 通过 ==="
+      ]
+    },
+    {
+      "name": "script-024-test_prediction_path_nodes_single_fetch",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_prediction_path_nodes_single_fetch.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.09345710001070984,
+      "stdout_sha256": "29b21771b5432e87c388a4f73fca8e6fa6a7fef70699dc52aeed7a5f41925ebc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 1445,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "[✓] D 两方法在 nodes=None 时仍等价旧行为",
+        "[✓] D 回落路径的 get_node 次数 = 2N — 实测 4",
+        "",
+        "=== 路径节点「取一次」守卫: 20/20 通过 ==="
+      ]
+    },
+    {
+      "name": "script-025-test_coggraph_utf8_bom",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_coggraph_utf8_bom.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.370094899990363,
+      "stdout_sha256": "fb89f2077667a795e84fbee2f0650eb29398058b666a6fab9d4e9d2b5027b355",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 95,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "",
+        "===== SUMMARY 16/16 通过 =====",
+        "VERDICT=PASS（UTF-8 BOM 记忆与无 BOM 同等解析）"
+      ]
+    },
+    {
+      "name": "script-026-test_issue454_unpack_out_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue454_unpack_out_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.844456299993908,
+      "stdout_sha256": "bfbd08dfe6d3d4fcd9158693d9065e88b9ccd0bdb07c2b00951abfea325b0e5b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 330,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "=== 两种模式都必须拒绝非法输入 ===",
+        "  常规: 垃圾字节(魔数不符)=REJECT_OK, 仅魔数无steps(过短)=REJECT_OK, steps越界=REJECT_OK, ACCEPT_OK=ACCEPT_OK",
+        "  -O 部署: 垃圾字节(魔数不符)=REJECT_OK, 仅魔数无steps(过短)=REJECT_OK, steps越界=REJECT_OK, ACCEPT_OK=ACCEPT_OK",
+        "===== 全绿 ====="
+      ]
+    },
+    {
+      "name": "script-027-test_issue_get_edge_id_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_get_edge_id_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5187408000056166,
+      "stdout_sha256": "ced6982d97bbe18057457ed9a24882255bca7548e3d2f9ade551a300b5de8ca2",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 222,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-028-test_issue_increment_access_id_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_increment_access_id_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5104170000122394,
+      "stdout_sha256": "c113a44f70539d57b259ae134bd5124836edeafef6c4d73f29b2a5dc16b4105c",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 209,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-029-test_issue_traverse_start_id_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_traverse_start_id_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5624283000070136,
+      "stdout_sha256": "eaaec18f979dc7a5b9cbf99c7725624b01d4e2719c0b8e126fc2e627a4af2b25",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 213,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-030-test_issue_prune_action_logs_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_prune_action_logs_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5375600999977905,
+      "stdout_sha256": "ecb7d538aa766c5b5ef6f5142740ae5e45b157457add284746cf0fa69725dcb7",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 198,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-031-test_issue_get-incoming-edges_id_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_get-incoming-edges_id_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5428099999844562,
+      "stdout_sha256": "bb42cbb765c2825ab6f272b86fde725a5361d2204af896fcc1889d85b5937e29",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 209,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-032-test_issue_get-outgoing-edges_id_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_get-outgoing-edges_id_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5505865000013728,
+      "stdout_sha256": "bb42cbb765c2825ab6f272b86fde725a5361d2204af896fcc1889d85b5937e29",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 209,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-033-test_issue_escalation_code_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_escalation_code_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5406476000207476,
+      "stdout_sha256": "eab405433ae39e579aa83eb0ffa8539ee45c0392e04addc6c19e174acce91c63",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 216,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-034-test_issue_prune_self_keep_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_prune_self_keep_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5087300000013784,
+      "stdout_sha256": "9a4f98a442e555e143c556af4b24d37869b981053a21a1c9887b59047e914caf",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 226,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-035-test_issue_get_nodes_by_tag_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_get_nodes_by_tag_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5057472999906167,
+      "stdout_sha256": "3428b24687737b27722a45826f612cbec5c4a53c5a8ea48663a58b0c297b7d8e",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 257,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-036-test_issue_get_nodes_by_tag_limit_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_get_nodes_by_tag_limit_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5213067999866325,
+      "stdout_sha256": "4674625ba5a89568979902dd5dca1fbc1ec0c12a8a20b809ed37b5adaa6787ae",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 306,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-037-test_issue_increment_many_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_increment_many_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5400970999908168,
+      "stdout_sha256": "b95c9c00ac2e94805aa5dae9720ca162c8cef8191eb18056d7f94fdad950a722",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 256,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-038-test_issue_update_importance_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_update_importance_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5558257999946363,
+      "stdout_sha256": "019bc46fddfd7f23b62c5813f540cf627603be567672aa1fc88c95000bada839",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 213,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-039-test_issue_update_confidence_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_update_confidence_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5346675000037067,
+      "stdout_sha256": "a25d735daac3db7343240d48ddb66c1d3827d5c042b1aceceede699e7d7728de",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 213,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-040-test_issue_get_skill_by_name_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_get_skill_by_name_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5313238999806345,
+      "stdout_sha256": "77819fb2feefd1a4377487e60f8dc5dc79f7839e5f4e3f30e232edef4bdb1684",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 272,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-041-test_issue_search_skills_query_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_search_skills_query_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5480662999907508,
+      "stdout_sha256": "ff36ddc627c88574c5033f612f7893d93128b30d37ab80962784ed1d254b1cbe",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 229,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-042-test_issue_recent_context_limit_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_recent_context_limit_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.543610799999442,
+      "stdout_sha256": "400b59364cadacb90aa1ec7695d9e1db9fbfde88c6c53e1f1050ed02aff881c9",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 306,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-043-test_issue_update_skill_confidence_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_update_skill_confidence_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5494192000187468,
+      "stdout_sha256": "3d404f73bee809a0fd97e1868cea33bf6450efde2d4a04c58a8e874ae3a48c66",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 252,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-044-test_issue_append_skill_procedure_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_append_skill_procedure_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5463484000065364,
+      "stdout_sha256": "524e4ec55d0bf18e92a3c5d12f9e66a2226292a70209c6bdf9d4e48b18717825",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 217,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-045-test_issue_jaccard_arg_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_jaccard_arg_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.551153999986127,
+      "stdout_sha256": "e4b63fa9514cdf9b413b21f26ba8dd1a7c787ea54239d7559bfdd50a1d8c7059",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 237,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-046-test_issue_expand_terms_query_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_expand_terms_query_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.540095799980918,
+      "stdout_sha256": "f4d1babb4de66b8ad6db24e9b54721787bd381a868d26712f2ebc78f046316fe",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 189,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-047-test_issue_range_time_layer_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_range_time_layer_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5165827000164427,
+      "stdout_sha256": "e65c6642ed97a268e15944a1113d2906530a6eede75c17463c279319899a6237",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 284,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-048-test_issue_by_time_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_by_time_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5389732999901753,
+      "stdout_sha256": "ba11e75bb83529ff3f83d195d7f9c1001d94d3187ec75bf58eac9a67190acb15",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 247,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-049-test_issue_subgraph_root_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_subgraph_root_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5511243999935687,
+      "stdout_sha256": "601fe5380d16d799223cc1c2089525ef3dc93191298b0150ebe2611c6f158bec",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 221,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-050-test_issue_find_cycles_depth_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_find_cycles_depth_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5522821999911685,
+      "stdout_sha256": "f28b3e9eae518f0cc6938671362fa6d842403ed51ec7fc9b4e571b8caef2d577",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 222,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-051-test_issue_spatiotemporal_center_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_spatiotemporal_center_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5467062999960035,
+      "stdout_sha256": "d92fbd37fbfd8c19eb0722b06179e94c3739e757a4e44f0cfed61479fee0568f",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 212,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-052-test_issue_insight_content_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_insight_content_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5519152999913786,
+      "stdout_sha256": "ec6950342c59928d461592717e189bc7a9b027143f3bead8afc54babcc3c579a",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 245,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-053-test_issue_count_layer_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_count_layer_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5238795999903232,
+      "stdout_sha256": "bcb32032de2526543c3455d4999171e157fb59ccc94b2707605aa91215c619b1",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 183,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-054-test_issue_get_meta_key_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_get_meta_key_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5412179999984801,
+      "stdout_sha256": "f9bc6b0daf156a6595d0519c4fa790bf5a474a0df4f3a5ca47d3d84c5c8ba8e3",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 245,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-055-test_issue_tag_node_missing_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_tag_node_missing_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.548325300012948,
+      "stdout_sha256": "0d42107c0d4eeb71a5e8ab48d8914e4170f3fa59a7cb0762922c67113ef59e75",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 234,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-056-test_issue_verify_edge_id_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_verify_edge_id_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5501685000199359,
+      "stdout_sha256": "cf7a762f890644fbdf0923da32e5a984440d323c8cfb57328e1b74839f0803b8",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 230,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-057-test_issue_scene_pos_readable_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_pos_readable_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.2054342000046745,
+      "stdout_sha256": "5e3a239a169f6ca0bc3d1659186ccf6f23ab341227830188fc1e4c40bc6b30ca",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 221,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS A02 二元组 pos -> ValueError 说明要三元组",
+        "  PASS A03 正对照：合法 pos 正常注册",
+        "  PASS E01 钉子：可读文案",
+        "通过 4 / 失败 0"
+      ]
+    },
+    {
+      "name": "script-058-test_issue_scene_path_points_readable_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_path_points_readable_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.202465399983339,
+      "stdout_sha256": "2a04dd7bab7dc17f456a46b5de5be3bab9e4270c15cd4102dc4cceb5ce73ad10",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 226,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS A02 单点非数值 -> 同一个可读 TypeError",
+        "  PASS A03 正对照：合法点列正常注册",
+        "  PASS E01 钉子：可读文案",
+        "通过 4 / 失败 0"
+      ]
+    },
+    {
+      "name": "script-059-test_issue_untag_node_id_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_untag_node_id_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.6275208000151906,
+      "stdout_sha256": "da569d214ce09f6c41644930655a90ecc240cae3a8f3df19b16906745b126739",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 282,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-060-test_issue_query_layer_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_query_layer_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5440416999917943,
+      "stdout_sha256": "4d41cda19f3a53aa80244d7ecd886fdd549ddc1bc01f89e70721e3424a06ee26",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 257,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-061-test_issue_scene_step_int_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_step_int_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.1930733000044711,
+      "stdout_sha256": "cba480fe31436d71fc6cd5c053eac578d8bd138f652d82ae1804b81acff9c57c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 331,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS A04 正对照：n=0 不推进",
+        "  PASS E01 钉子：整数文案",
+        "  PASS E02 钉子：类型文案",
+        "通过 6 / 失败 0"
+      ]
+    },
+    {
+      "name": "script-062-test_issue_rejected_path_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_rejected_path_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5592583999969065,
+      "stdout_sha256": "ac199724a0b7e29f3da35c80fdf09dcef5882cc9da97f83fe6ce650bd1a813fd",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 205,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-063-test_issue_scene_trees_range_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_trees_range_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.19836859998758882,
+      "stdout_sha256": "18b739e34b9dd2be6b0a7263ddce9d6b2a0c534042a575aad3b7ef4a00eecdc9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 276,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS A04 正对照：trees=0 合法",
+        "  PASS E01 钉子：类型文案",
+        "  PASS E02 钉子：负值文案",
+        "通过 6 / 失败 0"
+      ]
+    },
+    {
+      "name": "script-064-test_issue_search_layers_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_search_layers_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5303552999976091,
+      "stdout_sha256": "0d410d59e2c4c96b8847e052949727c509720caf1ca4eabf76579c5c5e17662d",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 271,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-065-test_issue_insight_evidence_str_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_insight_evidence_str_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.6150196999951731,
+      "stdout_sha256": "9529beef2894f7366c19f235ddf5774a09f1414dbeafc68d6deda6c182b99f51",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 201,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-066-test_issue_scene_goal_str_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_goal_str_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.19401209999341518,
+      "stdout_sha256": "3d46657daff70548358eba87aae4c60ba1db344f0d0698041915e9736364f765",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 216,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS A02 正对照：空串 goal 正常注册",
+        "  PASS A03 正对照：字符串 goal 指向有效实体",
+        "  PASS E01 钉子：可读文案",
+        "通过 4 / 失败 0"
+      ]
+    },
+    {
+      "name": "script-067-test_issue_scene_water_bool_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_water_bool_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.19274850000510924,
+      "stdout_sha256": "33cb40063a8e4fb051c3c8c953d7d7449e4b3468378978c3d5e252c27c584f95",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 274,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS A03 正对照：True 正常建场景（含水）",
+        "  PASS A04 正对照：False 正常建场景",
+        "  PASS E01 钉子：可读文案",
+        "通过 5 / 失败 0"
+      ]
+    },
+    {
+      "name": "script-068-test_issue_blindspot_str_args_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_blindspot_str_args_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5771285999799147,
+      "stdout_sha256": "27732e92d38e28cebfa53cd196660d2444c63a3c0fea17387c0d4ad46b42fc59",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 288,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-069-test_issue_scene_behavior_str_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_behavior_str_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.1945965999912005,
+      "stdout_sha256": "fb14d17e074ef8ceda59f6af7c3c7076832a4cf50828a4c11a88d9bea3cbfb4d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 290,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS A04 正对照：合法值注册且照常移动",
+        "  PASS E01 钉子：behavior 文案",
+        "  PASS E02 钉子：category 文案",
+        "通过 6 / 失败 0"
+      ]
+    },
+    {
+      "name": "script-070-test_issue_add_path_id_str_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_add_path_id_str_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.19365390000166371,
+      "stdout_sha256": "97ea08833175135feb380a995fb773c56f259b3082e40e9c2cfc33f772af64a1",
+      "stderr_sha256": "e2e8914fb76885289ea61b9378333224c96be21b8e36edbfe4fcb4fc737a6a0f",
+      "stdout_bytes": 257,
+      "stderr_bytes": 255,
+      "last_lines": [
+        "  PASS E01 钉子：可读文案",
+        "通过 5 / 失败 0",
+        "<repo>\\lingshu\\world\\scene_simulator.py:1272: RuntimeWarning: scene_simulator: behavior=follow 的目标 '' 不可解析 ⇒ 本 tick 不移动（不再静默退化为 wander）",
+        "  direction = self._decide(e)"
+      ]
+    },
+    {
+      "name": "script-071-test_issue_insight_importance_range_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_insight_importance_range_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5754831000231206,
+      "stdout_sha256": "57ace4873bc3c7a28af9897cb5951a4d5c2fa6711c4bddf11f4c26249ccc0170",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 296,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-072-test_issue_auto_decay_interval_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_auto_decay_interval_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.8808157999883406,
+      "stdout_sha256": "9d1ac4e0a056db73edc5fb38dd904eaa59f34cc34d180ce08723b6d1cc02712d",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 418,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-073-test_issue_conflict_self_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_conflict_self_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5746796999883372,
+      "stdout_sha256": "86cbc76ee13492d23dea81a83adb7ca1d6ee0009e67e2a3dde2fcdcfc4bf8349",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 343,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-074-test_issue_insight_conditions_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_insight_conditions_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5992926000035368,
+      "stdout_sha256": "cdda53aafa0d1188ee7f44f079faf751b6740f65b89ec4b5c5fc4a6d15bb2aa4",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 279,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-075-test_issue_dedup_config_args_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_dedup_config_args_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5744448000041302,
+      "stdout_sha256": "35b6c9a19800033a726b1fe23567678be4a367b41cafb12084093ae27b790cc3",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 262,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-076-test_issue_insight_window_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_insight_window_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5379588999785483,
+      "stdout_sha256": "204be769aa2c8b6a48927e5244ce7fa8b97c5b61f139586ef5fb94a7dda12bab",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 289,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-077-test_issue_add_edge_cs_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_add_edge_cs_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5575007000006735,
+      "stdout_sha256": "5826d85e275be49c78d4cd46ce9cb8c4bc589b898e9683e1ded1d60f52c06b55",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 306,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-078-test_issue_register_conflict_cs_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_register_conflict_cs_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5686246000113897,
+      "stdout_sha256": "73e460d2583cdfe409d0b87896fd626d15aac1781ef201f923459c80590faeea",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 312,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-079-test_issue_spatial_coords_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_spatial_coords_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5478560000192374,
+      "stdout_sha256": "c2f19d41aeff01a43cfd78750a1db331c4868cba7a305c29de930d4f4fc84626",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 291,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-080-test_issue_search_content_query_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_search_content_query_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5406180999998469,
+      "stdout_sha256": "a78d37a2d02251c8caaa40d373ced8ca924f8e5e6e84b33faf7258b20d5cea66",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 266,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-081-test_issue_export_path_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_export_path_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5358765999844763,
+      "stdout_sha256": "68af0833c443c0ccfe1fe9f555a2a26f47727f7c95519262793b6b65b374c2a9",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 303,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-082-test_issue_import_path_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_import_path_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.561936300015077,
+      "stdout_sha256": "d8e50999d3ed1e461076b3f8591645cd645730e4d52e2e6b3f27e4cbc9cc1bd7",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 326,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-083-test_issue_set_meta_key_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_set_meta_key_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5582963000051677,
+      "stdout_sha256": "bf792262101aa7cb5db643f5ef46b5ffdb118c95352030be5277e52fc4db19a6",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 290,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-084-test_issue_decay_factor_range_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_decay_factor_range_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.6302671000012197,
+      "stdout_sha256": "6009b4272bcf371fdffdbc806807ca15a1260d89bf1d2bd06ee37753f994487f",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 549,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-085-test_issue_min_confidence_range_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_min_confidence_range_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.6157718999893405,
+      "stdout_sha256": "766ca3c7a6f009d70a037b61521cb4545d737253dc94649b5d6016c2551de933",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 283,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-086-test_issue_scene_speed_negative_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_scene_speed_negative_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.22509459999855608,
+      "stdout_sha256": "a32c6d8f27b673f9e58fdc518bf97b92b07faffc1d31b65adfede6fe48013009",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 274,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS A04 合法 0（静止）接受且不动",
+        "  PASS E01 钉子：可读拒绝文案",
+        "  PASS E02 钉子：非有限与负值同闸",
+        "通过 6 / 失败 0"
+      ]
+    },
+    {
+      "name": "script-087-test_issue_time_core_arg_types_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_time_core_arg_types_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.1143230999878142,
+      "stdout_sha256": "9929d1649e1ca92c24ce7e65c608dec01fffc14afb6837dfeda0769b67dcd699",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 349,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS A04 正对照：cred_factor(1,0)=1、cred_factor(1,1)=e^-1",
+        "  PASS E01 钉子(lingshu)：可读 TypeError",
+        "  PASS E01 钉子(lingshu)：可读 TypeError",
+        "通过 6 / 失败 0"
+      ]
+    },
+    {
+      "name": "script-088-test_issue_gap_dual_arg_types_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_gap_dual_arg_types_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.1272803999891039,
+      "stdout_sha256": "e3fdc0fa1c01522844d039227f8ed5d908397cca275945db86ab8a94a22cbf0a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 243,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS A04 正对照：无事件 => 0.0",
+        "  PASS E01 钉子：可读 TypeError",
+        "  PASS E02 钉子：负数闸",
+        "通过 6 / 失败 0"
+      ]
+    },
+    {
+      "name": "script-089-test_issue_protect_reason_empty_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_protect_reason_empty_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5688095999939833,
+      "stdout_sha256": "a0db535eb24e19fb44f00372ca7ca16b61709a6c60aeb3e6fc135262b142f031",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 256,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-090-test_issue_blindspot_input_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_blindspot_input_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5850019000063185,
+      "stdout_sha256": "ab452dd4873fbe7dd7cb4542c03faec148a23d638b233e0a9d0e1b03b79cd30d",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 258,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-091-test_issue_hex_extract_args_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_hex_extract_args_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.251727699971525,
+      "stdout_sha256": "03892c74ecf23cc96229372acd0a97a0f589af16793848cb35f09b2a773da16b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 309,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS A05 正对照：合法输入 tx=1.0 / solid",
+        "  PASS E01 钉子：quadrant 文案",
+        "  PASS E02 钉子：color 文案",
+        "通过 7 / 失败 0"
+      ]
+    },
+    {
+      "name": "script-092-test_issue_insight_level_type_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_insight_level_type_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.6221531999763101,
+      "stdout_sha256": "d72a8b20079dbeaf003a98fe2c9a7be054bee480972fe68d6a5b6553c6202e96",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 285,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-093-test_issue_add_edge_missing_endpoint_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_add_edge_missing_endpoint_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5691037999931723,
+      "stdout_sha256": "ce56509238718290fbf07f376a1ba808b0d0bc2371b91aa1132ef001dc737c06",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 465,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-094-test_issue_condition_normalize_nondict_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_condition_normalize_nondict_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.1488981999864336,
+      "stdout_sha256": "1c915b80b45fade9c94a5e9edb780f90ef959e6e33bd408157a65d7aff94a107",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 821,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS E01 钉子：非映射类型闸（isinstance Mapping）",
+        "  PASS E02 钉子：None 等价空 dict",
+        "  PASS E03 钉子：invalid_domains 用 None 安全的 source",
+        "通过 13 / 失败 0"
+      ]
+    },
+    {
+      "name": "script-095-test_issue281_insight_report_conditions_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue281_insight_report_conditions_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.4265426000056323,
+      "stdout_sha256": "26c34d18caf1bc5c7f963fceb88ae1755cab44231c9ef4e2041b326a3c008a06",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 595,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-096-test_issue_context_cap_negative_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_context_cap_negative_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.7157820000138599,
+      "stdout_sha256": "ac699b5ec7fb594d487d0a11e15cdd821c1ea02bf3a66efa1c5f7adaa40b7273",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 643,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-097-test_issue_verdict_input_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue_verdict_input_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.13259819999802858,
+      "stdout_sha256": "011d0c87fa45d0f22b8153492fef1128094b3128c1d2b6330600a0c192c44d71",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 561,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS A06 正对照：正常输入 ACCEPT",
+        "  PASS E01 钉子：part 类型闸",
+        "  PASS E02 钉子：非数值落 BLINDSPOT",
+        "通过 10 / 失败 0"
+      ]
+    },
+    {
+      "name": "script-098-test_issue274_structural_influence_guard",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue274_structural_influence_guard.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.6111113999795634,
+      "stdout_sha256": "f5da0867bfcd5a0e80e1a2d44fa4e5587bc30efe9fac630a9da4a6850137ee59",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 721,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-099-test_issue521_activation_conflict_veto",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue521_activation_conflict_veto.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.2409836999722756,
+      "stdout_sha256": "2df334c61665bd1f4b500dd4ccb96fa87393c7807c488ec73f7e265aff4437cc",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 705,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-100-test_issue481_snapshot_divergence",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue481_snapshot_divergence.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.7540422999882139,
+      "stdout_sha256": "df870233c6ceeed7978234a91b742e4f32f940d16f1465f202ca531a82e3a5f0",
+      "stderr_sha256": "5096115ec52f078cd2d4b6224d161f7e75493fdb59adfec73f9fcfa01b035849",
+      "stdout_bytes": 845,
+      "stderr_bytes": 3886,
+      "last_lines": [
+        "<repo>\\lingshu\\core\\core.py:7535: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from self_cognition_engine import SelfCognitionEngine",
+        "<repo>\\lingshu\\core\\core.py:7514: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。",
+        "  from body import build_default_registry"
+      ]
+    },
+    {
+      "name": "script-101-test_issue487b_launch_dir",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue487b_launch_dir.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.707630799995968,
+      "stdout_sha256": "24dca00f4bf971e81a5157a788aeac5878f6b4cb340b9e507a2922b908a6c6d4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 711,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "== E 组：源码钉子 ==",
+        "  PASS E01 ★钉子：argv[0] 脚本目录优先",
+        "  PASS E02 ★钉子：argv[0] 目录必须在 sys.path + __main__.py 跳过",
+        "通过 7 / 失败 0"
+      ]
+    },
+    {
+      "name": "script-102-test_issue825_text_gates",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tests/test_issue825_text_gates.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.11323749998700805,
+      "stdout_sha256": "8e110f00ca4222658f6ac328af621d32386cc44076b388c1f731b4e31cb285bc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 1168,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "  PASS E01 ★钉子：CJK 按三项缺项判据",
+        "  PASS E02 ★钉子：lines 与 text 一致性检查",
+        "  PASS E03 ★钉子：cps_of 读 text",
+        "通过 15 / 失败 0"
+      ]
+    },
+    {
+      "name": "pytest",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "pytest",
+        "tests/",
+        "-q",
+        "-n",
+        "4",
+        "--dist",
+        "loadfile",
+        "--junitxml=<audit-evidence>\\command-full-gate\\pytest.xml",
+        "--ignore=tests/test_brain_store.py",
+        "--ignore=tests/test_wm_verify_unobserved.py",
+        "--ignore=tests/test_hex_cnn.py",
+        "--ignore=tests/test_hex_composite.py",
+        "--ignore=tests/test_hex_gen.py",
+        "--ignore=tests/test_core_export_all.py",
+        "--ignore=tests/test_scene_follow_patrol.py",
+        "--ignore=tests/test_issue145_causal_depth_cycles.py",
+        "--ignore=tests/test_causal_end_id_truncation.py",
+        "--ignore=tests/test_coggraph_r4_and_viewer.py",
+        "--ignore=tests/test_coggraph_generic_tag.py",
+        "--ignore=tests/test_hexgen_multi_seed_metric.py",
+        "--ignore=tests/test_longterm_gate_novelty.py",
+        "--ignore=tests/test_state_write_observable.py",
+        "--ignore=tests/test_coggraph_naming_report.py",
+        "--ignore=tests/test_issue606_naming_r5in_phantom_guard.py",
+        "--ignore=tests/test_skeleton_fk_order_guard.py",
+        "--ignore=tests/test_expression_render_guard.py",
+        "--ignore=tests/test_hex_grid_extent.py",
+        "--ignore=tests/test_hex_text_contracts.py",
+        "--ignore=tests/test_issue_ingest_scene_state_batch.py",
+        "--ignore=tests/test_core_nplus1_getstats_forgetadvisor.py",
+        "--ignore=tests/test_traverse_frontier_batch.py",
+        "--ignore=tests/test_prediction_path_nodes_single_fetch.py",
+        "--ignore=tests/test_coggraph_utf8_bom.py",
+        "--ignore=tests/test_issue454_unpack_out_guard.py",
+        "--ignore=tests/test_issue_get_edge_id_type_guard.py",
+        "--ignore=tests/test_issue_increment_access_id_type_guard.py",
+        "--ignore=tests/test_issue_traverse_start_id_type_guard.py",
+        "--ignore=tests/test_issue_prune_action_logs_type_guard.py",
+        "--ignore=tests/test_issue_get-incoming-edges_id_type_guard.py",
+        "--ignore=tests/test_issue_get-outgoing-edges_id_type_guard.py",
+        "--ignore=tests/test_issue_escalation_code_type_guard.py",
+        "--ignore=tests/test_issue_prune_self_keep_type_guard.py",
+        "--ignore=tests/test_issue_get_nodes_by_tag_type_guard.py",
+        "--ignore=tests/test_issue_get_nodes_by_tag_limit_type_guard.py",
+        "--ignore=tests/test_issue_increment_many_type_guard.py",
+        "--ignore=tests/test_issue_update_importance_type_guard.py",
+        "--ignore=tests/test_issue_update_confidence_type_guard.py",
+        "--ignore=tests/test_issue_get_skill_by_name_type_guard.py",
+        "--ignore=tests/test_issue_search_skills_query_type_guard.py",
+        "--ignore=tests/test_issue_recent_context_limit_type_guard.py",
+        "--ignore=tests/test_issue_update_skill_confidence_type_guard.py",
+        "--ignore=tests/test_issue_append_skill_procedure_type_guard.py",
+        "--ignore=tests/test_issue_jaccard_arg_type_guard.py",
+        "--ignore=tests/test_issue_expand_terms_query_type_guard.py",
+        "--ignore=tests/test_issue_range_time_layer_type_guard.py",
+        "--ignore=tests/test_issue_by_time_type_guard.py",
+        "--ignore=tests/test_issue_subgraph_root_type_guard.py",
+        "--ignore=tests/test_issue_find_cycles_depth_type_guard.py",
+        "--ignore=tests/test_issue_spatiotemporal_center_type_guard.py",
+        "--ignore=tests/test_issue_insight_content_type_guard.py",
+        "--ignore=tests/test_issue_count_layer_type_guard.py",
+        "--ignore=tests/test_issue_get_meta_key_type_guard.py",
+        "--ignore=tests/test_issue_tag_node_missing_guard.py",
+        "--ignore=tests/test_issue_verify_edge_id_type_guard.py",
+        "--ignore=tests/test_issue_scene_pos_readable_guard.py",
+        "--ignore=tests/test_issue_scene_path_points_readable_guard.py",
+        "--ignore=tests/test_issue_untag_node_id_type_guard.py",
+        "--ignore=tests/test_issue_query_layer_type_guard.py",
+        "--ignore=tests/test_issue_scene_step_int_guard.py",
+        "--ignore=tests/test_issue_rejected_path_type_guard.py",
+        "--ignore=tests/test_issue_scene_trees_range_guard.py",
+        "--ignore=tests/test_issue_search_layers_type_guard.py",
+        "--ignore=tests/test_issue_insight_evidence_str_guard.py",
+        "--ignore=tests/test_issue_scene_goal_str_guard.py",
+        "--ignore=tests/test_issue_scene_water_bool_guard.py",
+        "--ignore=tests/test_issue_blindspot_str_args_guard.py",
+        "--ignore=tests/test_issue_scene_behavior_str_guard.py",
+        "--ignore=tests/test_issue_add_path_id_str_guard.py",
+        "--ignore=tests/test_issue_insight_importance_range_guard.py",
+        "--ignore=tests/test_issue_auto_decay_interval_guard.py",
+        "--ignore=tests/test_issue_conflict_self_guard.py",
+        "--ignore=tests/test_issue_insight_conditions_type_guard.py",
+        "--ignore=tests/test_issue_dedup_config_args_guard.py",
+        "--ignore=tests/test_issue_insight_window_type_guard.py",
+        "--ignore=tests/test_issue_add_edge_cs_type_guard.py",
+        "--ignore=tests/test_issue_register_conflict_cs_type_guard.py",
+        "--ignore=tests/test_issue_spatial_coords_type_guard.py",
+        "--ignore=tests/test_issue_search_content_query_type_guard.py",
+        "--ignore=tests/test_issue_export_path_type_guard.py",
+        "--ignore=tests/test_issue_import_path_type_guard.py",
+        "--ignore=tests/test_issue_set_meta_key_type_guard.py",
+        "--ignore=tests/test_issue_decay_factor_range_guard.py",
+        "--ignore=tests/test_issue_min_confidence_range_guard.py",
+        "--ignore=tests/test_issue_scene_speed_negative_guard.py",
+        "--ignore=tests/test_issue_time_core_arg_types_guard.py",
+        "--ignore=tests/test_issue_gap_dual_arg_types_guard.py",
+        "--ignore=tests/test_issue_protect_reason_empty_guard.py",
+        "--ignore=tests/test_issue_blindspot_input_guard.py",
+        "--ignore=tests/test_issue_hex_extract_args_guard.py",
+        "--ignore=tests/test_issue_insight_level_type_guard.py",
+        "--ignore=tests/test_issue_add_edge_missing_endpoint_guard.py",
+        "--ignore=tests/test_issue_condition_normalize_nondict_guard.py",
+        "--ignore=tests/test_issue281_insight_report_conditions_guard.py",
+        "--ignore=tests/test_issue_context_cap_negative_guard.py",
+        "--ignore=tests/test_issue_verdict_input_guard.py",
+        "--ignore=tests/test_issue274_structural_influence_guard.py",
+        "--ignore=tests/test_issue521_activation_conflict_veto.py",
+        "--ignore=tests/test_issue481_snapshot_divergence.py",
+        "--ignore=tests/test_issue487b_launch_dir.py",
+        "--ignore=tests/test_issue825_text_gates.py"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 1269.3960553999932,
+      "stdout_sha256": "8f8e5f3c7df222f42926e642d6fd5c2b9444d260dd90b7eb6287299405f8bde4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 142844,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+        "=========================== short test summary info ===========================",
+        "FAILED tests/test_issue498_atomic_write_perm_symlink_guard.py::test_p1_符号链接量具能力探测",
+        "1 failed, 5734 passed, 26 skipped, 10435 warnings, 98 subtests passed in 1268.33s (0:21:08)"
+      ]
+    },
+    {
+      "name": "manifest",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tools/verify_manifest.py",
+        "--strict",
+        "--json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.1734400999848731,
+      "stdout_sha256": "a53ef42074216c2abbe4c206341d50663c0b1bf570c1adde687a2116baa939e9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 31838,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "    },",
+        "    \"unparseable\": 0",
+        "  }",
+        "}"
+      ]
+    },
+    {
+      "name": "time-core",
+      "command": [
+        "<validation-venv>\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tools/time_core_lint.py",
+        "--json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 10.27320470000268,
+      "stdout_sha256": "1d3606cac17ddfd1c4ddc7ec2bf6ae088a5da87f9ddb0a78da9e28292f99867d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 5657,
+      "stderr_bytes": 0,
+      "last_lines": [
+        "    \"total\": 23",
+        "  },",
+        "  \"version\": 2",
+        "}"
+      ]
+    }
+  ],
+  "pytest": {
+    "testcases": 5761,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 26
+  }
+}

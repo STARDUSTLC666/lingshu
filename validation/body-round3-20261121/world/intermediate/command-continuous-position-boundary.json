@@ -1,0 +1,102 @@
+[
+  {
+    "action": "east",
+    "step": 2.0,
+    "old_x": 64.003,
+    "command_x": 66.0,
+    "raw_dx": 1.9969999999999999,
+    "public_velocity": [
+      2.0,
+      0.0,
+      0.0
+    ],
+    "physics_v0": [
+      20.0,
+      0.0,
+      0.0
+    ],
+    "actual_average_vx": 19.97,
+    "resumed_x": 68.0,
+    "expected_raw_endpoint_x": 67.997
+  },
+  {
+    "action": "stay",
+    "step": 2.0,
+    "old_x": 64.003,
+    "command_x": 64.0,
+    "raw_dx": -0.0030000000000001137,
+    "public_velocity": [
+      -0.0,
+      0.0,
+      0.0
+    ],
+    "physics_v0": [
+      -0.0,
+      0.0,
+      0.0
+    ],
+    "actual_average_vx": -0.030000000000001137,
+    "resumed_x": 64.0,
+    "expected_raw_endpoint_x": 63.997
+  },
+  {
+    "action": "east",
+    "step": 0.001,
+    "old_x": 64.004,
+    "command_x": 64.01,
+    "raw_dx": 0.006000000000000227,
+    "public_velocity": [
+      0.01,
+      0.0,
+      0.0
+    ],
+    "physics_v0": [
+      0.09999999999999999,
+      0.0,
+      0.0
+    ],
+    "actual_average_vx": 0.060000000000002274,
+    "resumed_x": 64.02000000000001,
+    "expected_raw_endpoint_x": 64.016
+  },
+  {
+    "action": "east",
+    "step": 0.001,
+    "old_x": 64.0,
+    "command_x": 64.0,
+    "raw_dx": 0.0,
+    "public_velocity": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "physics_v0": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "actual_average_vx": 0.0,
+    "resumed_x": 64.0,
+    "expected_raw_endpoint_x": 64.0
+  },
+  {
+    "action": "west",
+    "step": 0.001,
+    "old_x": 64.006,
+    "command_x": 64.0,
+    "raw_dx": -0.006000000000000227,
+    "public_velocity": [
+      -0.01,
+      0.0,
+      0.0
+    ],
+    "physics_v0": [
+      -0.09999999999999999,
+      0.0,
+      0.0
+    ],
+    "actual_average_vx": -0.060000000000002274,
+    "resumed_x": 63.99,
+    "expected_raw_endpoint_x": 63.994
+  }
+]

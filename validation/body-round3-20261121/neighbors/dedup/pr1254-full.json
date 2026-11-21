@@ -1,0 +1,32 @@
+{
+  "body_sha256_utf8": "708c1520462b37e5a1198134ec3336ed330377fd1bf8b75ebb4d8950bc5029a9",
+  "body_utf8_bytes": 1744,
+  "comments": [],
+  "files": [
+    {
+      "path": "docs/intake/body-export-v0.1/_export_manifest.json",
+      "additions": 1,
+      "deletions": 1,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "lingshu/nn/hex_cnn.py",
+      "additions": 38,
+      "deletions": 8,
+      "changeType": "MODIFIED"
+    },
+    {
+      "path": "tests/test_issue6_grid_roundtrip_guard.py",
+      "additions": 104,
+      "deletions": 0,
+      "changeType": "ADDED"
+    }
+  ],
+  "headRefOid": "80c0258b692298a71e33b46aa613424f54aa6b16",
+  "mergeCommit": {
+    "oid": "4132fbc882eb01f301b48eeec9c8e4eef16c7c8c"
+  },
+  "mergedAt": "2026-11-05T02:27:05Z",
+  "reviews": [],
+  "state": "MERGED"
+}

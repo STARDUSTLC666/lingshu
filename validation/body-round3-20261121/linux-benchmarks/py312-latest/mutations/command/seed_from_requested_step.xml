@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.162" timestamp="2026-11-20T18:17:44.327075+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_dynamics_command_reanchor" name="test_clamping_uses_actual_displacement_for_the_physics_velocity" time="0.032"><failure message="AssertionError: COMMAND_REQUESTED_STEP_REPLACED_ACTUAL_MOTION&#10;assert (50.0, 0.0, 0.0) == (2.5, 0.0, 0.0)&#10;  &#10;  At index 0 diff: 50.0 != 2.5&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    (&#10;  -     2.5,&#10;  +     50.0,&#10;        0.0,&#10;        0.0,&#10;    )">tests/test_dynamics_command_reanchor.py:141: in test_clamping_uses_actual_displacement_for_the_physics_velocity
+    assert e.attrs["physics_state"]["v0"] == (2.5, 0., 0.), "COMMAND_REQUESTED_STEP_REPLACED_ACTUAL_MOTION"
+E   AssertionError: COMMAND_REQUESTED_STEP_REPLACED_ACTUAL_MOTION
+E   assert (50.0, 0.0, 0.0) == (2.5, 0.0, 0.0)
+E     
+E     At index 0 diff: 50.0 != 2.5
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       (
+E     -     2.5,
+E     +     50.0,
+E           0.0,
+E           0.0,
+E       )</failure></testcase></testsuite></testsuites>

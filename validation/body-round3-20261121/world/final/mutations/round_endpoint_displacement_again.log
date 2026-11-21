@@ -1,0 +1,14 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_continuous_position_uses_unrounded_actual_endpoint_displacement[east-2.0-64.003-66.0-19.97] _
+tests\test_dynamics_command_reanchor.py:332: in test_continuous_position_uses_unrounded_actual_endpoint_displacement
+    assert e.attrs["physics_state"]["v0"][0] == pytest.approx(expected_vx, abs=1e-12), "COMMAND_REROUNDED_CONTINUOUS_DISPLACEMENT"
+E   AssertionError: COMMAND_REROUNDED_CONTINUOUS_DISPLACEMENT
+E   assert 20.0 == 19.97 ± 1.0e-12
+E     
+E     comparison failed
+E     Obtained: 20.0
+E     Expected: 19.97 ± 1.0e-12
+=========================== short test summary info ===========================
+FAILED tests/test_dynamics_command_reanchor.py::test_continuous_position_uses_unrounded_actual_endpoint_displacement[east-2.0-64.003-66.0-19.97]
+1 failed in 0.30s

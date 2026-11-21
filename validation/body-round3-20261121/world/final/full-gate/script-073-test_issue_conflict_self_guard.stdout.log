@@ -1,0 +1,6 @@
+  PASS A01 自冲突拒绝且零写入（不建自环边、不打 conflict 标签）
+  PASS A02 正对照：不同节点建 OPPOSITE 边并双方打标
+  PASS A03 对照：不存在的端点仍返回 None（既有语义不变）
+  PASS E01 钉子：自冲突拒绝文案
+  PASS E02 钉子：判据在取 layer 之前
+通过 5 / 失败 0

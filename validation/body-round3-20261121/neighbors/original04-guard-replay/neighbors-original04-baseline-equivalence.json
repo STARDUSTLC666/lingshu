@@ -1,0 +1,33 @@
+{
+  "source": "lingshu/nn/hex_cnn.py",
+  "snapshots": [
+    {
+      "head": "04e0ecb6a3669c90efbb4a1583816a8f7ca26bc7",
+      "bytes": 32925,
+      "raw_sha256": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081",
+      "lf_sha256": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081"
+    },
+    {
+      "head": "6b73082406d40a630a44cd68559c1f66b3652390",
+      "bytes": 32925,
+      "raw_sha256": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081",
+      "lf_sha256": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081"
+    }
+  ],
+  "raw_byte_identical": true,
+  "scope": "Original04 initial oracle remains historical; original04 pytest replay is a later application of the unchanged final30 guard to exact original source.",
+  "replay_command": [
+    "<validation-venv>\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "tools/testing/replay_save_guards.py",
+    "--spec",
+    "tests/fixtures/hexgrid_odd_r_neighbors_mutations.json",
+    "--baseline",
+    "04e0ecb6a3669c90efbb4a1583816a8f7ca26bc7",
+    "--output",
+    "<audit-evidence>\\neighbors-replay-original04"
+  ],
+  "replay_returncode": 0
+}

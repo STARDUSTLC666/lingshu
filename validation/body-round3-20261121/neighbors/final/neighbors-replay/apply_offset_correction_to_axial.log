@@ -1,0 +1,13 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+__________ test_axial_neighbor_list_and_order_are_unchanged[default] __________
+tests\test_hexgrid_odd_r_neighbors.py:112: in test_axial_neighbor_list_and_order_are_unchanged
+    assert grid.neighbors(q, r) == [
+E   AssertionError: axial neighbor list and direction order must remain unchanged
+E   assert [(4, 2), (3, ...2, 3), (3, 3)] == [(4, 2), (4, ...2, 3), (3, 3)]
+E     
+E     At index 1 diff: (3, 1) != (4, 1)
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_axial_neighbor_list_and_order_are_unchanged[default]
+1 failed in 0.31s

@@ -1,0 +1,7 @@
+  PASS A01 list conditions -> 可读 TypeError
+  PASS A02 str conditions -> 可读 TypeError
+  PASS A03 正对照：dict 正常登记
+  PASS A04 None 等价未提供（默认值）
+  PASS E01 钉子：可读文案
+  PASS E02 钉子：None 单独放行
+通过 6 / 失败 0

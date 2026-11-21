@@ -1,0 +1,13 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_______________ test_odd_r_neighbors_keep_direction_order[odd] ________________
+tests\test_hexgrid_odd_r_neighbors.py:49: in test_odd_r_neighbors_keep_direction_order
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+E   assert [(4, 4), (3, ...4, 2), (4, 3)] == [(4, 3), (4, ...3, 4), (4, 4)]
+E     
+E     At index 0 diff: (4, 4) != (4, 3)
+E     Use -v to get more diff
+=========================== short test summary info ===========================
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_odd_r_neighbors_keep_direction_order[odd]
+1 failed in 0.30s

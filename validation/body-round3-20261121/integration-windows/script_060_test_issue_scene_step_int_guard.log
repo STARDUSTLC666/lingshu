@@ -1,0 +1,7 @@
+  PASS A01 小数 n -> ValueError 且不推进（旧实现静默截断成 2）
+  PASS A02 非数值 n -> 可读 TypeError（旧实现泄漏 int() ValueError）
+  PASS A03 正对照：n=2 推进 2 tick
+  PASS A04 正对照：n=0 不推进
+  PASS E01 钉子：整数文案
+  PASS E02 钉子：类型文案
+通过 6 / 失败 0

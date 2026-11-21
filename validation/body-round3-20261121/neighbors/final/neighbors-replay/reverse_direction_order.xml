@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.263" timestamp="2026-11-21T01:36:33.197456+08:00" hostname="STARDUST"><testcase classname="tests.test_hexgrid_odd_r_neighbors" name="test_odd_r_neighbors_keep_direction_order[odd]" time="0.001"><failure message="AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE&#10;assert [(4, 4), (3, ...4, 2), (4, 3)] == [(4, 3), (4, ...3, 4), (4, 4)]&#10;  &#10;  At index 0 diff: (4, 4) != (4, 3)&#10;  Use -v to get more diff">tests\test_hexgrid_odd_r_neighbors.py:49: in test_odd_r_neighbors_keep_direction_order
+    assert grid.neighbors(q, r) == _nearest_six(grid, q, r), (
+E   AssertionError: odd-r neighbors must follow E, NE, NW, W, SW, SE
+E   assert [(4, 4), (3, ...4, 2), (4, 3)] == [(4, 3), (4, ...3, 4), (4, 4)]
+E     
+E     At index 0 diff: (4, 4) != (4, 3)
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

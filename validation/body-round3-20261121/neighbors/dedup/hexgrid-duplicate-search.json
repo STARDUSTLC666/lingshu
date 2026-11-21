@@ -1,0 +1,164 @@
+[
+  {
+    "query": "repo:FuRongJun-1999/lingshu HexGrid.neighbors",
+    "total_count": 2,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 6,
+        "title": "[nn/hex_cnn] image_to_grid 返回的 HexGrid 与实际采样坐标不是同一套（往返 0/40）；蜂窝性的证据不在特征链路上",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/6",
+        "state": "closed",
+        "body_sha256_utf8": "1e4ae30570cdaefc18bf5c5870b065a66ceabd17e52ae0ce79653cc854f7a834",
+        "body_utf8_bytes": 4391
+      },
+      {
+        "number": 18,
+        "title": "[nn/hex_cnn] hex_conv 的 6 邻 stencil 有一个邻居落在 3.0：等距性在卷积层不成立",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/18",
+        "state": "closed",
+        "body_sha256_utf8": "08a3da52537f978c7dca092ddedf742d9b90544e7e801fdd8bcecea2dbc95461",
+        "body_utf8_bytes": 5152
+      }
+    ]
+  },
+  {
+    "query": "repo:FuRongJun-1999/lingshu neighbors odd_r_offset",
+    "total_count": 2,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 6,
+        "title": "[nn/hex_cnn] image_to_grid 返回的 HexGrid 与实际采样坐标不是同一套（往返 0/40）；蜂窝性的证据不在特征链路上",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/6",
+        "state": "closed",
+        "body_sha256_utf8": "1e4ae30570cdaefc18bf5c5870b065a66ceabd17e52ae0ce79653cc854f7a834",
+        "body_utf8_bytes": 4391
+      },
+      {
+        "number": 18,
+        "title": "[nn/hex_cnn] hex_conv 的 6 邻 stencil 有一个邻居落在 3.0：等距性在卷积层不成立",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/18",
+        "state": "closed",
+        "body_sha256_utf8": "08a3da52537f978c7dca092ddedf742d9b90544e7e801fdd8bcecea2dbc95461",
+        "body_utf8_bytes": 5152
+      }
+    ]
+  },
+  {
+    "query": "repo:FuRongJun-1999/dsh-bounty HexGrid",
+    "total_count": 3,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 2787,
+        "title": "lingshu 身体模块：修复 odd-r 蜂窝网最近格误判（PR #1473）",
+        "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2787",
+        "state": "open",
+        "body_sha256_utf8": "37225a24c9ea32842868d95adc9ba51197885b8eb9502c043ea385332baf3a5e",
+        "body_utf8_bytes": 7544
+      },
+      {
+        "number": 183,
+        "title": "【贡献申报】lingshu 7 条已判定「成立」的缺陷报告（nn/core/world/intake）—— 附 cb3a6ea 复跑状态",
+        "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/183",
+        "state": "closed",
+        "body_sha256_utf8": "b9545f7d5196cbf143f8df091c8e4c3499d73a1c4acc17e0c7e52fef49e5335d",
+        "body_utf8_bytes": 15242
+      },
+      {
+        "number": 418,
+        "title": "【intake 输入】lingshu PR #591（已合并）：selfsup_finetune 的 epochs<=0 不再抛 IndexError —— #17 遗留项之一，附当前 main 复跑与回退即红自证",
+        "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/418",
+        "state": "closed",
+        "body_sha256_utf8": "871301bd5c7039575cd754e50247abea70cf2569f3a27a0ba84b90811e94e9b6",
+        "body_utf8_bytes": 17132
+      }
+    ]
+  },
+  {
+    "query": "repo:FuRongJun-1999/dsh-bounty neighbors",
+    "total_count": 2,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 284,
+        "title": "【贡献申报】lingshu PR #447：检索与置信度综合改动——FTS5/BM25、语境扩展、不刷新近因、矛盾感知、证据账本、TMS（全部默认关闭，附可复现基准）",
+        "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/284",
+        "state": "closed",
+        "body_sha256_utf8": "e92ca42961a1d2665df15fa61790fccc580ff6b5b9228c93b81e7b76bf983837",
+        "body_utf8_bytes": 2553
+      },
+      {
+        "number": 8,
+        "title": "[贡献验收申请][expert] lingshu 检索与置信度综合改动（PR #447：FTS5/BM25、语境扩展、不刷新近因、矛盾感知、证据账本、TMS，全部默认关闭，附可复现基准）",
+        "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/8",
+        "state": "closed",
+        "body_sha256_utf8": "44313b8fbe062ed334572a54586deeb794711ac405493cd2eccfc26e87db563d",
+        "body_utf8_bytes": 6419
+      }
+    ]
+  },
+  {
+    "query": "repo:FuRongJun-1999/lingshu HexGrid origin",
+    "total_count": 5,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 1254,
+        "title": "fix(nn): #6 image_to_grid 返回 HexGrid 与实际采样同套坐标＋守卫 5 条（往返 0/72→72/72）",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/pull/1254",
+        "state": "closed",
+        "body_sha256_utf8": "708c1520462b37e5a1198134ec3336ed330377fd1bf8b75ebb4d8950bc5029a9",
+        "body_utf8_bytes": 1744
+      },
+      {
+        "number": 1473,
+        "title": "fix(nn): choose nearest odd-r cell by center distance",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/pull/1473",
+        "state": "closed",
+        "body_sha256_utf8": "d202cd9431516ac6d98baac33753f2a7e22f9f26b033a6b5176f9c8f22e86b3e",
+        "body_utf8_bytes": 8084
+      },
+      {
+        "number": 6,
+        "title": "[nn/hex_cnn] image_to_grid 返回的 HexGrid 与实际采样坐标不是同一套（往返 0/40）；蜂窝性的证据不在特征链路上",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/6",
+        "state": "closed",
+        "body_sha256_utf8": "1e4ae30570cdaefc18bf5c5870b065a66ceabd17e52ae0ce79653cc854f7a834",
+        "body_utf8_bytes": 4391
+      },
+      {
+        "number": 18,
+        "title": "[nn/hex_cnn] hex_conv 的 6 邻 stencil 有一个邻居落在 3.0：等距性在卷积层不成立",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/18",
+        "state": "closed",
+        "body_sha256_utf8": "08a3da52537f978c7dca092ddedf742d9b90544e7e801fdd8bcecea2dbc95461",
+        "body_utf8_bytes": 5152
+      },
+      {
+        "number": 591,
+        "title": "fix(nn): selfsup_finetune 的 epochs<=0 不再抛 IndexError（#17 遗留项之一，只做这一项）",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/pull/591",
+        "state": "closed",
+        "body_sha256_utf8": "9b49f084898206e911f30136d14aa71e07b29d8d3575df3ec5e5f54fdc79e981",
+        "body_utf8_bytes": 11264
+      }
+    ]
+  },
+  {
+    "query": "repo:FuRongJun-1999/dsh-bounty odd_r_offset",
+    "total_count": 1,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 2787,
+        "title": "lingshu 身体模块：修复 odd-r 蜂窝网最近格误判（PR #1473）",
+        "html_url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2787",
+        "state": "open",
+        "body_sha256_utf8": "37225a24c9ea32842868d95adc9ba51197885b8eb9502c043ea385332baf3a5e",
+        "body_utf8_bytes": 7544
+      }
+    ]
+  }
+]

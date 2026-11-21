@@ -1,0 +1,7 @@
+  PASS A01 负 trees -> ValueError 且不建场景
+  PASS A02 非整数 trees -> 可读 TypeError
+  PASS A03 正对照：trees=3 正常建场景
+  PASS A04 正对照：trees=0 合法
+  PASS E01 钉子：类型文案
+  PASS E02 钉子：负值文案
+通过 6 / 失败 0

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.239" timestamp="2026-11-21T01:30:05.287381+08:00" hostname="STARDUST"><testcase classname="tests.test_dynamics_command_reanchor" name="test_clamping_uses_actual_displacement_for_the_physics_velocity" time="0.029"><failure message="AssertionError: COMMAND_REQUESTED_STEP_REPLACED_ACTUAL_MOTION&#10;assert (50.0, 0.0, 0.0) == (2.5, 0.0, 0.0)&#10;  &#10;  At index 0 diff: 50.0 != 2.5&#10;  Use -v to get more diff">tests\test_dynamics_command_reanchor.py:136: in test_clamping_uses_actual_displacement_for_the_physics_velocity
+    assert e.attrs["physics_state"]["v0"] == (2.5, 0., 0.), "COMMAND_REQUESTED_STEP_REPLACED_ACTUAL_MOTION"
+E   AssertionError: COMMAND_REQUESTED_STEP_REPLACED_ACTUAL_MOTION
+E   assert (50.0, 0.0, 0.0) == (2.5, 0.0, 0.0)
+E     
+E     At index 0 diff: 50.0 != 2.5
+E     Use -v to get more diff</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,2 @@
+<repo>\lingshu\world\scene_simulator.py:1272: RuntimeWarning: scene_simulator: behavior=follow 的目标 '' 不可解析 ⇒ 本 tick 不移动（不再静默退化为 wander）
+  direction = self._decide(e)

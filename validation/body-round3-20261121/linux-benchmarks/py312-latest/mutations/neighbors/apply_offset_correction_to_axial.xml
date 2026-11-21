@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.119" timestamp="2026-11-20T18:10:50.434420+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_hexgrid_odd_r_neighbors" name="test_axial_neighbor_list_and_order_are_unchanged[default]" time="0.001"><failure message="AssertionError: axial neighbor list and direction order must remain unchanged&#10;assert [(4, 2), (3, ...2, 3), (3, 3)] == [(4, 2), (4, ...2, 3), (3, 3)]&#10;  &#10;  At index 1 diff: (3, 1) != (4, 1)&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    [&#10;        (&#10;            4,&#10;            2,&#10;        ),&#10;        (&#10;  -         4,&#10;  ?         ^&#10;  +         3,&#10;  ?         ^&#10;            1,&#10;        ),&#10;        (&#10;  -         3,&#10;  ?         ^&#10;  +         2,&#10;  ?         ^&#10;            1,&#10;        ),&#10;[+13 more lines; full report in element text]">tests/test_hexgrid_odd_r_neighbors.py:112: in test_axial_neighbor_list_and_order_are_unchanged
+    assert grid.neighbors(q, r) == [
+E   AssertionError: axial neighbor list and direction order must remain unchanged
+E   assert [(4, 2), (3, ...2, 3), (3, 3)] == [(4, 2), (4, ...2, 3), (3, 3)]
+E     
+E     At index 1 diff: (3, 1) != (4, 1)
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       [
+E           (
+E               4,
+E               2,
+E           ),
+E           (
+E     -         4,
+E     ?         ^
+E     +         3,
+E     ?         ^
+E               1,
+E           ),
+E           (
+E     -         3,
+E     ?         ^
+E     +         2,
+E     ?         ^
+E               1,
+E           ),
+E           (
+E               2,
+E               2,
+E           ),
+E           (
+E               2,
+E               3,
+E           ),
+E           (
+E               3,
+E               3,
+E           ),
+E       ]</failure></testcase></testsuite></testsuites>

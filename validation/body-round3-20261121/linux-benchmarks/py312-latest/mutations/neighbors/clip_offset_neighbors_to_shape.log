@@ -1,0 +1,13 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___ test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-single] ___
+tests/test_hexgrid_odd_r_neighbors.py:76: in test_neighbors_remain_unclipped_at_shape_boundaries
+    assert len(actual) == 6, "neighbors must return six cells before in_bounds filtering"
+E   AssertionError: neighbors must return six cells before in_bounds filtering
+E   assert 0 == 6
+E    +  where 0 = len([])
+=========================== short test summary info ============================
+FAILED tests/test_hexgrid_odd_r_neighbors.py::test_neighbors_remain_unclipped_at_shape_boundaries[odd_r_offset-single] - AssertionError: neighbors must return six cells before in_bounds filtering
+assert 0 == 6
+ +  where 0 = len([])
+1 failed in 0.11s

@@ -1,0 +1,7 @@
+  PASS A01 list 坐标 -> 可读 TypeError 且零落库
+  PASS A02 str 坐标 -> 可读 TypeError
+  PASS A03 正对照：映射坐标正常存取
+  PASS A04 None 仍等价 {}（既有语义）
+  PASS E01 钉子：可读文案
+  PASS E02 钉子：None 单独放行
+通过 6 / 失败 0

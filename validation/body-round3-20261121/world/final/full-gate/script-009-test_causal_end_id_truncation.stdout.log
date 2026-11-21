@@ -1,0 +1,40 @@
+== A 组：超深链 ⇒ 截断证据（旧：静默 0 条） ==
+  PASS A1 7 跳链 max_depth=5 传 end_id ⇒ 非空（旧读数=0 条，静默丢弃）
+  PASS A2 截断证据标 truncated=True（与确无因果可区分）
+  PASS A3 返回元素仍是 list 子类（兼容下标/迭代/len）
+  PASS A4 causal_stats.truncated>0：截断事实外传（可判、可审计）
+  PASS A5 预算内（end=第 5 跳）恰 1 条且 truncated=False（原读数保持）
+  PASS A6 预算内 stats.complete==1 且 truncated==0
+  PASS A7 放宽预算至 7 ⇒ 完整 1 条、不标截断（截断与预算同源）
+== B 组：语义区分 —— 空列表=确无因果 ==
+  PASS B1 无出边 ⇒ 空列表且 complete==truncated==0（真无因果）
+  PASS B2 仅非因果出边 ⇒ 空列表且无截断证据（默认仅 CAUSAL）
+  PASS B3 同图同预算：命中=完整 / 超深=截断，两种结果形态可区分
+== C 组：截断事实外传、丢弃不静默 ==
+  PASS C1 stats.max_depth 记录实际生效预算
+  PASS C2 stats.truncated 不小于返回的截断证据数（口径一致）
+  PASS C3 stats.truncated_dropped 存在且非负（丢弃量显式，不静默）
+  PASS C4 分叉图 max_depth=1 ⇒ 仍有截断证据外传（分支不被静默吞掉）
+== D 组：opt-in 深搜 max_depth=None ==
+  PASS D1 max_depth=None ⇒ 7 跳链完整找到（调用方显式要求时不限深度）
+  PASS D2 不限深度时不得标截断（无预算可耗尽）
+== E 组：兼容 —— 既有分支与用法照旧 ==
+  PASS E1 importance_weighted 分支对截断链照常排序（兼容）
+  PASS E2 include_subgraph 分支照常装饰（兼容）
+  PASS E3 不传 end_id 的 #145 读数保持（1 条截断链）
+  PASS E4 causal_stats 不传时照旧可用（可选出参，零侵入）
+  PASS E5 relation_types 过滤在 end_id 路径照常生效
+== F 组：假阳性回归 —— 死胡同不得记截断 ==
+  PASS F1 前置：链尾 c[3] 确为天然终点（出边=0）
+  PASS F2 走到死胡同且 end 不可达 ⇒ 无截断证据、空列表（旧版：假阳性 1 条）
+  PASS F3 本预算下无截断证据（同样合法，判据不强制上报）
+  PASS F4 到预算仍有出边（路径未走完）⇒ 截断证据照常给出（未误伤正例）
+== G 组：stats 键存在性与 cyclic 归集 ==
+  PASS G1 end_id 分支：四个统计键**必须都在**（不允许靠 .get 默认值过）
+  PASS G2 chains 分支：含 cyclic 键
+  PASS G3 A→B→C→B 不得报 complete（唯一链是 cyclic）——修 cyclic 错算进 complete
+  PASS G4 stats.cyclic 与返回列表里 cyclic 链数一致
+  PASS E6 importance_weighted 下首元素仍是**完整**链（高 importance 截断链不得抢占）
+
+===== SUMMARY 30/30 通过 =====
+VERDICT=PASS（end_id 路径超深 ⇒ 截断证据可见且可审计；死胡同不误报；空列表=确无因果；预算内读数不变）

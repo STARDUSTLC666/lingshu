@@ -1,0 +1,35 @@
+{
+  "sha": "4a352249ef6db7975353b84bc640712d46f7181b",
+  "node_id": "C_kwDOU6uWo9oAKDRhMzUyMjQ5ZWY2ZGI3OTc1MzUzYjg0YmM2NDA3MTJkNDZmNzE4MWI",
+  "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/git/commits/4a352249ef6db7975353b84bc640712d46f7181b",
+  "html_url": "https://github.com/FuRongJun-1999/lingshu/commit/4a352249ef6db7975353b84bc640712d46f7181b",
+  "author": {
+    "name": "STARDUSTLC666",
+    "email": "291677282+STARDUSTLC666@users.noreply.github.com",
+    "date": "2026-11-20T17:43:08Z"
+  },
+  "committer": {
+    "name": "STARDUSTLC666",
+    "email": "291677282+STARDUSTLC666@users.noreply.github.com",
+    "date": "2026-11-20T17:43:08Z"
+  },
+  "tree": {
+    "sha": "082e19adf43e58a456112a07a890f8616a743cc0",
+    "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/git/trees/082e19adf43e58a456112a07a890f8616a743cc0"
+  },
+  "message": "docs(nn): 记录 odd-r 邻居修复验证与成本",
+  "parents": [
+    {
+      "sha": "df0838c2181abf5fb1dc8e1e4b0dfcb66c19a232",
+      "url": "https://api.github.com/repos/FuRongJun-1999/lingshu/git/commits/df0838c2181abf5fb1dc8e1e4b0dfcb66c19a232",
+      "html_url": "https://github.com/FuRongJun-1999/lingshu/commit/df0838c2181abf5fb1dc8e1e4b0dfcb66c19a232"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

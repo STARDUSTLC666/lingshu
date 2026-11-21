@@ -1,0 +1,64 @@
+{
+  "zip_bytes": 15964,
+  "zip_sha256": "ae9f7e87d2d12a77685d8c9e317a863dc06774f24098c79c41e8e8a5cbce5eda",
+  "files": [
+    {
+      "path": "0_PR 标题约定（type(scope) + 摘要）.txt",
+      "bytes": 20728,
+      "sha256": "785b49bcc489f47f8594d0aadb165d1f0211696ea1c38a60961dd152d985a84c"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/system.txt",
+      "bytes": 584,
+      "sha256": "8ea5147adff7ff8cc42d1c6d24c5f7876acb4f5d61a2f9f1cde6e868d7ac0a26"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/1_Set up job.txt",
+      "bytes": 2136,
+      "sha256": "d6bb152f902f47277d8ee0d064b919335384af6c7e21e89c5e24ad0f464de3f9"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/2_Run actions_checkout@11d5960a326750d5838078e36cf38b85af677262.txt",
+      "bytes": 7004,
+      "sha256": "350e5e86799cd7cdb3f5c8870624f2d18bc829dc360c9ffc179220bf00e9ed69"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/3_Run actions_setup-python@a26af69be951a213d495a4c3e4e4022e16d87065.txt",
+      "bytes": 1047,
+      "sha256": "adae23ae606401e387a97a24179812d2485b735a39ccdeb3fa656023496105bf"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/4_校验器自检（正负例）.txt",
+      "bytes": 6637,
+      "sha256": "9ce047529c06fc1ee1223361b900a13aedcb803ba055180c2de0be8e34f640e9"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/5_校验 PR 标题.txt",
+      "bytes": 1462,
+      "sha256": "f894a356d30da2f01b5375db51a4ef9d31e9b25991eba140dd074423c5c0b5a4"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/9_Post Run actions_setup-python@a26af69be951a213d495a4c3e4e4022e16d87065.txt",
+      "bytes": 305,
+      "sha256": "451dacd29fa691d92955c62c6c2bdbbb6a151aad2d4ea9ba84210c589704f84e"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/10_Post Run actions_checkout@11d5960a326750d5838078e36cf38b85af677262.txt",
+      "bytes": 1709,
+      "sha256": "acf09217370501c2e725c3167863f179974c74c26ecbb213c73cc604aa596b39"
+    },
+    {
+      "path": "PR 标题约定（type(scope) + 摘要）/11_Complete job.txt",
+      "bytes": 449,
+      "sha256": "335bf2ccec26eba82dbd9309fb59ccdba06db77abc2a30492cc626b6734baa61"
+    }
+  ],
+  "job_logs_match_zip_byte_for_byte": [
+    {
+      "job_id": 136465517613,
+      "zip_path": "0_PR 标题约定（type(scope) + 摘要）.txt",
+      "bytes": 20728,
+      "sha256": "785b49bcc489f47f8594d0aadb165d1f0211696ea1c38a60961dd152d985a84c"
+    }
+  ]
+}

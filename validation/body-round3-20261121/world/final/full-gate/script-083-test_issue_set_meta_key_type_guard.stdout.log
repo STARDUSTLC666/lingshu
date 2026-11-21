@@ -1,0 +1,7 @@
+  PASS A01 int key -> 可读 TypeError 且零写入
+  PASS A02 空 key -> 可读 TypeError
+  PASS A03 纯空白 key -> 可读 TypeError
+  PASS A04 正对照：合法 key 正常写读
+  PASS E01 钉子：可读文案
+  PASS E02 钉子：非 str 与纯空白同闸
+通过 6 / 失败 0

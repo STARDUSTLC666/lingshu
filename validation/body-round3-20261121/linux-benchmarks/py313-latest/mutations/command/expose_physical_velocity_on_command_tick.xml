@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.165" timestamp="2026-11-20T18:17:54.842461+00:00" hostname="runnervm0hi8g"><testcase classname="tests.test_dynamics_command_reanchor" name="test_command_reanchors_at_current_time_without_changing_public_velocity" time="0.034"><failure message="AssertionError: COMMAND_PUBLIC_VELOCITY_UNITS_CHANGED&#10;assert (20.0, 0.0, 0.0) == (2.0, 0.0, 0.0)&#10;  &#10;  At index 0 diff: 20.0 != 2.0&#10;  &#10;  Full diff: (-: missing in left side, +: extra in left side)&#10;    (&#10;  -     2.0,&#10;  +     20.0,&#10;  ?      +&#10;        0.0,&#10;        0.0,&#10;    )">tests/test_dynamics_command_reanchor.py:83: in test_command_reanchors_at_current_time_without_changing_public_velocity
+    assert e.velocity == (2., 0., 0.), "COMMAND_PUBLIC_VELOCITY_UNITS_CHANGED"
+E   AssertionError: COMMAND_PUBLIC_VELOCITY_UNITS_CHANGED
+E   assert (20.0, 0.0, 0.0) == (2.0, 0.0, 0.0)
+E     
+E     At index 0 diff: 20.0 != 2.0
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       (
+E     -     2.0,
+E     +     20.0,
+E     ?      +
+E           0.0,
+E           0.0,
+E       )</failure></testcase></testsuite></testsuites>

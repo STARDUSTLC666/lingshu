@@ -1,0 +1,14 @@
+{
+  "archives": [
+    {
+      "path": "44786392186-attempt1/all-run-logs.zip",
+      "sha256": "5fab4bdbdc1c1a1a9fce269dbe7a62ad879a94a94ff32434f067fee52df2b62d",
+      "bytes": 15946
+    },
+    {
+      "path": "44786392229-attempt1/all-run-logs.zip",
+      "sha256": "11471cf76c50c79aad7911805c9eb70a19ce92e595ba944c86bf5241504eaa1f",
+      "bytes": 1378822
+    }
+  ]
+}

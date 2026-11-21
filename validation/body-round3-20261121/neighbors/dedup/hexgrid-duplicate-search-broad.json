@@ -1,0 +1,103 @@
+[
+  {
+    "query": "repo:FuRongJun-1999/lingshu HexGrid",
+    "total_count": 6,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 1473,
+        "title": "fix(nn): choose nearest odd-r cell by center distance",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/pull/1473",
+        "state": "closed",
+        "body_sha256_utf8": "d202cd9431516ac6d98baac33753f2a7e22f9f26b033a6b5176f9c8f22e86b3e",
+        "body_utf8_bytes": 8084
+      },
+      {
+        "number": 1254,
+        "title": "fix(nn): #6 image_to_grid 返回 HexGrid 与实际采样同套坐标＋守卫 5 条（往返 0/72→72/72）",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/pull/1254",
+        "state": "closed",
+        "body_sha256_utf8": "708c1520462b37e5a1198134ec3336ed330377fd1bf8b75ebb4d8950bc5029a9",
+        "body_utf8_bytes": 1744
+      },
+      {
+        "number": 6,
+        "title": "[nn/hex_cnn] image_to_grid 返回的 HexGrid 与实际采样坐标不是同一套（往返 0/40）；蜂窝性的证据不在特征链路上",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/6",
+        "state": "closed",
+        "body_sha256_utf8": "1e4ae30570cdaefc18bf5c5870b065a66ceabd17e52ae0ce79653cc854f7a834",
+        "body_utf8_bytes": 4391
+      },
+      {
+        "number": 18,
+        "title": "[nn/hex_cnn] hex_conv 的 6 邻 stencil 有一个邻居落在 3.0：等距性在卷积层不成立",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/18",
+        "state": "closed",
+        "body_sha256_utf8": "08a3da52537f978c7dca092ddedf742d9b90544e7e801fdd8bcecea2dbc95461",
+        "body_utf8_bytes": 5152
+      },
+      {
+        "number": 43,
+        "title": "外部复核报告：当前架构、Issues/PR 状态核对与结论更正（基线 421deb4）",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/43",
+        "state": "closed",
+        "body_sha256_utf8": "b479f31de3d41f1a87a1c24f163f62b2ebae0440ee74fd548e36d6f7ffe5323e",
+        "body_utf8_bytes": 24839
+      },
+      {
+        "number": 591,
+        "title": "fix(nn): selfsup_finetune 的 epochs<=0 不再抛 IndexError（#17 遗留项之一，只做这一项）",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/pull/591",
+        "state": "closed",
+        "body_sha256_utf8": "9b49f084898206e911f30136d14aa71e07b29d8d3575df3ec5e5f54fdc79e981",
+        "body_utf8_bytes": 11264
+      }
+    ]
+  },
+  {
+    "query": "repo:FuRongJun-1999/lingshu HEX_DIRS",
+    "total_count": 2,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 18,
+        "title": "[nn/hex_cnn] hex_conv 的 6 邻 stencil 有一个邻居落在 3.0：等距性在卷积层不成立",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/18",
+        "state": "closed",
+        "body_sha256_utf8": "08a3da52537f978c7dca092ddedf742d9b90544e7e801fdd8bcecea2dbc95461",
+        "body_utf8_bytes": 5152
+      },
+      {
+        "number": 43,
+        "title": "外部复核报告：当前架构、Issues/PR 状态核对与结论更正（基线 421deb4）",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/43",
+        "state": "closed",
+        "body_sha256_utf8": "b479f31de3d41f1a87a1c24f163f62b2ebae0440ee74fd548e36d6f7ffe5323e",
+        "body_utf8_bytes": 24839
+      }
+    ]
+  },
+  {
+    "query": "repo:FuRongJun-1999/lingshu \"odd-r\" \"邻接\"",
+    "total_count": 2,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 1254,
+        "title": "fix(nn): #6 image_to_grid 返回 HexGrid 与实际采样同套坐标＋守卫 5 条（往返 0/72→72/72）",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/pull/1254",
+        "state": "closed",
+        "body_sha256_utf8": "708c1520462b37e5a1198134ec3336ed330377fd1bf8b75ebb4d8950bc5029a9",
+        "body_utf8_bytes": 1744
+      },
+      {
+        "number": 6,
+        "title": "[nn/hex_cnn] image_to_grid 返回的 HexGrid 与实际采样坐标不是同一套（往返 0/40）；蜂窝性的证据不在特征链路上",
+        "html_url": "https://github.com/FuRongJun-1999/lingshu/issues/6",
+        "state": "closed",
+        "body_sha256_utf8": "1e4ae30570cdaefc18bf5c5870b065a66ceabd17e52ae0ce79653cc854f7a834",
+        "body_utf8_bytes": 4391
+      }
+    ]
+  }
+]

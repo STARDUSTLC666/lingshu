@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.227" timestamp="2026-11-21T01:30:08.609830+08:00" hostname="STARDUST"><testcase classname="tests.test_dynamics_command_reanchor" name="test_command_preserves_custom_metadata_without_mutating_the_previous_state" time="0.029"><failure message="AssertionError: COMMAND_MUTATED_OLD_STATE&#10;assert ({'p0': (66.0, 1000.0, 64.0), 'v0': (20.0, 0.0, 0.0), 't_ref': 0.1, 'beta': 0.4, ...} is not {'p0': (66.0, 1000.0, 64.0), 'v0': (20.0, 0.0, 0.0), 't_ref': 0.1, 'beta': 0.4, ...})">tests\test_dynamics_command_reanchor.py:236: in test_command_preserves_custom_metadata_without_mutating_the_previous_state
+    assert current is not previous and previous == original, "COMMAND_MUTATED_OLD_STATE"
+E   AssertionError: COMMAND_MUTATED_OLD_STATE
+E   assert ({'p0': (66.0, 1000.0, 64.0), 'v0': (20.0, 0.0, 0.0), 't_ref': 0.1, 'beta': 0.4, ...} is not {'p0': (66.0, 1000.0, 64.0), 'v0': (20.0, 0.0, 0.0), 't_ref': 0.1, 'beta': 0.4, ...})</failure></testcase></testsuite></testsuites>

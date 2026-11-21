@@ -1,0 +1,54 @@
+{
+  "job_id": 136462265699,
+  "run_id": 44786392186,
+  "name": "PR 标题约定（type(scope) + 摘要）",
+  "status": "completed",
+  "conclusion": "success",
+  "head_sha": "4a352249ef6db7975353b84bc640712d46f7181b",
+  "url": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44786392186/job/136462265699",
+  "running_steps": [],
+  "raw_log_bytes": 20713,
+  "raw_log_sha256": "6061dd3a0765c1527cdc703daa9404a8dbca889b4eace201a74515fb30d56cf2",
+  "failed_steps": [],
+  "checkout_identity": {
+    "actual_checkout_commit": "e736c05fc25d801b0a451eee8102fa744be5881c",
+    "actual_checkout_tree": "082e19adf43e58a456112a07a890f8616a743cc0",
+    "actual_checkout_parents": [
+      "6b73082406d40a630a44cd68559c1f66b3652390",
+      "4a352249ef6db7975353b84bc640712d46f7181b"
+    ],
+    "frozen_source_head": "4a352249ef6db7975353b84bc640712d46f7181b",
+    "frozen_source_tree": "082e19adf43e58a456112a07a890f8616a743cc0",
+    "same_entire_tree": true,
+    "checkout_is_frozen_head_or_direct_merge_parent": true,
+    "bound_sources": [
+      {
+        "path": "lingshu/nn/hex_cnn.py",
+        "frozen_blob": "b1d2af11e172c5bd53afa523b67e75dca8c660cd",
+        "actual_blob": "b1d2af11e172c5bd53afa523b67e75dca8c660cd",
+        "matches": true
+      },
+      {
+        "path": "tests/test_hexgrid_odd_r_neighbors.py",
+        "frozen_blob": "02317836229fcde71717cc245d3712df407d088e",
+        "actual_blob": "02317836229fcde71717cc245d3712df407d088e",
+        "matches": true
+      },
+      {
+        "path": "tests/fixtures/hexgrid_odd_r_neighbors_mutations.json",
+        "frozen_blob": "898369c3dee6ccd132518241264db94a641b38bd",
+        "actual_blob": "898369c3dee6ccd132518241264db94a641b38bd",
+        "matches": true
+      },
+      {
+        "path": "bench/bench_hexgrid_neighbors.py",
+        "frozen_blob": "998e0578a69633a16d42f38de54290a70585a5b1",
+        "actual_blob": "998e0578a69633a16d42f38de54290a70585a5b1",
+        "matches": true
+      }
+    ],
+    "all_bound_sources_match": true,
+    "identity_scope": "entire_tree",
+    "verified": true
+  }
+}

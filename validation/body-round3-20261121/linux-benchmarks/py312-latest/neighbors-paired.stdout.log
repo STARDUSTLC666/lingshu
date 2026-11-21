@@ -1,0 +1,12 @@
+{"mode": "axial", "coordinate_sign": "positive", "query_count": 1000, "fixed_over_baseline_median_ratio": 1.0440748101999375}
+{"mode": "axial", "coordinate_sign": "positive", "query_count": 10000, "fixed_over_baseline_median_ratio": 1.020140247527817}
+{"mode": "axial", "coordinate_sign": "positive", "query_count": 50000, "fixed_over_baseline_median_ratio": 1.0210463346856256}
+{"mode": "axial", "coordinate_sign": "negative", "query_count": 1000, "fixed_over_baseline_median_ratio": 1.0257104590568542}
+{"mode": "axial", "coordinate_sign": "negative", "query_count": 10000, "fixed_over_baseline_median_ratio": 1.0200477601546711}
+{"mode": "axial", "coordinate_sign": "negative", "query_count": 50000, "fixed_over_baseline_median_ratio": 1.0005774855751939}
+{"mode": "odd_r_offset", "coordinate_sign": "positive", "query_count": 1000, "fixed_over_baseline_median_ratio": 1.3887607415459577}
+{"mode": "odd_r_offset", "coordinate_sign": "positive", "query_count": 10000, "fixed_over_baseline_median_ratio": 1.3904868527175438}
+{"mode": "odd_r_offset", "coordinate_sign": "positive", "query_count": 50000, "fixed_over_baseline_median_ratio": 1.2564674689239177}
+{"mode": "odd_r_offset", "coordinate_sign": "negative", "query_count": 1000, "fixed_over_baseline_median_ratio": 1.5301428727233068}
+{"mode": "odd_r_offset", "coordinate_sign": "negative", "query_count": 10000, "fixed_over_baseline_median_ratio": 1.5841970535323961}
+{"mode": "odd_r_offset", "coordinate_sign": "negative", "query_count": 50000, "fixed_over_baseline_median_ratio": 1.5159405894016662}

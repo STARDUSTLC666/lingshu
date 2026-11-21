@@ -1,0 +1,403 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows",
+  "sqlite": "3.49.1",
+  "baseline": "04e0ecb6a3669c90efbb4a1583816a8f7ca26bc7",
+  "guard_sha256": "b743f2d41809922cdb2128a7bb56513a9aea79c6d0f0e1dbfe08db130c366d52",
+  "records": [
+    {
+      "case": "fixed",
+      "ok": true,
+      "returncode": 0,
+      "passed": 51,
+      "failed_tests": [],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [],
+      "expected_assertion": "",
+      "pytest_summary": "51 passed in 0.33s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "39eb113b7bdeb6fe321e006d699e4376fa18c48a38f0f5e65e6aa006043bf00a"
+      }
+    },
+    {
+      "case": "baseline",
+      "ok": true,
+      "returncode": 1,
+      "passed": 3,
+      "failed_tests": [
+        "test_clamping_uses_actual_displacement_for_the_physics_velocity",
+        "test_command_preserves_custom_metadata_without_mutating_the_previous_state",
+        "test_command_reanchors_at_current_time_without_changing_public_velocity",
+        "test_command_resume_respects_the_gravity_axis[0]",
+        "test_command_resume_respects_the_gravity_axis[1]",
+        "test_command_resume_respects_the_gravity_axis[2]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-east]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-north]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-south]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-stay]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-west]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-east]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-north]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-south]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-stay]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-west]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-east]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-north]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-south]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-stay]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-west]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-east]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-north]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-south]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-stay]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-west]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-east]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-north]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-south]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-stay]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-west]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-east]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-north]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-south]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-stay]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-west]",
+        "test_entity_environment_override_is_used_when_physics_resumes[dict]",
+        "test_entity_environment_override_is_used_when_physics_resumes[environment]",
+        "test_first_command_initializes_a_physics_anchor_without_a_blank_resume_tick",
+        "test_multiple_translation_direction_changes_and_stay_stop",
+        "test_quantized_zero_move_stops_instead_of_using_the_requested_step",
+        "test_real_seven_layer_actuator_then_clear_does_not_undo_execution",
+        "test_stay_resumes_quadratic_drag_from_rest_instead_of_the_old_momentum",
+        "test_stay_resumes_the_existing_slope_model_from_its_new_anchor[False]",
+        "test_stay_resumes_the_existing_slope_model_from_its_new_anchor[True]",
+        "test_stay_stops_prior_velocity_including_the_vertical_component",
+        "test_unrepresentable_command_reference_time_does_not_poison_the_entity",
+        "test_unrepresentable_physical_command_velocity_does_not_poison_the_entity"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-east]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-west]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-north]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-south]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.05-stay]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-east]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-west]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-north]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-south]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-0.1-stay]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-east]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-west]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-north]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-south]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[0-1.0-stay]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-east]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-west]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-north]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-south]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.05-stay]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-east]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-west]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-north]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-south]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-0.1-stay]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-east]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-west]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-north]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-south]",
+        "test_command_then_resume_uses_real_endpoint_and_velocity[1-1.0-stay]",
+        "test_command_reanchors_at_current_time_without_changing_public_velocity",
+        "test_first_command_initializes_a_physics_anchor_without_a_blank_resume_tick",
+        "test_multiple_translation_direction_changes_and_stay_stop",
+        "test_stay_stops_prior_velocity_including_the_vertical_component",
+        "test_clamping_uses_actual_displacement_for_the_physics_velocity",
+        "test_quantized_zero_move_stops_instead_of_using_the_requested_step",
+        "test_real_seven_layer_actuator_then_clear_does_not_undo_execution",
+        "test_unrepresentable_physical_command_velocity_does_not_poison_the_entity",
+        "test_entity_environment_override_is_used_when_physics_resumes[dict]",
+        "test_entity_environment_override_is_used_when_physics_resumes[environment]",
+        "test_command_preserves_custom_metadata_without_mutating_the_previous_state",
+        "test_unrepresentable_command_reference_time_does_not_poison_the_entity",
+        "test_command_resume_respects_the_gravity_axis[0]",
+        "test_command_resume_respects_the_gravity_axis[1]",
+        "test_command_resume_respects_the_gravity_axis[2]",
+        "test_stay_resumes_quadratic_drag_from_rest_instead_of_the_old_momentum",
+        "test_stay_resumes_the_existing_slope_model_from_its_new_anchor[False]",
+        "test_stay_resumes_the_existing_slope_model_from_its_new_anchor[True]"
+      ],
+      "expected_assertion": "",
+      "pytest_summary": "48 failed, 3 passed in 0.91s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "45caf73deff9d23fa68ead8a4cbac2302587bba63bb2f161853e9d6fd8fa6151"
+      }
+    },
+    {
+      "case": "omit_command_reanchor",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_command_reanchors_at_current_time_without_changing_public_velocity"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_command_reanchors_at_current_time_without_changing_public_velocity"
+      ],
+      "expected_assertion": "COMMAND_PHYSICS_POSITION_ANCHOR_STALE",
+      "pytest_summary": "1 failed in 0.30s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "34c0e31151b5ee694ec8876e806a5b55185d929e2170620ce0d8f5727e30c389"
+      }
+    },
+    {
+      "case": "keep_old_position_anchor",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_command_reanchors_at_current_time_without_changing_public_velocity"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_command_reanchors_at_current_time_without_changing_public_velocity"
+      ],
+      "expected_assertion": "COMMAND_PHYSICS_POSITION_ANCHOR_STALE",
+      "pytest_summary": "1 failed in 0.30s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "9c176519099476aac77b3efa3bc77c6f3a0b03c0aa8d7992749492b1ceb71bb0"
+      }
+    },
+    {
+      "case": "forget_physical_velocity_units",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_command_reanchors_at_current_time_without_changing_public_velocity"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_command_reanchors_at_current_time_without_changing_public_velocity"
+      ],
+      "expected_assertion": "COMMAND_PHYSICS_VELOCITY_NOT_PER_SECOND",
+      "pytest_summary": "1 failed in 0.30s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "c9d4c421ed5e63c7917981879099758d5988c11c62735c4a3790fd312cc45f75"
+      }
+    },
+    {
+      "case": "keep_old_reference_time",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_command_reanchors_at_current_time_without_changing_public_velocity"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_command_reanchors_at_current_time_without_changing_public_velocity"
+      ],
+      "expected_assertion": "COMMAND_PHYSICS_TIME_ANCHOR_STALE",
+      "pytest_summary": "1 failed in 0.30s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "5139b93755596021dd74cdb73aa540fa9b12b021caf6b6e74a5fbd3ea1fa3458"
+      }
+    },
+    {
+      "case": "seed_from_requested_step",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_clamping_uses_actual_displacement_for_the_physics_velocity"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_clamping_uses_actual_displacement_for_the_physics_velocity"
+      ],
+      "expected_assertion": "COMMAND_REQUESTED_STEP_REPLACED_ACTUAL_MOTION",
+      "pytest_summary": "1 failed in 0.28s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "61bf550b19ac05de8ead29e80004daaec7725aef55e30b1576d655274be9f50e"
+      }
+    },
+    {
+      "case": "skip_first_command_seed",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_first_command_initializes_a_physics_anchor_without_a_blank_resume_tick"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_first_command_initializes_a_physics_anchor_without_a_blank_resume_tick"
+      ],
+      "expected_assertion": "COMMAND_FIRST_RESUME_WAS_ONLY_A_SEED",
+      "pytest_summary": "1 failed in 0.28s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "b87eaed75d98b93a2ee436710d6d24bcba84c3b8fcaa47e2805088b8c59ff8dc"
+      }
+    },
+    {
+      "case": "keep_old_momentum_on_stay",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_stay_stops_prior_velocity_including_the_vertical_component"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_stay_stops_prior_velocity_including_the_vertical_component"
+      ],
+      "expected_assertion": "COMMAND_STAY_DID_NOT_STOP_PRIOR_MOMENTUM",
+      "pytest_summary": "1 failed in 0.28s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "2d2443c7790578addd9e9446afc959109b8caeb5520878651e9e0925c287805a"
+      }
+    },
+    {
+      "case": "drop_physics_parameters",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_command_preserves_custom_metadata_without_mutating_the_previous_state"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_command_preserves_custom_metadata_without_mutating_the_previous_state"
+      ],
+      "expected_assertion": "COMMAND_DROPPED_STATE_METADATA",
+      "pytest_summary": "1 failed in 0.27s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "f916d9e0064237908b173005cc71b477a72161a2df3b8dd7f72c359d0888cdc5"
+      }
+    },
+    {
+      "case": "mutate_previous_state",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_command_preserves_custom_metadata_without_mutating_the_previous_state"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_command_preserves_custom_metadata_without_mutating_the_previous_state"
+      ],
+      "expected_assertion": "COMMAND_MUTATED_OLD_STATE",
+      "pytest_summary": "1 failed in 0.28s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "f4850e838bdac6806b7798bc886cf724305ad5a3a892db22f58ab07f79779d69"
+      }
+    },
+    {
+      "case": "skip_velocity_finite_guard",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_unrepresentable_physical_command_velocity_does_not_poison_the_entity"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_unrepresentable_physical_command_velocity_does_not_poison_the_entity"
+      ],
+      "expected_assertion": "DID NOT RAISE",
+      "pytest_summary": "1 failed in 0.27s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "d12c75fc6fd5cae971c8c6f2390f632d1c7d051418fac0de822e1a608c6c4c3b"
+      }
+    },
+    {
+      "case": "skip_time_finite_guard",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_unrepresentable_command_reference_time_does_not_poison_the_entity"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_unrepresentable_command_reference_time_does_not_poison_the_entity"
+      ],
+      "expected_assertion": "DID NOT RAISE",
+      "pytest_summary": "1 failed in 0.28s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "79748dbd458edf0c1cbf9d87caf45df2b87e7986ac688c3ed2bb1006c886f2b5"
+      }
+    },
+    {
+      "case": "drop_known_parameters",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_command_preserves_custom_metadata_without_mutating_the_previous_state"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_command_preserves_custom_metadata_without_mutating_the_previous_state"
+      ],
+      "expected_assertion": "COMMAND_DROPPED_PHYSICAL_PARAMETERS",
+      "pytest_summary": "1 failed in 0.28s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "be7e451ea9e1aa2a90578a3de0e444be8a034317bec5f403bccaa728fd55d513"
+      }
+    },
+    {
+      "case": "expose_physical_velocity_on_command_tick",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_command_reanchors_at_current_time_without_changing_public_velocity"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_command_reanchors_at_current_time_without_changing_public_velocity"
+      ],
+      "expected_assertion": "COMMAND_PUBLIC_VELOCITY_UNITS_CHANGED",
+      "pytest_summary": "1 failed in 0.27s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "282eaac60c3430a9cc56b0e9f8c54a16c1901815214fbc170995c7fc48a1defd"
+      }
+    },
+    {
+      "case": "reanchor_kinematic_commands",
+      "ok": true,
+      "returncode": 1,
+      "passed": 0,
+      "failed_tests": [
+        "test_kinematic_commands_keep_their_existing_state_and_units"
+      ],
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": [
+        "test_kinematic_commands_keep_their_existing_state_and_units"
+      ],
+      "expected_assertion": "COMMAND_CHANGED_KINEMATIC_STATE",
+      "pytest_summary": "1 failed in 0.28s",
+      "source_sha256": {
+        "lingshu/world/scene_simulator.py": "6983b5129aee81ae472acddac38abb2c8ac3497e4a684b048781d4082d50dabf"
+      }
+    }
+  ]
+}

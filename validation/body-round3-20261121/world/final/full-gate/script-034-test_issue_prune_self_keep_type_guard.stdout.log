@@ -1,0 +1,6 @@
+  PASS A01 str keep -> 可读 TypeError
+  PASS A02 float keep -> 可读 TypeError
+  PASS A03 负数 keep -> ValueError
+  PASS A04 正对照：合法 keep 返回整数
+  PASS E01 钉子：可读文案
+通过 5 / 失败 0

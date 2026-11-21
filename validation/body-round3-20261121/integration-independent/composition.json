@@ -1,0 +1,105 @@
+{
+  "ok": true,
+  "source_head": "f81ee3a9939f3dad7c277145766508c113742ba0",
+  "source_tree": "5e6e6d45fdc9ef6ea885f4e4f38d56630089a751",
+  "previous_twelve": "5226860c1d70bc7fc6619cf79aff10c4f9a2a234",
+  "merged_main": "6b73082406d40a630a44cd68559c1f66b3652390",
+  "individual_pr_heads": {
+    "1481": "4a352249ef6db7975353b84bc640712d46f7181b",
+    "1482": "bd208a379e44497e9f35fdc145838abb19e6d313"
+  },
+  "changed_paths": [
+    "bench/bench_dynamics_command_reanchor.py",
+    "bench/bench_hexgrid_neighbors.py",
+    "docs/intake/body-export-v0.1/_export_manifest.json",
+    "docs/testing/dynamics-command-reanchor-20261121/README.md",
+    "docs/testing/dynamics-command-reanchor-20261121/validation-summary.json",
+    "docs/validation/hexgrid_odd_r_neighbors_20261121.md",
+    "lingshu/nn/hex_cnn.py",
+    "lingshu/world/scene_simulator.py",
+    "tests/fixtures/dynamics_command_reanchor_mutations.json",
+    "tests/fixtures/hexgrid_odd_r_neighbors_mutations.json",
+    "tests/test_dynamics_command_reanchor.py",
+    "tests/test_hexgrid_odd_r_neighbors.py"
+  ],
+  "production": [
+    {
+      "path": "lingshu/nn/hex_cnn.py",
+      "changed_method": "HexGrid.neighbors",
+      "pr": 1481,
+      "before_sha256": "e1b21e3b7e74cbdd34627033a217520a3e272a30bcb3799f93e8d0e6d3c81081",
+      "combined_sha256": "5671ae505f6dd026fc4fac7cb50ca02ca76ca972a51292f2dc50b5c7ae37efee",
+      "individual_sha256": "5671ae505f6dd026fc4fac7cb50ca02ca76ca972a51292f2dc50b5c7ae37efee",
+      "new_method_exactly_matches_individual_pr": true,
+      "other_functions_unchanged_from_previous_twelve": true
+    },
+    {
+      "path": "lingshu/world/scene_simulator.py",
+      "changed_method": "SceneSimulator._apply_command",
+      "pr": 1482,
+      "before_sha256": "f1f759ec3cff06a2eb17dfd224637f1be6ac16b933c17e447895e5d9356cbfc8",
+      "combined_sha256": "7f33caeaae450fe46cc7e8ae465e0302b0f2063e1d70788f41402d8d75e5350a",
+      "individual_sha256": "984d8abeaaa5a4b9d50e6d604758ac128d120f6b3bd56289b8b2a665a7bd1046",
+      "new_method_exactly_matches_individual_pr": true,
+      "other_functions_unchanged_from_previous_twelve": true
+    }
+  ],
+  "exact_nonproduction_artifacts": [
+    {
+      "path": "bench/bench_hexgrid_neighbors.py",
+      "pr": 1481,
+      "sha256": "4a531767989e45c50e2d0ea0486a083e8c897826f14e16127109387fdf5ab113",
+      "exact_match": true
+    },
+    {
+      "path": "docs/validation/hexgrid_odd_r_neighbors_20261121.md",
+      "pr": 1481,
+      "sha256": "4c951e0a41b12a48cb348fd1d629ea68818887f0d4577fd5db15aff87ec359d7",
+      "exact_match": true
+    },
+    {
+      "path": "tests/fixtures/hexgrid_odd_r_neighbors_mutations.json",
+      "pr": 1481,
+      "sha256": "b6ec69fc786445421c12b5550798ce00e576447ffa8e031aed506e6cd6ded535",
+      "exact_match": true
+    },
+    {
+      "path": "tests/test_hexgrid_odd_r_neighbors.py",
+      "pr": 1481,
+      "sha256": "51be981c9caf48c96703089d7cf5919614c443bd553c7842976082b91b4a655a",
+      "exact_match": true
+    },
+    {
+      "path": "bench/bench_dynamics_command_reanchor.py",
+      "pr": 1482,
+      "sha256": "1c4e039932777a8399c9d26dbec18503c8cc8f48fabe18a4091b4e7c8d41e303",
+      "exact_match": true
+    },
+    {
+      "path": "docs/testing/dynamics-command-reanchor-20261121/README.md",
+      "pr": 1482,
+      "sha256": "882f0edaece1ad8b8b80ad8c6f401de1fc757546df88c14c633e2f6530ac22ae",
+      "exact_match": true
+    },
+    {
+      "path": "docs/testing/dynamics-command-reanchor-20261121/validation-summary.json",
+      "pr": 1482,
+      "sha256": "a88d1635d3d8a5e03f449ffc04a0d902a7076f5e29e7b91b8b41ac4ddb4a28df",
+      "exact_match": true
+    },
+    {
+      "path": "tests/fixtures/dynamics_command_reanchor_mutations.json",
+      "pr": 1482,
+      "sha256": "a67780d6c6c76e7bbcd52c4887844b9d15e4d4a0e1fd29879d934a75b1f8a3cb",
+      "exact_match": true
+    },
+    {
+      "path": "tests/test_dynamics_command_reanchor.py",
+      "pr": 1482,
+      "sha256": "77c43293f245db4a38ef4d7b5b275df998dc17adef9aa66b67be4b0ab4ec5933",
+      "exact_match": true
+    }
+  ],
+  "previous_twelve_production_preserved": true,
+  "interpretation": "Only the two specified methods extend the previously validated twelve-fix production source. Original nonproduction artifacts match their PRs exactly; manifest reflects the merged module bytes. This is composition evidence, not a substitute for full gates."
+}

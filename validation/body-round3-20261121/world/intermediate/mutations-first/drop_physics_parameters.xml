@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.225" timestamp="2026-11-21T01:30:07.809172+08:00" hostname="STARDUST"><testcase classname="tests.test_dynamics_command_reanchor" name="test_command_preserves_custom_metadata_without_mutating_the_previous_state" time="0.028"><failure message="KeyError: 'audit_marker'">tests\test_dynamics_command_reanchor.py:237: in test_command_preserves_custom_metadata_without_mutating_the_previous_state
+    assert current["audit_marker"] == original["audit_marker"], "COMMAND_DROPPED_STATE_METADATA"
+           ^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'audit_marker'</failure></testcase></testsuite></testsuites>

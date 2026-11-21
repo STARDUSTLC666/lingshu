@@ -1,0 +1,10 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ test_command_preserves_custom_metadata_without_mutating_the_previous_state __
+tests\test_dynamics_command_reanchor.py:237: in test_command_preserves_custom_metadata_without_mutating_the_previous_state
+    assert current["audit_marker"] == original["audit_marker"], "COMMAND_DROPPED_STATE_METADATA"
+           ^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'audit_marker'
+=========================== short test summary info ===========================
+FAILED tests/test_dynamics_command_reanchor.py::test_command_preserves_custom_metadata_without_mutating_the_previous_state
+1 failed in 0.27s

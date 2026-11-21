@@ -1,0 +1,374 @@
+{
+  "head": "04e0ecb6a3669c90efbb4a1583816a8f7ca26bc7",
+  "before": {
+    "tick": 3,
+    "pos": [
+      64.0,
+      999.55,
+      64.0
+    ]
+  },
+  "configured": {
+    "entity": "scene_6bc368bb",
+    "target": [
+      90.0,
+      1000.0,
+      64.0
+    ],
+    "target_kind": "coordinate",
+    "step_size": 2.0,
+    "policy": "fixed",
+    "fixed_action": "east",
+    "correction": [
+      0.0,
+      0.0
+    ],
+    "decisions": 0,
+    "cold_starts": 0,
+    "mean_abs_target_error": null,
+    "error_samples": 0
+  },
+  "action": {
+    "L7_decision": {
+      "chosen": [
+        "scene_6bc368bb"
+      ],
+      "ig_scores": {},
+      "policy": "round_robin",
+      "budget": 1,
+      "required_observations": [
+        "scene_6bc368bb"
+      ],
+      "ig_selected": [
+        "scene_6bc368bb"
+      ],
+      "effective_observations": 1,
+      "budget_expanded": false,
+      "budget_note": "必要观测已含在预算内，总数不变"
+    },
+    "L4_prediction": {
+      "predictions": {
+        "scene_6bc368bb": {
+          "predicted": [
+            64.0,
+            999.55,
+            64.0
+          ],
+          "bound": 0.5,
+          "mode": "bounded_stochastic",
+          "observation_age": 0,
+          "target_tick": 4
+        }
+      }
+    },
+    "L7_action": {
+      "enabled": true,
+      "status": "ok",
+      "entity": "scene_6bc368bb",
+      "target": [
+        90.0,
+        1000.0,
+        64.0
+      ],
+      "target_kind": "coordinate",
+      "policy": "fixed",
+      "fixed_action": "east",
+      "step_size": 2.0,
+      "cold_start": false,
+      "information_source": "观测 explorer.nodes + 学得模型 explorer.predict",
+      "decision_rule": "argmin(score) over ACTION_NAMES（tie-break＝动作表序）",
+      "candidates": [
+        {
+          "action": "east",
+          "predicted_self": [
+            66.0,
+            999.55,
+            64.0
+          ],
+          "score": 24.0042
+        },
+        {
+          "action": "west",
+          "predicted_self": [
+            62.0,
+            999.55,
+            64.0
+          ],
+          "score": 28.0036
+        },
+        {
+          "action": "north",
+          "predicted_self": [
+            64.0,
+            999.55,
+            62.0
+          ],
+          "score": 26.0807
+        },
+        {
+          "action": "south",
+          "predicted_self": [
+            64.0,
+            999.55,
+            66.0
+          ],
+          "score": 26.0807
+        },
+        {
+          "action": "stay",
+          "predicted_self": [
+            64.0,
+            999.55,
+            64.0
+          ],
+          "score": 26.0039
+        }
+      ],
+      "model_choice": "east",
+      "greedy_current_choice": "east",
+      "chosen_action": "east",
+      "forecast": {
+        "predicted": [
+          90.0,
+          1000.0,
+          64.0
+        ],
+        "observed": [
+          90.0,
+          1000.0,
+          64.0
+        ],
+        "mode": "static_coordinate",
+        "bound": 0.0,
+        "samples": null,
+        "model_ready": true,
+        "extrapolated": false,
+        "correction_applied": [
+          0.0,
+          0.0
+        ],
+        "source": "configured_coordinate",
+        "target_tick": null,
+        "observation_age": null
+      },
+      "observation": {
+        "self": [
+          64.0,
+          999.55,
+          64.0
+        ],
+        "target": [
+          90.0,
+          1000.0,
+          64.0
+        ],
+        "self_tick": 3,
+        "target_tick": null,
+        "self_age": 0,
+        "target_age": 0,
+        "source": "explorer.nodes（观测面，非物理真值）"
+      },
+      "executed": {
+        "action": "east",
+        "predicted_self": [
+          66.0,
+          999.55,
+          64.0
+        ],
+        "source": "SceneSimulator.set_command（真实执行侧）",
+        "observed_to": [
+          66.0,
+          999.55,
+          64.0
+        ],
+        "self_error": 0.0,
+        "distance_before": 26.0039,
+        "distance_after": 24.0042
+      },
+      "outcome": {
+        "observed_self": [
+          66.0,
+          999.55,
+          64.0
+        ],
+        "observed_target": [
+          90.0,
+          1000.0,
+          64.0
+        ],
+        "predicted_target": [
+          90.0,
+          1000.0,
+          64.0
+        ],
+        "target_observation_fresh": true,
+        "target_error": [
+          0.0,
+          0.0
+        ],
+        "target_error_norm": 0.0,
+        "target_error_status": "static_coordinate",
+        "target_error_reason": "坐标目标是配置常量（预测位置即该常量）⇒ 误差按构造恒为 0，不构成对目标观测的验证；既有统计口径未改",
+        "corrected": false,
+        "next_correction": [
+          0.0,
+          0.0
+        ]
+      },
+      "model_ready": true,
+      "greedy_scores": {
+        "east": 24.0042,
+        "west": 28.0036,
+        "north": 26.0807,
+        "south": 26.0807,
+        "stay": 26.0039
+      }
+    },
+    "L6_physics": {
+      "world_tick": 4,
+      "entities": 1
+    },
+    "L1_perception": {
+      "observed": [
+        "scene_6bc368bb"
+      ],
+      "observed_count": 1,
+      "anomalies": 1
+    },
+    "L5_verification": {
+      "hits": 0,
+      "total": 1,
+      "point_hits": 0,
+      "hit_rate": 0.0,
+      "bound_coverage": 0.0,
+      "point_hit_rate": 0.0,
+      "mean_distance": 2.0,
+      "mean_bound": 0.5
+    },
+    "L2_memory": {
+      "history_len": 4,
+      "entities": {
+        "scene_6bc368bb": [
+          66.0,
+          999.55,
+          64.0
+        ]
+      }
+    },
+    "L3_cognition": {
+      "relations": [],
+      "entity_count": 1
+    },
+    "tick": 4
+  },
+  "acted": {
+    "tick": 4,
+    "pos": [
+      66.0,
+      999.55,
+      64.0
+    ],
+    "state": {
+      "p0": [
+        64.0,
+        1000.0,
+        64.0
+      ],
+      "v0": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "t_ref": 0.0
+    }
+  },
+  "cleared": {
+    "cleared": true,
+    "entity": "scene_6bc368bb",
+    "pending_commands_removed": [],
+    "action_ticks": 1
+  },
+  "resumed": {
+    "tick": 5,
+    "pos": [
+      64.0,
+      998.75,
+      64.0
+    ],
+    "state": {
+      "p0": [
+        64.0,
+        1000.0,
+        64.0
+      ],
+      "v0": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "t_ref": 0.0
+    }
+  },
+  "resume_record": {
+    "L7_decision": {
+      "chosen": [
+        "scene_6bc368bb"
+      ],
+      "ig_scores": {},
+      "policy": "round_robin",
+      "budget": 1
+    },
+    "L4_prediction": {
+      "predictions": {
+        "scene_6bc368bb": {
+          "predicted": [
+            66.0,
+            999.55,
+            64.0
+          ],
+          "bound": 1.201,
+          "mode": "bounded_stochastic",
+          "observation_age": 0,
+          "target_tick": 5
+        }
+      }
+    },
+    "L6_physics": {
+      "world_tick": 5,
+      "entities": 1
+    },
+    "L1_perception": {
+      "observed": [
+        "scene_6bc368bb"
+      ],
+      "observed_count": 1,
+      "anomalies": 1
+    },
+    "L5_verification": {
+      "hits": 0,
+      "total": 1,
+      "point_hits": 0,
+      "hit_rate": 0.0,
+      "bound_coverage": 0.0,
+      "point_hit_rate": 0.0,
+      "mean_distance": 2.1541,
+      "mean_bound": 1.201
+    },
+    "L2_memory": {
+      "history_len": 5,
+      "entities": {
+        "scene_6bc368bb": [
+          64.0,
+          998.75,
+          64.0
+        ]
+      }
+    },
+    "L3_cognition": {
+      "relations": [],
+      "entity_count": 1
+    },
+    "tick": 5
+  },
+  "horizontal_action_undone": true
+}
