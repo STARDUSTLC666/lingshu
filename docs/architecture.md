@@ -9,7 +9,7 @@
 |---|---|---|---|
 | **灵** | 理论：智能论 3.4 / 共同信任协议 | 随脑核包载入 | **不在本仓复制**——与脑核同源载入，避免多版本（2026-10-04 裁决） |
 | **脑** | 认知图引擎：记忆 / 检索 / 演化 / 睡眠 | `dsh-memory`（公开 · MIT） | **包依赖**（已裁决 2026-10-04：`@furongjun1999/dsh-memory`；灵枢大脑库不动——避免多版本） |
-| **身** | 世界模型七层 / 视觉与 WAV 音频感知 / 生成与读回 / 时空图 | **本仓自有**（`lingshu` 包：core / world / nn / gen / vision） | **不再外部引入**——原「逐件筛选导出」已完成，模块与测试均在本仓 |
+| **身** | 世界模型七层 / 视觉与音频感知 / 本地视频帧变化统计 / 生成与读回 / 时空图 | **本仓自有**（`lingshu` 包：core / world / nn / gen / vision） | **不再外部引入**——原「逐件筛选导出」已完成，模块与测试均在本仓 |
 
 > **「身」已不是外部上游。** 先前「逐件筛选导出 → 固化副本」的引入过程**已完成**：
 > 世界模型 / 视觉生成 / 自研神经网络的理论、代码与测试均在本仓（见 §三 与 §七）。
@@ -37,13 +37,12 @@ lingshu
 └── world  世界模型：推演循环与物理沙盒（重载可选）
 ```
 
-- **当前计数**（本仓实读，随聚合动作更新）：`lingshu` 包 **91** 个 `.py`
-  （**85** 个非 `__init__` 模块）——core 15 / nn 14 / gen 7 / world 45 / vision 3 / 包根 1；
-  import 冒烟 **91/91**（2026-11-21 合入主线后逐模块 `import` 实跑读数；守卫只核该行的分子
+- **当前计数**（本仓实读，随聚合动作更新）：`lingshu` 包 **95** 个 `.py`
+  （**89** 个非 `__init__` 模块）——core 15 / nn 14 / gen 7 / world 47 / vision 5 / 包根 1；
+  import 冒烟 **95/95**（2026-11-21 逐模块 `import` 实跑读数；守卫只核该行的分子
   分母相等且等于实读 `.py` 总数，见 `tests/test_doc_module_counts_guard.py`）。
   下表 §七 各行是**逐次聚合动作的快照**（计数为该次引入时的读数），当前计数以本行为准。
 - **轻核承诺**：`core` 不因本仓的「完整」而增重——可单独安装、单独运行；
-- **vision 工具面**：线稿及明确二值掩码几何摘要；惰性导出，不属于架构层树，不写记忆。
 - **重载声明**：`nn`/`gen`/`world` 的依赖与模型资产按需安装（extra 形态），
   安装体积与依赖深度如实在各件 README 登记。
 
@@ -213,5 +212,9 @@ lingshu
 | 2026-11-20 | 实例内视觉引用只读查询：`SpacetimeMemoryEngine.list_local_visual_frames()`，只返回entity_id/frame_ref/ts，不执行SQL、不打开引用、不改共享载荷；intake见 `docs/intake/body-local-visual-query-v0.1/` | 本仓新件 | 0..200限量、精确实体过滤、关闭后拒绝；摄入/同步/关闭/零I/O回归通过 | 见对应PR |
 
 | 2026-11-19 | **身体音频感知 v0.5（事件画像、内存输入、压缩音频与周期估计）**：`lingshu/vision/audio.py` + `SpacetimeMemoryEngine.perceive_audio` + 合成 WAV 守卫；登记见 `docs/intake/body-audio-v0.1/README.md` | **本仓新件**，身体侧视觉/音频感知；复用 `add_perception` 的 audio 模态 | CLEAN：WAV 纯标准库，FFmpeg 可选且 pipe-only；事件精度/截断/内存流/压缩输入/周期证据边界显式，无原始音频持久化；PR #1460 / intake #2760 | PR #1460（事件画像、压缩解码与周期估计增量） |
+
+| 2026-11-20 | 有界二值掩码几何：`vision/mask_geometry.py`；4/8 邻接面积、半开 bbox、像素中心质心及边界摘要；intake 见 `docs/intake/body-vision-mask-geometry-v0.1/` | 本仓新件 | 262,144 像素预算、最多 128 区域；标准库计算，不写文件或记忆；合成回归通过 | 见对应 PR |
+
+| 2026-11-20 | 批量深度样本反投影：`world/depth_samples.py`，委托现有 Camera3D.unproject，显式像素/前向深度批量转世界坐标；intake 见 `docs/intake/body-depth-samples-v0.1/` | 本仓新件 | 最多4096条，预验证有限性/边界/深度，纯委托、不写文件或记忆；回代回归通过 | [PR #1466](https://github.com/FuRongJun-1999/lingshu/pull/1466) |
 
 *登记纪律：每次聚合动作在本表追加一行（件名 / 来源 / 日期 / 双清单结论 / 提交号）。*

@@ -47,16 +47,21 @@
 ## 代码主体
 
 身体侧模块化导出 v0.1 已入仓——**`lingshu` Python 包**（core 存算一体 15 件 ·
-world 世界模型 45 件 · nn 自研神经网络 14 件 · gen 图像生成 7 件 · vision 视觉/音频感知 3 件（含图像像素统计））：
+world 世界模型 47 件 · nn 自研神经网络 14 件 · gen 图像生成 7 件 · vision 视觉/音频感知 5 件（含图像像素统计））：
 
 ```bash
 pip install -e .             # 轻核：core 纯标准库，零依赖可跑
 pip install -e ".[full]"     # 含 numpy / Pillow（world / nn / gen 的常规路径）
-# vision 掩码几何不需重依赖；图像像素统计与线稿在调用时按需加载 Pillow/NumPy
+# vision 的 WAV/掩码几何用标准库；图像处理按需加载重依赖，视频需可选 FFmpeg
 ```
 
-本地视频灰度帧变化统计（可选 FFmpeg、有限帧数和时长）见
-[身体视频帧变化分析](docs/world_video_frame_analysis.md)；不提供对象识别或视频记忆。
+`lingshu.world.unproject_depth_samples()` 可将最多4096条显式像素/相机前向深度样本转换为世界坐标，先完整校验再委托已有相机反投影，不读文件或写记忆。详见[批量深度样本](docs/world_depth_samples.md)。
+
+`lingshu.vision.analyze_binary_components()` 只分析调用方明确提供的二值掩码，返回有界区域面积、半开 bbox、像素中心质心与边界摘要，不推断语义或写记忆。见[二值掩码几何](docs/vision_binary_mask_geometry.md)。
+
+`lingshu.vision.analyze_image_pixels(image)` 可选地对已解码 Pillow 图像做有界像素统计（RGB 颜色分布、亮度与 alpha），不做语义识别或记忆写入；导入 `lingshu.vision` 本身不加载 Pillow/NumPy。
+
+`engine.list_local_visual_frames(entity_id=None, limit=50)` 可只读查询当前实例最多200条视觉引用元数据；不读取引用文件、不执行SQL、不共享原始视觉，关闭后拒绝。详见[实例内视觉缓冲查询](docs/core_local_visual_buffer.md)。
 
 结构事件与版本历史的写入接口、授权及同步边界见
 [结构历史与受保护写服务](docs/structure-events.md)。
@@ -67,6 +72,9 @@ Pillow 12.3.0——`pyproject.toml` 中 extras 的版本区间由此收敛，**�
 身体音频感知（WAV 标准库 + 可选 FFmpeg 压缩格式、RMS 活动周期估计与事件分段；支持内存 bytes）用法和边界见
 [身体音频感知](docs/world_audio_perception.md)：压缩解码需本机可选 FFmpeg；周期仅基于稳定 RMS 活动前沿与充分时间分辨率，只做声学测量，不转写语音、不推断语义、不保存原始音频或路径。
 
+本地视频灰度帧变化统计（可选 FFmpeg、有限帧数和时长）见
+[身体视频帧变化分析](docs/world_video_frame_analysis.md)；不提供对象识别或视频记忆。
+
 > 曾登记为「已知红」的 `tests/test_hex_text.py` 两处断言（`test_spatial_detect_finds_single_object`
 > 6/16、`test_multimodal_check_clean_vs_corrupt` 7/12）**已随根因修复转绿**：`9bc4985`
 > （`image_to_grid` 晶格横向越出画幅 √3 倍，采纳自 PR #116）＋ `54cb5cb`（`hex_hier` 形状辅助
@@ -76,8 +84,6 @@ Pillow 12.3.0——`pyproject.toml` 中 extras 的版本区间由此收敛，**�
 
 依赖分层、环境自适应降级点与精修记录见
 [docs/intake/body-export-v0.1/](docs/intake/body-export-v0.1/)（导出说明 / 双清单审计 / 逐文件指纹清单）。
-
-标准库线稿处理以外的视频基础帧差统计说明见 [身体视频帧变化分析](docs/world_video_frame_analysis.md)：需要可选 FFmpeg，只报告固定采样网格的灰度像素变化，不做目标/动作语义识别，也不写视频记忆。
 
 ### 桥接（进程外适配器 · 不进 wheel）
 
