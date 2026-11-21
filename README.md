@@ -55,9 +55,8 @@ pip install -e ".[full]"     # 含 numpy / Pillow（world / nn / gen 的常规�
 # vision 图像像素统计亦用 Pillow，但导入入口保持惰性
 ```
 
-`lingshu.vision.analyze_image_pixels(image)` 可选地对已解码 Pillow 图像做有界像素统计（RGB 颜色分布、亮度与 alpha），不做语义识别或记忆写入；导入 `lingshu.vision` 本身不加载 Pillow/NumPy。
-
-`engine.list_local_visual_frames(entity_id=None, limit=50)` 可只读查询当前实例最多200条视觉引用元数据；不读取引用文件、不执行SQL、不共享原始视觉，关闭后拒绝。详见[实例内视觉缓冲查询](docs/core_local_visual_buffer.md)。
+本地视频灰度帧变化统计（可选 FFmpeg、有限帧数和时长）见
+[身体视频帧变化分析](docs/world_video_frame_analysis.md)；不提供对象识别或视频记忆。
 
 结构事件与版本历史的写入接口、授权及同步边界见
 [结构历史与受保护写服务](docs/structure-events.md)。
@@ -77,6 +76,8 @@ Pillow 12.3.0——`pyproject.toml` 中 extras 的版本区间由此收敛，**�
 
 依赖分层、环境自适应降级点与精修记录见
 [docs/intake/body-export-v0.1/](docs/intake/body-export-v0.1/)（导出说明 / 双清单审计 / 逐文件指纹清单）。
+
+标准库线稿处理以外的视频基础帧差统计说明见 [身体视频帧变化分析](docs/world_video_frame_analysis.md)：需要可选 FFmpeg，只报告固定采样网格的灰度像素变化，不做目标/动作语义识别，也不写视频记忆。
 
 ### 桥接（进程外适配器 · 不进 wheel）
 

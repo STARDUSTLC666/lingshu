@@ -9591,6 +9591,16 @@ class SpacetimeMemoryEngine:
                                    window_ms=window_ms, silence_dbfs=silence_dbfs,
                                    max_duration_s=max_duration_s, timeout_s=timeout_s)
 
+    def analyze_video_frames(self, source, ffmpeg: str = "ffmpeg", sample_fps: float = 1.0,
+                             max_frames: int = 120, max_duration_s: float = 60.0,
+                             timeout_s: float = 60.0) -> dict:
+        """Compute bounded grayscale frame-difference stats; does not write memory."""
+        from ..vision.video import analyze_video_frames
+        return analyze_video_frames(source, ffmpeg=ffmpeg, sample_fps=sample_fps,
+                                    max_frames=max_frames, max_duration_s=max_duration_s,
+                                    timeout_s=timeout_s)
+
+
     def get_body_capabilities(self) -> dict:
         """v1.13 身体能力声明（第 4 项：工具/模态作为自我的一部分）"""
         # 惰性视觉：未装配时显示 "lazy"（首次调用加载），不阻塞能力查询
@@ -9616,6 +9626,9 @@ class SpacetimeMemoryEngine:
             pass
         from ..vision.audio import ffmpeg_available
         compressed_audio_available = ffmpeg_available()
+
+        from ..vision.video import ffmpeg_video_available
+        video_frame_analysis_available = ffmpeg_video_available()
         return {
             "modalities": {
                 "text": True,
@@ -9630,12 +9643,18 @@ class SpacetimeMemoryEngine:
             "vision": {"provider": provider_name,
                        "available": vision_ok,
                        "error": vision_note},
+            "video_frame_analysis": {"provider": "ffmpeg-optional",
+                                     "available": video_frame_analysis_available,
+                                     "semantic_perception": False,
+                                     "frames_persisted": False},
+
+
             "memory": {"engine": "v1.13", "persistent": True},
             "devices": devices,           # BODY-REV1：外部设备清单
             "devices_available": devices_available,
             "tools": ["search", "recall", "distill", "calibrate", "cognition",
                       "lifecycle", "mcp", "device_call", "body_devices",
-                      "perceive_audio", "perceive_audio_file"],
+                      "perceive_audio", "perceive_audio_file", "analyze_video_frames"],
             "note": "身体 = 感知（视觉/音频/文本/屏幕）+ 运动（工具/设备/进程）+ 记忆（灵枢）；"
                     "WAV 只保存声学摘要，不保存原音频（BODY-AUDIO-REV1）；设备输出带 provenance 隔离（BODY-REV1）",
         }
