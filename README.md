@@ -52,7 +52,7 @@ world 世界模型 45 件 · nn 自研神经网络 14 件 · gen 图像生成 7 
 ```bash
 pip install -e .             # 轻核：core 纯标准库，零依赖可跑
 pip install -e ".[full]"     # 含 numpy / Pillow（world / nn / gen 的常规路径）
-# vision 图像像素统计亦用 Pillow，但导入入口保持惰性
+# vision 掩码几何不需重依赖；图像像素统计与线稿在调用时按需加载 Pillow/NumPy
 ```
 
 本地视频灰度帧变化统计（可选 FFmpeg、有限帧数和时长）见

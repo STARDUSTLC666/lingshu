@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from importlib import import_module
 
-__all__ = ['darkline', 'linework', 'AudioPerceptionError', 'AudioCodecUnavailable', 'analyze_wav', 'analyze_audio', 'decode_compressed_audio', 'ffmpeg_available', 'segment_audio_events', 'infer_audio_activity_period', 'format_audio_summary', 'perceive_wav', 'perceive_audio_file', 'analyze_image_pixels', 'VideoAnalysisError', 'analyze_video_frames', 'ffmpeg_video_available']
+__all__ = ['darkline', 'linework', 'AudioPerceptionError', 'AudioCodecUnavailable', 'analyze_wav', 'analyze_audio', 'decode_compressed_audio', 'ffmpeg_available', 'segment_audio_events', 'infer_audio_activity_period', 'format_audio_summary', 'perceive_wav', 'perceive_audio_file', 'analyze_image_pixels', 'VideoAnalysisError', 'analyze_video_frames', 'ffmpeg_video_available', 'analyze_binary_components']
 
 
 def __getattr__(name):
@@ -15,6 +15,8 @@ def __getattr__(name):
         return getattr(import_module('.image_stats', __name__), name)
     if name in {'VideoAnalysisError', 'analyze_video_frames', 'ffmpeg_video_available'}:
         return getattr(import_module('.video', __name__), name)
+    if name == 'analyze_binary_components':
+        return getattr(import_module('.mask_geometry', __name__), name)
     raise AttributeError("module %r has no attribute %r" % (__name__, name))
 
 
