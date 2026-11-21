@@ -1,0 +1,1375 @@
+{
+  "version": 1,
+  "objective": "放眼全局，不要太注重局部优化，最好弄一个总智能体管理子智能体群",
+  "supervisor": "${HOST_ROOT}",
+  "upstream": "FuRongJun-1999/lingshu",
+  "baseline": "c15c12ea90ac4c7733ff2ef10e6fc586eab9b211",
+  "agents": [
+    {
+      "id": "${HOST_ROOT}/integration_surface",
+      "role": "整合与依赖核对",
+      "scope": [
+        1466,
+        1439,
+        1432,
+        1428
+      ]
+    },
+    {
+      "id": "${HOST_ROOT}/open_scope",
+      "role": "独立核对 CI、证据与既有申报",
+      "scope": [
+        1479,
+        1477,
+        1471,
+        1437,
+        1460,
+        1461,
+        1463
+      ]
+    },
+    {
+      "id": "${HOST_ROOT}/pipeline_audit",
+      "role": "组合验收与安装门禁",
+      "scope": [
+        "five-integration",
+        "extended-gate"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "pr": 1485,
+      "name": "统一模型替换与推演生命周期",
+      "head": "72ee3e4c9aba35b34cbaf467feb52c08c023dfcb",
+      "bounty": 2805,
+      "evidence": "intake-receipt.json",
+      "current": {
+        "headRefOid": "72ee3e4c9aba35b34cbaf467feb52c08c023dfcb",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T06:59:40Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44876900059/job/136763479901",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T06:43:31Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T06:43:38Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44876900045/job/136763479691",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T06:43:31Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T06:53:47Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44876900059/job/136763479717",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T06:43:31Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T06:59:02Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44876900059/job/136763479991",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T06:43:31Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1485"
+      },
+      "counts": {
+        "passed": 4,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "OPEN",
+        "title": "[intake 输入] lingshu PR #1485：替换统一模型时结束旧推演连接",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2805"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1484,
+      "name": "运动组有限坐标",
+      "head": "4e919f76b3da49289915a354c9a45f39071db22d",
+      "bounty": 2804,
+      "evidence": "../body-next-20261121/DELIVERY_STATUS.md",
+      "current": {
+        "headRefOid": "4e919f76b3da49289915a354c9a45f39071db22d",
+        "mergeable": "UNKNOWN",
+        "state": "MERGED",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T06:10:08Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44873484339/job/136752966783",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T06:00:36Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T06:00:44Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44873484326/job/136752966541",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T06:00:36Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T06:16:28Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44873484339/job/136752966653",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T06:00:36Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T06:12:01Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44873484339/job/136752966893",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T06:00:37Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1484"
+      },
+      "counts": {
+        "passed": 4,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "已合并",
+      "intake": {
+        "labels": [],
+        "state": "OPEN",
+        "title": "[intake 输入] lingshu PR #1484：修复运动分组的非有限坐标漏检",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2804"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1479,
+      "name": "自由飞行速度",
+      "head": "b3f2a67e71d7a0d3d0e4ee8094a8305ab7bfc7d2",
+      "bounty": 2793,
+      "evidence": "integrate-freeflight/regressions.xml",
+      "current": {
+        "headRefOid": "b3f2a67e71d7a0d3d0e4ee8094a8305ab7bfc7d2",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:01:33Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44877380772/job/136764965955",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T06:49:46Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T06:49:52Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44877380744/job/136764965655",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T06:49:45Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:14:48Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879321388/job/136770912259",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T07:14:39Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:05:49Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44877380772/job/136764965720",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T06:49:45Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:05:17Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44877380772/job/136764965879",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T06:49:45Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1479"
+      },
+      "counts": {
+        "passed": 5,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "OPEN",
+        "title": "[intake 输入] lingshu PR #1479：无接触碰撞箱不再把瞬时末速度替换成平均速度（守卫/变异/基准）",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2793"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1477,
+      "name": "圆周拟合与残差",
+      "head": "b32b064eca8e505aaec41b4445df42ad1eb67a32",
+      "bounty": 2791,
+      "evidence": "integrate-circular/integration-summary.json",
+      "current": {
+        "headRefOid": "b32b064eca8e505aaec41b4445df42ad1eb67a32",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:07:07Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44877570210/job/136765547325",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T06:52:14Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T06:52:21Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44877570284/job/136765547182",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T06:52:14Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:14:53Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879331826/job/136770946273",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T07:14:47Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:06:12Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44877570210/job/136765547209",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T06:52:14Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:01:06Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44877570210/job/136765547023",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T06:52:14Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1477"
+      },
+      "counts": {
+        "passed": 5,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "OPEN",
+        "title": "[intake 输入] lingshu PR #1477：螺旋拟合时间锚与完整三维残差修复（守卫/变异/基准）",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2791"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1471,
+      "name": "斜盒碰撞",
+      "head": "cf69e40e78ccbe9fb798c07afc46ec7d4a239532",
+      "bounty": 2785,
+      "evidence": "integrate-obb/integration-proof.json",
+      "current": {
+        "headRefOid": "cf69e40e78ccbe9fb798c07afc46ec7d4a239532",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:04:52Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44877564771/job/136765530964",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T06:52:10Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T06:52:16Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44877564780/job/136765530971",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T06:52:10Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:15:07Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879342241/job/136770978171",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T07:14:55Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:05:32Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44877564771/job/136765530976",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T06:52:10Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:07:09Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44877564771/job/136765530836",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T06:52:10Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1471"
+      },
+      "counts": {
+        "passed": 5,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "OPEN",
+        "title": "lingshu 身体模块：补齐非正交 OBB 的 SAT 面法线（PR #1471）",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2785"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1437,
+      "name": "线稿参数校验与透明通道",
+      "head": "f46ff9f29febbcffb5caba83d2c708d124e30cdb",
+      "bounty": 2725,
+      "evidence": "integrate-lineart/regressions.xml",
+      "current": {
+        "headRefOid": "f46ff9f29febbcffb5caba83d2c708d124e30cdb",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:10:13Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878030738/job/136766977560",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T06:58:29Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T06:58:35Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878030737/job/136766977436",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T06:58:29Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T08:05:08Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44883182090/job/136782721823",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T08:05:02Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T08:06:39Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44883301161/job/136783079443",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T08:06:31Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:14:11Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878030738/job/136766977598",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T06:58:29Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:07:53Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878030738/job/136766977430",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T06:58:29Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1437"
+      },
+      "counts": {
+        "passed": 6,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "CLOSED",
+        "title": "lingshu #196：vision/lineart 非有限 thr_mult 静默退化与参数类型闸（PR #1437）",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2725"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1460,
+      "name": "音频",
+      "head": "4a67a751efffe264f80b303582b0a85abde677ed",
+      "bounty": 2760,
+      "evidence": "integrate-media-audio/integration-summary.json",
+      "current": {
+        "headRefOid": "4a67a751efffe264f80b303582b0a85abde677ed",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:16:23Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878421064/job/136768156016",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T07:03:19Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:03:24Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878420965/job/136768155700",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T07:03:19Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T08:05:18Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44883190315/job/136782743277",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T08:05:08Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:18:55Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878421064/job/136768155823",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T07:03:19Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:15:00Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878421064/job/136768156134",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T07:03:19Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1460"
+      },
+      "counts": {
+        "passed": 5,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "CLOSED",
+        "title": "lingshu 身体模块：音频事件、压缩格式与活动周期画像（PR #1460）",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2760"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1461,
+      "name": "视频",
+      "head": "10853336a541633485a33bee7f77fd147197a3e0",
+      "bounty": 2777,
+      "evidence": "integrate-media-video/integration-summary.json",
+      "current": {
+        "headRefOid": "10853336a541633485a33bee7f77fd147197a3e0",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:18:54Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878427114/job/136768175199",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T07:03:24Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:03:32Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878427154/job/136768175172",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T07:03:24Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T08:05:19Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44883198609/job/136782768346",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T08:05:13Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:18:57Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878427114/job/136768174997",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T07:03:24Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:14:40Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878427114/job/136768175286",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T07:03:25Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1461"
+      },
+      "counts": {
+        "passed": 5,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "CLOSED",
+        "title": "lingshu 身体模块：本地视频帧变化统计（PR #1461）",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2777"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1463,
+      "name": "掩码几何",
+      "head": "596b5f0de66e78340a847faa949616b2ebc9b61c",
+      "bounty": 2779,
+      "evidence": "integrate-media-mask/integration-summary.json",
+      "current": {
+        "headRefOid": "596b5f0de66e78340a847faa949616b2ebc9b61c",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:15:35Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878431357/job/136768188444",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T07:03:34Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:03:37Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878431304/job/136768188023",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T07:03:27Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T08:06:42Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44883308610/job/136783103257",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T08:06:37Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:19:09Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878431357/job/136768188278",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T07:03:27Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:12:16Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44878431357/job/136768188730",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T07:03:38Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1463"
+      },
+      "counts": {
+        "passed": 5,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "CLOSED",
+        "title": "lingshu 身体模块：有界二值掩码几何（PR #1463）",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2779"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1466,
+      "name": "深度反投影",
+      "head": "fb374bbad163e92f133262fbba52b88eccf10834",
+      "bounty": 2781,
+      "evidence": "integrate-depth",
+      "current": {
+        "headRefOid": "fb374bbad163e92f133262fbba52b88eccf10834",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:32:46Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879513640/job/136771488811",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T07:16:59Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:17:04Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879513648/job/136771488763",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T07:16:59Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T08:06:47Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44883314853/job/136783124957",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T08:06:42Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:32:45Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879513640/job/136771488879",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T07:16:59Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:28:38Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879513640/job/136771488526",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T07:16:59Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1466"
+      },
+      "counts": {
+        "passed": 5,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "CLOSED",
+        "title": "lingshu 身体模块：批量深度样本反投影（PR #1466）",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2781"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1439,
+      "name": "感知与知识桥分区一致性",
+      "head": "e687b4dbfe69a4b00135ee1c5f4a71163c756a55",
+      "bounty": 2727,
+      "evidence": "integrate-knowledge",
+      "current": {
+        "headRefOid": "e687b4dbfe69a4b00135ee1c5f4a71163c756a55",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:26:50Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879517196/job/136771499458",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T07:17:02Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:17:07Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879517205/job/136771499466",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T07:17:02Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T08:07:01Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44883322430/job/136783150197",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T08:06:49Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:28:59Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879517196/job/136771499695",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T07:17:02Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:32:54Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879517196/job/136771499814",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T07:17:02Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1439"
+      },
+      "counts": {
+        "passed": 5,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "CLOSED",
+        "title": "lingshu M5.5：感知-知识桥（条件卡灌入、图文四态回写与白箱问答 · PR #1439）",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2727"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1432,
+      "name": "响应证据",
+      "head": "e77a67fcc5285cd7f7d679ba79c9fff25dfb139a",
+      "bounty": 2722,
+      "evidence": "integrate-response",
+      "current": {
+        "headRefOid": "e77a67fcc5285cd7f7d679ba79c9fff25dfb139a",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:26:41Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879522153/job/136771513283",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T07:17:05Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:17:18Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879522150/job/136771513281",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T07:17:06Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T08:07:08Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44883328459/job/136783170294",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T08:06:54Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:32:59Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879522153/job/136771513063",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T07:17:05Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:31:38Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879522153/job/136771513335",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T07:17:05Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1432"
+      },
+      "counts": {
+        "passed": 5,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "CLOSED",
+        "title": "lingshu #110：竞争响应假设与主动探测四态证据白箱闭环（PR #1432）",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2722"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1428,
+      "name": "去重索引与当前记忆语义",
+      "head": "fedf81a6e29687ba09d1a577fa1c7bafcb5e0b47",
+      "bounty": 2718,
+      "evidence": "integrate-dedup",
+      "current": {
+        "headRefOid": "fedf81a6e29687ba09d1a577fa1c7bafcb5e0b47",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:30:05Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879525318/job/136771522345",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T07:17:22Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:17:21Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879525268/job/136771521911",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T07:17:08Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T08:07:02Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44883334872/job/136783191010",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T08:06:58Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:33:58Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879525318/job/136771522151",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T07:17:08Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:32:11Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879525318/job/136771522346",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T07:17:19Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1428"
+      },
+      "counts": {
+        "passed": 5,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "CLOSED",
+        "title": "lingshu #661：M5 去重等价倒排索引与尾部窗口还原（稳态 O(1) · 4.17×–15.36× 加速 · PR #1428）",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2718"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1486,
+      "name": "扩展历史、稀疏与安装验收",
+      "head": "8c7abf1b2c8d946aaa1c7461eb50e16a41513d5a",
+      "bounty": 2806,
+      "evidence": "extended-gate/intake-receipt.json",
+      "current": {
+        "headRefOid": "8c7abf1b2c8d946aaa1c7461eb50e16a41513d5a",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:19:55Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879705485/job/136772076495",
+            "name": "historical physics and sparse backend",
+            "startedAt": "2026-11-21T07:19:35Z",
+            "status": "COMPLETED",
+            "workflowName": "extended body acceptance"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:34:46Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879705430/job/136772076222",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T07:19:29Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:19:34Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879705429/job/136772076247",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T07:19:29Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:30:58Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879705430/job/136772076324",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T07:19:29Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:34:48Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879705430/job/136772076100",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T07:19:29Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:20:15Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879705485/job/136772076618",
+            "name": "installed wheel (ubuntu-latest)",
+            "startedAt": "2026-11-21T07:19:57Z",
+            "status": "COMPLETED",
+            "workflowName": "extended body acceptance"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:21:04Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44879705485/job/136772076673",
+            "name": "installed wheel (windows-latest)",
+            "startedAt": "2026-11-21T07:20:17Z",
+            "status": "COMPLETED",
+            "workflowName": "extended body acceptance"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1486"
+      },
+      "counts": {
+        "passed": 7,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "OPEN",
+        "title": "[intake 输入] lingshu PR #1486：补齐真实历史、稀疏后端和独立安装门禁",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2806"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1433,
+      "name": "实际像素识别到世界与记忆",
+      "head": "a721c3363b48c474f97201714e2d834b085912b6",
+      "bounty": 2723,
+      "evidence": "perception-dependencies/DECISION.md",
+      "current": {
+        "headRefOid": "a721c3363b48c474f97201714e2d834b085912b6",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:51:52Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44881251795/job/136776821494",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T07:39:31Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:39:38Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44881252049/job/136776821500",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T07:39:31Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:51:00Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44881251795/job/136776821516",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T07:39:31Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:54:53Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44881251795/job/136776821309",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T07:39:31Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1433"
+      },
+      "counts": {
+        "passed": 4,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "CLOSED",
+        "title": "lingshu #172 后续③：升级端到端蜂窝感知器（六角晶格形状与颜色识别 · PR #1433）",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2723"
+      },
+      "evidence_exists": true
+    },
+    {
+      "pr": 1431,
+      "name": "可控噪声误差传播基准",
+      "head": "e172c94f0b2a5673492456208e279ae64c053cc8",
+      "bounty": 2721,
+      "evidence": "perception-dependencies/noise-curve-current-deps.json",
+      "current": {
+        "headRefOid": "e172c94f0b2a5673492456208e279ae64c053cc8",
+        "mergeable": "MERGEABLE",
+        "state": "OPEN",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:59:06Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44881501598/job/136777649015",
+            "name": "gate (py3.12)",
+            "startedAt": "2026-11-21T07:43:02Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:42:52Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44881501595/job/136777583394",
+            "name": "PR 标题约定（type(scope) + 摘要）",
+            "startedAt": "2026-11-21T07:42:46Z",
+            "status": "COMPLETED",
+            "workflowName": "pr-lint"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:53:27Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44881501598/job/136777649226",
+            "name": "gate (py3.12 · 依赖下界)",
+            "startedAt": "2026-11-21T07:43:02Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-11-21T07:58:39Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/FuRongJun-1999/lingshu/actions/runs/44881501598/job/136777649233",
+            "name": "gate (py3.13)",
+            "startedAt": "2026-11-21T07:43:02Z",
+            "status": "COMPLETED",
+            "workflowName": "gate"
+          }
+        ],
+        "url": "https://github.com/FuRongJun-1999/lingshu/pull/1431"
+      },
+      "counts": {
+        "passed": 4,
+        "pending": 0,
+        "failed": 0,
+        "skipped": 0
+      },
+      "status": "CI 已过，待维护者合并",
+      "intake": {
+        "labels": [],
+        "state": "CLOSED",
+        "title": "lingshu #172 后续①：端到端感知噪声退化曲线评测闭环（PR #1431）",
+        "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2721"
+      },
+      "evidence_exists": true
+    }
+  ],
+  "policy": [
+    "按公共调用链、依赖和组合效果排序，再分派单项工作",
+    "隔离工作树按任务分配，不改历史工作树",
+    "子智能体提交精确版本、原始证据、失败、跳过和边界，总协调核对当前状态",
+    "推送、PR 与 bounty 更新由总协调执行；独立修复只对应一个 intake",
+    "不替维护者合并或结算；历史已结算项保持状态",
+    "读取已有 live 进程和 CI 句柄，不因观察超时重启"
+  ],
+  "acceptance": [
+    {
+      "id": "five-integration",
+      "head": "2c1184417a65086e76842f690188e4f690daa293",
+      "status": "502本机通过，三档远端与原始日志核对通过",
+      "ci": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44878068630",
+      "evidence": "five-integration/combined-summary.json"
+    },
+    {
+      "id": "extended-gate",
+      "status": "Windows 本机真实验收通过；PR1486远端CI运行中",
+      "evidence": "extended-gate"
+    },
+    {
+      "id": "all-integration",
+      "status": "1415通过/0跳过；真实像素依赖接入另行验证",
+      "evidence": "all-integration/combined-summary.json",
+      "owner": "${HOST_ROOT}/integration_surface",
+      "head": "513ce31bd2666a012a583a1b265015d9d58c4926"
+    },
+    {
+      "id": "final-integration",
+      "head": "0f7427549406ad125d7efc95da5ceece052e616d",
+      "status": "三档Linux各6415通过/44跳过；Windows6434通过/1既有失败/24跳过；安装归档与真实像素链通过",
+      "evidence": "final-integration",
+      "owner": "${HOST_ROOT}/pipeline_audit",
+      "tree": "0f33bd5642db088a459aebd6750cc1c68715f10e",
+      "full_gate": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44881541272",
+      "installed_gate": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44881630492"
+    }
+  ],
+  "dependencies": [
+    {
+      "task": 1439,
+      "depends_on": "current spatial_detect partition",
+      "invariant": "extractor and detector cover the same complete finite lattice cells"
+    },
+    {
+      "task": 1428,
+      "depends_on": "current core writes and deletion",
+      "invariant": "dedup cache must observe bridge direct writes and preserve current newborn decay/search behavior"
+    },
+    {
+      "task": 1466,
+      "depends_on": "camera fix already present on baseline",
+      "invariant": "preserve current camera projection contract"
+    },
+    {
+      "task": "all-integration",
+      "depends_on": [
+        1485,
+        1484,
+        1479,
+        1477,
+        1471,
+        1437,
+        1460,
+        1461,
+        1463,
+        1466,
+        1439,
+        1432,
+        1428
+      ],
+      "invariant": "actual module inventory, normalized manifest, existing lint statements and cross-route semantics"
+    }
+  ],
+  "orchestration_state": "delivery_verification",
+  "handoff": "STOP_HANDOFF.md",
+  "resume_note": "用户于2026-11-21明确要求继续；从STOP_HANDOFF记录恢复，保留原证据。",
+  "verified_at": "2026-11-21T16:12:24+08:00"
+}

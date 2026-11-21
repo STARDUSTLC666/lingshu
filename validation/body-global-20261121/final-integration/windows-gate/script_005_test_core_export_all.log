@@ -1,0 +1,51 @@
+${REPO_FINAL}\lingshu\core\core.py:7943: ComponentDiscoveryWarning: [issue156] 组件 'entity_registry' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from entity_registry import EntityRegistry
+${REPO_FINAL}\lingshu\core\core.py:7929: ComponentDiscoveryWarning: [issue156] 组件 'semantic_space' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from semantic_space import SemanticSpaceProvider
+${REPO_FINAL}\lingshu\core\core.py:7919: ComponentDiscoveryWarning: [issue156] 组件 'attention_policy' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from attention_policy import AttentionPolicy
+${REPO_FINAL}\lingshu\core\core.py:7894: ComponentDiscoveryWarning: [issue156] 组件 'prediction_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from prediction_engine import PredictionEngine
+${REPO_FINAL}\lingshu\world\prediction.py:30: ComponentDiscoveryWarning: [issue156] 组件 'spacetime_memory_core' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from spacetime_memory_core import LayeredStore as _LayeredStore
+${REPO_FINAL}\lingshu\core\core.py:7869: ComponentDiscoveryWarning: [issue156] 组件 'lifecycle_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from lifecycle_engine import LifecycleEngine
+${REPO_FINAL}\lingshu\core\core.py:7837: ComponentDiscoveryWarning: [issue156] 组件 'flywheel_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from flywheel_engine import FlywheelEngine
+${REPO_FINAL}\lingshu\core\core.py:7847: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from self_cognition_engine import SelfCognitionEngine
+${REPO_FINAL}\lingshu\core\core.py:7826: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+  from body import build_default_registry
+== A 组：报告人场景（缺 entities 表不得抛异常） ==
+  PASS A1 前提：公开仓形态下 entities 表不存在（未装 entity_registry）
+  PASS A2 export_all 在缺 entities 表的公开仓形态下不抛异常
+  PASS A3 导出产物已落盘
+  PASS A4 exported_nodes 与实际节点数一致
+  PASS A5 缺失表被显式标注（skipped_tables == ['entities']）
+  PASS A6 降级信息随产物落盘（meta.skipped_tables）
+  PASS A7 存在的表照旧完整导出
+  PASS A8 缺失表不写入空壳键（不伪造 entities 字段）
+  PASS A9 产物键集不超出 M13 表清单
+== B 组：export → import 回灌闭环 ==
+  PASS B1 import_all 回灌公开仓形态产物不抛异常
+  PASS B2 回灌节点数与导出一致
+  PASS B3 skipped 表不进入 imported 计数
+  PASS B4 回灌侧同样显式标注 skipped_tables
+  PASS B5 回灌后库内确有 2 个节点
+  PASS B6 回灌后完整性校验通过（无孤儿边）
+  PASS B7 产物含 entities 行时回灌照旧不崩（修前 OperationalError）
+  PASS B8 该路径下 entities 仍进入 skipped_tables
+== C 组：对照（装了扩展必须照旧导出） ==
+  PASS C1 表存在时 skipped_tables 为空（降级未退化为永久跳过）
+  PASS C2 存在的 entities 表照旧被导出
+  PASS C3 全表在场时 tables 计数等于表清单长度
+  PASS C4 回灌侧同样照旧导入 entities
+== D 组：边界与确定性 ==
+  PASS D1 空库/近空库导出：skipped 1 张、tables = 清单长度-1
+  PASS D2 meta 始终在场且含降级标注
+  PASS D3 tables 计数与落盘的实际表数一致
+  PASS D4 同库两次导出的内容一致（确定性）
+  PASS D5 对照库确认 entities 非 SQLite 内置表
+
+===== SUMMARY 26/26 通过 =====
+VERDICT=PASS（issue #16 守卫：缺失表降级 + 显式标注；表在场时照旧导出）

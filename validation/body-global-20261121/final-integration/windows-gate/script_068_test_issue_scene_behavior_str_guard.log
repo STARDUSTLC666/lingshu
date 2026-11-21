@@ -1,0 +1,7 @@
+  PASS A01 int behavior -> 可读 TypeError 且不注册
+  PASS A02 纯空白 behavior -> TypeError
+  PASS A03 int category -> TypeError
+  PASS A04 正对照：合法值注册且照常移动
+  PASS E01 钉子：behavior 文案
+  PASS E02 钉子：category 文案
+通过 6 / 失败 0

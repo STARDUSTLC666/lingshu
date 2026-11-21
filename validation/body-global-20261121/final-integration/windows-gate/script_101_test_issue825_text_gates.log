@@ -1,0 +1,19 @@
+== A 组：CJK limits 必须三项显式 ==
+  PASS A01 前提：CJK 无 limits 键 ⇒ REJECT（既有拒绝面）
+  PASS A02 ★行：limits={} ⇒ REJECT（空对象不算显式声明）
+  PASS A03 ★行：limits=None ⇒ REJECT
+  PASS A04 ★行：三项只给 1 项 ⇒ REJECT 且点名缺项
+  PASS A05 对照：三项全给 ⇒ ACCEPT 且 limits 为声明值
+== B 组：可读性硬门读 text ==
+  PASS B01 前提：47 字符 text 单独 ⇒ REJECT（既有行宽判据）
+  PASS B02 ★行：text 47 字符 + lines=['ok'] ⇒ REJECT（lines 不得独立）
+  PASS B03 前提：3 行 text 单独 ⇒ REJECT（既有 max_lines）
+  PASS B04 ★行：3 行 text + lines 只给 2 行 ⇒ REJECT（行数不可被 lines 掩盖）
+  PASS B05 对照：lines 与 text 逐行一致 ⇒ ACCEPT
+  PASS B06 ★行：cps_of 按 text 合计（47 字符/3 帧 = 376.0）
+  PASS B07 ★行：text_summary 的 max_cps 与 cps_of 同口径（40 字符/4 秒 = 10.0）
+== E 组：源码钉子 ==
+  PASS E01 ★钉子：CJK 按三项缺项判据
+  PASS E02 ★钉子：lines 与 text 一致性检查
+  PASS E03 ★钉子：cps_of 读 text
+通过 15 / 失败 0

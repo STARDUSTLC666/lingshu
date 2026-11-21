@@ -1,0 +1,9 @@
+{
+  "accepted": true,
+  "package_file": "${EVIDENCE_ROOT}\\final-integration\\independent-audit\\pixel-venv\\Lib\\site-packages\\lingshu\\__init__.py",
+  "frames": 4,
+  "color_hits": 4,
+  "shape_color_hits": 4,
+  "persisted_readbacks": 4,
+  "persisted_searches": 4
+}

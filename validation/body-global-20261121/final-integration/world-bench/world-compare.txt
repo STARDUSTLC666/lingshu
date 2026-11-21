@@ -1,0 +1,13 @@
+World trajectories match for every case and seed.
+case                         distance before -> after    fixed hits before -> after    bound coverage before -> after
+full_wander                  0.8065 -> 0.8065       0.016 -> 0.016              0.968 -> 0.968
+full_pursuit                 0.1640 -> 0.1640       0.757 -> 0.757              0.987 -> 0.987
+full_patrol                  0.0874 -> 0.0874       0.875 -> 0.875              0.950 -> 0.950
+sparse_linear                0.0450 -> 0.0450       0.925 -> 0.925              1.000 -> 1.000
+round_robin_pursuit          0.2597 -> 0.2597       0.774 -> 0.774              0.975 -> 0.975
+random_pursuit               0.3112 -> 0.3112       0.731 -> 0.731              0.975 -> 0.975
+curiosity_pursuit            0.1784 -> 0.1784       0.759 -> 0.759              0.995 -> 0.995
+unified_occlusion            0.0000 -> 0.0000       1.000 -> 1.000              1.000 -> 1.000
+unified_switch               0.1000 -> 0.1000       0.875 -> 0.875              0.958 -> 0.958
+contracts before: {'anonymous_objects_expected': 2, 'anonymous_nodes': 2, 'empty_verified_rate': None, 'single_evidence_after_four_checks': 'NOT_ACCEPTED', 'horizon_5': {'unified': 'different_predictions', 'learner': 'different_predictions'}}
+contracts after:  {'anonymous_objects_expected': 2, 'anonymous_nodes': 2, 'empty_verified_rate': None, 'single_evidence_after_four_checks': 'NOT_ACCEPTED', 'horizon_5': {'unified': 'different_predictions', 'learner': 'different_predictions'}}

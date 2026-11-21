@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="1.684" timestamp="2026-11-21T15:31:24.607818+08:00" hostname="${HOSTNAME}"><testcase classname="tests.test_bridge_dedup_integration" name="test_warm_index_sees_new_card_and_same_id_rewrite" time="0.062" /><testcase classname="tests.test_bridge_dedup_integration" name="test_cross_connection_rewrite_and_rollback_preserve_latest_card" time="0.127" /><testcase classname="tests.test_bridge_dedup_integration" name="test_unqualified_rewrite_removes_card_from_dedup_and_fact_answers" time="0.032"><failure message="PermissionError: 禁止同 id 换层（#127）：id=m55_card_combined_r8 现为 knowledge，拒绝改写为 context">def test_unqualified_rewrite_removes_card_from_dedup_and_fact_answers():
+        engine = SpacetimeMemoryEngine(":memory:")
+        try:
+            old = _ingest(engine, "blue")
+            _warm(engine)
+&gt;           uncertain = _ingest(engine, "blue", uniform=True)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_bridge_dedup_integration.py:115: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_bridge_dedup_integration.py:25: in _ingest
+    result = ingest_perception_cards(
+lingshu\nn\hex_text.py:657: in ingest_perception_cards
+    store.add_node(node)
+lingshu\core\core.py:1573: in wrapper
+    return fn(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;lingshu.core.core.LayeredStore object at 0x0000020A76C7AB10&gt;
+node = &lt;lingshu.nn.hex_text._BridgeNode object at 0x0000020A742C4D10&gt;
+
+    @_transactional
+    def add_node(self, node: STNode) -&gt; str:
+        """写入节点并返回 id。共享层（anchor/structure）仅 PRIMARY 角色可写，
+        其余角色写入即拒（PermissionError）——多角色写权限边界。
+    
+        #191：写权限闸此前用 `IMMUTABLE_LAYERS`（= 锚点/结构/**自我**）⇒ 自我层被
+        误当共享层，SUB 写自我层一律 `PermissionError`；而 `Role.SUB` 注释（core.py:585）
+        明写「仅本地层（知识层、情境层、**自我层**）」，本类 docstring（core.py:710）
+        亦把自我层列在**本地层**。后果：SUB 调 `update_self` 时 `self_model.update()`
+        已改内存、随后快照落库处抛错 ⇒ **内存已改、快照 0 条**（静默分叉）。
+        修法：写权限闸改用 `SHARED_LAYERS`（仅锚点/结构）；`IMMUTABLE_LAYERS` 仍含
+        自我层，供删除/审计/导入闸使用（遗忘面不放宽）。
+        判据来源：core.py:584-585 `Role` 注释 ＋ core.py:708-710 `LayeredStore`
+        docstring「共享层（锚点层、结构层）／本地层（知识层、情境层、自我层）」。
+    
+        #127：权限判据必须**同时看库里旧行**——本方法按 id 整行 `INSERT OR REPLACE`，
+        旧实现只判「待写节点」的 layer ⇒ SUB 用同 id 写一个 knowledge 节点即可把
+        锚点/结构/自我层**降级**（随后 `delete_node` 因行已非共享层而放行，护栏同时
+        失效）。现按行判权限：① 旧行为共享层 ⇒ 仅 PRIMARY 可覆盖；② 同 id **禁换层**
+        （含 PRIMARY 自身降级——降级本就是绕过面）。
+        判据来源：`docs/plans/待裁清单_v0.1.md` **D-07**「写入前查旧行（按行判权限）」
+        ＋ **D-08**「禁（同 id 不得换层）」；修法形状见
+        `docs/plans/治理与写入边界_修复设计_v0.1.md` §2 S-127-1(a)。
+        边界（削掉的判别力）：同 id 同层的原位覆盖仍放行（本件只堵换层/降级面）；
+        **#659 补丁**：同层覆盖**受保护节点**（`_is_forget_protected` 为真）时保留其
+        `no_forget` 标签并落审计（见方法体内 #659 段）——仍不拒绝覆盖（保住
+        `apply_shared_sync(overwrite=True)` 合法路径），故「覆盖受保护节点内容」这一
+        判别力仍未收口，只收口了「保护标记被静默抹掉」。
+        数值接口 `update_node_confidence` / `update_node_importance` 的层与角色校验
+        原不在本件范围内（待裁清单 D-33：本批不动，另笔）——**该「另笔」已由
+        `#769` / `#780` 一笔落地**（本文件 `layer_writable_by_role` 判据单点 ＋
+        两个数值接口的写前判据），本段保留以记录沿革。
+        另注（#191 口径）：自我层行不受「共享层仅 PRIMARY 可写」约束后，
+        `#127` 的同 id 禁换层闸对自我层**仍然生效**（换层判据与层集合无关）。
+    
+        #164（写入面值域）：`importance` 此前**全路径无值域校验**——`add_perception`
+        原样透传、`ingest_frame` 取 `frame_data.get("importance", 0.6)` 原样透传，
+        二者都汇入本方法。一条 `importance=1e6` 的无关记忆在 `recall` 的线性加权
+        （`0.3 * importance`）下压过一切结构层规定；负数同理（拉低但不越界）。
+        修法（最小 · 复用同文件既有钳制先例）：在本**唯一写入汇聚点**把
+        `node.importance` 钳到 [0,1]（`update_node_importance` 已是
+        `MIN(1.0, MAX(0.0, ...))` 同款口径）。
+        判据来源：`STNode.importance` 字段声明「重要性 [0,1]」
+        ＋ 同文件 `update_node_importance` 的 MIN/MAX 钳制先例
+        ＋ 对外工具表 `docs/mdcg/tool_table_v0.3.0.md`「importance 重要性[0,1]」。
+        边界（削掉的判别力/未覆盖面）：①本钳制是**归一**（越界值折到边界）而非
+        `ValueError` 拒绝——取「与 `update_node_importance` 同口径」而非 fail-closed，
+        调用方传错值不会收到报错信号；②`import_all` 绕过本方法
+        直接 `INSERT OR REPLACE`，其备份行的 `importance` **不在**本闸范围内。
+    
+        #185（非有限值）：钳制改经 `_finite_clamp`——`NaN` / `±inf` 一律归一到
+        字段默认 0.5（见该助手 docstring）。旧行为（Python `min(1.0, max(0.0, x))`）
+        对 NaN 给出 0.0，而 0.0 不满足情境层衰减门 `importance &gt; min_confidence`
+        ⇒ 该节点在 `decay_cycle` 里**永不被选中删除**，#185 的「NaN 永不遗忘」
+        症状仍在。取默认 0.5 ⇒ 节点回到普通衰减面。**阈值本体未改**。
+        """
+        # 本判据已提为单点 `layer_writable_by_role`（#769/#780）——`add_node` 与
+        # TMS 传播 / 数值接口 / 重算链 / 构造期迁移 / 自我快照回收共用同一实现。
+        if not self.layer_writable_by_role(node.layer):
+            self._deny_shared_layer_write(node.layer)
+        # #164：值域钳制（唯一写入汇聚点）——见 docstring。原位写回 node，使
+        # 调用方拿到的返回对象与落库值一致（回报=事实）。
+        # #185：钳制改经 `_finite_clamp`（非有限值 → 字段默认 0.5，而非 Python
+        # `min/max` 遇 NaN 的偶然结果 0.0）——0.0 落在情境层衰减门
+        # `importance &gt; min_confidence` 之外 ⇒ 该节点**永不进入遗忘面**，正是
+        # #185 点名的「永不遗忘」症状；取默认值 0.5 使其行为与普通记忆一致。
+        node.importance = _finite_clamp(node.importance, 0.0, 1.0, default=0.5)
+        # #588 / #594：`content` 类型闸（唯一写入汇聚点，与 #164 同址）。#331 的同类
+        # 闸只加在 `add_perception` 一个入口 ⇒ 绕过面仍在：`add_context(content=...)`、
+        # `ingest_frame({"caption": ...})`、`set_anchor(content=...)`、
+        # `add_structure_node(content=...)` 四入口直构 `STNode` 后就地入库，非 str 以
+        # BLOB 落进 TEXT 列。后果链（#588 实测）：一行 BLOB 毒化整条检索面
+        # （`recall` → `TypeError: sequence item 0: expected str instance, bytes found`），
+        # 且 `export_all` → `TypeError: Object of type bytes is not JSON serializable`
+        # ⇒ M13 备份做不出来。修法：闸**下沉到本唯一写入汇聚点**，一处覆盖全部入口
+        # （含 #594 点名的 `set_anchor` / `add_structure_node` 不可变层两入口），
+        # 而不是逐个入口补——逐入口补必再漏。
+        # 口径与 #331 一致：**非 str ⇒ fail-closed 拒绝**，不做 `str(content)` 静默强转
+        # （那会把 dict 存成 repr 文本，属静默篡改语义，比拒绝更坏）。
+        # 判据来源：公开 issue #588 / #594（与 #331 同族，维护者建议「闸下沉 add_node，
+        # 一处覆盖全部入口」）＋ 本文件 `add_perception` 的 #331 先例。
+        # 边界（削掉的判别力/未覆盖面）：①本闸只判 **str**，不判内容语义；②不动
+        # `import_all` 的既有导入口径（其自身转换面不在本件范围）；③`content=None`
+        # 此前走 `STNode` 默认值，本闸使其 fail-closed（与 #331 同口径，属预期收紧）。
+        if not isinstance(node.content, str):
+            raise TypeError(
+                "#588/#594 add_node 拒绝非字符串 content（收到 %s）：非 str 会以 BLOB "
+                "静默落库，毒化检索面并使 export_all 失败（与 #331 同口径，闸已下沉至"
+                "唯一写入汇聚点）" % type(node.content).__name__
+            )
+        existing = self.get_node(node.id)
+        overwrite_protected = None
+        if existing is not None:
+            if not self.layer_writable_by_role(existing.layer):
+                raise PermissionError(
+                    f"role={self.role.value} 无权覆盖共享层行（id={node.id} 现为 "
+                    f"{existing.layer.value}），共享层由父节点主控"
+                )
+            if existing.layer != node.layer:
+&gt;               raise PermissionError(
+                    f"禁止同 id 换层（#127）：id={node.id} 现为 {existing.layer.value}，"
+                    f"拒绝改写为 {node.layer.value}"
+                )
+E               PermissionError: 禁止同 id 换层（#127）：id=m55_card_combined_r8 现为 knowledge，拒绝改写为 context
+
+lingshu\core\core.py:2373: PermissionError</failure></testcase></testsuite></testsuites>

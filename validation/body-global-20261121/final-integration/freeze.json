@@ -1,0 +1,47 @@
+{
+  "head": "0f7427549406ad125d7efc95da5ceece052e616d",
+  "tree": "0f33bd5642db088a459aebd6750cc1c68715f10e",
+  "branch": "validation/global-final-20261121",
+  "clean": true,
+  "ancestor_inputs": {
+    "frozen_total13": "513ce31bd2666a012a583a1b265015d9d58c4926",
+    "current_main": "23ba01eb8dfcb1a8dfdddd030cf7a2e3c078e8e9",
+    "perception1433": "a721c3363b48c474f97201714e2d834b085912b6",
+    "noise1431": "e172c94f0b2a5673492456208e279ae64c053cc8",
+    "extended_acceptance": "8c7abf1b2c8d946aaa1c7461eb50e16a41513d5a"
+  },
+  "targeted_passed": 165,
+  "targeted_failed": 0,
+  "targeted_skipped": 0,
+  "module_count": 95,
+  "strict_manifest_matches": 64,
+  "time_lint_existing": 23,
+  "time_lint_new": 0,
+  "time_lint_stale": 0,
+  "canonical_semantic_hits": {
+    "oracle": 4,
+    "pixel_color": 4,
+    "pixel_shape_color": 4,
+    "frames": 4
+  },
+  "divergence": {
+    "clean_frames": 4,
+    "clean_different": 0,
+    "degraded_frames": 8,
+    "degraded_different": 7
+  },
+  "preserved_odd_r_and_shared_partition_source": true,
+  "known_prior_failure": "acceptance.xml and collection-explicit-pythonpath.xml retain original PR1431 namespace import collection failure; exact canonical file loading fixed it without pathguard changes",
+  "proof_limits": [
+    "source is frozen; no complete repository gate or remote CI was executed by this worker on it",
+    "synthetic actual RGB recognition covers circle/triangle/stripe and red/green/blue; not a real-camera multi-object accuracy claim",
+    "noise curve consumes oracle category/bbox before injected errors and is a propagation test, not measured pixel-recognizer accuracy"
+  ],
+  "artifact_sha256": {
+    "acceptance-fixed.xml": "9f89e6e9c34eb30765b334b837e33aa04b30166b591bfb2da956e9cd72222b8f",
+    "acceptance-fixed.log": "412ca6895926cb169a78617cc4433b7d7b4662b8efe5aa3b86e1f37b47cc5f1b",
+    "manifest-final.json": "71f5a8c4ee466f6bb23ed8cc80b73322dcb393273ec60e2c2001a9157d4ff343",
+    "time-lint.json": "e268e46cbc053a8a7b57f5749818b496cd8ee2cf3245cbf2b770406349da0602",
+    "acceptance-selftest-final.json": "6810e15b306488096ffe2e787cadb39784db8ee26a7cf4e07f417de9a9057209"
+  }
+}

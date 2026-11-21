@@ -1,0 +1,104 @@
+{
+  "source_sha": "0f7427549406ad125d7efc95da5ceece052e616d",
+  "source_tree": "0f33bd5642db088a459aebd6750cc1c68715f10e",
+  "evidence_sha": "10eda1344d9df4b34c288e4236f222b3df2e79e7",
+  "ancestors": [
+    {
+      "pr": 1484,
+      "head": "4e919f76b3da49289915a354c9a45f39071db22d",
+      "preserved_changed_test_files": 2
+    },
+    {
+      "pr": 1485,
+      "head": "72ee3e4c9aba35b34cbaf467feb52c08c023dfcb",
+      "preserved_changed_test_files": 1
+    },
+    {
+      "pr": 1479,
+      "head": "b3f2a67e71d7a0d3d0e4ee8094a8305ab7bfc7d2",
+      "preserved_changed_test_files": 3
+    },
+    {
+      "pr": 1471,
+      "head": "cf69e40e78ccbe9fb798c07afc46ec7d4a239532",
+      "preserved_changed_test_files": 2
+    },
+    {
+      "pr": 1477,
+      "head": "b32b064eca8e505aaec41b4445df42ad1eb67a32",
+      "preserved_changed_test_files": 2
+    },
+    {
+      "pr": 1437,
+      "head": "f46ff9f29febbcffb5caba83d2c708d124e30cdb",
+      "preserved_changed_test_files": 1
+    },
+    {
+      "pr": 1460,
+      "head": "4a67a751efffe264f80b303582b0a85abde677ed",
+      "preserved_changed_test_files": 3
+    },
+    {
+      "pr": 1461,
+      "head": "10853336a541633485a33bee7f77fd147197a3e0",
+      "preserved_changed_test_files": 3
+    },
+    {
+      "pr": 1463,
+      "head": "596b5f0de66e78340a847faa949616b2ebc9b61c",
+      "preserved_changed_test_files": 2
+    },
+    {
+      "pr": 1466,
+      "head": "fb374bbad163e92f133262fbba52b88eccf10834",
+      "preserved_changed_test_files": 2
+    },
+    {
+      "pr": 1439,
+      "head": "e687b4dbfe69a4b00135ee1c5f4a71163c756a55",
+      "preserved_changed_test_files": 3
+    },
+    {
+      "pr": 1432,
+      "head": "e77a67fcc5285cd7f7d679ba79c9fff25dfb139a",
+      "preserved_changed_test_files": 1
+    },
+    {
+      "pr": 1428,
+      "head": "fedf81a6e29687ba09d1a577fa1c7bafcb5e0b47",
+      "preserved_changed_test_files": 1
+    },
+    {
+      "pr": 1433,
+      "head": "a721c3363b48c474f97201714e2d834b085912b6",
+      "preserved_changed_test_files": 4
+    },
+    {
+      "pr": 1431,
+      "head": "e172c94f0b2a5673492456208e279ae64c053cc8",
+      "preserved_changed_test_files": 3
+    },
+    {
+      "pr": 1486,
+      "head": "8c7abf1b2c8d946aaa1c7461eb50e16a41513d5a",
+      "preserved_changed_test_files": 1
+    }
+  ],
+  "ancestor_count": 16,
+  "production_modules": 95,
+  "source_clean": true,
+  "guard_files_preserved": true,
+  "final_targeted_passed": 165,
+  "previous_total13_passed": 1415,
+  "previous_total13_source": "513ce31bd2666a012a583a1b265015d9d58c4926",
+  "guard_reconciliations": [
+    {
+      "file": "tests/test_issue156_component_discovery.py",
+      "proof": "entire AST identical after replacing only STDLIB_ALLOWED value; each contribution's existing set preserved, additions are Python stdlib names"
+    },
+    {
+      "file": "tests/test_doc_module_counts_guard.py",
+      "proof": "entire AST identical after only aligning vision heading regex to combined README wording; no count relaxations"
+    }
+  ]
+}

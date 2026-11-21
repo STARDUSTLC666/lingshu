@@ -1,0 +1,250 @@
+{
+  "baseline": "23ba01eb8dfcb1a8dfdddd030cf7a2e3c078e8e9",
+  "fixed": "0f7427549406ad125d7efc95da5ceece052e616d",
+  "benchmark_source_programs_unchanged": 2,
+  "world_scenarios": 9,
+  "seeds_each": 10,
+  "world_result_rows_equal": 90,
+  "world_trajectory_fingerprints_match": 90,
+  "world_numeric_scores_equal": 900,
+  "world_summary_metric_cells_equal": 90,
+  "world_contract_outputs_equal": true,
+  "inference_workloads_equal": 14,
+  "inference_history_hashes_equal": 14,
+  "inference_result_hashes_equal": 14,
+  "timing_samples": 140,
+  "timing_medians_recomputed": 28,
+  "source_fingerprints": [
+    {
+      "file": "world_model.py",
+      "revision": "23ba01eb8dfcb1a8dfdddd030cf7a2e3c078e8e9",
+      "sha256_recorded": "e9b3dec31fe2d907188c1871753e79883f429592f486e522fa35d023bba2f959",
+      "matching_conventions": [
+        "CRLF_checkout"
+      ]
+    },
+    {
+      "file": "world_learner.py",
+      "revision": "23ba01eb8dfcb1a8dfdddd030cf7a2e3c078e8e9",
+      "sha256_recorded": "f63dfe6d8610b6cefba5d0642630723ce01494becf40be15e08e8614e5955b20",
+      "matching_conventions": [
+        "CRLF_checkout"
+      ]
+    },
+    {
+      "file": "curiosity_explorer.py",
+      "revision": "23ba01eb8dfcb1a8dfdddd030cf7a2e3c078e8e9",
+      "sha256_recorded": "384b1d5e9b9fde5958efb319ecf1e8c4d1a83a671e8f77168767d8b14593317f",
+      "matching_conventions": [
+        "CRLF_checkout"
+      ]
+    },
+    {
+      "file": "anchor_verify.py",
+      "revision": "23ba01eb8dfcb1a8dfdddd030cf7a2e3c078e8e9",
+      "sha256_recorded": "610c8b9afc62b0f69c4828a47960e7c9bfd1dc53c1377b09abbd8e2e605595b2",
+      "matching_conventions": [
+        "CRLF_checkout"
+      ]
+    },
+    {
+      "file": "world_model.py",
+      "revision": "0f7427549406ad125d7efc95da5ceece052e616d",
+      "sha256_recorded": "e9b3dec31fe2d907188c1871753e79883f429592f486e522fa35d023bba2f959",
+      "matching_conventions": [
+        "CRLF_checkout"
+      ]
+    },
+    {
+      "file": "world_learner.py",
+      "revision": "0f7427549406ad125d7efc95da5ceece052e616d",
+      "sha256_recorded": "f63dfe6d8610b6cefba5d0642630723ce01494becf40be15e08e8614e5955b20",
+      "matching_conventions": [
+        "CRLF_checkout"
+      ]
+    },
+    {
+      "file": "curiosity_explorer.py",
+      "revision": "0f7427549406ad125d7efc95da5ceece052e616d",
+      "sha256_recorded": "384b1d5e9b9fde5958efb319ecf1e8c4d1a83a671e8f77168767d8b14593317f",
+      "matching_conventions": [
+        "CRLF_checkout"
+      ]
+    },
+    {
+      "file": "anchor_verify.py",
+      "revision": "0f7427549406ad125d7efc95da5ceece052e616d",
+      "sha256_recorded": "610c8b9afc62b0f69c4828a47960e7c9bfd1dc53c1377b09abbd8e2e605595b2",
+      "matching_conventions": [
+        "CRLF_checkout"
+      ]
+    },
+    {
+      "file": "motion.py",
+      "revision": "23ba01eb8dfcb1a8dfdddd030cf7a2e3c078e8e9",
+      "sha256_recorded": "8911ca9947c2b72e643d627b0711fce0d7e2dea5c63ad91e0842484debadad77",
+      "matching_conventions": [
+        "git_blob_bytes",
+        "LF"
+      ]
+    },
+    {
+      "file": "world_learner.py",
+      "revision": "23ba01eb8dfcb1a8dfdddd030cf7a2e3c078e8e9",
+      "sha256_recorded": "d5b87d647bff8500af2717dde04390d516b2bed4b4cd4cb3972ece8fccfed3c1",
+      "matching_conventions": [
+        "git_blob_bytes",
+        "LF"
+      ]
+    },
+    {
+      "file": "world_model.py",
+      "revision": "23ba01eb8dfcb1a8dfdddd030cf7a2e3c078e8e9",
+      "sha256_recorded": "f9a119f4d8de7ced6b996d947e8a84bd6c7e1140049e34f8d080f035d3b34076",
+      "matching_conventions": [
+        "git_blob_bytes",
+        "LF"
+      ]
+    },
+    {
+      "file": "motion.py",
+      "revision": "0f7427549406ad125d7efc95da5ceece052e616d",
+      "sha256_recorded": "8911ca9947c2b72e643d627b0711fce0d7e2dea5c63ad91e0842484debadad77",
+      "matching_conventions": [
+        "git_blob_bytes",
+        "LF"
+      ]
+    },
+    {
+      "file": "world_learner.py",
+      "revision": "0f7427549406ad125d7efc95da5ceece052e616d",
+      "sha256_recorded": "d5b87d647bff8500af2717dde04390d516b2bed4b4cd4cb3972ece8fccfed3c1",
+      "matching_conventions": [
+        "git_blob_bytes",
+        "LF"
+      ]
+    },
+    {
+      "file": "world_model.py",
+      "revision": "0f7427549406ad125d7efc95da5ceece052e616d",
+      "sha256_recorded": "f9a119f4d8de7ced6b996d947e8a84bd6c7e1140049e34f8d080f035d3b34076",
+      "matching_conventions": [
+        "git_blob_bytes",
+        "LF"
+      ]
+    }
+  ],
+  "descriptive_inference_ratios": [
+    {
+      "model": "learner",
+      "entities": 16,
+      "ticks": 512,
+      "policy": "dense",
+      "fixed_over_baseline": 0.968423658003104
+    },
+    {
+      "model": "unified",
+      "entities": 16,
+      "ticks": 512,
+      "policy": "dense",
+      "fixed_over_baseline": 0.9739616460827827
+    },
+    {
+      "model": "learner",
+      "entities": 64,
+      "ticks": 512,
+      "policy": "dense",
+      "fixed_over_baseline": 0.9682886563825427
+    },
+    {
+      "model": "unified",
+      "entities": 64,
+      "ticks": 512,
+      "policy": "dense",
+      "fixed_over_baseline": 0.9138228862670204
+    },
+    {
+      "model": "learner",
+      "entities": 128,
+      "ticks": 512,
+      "policy": "dense",
+      "fixed_over_baseline": 1.0075722818390556
+    },
+    {
+      "model": "unified",
+      "entities": 128,
+      "ticks": 512,
+      "policy": "dense",
+      "fixed_over_baseline": 0.9887923520020089
+    },
+    {
+      "model": "learner",
+      "entities": 64,
+      "ticks": 2000,
+      "policy": "single",
+      "fixed_over_baseline": 0.9725114987986981
+    },
+    {
+      "model": "unified",
+      "entities": 64,
+      "ticks": 2000,
+      "policy": "single",
+      "fixed_over_baseline": 0.9870703775120223
+    },
+    {
+      "model": "learner",
+      "entities": 64,
+      "ticks": 8000,
+      "policy": "single",
+      "fixed_over_baseline": 0.9851128730728402
+    },
+    {
+      "model": "unified",
+      "entities": 64,
+      "ticks": 8000,
+      "policy": "single",
+      "fixed_over_baseline": 0.9744762223593312
+    },
+    {
+      "model": "learner",
+      "entities": 64,
+      "ticks": 2000,
+      "policy": "random_four",
+      "fixed_over_baseline": 0.9704615094001017
+    },
+    {
+      "model": "unified",
+      "entities": 64,
+      "ticks": 2000,
+      "policy": "random_four",
+      "fixed_over_baseline": 0.9561375396364002
+    },
+    {
+      "model": "learner",
+      "entities": 64,
+      "ticks": 2000,
+      "policy": "empty_tail",
+      "fixed_over_baseline": 0.9854918085479124
+    },
+    {
+      "model": "unified",
+      "entities": 64,
+      "ticks": 2000,
+      "policy": "empty_tail",
+      "fixed_over_baseline": 1.0040798062715803
+    }
+  ],
+  "limits": "Synthetic fixed histories and shared host timings. Equal result/trajectory hashes establish compatibility for these workloads only; no statistical performance or universal quality claim.",
+  "artifacts_sha256": {
+    "world-baseline.json": "784ed31866458ce48dc28ba47d2d98c2e9bceb2721af8e1b16c489ebea068996",
+    "world-baseline.log": "baa64691167066968d7dd146ae5038c1e503fea414c07d7639b5cabb0e81a16d",
+    "world-compare.txt": "c5fb27cf71250f2ddd0e11f0e4c084592aa72fc43f7581a185382e6fd02c40d7",
+    "world-fixed.json": "ad2c94ff3b0f84525de279818cda674ded0a03dd13981eb1d35739034ee6675a",
+    "world-fixed.log": "0704a4c5a7410bc91c365934e45d3bf893355289a7a7991d5fadb77e8fbdca65",
+    "world_inference-baseline.json": "e7c942c0877b13f5d0259984be6e1a48b4976ae8de2fd3c977df926c2e4d3535",
+    "world_inference-baseline.log": "b0e3d644d2e89624ecb2bd7b42fda512e94b6434d7b15b8b486ad83241b40de0",
+    "world_inference-compare.txt": "ca49db6002f721036a795bd63a6527604e342145542d2aa404419a2f454ed7aa",
+    "world_inference-fixed.json": "e957fedd9115774e93abb6ae1711f4143224b9076efa6ebbee43222dde3fc9e8",
+    "world_inference-fixed.log": "f41548b21a9f1abe40aed77c1cf122307678cc77b422b0a842ba9f2a05602471"
+  }
+}

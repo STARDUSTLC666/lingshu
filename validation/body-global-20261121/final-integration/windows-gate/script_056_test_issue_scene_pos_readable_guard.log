@@ -1,0 +1,5 @@
+  PASS A01 非数值 pos -> 可读 TypeError（含 pos）
+  PASS A02 二元组 pos -> ValueError 说明要三元组
+  PASS A03 正对照：合法 pos 正常注册
+  PASS E01 钉子：可读文案
+通过 4 / 失败 0

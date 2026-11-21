@@ -1,0 +1,5 @@
+  PASS A01 非数值 points -> 可读 TypeError（含 points）
+  PASS A02 单点非数值 -> 同一个可读 TypeError
+  PASS A03 正对照：合法点列正常注册
+  PASS E01 钉子：可读文案
+通过 4 / 失败 0

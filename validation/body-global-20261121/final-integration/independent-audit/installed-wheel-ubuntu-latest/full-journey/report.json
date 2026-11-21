@@ -1,0 +1,90 @@
+{
+  "accepted": true,
+  "phase": "full",
+  "python": "3.12.16 (main, Oct 26 2026, 02:48:44) [GCC 15.2.0]",
+  "package_file": "${CI_TEMP}/wheel-acceptance/full-venv/lib/python3.12/site-packages/lingshu/__init__.py",
+  "site_packages": [
+    "${CI_TEMP}/wheel-acceptance/full-venv/lib/python3.12/site-packages"
+  ],
+  "isolated": true,
+  "editable": false,
+  "optional_packages_available": {
+    "numpy": true,
+    "PIL": true
+  },
+  "cli_results": [
+    {
+      "mode": "all",
+      "views": [
+        "causal",
+        "history",
+        "roleplay",
+        "story",
+        "world"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "b2faf6e056dc22eff76dd86d9367ee9df1f2bf89d8109f9c9fcfa9d9f91b55f3"
+    },
+    {
+      "mode": "causal",
+      "views": [
+        "causal"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "647dba33cdebaf9aab410a62659b74df21509f2d781f6b6bf53dab9fca7a6a21"
+    },
+    {
+      "mode": "history",
+      "views": [
+        "history"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "e8bb28f9fe8bf91f485d41124e7fb8b0117af2fd20d2bc56f7713e0bde56377d"
+    },
+    {
+      "mode": "roleplay",
+      "views": [
+        "roleplay"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "03fa5c9b777eb721861e008a92774b8fe65e0c77baca3e623a4f06734a70dcc9"
+    },
+    {
+      "mode": "story",
+      "views": [
+        "story"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "c2b9f0ea8ae00c06e83c05638bcc15f4a4d125bea76c6e4daae1c7cebe45716e"
+    },
+    {
+      "mode": "world",
+      "views": [
+        "world"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "71f6b829faad605115d0fd7ad4d35435b123c8ee6635764e6a7267bdc37528e3"
+    }
+  ],
+  "render": {
+    "size": [
+      500,
+      500
+    ],
+    "colors": 4,
+    "sha256": "ecb9620c344abec8b4ae6793811b627e55846e648b2f7f88b936cff6e80ec457"
+  },
+  "asset_sha256": "dc8d9f9013d4c71c47e6fc93a6e649b69f383d04a3a3edb92e91558e1db57de6",
+  "asset_kernels_checked": [
+    "center_surround",
+    "edge_h",
+    "edge_v",
+    "laplacian",
+    "learned_img0",
+    "smooth"
+  ],
+  "installed_dependencies": {
+    "numpy": "2.5.5",
+    "Pillow": "12.3.0"
+  }
+}

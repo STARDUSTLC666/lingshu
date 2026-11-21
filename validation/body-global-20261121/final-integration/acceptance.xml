@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="5.423" timestamp="2026-11-21T15:39:27.628636+08:00" hostname="${HOSTNAME}"><testcase classname="" name="tests.test_issue172_perception_noise_curve" time="0.000"><error message="collection failure">ImportError while importing test module '${REPO_FINAL}\tests\test_issue172_perception_noise_curve.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+${USER_HOME}\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_issue172_perception_noise_curve.py:38: in &lt;module&gt;
+    import bench.perception_noise_curve as pnc  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lingshu\_pathguard.py:528: in find_spec
+    raise err
+E   ModuleNotFoundError: No module named 'bench'</error></testcase></testsuite></testsuites>

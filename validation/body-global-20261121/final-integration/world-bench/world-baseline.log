@@ -1,0 +1,123 @@
+{
+  "summary": {
+    "full_wander": {
+      "samples": 160,
+      "expected_samples": 160,
+      "prediction_coverage": 1.0,
+      "mean_distance": 0.8064903496873224,
+      "rmse_distance": 0.8167663380613401,
+      "point_hit_rate": 0.01625,
+      "naive_mean_distance": 0.8000791393899792,
+      "naive_point_hit_rate": 0.0,
+      "bound_coverage": 0.968125,
+      "mean_bound": 1.3949425
+    },
+    "full_pursuit": {
+      "samples": 160,
+      "expected_samples": 160,
+      "prediction_coverage": 1.0,
+      "mean_distance": 0.16400519132399177,
+      "rmse_distance": 0.3117707001781545,
+      "point_hit_rate": 0.7575,
+      "naive_mean_distance": 0.3748702116499996,
+      "naive_point_hit_rate": 0.63625,
+      "bound_coverage": 0.9868750000000001,
+      "mean_bound": 0.916183125
+    },
+    "full_patrol": {
+      "samples": 40,
+      "expected_samples": 40,
+      "prediction_coverage": 1.0,
+      "mean_distance": 0.0874264068711929,
+      "rmse_distance": 0.2509980079602228,
+      "point_hit_rate": 0.875,
+      "naive_mean_distance": 0.6,
+      "naive_point_hit_rate": 0.0,
+      "bound_coverage": 0.95,
+      "mean_bound": 0.767
+    },
+    "sparse_linear": {
+      "samples": 80,
+      "expected_samples": 80,
+      "prediction_coverage": 1.0,
+      "mean_distance": 0.04500000000000082,
+      "rmse_distance": 0.16431676725154973,
+      "point_hit_rate": 0.925,
+      "naive_mean_distance": 0.6000000000000001,
+      "naive_point_hit_rate": 0.0,
+      "bound_coverage": 1.0,
+      "mean_bound": 1.30325
+    },
+    "round_robin_pursuit": {
+      "samples": 160,
+      "expected_samples": 160,
+      "prediction_coverage": 1.0,
+      "mean_distance": 0.2596656697068618,
+      "rmse_distance": 0.4220556481616894,
+      "point_hit_rate": 0.77375,
+      "naive_mean_distance": 0.3748702116499996,
+      "naive_point_hit_rate": 0.63625,
+      "bound_coverage": 0.975,
+      "mean_bound": 1.1857725000000001
+    },
+    "random_pursuit": {
+      "samples": 160,
+      "expected_samples": 160,
+      "prediction_coverage": 1.0,
+      "mean_distance": 0.3112373772208275,
+      "rmse_distance": 0.5806334936867046,
+      "point_hit_rate": 0.730625,
+      "naive_mean_distance": 0.3748702116499996,
+      "naive_point_hit_rate": 0.63625,
+      "bound_coverage": 0.975,
+      "mean_bound": 1.51224875
+    },
+    "curiosity_pursuit": {
+      "samples": 160,
+      "expected_samples": 160,
+      "prediction_coverage": 1.0,
+      "mean_distance": 0.17836196759554085,
+      "rmse_distance": 0.3228099644218259,
+      "point_hit_rate": 0.75875,
+      "naive_mean_distance": 0.3748702116499996,
+      "naive_point_hit_rate": 0.63625,
+      "bound_coverage": 0.995,
+      "mean_bound": 2.091994375
+    },
+    "unified_occlusion": {
+      "samples": 48,
+      "expected_samples": 48,
+      "prediction_coverage": 1.0,
+      "mean_distance": 2.9605947323337506e-16,
+      "rmse_distance": 1.0255800994045674e-15,
+      "point_hit_rate": 1.0,
+      "naive_mean_distance": 0.3,
+      "naive_point_hit_rate": 0.5,
+      "bound_coverage": 1.0,
+      "mean_bound": 0.835
+    },
+    "unified_switch": {
+      "samples": 48,
+      "expected_samples": 48,
+      "prediction_coverage": 1.0,
+      "mean_distance": 0.10000000000000023,
+      "rmse_distance": 0.3000000000000002,
+      "point_hit_rate": 0.875,
+      "naive_mean_distance": 0.3,
+      "naive_point_hit_rate": 0.5,
+      "bound_coverage": 0.9583333333333334,
+      "mean_bound": 0.3795833333333334
+    }
+  },
+  "contracts": {
+    "anonymous_objects_expected": 2,
+    "anonymous_nodes": 2,
+    "empty_verified_rate": null,
+    "single_evidence_after_four_checks": "NOT_ACCEPTED",
+    "horizon_5": {
+      "unified": "different_predictions",
+      "learner": "different_predictions"
+    }
+  },
+  "elapsed_seconds": 0.9164624999975786
+}

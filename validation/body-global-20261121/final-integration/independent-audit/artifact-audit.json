@@ -1,0 +1,40 @@
+{
+  "source_sha": "0f7427549406ad125d7efc95da5ceece052e616d",
+  "source_tree": "0f33bd5642db088a459aebd6750cc1c68715f10e",
+  "workflow_evidence_sha": "10eda1344d9df4b34c288e4236f222b3df2e79e7",
+  "reports": [
+    {
+      "artifact": "extended-contracts",
+      "physics": 4,
+      "sparse": 48,
+      "authentic_baseline_blobs": 84,
+      "limit": "archive omits exported baseline files; exact runtime verification plus authentic blob table and logs retained"
+    },
+    {
+      "artifact": "installed-wheel-ubuntu-latest",
+      "wheel_git_files": 96,
+      "wheel_RECORD_rows": 101,
+      "CLI_calls": 12,
+      "pip_checks": 2,
+      "PNG": [
+        500,
+        500
+      ],
+      "asset_kernels": 6,
+      "source_sha": "0f7427549406ad125d7efc95da5ceece052e616d"
+    },
+    {
+      "artifact": "installed-wheel-windows-latest",
+      "wheel_git_files": 96,
+      "wheel_RECORD_rows": 101,
+      "CLI_calls": 12,
+      "pip_checks": 2,
+      "PNG": [
+        500,
+        500
+      ],
+      "asset_kernels": 6,
+      "source_sha": "0f7427549406ad125d7efc95da5ceece052e616d"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+learner dense        E= 16 H=  512 0.002404 -> 0.002328 s ratio=1.03 same_result=True relations=16 -> 16
+unified dense        E= 16 H=  512 0.003149 -> 0.003067 s ratio=1.03 same_result=True relations=16 -> 16
+learner dense        E= 64 H=  512 0.031024 -> 0.030040 s ratio=1.03 same_result=True relations=64 -> 64
+unified dense        E= 64 H=  512 0.043997 -> 0.040205 s ratio=1.09 same_result=True relations=64 -> 64
+learner dense        E=128 H=  512 0.117904 -> 0.118797 s ratio=0.99 same_result=True relations=128 -> 128
+unified dense        E=128 H=  512 0.158454 -> 0.156678 s ratio=1.01 same_result=True relations=128 -> 128
+learner single       E= 64 H= 2000 0.002612 -> 0.002540 s ratio=1.03 same_result=True relations=0 -> 0
+unified single       E= 64 H= 2000 0.002761 -> 0.002725 s ratio=1.01 same_result=True relations=0 -> 0
+learner single       E= 64 H= 8000 0.002613 -> 0.002574 s ratio=1.02 same_result=True relations=0 -> 0
+unified single       E= 64 H= 8000 0.002821 -> 0.002749 s ratio=1.03 same_result=True relations=0 -> 0
+learner random_four  E= 64 H= 2000 0.003528 -> 0.003423 s ratio=1.03 same_result=True relations=0 -> 0
+unified random_four  E= 64 H= 2000 0.004040 -> 0.003863 s ratio=1.05 same_result=True relations=0 -> 0
+learner empty_tail   E= 64 H= 2000 0.003377 -> 0.003328 s ratio=1.01 same_result=True relations=0 -> 0
+unified empty_tail   E= 64 H= 2000 0.003579 -> 0.003593 s ratio=1.00 same_result=True relations=0 -> 0

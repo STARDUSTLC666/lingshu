@@ -1,0 +1,8 @@
+${REPO_FINAL}\lingshu\world\scene_simulator.py:1278: RuntimeWarning: scene_simulator: behavior=follow 的目标 '' 不可解析 ⇒ 本 tick 不移动（不再静默退化为 wander）
+  direction = self._decide(e)
+  PASS A01 int path_id -> 可读 TypeError 且零注册
+  PASS A02 纯空白 path_id -> TypeError
+  PASS A03 正对照：合法 path_id 正常注册
+  PASS A04 正对照：follow 路径照常推进
+  PASS E01 钉子：可读文案
+通过 5 / 失败 0

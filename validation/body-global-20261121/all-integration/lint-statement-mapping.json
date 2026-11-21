@@ -1,0 +1,143 @@
+{
+  "baseline_ref": "2c1184417a65086e76842f690188e4f690daa293",
+  "verified_entries": [
+    {
+      "path": "lingshu/core/activation.py",
+      "line": 355,
+      "rule": "R3",
+      "unchanged_statement": "d *= cond_match(cur_cs.get(src), cur_cs.get(dst))"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 379,
+      "rule": "R1",
+      "unchanged_statement": "e = [math.exp(-k * x) for x in tau]"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 407,
+      "rule": "R1",
+      "unchanged_statement": "e = [math.exp(-k * x) for x in tau]"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 528,
+      "rule": "R3",
+      "unchanged_statement": "p = vadd(vadd(model[\"p0\"], vscale(model[\"v0\"], tau)), vscale(a, 0.5 * tau * tau))"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 532,
+      "rule": "R3",
+      "unchanged_statement": "p = vadd(vadd(model[\"p0\"], vscale(model[\"v0\"], tau)), vscale(a, 0.5 * tau * tau))"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 536,
+      "rule": "R1",
+      "unchanged_statement": "e = math.exp(-kk * tau)"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 536,
+      "rule": "R3",
+      "unchanged_statement": "e = math.exp(-kk * tau)"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 543,
+      "rule": "R3",
+      "unchanged_statement": "th = model[\"theta0\"] + model[\"omega\"] * tau"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 546,
+      "rule": "R3",
+      "unchanged_statement": "vert = model[\"center\"][up] + model[\"v_up\"] * tau"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 563,
+      "rule": "R3",
+      "unchanged_statement": "u = u0 + g * tau / vt"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 572,
+      "rule": "R3",
+      "unchanged_statement": "p[i] = float(model[\"p0\"][i]) + float(drift[i]) * tau"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 603,
+      "rule": "R3",
+      "unchanged_statement": "s = v_s0 * tau + 0.5 * a_raw * tau * tau"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 604,
+      "rule": "R3",
+      "unchanged_statement": "v_s = v_s0 + a_raw * tau"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 606,
+      "rule": "R3",
+      "unchanged_statement": "p = tuple(float(model[\"p0\"][i]) + u_dir[i] * s + float(drift[i]) * tau for i in range(3))"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 1015,
+      "rule": "R1",
+      "unchanged_statement": "return a + math.log1p(math.exp(-2.0 * a)) - math.log(2.0)"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 2565,
+      "rule": "R1",
+      "unchanged_statement": "e = math.exp(-z * w * tt)"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 2568,
+      "rule": "R1",
+      "unchanged_statement": "return (1.0 + w * tt) * math.exp(-w * tt)"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 2570,
+      "rule": "R1",
+      "unchanged_statement": "e = math.exp(-z * w * tt)"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 2586,
+      "rule": "R1",
+      "unchanged_statement": "out[\"amplitude_ratio_per_period\"] = math.exp(-2.0 * math.pi * z / math.sqrt(1.0 - z * z))"
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 2708,
+      "rule": "R1",
+      "unchanged_statement": "out[\"amplitude_ratio_per_period\"] = math.exp("
+    },
+    {
+      "path": "lingshu/world/physics.py",
+      "line": 2750,
+      "rule": "R3",
+      "unchanged_statement": "return (tuple(p0[i] + v0[i] * tau + 0.5 * g[i] * tau * tau for i in range(3)),"
+    },
+    {
+      "path": "lingshu/world/shade_paint.py",
+      "line": 215,
+      "rule": "R1",
+      "unchanged_statement": "return SHOULDER + span * (1.0 - math.exp(-(v - SHOULDER) / span))"
+    },
+    {
+      "path": "lingshu/world/stable_lease.py",
+      "line": 302,
+      "rule": "R1",
+      "unchanged_statement": "decayed_conf = lease[\"confidence\"] * math.exp(-self.gamma * age)"
+    }
+  ]
+}

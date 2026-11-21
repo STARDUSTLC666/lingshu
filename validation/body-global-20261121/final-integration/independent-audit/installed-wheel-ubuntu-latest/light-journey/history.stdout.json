@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "fixture": true,
+  "views": {
+    "history": {
+      "mode": "history",
+      "state": "DEFER",
+      "domain": "real",
+      "domains": [
+        "real"
+      ],
+      "scope": {
+        "role_id": "alice",
+        "session_id": "demo",
+        "origin": "selected"
+      },
+      "facts": [
+        {
+          "id": "catalogue",
+          "content": "油灯目录（合成待核史料，无真实史实声明）",
+          "tags": [
+            "fixture",
+            "vref:synthetic-catalogue"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              120
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [
+              "synthetic-catalogue"
+            ],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        }
+      ],
+      "edges": [],
+      "gaps": [
+        "qualification_pending:catalogue",
+        "historical_evidence_pending"
+      ],
+      "payload": {
+        "evidence_timeline": [],
+        "unresolved": [
+          {
+            "id": "catalogue",
+            "content": "油灯目录（合成待核史料，无真实史实声明）",
+            "tags": [
+              "fixture",
+              "vref:synthetic-catalogue"
+            ],
+            "layer": "knowledge",
+            "conditions": {
+              "observation_position": "合成灯塔观察位",
+              "observation_tool": "离线验收",
+              "time_window": [
+                100,
+                120
+              ],
+              "existence_constraint": "合成灯塔场景"
+            },
+            "provenance": {
+              "source": "fixture",
+              "verify_status": "unverified",
+              "references": [
+                "synthetic-catalogue"
+              ],
+              "session_ids": []
+            },
+            "qualification": "BLINDSPOT",
+            "spatial": {},
+            "attributes": {},
+            "record_role": null,
+            "body_window": {
+              "truncated": null,
+              "content_lines": null,
+              "content_bytes": null,
+              "offset": null,
+              "next_offset": null
+            }
+          }
+        ],
+        "time_basis": "观测时间窗；不是历史事件年代"
+      },
+      "boundary": "消费视图，不验证新事实、不生成正文、不写入或升格记忆"
+    }
+  }
+}

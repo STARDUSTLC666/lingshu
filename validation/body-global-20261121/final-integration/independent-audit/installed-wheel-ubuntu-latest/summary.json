@@ -1,0 +1,321 @@
+{
+  "source_head": "0f7427549406ad125d7efc95da5ceece052e616d",
+  "source_tree": "0f33bd5642db088a459aebd6750cc1c68715f10e",
+  "source_status": "",
+  "python": "3.12.16 (main, Oct 26 2026, 02:48:44) [GCC 15.2.0]",
+  "steps": [
+    {
+      "name": "build-wheel",
+      "command": [
+        "${CI_RUNTIME}/Python/3.12.16/x64/bin/python",
+        "-I",
+        "-X",
+        "utf8",
+        "-m",
+        "pip",
+        "wheel",
+        "--no-deps",
+        "--wheel-dir",
+        "${CI_TEMP}/wheel-acceptance/dist",
+        "${CI_TEMP}/wheel-acceptance/build-source"
+      ],
+      "returncode": 0,
+      "seconds": 2.771,
+      "stdout_sha256": "9dca8781dcee6fa2fd29aeb51e6f728f5a95f6a25ae4dfd9a25722a28bbb5bb9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "install-light",
+      "command": [
+        "${CI_TEMP}/wheel-acceptance/light-venv/bin/python",
+        "-I",
+        "-X",
+        "utf8",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "${CI_TEMP}/wheel-acceptance/dist/lingshu-0.0.1-py3-none-any.whl"
+      ],
+      "returncode": 0,
+      "seconds": 1.016,
+      "stdout_sha256": "a4ed3e2bdab2223feda257ffda49261f6fc6a2f9bb96ce765522b0ca61b3e31f",
+      "stderr_sha256": "8ca39681299a95aaec89927bff5613ae4170b7ab7b541035b95c2ab4f950ac04"
+    },
+    {
+      "name": "pip-check-light",
+      "command": [
+        "${CI_TEMP}/wheel-acceptance/light-venv/bin/python",
+        "-I",
+        "-X",
+        "utf8",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "seconds": 0.265,
+      "stdout_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "probe-light",
+      "command": [
+        "${CI_TEMP}/wheel-acceptance/light-venv/bin/python",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "${CI_TEMP}/wheel-acceptance/installed_wheel_probe.py",
+        "--phase",
+        "light",
+        "--source",
+        "${CI_REPO}",
+        "--output",
+        "${CI_TEMP}/wheel-acceptance/light-journey"
+      ],
+      "returncode": 0,
+      "seconds": 0.666,
+      "stdout_sha256": "3acb736942c9ab3c90f807d97a0c67d3364e6401253952df9353392ea42f15a6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "install-full",
+      "command": [
+        "${CI_TEMP}/wheel-acceptance/full-venv/bin/python",
+        "-I",
+        "-X",
+        "utf8",
+        "-m",
+        "pip",
+        "install",
+        "${CI_TEMP}/wheel-acceptance/dist/lingshu-0.0.1-py3-none-any.whl[full]"
+      ],
+      "returncode": 0,
+      "seconds": 3.474,
+      "stdout_sha256": "3b494c1b35aabd0670faa30fff2d2d2642e36460bf3618ac6733b62d9d844030",
+      "stderr_sha256": "6c15e58e1f9d77abf57795e230dadee70e899e05e28ac9ed52dd0dbf61b3b434"
+    },
+    {
+      "name": "pip-check-full",
+      "command": [
+        "${CI_TEMP}/wheel-acceptance/full-venv/bin/python",
+        "-I",
+        "-X",
+        "utf8",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "seconds": 0.265,
+      "stdout_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "probe-full",
+      "command": [
+        "${CI_TEMP}/wheel-acceptance/full-venv/bin/python",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "${CI_TEMP}/wheel-acceptance/installed_wheel_probe.py",
+        "--phase",
+        "full",
+        "--source",
+        "${CI_REPO}",
+        "--output",
+        "${CI_TEMP}/wheel-acceptance/full-journey"
+      ],
+      "returncode": 0,
+      "seconds": 0.918,
+      "stdout_sha256": "80c15fa62ac14952d19241727350b0f4c3b755c9c9cfe8bb56ed8b6934218723",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "accepted": true,
+  "selftest": {
+    "rejected": [
+      "missing_result",
+      "empty_result",
+      "omitted_guard",
+      "skipped_guard",
+      "failed_guard",
+      "missing_baseline",
+      "tampered_baseline",
+      "clean_source_commit_changed"
+    ],
+    "positive_controls_passed": 3
+  },
+  "wheel": {
+    "name": "lingshu-0.0.1-py3-none-any.whl",
+    "sha256": "97880c0136a8748fb32d2cdc9eb0906320cb1700d66f86cb04bf168088099f2d",
+    "asset_sha256": "dc8d9f9013d4c71c47e6fc93a6e649b69f383d04a3a3edb92e91558e1db57de6"
+  },
+  "light": {
+    "accepted": true,
+    "phase": "light",
+    "python": "3.12.16 (main, Oct 26 2026, 02:48:44) [GCC 15.2.0]",
+    "package_file": "${CI_TEMP}/wheel-acceptance/light-venv/lib/python3.12/site-packages/lingshu/__init__.py",
+    "site_packages": [
+      "${CI_TEMP}/wheel-acceptance/light-venv/lib/python3.12/site-packages"
+    ],
+    "isolated": true,
+    "editable": false,
+    "optional_packages_available": {
+      "numpy": false,
+      "PIL": false
+    },
+    "cli_results": [
+      {
+        "mode": "all",
+        "views": [
+          "causal",
+          "history",
+          "roleplay",
+          "story",
+          "world"
+        ],
+        "returncode": 0,
+        "stdout_sha256": "b2faf6e056dc22eff76dd86d9367ee9df1f2bf89d8109f9c9fcfa9d9f91b55f3"
+      },
+      {
+        "mode": "causal",
+        "views": [
+          "causal"
+        ],
+        "returncode": 0,
+        "stdout_sha256": "647dba33cdebaf9aab410a62659b74df21509f2d781f6b6bf53dab9fca7a6a21"
+      },
+      {
+        "mode": "history",
+        "views": [
+          "history"
+        ],
+        "returncode": 0,
+        "stdout_sha256": "e8bb28f9fe8bf91f485d41124e7fb8b0117af2fd20d2bc56f7713e0bde56377d"
+      },
+      {
+        "mode": "roleplay",
+        "views": [
+          "roleplay"
+        ],
+        "returncode": 0,
+        "stdout_sha256": "03fa5c9b777eb721861e008a92774b8fe65e0c77baca3e623a4f06734a70dcc9"
+      },
+      {
+        "mode": "story",
+        "views": [
+          "story"
+        ],
+        "returncode": 0,
+        "stdout_sha256": "c2b9f0ea8ae00c06e83c05638bcc15f4a4d125bea76c6e4daae1c7cebe45716e"
+      },
+      {
+        "mode": "world",
+        "views": [
+          "world"
+        ],
+        "returncode": 0,
+        "stdout_sha256": "71f6b829faad605115d0fd7ad4d35435b123c8ee6635764e6a7267bdc37528e3"
+      }
+    ]
+  },
+  "full": {
+    "accepted": true,
+    "phase": "full",
+    "python": "3.12.16 (main, Oct 26 2026, 02:48:44) [GCC 15.2.0]",
+    "package_file": "${CI_TEMP}/wheel-acceptance/full-venv/lib/python3.12/site-packages/lingshu/__init__.py",
+    "site_packages": [
+      "${CI_TEMP}/wheel-acceptance/full-venv/lib/python3.12/site-packages"
+    ],
+    "isolated": true,
+    "editable": false,
+    "optional_packages_available": {
+      "numpy": true,
+      "PIL": true
+    },
+    "cli_results": [
+      {
+        "mode": "all",
+        "views": [
+          "causal",
+          "history",
+          "roleplay",
+          "story",
+          "world"
+        ],
+        "returncode": 0,
+        "stdout_sha256": "b2faf6e056dc22eff76dd86d9367ee9df1f2bf89d8109f9c9fcfa9d9f91b55f3"
+      },
+      {
+        "mode": "causal",
+        "views": [
+          "causal"
+        ],
+        "returncode": 0,
+        "stdout_sha256": "647dba33cdebaf9aab410a62659b74df21509f2d781f6b6bf53dab9fca7a6a21"
+      },
+      {
+        "mode": "history",
+        "views": [
+          "history"
+        ],
+        "returncode": 0,
+        "stdout_sha256": "e8bb28f9fe8bf91f485d41124e7fb8b0117af2fd20d2bc56f7713e0bde56377d"
+      },
+      {
+        "mode": "roleplay",
+        "views": [
+          "roleplay"
+        ],
+        "returncode": 0,
+        "stdout_sha256": "03fa5c9b777eb721861e008a92774b8fe65e0c77baca3e623a4f06734a70dcc9"
+      },
+      {
+        "mode": "story",
+        "views": [
+          "story"
+        ],
+        "returncode": 0,
+        "stdout_sha256": "c2b9f0ea8ae00c06e83c05638bcc15f4a4d125bea76c6e4daae1c7cebe45716e"
+      },
+      {
+        "mode": "world",
+        "views": [
+          "world"
+        ],
+        "returncode": 0,
+        "stdout_sha256": "71f6b829faad605115d0fd7ad4d35435b123c8ee6635764e6a7267bdc37528e3"
+      }
+    ],
+    "render": {
+      "size": [
+        500,
+        500
+      ],
+      "colors": 4,
+      "sha256": "ecb9620c344abec8b4ae6793811b627e55846e648b2f7f88b936cff6e80ec457"
+    },
+    "asset_sha256": "dc8d9f9013d4c71c47e6fc93a6e649b69f383d04a3a3edb92e91558e1db57de6",
+    "asset_kernels_checked": [
+      "center_surround",
+      "edge_h",
+      "edge_v",
+      "laplacian",
+      "learned_img0",
+      "smooth"
+    ],
+    "installed_dependencies": {
+      "numpy": "2.5.5",
+      "Pillow": "12.3.0"
+    }
+  },
+  "source_after": {
+    "head": "0f7427549406ad125d7efc95da5ceece052e616d",
+    "tree": "0f33bd5642db088a459aebd6750cc1c68715f10e",
+    "status": ""
+  },
+  "source_unchanged": true
+}

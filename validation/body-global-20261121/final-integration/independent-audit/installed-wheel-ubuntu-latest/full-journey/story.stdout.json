@@ -1,0 +1,1039 @@
+{
+  "schema_version": 1,
+  "fixture": true,
+  "views": {
+    "story": {
+      "mode": "story",
+      "state": "DEFER",
+      "domain": "mixed",
+      "domains": [
+        "real",
+        "role"
+      ],
+      "scope": {
+        "role_id": "alice",
+        "session_id": "demo",
+        "origin": "selected"
+      },
+      "facts": [
+        {
+          "id": "anchor",
+          "content": "守护灯塔",
+          "tags": [
+            "fixture",
+            "role:alice",
+            "roleplay:anchors"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              120
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "catalogue",
+          "content": "油灯目录（合成待核史料，无真实史实声明）",
+          "tags": [
+            "fixture",
+            "vref:synthetic-catalogue"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              120
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [
+              "synthetic-catalogue"
+            ],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "keeper",
+          "content": "守灯人 Alice",
+          "tags": [
+            "fixture",
+            "roleplay",
+            "role:alice",
+            "roleplay:role"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              120
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "memory",
+          "content": "前任守灯人留下操作手册",
+          "tags": [
+            "fixture",
+            "role:alice",
+            "roleplay:memory"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              120
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "rule",
+          "content": "本角色世界的灯塔以晶石供能",
+          "tags": [
+            "fixture",
+            "role:alice",
+            "sub-knowledge"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              120
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "turn",
+          "content": "准备启动晶石",
+          "tags": [
+            "fixture",
+            "role:alice",
+            "session:demo",
+            "turn:user"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              120
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": [
+              "demo"
+            ]
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "value",
+          "content": "如实报告未知状态",
+          "tags": [
+            "fixture",
+            "role:alice",
+            "roleplay:values"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              120
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "stage-1",
+          "content": "供能步骤 1",
+          "tags": [
+            "fixture",
+            "role:alice",
+            "event"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              110,
+              130
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "stage-2",
+          "content": "供能步骤 2",
+          "tags": [
+            "fixture",
+            "role:alice",
+            "event"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              120,
+              140
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "stage-3",
+          "content": "供能步骤 3",
+          "tags": [
+            "fixture",
+            "role:alice",
+            "event"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              130,
+              150
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "stage-4",
+          "content": "供能步骤 4",
+          "tags": [
+            "fixture",
+            "role:alice",
+            "event"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              140,
+              160
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "stage-5",
+          "content": "供能步骤 5",
+          "tags": [
+            "fixture",
+            "role:alice",
+            "event"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              150,
+              170
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "stage-6",
+          "content": "供能步骤 6",
+          "tags": [
+            "fixture",
+            "role:alice",
+            "event"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              160,
+              180
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "stage-7",
+          "content": "供能步骤 7",
+          "tags": [
+            "fixture",
+            "role:alice",
+            "event"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              170,
+              190
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "result",
+          "content": "灯塔亮起",
+          "tags": [
+            "fixture",
+            "role:alice",
+            "event",
+            "ent:灯塔",
+            "cat:house"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              180,
+              200
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {
+            "x": 0,
+            "y": 1,
+            "z": 18
+          },
+          "attributes": {
+            "state": "on"
+          },
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        },
+        {
+          "id": "action",
+          "content": "启动晶石",
+          "tags": [
+            "fixture",
+            "role:alice",
+            "event"
+          ],
+          "layer": "knowledge",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              200,
+              220
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "provenance": {
+            "source": "fixture",
+            "verify_status": "unverified",
+            "references": [],
+            "session_ids": []
+          },
+          "qualification": "BLINDSPOT",
+          "spatial": {},
+          "attributes": {},
+          "record_role": null,
+          "body_window": {
+            "truncated": null,
+            "content_lines": null,
+            "content_bytes": null,
+            "offset": null,
+            "next_offset": null
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "path-0",
+          "source_id": "action",
+          "target_id": "stage-1",
+          "relation_type": "causal",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              300
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "verified": false,
+          "source_evidence": "inferred"
+        },
+        {
+          "id": "path-1",
+          "source_id": "stage-1",
+          "target_id": "stage-2",
+          "relation_type": "causal",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              300
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "verified": false,
+          "source_evidence": "inferred"
+        },
+        {
+          "id": "path-2",
+          "source_id": "stage-2",
+          "target_id": "stage-3",
+          "relation_type": "causal",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              300
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "verified": false,
+          "source_evidence": "inferred"
+        },
+        {
+          "id": "path-3",
+          "source_id": "stage-3",
+          "target_id": "stage-4",
+          "relation_type": "causal",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              300
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "verified": false,
+          "source_evidence": "inferred"
+        },
+        {
+          "id": "path-4",
+          "source_id": "stage-4",
+          "target_id": "stage-5",
+          "relation_type": "causal",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              300
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "verified": false,
+          "source_evidence": "inferred"
+        },
+        {
+          "id": "path-5",
+          "source_id": "stage-5",
+          "target_id": "stage-6",
+          "relation_type": "causal",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              300
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "verified": false,
+          "source_evidence": "inferred"
+        },
+        {
+          "id": "path-6",
+          "source_id": "stage-6",
+          "target_id": "stage-7",
+          "relation_type": "causal",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              300
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "verified": false,
+          "source_evidence": "inferred"
+        },
+        {
+          "id": "path-7",
+          "source_id": "stage-7",
+          "target_id": "result",
+          "relation_type": "causal",
+          "conditions": {
+            "observation_position": "合成灯塔观察位",
+            "observation_tool": "离线验收",
+            "time_window": [
+              100,
+              300
+            ],
+            "existence_constraint": "合成灯塔场景"
+          },
+          "verified": false,
+          "source_evidence": "inferred"
+        }
+      ],
+      "gaps": [
+        "qualification_pending:anchor",
+        "qualification_pending:catalogue",
+        "qualification_pending:keeper",
+        "qualification_pending:memory",
+        "qualification_pending:rule",
+        "qualification_pending:turn",
+        "qualification_pending:value",
+        "qualification_pending:stage-1",
+        "qualification_pending:stage-2",
+        "qualification_pending:stage-3",
+        "qualification_pending:stage-4",
+        "qualification_pending:stage-5",
+        "qualification_pending:stage-6",
+        "qualification_pending:stage-7",
+        "qualification_pending:result",
+        "qualification_pending:action"
+      ],
+      "payload": {
+        "outline": [
+          {
+            "node_id": "catalogue",
+            "text": "油灯目录（合成待核史料，无真实史实声明）",
+            "domain": "real",
+            "depends_on": []
+          },
+          {
+            "node_id": "turn",
+            "text": "准备启动晶石",
+            "domain": "role",
+            "depends_on": []
+          },
+          {
+            "node_id": "action",
+            "text": "启动晶石",
+            "domain": "role",
+            "depends_on": []
+          },
+          {
+            "node_id": "stage-1",
+            "text": "供能步骤 1",
+            "domain": "role",
+            "depends_on": [
+              "action"
+            ]
+          },
+          {
+            "node_id": "stage-2",
+            "text": "供能步骤 2",
+            "domain": "role",
+            "depends_on": [
+              "stage-1"
+            ]
+          },
+          {
+            "node_id": "stage-3",
+            "text": "供能步骤 3",
+            "domain": "role",
+            "depends_on": [
+              "stage-2"
+            ]
+          },
+          {
+            "node_id": "stage-4",
+            "text": "供能步骤 4",
+            "domain": "role",
+            "depends_on": [
+              "stage-3"
+            ]
+          },
+          {
+            "node_id": "stage-5",
+            "text": "供能步骤 5",
+            "domain": "role",
+            "depends_on": [
+              "stage-4"
+            ]
+          },
+          {
+            "node_id": "stage-6",
+            "text": "供能步骤 6",
+            "domain": "role",
+            "depends_on": [
+              "stage-5"
+            ]
+          },
+          {
+            "node_id": "stage-7",
+            "text": "供能步骤 7",
+            "domain": "role",
+            "depends_on": [
+              "stage-6"
+            ]
+          },
+          {
+            "node_id": "result",
+            "text": "灯塔亮起",
+            "domain": "role",
+            "depends_on": [
+              "stage-7"
+            ]
+          }
+        ],
+        "fiction": null,
+        "background": [
+          {
+            "id": "anchor",
+            "content": "守护灯塔",
+            "tags": [
+              "fixture",
+              "role:alice",
+              "roleplay:anchors"
+            ],
+            "layer": "knowledge",
+            "conditions": {
+              "observation_position": "合成灯塔观察位",
+              "observation_tool": "离线验收",
+              "time_window": [
+                100,
+                120
+              ],
+              "existence_constraint": "合成灯塔场景"
+            },
+            "provenance": {
+              "source": "fixture",
+              "verify_status": "unverified",
+              "references": [],
+              "session_ids": []
+            },
+            "qualification": "BLINDSPOT",
+            "spatial": {},
+            "attributes": {},
+            "record_role": null,
+            "body_window": {
+              "truncated": null,
+              "content_lines": null,
+              "content_bytes": null,
+              "offset": null,
+              "next_offset": null
+            }
+          },
+          {
+            "id": "keeper",
+            "content": "守灯人 Alice",
+            "tags": [
+              "fixture",
+              "roleplay",
+              "role:alice",
+              "roleplay:role"
+            ],
+            "layer": "knowledge",
+            "conditions": {
+              "observation_position": "合成灯塔观察位",
+              "observation_tool": "离线验收",
+              "time_window": [
+                100,
+                120
+              ],
+              "existence_constraint": "合成灯塔场景"
+            },
+            "provenance": {
+              "source": "fixture",
+              "verify_status": "unverified",
+              "references": [],
+              "session_ids": []
+            },
+            "qualification": "BLINDSPOT",
+            "spatial": {},
+            "attributes": {},
+            "record_role": null,
+            "body_window": {
+              "truncated": null,
+              "content_lines": null,
+              "content_bytes": null,
+              "offset": null,
+              "next_offset": null
+            }
+          },
+          {
+            "id": "memory",
+            "content": "前任守灯人留下操作手册",
+            "tags": [
+              "fixture",
+              "role:alice",
+              "roleplay:memory"
+            ],
+            "layer": "knowledge",
+            "conditions": {
+              "observation_position": "合成灯塔观察位",
+              "observation_tool": "离线验收",
+              "time_window": [
+                100,
+                120
+              ],
+              "existence_constraint": "合成灯塔场景"
+            },
+            "provenance": {
+              "source": "fixture",
+              "verify_status": "unverified",
+              "references": [],
+              "session_ids": []
+            },
+            "qualification": "BLINDSPOT",
+            "spatial": {},
+            "attributes": {},
+            "record_role": null,
+            "body_window": {
+              "truncated": null,
+              "content_lines": null,
+              "content_bytes": null,
+              "offset": null,
+              "next_offset": null
+            }
+          },
+          {
+            "id": "rule",
+            "content": "本角色世界的灯塔以晶石供能",
+            "tags": [
+              "fixture",
+              "role:alice",
+              "sub-knowledge"
+            ],
+            "layer": "knowledge",
+            "conditions": {
+              "observation_position": "合成灯塔观察位",
+              "observation_tool": "离线验收",
+              "time_window": [
+                100,
+                120
+              ],
+              "existence_constraint": "合成灯塔场景"
+            },
+            "provenance": {
+              "source": "fixture",
+              "verify_status": "unverified",
+              "references": [],
+              "session_ids": []
+            },
+            "qualification": "BLINDSPOT",
+            "spatial": {},
+            "attributes": {},
+            "record_role": null,
+            "body_window": {
+              "truncated": null,
+              "content_lines": null,
+              "content_bytes": null,
+              "offset": null,
+              "next_offset": null
+            }
+          },
+          {
+            "id": "value",
+            "content": "如实报告未知状态",
+            "tags": [
+              "fixture",
+              "role:alice",
+              "roleplay:values"
+            ],
+            "layer": "knowledge",
+            "conditions": {
+              "observation_position": "合成灯塔观察位",
+              "observation_tool": "离线验收",
+              "time_window": [
+                100,
+                120
+              ],
+              "existence_constraint": "合成灯塔场景"
+            },
+            "provenance": {
+              "source": "fixture",
+              "verify_status": "unverified",
+              "references": [],
+              "session_ids": []
+            },
+            "qualification": "BLINDSPOT",
+            "spatial": {},
+            "attributes": {},
+            "record_role": null,
+            "body_window": {
+              "truncated": null,
+              "content_lines": null,
+              "content_bytes": null,
+              "offset": null,
+              "next_offset": null
+            }
+          }
+        ],
+        "cyclic": []
+      },
+      "boundary": "消费视图，不验证新事实、不生成正文、不写入或升格记忆"
+    }
+  }
+}

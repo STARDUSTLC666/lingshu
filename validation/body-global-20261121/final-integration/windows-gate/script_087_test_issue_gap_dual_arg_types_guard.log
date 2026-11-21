@@ -1,0 +1,7 @@
+  PASS A01 字符串拒绝且可读
+  PASS A02 负数拒绝
+  PASS A03 正对照：盲区+2 新条件 => 2.0
+  PASS A04 正对照：无事件 => 0.0
+  PASS E01 钉子：可读 TypeError
+  PASS E02 钉子：负数闸
+通过 6 / 失败 0

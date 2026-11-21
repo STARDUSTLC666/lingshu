@@ -1,0 +1,13 @@
+{
+  "rejected": [
+    "missing_result",
+    "empty_result",
+    "omitted_guard",
+    "skipped_guard",
+    "failed_guard",
+    "missing_baseline",
+    "tampered_baseline",
+    "clean_source_commit_changed"
+  ],
+  "positive_controls_passed": 3
+}

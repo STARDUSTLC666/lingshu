@@ -1,0 +1,20 @@
+{
+  "pr": "https://github.com/FuRongJun-1999/lingshu/pull/1486",
+  "head": "8c7abf1b2c8d946aaa1c7461eb50e16a41513d5a",
+  "issue": {
+    "author": {
+      "id": "U_kgDOEWKkYg",
+      "is_bot": false,
+      "login": "STARDUSTLC666",
+      "name": "STARDUST"
+    },
+    "body": "<!-- intake:v1 {\"project\":\"lingshu\",\"difficulty\":\"medium\",\"impact\":\"B\",\"target\":\"FuRongJun-1999/lingshu\",\"form\":\"intake\",\"pr\":\"https://github.com/FuRongJun-1999/lingshu/pull/1486\"} -->\n\n[PR #1486](https://github.com/FuRongJun-1999/lingshu/pull/1486)，当前提交 8c7abf1b2c8d946aaa1c7461eb50e16a41513d5a。难度 medium、影响 B 为建议；维护者决定分类、验收和结算。\n\n## 交付及改前改后\n\n原完整门禁从 editable 源码运行，三档均显式跳过4项需要历史源码的物理对照/变异守卫和16项真实SciPy后端守卫，不能证明独立wheel可用。新增独立验收工作流，原三档gate的依赖组合保留。\n\n- 从真实冻结提交124ea433fe9a2ad2fd66a7360df85f6d61bab793，核对完整树及84个Git blob，要求4个历史物理守卫实际成功。\n- 安装已声明的dev/core-sparse，运行现有48项激活回归，包含16个必须出现并通过的真实稀疏后端用例；任何跳过或缺项都拒绝。\n- Linux和Windows各构建wheel，在源码外新建light/full环境，清除源码路径并使用python -I。每平台实际运行12次CLI场景调用、两个pip check、500×500 PNG与6个安装核资产的常量场算子对照。\n- 修正文档Python要求为实际支持的3.12。\n\n复跑命令：\n\n    python -X utf8 tools/testing/extended_body_acceptance.py selftest\n    python -X utf8 tools/testing/extended_body_acceptance.py contracts --fetch-baseline --output ../contract-evidence\n    python -X utf8 tools/testing/extended_body_acceptance.py wheel --output ../wheel-evidence\n\ncontracts解释器须安装声明的.[dev,core-sparse]；输出目录须为空且在源码外。\n\n## 守卫和定点变异\n\n固定版本selftest明确拒绝8种缺失、跳过、篡改或来源变动，3项正向对照通过。\n四个具名变异仅在临时模块中执行，均被准确检出：\n\n- accept_skipped_or_failed_cases → false-green selftest was accepted: skipped_guard\n- accept_missing_required_guard → false-green selftest was accepted: omitted_guard\n- accept_tampered_baseline → false baseline selftest was accepted: tampered_baseline\n- accept_replaced_clean_source → clean source commit change was accepted\n\n生产源码未改写。测试代码在PR中；公开历史物理守卫本身也包含既有定点变异。\n本机Windows3.12验收4项物理及48项激活回归通过、无跳过，真实干净wheel验收通过。\n首次归档受Windows换行设置影响，被严格blob判据拒绝；修复使用显式LF归档配置，保持逐字节校验。\n\n## 精确当前提交的CI与归档核对\n\n当前提交七项检查全部成功。三档完整gate各5913通过、40跳过、206条子测试通过；102脚本和真实固定脑端23/23的原始日志已核对。\n\n[pr-lint](https://github.com/FuRongJun-1999/lingshu/actions/runs/44879705429) · [gate](https://github.com/FuRongJun-1999/lingshu/actions/runs/44879705430) · [extended body acceptance](https://github.com/FuRongJun-1999/lingshu/actions/runs/44879705485)\n\n三项扩展归档已独立核对。历史guard的JUnit为4/4、激活为48/48且0跳过，固定历史提交/树与84项Git blob清单一致；上传件未包含导出的历史树目录本身，该部分字节验证由运行时严格校验及原始日志证明。Ubuntu和Windows归档各核对96项wheel RECORD与91项包源码/资源Git blob，isolated安装、每环境6种CLI调用、pip check、PNG像素和6个核均通过。归档的实际CI合并源码c0af5d37cee19b0db47ae2054190b8f8613b6c30/tree2639af5099625fff34c047208466e21bfa3573db，其父提交与本PR当前头和主线逐项匹配。\n\n## 边界与人审\n\n合成fixture验收不代表真实摄像头资产或生产记忆准确率。公开包索引及冻结Git提交不可用会使新验收失败，不能算作通过。\n原完整门禁里依赖外部资产等其他跳过项继续原样披露。本项未修改推演、物理或认知算法，也未重报已经结算的功能申报。\n\n维护者人审待定（human review pending）。\n",
+    "createdAt": "2026-11-21T07:37:12Z",
+    "labels": [],
+    "number": 2806,
+    "state": "OPEN",
+    "title": "[intake 输入] lingshu PR #1486：补齐真实历史、稀疏后端和独立安装门禁",
+    "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2806"
+  },
+  "proof_snapshot": "${EVIDENCE_ROOT}\\ci-audit\\snapshots\\20261121T073554.353659Z\\1486\\summary.json"
+}

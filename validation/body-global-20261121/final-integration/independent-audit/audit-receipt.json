@@ -1,0 +1,40 @@
+{
+  "source_sha": "0f7427549406ad125d7efc95da5ceece052e616d",
+  "source_tree": "0f33bd5642db088a459aebd6750cc1c68715f10e",
+  "evidence_workflow_sha": "10eda1344d9df4b34c288e4236f222b3df2e79e7",
+  "verified": {
+    "ancestors": 16,
+    "final_targeted": 165,
+    "previous_total13_targeted": 1415,
+    "artifact_archives": 3,
+    "wheel_Git_files_each_OS": 96,
+    "wheel_RECORD_rows_each_OS": 101,
+    "authentic_physics_guards": 4,
+    "real_sparse_guards": 48,
+    "installed_recognizer_color_hits": 4,
+    "installed_recognizer_shape_color_hits": 4,
+    "persisted_reopen_read_search_nodes": 4
+  },
+  "pending_separate_supervisor_proof": [
+    "fullgate44881541272",
+    "Windows fullgate PID17776"
+  ],
+  "taskboard_audit": "TASKBOARD.md remains conservative and explicitly says full body not yet proved; its15:29 snapshot is stale and omits2perception rows shown in tasks.json. Parent should refresh before final handoff.",
+  "limits": [
+    "synthetic actualpixel/controlled oracleinjection/productionruntime are distinct evidence classes",
+    "downloaded contracts artifact contains authentic baseline blob identities and runtime check logs, not exported historical source bytes",
+    "no maintainer review/merge/settlement claim made"
+  ],
+  "files_sha256": {
+    "audit_final.py": "d09fb7f52c18e31ea900da2073605a2eabd3b58e51d151028fa97bd81887374d",
+    "audit_artifacts.py": "ce4c0f4f66528622cf44f83271c1a2da0e250d5b46afe864135405f6a42262b6",
+    "source-audit.json": "ef38de17e98d880def49d44af1e234a5b6507514f955bda694998966a4989567",
+    "acceptance-downloads.json": "f28621891050868312e161e3dee37d7f517a685c1b14a2e17b69afe67bfa38fd",
+    "evidence-workflow.yml": "c37f83e6f3c5b2d7486259d8a35c7e87caf1337a253aedd2d2c4e5606625a054",
+    "artifact-audit.json": "892c985ce3854dea87c0a61e6d51595c3c82dbe0690a96cb99fc537f8e425ba9",
+    "installed_pixel_probe.py": "7488c28cf05dac2d6a8171e7bf8562a5583573a92e78dabe5a9aba26b81a0a72",
+    "installed-pixel-report.json": "b94f757a5e874c00632fb3a81f582e6184c0a131f76fb86efe36f6a1fb242bf1",
+    "installed-pixel-install.log": "c478e27fade962654dadb1fbe3046bd158f590f1e9597dde7f996dd69a93e27a",
+    "installed-pixel-pip-check.log": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+  }
+}

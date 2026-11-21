@@ -1,0 +1,24 @@
+{
+  "pr": "https://github.com/FuRongJun-1999/lingshu/pull/1485",
+  "head": "72ee3e4c9aba35b34cbaf467feb52c08c023dfcb",
+  "related_issues": [
+    2805
+  ],
+  "verified_at_utc": "2026-11-21T07:06:25.748852+00:00",
+  "issue": {
+    "author": {
+      "id": "U_kgDOEWKkYg",
+      "is_bot": false,
+      "login": "STARDUSTLC666",
+      "name": "STARDUST"
+    },
+    "body": "<!-- intake:v1 {\"project\":\"lingshu\",\"difficulty\":\"medium\",\"impact\":\"B\",\"target\":\"FuRongJun-1999/lingshu\",\"form\":\"intake\",\"pr\":\"https://github.com/FuRongJun-1999/lingshu/pull/1485\"} -->\n\n[PR #1485](https://github.com/FuRongJun-1999/lingshu/pull/1485)，提交 72ee3e4c9aba35b34cbaf467feb52c08c023dfcb。难度 medium、影响 B 为建议，最终分类、验收和结算由维护者决定。\n\n## 改动和可复现读数\n\n原版主线 c15c12ea90ac4c7733ff2ef10e6fc586eab9b211：先初始化统一世界模型并 attach，推进到第2帧，再重新初始化并输入第7、8帧新场景。world_model/world_process 已读取新场景，wm_simloop 却仍返回旧场景第2帧，其 step/flush 会继续推进或导出旧场景。\n\n成功替换统一模型时，结束仅附着于该旧模型的循环；新模型需显式 attach。独立 setup 的循环继续工作，失败的模型初始化保持原连接，已写入 WAL 保留。\n\n复跑：python -X utf8 -m pytest tests/test_simloop_world_lifecycle.py -q\n\n- 同一测试原版1失败、2通过；修复3通过。具名变异 remove_attached_loop_invalidation 只在隔离工作树移除解绑条件，必在“旧 state 仍返回 ok/tick2”断言失败，另外两项对照通过。\n- 相关入口、脑端经验往返、物理先验恢复、清单和线程守卫的106项回归通过。五项现有修复组合源2c1184417a65086e76842f690188e4f690daa293的30文件联合测试502通过、0跳过，包含真实固定脑端和真实物理历史基线。\n- 干净 wheel 用 python -I 从空工作目录运行，确认导入 site-packages；原版可返回旧tick2，修复版重新 attach 前明确报错，连接后导出新场景tick7和new-scene实体。轻安装无需numpy/Pillow也能输出五种场景视图；full extra渲染为500×500 PNG。\n- 两组15样本的合成初始化基准，固定后/原版中位耗时为1.014×和0.985×，Python分配峰值均相同。结果只描述这台共享主机。清单64/64。\n\n## 门禁、边界和信任范围\n\n该提交的三档 Linux 门禁及标题检查均通过。三档各 5,894 项通过、40 项跳过、206 条子测试通过。每档新增 3 项守卫全部通过，固定脑端均通过 23/23。 [gate (py3.12 · 依赖下界)](https://github.com/FuRongJun-1999/lingshu/actions/runs/44876900059/job/136763479717) · [gate (py3.12)](https://github.com/FuRongJun-1999/lingshu/actions/runs/44876900059/job/136763479901) · [gate (py3.13)](https://github.com/FuRongJun-1999/lingshu/actions/runs/44876900059/job/136763479991) · [PR 标题约定（type(scope) + 摘要）](https://github.com/FuRongJun-1999/lingshu/actions/runs/44876900045/job/136763479691)\n\nWindows 全量 pytest 为 5,909 项通过、1 项失败、24 项跳过，206 条子测试通过。102 个门禁脚本和固定脑端 23/23 通过。唯一失败为 #498 的符号链接能力断言，已在未修复的主线上用同一用例复现。严格清单通过 64/64。\n\n这是串行调用的生命周期修复，不宣称多线程原子切换或取消已持有的旧引用。WAL迁移、并发策略与脑端模型均未改变。本项不复申已提交的其他PR，组合证据仅说明联动验证。\n\n维护者人审待定（human review pending）。\n",
+    "createdAt": "2026-11-21T07:05:54Z",
+    "labels": [],
+    "number": 2805,
+    "state": "OPEN",
+    "title": "[intake 输入] lingshu PR #1485：替换统一模型时结束旧推演连接",
+    "updatedAt": "2026-11-21T07:05:54Z",
+    "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/2805"
+  }
+}

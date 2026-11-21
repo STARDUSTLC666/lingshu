@@ -1,0 +1,9 @@
+{
+  "head": "23ba01eb8dfcb1a8dfdddd030cf7a2e3c078e8e9",
+  "returncode": 1,
+  "source_test_blob": "3437db245d035ce2c02bd1e9ed141bfb4810cbe0",
+  "after_head": "23ba01eb8dfcb1a8dfdddd030cf7a2e3c078e8e9",
+  "after_status": null,
+  "started_scope": "single unchanged Windows baseline assertion",
+  "recorded": "2026-11-21T16:11:45.6890227+08:00"
+}

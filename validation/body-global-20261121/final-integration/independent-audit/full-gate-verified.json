@@ -1,0 +1,23 @@
+{
+  "source_sha": "0f7427549406ad125d7efc95da5ceece052e616d",
+  "jobs": [
+    {
+      "name": "gate (py3.13)",
+      "url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44881541272/job/136777708091",
+      "pytest": "2026-11-21T07:59:17.3210465Z = 6415 passed, 44 skipped, 10706 warnings, 206 subtests passed in 916.53s (0:15:16) =",
+      "log_sha256": "4dbed7c557e5262ef10762b5b2576c9ed8f3af4a98e9f89b7809ae19789d575a"
+    },
+    {
+      "name": "gate (py3.12)",
+      "url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44881541272/job/136777708319",
+      "pytest": "2026-11-21T08:00:19.8162382Z = 6415 passed, 44 skipped, 10698 warnings, 206 subtests passed in 979.72s (0:16:19) =",
+      "log_sha256": "198a70e253d091197a8e5970f4c26c3c058c72a9747c067e21b3c53ba930259c"
+    },
+    {
+      "name": "gate (py3.12 · 依赖下界)",
+      "url": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44881541272/job/136777708331",
+      "pytest": "2026-11-21T08:00:13.9686462Z = 6415 passed, 44 skipped, 10689 warnings, 206 subtests passed in 967.73s (0:16:07) =",
+      "log_sha256": "1fe0876454700dda16178f60287fe3f5a567c73611e500b463b936ada5e30bbf"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "accepted": true,
+  "phase": "light",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "package_file": "${CI_TEMP}\\wheel-acceptance\\light-venv\\Lib\\site-packages\\lingshu\\__init__.py",
+  "site_packages": [
+    "${CI_TEMP}\\wheel-acceptance\\light-venv\\Lib\\site-packages"
+  ],
+  "isolated": true,
+  "editable": false,
+  "optional_packages_available": {
+    "numpy": false,
+    "PIL": false
+  },
+  "cli_results": [
+    {
+      "mode": "all",
+      "views": [
+        "causal",
+        "history",
+        "roleplay",
+        "story",
+        "world"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "f0612ef71860ef671e24f6ff92fc4cbd88e2f0df1b27367cb56fafb5578c82df"
+    },
+    {
+      "mode": "causal",
+      "views": [
+        "causal"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "0e3fe991539935f92b8b8359b813915e33c7cf12a1838361c084262554105047"
+    },
+    {
+      "mode": "history",
+      "views": [
+        "history"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "9da35749725a39bf2d0cb3578ff0b02d886d88c1f8a4037628116a28ce49004e"
+    },
+    {
+      "mode": "roleplay",
+      "views": [
+        "roleplay"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "aabdb8bb39fcefd8a0e84dcf87befccbb43c9cf6fc34e460cf7161da810171fb"
+    },
+    {
+      "mode": "story",
+      "views": [
+        "story"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "71b0f4faa968c9d78297a9cfaad724863a128c330d30696b0e90c5e235f9eadd"
+    },
+    {
+      "mode": "world",
+      "views": [
+        "world"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "37782b7db85ed14d88549ee07a11f5b71aa36289a5a817e1ad4473c1d207eaac"
+    }
+  ]
+}

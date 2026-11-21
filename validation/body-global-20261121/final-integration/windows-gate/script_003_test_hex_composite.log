@@ -1,0 +1,26 @@
+  PASS v1 数据集生成
+  PASS v1 会意匹配 car 完整
+  PASS v1 证据密度
+  PASS v2 配方数 8
+  PASS v2 配方部件可解析
+  PASS v2 配方方位签名互异
+  PASS v2 数据集生成
+  PASS v2 属性落盘
+  PASS 属性标定三阈值齐
+  PASS 花纹提取精度 ≥95%
+  PASS 尺寸提取精度 ≥95%
+  PASS 尺寸只在圆上判定
+  PASS 提取确定性（两次调用一致）
+  PASS v2 雪人（尺寸属性命中）
+  PASS v2 尺寸不符不匹配 snowman
+  PASS 属性消融恢复形状级匹配
+  PASS v2 车（花纹必要属性）
+  PASS v2 车身花纹不符不匹配
+  PASS 密度 v2 属性计入
+  PASS 密度 v2 无属性回退 v1
+  PASS 密度门 ACCEPT
+  PASS 密度门 DEFER(依据不足)
+  PASS 密度门 DEFER(配方不完整优先)
+  PASS 无匹配 DEFER
+
+===== HEX-COMPOSITE v2 回归: 24/24 通过 =====

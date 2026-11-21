@@ -1,0 +1,23 @@
+== A 组：报告人场景（未观测假设不计分）+ C 组（假设留图） ==
+  PASS A1 真实观测自然触发生长（假设数=1）
+  PASS A2 假设不是物理实体（从未被观测）
+  PASS A3 真实 actor 照旧计分且未命中（hit=False distance=2.0）
+  PASS A4 未观测假设标 pending 且 hit 不为 True（不再自证命中）
+  PASS A5 计分只含已验证：total=1 hits=0 hit_rate=0.0（pending=1）
+  PASS C1 假设节点仍在 nodes 里（未被删）
+  PASS C2 假设的条件空间仍在 conditions 里
+  PASS C3 seek(A→H) 关系边仍在 edges 里
+== B 组：坑 b（此前见过、后来被遮蔽的真实实体） ==
+  PASS B1 遮蔽前真实实体已进图
+  PASS B2 此前见过后被遮蔽者 → pending，不参与计分（坑 b）
+  PASS B3 计分项只含本轮真观测者
+  PASS B4 陈旧记忆留在图中且位置未被改写（不删不改）
+  PASS B5 其 last_seen 停在被遮蔽前（故 last_seen==tick 不可作判据）
+  PASS B6 对照组：仍被观测者（a）照旧计分命中
+== D 组：兼容性（快照缺失 / 空观测轮） ==
+  PASS D1 从未 perceive：total=0 + no_observation（不回退 nodes）
+  PASS D2 无节点无预测：total=0 + no_observation + 空 details
+  PASS D3 空观测轮：全部 pending、total=0、快照在场（不标 no_observation）
+
+===== SUMMARY 17/17 通过 =====
+VERDICT=PASS（issue #1 守卫：未观测预测不计分；假设/陈旧记忆留图）

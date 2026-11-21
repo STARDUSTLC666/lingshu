@@ -1,0 +1,29 @@
+{
+  "source_head": "0f7427549406ad125d7efc95da5ceece052e616d",
+  "checked_utc": "2026-11-21T08:12:59.010874+00:00",
+  "terminal": true,
+  "gate_ok": false,
+  "status": "terminal evidence included",
+  "finished_utc": "2026-11-21T08:09:55+00:00",
+  "original_summary_locator": "evidence-root/final-integration/windows-gate/summary.json",
+  "pytest_outcome": "6434 passed, 1 failed (#498 symlink platform assertion), 24 skipped, 206 subtests passed",
+  "script_exit_zero": 102,
+  "controlled_timing": {
+    "junit_totals": [
+      {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "4",
+        "time": "0.825",
+        "timestamp": "2026-11-21T16:09:45.633682+08:00",
+        "hostname": "${HOSTNAME}"
+      }
+    ],
+    "skip_reasons": {},
+    "skipped_tests": [],
+    "failed_tests": []
+  },
+  "source_unchanged": true
+}

@@ -1,0 +1,94 @@
+{
+  "accepted": true,
+  "package_file": "${EVIDENCE_ROOT}\\final-integration\\independent-audit\\pixel-venv\\Lib\\site-packages\\lingshu\\__init__.py",
+  "isolated": true,
+  "editable": false,
+  "frames": 4,
+  "color_hits": 4,
+  "shape_color_hits": 4,
+  "persisted_readbacks": 4,
+  "persisted_searches": 4,
+  "expected_labels_used_only_for_scoring": true,
+  "world3d_input_from_perception_only": true,
+  "scope": "synthetic single-object RGB fixture; no real-camera or multi-object accuracy claim",
+  "results": [
+    {
+      "frame": 0,
+      "node_id": "installed-frame-0",
+      "perceived_category": "triangle|red",
+      "perceived_color": "red",
+      "bbox": [
+        22,
+        1,
+        30,
+        6
+      ],
+      "pos": "r1",
+      "pixel_sha256": "d0869facbf5c538aa36a165b167c64f4092646530777b6475cb632d9b365eeb9",
+      "world3d_category": "triangle|red",
+      "readback": true,
+      "search": true,
+      "persisted_readback": true,
+      "persisted_search": true
+    },
+    {
+      "frame": 1,
+      "node_id": "installed-frame-1",
+      "perceived_category": "triangle|blue",
+      "perceived_color": "blue",
+      "bbox": [
+        16,
+        17,
+        24,
+        22
+      ],
+      "pos": "r4",
+      "pixel_sha256": "d65c511565456e5e8e605c8100089a399a2e0ceb920824cdeba1823230763dd4",
+      "world3d_category": "triangle|blue",
+      "readback": true,
+      "search": true,
+      "persisted_readback": true,
+      "persisted_search": true
+    },
+    {
+      "frame": 2,
+      "node_id": "installed-frame-2",
+      "perceived_category": "circle|blue",
+      "perceived_color": "blue",
+      "bbox": [
+        30,
+        5,
+        42,
+        17
+      ],
+      "pos": "r2",
+      "pixel_sha256": "d756746770c5e61feab6898265dc65ae7f02cff9d45170c7dd3d61c82c677ef2",
+      "world3d_category": "circle|blue",
+      "readback": true,
+      "search": true,
+      "persisted_readback": true,
+      "persisted_search": true
+    },
+    {
+      "frame": 3,
+      "node_id": "installed-frame-3",
+      "perceived_category": "stripe|green",
+      "perceived_color": "green",
+      "bbox": [
+        18,
+        0,
+        27,
+        11
+      ],
+      "pos": "r1",
+      "pixel_sha256": "6656e7d0f00b5159e7099bb8e9a747a0c5fc3e29bb172ebb6f8a4d1178b9ddc6",
+      "world3d_category": "stripe|green",
+      "readback": true,
+      "search": true,
+      "persisted_readback": true,
+      "persisted_search": true
+    }
+  ],
+  "numpy": "2.5.5",
+  "Pillow": "12.3.0"
+}

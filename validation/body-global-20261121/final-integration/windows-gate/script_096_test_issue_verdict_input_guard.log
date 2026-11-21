@@ -1,0 +1,11 @@
+  PASS A01 part 缺 type -> 可读 ValueError
+  PASS A02 part 非映射 -> 可读 TypeError
+  PASS A03 image_domains=None 等价无声明（不崩）
+  PASS A04 image_domains 非映射 -> TypeError
+  PASS A05 非数值像素量 -> BLINDSPOT（不给 ACCEPT）
+  PASS A05b 非有限像素量 NaN -> BLINDSPOT（#196 闸运行级钉）
+  PASS A05b 非有限像素量 inf -> BLINDSPOT（#196 闸运行级钉）
+  PASS A06 正对照：正常输入 ACCEPT
+  PASS E01 钉子：part 类型闸
+  PASS E02 钉子：非数值落 BLINDSPOT
+通过 10 / 失败 0

@@ -1,0 +1,359 @@
+........................................................................ [  5%]
+........................................................................ [ 10%]
+........................................................................ [ 15%]
+........................................................................ [ 20%]
+........................................................................ [ 25%]
+........................................................................ [ 30%]
+........................................................................ [ 35%]
+........................................................................ [ 40%]
+........................................................................ [ 45%]
+........................................................................ [ 50%]
+........................................................................ [ 55%]
+........................................................................ [ 61%]
+........................................................................ [ 66%]
+........................................................................ [ 71%]
+........................................................................ [ 76%]
+........................................................................ [ 81%]
+........................................................................ [ 86%]
+........................................................................ [ 91%]
+........................................................................ [ 96%]
+...............................................                          [100%]
+============================== warnings summary ===============================
+tests/test_motion_group_anchor_consistency.py: 1 warning
+tests/test_motion_group_identifier_encoding.py: 1 warning
+tests/test_simloop_world_lifecycle.py: 3 warnings
+tests/test_world_process_core.py: 26 warnings
+tests/test_world_memory_first_batch.py: 3 warnings
+tests/test_memory_world_scenarios.py: 1 warning
+tests/test_issue661_m5_dedup_perf_and_parity.py: 6 warnings
+tests/test_issue661_dedup_narrow_projection_guard.py: 7 warnings
+tests/test_core_thread_safety.py: 9 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+tests/test_issue268_dedup_condition_space_guard.py: 3 warnings
+tests/test_issue803_zwj_dedup_normalize_guard.py: 5 warnings
+tests/test_issue484_negation_divergence_guard.py: 4 warnings
+tests/test_m55_perception_knowledge_bridge.py: 4 warnings
+tests/test_m55_partition_consistency.py: 1 warning
+tests/test_world_motion_stat_reuse.py: 2 warnings
+tests/test_world_verify_finite_evidence.py: 1 warning
+tests/test_world_feedback.py: 2 warnings
+tests/test_world_audio_perception.py: 8 warnings
+tests/test_world_video_perception.py: 1 warning
+tests/test_bridge_dedup_integration.py: 3 warnings
+tests/test_issue208_reuse_dedup_guard.py: 3 warnings
+tests/test_issue225_polarity_dedup_guard.py: 4 warnings
+tests/test_issue223_dedup_merge_fields_guard.py: 6 warnings
+tests/test_issue297_dedup_full_layer_guard.py: 3 warnings
+tests/test_issue800_m5_dedup_atomic_guard.py: 5 warnings
+tests/test_issue805_add_perception_params.py: 23 warnings
+tests/test_scene_ingest_dedup.py: 1 warning
+tests/test_transaction_exit_rollback.py: 6 warnings
+tests/test_issue331_add_perception_content_type_guard.py: 4 warnings
+  ${REPO_TOTAL13}\lingshu\core\core.py:7943: ComponentDiscoveryWarning: [issue156] 组件 'entity_registry' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from entity_registry import EntityRegistry
+
+tests/test_motion_group_anchor_consistency.py: 1 warning
+tests/test_motion_group_identifier_encoding.py: 1 warning
+tests/test_simloop_world_lifecycle.py: 3 warnings
+tests/test_world_process_core.py: 26 warnings
+tests/test_world_memory_first_batch.py: 3 warnings
+tests/test_memory_world_scenarios.py: 1 warning
+tests/test_issue661_m5_dedup_perf_and_parity.py: 6 warnings
+tests/test_issue661_dedup_narrow_projection_guard.py: 7 warnings
+tests/test_core_thread_safety.py: 9 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+tests/test_issue268_dedup_condition_space_guard.py: 3 warnings
+tests/test_issue803_zwj_dedup_normalize_guard.py: 5 warnings
+tests/test_issue484_negation_divergence_guard.py: 4 warnings
+tests/test_m55_perception_knowledge_bridge.py: 4 warnings
+tests/test_m55_partition_consistency.py: 1 warning
+tests/test_world_motion_stat_reuse.py: 2 warnings
+tests/test_world_verify_finite_evidence.py: 1 warning
+tests/test_world_feedback.py: 2 warnings
+tests/test_world_audio_perception.py: 8 warnings
+tests/test_world_video_perception.py: 1 warning
+tests/test_bridge_dedup_integration.py: 3 warnings
+tests/test_issue208_reuse_dedup_guard.py: 3 warnings
+tests/test_issue225_polarity_dedup_guard.py: 4 warnings
+tests/test_issue223_dedup_merge_fields_guard.py: 6 warnings
+tests/test_issue297_dedup_full_layer_guard.py: 3 warnings
+tests/test_issue800_m5_dedup_atomic_guard.py: 5 warnings
+tests/test_issue805_add_perception_params.py: 23 warnings
+tests/test_scene_ingest_dedup.py: 1 warning
+tests/test_transaction_exit_rollback.py: 6 warnings
+tests/test_issue331_add_perception_content_type_guard.py: 4 warnings
+  ${REPO_TOTAL13}\lingshu\core\core.py:7929: ComponentDiscoveryWarning: [issue156] 组件 'semantic_space' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from semantic_space import SemanticSpaceProvider
+
+tests/test_motion_group_anchor_consistency.py: 1 warning
+tests/test_motion_group_identifier_encoding.py: 1 warning
+tests/test_simloop_world_lifecycle.py: 3 warnings
+tests/test_world_process_core.py: 26 warnings
+tests/test_world_memory_first_batch.py: 3 warnings
+tests/test_memory_world_scenarios.py: 1 warning
+tests/test_issue661_m5_dedup_perf_and_parity.py: 6 warnings
+tests/test_issue661_dedup_narrow_projection_guard.py: 7 warnings
+tests/test_core_thread_safety.py: 9 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+tests/test_issue268_dedup_condition_space_guard.py: 3 warnings
+tests/test_issue803_zwj_dedup_normalize_guard.py: 5 warnings
+tests/test_issue484_negation_divergence_guard.py: 4 warnings
+tests/test_m55_perception_knowledge_bridge.py: 4 warnings
+tests/test_m55_partition_consistency.py: 1 warning
+tests/test_world_motion_stat_reuse.py: 2 warnings
+tests/test_world_verify_finite_evidence.py: 1 warning
+tests/test_world_feedback.py: 2 warnings
+tests/test_world_audio_perception.py: 8 warnings
+tests/test_world_video_perception.py: 1 warning
+tests/test_bridge_dedup_integration.py: 3 warnings
+tests/test_issue208_reuse_dedup_guard.py: 3 warnings
+tests/test_issue225_polarity_dedup_guard.py: 4 warnings
+tests/test_issue223_dedup_merge_fields_guard.py: 6 warnings
+tests/test_issue297_dedup_full_layer_guard.py: 3 warnings
+tests/test_issue800_m5_dedup_atomic_guard.py: 5 warnings
+tests/test_issue805_add_perception_params.py: 23 warnings
+tests/test_scene_ingest_dedup.py: 1 warning
+tests/test_transaction_exit_rollback.py: 6 warnings
+tests/test_issue331_add_perception_content_type_guard.py: 4 warnings
+  ${REPO_TOTAL13}\lingshu\core\core.py:7919: ComponentDiscoveryWarning: [issue156] 组件 'attention_policy' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from attention_policy import AttentionPolicy
+
+tests/test_motion_group_anchor_consistency.py: 1 warning
+tests/test_motion_group_identifier_encoding.py: 1 warning
+tests/test_simloop_world_lifecycle.py: 3 warnings
+tests/test_world_process_core.py: 26 warnings
+tests/test_world_memory_first_batch.py: 3 warnings
+tests/test_memory_world_scenarios.py: 1 warning
+tests/test_issue661_m5_dedup_perf_and_parity.py: 6 warnings
+tests/test_issue661_dedup_narrow_projection_guard.py: 7 warnings
+tests/test_core_thread_safety.py: 9 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+tests/test_issue268_dedup_condition_space_guard.py: 3 warnings
+tests/test_issue803_zwj_dedup_normalize_guard.py: 5 warnings
+tests/test_issue484_negation_divergence_guard.py: 4 warnings
+tests/test_m55_perception_knowledge_bridge.py: 4 warnings
+tests/test_m55_partition_consistency.py: 1 warning
+tests/test_world_motion_stat_reuse.py: 2 warnings
+tests/test_world_verify_finite_evidence.py: 1 warning
+tests/test_world_feedback.py: 2 warnings
+tests/test_world_audio_perception.py: 8 warnings
+tests/test_world_video_perception.py: 1 warning
+tests/test_bridge_dedup_integration.py: 3 warnings
+tests/test_issue208_reuse_dedup_guard.py: 3 warnings
+tests/test_issue225_polarity_dedup_guard.py: 4 warnings
+tests/test_issue223_dedup_merge_fields_guard.py: 6 warnings
+tests/test_issue297_dedup_full_layer_guard.py: 3 warnings
+tests/test_issue800_m5_dedup_atomic_guard.py: 5 warnings
+tests/test_issue805_add_perception_params.py: 23 warnings
+tests/test_scene_ingest_dedup.py: 1 warning
+tests/test_transaction_exit_rollback.py: 6 warnings
+tests/test_issue331_add_perception_content_type_guard.py: 4 warnings
+  ${REPO_TOTAL13}\lingshu\core\core.py:7894: ComponentDiscoveryWarning: [issue156] 组件 'prediction_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from prediction_engine import PredictionEngine
+
+tests/test_motion_group_anchor_consistency.py: 1 warning
+tests/test_motion_group_identifier_encoding.py: 1 warning
+tests/test_simloop_world_lifecycle.py: 3 warnings
+tests/test_world_process_core.py: 26 warnings
+tests/test_world_memory_first_batch.py: 3 warnings
+tests/test_memory_world_scenarios.py: 1 warning
+tests/test_issue661_m5_dedup_perf_and_parity.py: 6 warnings
+tests/test_issue661_dedup_narrow_projection_guard.py: 7 warnings
+tests/test_core_thread_safety.py: 9 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+tests/test_issue268_dedup_condition_space_guard.py: 3 warnings
+tests/test_issue803_zwj_dedup_normalize_guard.py: 5 warnings
+tests/test_issue484_negation_divergence_guard.py: 4 warnings
+tests/test_m55_perception_knowledge_bridge.py: 4 warnings
+tests/test_m55_partition_consistency.py: 1 warning
+tests/test_world_motion_stat_reuse.py: 2 warnings
+tests/test_world_verify_finite_evidence.py: 1 warning
+tests/test_world_feedback.py: 2 warnings
+tests/test_world_audio_perception.py: 8 warnings
+tests/test_world_video_perception.py: 1 warning
+tests/test_bridge_dedup_integration.py: 3 warnings
+tests/test_issue208_reuse_dedup_guard.py: 3 warnings
+tests/test_issue225_polarity_dedup_guard.py: 4 warnings
+tests/test_issue223_dedup_merge_fields_guard.py: 6 warnings
+tests/test_issue297_dedup_full_layer_guard.py: 3 warnings
+tests/test_issue800_m5_dedup_atomic_guard.py: 5 warnings
+tests/test_issue805_add_perception_params.py: 23 warnings
+tests/test_scene_ingest_dedup.py: 1 warning
+tests/test_transaction_exit_rollback.py: 6 warnings
+tests/test_issue331_add_perception_content_type_guard.py: 4 warnings
+  ${REPO_TOTAL13}\lingshu\core\core.py:7869: ComponentDiscoveryWarning: [issue156] 组件 'lifecycle_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from lifecycle_engine import LifecycleEngine
+
+tests/test_motion_group_anchor_consistency.py: 1 warning
+tests/test_motion_group_identifier_encoding.py: 1 warning
+tests/test_simloop_world_lifecycle.py: 3 warnings
+tests/test_world_process_core.py: 26 warnings
+tests/test_world_memory_first_batch.py: 3 warnings
+tests/test_memory_world_scenarios.py: 1 warning
+tests/test_issue661_m5_dedup_perf_and_parity.py: 6 warnings
+tests/test_issue661_dedup_narrow_projection_guard.py: 7 warnings
+tests/test_core_thread_safety.py: 9 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+tests/test_issue268_dedup_condition_space_guard.py: 3 warnings
+tests/test_issue803_zwj_dedup_normalize_guard.py: 5 warnings
+tests/test_issue484_negation_divergence_guard.py: 4 warnings
+tests/test_m55_perception_knowledge_bridge.py: 4 warnings
+tests/test_m55_partition_consistency.py: 1 warning
+tests/test_world_motion_stat_reuse.py: 2 warnings
+tests/test_world_verify_finite_evidence.py: 1 warning
+tests/test_world_feedback.py: 2 warnings
+tests/test_world_audio_perception.py: 8 warnings
+tests/test_world_video_perception.py: 1 warning
+tests/test_bridge_dedup_integration.py: 3 warnings
+tests/test_issue208_reuse_dedup_guard.py: 3 warnings
+tests/test_issue225_polarity_dedup_guard.py: 4 warnings
+tests/test_issue223_dedup_merge_fields_guard.py: 6 warnings
+tests/test_issue297_dedup_full_layer_guard.py: 3 warnings
+tests/test_issue800_m5_dedup_atomic_guard.py: 5 warnings
+tests/test_issue805_add_perception_params.py: 23 warnings
+tests/test_scene_ingest_dedup.py: 1 warning
+tests/test_transaction_exit_rollback.py: 6 warnings
+tests/test_issue331_add_perception_content_type_guard.py: 4 warnings
+  ${REPO_TOTAL13}\lingshu\core\core.py:7837: ComponentDiscoveryWarning: [issue156] 组件 'flywheel_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from flywheel_engine import FlywheelEngine
+
+tests/test_motion_group_anchor_consistency.py: 1 warning
+tests/test_motion_group_identifier_encoding.py: 1 warning
+tests/test_simloop_world_lifecycle.py: 3 warnings
+tests/test_world_process_core.py: 26 warnings
+tests/test_world_memory_first_batch.py: 3 warnings
+tests/test_memory_world_scenarios.py: 1 warning
+tests/test_issue661_m5_dedup_perf_and_parity.py: 6 warnings
+tests/test_issue661_dedup_narrow_projection_guard.py: 7 warnings
+tests/test_core_thread_safety.py: 9 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+tests/test_issue268_dedup_condition_space_guard.py: 3 warnings
+tests/test_issue803_zwj_dedup_normalize_guard.py: 5 warnings
+tests/test_issue484_negation_divergence_guard.py: 4 warnings
+tests/test_m55_perception_knowledge_bridge.py: 4 warnings
+tests/test_m55_partition_consistency.py: 1 warning
+tests/test_world_motion_stat_reuse.py: 2 warnings
+tests/test_world_verify_finite_evidence.py: 1 warning
+tests/test_world_feedback.py: 2 warnings
+tests/test_world_audio_perception.py: 8 warnings
+tests/test_world_video_perception.py: 1 warning
+tests/test_bridge_dedup_integration.py: 3 warnings
+tests/test_issue208_reuse_dedup_guard.py: 3 warnings
+tests/test_issue225_polarity_dedup_guard.py: 4 warnings
+tests/test_issue223_dedup_merge_fields_guard.py: 6 warnings
+tests/test_issue297_dedup_full_layer_guard.py: 3 warnings
+tests/test_issue800_m5_dedup_atomic_guard.py: 5 warnings
+tests/test_issue805_add_perception_params.py: 23 warnings
+tests/test_scene_ingest_dedup.py: 1 warning
+tests/test_transaction_exit_rollback.py: 6 warnings
+tests/test_issue331_add_perception_content_type_guard.py: 4 warnings
+  ${REPO_TOTAL13}\lingshu\core\core.py:7847: ComponentDiscoveryWarning: [issue156] 组件 'self_cognition_engine' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from self_cognition_engine import SelfCognitionEngine
+
+tests/test_motion_group_anchor_consistency.py: 1 warning
+tests/test_motion_group_identifier_encoding.py: 1 warning
+tests/test_simloop_world_lifecycle.py: 3 warnings
+tests/test_world_process_core.py: 26 warnings
+tests/test_world_memory_first_batch.py: 3 warnings
+tests/test_memory_world_scenarios.py: 1 warning
+tests/test_issue661_m5_dedup_perf_and_parity.py: 6 warnings
+tests/test_issue661_dedup_narrow_projection_guard.py: 7 warnings
+tests/test_core_thread_safety.py: 9 warnings
+tests/test_search_skills_limit_semantics.py: 1 warning
+tests/test_issue268_dedup_condition_space_guard.py: 3 warnings
+tests/test_issue803_zwj_dedup_normalize_guard.py: 5 warnings
+tests/test_issue484_negation_divergence_guard.py: 4 warnings
+tests/test_m55_perception_knowledge_bridge.py: 4 warnings
+tests/test_m55_partition_consistency.py: 1 warning
+tests/test_world_motion_stat_reuse.py: 2 warnings
+tests/test_world_verify_finite_evidence.py: 1 warning
+tests/test_world_feedback.py: 2 warnings
+tests/test_world_audio_perception.py: 8 warnings
+tests/test_world_video_perception.py: 1 warning
+tests/test_bridge_dedup_integration.py: 3 warnings
+tests/test_issue208_reuse_dedup_guard.py: 3 warnings
+tests/test_issue225_polarity_dedup_guard.py: 4 warnings
+tests/test_issue223_dedup_merge_fields_guard.py: 6 warnings
+tests/test_issue297_dedup_full_layer_guard.py: 3 warnings
+tests/test_issue800_m5_dedup_atomic_guard.py: 5 warnings
+tests/test_issue805_add_perception_params.py: 23 warnings
+tests/test_scene_ingest_dedup.py: 1 warning
+tests/test_transaction_exit_rollback.py: 6 warnings
+tests/test_issue331_add_perception_content_type_guard.py: 4 warnings
+  ${REPO_TOTAL13}\lingshu\core\core.py:7826: ComponentDiscoveryWarning: [issue156] 组件 'body' 未在受控解析面找到（已查 6 个条目；LINGSHU_COMPONENT_ROOT 未设置；cwd/空串/脚本目录 sys.path 条目已排除）。若确需该组件，请用 LINGSHU_COMPONENT_ROOT 或 PYTHONPATH 显式声明其所在目录。
+    from body import build_default_registry
+
+tests/test_mesh_collision_proxy_guard.py::test_D1_default_path_bit_identical
+tests/test_mesh_collision_proxy_guard.py::test_D2_registering_boxes_makes_entities_collision_aware
+tests/test_mesh_collision_proxy_guard.py::test_D_mutation_default_takes_collision_path_turns_red
+  ${REPO_TOTAL13}\lingshu\world\scene_simulator.py:1278: RuntimeWarning: scene_simulator: behavior=seek 的目标 '' 不可解析 ⇒ 本 tick 不移动（不再静默退化为 wander）
+    direction = self._decide(e)
+
+tests/test_mesh_collision_proxy_guard.py::test_D1_default_path_bit_identical
+tests/test_mesh_collision_proxy_guard.py::test_D2_registering_boxes_makes_entities_collision_aware
+tests/test_mesh_collision_proxy_guard.py::test_D_mutation_default_takes_collision_path_turns_red
+  ${REPO_TOTAL13}\lingshu\world\scene_simulator.py:1278: RuntimeWarning: scene_simulator: behavior=follow 的目标 '' 不可解析 ⇒ 本 tick 不移动（不再静默退化为 wander）
+    direction = self._decide(e)
+
+tests/test_core_thread_safety.py::test_two_writers_two_readers_raise_nothing
+tests/test_core_thread_safety.py::test_four_writers_four_readers_raise_nothing
+  ${REPO_TOTAL13}\lingshu\core\core.py:4962: RuntimeWarning: #775 访问计数写入失败（第 1 次；该批已放弃，不阻断检索）：OperationalError: database is locked
+    self.increment_access_many([node.id for node, _ in results], touch=touch)
+
+tests/test_core_thread_safety.py::test_two_writers_two_readers_raise_nothing
+tests/test_core_thread_safety.py::test_four_writers_four_readers_raise_nothing
+  ${REPO_TOTAL13}\lingshu\core\core.py:4962: RuntimeWarning: #775 访问计数写入失败（第 2 次；该批已放弃，不阻断检索）：OperationalError: database is locked
+    self.increment_access_many([node.id for node, _ in results], touch=touch)
+
+tests/test_core_thread_safety.py::test_two_writers_two_readers_raise_nothing
+tests/test_core_thread_safety.py::test_four_writers_four_readers_raise_nothing
+  ${REPO_TOTAL13}\lingshu\core\core.py:4962: RuntimeWarning: #775 访问计数写入失败（第 3 次；该批已放弃，不阻断检索）：OperationalError: database is locked
+    self.increment_access_many([node.id for node, _ in results], touch=touch)
+
+tests/test_core_thread_safety.py::test_two_writers_two_readers_raise_nothing
+tests/test_core_thread_safety.py::test_four_writers_four_readers_raise_nothing
+  ${REPO_TOTAL13}\lingshu\core\core.py:4962: RuntimeWarning: #775 访问计数写入失败（第 4 次；该批已放弃，不阻断检索）：OperationalError: database is locked
+    self.increment_access_many([node.id for node, _ in results], touch=touch)
+
+tests/test_core_thread_safety.py::test_two_writers_two_readers_raise_nothing
+tests/test_core_thread_safety.py::test_four_writers_four_readers_raise_nothing
+  ${REPO_TOTAL13}\lingshu\core\core.py:4962: RuntimeWarning: #775 访问计数写入失败（第 5 次；该批已放弃，不阻断检索）：OperationalError: database is locked
+    self.increment_access_many([node.id for node, _ in results], touch=touch)
+
+tests/test_core_thread_safety.py::test_two_writers_two_readers_raise_nothing
+  ${REPO_TOTAL13}\lingshu\core\core.py:4962: RuntimeWarning: #775 访问计数写入失败（第 6 次；该批已放弃，不阻断检索）：OperationalError: database is locked
+    self.increment_access_many([node.id for node, _ in results], touch=touch)
+
+tests/test_core_thread_safety.py::test_two_writers_two_readers_raise_nothing
+  ${REPO_TOTAL13}\lingshu\core\core.py:4962: RuntimeWarning: #775 访问计数写入失败（第 7 次；该批已放弃，不阻断检索）：OperationalError: database is locked
+    self.increment_access_many([node.id for node, _ in results], touch=touch)
+
+tests/test_core_thread_safety.py::test_two_writers_two_readers_raise_nothing
+  ${REPO_TOTAL13}\lingshu\core\core.py:4962: RuntimeWarning: #775 访问计数写入失败（第 8 次；该批已放弃，不阻断检索）：OperationalError: database is locked
+    self.increment_access_many([node.id for node, _ in results], touch=touch)
+
+tests/test_doc_module_counts_guard.py::test_no_other_guard_reads_doc_counts
+tests/test_issue79_architecture_layers_guard.py::test_no_other_guard_parses_layer_tree
+tests/test_issue455_subprocess_encoding.py::test_no_text_mode_subprocess_without_encoding
+  <unknown>:6: SyntaxWarning: invalid escape sequence '\`'
+
+tests/test_doc_module_counts_guard.py::test_no_other_guard_reads_doc_counts
+tests/test_issue79_architecture_layers_guard.py::test_no_other_guard_parses_layer_tree
+tests/test_issue455_subprocess_encoding.py::test_no_text_mode_subprocess_without_encoding
+  <unknown>:72: SyntaxWarning: invalid escape sequence '\`'
+
+tests/test_doc_module_counts_guard.py::test_no_other_guard_reads_doc_counts
+tests/test_issue79_architecture_layers_guard.py::test_no_other_guard_parses_layer_tree
+tests/test_issue455_subprocess_encoding.py::test_no_text_mode_subprocess_without_encoding
+  <unknown>:5: SyntaxWarning: invalid escape sequence '\d'
+
+tests/test_doc_module_counts_guard.py::test_no_other_guard_reads_doc_counts
+tests/test_issue79_architecture_layers_guard.py::test_no_other_guard_parses_layer_tree
+tests/test_issue455_subprocess_encoding.py::test_no_text_mode_subprocess_without_encoding
+  <unknown>:32: SyntaxWarning: invalid escape sequence '\s'
+
+tests/test_issue455_subprocess_encoding.py::test_no_text_mode_subprocess_without_encoding
+  <unknown>:13: SyntaxWarning: invalid escape sequence '\s'
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+1415 passed, 1208 warnings in 200.95s (0:03:20)

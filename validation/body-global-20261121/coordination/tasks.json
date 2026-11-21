@@ -1,0 +1,232 @@
+{
+  "version": 1,
+  "objective": "放眼全局，不要太注重局部优化，最好弄一个总智能体管理子智能体群",
+  "supervisor": "${HOST_ROOT}",
+  "upstream": "FuRongJun-1999/lingshu",
+  "baseline": "c15c12ea90ac4c7733ff2ef10e6fc586eab9b211",
+  "agents": [
+    {
+      "id": "${HOST_ROOT}/integration_surface",
+      "role": "整合与依赖核对",
+      "scope": [
+        1466,
+        1439,
+        1432,
+        1428
+      ]
+    },
+    {
+      "id": "${HOST_ROOT}/open_scope",
+      "role": "独立核对 CI、证据与既有申报",
+      "scope": [
+        1479,
+        1477,
+        1471,
+        1437,
+        1460,
+        1461,
+        1463
+      ]
+    },
+    {
+      "id": "${HOST_ROOT}/pipeline_audit",
+      "role": "组合验收与安装门禁",
+      "scope": [
+        "five-integration",
+        "extended-gate"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "pr": 1485,
+      "name": "统一模型替换与推演生命周期",
+      "head": "72ee3e4c9aba35b34cbaf467feb52c08c023dfcb",
+      "bounty": 2805,
+      "evidence": "intake-receipt.json"
+    },
+    {
+      "pr": 1484,
+      "name": "运动组有限坐标",
+      "head": "4e919f76b3da49289915a354c9a45f39071db22d",
+      "bounty": 2804,
+      "evidence": "../body-next-20261121/DELIVERY_STATUS.md"
+    },
+    {
+      "pr": 1479,
+      "name": "自由飞行速度",
+      "head": "b3f2a67e71d7a0d3d0e4ee8094a8305ab7bfc7d2",
+      "bounty": 2793,
+      "evidence": "integrate-freeflight/regressions.xml"
+    },
+    {
+      "pr": 1477,
+      "name": "圆周拟合与残差",
+      "head": "b32b064eca8e505aaec41b4445df42ad1eb67a32",
+      "bounty": 2791,
+      "evidence": "integrate-circular/integration-summary.json"
+    },
+    {
+      "pr": 1471,
+      "name": "斜盒碰撞",
+      "head": "cf69e40e78ccbe9fb798c07afc46ec7d4a239532",
+      "bounty": 2785,
+      "evidence": "integrate-obb/integration-proof.json"
+    },
+    {
+      "pr": 1437,
+      "name": "线稿参数校验与透明通道",
+      "head": "f46ff9f29febbcffb5caba83d2c708d124e30cdb",
+      "bounty": 2725,
+      "evidence": "integrate-lineart/regressions.xml"
+    },
+    {
+      "pr": 1460,
+      "name": "音频",
+      "head": "4a67a751efffe264f80b303582b0a85abde677ed",
+      "bounty": 2760,
+      "evidence": "integrate-media-audio/integration-summary.json"
+    },
+    {
+      "pr": 1461,
+      "name": "视频",
+      "head": "10853336a541633485a33bee7f77fd147197a3e0",
+      "bounty": 2777,
+      "evidence": "integrate-media-video/integration-summary.json"
+    },
+    {
+      "pr": 1463,
+      "name": "掩码几何",
+      "head": "596b5f0de66e78340a847faa949616b2ebc9b61c",
+      "bounty": 2779,
+      "evidence": "integrate-media-mask/integration-summary.json"
+    },
+    {
+      "pr": 1466,
+      "name": "深度反投影",
+      "head": "fb374bbad163e92f133262fbba52b88eccf10834",
+      "bounty": 2781,
+      "evidence": "integrate-depth"
+    },
+    {
+      "pr": 1439,
+      "name": "感知与知识桥分区一致性",
+      "head": "e687b4dbfe69a4b00135ee1c5f4a71163c756a55",
+      "bounty": 2727,
+      "evidence": "integrate-knowledge"
+    },
+    {
+      "pr": 1432,
+      "name": "响应证据",
+      "head": "e77a67fcc5285cd7f7d679ba79c9fff25dfb139a",
+      "bounty": 2722,
+      "evidence": "integrate-response"
+    },
+    {
+      "pr": 1428,
+      "name": "去重索引与当前记忆语义",
+      "head": "fedf81a6e29687ba09d1a577fa1c7bafcb5e0b47",
+      "bounty": 2718,
+      "evidence": "integrate-dedup"
+    },
+    {
+      "pr": 1486,
+      "name": "扩展历史、稀疏与安装验收",
+      "head": "8c7abf1b2c8d946aaa1c7461eb50e16a41513d5a",
+      "bounty": 2806,
+      "evidence": "extended-gate/intake-receipt.json"
+    },
+    {
+      "pr": 1433,
+      "name": "实际像素识别到世界与记忆",
+      "head": "a721c3363b48c474f97201714e2d834b085912b6",
+      "bounty": 2723,
+      "evidence": "perception-dependencies/DECISION.md"
+    },
+    {
+      "pr": 1431,
+      "name": "可控噪声误差传播基准",
+      "head": "e172c94f0b2a5673492456208e279ae64c053cc8",
+      "bounty": 2721,
+      "evidence": "perception-dependencies/noise-curve-current-deps.json"
+    }
+  ],
+  "policy": [
+    "按公共调用链、依赖和组合效果排序，再分派单项工作",
+    "隔离工作树按任务分配，不改历史工作树",
+    "子智能体提交精确版本、原始证据、失败、跳过和边界，总协调核对当前状态",
+    "推送、PR 与 bounty 更新由总协调执行；独立修复只对应一个 intake",
+    "不替维护者合并或结算；历史已结算项保持状态",
+    "读取已有 live 进程和 CI 句柄，不因观察超时重启"
+  ],
+  "acceptance": [
+    {
+      "id": "five-integration",
+      "head": "2c1184417a65086e76842f690188e4f690daa293",
+      "status": "502本机通过，三档远端与原始日志核对通过",
+      "ci": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44878068630",
+      "evidence": "five-integration/combined-summary.json"
+    },
+    {
+      "id": "extended-gate",
+      "status": "Windows 本机真实验收通过；PR1486远端CI运行中",
+      "evidence": "extended-gate"
+    },
+    {
+      "id": "all-integration",
+      "status": "1415通过/0跳过；真实像素依赖接入另行验证",
+      "evidence": "all-integration/combined-summary.json",
+      "owner": "${HOST_ROOT}/integration_surface",
+      "head": "513ce31bd2666a012a583a1b265015d9d58c4926"
+    },
+    {
+      "id": "final-integration",
+      "head": "0f7427549406ad125d7efc95da5ceece052e616d",
+      "status": "三档Linux各6415通过/44跳过；Windows6434通过/1既有失败/24跳过；安装归档与真实像素链通过",
+      "evidence": "final-integration",
+      "owner": "${HOST_ROOT}/pipeline_audit",
+      "tree": "0f33bd5642db088a459aebd6750cc1c68715f10e",
+      "full_gate": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44881541272",
+      "installed_gate": "https://github.com/STARDUSTLC666/lingshu/actions/runs/44881630492"
+    }
+  ],
+  "dependencies": [
+    {
+      "task": 1439,
+      "depends_on": "current spatial_detect partition",
+      "invariant": "extractor and detector cover the same complete finite lattice cells"
+    },
+    {
+      "task": 1428,
+      "depends_on": "current core writes and deletion",
+      "invariant": "dedup cache must observe bridge direct writes and preserve current newborn decay/search behavior"
+    },
+    {
+      "task": 1466,
+      "depends_on": "camera fix already present on baseline",
+      "invariant": "preserve current camera projection contract"
+    },
+    {
+      "task": "all-integration",
+      "depends_on": [
+        1485,
+        1484,
+        1479,
+        1477,
+        1471,
+        1437,
+        1460,
+        1461,
+        1463,
+        1466,
+        1439,
+        1432,
+        1428
+      ],
+      "invariant": "actual module inventory, normalized manifest, existing lint statements and cross-route semantics"
+    }
+  ],
+  "orchestration_state": "delivery_verification",
+  "handoff": "STOP_HANDOFF.md",
+  "resume_note": "用户于2026-11-21明确要求继续；从STOP_HANDOFF记录恢复，保留原证据。"
+}

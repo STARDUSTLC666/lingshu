@@ -1,0 +1,76 @@
+{
+  "head": "513ce31bd2666a012a583a1b265015d9d58c4926",
+  "branch": "validation/global-all-20261121",
+  "worktree": "${REPO_TOTAL13}",
+  "status": "clean",
+  "source_frozen": true,
+  "contribution_count": 13,
+  "combined_tests": 1415,
+  "failures": 0,
+  "skipped": 0,
+  "test_files": 80,
+  "elapsed_seconds": 201.557,
+  "warnings": 1208,
+  "required_real_brain_cases": 5,
+  "required_historical_cases": 4,
+  "required_real_ffmpeg_cases": 3,
+  "all_required_cases_executed_passed": true,
+  "same_id_cross_layer_transition": "explicit PermissionError; prior accepted fact, exact dedup match and answer preserved",
+  "production_unchanged_since_integrity_checks_at": "234767c7d4efb8dded4c79b8a44e09d564b665ab",
+  "manifest": {
+    "bytes_mismatch": 0,
+    "entries": 64,
+    "malformed": 0,
+    "manifests": 2,
+    "match": 64,
+    "mismatch": 0,
+    "missing": 0,
+    "origins": {
+      "both": 0,
+      "neither": 0,
+      "origin-only": 3,
+      "src-only": 61
+    },
+    "unparseable": 0
+  },
+  "lints": [
+    {
+      "tool": "time_core_lint",
+      "rc": 0
+    },
+    {
+      "tool": "silent_except_lint",
+      "rc": 0
+    },
+    {
+      "tool": "import_direction_lint",
+      "rc": 0
+    },
+    {
+      "tool": "coverage_map_lint",
+      "rc": 0
+    }
+  ],
+  "existing_time_lint_statement_mapping_count": 23,
+  "import_smoke": "95/95; constructive ok",
+  "new_commit": "test and explanatory doc only",
+  "full_gates": "not run here; supervisor owned",
+  "remote_ci": "not run here; supervisor owned",
+  "remote_mutations": false,
+  "new_bounty": false,
+  "warnings_notes": [
+    "Optional component discovery warnings are present.",
+    "Thread-stress tests emit existing #775 SQLite-lock access-count write warnings; retrieval continues and assertions pass.",
+    "Scene follow-target warnings and source-literal SyntaxWarnings are present."
+  ],
+  "evidence_sha256": {
+    "combined-summary.json": "e3a678f05777f250337ebc22af5df3fe312559cd6b44d8cef428d3d05c4b852a",
+    "combined.xml": "99cd096ec61d94437a1415f83c94f8abcda6d7e7a7f8592337c0832a9d2291e9",
+    "combined-cases.json": "bf3296fc58d85f7123280026582930dc733db236368dd54bba1cde5d916f5de3",
+    "combined.log": "7743c6971aa9ec75f5568d8657e7e46dad80a6a4f391688fdd1a36eeee5bd911",
+    "bridge-dedup-final.xml": "205e6ed76798eae936cb56993ea3e31a80176c6439b1cf0c87691c134f674e17",
+    "bridge-dedup-final.log": "7f8644105a7fd21d28dab0bc5427727f9243723909599fa91a815dbad0f5d45d",
+    "bridge-dedup.xml": "86554e0d996a7b8ec634b23471637778bad41d7e36026377f529e79289816fe3",
+    "bridge-dedup.log": "e98c454f44960e2d751a5069628c5e6c6a273738e7ba61b90b81f0a35f4da43a"
+  }
+}

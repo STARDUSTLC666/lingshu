@@ -1,0 +1,7 @@
+  PASS A01 cred 非数值 dt -> 可读 TypeError
+  PASS A02 cred_factor 非数值 dt -> 可读 TypeError
+  PASS A03 正对照：cred(1,0,1,0)=1、cred(1,0,1,inf)=0
+  PASS A04 正对照：cred_factor(1,0)=1、cred_factor(1,1)=e^-1
+  PASS E01 钉子(lingshu)：可读 TypeError
+  PASS E01 钉子(lingshu)：可读 TypeError
+通过 6 / 失败 0

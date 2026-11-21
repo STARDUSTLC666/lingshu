@@ -1,0 +1,6 @@
+  PASS A01 str water -> 可读 TypeError（旧实现按真值当 True）
+  PASS A02 int water -> 可读 TypeError
+  PASS A03 正对照：True 正常建场景（含水）
+  PASS A04 正对照：False 正常建场景
+  PASS E01 钉子：可读文案
+通过 5 / 失败 0

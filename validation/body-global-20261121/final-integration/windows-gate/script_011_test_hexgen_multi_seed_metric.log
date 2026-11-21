@@ -1,0 +1,39 @@
+dims=15（extent…harm8）
+== A 组：确定性渲染器 + 每形状类 2 个不同配方（分子必须为 0） ==
+  PASS B 组·夹具辨别力：旧口径（按形状类）的 extent sd > 1  old=2.19089
+  PASS A 组·确定性渲染 ⇒ within_prompt_sd 全 0（旧口径在此处报 2.0 量级）  max=0.0
+  PASS A 组·分子 0 ⇒ 比值全 0  [0.0, 0.0, 0.0]
+  PASS A 组·median_ratio = 0
+  PASS A 组·无不可分维（件内也是 0，不需要点名）
+  PASS A 组·worst_dims 仍出 5 个  ['extent', 'log_aspect', 'solidity', 'compactness', 'n_peaks']
+  PASS A 组·维度数不变  15
+== C 组：件内有散布、类均值相同 ⇒ 该维不可分，比值必须是 None 而不是 0.0 ==
+  PASS C 组·extent 类间差 = 0
+  PASS C 组·extent 件内 > 0  2.0
+  PASS C 组·extent 被点名为不可分维  ['extent']
+  PASS C 组·不可分维的比值是 None（不是 0.0 = 最优）
+  PASS C 组·不可分维排在 worst_dims 最前（旧行为排最后）  ['extent', 'solidity']
+  PASS C 组·median_ratio 仍是有定义的 float（不可分维没把它变成 nan）
+  PASS C 组·有定义的维照旧给比值（solidity）  0.471
+  PASS C 组·只有 extent 不可分  ['extent']
+== D 组：每类只 1 个配方（对照：旧口径下比值本就是 0） ==
+  PASS D 组·确定性 ⇒ 分子全 0
+  PASS D 组·比值全 0
+  PASS D 组·median_ratio = 0
+== E 组：报告必须是严格 JSON（不允许 NaN/Infinity 泄漏） ==
+  PASS E 组·json.dumps(allow_nan=False) 通过  1112 字节
+  PASS E 组·全部维不可分时 median_ratio 为 None（而不是 nan）
+  PASS E 组·全部维都点名了  15
+  PASS E 组·比值列全 None
+== F 组：空读件仍单独计数、不参与统计 ==
+  PASS F 组·n_img_empty = 1  1
+  PASS F 组·empty_rate ≈ 1/6（4 位小数）  0.1667
+  PASS F 组·空读件不污染分子（该 prompt 只剩确定性 2 张）
+== G 组：prompt 内按自由度 pooled（不是 sd 的算术平均） ==
+  PASS G 组·分子 = pooled 后再按类取中位  got=0.40825 want=0.40825
+  PASS G 组·不是 sd 的算术平均（否则夹具抓不到加权错）  naive=0.35355
+  PASS G 组·类间差 > 0（该维有定义）  5.65685
+  PASS G 组·比值有定义且非 0  0.072
+
+===== SUMMARY 29/29 通过 =====
+VERDICT=PASS（issue #58 守卫：③ 号尺子的分子是同 prompt 内散布；不可分维点名且比值 None）
